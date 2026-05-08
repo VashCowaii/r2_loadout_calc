@@ -97,9 +97,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -289,9 +287,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -309,15 +305,11 @@ const configAbility = {
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1787963468\">Enemy_W4_FireProwler_FantasticStory</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1787963468\">Enemy_W4_FireProwler_FantasticStory</a>"
     },
     {
       "name": "Modifier Construction",
@@ -477,6 +469,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Each stack reduces DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. 1 stack is lost after 1 \"Long-Shattered Vessel\" is defeated.",
+      "type": "Buff",
+      "statusName": "DMG Reduction",
+      "addStacksPerTrigger": -1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -564,15 +563,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Each stack reduces DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. 1 stack is lost after 1 \"Long-Shattered Vessel\" is defeated.",
-      "type": "Buff",
-      "statusName": "DMG Reduction",
-      "addStacksPerTrigger": -1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -581,6 +572,14 @@ const configAbility = {
         "Deathrattle",
         "KeepOnDeathrattle"
       ],
+      "latentQueue": [
+        "HPBack_TimePowerCount",
+        "HPBack"
+      ],
+      "description": "After receiving a killing blow, if \"%CasterName\"'s \"Calamity Power\" stacks are not 0, be instantly resummoned and enter the \"Enfettered\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
+      "type": "Other",
+      "effectName": "Enfettered",
+      "statusName": "Enfettered",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -660,13 +659,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "After receiving a killing blow, if \"%CasterName\"'s \"Calamity Power\" stacks are not 0, be instantly resummoned and enter the \"Enfettered\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
-      "type": "Other",
-      "effectName": "Enfettered",
-      "statusName": "Enfettered"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -678,12 +671,19 @@ const configAbility = {
       "stackData": [
         "MDF_RallyHP"
       ],
-      "latentQueue": []
+      "latentQueue": [
+        "HPBack_TimePowerCount",
+        "HPBack"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1070811154\">Enemy_W4_FireProwler_RallyHP</a>[<span class=\"descriptionNumberColor\">Entangled By Agony</span>]",
       "stackType": "Replace",
+      "description": "After absorbing \"Long-Shattered Vessel,\" restores the HP consumed to summon the current \"Long-Shattered Vessel.\" After \"Long-Shattered Vessel\" is defeated, this unit cannot restore the HP consumed used to summon the current \"Long-Shattered Vessel\" again.",
+      "type": "Other",
+      "statusName": "Entangled By Agony",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -762,11 +762,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "After absorbing \"Long-Shattered Vessel,\" restores the HP consumed to summon the current \"Long-Shattered Vessel.\" After \"Long-Shattered Vessel\" is defeated, this unit cannot restore the HP consumed used to summon the current \"Long-Shattered Vessel\" again.",
-      "type": "Other",
-      "statusName": "Entangled By Agony",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -894,16 +890,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__33624492\">Enemy_W4_FireProwler_TimePower</a>[<span class=\"descriptionNumberColor\">Calamity Power</span>]",
       "stackType": "Replace",
-      "stackData": [],
-      "latentQueue": [],
       "description": "When using certain abilities, consume all \"Calamity Power\" stacks to increase Hits Per Action.",
       "type": "Other",
       "statusName": "Calamity Power",
@@ -912,6 +904,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__911157260\">Enemy_W4_FireProwler_TimePowerListener</a>",
+      "stackData": [
+        "MDF_MaxCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1360,15 +1355,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_MaxCount"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1169574682\">Enemy_W4_FireProwler_Charge</a>[<span class=\"descriptionNumberColor\">Silent Sorrow</span>]",
+      "description": "Use \"Cry Not For The Discarded\" during the next action.",
+      "type": "Other",
+      "effectName": "Silent Sorrow",
+      "statusName": "Silent Sorrow",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1525,13 +1520,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Use \"Cry Not For The Discarded\" during the next action.",
-      "type": "Other",
-      "effectName": "Silent Sorrow",
-      "statusName": "Silent Sorrow"
+      ]
     }
   ],
   "references": []

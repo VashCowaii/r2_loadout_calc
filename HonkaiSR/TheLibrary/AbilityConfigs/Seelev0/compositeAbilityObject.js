@@ -3,10 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": "Seele_v0",
   "trimCharacterName": "Seelev0",
   "abilityList": [
+    "Seelev0_Modifiers",
+    "Seelev0_Seele_Trace01",
     "Seelev0_Seele_Eidolon6",
     "Seelev0_Seele_Eidolon4",
     "Seelev0_Seele_Eidolon1",
-    "Seelev0_Seele_Trace01",
+    "Seelev0_LocalPlayer_StandardAbility_AttackBreak",
+    "Seelev0_LocalPlayer_Seele_NormalAtk01",
     "Seelev0_Seele_TechniqueInLevel",
     "Seelev0_Seele_Bonus",
     "Seelev0_Seele_PassiveAbility_1",
@@ -16,208 +19,267 @@ const compositeAbilityObject = {
     "Seelev0_Seele_Ability02_Part02",
     "Seelev0_Seele_Ability02_Part01",
     "Seelev0_Seele_Ability01_Part02",
-    "Seelev0_Seele_Ability01_Part01",
-    "Seelev0_Modifiers"
+    "Seelev0_Seele_Ability01_Part01"
   ],
   "abilityObject": {
-    "Seelev0_Seele_Eidolon6": {
-      "fileName": "Seelev0_Seele_Eidolon6",
-      "abilityType": null,
+    "Seelev0_Modifiers": {
+      "fileName": "Seelev0_Modifiers",
+      "abilityType": "Char. Modifiers",
       "energy": null,
-      "toughnessList": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
       "parse": [
         {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-301677957\">Seele_Eidolon6</a>"
-        }
-      ],
-      "references": [
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1119246325\">ADV_Modifier_MazeEffect_Stealth</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "duration": 1.5
+        },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-301677957\">Seele_Eidolon6</a>",
-          "execute": [
+          "for": "<a class=\"gModGreen\" id=\"mod__2022324518\">ADV_Modifier_MazeEffect_Seele</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "modifierFlags": [
+            "Stealth"
+          ],
+          "duration": 20,
+          "onCreation": [
             {
-              "eventTrigger": "Pre-Death [Owner]",
+              "name": "Overworld Filter Enemies",
               "execute": [
                 {
-                  "name": "Remove Events/Bonuses",
+                  "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
+                    "target": "{{Task Action Target}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"995458646\">Seele_Eidolon6_Flag</a>[<span class=\"descriptionNumberColor\">Butterfly Flurry</span>]"
+                  "modifier": null,
+                  "ID": "1000118(null)"
+                }
+              ]
+            }
+          ],
+          "onStageExit": [
+            "Modifier Deletes Itself"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__156399431\">ADV_Modifier_Maze_Seele</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "duration": 20,
+          "onStageExit": [
+            "Modifier Deletes Itself"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-451187688\">ADV_StageAbility_Maze_Seele</a>",
+          "counter": 1,
+          "stackType": "Refresh"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-426535006\">Seele_BPAbility_SpeedUpEidolon2</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_SpeedUp"
+          ],
+          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to 2 stacks.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "SpeedUp_Count",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (SpeedUp_Count) || MUL || RETURN",
+                    "displayLines": "(MDF_PropertyValue * SpeedUp_Count)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue",
+                      "SpeedUp_Count"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-456765622\">Seele_BPAbility_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_SpeedUp"
+          ],
+          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1401924350\">Seele_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">seele_dmg_percent</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Amplification",
+          "duration": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (seele_dmg_percent) || RETURN",
+                    "displayLines": "seele_dmg_percent",
+                    "constants": [],
+                    "variables": [
+                      "seele_dmg_percent"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Trace Activated",
+                    "conditionList": "Lacerate"
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Modifier Description",
+                      "popUpText": "DMG dealt increases by <span class=\"descriptionNumberColor\">seele_dmg_percent</span>, and Quantum RES PEN +<span class=\"descriptionNumberColor\">MDF_Penetrate</span>."
+                    },
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumPEN</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (MDF_Penetrate) || RETURN",
+                        "displayLines": "MDF_Penetrate",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Penetrate"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Ultimate"
+                      }
+                    ]
+                  }
                 }
               ]
             },
             {
-              "eventTrigger": "Attack DMG End [Anyone]",
+              "eventTrigger": "Attack DMG End [Owner]",
               "execute": [
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Current Action Holder Is",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Seele_Rank6_Listen",
-                      "value": 0
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Seele_Rank6_Listen",
-                      "value": 5
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Seelev0_Seele_Eidolon4": {
-      "fileName": "Seelev0_Seele_Eidolon4",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-268122719\">Seele_Eidolon4</a>",
-          "valuePerStack": {
-            "MDF_AddSP": {
-              "operator": "Variables[0] (15) || RETURN",
-              "displayLines": "15",
-              "constants": [],
-              "variables": [
-                15
-              ]
-            }
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-268122719\">Seele_Eidolon4</a>",
-          "execute": [
-            {
-              "eventTrigger": "Got a Kill [Owner]",
-              "execute": [
-                {
-                  "name": "Update Energy",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "value": {
-                    "operator": "Variables[0] (MDF_AddSP) || RETURN",
-                    "displayLines": "MDF_AddSP",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AddSP"
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Ultimate"
+                      }
                     ]
-                  },
-                  "isFixed": "* ERR"
+                  }
                 }
               ]
-            }
-          ],
-          "stackData": [
-            "MDF_AddSP"
-          ],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Seelev0_Seele_Eidolon1": {
-      "fileName": "Seelev0_Seele_Eidolon1",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-217789862\">Seele_Eidolon1</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-217789862\">Seele_Eidolon1</a>",
-          "execute": [
+            },
             {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "eventTrigger": "Ability Use [Owner]: Start",
               "execute": [
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value1": "CurrentHP%",
-                    "compareType": "<=",
-                    "value2": {
-                      "operator": "Variables[0] (0.8) || RETURN",
-                      "displayLines": "0.8",
-                      "constants": [],
-                      "variables": [
-                        0.8
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
-                          "value": "0.15"
-                        }
-                      ]
-                    }
-                  ]
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Ultimate"
+                      }
+                    ]
+                  }
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
+      "references": []
     },
     "Seelev0_Seele_Trace01": {
       "fileName": "Seelev0_Seele_Trace01",
@@ -258,6 +320,10 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1465401968\">Seele_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Lowers the chances of being attacked by enemies.",
+          "type": "Buff",
+          "effectName": "Aggro Chance Reduction",
+          "statusName": "Nightshade",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -282,16 +348,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Lowers the chances of being attacked by enemies.",
-          "type": "Buff",
-          "effectName": "Aggro Chance Reduction",
-          "statusName": "Nightshade"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-730910953\">Seele_LowHP_AggroDown</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_HPRatio",
+            "MDF_AggroDown"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -394,16 +460,563 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HPRatio",
-            "MDF_AggroDown"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Seelev0_Seele_Eidolon6": {
+      "fileName": "Seelev0_Seele_Eidolon6",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-301677957\">Seele_Eidolon6</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-301677957\">Seele_Eidolon6</a>",
+          "execute": [
+            {
+              "eventTrigger": "Pre-Death [Owner]",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"995458646\">Seele_Eidolon6_Flag</a>[<span class=\"descriptionNumberColor\">Butterfly Flurry</span>]"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Current Action Holder Is",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "Seele_Rank6_Listen",
+                      "value": 0
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "Seele_Rank6_Listen",
+                      "value": 5
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Seelev0_Seele_Eidolon4": {
+      "fileName": "Seelev0_Seele_Eidolon4",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-268122719\">Seele_Eidolon4</a>",
+          "valuePerStack": {
+            "MDF_AddSP": {
+              "operator": "Variables[0] (15) || RETURN",
+              "displayLines": "15",
+              "constants": [],
+              "variables": [
+                15
+              ]
+            }
+          }
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-268122719\">Seele_Eidolon4</a>",
+          "stackData": [
+            "MDF_AddSP"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Got a Kill [Owner]",
+              "execute": [
+                {
+                  "name": "Update Energy",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "value": {
+                    "operator": "Variables[0] (MDF_AddSP) || RETURN",
+                    "displayLines": "MDF_AddSP",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AddSP"
+                    ]
+                  },
+                  "isFixed": "* ERR"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Seelev0_Seele_Eidolon1": {
+      "fileName": "Seelev0_Seele_Eidolon1",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-217789862\">Seele_Eidolon1</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-217789862\">Seele_Eidolon1</a>",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value1": "CurrentHP%",
+                    "compareType": "<=",
+                    "value2": {
+                      "operator": "Variables[0] (0.8) || RETURN",
+                      "displayLines": "0.8",
+                      "constants": [],
+                      "variables": [
+                        0.8
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
+                          "value": "0.15"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Seelev0_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Seelev0_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Seelev0_LocalPlayer_Seele_NormalAtk01": {
+      "fileName": "Seelev0_LocalPlayer_Seele_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier (OVERWORLD)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"156399431\">ADV_Modifier_Maze_Seele</a>"
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": "Ability Has a Target",
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": null,
+                  "overworldID": 110202
+                },
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "110201(SkillMaze)"
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": null,
+                  "overworldID": 110203
+                }
+              ],
+              "failed": [
+                "Deleted bullshit",
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": null,
+                  "overworldID": 110202
+                },
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "110201(SkillMaze)"
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": null,
+                  "overworldID": 110203
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": "Ability Has a Target",
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "FastRun"
+                  },
+                  "passed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "In Motion (Overworld)",
+                        "flag": "Run"
+                      },
+                      "passed": [
+                        "Deleted bullshit",
+                        {
+                          "name": "Overworld Attack Instance"
+                        }
+                      ],
+                      "failed": [
+                        "Deleted bullshit",
+                        {
+                          "name": "Overworld Attack Instance"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "Seelev0_Seele_TechniqueInLevel": {
@@ -485,9 +1098,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -606,6 +1217,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__959272575\">Local_Seele_ListenKill</a>",
+          "stackData": [
+            "dmg_percent"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -927,17 +1541,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "dmg_percent"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-894890999\">Ability02PreShowModifier</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1010,7 +1618,6 @@ const compositeAbilityObject = {
           "stackData": [
             "MDF_Skill01_Delay"
           ],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1158,6 +1765,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_Rank06_Damage"
+          ],
+          "description": "On a hit, receives an extra Quantum DMG from Seele.",
+          "type": "Debuff",
+          "effectName": "Butterfly Flurry",
+          "statusName": "Butterfly Flurry",
           "execute": [
             {
               "eventTrigger": "Being Attacked End [Owner]",
@@ -1185,15 +1799,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Rank06_Damage"
-          ],
-          "latentQueue": [],
-          "description": "On a hit, receives an extra Quantum DMG from Seele.",
-          "type": "Debuff",
-          "effectName": "Butterfly Flurry",
-          "statusName": "Butterfly Flurry"
+          ]
         }
       ],
       "targetObjectData": {
@@ -1660,18 +2266,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__333617615\">Ability01PreShowModifier_AppliedRatio</a>",
           "stackType": "Multiple",
-          "execute": [
-            {
-              "eventTrigger": "Action End [Owner]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ],
           "stackData": [
             "MDF_Skill01_Delay"
           ],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1693,33 +2290,23 @@ const compositeAbilityObject = {
                 ]
               }
             }
-          }
+          },
+          "execute": [
+            {
+              "eventTrigger": "Action End [Owner]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1624938404\">Seele_Trace02_ModifyAction</a>",
           "stackType": "Multiple",
-          "execute": [
-            {
-              "eventTrigger": "Turn End [Anyone]",
-              "execute": [
-                {
-                  "name": "Action Advance/Delay",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "advanceType": "Advance",
-                  "multiAdd": "-0.2"
-                },
-                "Modifier Deletes Itself"
-              ]
-            }
-          ],
           "stackData": [
             "MDF_DelayCost"
           ],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1741,7 +2328,24 @@ const compositeAbilityObject = {
                 ]
               }
             }
-          }
+          },
+          "execute": [
+            {
+              "eventTrigger": "Turn End [Anyone]",
+              "execute": [
+                {
+                  "name": "Action Advance/Delay",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "advanceType": "Advance",
+                  "multiAdd": "-0.2"
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
         }
       ],
       "targetObjectData": {
@@ -1783,226 +2387,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Seelev0_Modifiers": {
-      "fileName": "Seelev0_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-426535006\">Seele_BPAbility_SpeedUpEidolon2</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_SpeedUp"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "SpeedUp_Count",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (SpeedUp_Count) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * SpeedUp_Count)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "SpeedUp_Count"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to 2 stacks.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-456765622\">Seele_BPAbility_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_SpeedUp"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1401924350\">Seele_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (seele_dmg_percent) || RETURN",
-                    "displayLines": "seele_dmg_percent",
-                    "constants": [],
-                    "variables": [
-                      "seele_dmg_percent"
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Trace Activated",
-                    "conditionList": "Lacerate"
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Modifier Description",
-                      "popUpText": "DMG dealt increases by <span class=\"descriptionNumberColor\">seele_dmg_percent</span>, and Quantum RES PEN +<span class=\"descriptionNumberColor\">MDF_Penetrate</span>."
-                    },
-                    {
-                      "name": "Stack Target Stat Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumPEN</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_Penetrate) || RETURN",
-                        "displayLines": "MDF_Penetrate",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Penetrate"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Ultimate"
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Ultimate"
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Ultimate"
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "seele_dmg_percent",
-            "MDF_Penetrate"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">seele_dmg_percent</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Amplification",
-          "duration": 1
-        }
-      ],
-      "references": []
     }
   }
 }

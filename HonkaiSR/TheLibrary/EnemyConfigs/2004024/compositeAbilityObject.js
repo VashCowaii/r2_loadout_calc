@@ -3,25 +3,6 @@ const compositeAbilityObject = {
   "fullCharacterName": 2004024,
   "trimCharacterName": 2004024,
   "abilityList": [
-    "2004024_Monster_W2_Yanqing_AbilityP01",
-    "2004024_Monster_W2_Yanqing_PassiveAbilityMainBattle",
-    "2004024_Monster_W2_Yanqing_PassiveAbilityInitiate",
-    "2004024_Monster_W2_Yanqing_Ability06_Part02",
-    "2004024_Monster_W2_Yanqing_Ability06_Part01",
-    "2004024_Monster_W2_Yanqing_Ability05_Part02",
-    "2004024_Monster_W2_Yanqing_Ability05_Part01",
-    "2004024_Monster_W2_Yanqing_Ability04_Part02",
-    "2004024_Monster_W2_Yanqing_Ability04_Part01",
-    "2004024_Monster_W2_Yanqing_Ability03_Part02",
-    "2004024_Monster_W2_Yanqing_Ability03_Part01",
-    "2004024_Monster_W2_Yanqing_Ability02_TeamFormation",
-    "2004024_Monster_W2_Yanqing_Ability02_RevealedDie",
-    "2004024_Monster_W2_Yanqing_Ability02_Insert_Over",
-    "2004024_Monster_W2_Yanqing_Ability02_Part02",
-    "2004024_Monster_W2_Yanqing_Ability02_Part01",
-    "2004024_Monster_W2_Yanqing_Ability01_Part02",
-    "2004024_Monster_W2_Yanqing_Ability01_Part01",
-    "2004024_Monster_W2_Yanqing_PassiveAbility_BGM",
     "2004024_Monster_W2_Yanqing_PassiveAbilityInitiate_RL",
     "2004024_Monster_W2_Yanqing_AbilityP01_Insert_Part02to03",
     "2004024_Monster_W2_Yanqing_AbilityP01_Insert_Part01to02",
@@ -30,8 +11,15 @@ const compositeAbilityObject = {
     "2004024_Monster_W2_Yanqing_Ability08_Part01_RL",
     "2004024_Monster_W2_Yanqing_Ability07_Part02_RL",
     "2004024_Monster_W2_Yanqing_Ability07_Part01_RL",
+    "2004024_Monster_W2_Yanqing_Ability06_Part02",
+    "2004024_Monster_W2_Yanqing_Ability06_Part01",
     "2004024_Monster_W2_Yanqing_Ability05_Part02_RL",
     "2004024_Monster_W2_Yanqing_Ability05_Part01_RL",
+    "2004024_Monster_W2_Yanqing_Ability04_Part02",
+    "2004024_Monster_W2_Yanqing_Ability04_Part01",
+    "2004024_Monster_W2_Yanqing_Ability03_Part02",
+    "2004024_Monster_W2_Yanqing_Ability03_Part01",
+    "2004024_Monster_W2_Yanqing_Ability02_TeamFormation",
     "2004024_Monster_W2_Yanqing_Ability02_Insert_Over_RL",
     "2004024_Monster_W2_Yanqing_Ability02_Part02_RL",
     "2004024_Monster_W2_Yanqing_Ability02_Part01_RL",
@@ -40,2719 +28,6 @@ const compositeAbilityObject = {
     "2004024_Modifiers"
   ],
   "abilityObject": {
-    "2004024_Monster_W2_Yanqing_AbilityP01": {
-      "fileName": "2004024_Monster_W2_Yanqing_AbilityP01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004024_Monster_W2_Yanqing_PassiveAbilityMainBattle": {
-      "fileName": "2004024_Monster_W2_Yanqing_PassiveAbilityMainBattle",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1108547427\">Enemy_W2_Yanqing_PassiveAbilityMainBattle</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"39736655\">Enemy_W2_Yanqing_MainBattle_PerformController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"605967688\">Enemy_W2_Yanqing_MainBattle_FrozenResistanceUp</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1881028391\">Enemy_W2_Yanqing_MainBattle_Fatigue</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-814773132\">Enemy_W2_Yanqing_MainBattle_SpecialDieEffect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Trial: Blade}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1296940882\">Enemy_W2_Yanqing_MainBattle_ChangeRenSpeed</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-403510377\">Enemy_W2_Yanqing_RemoveOneMoreAfterAbility01</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Character ID",
-            "ID": 7213,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"2005715939\">Enemy_W2_Yanqing_MainBattle_DanhengIL_Counter</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1596688101\">Enemy_W2_Yanqing_MainBattle_LockHP</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-814773132\">Enemy_W2_Yanqing_MainBattle_SpecialDieEffect</a>",
-          "modifierFlags": [
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Pre-Death [Owner]",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "phase": "Phase_SpecialDieEffect"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__39736655\">Enemy_W2_Yanqing_MainBattle_PerformController</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "searchRandom": true,
-                  "conditions": {
-                    "name": "Character ID",
-                    "ID": 7213,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1288559368\">Enemy_W2_Yanqing_MainBattle_Perform01</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "searchRandom": true,
-                  "conditions": {
-                    "name": "Character ID",
-                    "ID": 7205,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1338892225\">Enemy_W2_Yanqing_MainBattle_Perform02</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1881028391\">Enemy_W2_Yanqing_MainBattle_Fatigue</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1928823293\">Enemy_W2_Yanqing_MainBattle_MuteUltra</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1322114606\">Enemy_W2_Yanqing_MainBattle_Perform03</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1372447463\">Enemy_W2_Yanqing_MainBattle_Perform04</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1355669844\">Enemy_W2_Yanqing_MainBattle_Perform05</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-696439078\">Enemy_W2_Yanqing_MainBattle_jiaobianzhici</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1319803673\">Enemy_W2_Yanqing_MainBattle_susutouxiang</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1240130161\">Enemy_W2_Yanqing_MainBattle_shutup_you_not_leave</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1089294259\">Enemy_W2_Yanqing_MainBattle_zhenyanshoua</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Trial: Blade}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"551998134\">Enemy_W2_Yanqing_MainBattle_zunming</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Put in Deathstate Limbo"
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Name",
-                    "skillName": "Skill05"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Leave Battle"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1108547427\">Enemy_W2_Yanqing_PassiveAbilityMainBattle</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_MainBattle_Flag"
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "searchRandom": true,
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Character ID",
-                        "ID": 7213,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": null
-                      }
-                    ]
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"141000625\">DanhengIL_EXAbility01_LV1</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Put in Deathstate Limbo"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Mute Last Kill",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__914198168\">DanhengIL_EXAbility01_LV3_DamageUp</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">StageFinalDMG</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2005715939\">Enemy_W2_Yanqing_MainBattle_DanhengIL_Counter</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action Choice Window [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "DanhengIL_MainBattle_Counter",
-                    "compareType": "=",
-                    "value2": 4,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1596688101\">Enemy_W2_Yanqing_MainBattle_LockHP</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Action End [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "DanhengIL_MainBattle_Counter",
-                  "context": "TargetEntity",
-                  "value": 1,
-                  "max": 9
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "DanhengIL_MainBattle_Counter",
-                  "value": 1
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "DanhengIL_MainBattle_Counter",
-                    "compareType": "=",
-                    "value2": 2,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"141000625\">DanhengIL_EXAbility01_LV1</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"90667768\">DanhengIL_EXAbility01_LV2</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "DanhengIL_MainBattle_Counter",
-                    "compareType": "=",
-                    "value2": 3,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"90667768\">DanhengIL_EXAbility01_LV2</a>"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"141000625\">DanhengIL_EXAbility01_LV1</a>"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"124223006\">DanhengIL_EXAbility01_LV0</a>"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1554946856\">DanHengIL_BPCost_2_Special</a>"
-                    },
-                    {
-                      "name": "Skill Points Modification",
-                      "adjustmentValue": 5,
-                      "adjustmentType": "+",
-                      "silent": true
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"310423138\">DanhengIL_EXAbility01_Diable_Ultra</a>"
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "searchRandom": true,
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Character ID",
-                            "ID": 7213,
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "characterName": null
-                          }
-                        ]
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"914198168\">DanhengIL_EXAbility01_LV3_DamageUp</a>",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (DanhengIL_MainBattle_Counter) || RETURN",
-                              "displayLines": "DanhengIL_MainBattle_Counter",
-                              "constants": [],
-                              "variables": [
-                                "DanhengIL_MainBattle_Counter"
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2004024_Monster_W2_Yanqing_PassiveAbilityInitiate": {
-      "fileName": "2004024_Monster_W2_Yanqing_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-130476025\">Enemy_W2_Yanqing_RemoveOneMore</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W2_Yanqing_00_AICounter",
-          "value": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W2_Yanqing_00_AIPhase",
-          "value": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "W2_Yanqing_00_WeakPointState"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W2_Yanqing_00_MaxPhaseNum",
-          "value": 1
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1051510305\">W2_YanQing_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1034732686\">W2_YanQing_BattleScore2</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1017955067\">W2_YanQing_BattleScore3</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1135398400\">W2_YanQing_BattleScore4</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1118620781\">W2_YanQing_BattleScore5</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1101843162\">W2_YanQing_BattleScore6</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1085065543\">W2_YanQing_BattleScore7</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-63015955\">Enemy_W2_Yanqing_StandBySwordEffect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1466013786\">Enemy_W2_Yanqing_StandBySwordEffect_Controller</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"684006930\">Enemy_W2_Yanqing_StandByEffect</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-130476025\">Enemy_W2_Yanqing_RemoveOneMore</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "W2_Yanqing_00_AICounter",
-                        "compareType": "=",
-                        "value2": 2,
-                        "contextScope": "TargetEntity"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "W2_Yanqing_00_AICounter",
-                        "compareType": "=",
-                        "value2": 4,
-                        "contextScope": "TargetEntity"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "W2_Yanqing_00_AICounter",
-                        "compareType": "=",
-                        "value2": 6,
-                        "contextScope": "TargetEntity"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "W2_Yanqing_00_AICounter",
-                        "compareType": "=",
-                        "value2": 8,
-                        "contextScope": "TargetEntity"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "W2_Yanqing_00_AICounter",
-                      "context": "TargetEntity",
-                      "value": -1,
-                      "max": 14
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2004024_Monster_W2_Yanqing_Ability06_Part02": {
-      "fileName": "2004024_Monster_W2_Yanqing_Ability06_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-273389019\">Enemy_W2_Yanqing_Ability05_Charge</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1372447463\">Enemy_W2_Yanqing_MainBattle_Perform04</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-356149908\">Enemy_W2_Yanqing_Ability05_Charge_CharacterChangePhase</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-290755256\">Enemy_W2_Yanqing_Ability05_Charge_RL</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-        },
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-63015955\">Enemy_W2_Yanqing_StandBySwordEffect</a>"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "HitSplit": 0.15,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "HitSplit": 0.15,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "HitSplit": 0.15,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "HitSplit": 0.15,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "HitSplit": 0.15,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "HitSplit": 0.25,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-63015955\">Enemy_W2_Yanqing_StandBySwordEffect</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1108547427\">Enemy_W2_Yanqing_PassiveAbilityMainBattle</a>"
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "W2_Yanqing_00_MainBattle_Flag",
-                "compareType": "=",
-                "value2": 0,
-                "contextScope": "TargetEntity"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "W2_Yanqing_00_MainBattle_Flag",
-              "value": 1
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2004024_Monster_W2_Yanqing_Ability06_Part01": {
-      "fileName": "2004024_Monster_W2_Yanqing_Ability06_Part01",
-      "childAbilityList": [
-        "2004024_Monster_W2_Yanqing_Ability06_Part01",
-        "2004024_Monster_W2_Yanqing_Ability06_Part02",
-        "2004024_Monster_W2_Yanqing_Ability06_Camera"
-      ],
-      "skillTrigger": "Skill06",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Yanqing_Ability06_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2004024_Monster_W2_Yanqing_Ability05_Part02": {
-      "fileName": "2004024_Monster_W2_Yanqing_Ability05_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1322114606\">Enemy_W2_Yanqing_MainBattle_Perform03</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-273389019\">Enemy_W2_Yanqing_Ability05_Charge</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004024_Monster_W2_Yanqing_Ability05_Part01": {
-      "fileName": "2004024_Monster_W2_Yanqing_Ability05_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Yanqing_Ability05_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004024_Monster_W2_Yanqing_Ability04_Part02": {
-      "fileName": "2004024_Monster_W2_Yanqing_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-63015955\">Enemy_W2_Yanqing_StandBySwordEffect</a>"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "30%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[1]]}) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "({[Skill04[1]]} * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                "{[Skill04[1]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "30%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "30%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[1]]}) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "({[Skill04[1]]} * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                "{[Skill04[1]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "30%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (0.4) || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * 0.4)",
-              "constants": [
-                0.4
-              ],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "40%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[1]]}) || Constants[0] (0.4) || MUL || RETURN",
-              "displayLines": "({[Skill04[1]]} * 0.4)",
-              "constants": [
-                0.4
-              ],
-              "variables": [
-                "{[Skill04[1]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "40%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1616456235\">Enemy_W2_Yanqing_Ability02_MarkingCountDown_2</a>[<span class=\"descriptionNumberColor\">Ready for Battle</span>]"
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1616456235\">Enemy_W2_Yanqing_Ability02_MarkingCountDown_2</a>[<span class=\"descriptionNumberColor\">Ready for Battle</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1666789092\">Enemy_W2_Yanqing_Ability02_MarkingCountDown_1</a>[<span class=\"descriptionNumberColor\">Ready for Battle</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-63015955\">Enemy_W2_Yanqing_StandBySwordEffect</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2004024_Monster_W2_Yanqing_Ability04_Part01": {
-      "fileName": "2004024_Monster_W2_Yanqing_Ability04_Part01",
-      "childAbilityList": [
-        "2004024_Monster_W2_Yanqing_Ability04_Part01",
-        "2004024_Monster_W2_Yanqing_Ability04_Part02",
-        "2004024_Monster_W2_Yanqing_Ability04_Camera"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Yanqing_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "subTarget": "Blast Targets"
-      },
-      "references": []
-    },
-    "2004024_Monster_W2_Yanqing_Ability03_Part02": {
-      "fileName": "2004024_Monster_W2_Yanqing_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-63015955\">Enemy_W2_Yanqing_StandBySwordEffect</a>"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "20%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "20%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "20%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "20%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "20%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-            "displayLines": "{[Skill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[2]]}"
-            ]
-          },
-          "baseChance": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
-          },
-          "valuePerStack": {
-            "Modifier_Frozen_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-              "displayLines": "{[Skill03[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[3]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-63015955\">Enemy_W2_Yanqing_StandBySwordEffect</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2004024_Monster_W2_Yanqing_Ability03_Part01": {
-      "fileName": "2004024_Monster_W2_Yanqing_Ability03_Part01",
-      "childAbilityList": [
-        "2004024_Monster_W2_Yanqing_Ability03_Part01",
-        "2004024_Monster_W2_Yanqing_Ability03_Part02",
-        "2004024_Monster_W2_Yanqing_Ability03_Camera"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Yanqing_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "2004024_Monster_W2_Yanqing_Ability02_TeamFormation": {
-      "fileName": "2004024_Monster_W2_Yanqing_Ability02_TeamFormation",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004024_Monster_W2_Yanqing_Ability02_RevealedDie": {
-      "fileName": "2004024_Monster_W2_Yanqing_Ability02_RevealedDie",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "value1": "W2_Yanqing_00_SummonMinionsPerformFlag",
-            "compareType": "=",
-            "value2": 0,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "ability": "Monster_W2_Yanqing_Ability02_TeamFormation",
-              "isTrigger": true
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "W2_Yanqing_00_SummonMinionsPerformFlag",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"153779397\">Enemy_W2_Yanqing_01_StandByEffect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-770732625\">Enemy_W2_Yanqing_01_SwordPowerUp_StandByEffect</a>"
-        },
-        {
-          "name": "Remove Modifier Behavior Flag(s)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "flagNames": []
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
-        },
-        {
-          "name": "Mark Entity For Immediate Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Remove from Team Target Grouping",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "stayInTeam": false
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Enemy Team All}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": "=",
-            "value2": 0,
-            "conditions": {
-              "name": "Has Flag",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "flagName": "Break"
-            }
-          },
-          "passed": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "W2_Yanqing_00_SummonMinionsPerformFlag"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004024_Monster_W2_Yanqing_Ability02_Insert_Over": {
-      "fileName": "2004024_Monster_W2_Yanqing_Ability02_Insert_Over",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"194045592\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core</a>[<span class=\"descriptionNumberColor\">Sword Formation</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-242524526\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core_MainBattle</a>[<span class=\"descriptionNumberColor\">Sword Formation</span>]"
-        },
-        {
-          "name": "Consume",
-          "consumeFrom": "MaxHP",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "consumePercent": {
-            "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-            "displayLines": "{[Skill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[1]]}"
-            ]
-          },
-          "consumeFloor": 1
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-204617197\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Toast_Controller</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Minions}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">=",
-            "value2": 1
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Minions}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">=",
-            "value2": 1
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Minions}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Mark Entity For Immediate Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              }
-            },
-            {
-              "name": "Force Entity Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              }
-            },
-            {
-              "name": "Remove from Team Target Grouping",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "stayInTeam": false
-            }
-          ]
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W2_Yanqing_00_Skill02_InsertFlag"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004024_Monster_W2_Yanqing_Ability02_Part02": {
-      "fileName": "2004024_Monster_W2_Yanqing_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Minions}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">=",
-            "value2": 1
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Minions}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1328693800\">Enemy_W2_Yanqing_Ability02_DuringSkill</a>"
-            },
-            {
-              "name": "Mark Entity For Immediate Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              }
-            },
-            {
-              "name": "Force Entity Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              }
-            },
-            {
-              "name": "Remove from Team Target Grouping",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "stayInTeam": false
-            }
-          ]
-        },
-        {
-          "name": "WAIT FOR",
-          "condition": {
-            "name": "Death Animation Completed",
-            "team": "Enemy Team",
-            "type": "Team Characters"
-          }
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": 0,
-          "refreshPositions": false,
-          "enemyList": [
-            {
-              "name": "Create Enemy from Custom",
-              "value": "W2_Yanqing_00_Skill02_SummonID01",
-              "summonLocation": "BeforeCaster"
-            },
-            {
-              "name": "Create Enemy from Custom",
-              "value": "W2_Yanqing_00_Skill02_SummonID01",
-              "summonLocation": "AfterCaster"
-            }
-          ]
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": 0.5,
-          "enemyList": [
-            {
-              "name": "Create Enemy from Custom",
-              "value": "W2_Yanqing_00_Skill02_SummonID02",
-              "summonLocation": "First"
-            },
-            {
-              "name": "Create Enemy from Custom",
-              "value": "W2_Yanqing_00_Skill02_SummonID02",
-              "summonLocation": "Last"
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "variableName": "W2_Yanqing_00_Skill02_SummonNumber",
-          "livingTargets": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1108547427\">Enemy_W2_Yanqing_PassiveAbilityMainBattle</a>"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-242524526\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core_MainBattle</a>[<span class=\"descriptionNumberColor\">Sword Formation</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1881028391\">Enemy_W2_Yanqing_MainBattle_Fatigue</a>"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"194045592\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Core</a>[<span class=\"descriptionNumberColor\">Sword Formation</span>]",
-              "valuePerStack": {
-                "MDF_SpeedDelta": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1108547427\">Enemy_W2_Yanqing_PassiveAbilityMainBattle</a>"
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 2,
-              "conditions": {
-                "name": "Character ID",
-                "ID": "W2_Yanqing_00_Skill02_SummonID01",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": null
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"2051112248\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_01</a>[<span class=\"descriptionNumberColor\">Formation Core</span>]"
-                }
-              ]
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 2,
-              "conditions": {
-                "name": "Character ID",
-                "ID": "W2_Yanqing_00_Skill02_SummonID02",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": null
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"2084667486\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_03</a>[<span class=\"descriptionNumberColor\">Formation Core</span>]"
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Random Chance",
-                "chance": 0.33
-              },
-              "passed": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"2095309040\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Unrevealed</a>",
-                    "invertCondition": true
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2051112248\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_01</a>[<span class=\"descriptionNumberColor\">Formation Core</span>]"
-                    }
-                  ]
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"2095309040\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Unrevealed</a>",
-                    "invertCondition": true
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2101445105\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_02</a>[<span class=\"descriptionNumberColor\">Formation Core</span>]"
-                    }
-                  ]
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 2,
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"2095309040\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Unrevealed</a>",
-                    "invertCondition": true
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2084667486\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_03</a>[<span class=\"descriptionNumberColor\">Formation Core</span>]"
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Random Chance",
-                    "chance": 0.5
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Minions}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"2095309040\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Unrevealed</a>",
-                        "invertCondition": true
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"2101445105\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_02</a>[<span class=\"descriptionNumberColor\">Formation Core</span>]"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Minions}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"2095309040\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Unrevealed</a>",
-                        "invertCondition": true
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"2084667486\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_03</a>[<span class=\"descriptionNumberColor\">Formation Core</span>]"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Minions}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 2,
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"2095309040\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Unrevealed</a>",
-                        "invertCondition": true
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"2051112248\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_01</a>[<span class=\"descriptionNumberColor\">Formation Core</span>]"
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Minions}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"2095309040\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Unrevealed</a>",
-                        "invertCondition": true
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"2084667486\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_03</a>[<span class=\"descriptionNumberColor\">Formation Core</span>]"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Minions}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"2095309040\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Unrevealed</a>",
-                        "invertCondition": true
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"2051112248\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_01</a>[<span class=\"descriptionNumberColor\">Formation Core</span>]"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Minions}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 2,
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"2095309040\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Unrevealed</a>",
-                        "invertCondition": true
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"2101445105\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_02</a>[<span class=\"descriptionNumberColor\">Formation Core</span>]"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed",
-          "value": 0
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1108547427\">Enemy_W2_Yanqing_PassiveAbilityMainBattle</a>"
-          },
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-204617197\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_Toast_Controller</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1501512671\">Enemy_W2_Yanqing_Ability02_WindToast</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"504784023\">Enemy_W2_Yanqing_Ability02_ThunderToast</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1106896946\">Enemy_W2_Yanqing_Ability02_ImaginaryToast</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"805504301\">Enemy_W2_Yanqing_Ability02_AdditiveToast</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"153779397\">Enemy_W2_Yanqing_01_StandByEffect</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004024_Monster_W2_Yanqing_Ability02_Part01": {
-      "fileName": "2004024_Monster_W2_Yanqing_Ability02_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Yanqing_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004024_Monster_W2_Yanqing_Ability01_Part02": {
-      "fileName": "2004024_Monster_W2_Yanqing_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "50%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "50%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2004024_Monster_W2_Yanqing_Ability01_Part01": {
-      "fileName": "2004024_Monster_W2_Yanqing_Ability01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Yanqing_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2004024_Monster_W2_Yanqing_PassiveAbility_BGM": {
-      "fileName": "2004024_Monster_W2_Yanqing_PassiveAbility_BGM",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage Type",
-                "stageType": "Challenge"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "VerseSimulation"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "StrongChallengeActivity"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "RogueRelic"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "GridFightActivity"
-              }
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1298343121\">Enemy_W2_Yanqing_ResetStageBGM</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1298343121\">Enemy_W2_Yanqing_ResetStageBGM</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex",
-                  "value": "CurWaveIndex"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave: Start",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex2",
-                  "value": "CurWaveIndex"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_WaveIndex",
-                    "compareType": "NOT=",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
-                      "displayLines": "MDF_WaveIndex2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_WaveIndex2"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "2004024_Monster_W2_Yanqing_PassiveAbilityInitiate_RL": {
       "fileName": "2004024_Monster_W2_Yanqing_PassiveAbilityInitiate_RL",
       "skillTrigger": "PassiveSkillInitiate",
@@ -3521,9 +796,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4644,6 +1917,281 @@ const compositeAbilityObject = {
       },
       "references": []
     },
+    "2004024_Monster_W2_Yanqing_Ability06_Part02": {
+      "fileName": "2004024_Monster_W2_Yanqing_Ability06_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-273389019\">Enemy_W2_Yanqing_Ability05_Charge</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1372447463\">Enemy_W2_Yanqing_MainBattle_Perform04</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-356149908\">Enemy_W2_Yanqing_Ability05_Charge_CharacterChangePhase</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-290755256\">Enemy_W2_Yanqing_Ability05_Charge_RL</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+        },
+        "Ability Start",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-63015955\">Enemy_W2_Yanqing_StandBySwordEffect</a>"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+              "displayLines": "{[Skill06[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill06[0]]}"
+              ]
+            },
+            "HitSplit": 0.15,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+              "displayLines": "{[Skill06[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill06[0]]}"
+              ]
+            },
+            "HitSplit": 0.15,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+              "displayLines": "{[Skill06[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill06[0]]}"
+              ]
+            },
+            "HitSplit": 0.15,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+              "displayLines": "{[Skill06[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill06[0]]}"
+              ]
+            },
+            "HitSplit": 0.15,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+              "displayLines": "{[Skill06[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill06[0]]}"
+              ]
+            },
+            "HitSplit": 0.15,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+              "displayLines": "{[Skill06[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill06[0]]}"
+              ]
+            },
+            "HitSplit": 0.25,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-63015955\">Enemy_W2_Yanqing_StandBySwordEffect</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1108547427\">Enemy_W2_Yanqing_PassiveAbilityMainBattle</a>"
+              },
+              {
+                "name": "Compare: Variable",
+                "value1": "W2_Yanqing_00_MainBattle_Flag",
+                "compareType": "=",
+                "value2": 0,
+                "contextScope": "TargetEntity"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "W2_Yanqing_00_MainBattle_Flag",
+              "value": 1
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "2004024_Monster_W2_Yanqing_Ability06_Part01": {
+      "fileName": "2004024_Monster_W2_Yanqing_Ability06_Part01",
+      "childAbilityList": [
+        "2004024_Monster_W2_Yanqing_Ability06_Part01",
+        "2004024_Monster_W2_Yanqing_Ability06_Part02",
+        "2004024_Monster_W2_Yanqing_Ability06_Camera"
+      ],
+      "skillTrigger": "Skill06",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Yanqing_Ability06_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
     "2004024_Monster_W2_Yanqing_Ability05_Part02_RL": {
       "fileName": "2004024_Monster_W2_Yanqing_Ability05_Part02_RL",
       "abilityType": null,
@@ -4693,6 +2241,459 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       },
       "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2004024_Monster_W2_Yanqing_Ability04_Part02": {
+      "fileName": "2004024_Monster_W2_Yanqing_Ability04_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-63015955\">Enemy_W2_Yanqing_StandBySwordEffect</a>"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (0.3) || MUL || RETURN",
+              "displayLines": "({[Skill04[0]]} * 0.3)",
+              "constants": [
+                0.3
+              ],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "30%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[1]]}) || Constants[0] (0.3) || MUL || RETURN",
+              "displayLines": "({[Skill04[1]]} * 0.3)",
+              "constants": [
+                0.3
+              ],
+              "variables": [
+                "{[Skill04[1]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "30%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (0.3) || MUL || RETURN",
+              "displayLines": "({[Skill04[0]]} * 0.3)",
+              "constants": [
+                0.3
+              ],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "30%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[1]]}) || Constants[0] (0.3) || MUL || RETURN",
+              "displayLines": "({[Skill04[1]]} * 0.3)",
+              "constants": [
+                0.3
+              ],
+              "variables": [
+                "{[Skill04[1]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "30%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (0.4) || MUL || RETURN",
+              "displayLines": "({[Skill04[0]]} * 0.4)",
+              "constants": [
+                0.4
+              ],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "40%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[1]]}) || Constants[0] (0.4) || MUL || RETURN",
+              "displayLines": "({[Skill04[1]]} * 0.4)",
+              "constants": [
+                0.4
+              ],
+              "variables": [
+                "{[Skill04[1]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "40%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1616456235\">Enemy_W2_Yanqing_Ability02_MarkingCountDown_2</a>[<span class=\"descriptionNumberColor\">Ready for Battle</span>]"
+          },
+          "passed": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1616456235\">Enemy_W2_Yanqing_Ability02_MarkingCountDown_2</a>[<span class=\"descriptionNumberColor\">Ready for Battle</span>]"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1666789092\">Enemy_W2_Yanqing_Ability02_MarkingCountDown_1</a>[<span class=\"descriptionNumberColor\">Ready for Battle</span>]"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-63015955\">Enemy_W2_Yanqing_StandBySwordEffect</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2004024_Monster_W2_Yanqing_Ability04_Part01": {
+      "fileName": "2004024_Monster_W2_Yanqing_Ability04_Part01",
+      "childAbilityList": [
+        "2004024_Monster_W2_Yanqing_Ability04_Part01",
+        "2004024_Monster_W2_Yanqing_Ability04_Part02",
+        "2004024_Monster_W2_Yanqing_Ability04_Camera"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Yanqing_Ability04_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
+      "references": []
+    },
+    "2004024_Monster_W2_Yanqing_Ability03_Part02": {
+      "fileName": "2004024_Monster_W2_Yanqing_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-63015955\">Enemy_W2_Yanqing_StandBySwordEffect</a>"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.2) || MUL || RETURN",
+              "displayLines": "({[Skill03[0]]} * 0.2)",
+              "constants": [
+                0.2
+              ],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "20%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.2) || MUL || RETURN",
+              "displayLines": "({[Skill03[0]]} * 0.2)",
+              "constants": [
+                0.2
+              ],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "20%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.2) || MUL || RETURN",
+              "displayLines": "({[Skill03[0]]} * 0.2)",
+              "constants": [
+                0.2
+              ],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "20%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.2) || MUL || RETURN",
+              "displayLines": "({[Skill03[0]]} * 0.2)",
+              "constants": [
+                0.2
+              ],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "20%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.2) || MUL || RETURN",
+              "displayLines": "({[Skill03[0]]} * 0.2)",
+              "constants": [
+                0.2
+              ],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "20%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
+            "displayLines": "{[Skill03[2]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill03[2]]}"
+            ]
+          },
+          "baseChance": {
+            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
+            "displayLines": "{[Skill03[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill03[1]]}"
+            ]
+          },
+          "valuePerStack": {
+            "Modifier_Frozen_DamagePercentage": {
+              "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
+              "displayLines": "{[Skill03[3]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill03[3]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-63015955\">Enemy_W2_Yanqing_StandBySwordEffect</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2004024_Monster_W2_Yanqing_Ability03_Part01": {
+      "fileName": "2004024_Monster_W2_Yanqing_Ability03_Part01",
+      "childAbilityList": [
+        "2004024_Monster_W2_Yanqing_Ability03_Part01",
+        "2004024_Monster_W2_Yanqing_Ability03_Part02",
+        "2004024_Monster_W2_Yanqing_Ability03_Camera"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Yanqing_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "2004024_Monster_W2_Yanqing_Ability02_TeamFormation": {
+      "fileName": "2004024_Monster_W2_Yanqing_Ability02_TeamFormation",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -5964,6 +3965,11 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "latentQueue": [
+            "W2_Yanqing_00_AICounter",
+            "W2_Yanqing_00_AIPhase",
+            "W2_Yanqing_00_WeakPointState"
+          ],
           "execute": [
             {
               "eventTrigger": "Pre-Death [Owner]",
@@ -5996,12 +4002,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_AICounter",
-            "W2_Yanqing_00_AIPhase",
-            "W2_Yanqing_00_WeakPointState"
           ]
         },
         {
@@ -6009,6 +4009,11 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1101843162\">W2_YanQing_BattleScore6</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "W2_Yanqing_00_AICounter",
+            "W2_Yanqing_00_AIPhase",
+            "W2_Yanqing_00_WeakPointState"
           ],
           "execute": [
             {
@@ -6047,12 +4052,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_AICounter",
-            "W2_Yanqing_00_AIPhase",
-            "W2_Yanqing_00_WeakPointState"
           ]
         },
         {
@@ -6060,6 +4059,11 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1118620781\">W2_YanQing_BattleScore5</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "W2_Yanqing_00_AICounter",
+            "W2_Yanqing_00_AIPhase",
+            "W2_Yanqing_00_WeakPointState"
           ],
           "execute": [
             {
@@ -6098,12 +4102,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_AICounter",
-            "W2_Yanqing_00_AIPhase",
-            "W2_Yanqing_00_WeakPointState"
           ]
         },
         {
@@ -6111,6 +4109,11 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1135398400\">W2_YanQing_BattleScore4</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "W2_Yanqing_00_AICounter",
+            "W2_Yanqing_00_AIPhase",
+            "W2_Yanqing_00_WeakPointState"
           ],
           "execute": [
             {
@@ -6149,12 +4152,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_AICounter",
-            "W2_Yanqing_00_AIPhase",
-            "W2_Yanqing_00_WeakPointState"
           ]
         },
         {
@@ -6162,6 +4159,11 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1017955067\">W2_YanQing_BattleScore3</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "W2_Yanqing_00_AICounter",
+            "W2_Yanqing_00_AIPhase",
+            "W2_Yanqing_00_WeakPointState"
           ],
           "execute": [
             {
@@ -6195,12 +4197,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_AICounter",
-            "W2_Yanqing_00_AIPhase",
-            "W2_Yanqing_00_WeakPointState"
           ]
         },
         {
@@ -6208,6 +4204,11 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1034732686\">W2_YanQing_BattleScore2</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "W2_Yanqing_00_AICounter",
+            "W2_Yanqing_00_AIPhase",
+            "W2_Yanqing_00_WeakPointState"
           ],
           "execute": [
             {
@@ -6241,12 +4242,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_AICounter",
-            "W2_Yanqing_00_AIPhase",
-            "W2_Yanqing_00_WeakPointState"
           ]
         },
         {
@@ -6254,6 +4249,11 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1051510305\">W2_YanQing_BattleScore1</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "W2_Yanqing_00_AICounter",
+            "W2_Yanqing_00_AIPhase",
+            "W2_Yanqing_00_WeakPointState"
           ],
           "execute": [
             {
@@ -6287,12 +4287,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_AICounter",
-            "W2_Yanqing_00_AIPhase",
-            "W2_Yanqing_00_WeakPointState"
           ]
         },
         {
@@ -6302,9 +4296,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6324,9 +4316,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6354,9 +4344,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6365,9 +4353,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6376,9 +4362,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6454,9 +4438,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6468,9 +4450,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6490,9 +4470,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6856,10 +4834,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DanhengIL_MainBattle_Counter"
           ]
         },
         {
@@ -6949,10 +4923,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_MainBattle_Flag"
           ]
         },
         {
@@ -7002,10 +4972,6 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DanhengIL_MainBattle_Counter"
           ]
         },
         {
@@ -7015,9 +4981,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7138,13 +5102,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1466013786\">Enemy_W2_Yanqing_StandBySwordEffect_Controller</a>",
+          "latentQueue": [
+            "W2_Yanqing_00_AICounter",
+            "W2_Yanqing_00_AIPhase",
+            "W2_Yanqing_00_WeakPointState"
+          ],
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -7353,12 +5320,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_AICounter",
-            "W2_Yanqing_00_AIPhase",
-            "W2_Yanqing_00_WeakPointState"
           ]
         },
         {
@@ -7461,9 +5422,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7483,9 +5442,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7503,6 +5460,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2084667486\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_03</a>[<span class=\"descriptionNumberColor\">Formation Core</span>]",
+          "description": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
+          "type": "Other",
+          "effectName": "Formation Core",
+          "statusName": "Formation Core",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -7659,17 +5620,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
-          "type": "Other",
-          "effectName": "Formation Core",
-          "statusName": "Formation Core"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2101445105\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_02</a>[<span class=\"descriptionNumberColor\">Formation Core</span>]",
+          "description": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
+          "type": "Other",
+          "effectName": "Formation Core",
+          "statusName": "Formation Core",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -7826,17 +5785,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
-          "type": "Other",
-          "effectName": "Formation Core",
-          "statusName": "Formation Core"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2051112248\">Enemy_W2_Yanqing_Ability02_UnknownWeakPoint_01</a>[<span class=\"descriptionNumberColor\">Formation Core</span>]",
+          "description": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
+          "type": "Other",
+          "effectName": "Formation Core",
+          "statusName": "Formation Core",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -7993,13 +5950,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The Weakness of the target enemy is one of the following: Wind, Lightning, Imaginary. Use attacks of the corresponding Types to figure out the real Weakness Type. Inflict Weakness Break on the target to destroy the enemy.",
-          "type": "Other",
-          "effectName": "Formation Core",
-          "statusName": "Formation Core"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8175,9 +6126,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8186,6 +6135,10 @@ const compositeAbilityObject = {
             "MuteBreak",
             "MuteHitH"
           ],
+          "description": "Yanqing's Toughness cannot be reduced. Destroy all of Yanqing's Flying Swords to dispel that effect and cause DMG to Yanqing.",
+          "type": "Other",
+          "effectName": "Sword Formation",
+          "statusName": "Sword Formation",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -8327,13 +6280,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Yanqing's Toughness cannot be reduced. Destroy all of Yanqing's Flying Swords to dispel that effect and cause DMG to Yanqing.",
-          "type": "Other",
-          "effectName": "Sword Formation",
-          "statusName": "Sword Formation"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8342,6 +6289,10 @@ const compositeAbilityObject = {
             "MuteBreak",
             "MuteHitH"
           ],
+          "description": "Yanqing's Toughness cannot be reduced, and his SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedDelta</span>. Destroy all of Yanqing's Flying Swords to dispel this effect and cause DMG to Yanqing.",
+          "type": "Other",
+          "effectName": "Sword Formation",
+          "statusName": "Sword Formation",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -8513,21 +6464,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedDelta"
-          ],
-          "latentQueue": [],
-          "description": "Yanqing's Toughness cannot be reduced, and his SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedDelta</span>. Destroy all of Yanqing's Flying Swords to dispel this effect and cause DMG to Yanqing.",
-          "type": "Other",
-          "effectName": "Sword Formation",
-          "statusName": "Sword Formation"
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1328693800\">Enemy_W2_Yanqing_Ability02_DuringSkill</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1328693800\">Enemy_W2_Yanqing_Ability02_DuringSkill</a>"
         },
         {
           "name": "Modifier Construction",
@@ -8562,9 +6503,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8603,9 +6542,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8623,9 +6560,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8690,9 +6625,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8717,9 +6650,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8748,9 +6679,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8759,9 +6688,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Choice Window [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8776,13 +6703,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-355399980\">Monster_W2_Yanqing_RL_LowHP</a>",
+          "stackData": [
+            "MDF_LowHPRatio"
+          ],
+          "latentQueue": [
+            "W2_Yanqing_00_AICounter",
+            "W2_Yanqing_00_AIPhase",
+            "W2_Yanqing_00_WeakPointState"
+          ],
           "execute": [
             {
               "eventTrigger": "HP Change [Owner]",
@@ -8887,14 +6820,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_LowHPRatio"
-          ],
-          "latentQueue": [
-            "W2_Yanqing_00_AICounter",
-            "W2_Yanqing_00_AIPhase",
-            "W2_Yanqing_00_WeakPointState"
           ]
         },
         {
@@ -8922,6 +6847,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__262387731\">Enemy_W2_Yanqing_AbilityP01_Part03SpeedUp</a>",
+          "stackData": [
+            "MDF_SpeedDelta"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -8944,11 +6872,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedDelta"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8958,6 +6882,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_DOT"
           ],
+          "useEntitySnapshot": true,
+          "stackLimit": 1,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -9040,14 +6967,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackLimit": 1,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2018294690\">Enemy_W2_Yanqing_AbilityP01_ChangePhaseController</a>",
+          "latentQueue": [
+            "W2_Yanqing_00_SkillP01_InsertFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -9276,23 +7203,18 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_SkillP01_InsertFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-794932920\">Enemy_W2_Yanqing_AbilityP01_EnterBattleToast</a>",
+          "latentQueue": [
+            "W2_Yanqing_00_SkillP01_InsertFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "W2_Yanqing_00_SkillP01_InsertFlag"
           ]
         },
         {
@@ -9307,6 +7229,14 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2068860507\">Enemy_W2_Yanqing_SwordPowerUp</a>[<span class=\"descriptionNumberColor\">Ordeal</span>]",
+          "useEntitySnapshot": true,
+          "latentQueue": [
+            "FinalPhase"
+          ],
+          "description": "This summon receives an enhancement and increases Max Toughness. After attacking, there is a high chance of Freezing the target.",
+          "type": "Other",
+          "effectName": "Ordeal",
+          "statusName": "Ordeal",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -9347,16 +7277,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": [
-            "FinalPhase"
-          ],
-          "description": "This summon receives an enhancement and increases Max Toughness. After attacking, there is a high chance of Freezing the target.",
-          "type": "Other",
-          "effectName": "Ordeal",
-          "statusName": "Ordeal"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9434,13 +7355,14 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1666789092\">Enemy_W2_Yanqing_Ability02_MarkingCountDown_1</a>[<span class=\"descriptionNumberColor\">Ready for Battle</span>]",
+          "description": "Use Aethereal Dreamflux in the next turn.",
+          "type": "Other",
+          "statusName": "Ready for Battle",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -9468,18 +7390,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Use Aethereal Dreamflux in the next turn.",
-          "type": "Other",
-          "statusName": "Ready for Battle"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1616456235\">Enemy_W2_Yanqing_Ability02_MarkingCountDown_2</a>[<span class=\"descriptionNumberColor\">Ready for Battle</span>]",
-          "stackData": [],
-          "latentQueue": [],
           "description": "Use Aethereal Dreamflux after 2 turns",
           "type": "Other",
           "statusName": "Ready for Battle"
@@ -9491,8 +7406,6 @@ const compositeAbilityObject = {
             "AttackSign",
             "RemoveWhenCasterDead"
           ],
-          "stackData": [],
-          "latentQueue": [],
           "description": "Locked on by %CasterName and is the target of Aethereal Dreamflux.",
           "type": "Other",
           "effectName": "Lock On",
@@ -9505,6 +7418,13 @@ const compositeAbilityObject = {
             "MuteBreak",
             "MuteHitH"
           ],
+          "stackData": [
+            "MDF_SpeedDelta"
+          ],
+          "description": "Yanqing's Toughness cannot be reduced, and his SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedDelta</span>. Destroy all of Yanqing's Flying Swords to dispel this effect and cause DMG to Yanqing.",
+          "type": "Other",
+          "effectName": "Sword Formation",
+          "statusName": "Sword Formation",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -9676,21 +7596,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedDelta"
-          ],
-          "latentQueue": [],
-          "description": "Yanqing's Toughness cannot be reduced, and his SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedDelta</span>. Destroy all of Yanqing's Flying Swords to dispel this effect and cause DMG to Yanqing.",
-          "type": "Other",
-          "effectName": "Sword Formation",
-          "statusName": "Sword Formation"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1004973880\">Enemy_W2_Yanqing_Standard_IceDamageTakenUp</a>",
           "stackType": "Replace",
           "modifierFlags": [],
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -9735,13 +7648,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1122230262\">Enemy_W2_Yanqing_Standard_Overdrive</a>[<span class=\"descriptionNumberColor\">Chilling Light</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "AllDamageTypeAddedRatioPerLayer"
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>. This effect can stack.",
+          "type": "Buff",
+          "effectName": "Chilling Light",
+          "statusName": "Chilling Light",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -9783,16 +7703,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "AllDamageTypeAddedRatioPerLayer"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>. This effect can stack.",
-          "type": "Buff",
-          "effectName": "Chilling Light",
-          "statusName": "Chilling Light",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9801,9 +7712,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

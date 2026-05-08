@@ -22,6 +22,12 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1670817312\">W1_Mecha02_AttackBonus</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [],
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">ModifierDamageUpValue</span>.",
+      "type": "Buff",
+      "effectName": "Charging",
+      "statusName": "Charging",
+      "duration": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -103,13 +109,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">ModifierDamageUpValue</span>.",
-      "type": "Buff",
-      "effectName": "Charging",
-      "statusName": "Charging",
-      "duration": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -119,17 +119,15 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "AttackSign"
       ],
+      "description": "%CasterName will focus attacks on this target.",
+      "type": "Other",
+      "effectName": "Lock On",
+      "statusName": "Lock On",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "%CasterName will focus attacks on this target.",
-      "type": "Other",
-      "effectName": "Lock On",
-      "statusName": "Lock On"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -140,6 +138,23 @@ const configAbility = {
         "STAT_DOT",
         "STAT_DOT_Bleed"
       ],
+      "useEntitySnapshot": true,
+      "stackData": [
+        "Modifier_Bleed_DamagePercentage",
+        "MDF_MaxLayer"
+      ],
+      "latentQueue": [
+        "Mecha04_BattleScore2_Flag",
+        "Monster_W1_Mecha04_00_InsertFlag",
+        "Mecha04_EnemySelector"
+      ],
+      "description": "For a certain number of turns, receive Physical DMG based on Max HP at the beginning of each turn, stacking up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+      "type": "Debuff",
+      "effectName": "Bleed",
+      "statusName": "Bleed",
+      "duration": 3,
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -242,24 +257,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "Modifier_Bleed_DamagePercentage",
-        "MDF_MaxLayer"
-      ],
-      "latentQueue": [
-        "Mecha04_BattleScore2_Flag",
-        "Monster_W1_Mecha04_00_InsertFlag",
-        "Mecha04_EnemySelector"
-      ],
-      "description": "For a certain number of turns, receive Physical DMG based on Max HP at the beginning of each turn, stacking up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-      "type": "Debuff",
-      "effectName": "Bleed",
-      "statusName": "Bleed",
-      "duration": 3,
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -310,13 +308,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__413586706\">Enemy_W1_Mecha04_ChainSawSpeedUpAgain</a>",
+      "latentQueue": [
+        "Monster_W1_Mecha04_00_InsertFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -332,15 +331,14 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Monster_W1_Mecha04_00_InsertFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1520229010\">Enemy_W1_Mecha04_ChainSawSpeedUp</a>",
+      "latentQueue": [
+        "Monster_W1_Mecha04_00_InsertFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -400,15 +398,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Monster_W1_Mecha04_00_InsertFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__86526796\">Monster_W1_Mecha04_RemoveAim</a>",
+      "latentQueue": [
+        "Mecha04_BattleScore2_Flag",
+        "Monster_W1_Mecha04_00_InsertFlag",
+        "Mecha04_EnemySelector",
+        "Mecha04_AttackCount"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -450,13 +450,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Mecha04_BattleScore2_Flag",
-        "Monster_W1_Mecha04_00_InsertFlag",
-        "Mecha04_EnemySelector",
-        "Mecha04_AttackCount"
       ]
     },
     {
@@ -466,10 +459,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "AttackSign"
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Mecha04_Aim_Flag"
       ],
       "description": "%CasterName will focus attacks on this target.",
       "type": "Other",
@@ -483,10 +472,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "AttackSign"
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Mecha04_Aim_Flag"
       ],
       "description": "%CasterName will focus attacks on this target.",
       "type": "Other",
@@ -565,9 +550,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

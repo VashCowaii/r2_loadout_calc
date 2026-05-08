@@ -3,6 +3,9 @@ const compositeAbilityObject = {
   "fullCharacterName": 4033021,
   "trimCharacterName": 4033021,
   "abilityList": [
+    "4033021_Monster_W4_Claymore_01_LocalLegend_PassiveAbility_Recover",
+    "4033021_Monster_W4_Claymore_01_LocalLegend_PassiveAbility_Insert",
+    "4033021_Monster_W4_Claymore_01_LocalLegend_PassiveAbilityInitiate",
     "4033021_Monster_W4_Claymore_01_LocalLegend_Ability05_Part02",
     "4033021_Monster_W4_Claymore_01_LocalLegend_Ability05_Part01",
     "4033021_Monster_W4_Claymore_01_LocalLegend_Ability04_Part02",
@@ -13,1842 +16,15 @@ const compositeAbilityObject = {
     "4033021_Monster_W4_Claymore_01_LocalLegend_Ability021_Part01",
     "4033021_Monster_W4_Claymore_01_LocalLegend_Ability02_Part02",
     "4033021_Monster_W4_Claymore_01_LocalLegend_Ability02_Part01",
-    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Part02",
-    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Part01",
     "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part02",
     "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part01",
-    "4033021_BattleEvent_W4_Claymore_01_LocalLegend_Part01",
-    "4033021_BattleEvent_W4_Claymore_01_LocalLegend_EnterReady",
-    "4033021_Monster_W4_Claymore_01_LocalLegend_PassiveAbility_Recover",
-    "4033021_Monster_W4_Claymore_01_LocalLegend_PassiveAbility_Insert",
-    "4033021_Monster_W4_Claymore_01_LocalLegend_PassiveAbilityInitiate",
+    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Part02",
+    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Part01",
     "4033021_Modifiers",
     "4033021_Functions",
     "4033021_BE_BattleEvents"
   ],
   "abilityObject": {
-    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability05_Part02": {
-      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability05_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target Count",
-            "target": {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Every Battle Entity}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID02) || RETURN",
-                      "displayLines": "SummonID02",
-                      "constants": [],
-                      "variables": [
-                        "SummonID02"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  }
-                }
-              ]
-            },
-            "compareType": "=",
-            "value2": 0,
-            "livingTargets": true
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                "displayLines": "{[Skill05[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[0]]}"
-                ]
-              },
-              "refreshPositions": false,
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonID02) || RETURN",
-                    "displayLines": "SummonID02",
-                    "constants": [],
-                    "variables": [
-                      "SummonID02"
-                    ]
-                  },
-                  "locationType": "KeepOnFirst"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1813832219\">Enemy_W4_Claymore_01_LocalLegend_BlackSummon</a>"
-            },
-            {
-              "name": "Advance/Delay up to Target",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "targetRef": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "refPoint": "After",
-              "isStartingAV": true
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target Count",
-            "target": {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Every Battle Entity}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID01) || RETURN",
-                      "displayLines": "SummonID01",
-                      "constants": [],
-                      "variables": [
-                        "SummonID01"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  }
-                }
-              ]
-            },
-            "compareType": "=",
-            "value2": 0,
-            "livingTargets": true
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                "displayLines": "{[Skill05[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[1]]}"
-                ]
-              },
-              "refreshPositions": false,
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonID01) || RETURN",
-                    "displayLines": "SummonID01",
-                    "constants": [],
-                    "variables": [
-                      "SummonID01"
-                    ]
-                  },
-                  "locationType": "KeepOnLast"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1813832219\">Enemy_W4_Claymore_01_LocalLegend_BlackSummon</a>"
-            },
-            {
-              "name": "Advance/Delay up to Target",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "targetRef": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "refPoint": "After",
-              "isStartingAV": true
-            }
-          ]
-        },
-        {
-          "name": "Create AV Link",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "to": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}}"
-          },
-          "linkOrder": 1,
-          "isStart": true,
-          "linkFollowerModifications": {
-            "OnBreak": "Bit_AutoForceSync"
-          },
-          "linkOwnerModifications": {
-            "OnBreak": "Bit_AutoForceSync"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"735008645\">Enemy_W4_Claymore_01_LocalLegend_BlackMonst</a>"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"735008645\">Enemy_W4_Claymore_01_LocalLegend_BlackMonst</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"783794549\">Enemy_W4_Shooter_01_Effect</a>",
-                "invertCondition": true
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 403205,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": null,
-                "isCompareUniqueID": true
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"783794549\">Enemy_W4_Shooter_01_Effect</a>",
-              "casterAssign": "TargetSelf"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability05_Part01": {
-      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability05_Part01",
-      "childAbilityList": [
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability05_Camera",
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability05_Part01",
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability05_Part02"
-      ],
-      "skillTrigger": "Skill05",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_01_LocalLegend_Ability05_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability04_Part02": {
-      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
-          "valuePerStack": {
-            "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
-            },
-            "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
-            },
-            "MDF_Rally_HealUpRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
-            },
-            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[3]]}"
-              ]
-            }
-          }
-        },
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.25,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.25,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.5,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability04_Part01": {
-      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability04_Part01",
-      "childAbilityList": [
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability04_Camera",
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability04_Part01",
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability04_Part02"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_01_LocalLegend_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}",
-        "targetIsVariable": true
-      },
-      "references": []
-    },
-    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability03_Part02": {
-      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
-          "valuePerStack": {
-            "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
-            },
-            "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
-            },
-            "MDF_Rally_HealUpRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
-            },
-            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[3]]}"
-              ]
-            }
-          }
-        },
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability03_Part01": {
-      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability03_Part01",
-      "childAbilityList": [
-        "4033021_Monster_W4_Claymore_01_Ability03_Camera",
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability03_Part01",
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_01_LocalLegend_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability021_Part02": {
-      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability021_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1804376736\">W4_Claymore_01_LocalLegend_BattleScoreMark</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "flagName": "Break"
-          },
-          "passed": [
-            {
-              "name": "Exit Broken-State",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            },
-            {
-              "name": "Reset Toughness",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{EVENT[RoT] Light Praetor: 3}}"
-            },
-            "flagName": "Break"
-          },
-          "passed": [
-            {
-              "name": "Exit Broken-State",
-              "target": {
-                "name": "Target Name",
-                "target": "{{EVENT[RoT] Light Praetor: 3}}"
-              }
-            },
-            {
-              "name": "Reset Toughness",
-              "target": {
-                "name": "Target Name",
-                "target": "{{EVENT[RoT] Light Praetor: 3}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}} + {{EVENT[RoT] Light Praetor: 3}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1808493640\">Enemy_Standard_LocalLegend_Init_LockHp</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}} + {{EVENT[RoT] Light Praetor: 3}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"449361701\">Enemy_Standard_LocalLegend_Init_MuteBreak</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_EnterBattle",
-          "value": 0
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "InsertCheck04",
-          "value": 1
-        },
-        {
-          "name": "Remove from Team Target Grouping",
-          "target": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}} + {{EVENT[RoT] Light Praetor: Light Summons}}"
-          },
-          "stayInTeam": false
-        },
-        {
-          "name": "Mark Entity For Immediate Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}} + {{EVENT[RoT] Light Praetor: Light Summons}}"
-          }
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}} + {{EVENT[RoT] Light Praetor: Light Summons}}"
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"735008645\">Enemy_W4_Claymore_01_LocalLegend_BlackMonst</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-726340599\">Enemy_W4_Claymore_01_LocalLegend_ElationListener</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Light Praetor: 3}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"263808079\">Enemy_W4_Claymore_01_LocalLegend_WhiteMonst</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Living State",
-            "state": "Mask_AliveOnly",
-            "target": {
-              "name": "Target Name",
-              "target": "{{EVENT[RoT] Light Praetor: 3}}"
-            }
-          },
-          "passed": [
-            {
-              "name": "Boss Bar Display",
-              "target": {
-                "name": "Target Name",
-                "target": "{{EVENT[RoT] Light Praetor: 3}}"
-              },
-              "display": false
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Living State",
-            "state": "Mask_AliveOnly",
-            "target": {
-              "name": "Target Name",
-              "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-            }
-          },
-          "passed": [
-            {
-              "name": "Boss Bar Display",
-              "target": {
-                "name": "Target Name",
-                "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-              },
-              "display": true
-            },
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-              },
-              "variableName": "_BossUI",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Light Praetor: 3}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1934316288\">Enemy_W4_Claymore_01_LocalLegend_Stealth</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1934316288\">Enemy_W4_Claymore_01_LocalLegend_Stealth</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Every Battle Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Every Battle Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-609521180\">Enemy_W4_Claymore_01_LocalLegend_WhiteCurse</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1216174202\">Enemy_W4_Claymore_01_LocalLegend_AllCurse</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1386282109\">Enemy_W4_Claymore_01_LocalLegend_AllMonst</a>[<span class=\"descriptionNumberColor\">Fight in Unity</span>]"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability021_Part01": {
-      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability021_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_01_LocalLegend_Ability021_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability02_Part02": {
-      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "flagName": "Break"
-          },
-          "passed": [
-            {
-              "name": "Exit Broken-State",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            },
-            {
-              "name": "Reset Toughness",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{EVENT[RoT] Light Praetor: 3}}"
-            },
-            "flagName": "Break"
-          },
-          "passed": [
-            {
-              "name": "Exit Broken-State",
-              "target": {
-                "name": "Target Name",
-                "target": "{{EVENT[RoT] Light Praetor: 3}}"
-              }
-            },
-            {
-              "name": "Reset Toughness",
-              "target": {
-                "name": "Target Name",
-                "target": "{{EVENT[RoT] Light Praetor: 3}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}} + {{EVENT[RoT] Light Praetor: 3}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-180350393\">Monster_W4_Claymore_01_LocalLegend_Ability02_Perform</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "InsertCheck03",
-          "value": 1
-        },
-        {
-          "name": "Remove from Team Target Grouping",
-          "target": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}} + {{EVENT[RoT] Light Praetor: Light Summons}}"
-          },
-          "stayInTeam": false
-        },
-        {
-          "name": "Mark Entity For Immediate Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}} + {{EVENT[RoT] Light Praetor: Light Summons}}"
-          }
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}} + {{EVENT[RoT] Light Praetor: Light Summons}}"
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}} + {{EVENT[RoT] Light Praetor: 3}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1386282109\">Enemy_W4_Claymore_01_LocalLegend_AllMonst</a>[<span class=\"descriptionNumberColor\">Fight in Unity</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Every Battle Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1216174202\">Enemy_W4_Claymore_01_LocalLegend_AllCurse</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"833181750\">Enemy_W2_LycanKing_IF_MuteUltra</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target Count",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Player Team(Exclude Memosprites)}}"
-            },
-            "compareType": "<=",
-            "value2": 2,
-            "livingTargets": true
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{BattleEvent20034}}"
-              },
-              "variableName": "_SelectTimes",
-              "value": 1
-            }
-          ],
-          "failed": [
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{BattleEvent20034}}"
-              },
-              "variableName": "_SelectTimes",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1358856185\">Enemy_W4_Claymore_01_LocalLegend_TargetSelectPrepare</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_EnterBattle",
-            "compareType": "=",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "Inject Extra-Turn",
-              "actionTag": null,
-              "skillType": "ControlSkill03",
-              "target": {
-                "name": "Add Target by Unique Identifier",
-                "identifier": "SelectTarget"
-              },
-              "afterInjection": []
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"357625087\">Monster_W4_Claymore_01_LocalLegend_Locking</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__357625087\">Monster_W4_Claymore_01_LocalLegend_Locking</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "Update Target Selected(UI) [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Current Action Owner}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{BattleEvent20034}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "#CL_IsTriggerEffect",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "#CL_IsTriggerEffect",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "InsertCheck03",
-            "_SelectTimes",
-            "_EnterBattle"
-          ]
-        }
-      ]
-    },
-    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability02_Part01": {
-      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability02_Part01",
-      "childAbilityList": [
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability02_Camera",
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability02_Part01",
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability02_Part02",
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability021_Part01",
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability021_Part02",
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability021_Camera"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_01_LocalLegend_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Part02": {
-      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
-          "valuePerStack": {
-            "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
-            },
-            "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
-            },
-            "MDF_Rally_HealUpRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
-            },
-            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[3]]}"
-              ]
-            }
-          }
-        },
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Part01": {
-      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Part01",
-      "childAbilityList": [
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Camera",
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Part01",
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Part02",
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part01",
-        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_01_LocalLegend_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}",
-        "targetIsVariable": true
-      },
-      "references": []
-    },
-    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part02": {
-      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_FirstProgressInfo",
-            "compareType": "=",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_FirstProgressInfo",
-              "value": 1
-            },
-            {
-              "name": "Start Battle Track Progress",
-              "progress": 0,
-              "count": 100,
-              "ID": "#1%",
-              "desc": "The Other Boss's Remaining HP"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Define Custom Variable with HP%",
-              "target": {
-                "name": "Target Name",
-                "target": "{{EVENT[RoT] Light Praetor: 3}}"
-              },
-              "variableName": "_CurrentHPRatio"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{EVENT[RoT] Light Praetor: 3}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1616431833\">Monster_W4_Claymore_01_LocalLegend_LockHP_Revive</a>[<span class=\"descriptionNumberColor\">Indomitable Battle</span>]"
-              },
-              "passed": [
-                {
-                  "name": "Set Battle Track Progress",
-                  "progress": 0,
-                  "count": 0,
-                  "ID": "#1%"
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "_CurrentHPRatio",
-                    "compareType": "<=",
-                    "value2": 0.01
-                  },
-                  "passed": [
-                    {
-                      "name": "Set Battle Track Progress",
-                      "progress": 0,
-                      "count": 1,
-                      "ID": "#1%"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Set Battle Track Progress",
-                      "progress": 0,
-                      "count": {
-                        "operator": "Variables[0] (WHOLE) || Variables[1] (_CurrentHPRatio) || Constants[0] (100) || MUL || PARAM_1 || FUNCTION || RETURN",
-                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((_CurrentHPRatio * 100))",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          "WHOLE",
-                          "_CurrentHPRatio"
-                        ]
-                      },
-                      "ID": "#1%"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}} + {{EVENT[RoT] Light Praetor: 3}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1808493640\">Enemy_Standard_LocalLegend_Init_LockHp</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}} + {{EVENT[RoT] Light Praetor: 3}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"449361701\">Enemy_Standard_LocalLegend_Init_MuteBreak</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_EnterBattle",
-          "value": 0
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"735008645\">Enemy_W4_Claymore_01_LocalLegend_BlackMonst</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-726340599\">Enemy_W4_Claymore_01_LocalLegend_ElationListener</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1358856185\">Enemy_W4_Claymore_01_LocalLegend_TargetSelectPrepare</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Light Praetor: 3}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"263808079\">Enemy_W4_Claymore_01_LocalLegend_WhiteMonst</a>",
-          "casterAssign": "TargetSelf"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"357625087\">Monster_W4_Claymore_01_LocalLegend_Locking</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}} + {{EVENT[RoT] Light Praetor: 3}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-180350393\">Monster_W4_Claymore_01_LocalLegend_Ability02_Perform</a>"
-        },
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]].[[removeBattleEvents]]"
-          },
-          "variableName": "_CheckAvatarNum",
-          "livingTargets": true
-        },
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]].[[removeBattleEvents]]"
-          },
-          "variableName": "_CheckPickNum",
-          "livingTargets": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1375461160\">BattleEvent_W4_Claymore_01_SelectTarget</a>"
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]].[[removeBattleEvents]]"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1375461160\">BattleEvent_W4_Claymore_01_SelectTarget</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>",
-              "casterAssign": "TargetSelf"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}.[[getMemosprite]] + {{Parameter Target}}.[[getBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>",
-              "casterAssign": "TargetSelf"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_CheckPickNum",
-            "compareType": "<",
-            "value2": {
-              "operator": "Variables[0] (_CheckAvatarNum) || Constants[0] (2) || DIV || RETURN",
-              "displayLines": "(_CheckAvatarNum / 2)",
-              "constants": [
-                2
-              ],
-              "variables": [
-                "_CheckAvatarNum"
-              ]
-            }
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]].[[removeBattleEvents]]"
-              },
-              "searchRandom": true,
-              "maxTargets": {
-                "operator": "Variables[0] (CEIL) || Variables[1] (_CheckAvatarNum) || Constants[0] (2) || DIV || PARAM_1 || FUNCTION || Variables[2] (_CheckPickNum) || SUB || RETURN",
-                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((_CheckAvatarNum / 2)) - _CheckPickNum)",
-                "constants": [
-                  2
-                ],
-                "variables": [
-                  "CEIL",
-                  "_CheckAvatarNum",
-                  "_CheckPickNum"
-                ]
-              },
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>",
-                "invertCondition": true
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>",
-                  "casterAssign": "TargetSelf"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}.[[getMemosprite]] + {{Parameter Target}}.[[getBattleEvents]]"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>",
-                  "casterAssign": "TargetSelf"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]].[[removeBattleEvents]]"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-609521180\">Enemy_W4_Claymore_01_LocalLegend_WhiteCurse</a>",
-              "casterAssign": "TargetSelf"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}.[[getMemosprite]] + {{Parameter Target}}.[[getBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-609521180\">Enemy_W4_Claymore_01_LocalLegend_WhiteCurse</a>",
-              "casterAssign": "TargetSelf"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Battle Event List}}"
-          },
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-609521180\">Enemy_W4_Claymore_01_LocalLegend_WhiteCurse</a>",
-                "invertCondition": true
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>",
-              "casterAssign": "TargetSelf"
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1375461160\">BattleEvent_W4_Claymore_01_SelectTarget</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Light Praetor: Light Characters}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
-          "valuePerStack": {
-            "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
-            },
-            "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
-            },
-            "MDF_Rally_HealUpRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
-            },
-            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[3]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part01": {
-      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4033021_BattleEvent_W4_Claymore_01_LocalLegend_Part01": {
-      "fileName": "4033021_BattleEvent_W4_Claymore_01_LocalLegend_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1375461160\">BattleEvent_W4_Claymore_01_SelectTarget</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_SelectTimes",
-            "compareType": "=",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1358856185\">Enemy_W4_Claymore_01_LocalLegend_TargetSelectPrepare</a>"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-                },
-                "value1": "_EnterBattle",
-                "compareType": "=",
-                "value2": 0
-              },
-              "passed": [
-                {
-                  "name": "Inject Extra-Turn",
-                  "actionTag": null,
-                  "skillType": "ControlSkill03",
-                  "target": {
-                    "name": "Add Target by Unique Identifier",
-                    "identifier": "SelectTarget"
-                  },
-                  "afterInjection": []
-                }
-              ]
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_SelectTimes",
-              "value": 1
-            }
-          ],
-          "failed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"833181750\">Enemy_W2_LycanKing_IF_MuteUltra</a>"
-            },
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-              },
-              "ability": "Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part01",
-              "isTrigger": true
-            }
-          ]
-        },
-        "Wait for Pending Ability Completions",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4033021_BattleEvent_W4_Claymore_01_LocalLegend_EnterReady": {
-      "fileName": "4033021_BattleEvent_W4_Claymore_01_LocalLegend_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
     "4033021_Monster_W4_Claymore_01_LocalLegend_PassiveAbility_Recover": {
       "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_PassiveAbility_Recover",
       "abilityType": null,
@@ -2897,6 +1073,1726 @@ const compositeAbilityObject = {
       },
       "references": []
     },
+    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability05_Part02": {
+      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability05_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target Count",
+            "target": {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Every Battle Entity}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": {
+                      "operator": "Variables[0] (SummonID02) || RETURN",
+                      "displayLines": "SummonID02",
+                      "constants": [],
+                      "variables": [
+                        "SummonID02"
+                      ]
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": null
+                  }
+                }
+              ]
+            },
+            "compareType": "=",
+            "value2": 0,
+            "livingTargets": true
+          },
+          "passed": [
+            {
+              "name": "Create Enemies",
+              "delayPercent": {
+                "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+                "displayLines": "{[Skill05[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill05[0]]}"
+                ]
+              },
+              "refreshPositions": false,
+              "enemyList": [
+                {
+                  "name": "Enemy Entry",
+                  "enemyID": {
+                    "operator": "Variables[0] (SummonID02) || RETURN",
+                    "displayLines": "SummonID02",
+                    "constants": [],
+                    "variables": [
+                      "SummonID02"
+                    ]
+                  },
+                  "locationType": "KeepOnFirst"
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1813832219\">Enemy_W4_Claymore_01_LocalLegend_BlackSummon</a>"
+            },
+            {
+              "name": "Advance/Delay up to Target",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "targetRef": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "refPoint": "After",
+              "isStartingAV": true
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target Count",
+            "target": {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Every Battle Entity}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": {
+                      "operator": "Variables[0] (SummonID01) || RETURN",
+                      "displayLines": "SummonID01",
+                      "constants": [],
+                      "variables": [
+                        "SummonID01"
+                      ]
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": null
+                  }
+                }
+              ]
+            },
+            "compareType": "=",
+            "value2": 0,
+            "livingTargets": true
+          },
+          "passed": [
+            {
+              "name": "Create Enemies",
+              "delayPercent": {
+                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+                "displayLines": "{[Skill05[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill05[1]]}"
+                ]
+              },
+              "refreshPositions": false,
+              "enemyList": [
+                {
+                  "name": "Enemy Entry",
+                  "enemyID": {
+                    "operator": "Variables[0] (SummonID01) || RETURN",
+                    "displayLines": "SummonID01",
+                    "constants": [],
+                    "variables": [
+                      "SummonID01"
+                    ]
+                  },
+                  "locationType": "KeepOnLast"
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1813832219\">Enemy_W4_Claymore_01_LocalLegend_BlackSummon</a>"
+            },
+            {
+              "name": "Advance/Delay up to Target",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "targetRef": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "refPoint": "After",
+              "isStartingAV": true
+            }
+          ]
+        },
+        {
+          "name": "Create AV Link",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "to": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}}"
+          },
+          "linkOrder": 1,
+          "isStart": true,
+          "linkFollowerModifications": {
+            "OnBreak": "Bit_AutoForceSync"
+          },
+          "linkOwnerModifications": {
+            "OnBreak": "Bit_AutoForceSync"
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"735008645\">Enemy_W4_Claymore_01_LocalLegend_BlackMonst</a>"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"735008645\">Enemy_W4_Claymore_01_LocalLegend_BlackMonst</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"783794549\">Enemy_W4_Shooter_01_Effect</a>",
+                "invertCondition": true
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 403205,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": null,
+                "isCompareUniqueID": true
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"783794549\">Enemy_W4_Shooter_01_Effect</a>",
+              "casterAssign": "TargetSelf"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability05_Part01": {
+      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability05_Part01",
+      "childAbilityList": [
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability05_Camera",
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability05_Part01",
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability05_Part02"
+      ],
+      "skillTrigger": "Skill05",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_01_LocalLegend_Ability05_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability04_Part02": {
+      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability04_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
+          "valuePerStack": {
+            "MDF_RallyTransferRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[0]]}"
+              ]
+            },
+            "MDF_Rally_HealPercentage": {
+              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[1]]}"
+              ]
+            },
+            "MDF_Rally_HealUpRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[2]]}"
+              ]
+            },
+            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[3]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[3]]}"
+              ]
+            }
+          }
+        },
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+              "displayLines": "{[Skill04[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.25,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+              "displayLines": "{[Skill04[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.25,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+              "displayLines": "{[Skill04[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.5,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability04_Part01": {
+      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability04_Part01",
+      "childAbilityList": [
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability04_Camera",
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability04_Part01",
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability04_Part02"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_01_LocalLegend_Ability04_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
+      "references": []
+    },
+    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability03_Part02": {
+      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
+          "valuePerStack": {
+            "MDF_RallyTransferRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[0]]}"
+              ]
+            },
+            "MDF_Rally_HealPercentage": {
+              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[1]]}"
+              ]
+            },
+            "MDF_Rally_HealUpRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[2]]}"
+              ]
+            },
+            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[3]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[3]]}"
+              ]
+            }
+          }
+        },
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+              "displayLines": "{[Skill03[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability03_Part01": {
+      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability03_Part01",
+      "childAbilityList": [
+        "4033021_Monster_W4_Claymore_01_Ability03_Camera",
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability03_Part01",
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_01_LocalLegend_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability021_Part02": {
+      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability021_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1804376736\">W4_Claymore_01_LocalLegend_BattleScoreMark</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Flag",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "flagName": "Break"
+          },
+          "passed": [
+            {
+              "name": "Exit Broken-State",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              }
+            },
+            {
+              "name": "Reset Toughness",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Flag",
+            "target": {
+              "name": "Target Name",
+              "target": "{{EVENT[RoT] Light Praetor: 3}}"
+            },
+            "flagName": "Break"
+          },
+          "passed": [
+            {
+              "name": "Exit Broken-State",
+              "target": {
+                "name": "Target Name",
+                "target": "{{EVENT[RoT] Light Praetor: 3}}"
+              }
+            },
+            {
+              "name": "Reset Toughness",
+              "target": {
+                "name": "Target Name",
+                "target": "{{EVENT[RoT] Light Praetor: 3}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}} + {{EVENT[RoT] Light Praetor: 3}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1808493640\">Enemy_Standard_LocalLegend_Init_LockHp</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}} + {{EVENT[RoT] Light Praetor: 3}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"449361701\">Enemy_Standard_LocalLegend_Init_MuteBreak</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_EnterBattle",
+          "value": 0
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "InsertCheck04",
+          "value": 1
+        },
+        {
+          "name": "Remove from Team Target Grouping",
+          "target": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}} + {{EVENT[RoT] Light Praetor: Light Summons}}"
+          },
+          "stayInTeam": false
+        },
+        {
+          "name": "Mark Entity For Immediate Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}} + {{EVENT[RoT] Light Praetor: Light Summons}}"
+          }
+        },
+        {
+          "name": "Force Entity Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}} + {{EVENT[RoT] Light Praetor: Light Summons}}"
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"735008645\">Enemy_W4_Claymore_01_LocalLegend_BlackMonst</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-726340599\">Enemy_W4_Claymore_01_LocalLegend_ElationListener</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Light Praetor: 3}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"263808079\">Enemy_W4_Claymore_01_LocalLegend_WhiteMonst</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Living State",
+            "state": "Mask_AliveOnly",
+            "target": {
+              "name": "Target Name",
+              "target": "{{EVENT[RoT] Light Praetor: 3}}"
+            }
+          },
+          "passed": [
+            {
+              "name": "Boss Bar Display",
+              "target": {
+                "name": "Target Name",
+                "target": "{{EVENT[RoT] Light Praetor: 3}}"
+              },
+              "display": false
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Living State",
+            "state": "Mask_AliveOnly",
+            "target": {
+              "name": "Target Name",
+              "target": "{{EVENT[RoT] Dark Praetor: Self}}"
+            }
+          },
+          "passed": [
+            {
+              "name": "Boss Bar Display",
+              "target": {
+                "name": "Target Name",
+                "target": "{{EVENT[RoT] Dark Praetor: Self}}"
+              },
+              "display": true
+            },
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{EVENT[RoT] Dark Praetor: Self}}"
+              },
+              "variableName": "_BossUI",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Light Praetor: 3}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1934316288\">Enemy_W4_Claymore_01_LocalLegend_Stealth</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1934316288\">Enemy_W4_Claymore_01_LocalLegend_Stealth</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Every Battle Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Every Battle Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-609521180\">Enemy_W4_Claymore_01_LocalLegend_WhiteCurse</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1216174202\">Enemy_W4_Claymore_01_LocalLegend_AllCurse</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1386282109\">Enemy_W4_Claymore_01_LocalLegend_AllMonst</a>[<span class=\"descriptionNumberColor\">Fight in Unity</span>]"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability021_Part01": {
+      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability021_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_01_LocalLegend_Ability021_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability02_Part02": {
+      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Flag",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "flagName": "Break"
+          },
+          "passed": [
+            {
+              "name": "Exit Broken-State",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              }
+            },
+            {
+              "name": "Reset Toughness",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Flag",
+            "target": {
+              "name": "Target Name",
+              "target": "{{EVENT[RoT] Light Praetor: 3}}"
+            },
+            "flagName": "Break"
+          },
+          "passed": [
+            {
+              "name": "Exit Broken-State",
+              "target": {
+                "name": "Target Name",
+                "target": "{{EVENT[RoT] Light Praetor: 3}}"
+              }
+            },
+            {
+              "name": "Reset Toughness",
+              "target": {
+                "name": "Target Name",
+                "target": "{{EVENT[RoT] Light Praetor: 3}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}} + {{EVENT[RoT] Light Praetor: 3}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-180350393\">Monster_W4_Claymore_01_LocalLegend_Ability02_Perform</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "InsertCheck03",
+          "value": 1
+        },
+        {
+          "name": "Remove from Team Target Grouping",
+          "target": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}} + {{EVENT[RoT] Light Praetor: Light Summons}}"
+          },
+          "stayInTeam": false
+        },
+        {
+          "name": "Mark Entity For Immediate Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}} + {{EVENT[RoT] Light Praetor: Light Summons}}"
+          }
+        },
+        {
+          "name": "Force Entity Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}} + {{EVENT[RoT] Light Praetor: Light Summons}}"
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}} + {{EVENT[RoT] Light Praetor: 3}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1386282109\">Enemy_W4_Claymore_01_LocalLegend_AllMonst</a>[<span class=\"descriptionNumberColor\">Fight in Unity</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Every Battle Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1216174202\">Enemy_W4_Claymore_01_LocalLegend_AllCurse</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"833181750\">Enemy_W2_LycanKing_IF_MuteUltra</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target Count",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player Team(Exclude Memosprites)}}"
+            },
+            "compareType": "<=",
+            "value2": 2,
+            "livingTargets": true
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{BattleEvent20034}}"
+              },
+              "variableName": "_SelectTimes",
+              "value": 1
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{BattleEvent20034}}"
+              },
+              "variableName": "_SelectTimes",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1358856185\">Enemy_W4_Claymore_01_LocalLegend_TargetSelectPrepare</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_EnterBattle",
+            "compareType": "=",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "name": "Inject Extra-Turn",
+              "actionTag": null,
+              "skillType": "ControlSkill03",
+              "target": {
+                "name": "Add Target by Unique Identifier",
+                "identifier": "SelectTarget"
+              },
+              "afterInjection": []
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"357625087\">Monster_W4_Claymore_01_LocalLegend_Locking</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__357625087\">Monster_W4_Claymore_01_LocalLegend_Locking</a>",
+          "latentQueue": [
+            "InsertCheck03",
+            "_SelectTimes",
+            "_EnterBattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "Update Target Selected(UI) [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Current Action Owner}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{BattleEvent20034}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "#CL_IsTriggerEffect",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "#CL_IsTriggerEffect",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability02_Part01": {
+      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability02_Part01",
+      "childAbilityList": [
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability02_Camera",
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability02_Part01",
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability02_Part02",
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability021_Part01",
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability021_Part02",
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability021_Camera"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_01_LocalLegend_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part02": {
+      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_FirstProgressInfo",
+            "compareType": "=",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_FirstProgressInfo",
+              "value": 1
+            },
+            {
+              "name": "Start Battle Track Progress",
+              "progress": 0,
+              "count": 100,
+              "ID": "#1%",
+              "desc": "The Other Boss's Remaining HP"
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable with HP%",
+              "target": {
+                "name": "Target Name",
+                "target": "{{EVENT[RoT] Light Praetor: 3}}"
+              },
+              "variableName": "_CurrentHPRatio"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{EVENT[RoT] Light Praetor: 3}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1616431833\">Monster_W4_Claymore_01_LocalLegend_LockHP_Revive</a>[<span class=\"descriptionNumberColor\">Indomitable Battle</span>]"
+              },
+              "passed": [
+                {
+                  "name": "Set Battle Track Progress",
+                  "progress": 0,
+                  "count": 0,
+                  "ID": "#1%"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_CurrentHPRatio",
+                    "compareType": "<=",
+                    "value2": 0.01
+                  },
+                  "passed": [
+                    {
+                      "name": "Set Battle Track Progress",
+                      "progress": 0,
+                      "count": 1,
+                      "ID": "#1%"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Set Battle Track Progress",
+                      "progress": 0,
+                      "count": {
+                        "operator": "Variables[0] (WHOLE) || Variables[1] (_CurrentHPRatio) || Constants[0] (100) || MUL || PARAM_1 || FUNCTION || RETURN",
+                        "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((_CurrentHPRatio * 100))",
+                        "constants": [
+                          100
+                        ],
+                        "variables": [
+                          "WHOLE",
+                          "_CurrentHPRatio"
+                        ]
+                      },
+                      "ID": "#1%"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}} + {{EVENT[RoT] Light Praetor: 3}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1808493640\">Enemy_Standard_LocalLegend_Init_LockHp</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}} + {{EVENT[RoT] Light Praetor: 3}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"449361701\">Enemy_Standard_LocalLegend_Init_MuteBreak</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_EnterBattle",
+          "value": 0
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"735008645\">Enemy_W4_Claymore_01_LocalLegend_BlackMonst</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-726340599\">Enemy_W4_Claymore_01_LocalLegend_ElationListener</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1358856185\">Enemy_W4_Claymore_01_LocalLegend_TargetSelectPrepare</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Light Praetor: 3}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"263808079\">Enemy_W4_Claymore_01_LocalLegend_WhiteMonst</a>",
+          "casterAssign": "TargetSelf"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"357625087\">Monster_W4_Claymore_01_LocalLegend_Locking</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}} + {{EVENT[RoT] Light Praetor: 3}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-180350393\">Monster_W4_Claymore_01_LocalLegend_Ability02_Perform</a>"
+        },
+        {
+          "name": "Define Custom Variable with Team Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]].[[removeBattleEvents]]"
+          },
+          "variableName": "_CheckAvatarNum",
+          "livingTargets": true
+        },
+        {
+          "name": "Define Custom Variable with Team Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]].[[removeBattleEvents]]"
+          },
+          "variableName": "_CheckPickNum",
+          "livingTargets": true,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1375461160\">BattleEvent_W4_Claymore_01_SelectTarget</a>"
+          }
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]].[[removeBattleEvents]]"
+          },
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1375461160\">BattleEvent_W4_Claymore_01_SelectTarget</a>"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>",
+              "casterAssign": "TargetSelf"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}.[[getMemosprite]] + {{Parameter Target}}.[[getBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>",
+              "casterAssign": "TargetSelf"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_CheckPickNum",
+            "compareType": "<",
+            "value2": {
+              "operator": "Variables[0] (_CheckAvatarNum) || Constants[0] (2) || DIV || RETURN",
+              "displayLines": "(_CheckAvatarNum / 2)",
+              "constants": [
+                2
+              ],
+              "variables": [
+                "_CheckAvatarNum"
+              ]
+            }
+          },
+          "passed": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]].[[removeBattleEvents]]"
+              },
+              "searchRandom": true,
+              "maxTargets": {
+                "operator": "Variables[0] (CEIL) || Variables[1] (_CheckAvatarNum) || Constants[0] (2) || DIV || PARAM_1 || FUNCTION || Variables[2] (_CheckPickNum) || SUB || RETURN",
+                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((_CheckAvatarNum / 2)) - _CheckPickNum)",
+                "constants": [
+                  2
+                ],
+                "variables": [
+                  "CEIL",
+                  "_CheckAvatarNum",
+                  "_CheckPickNum"
+                ]
+              },
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>",
+                "invertCondition": true
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>",
+                  "casterAssign": "TargetSelf"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}.[[getMemosprite]] + {{Parameter Target}}.[[getBattleEvents]]"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>",
+                  "casterAssign": "TargetSelf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]].[[removeBattleEvents]]"
+          },
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>",
+            "invertCondition": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-609521180\">Enemy_W4_Claymore_01_LocalLegend_WhiteCurse</a>",
+              "casterAssign": "TargetSelf"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}.[[getMemosprite]] + {{Parameter Target}}.[[getBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-609521180\">Enemy_W4_Claymore_01_LocalLegend_WhiteCurse</a>",
+              "casterAssign": "TargetSelf"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Battle Event List}}"
+          },
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-609521180\">Enemy_W4_Claymore_01_LocalLegend_WhiteCurse</a>",
+                "invertCondition": true
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>",
+              "casterAssign": "TargetSelf"
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1375461160\">BattleEvent_W4_Claymore_01_SelectTarget</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Light Praetor: Light Characters}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
+          "valuePerStack": {
+            "MDF_RallyTransferRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[0]]}"
+              ]
+            },
+            "MDF_Rally_HealPercentage": {
+              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[1]]}"
+              ]
+            },
+            "MDF_Rally_HealUpRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[2]]}"
+              ]
+            },
+            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[3]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[3]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part01": {
+      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Part02": {
+      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
+          "valuePerStack": {
+            "MDF_RallyTransferRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[0]]}"
+              ]
+            },
+            "MDF_Rally_HealPercentage": {
+              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[1]]}"
+              ]
+            },
+            "MDF_Rally_HealUpRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[2]]}"
+              ]
+            },
+            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[3]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[3]]}"
+              ]
+            }
+          }
+        },
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Part01": {
+      "fileName": "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Part01",
+      "childAbilityList": [
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Camera",
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Part01",
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01_Part02",
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part01",
+        "4033021_Monster_W4_Claymore_01_LocalLegend_Ability01Insert_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_01_LocalLegend_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
+      "references": []
+    },
     "4033021_Modifiers": {
       "fileName": "4033021_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -2912,6 +2808,10 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-726340599\">Enemy_W4_Claymore_01_LocalLegend_ElationListener</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "latentQueue": [
+            "_FirstProgressInfo",
+            "_EnterBattle"
           ],
           "execute": [
             {
@@ -2962,18 +2862,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_FirstProgressInfo",
-            "_EnterBattle"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1804376736\">W4_Claymore_01_LocalLegend_BattleScoreMark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1804376736\">W4_Claymore_01_LocalLegend_BattleScoreMark</a>"
         },
         {
           "name": "Modifier Construction",
@@ -3004,9 +2897,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3030,14 +2921,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1358856185\">Enemy_W4_Claymore_01_LocalLegend_TargetSelectPrepare</a>",
           "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "InsertCheck03",
+            "_SelectTimes"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3186,10 +3079,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_SelectTimes"
           ]
         },
         {
@@ -3202,13 +3091,15 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__263808079\">Enemy_W4_Claymore_01_LocalLegend_WhiteMonst</a>",
+          "latentQueue": [
+            "_FirstProgressInfo",
+            "_EnterBattle"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -3244,16 +3135,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_FirstProgressInfo",
-            "_EnterBattle"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__735008645\">Enemy_W4_Claymore_01_LocalLegend_BlackMonst</a>",
+          "latentQueue": [
+            "_FirstProgressInfo",
+            "_EnterBattle"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -3289,11 +3179,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_FirstProgressInfo",
-            "_EnterBattle"
           ]
         },
         {
@@ -3332,13 +3217,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1386282109\">Enemy_W4_Claymore_01_LocalLegend_AllMonst</a>[<span class=\"descriptionNumberColor\">Fight in Unity</span>]",
+          "latentQueue": [
+            "_EnterBattle",
+            "InsertCheck04",
+            "_BossUI"
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span> and DMG received reduces by <span class=\"descriptionNumberColor\">MDF_ShowValue2</span>.",
+          "type": "Other",
+          "statusName": "Fight in Unity",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3401,21 +3292,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_EnterBattle",
-            "InsertCheck04",
-            "_BossUI"
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span> and DMG received reduces by <span class=\"descriptionNumberColor\">MDF_ShowValue2</span>.",
-          "type": "Other",
-          "statusName": "Fight in Unity"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1216174202\">Enemy_W4_Claymore_01_LocalLegend_AllCurse</a>",
-          "stackData": [],
           "latentQueue": [
             "_EnterBattle",
             "InsertCheck04",
@@ -3456,6 +3337,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "RemoveWhenCasterUnstage"
+          ],
+          "latentQueue": [
+            "_FirstProgressInfo",
+            "_EnterBattle"
           ],
           "execute": [
             {
@@ -3661,11 +3546,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_FirstProgressInfo",
-            "_EnterBattle"
           ]
         },
         {
@@ -3674,6 +3554,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "RemoveWhenCasterUnstage"
+          ],
+          "latentQueue": [
+            "_FirstProgressInfo",
+            "_EnterBattle"
           ],
           "execute": [
             {
@@ -3879,11 +3763,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_FirstProgressInfo",
-            "_EnterBattle"
           ]
         },
         {
@@ -3924,6 +3803,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1806977974\">Enemy_W4_Claymore_01_LocalLegend_Fatigue</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
           "stackType": "Replace",
+          "description": "When this target deals DMG to enemy targets, the DMG received by enemy targets is reduced by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. This state is removed when the \"Corrosion\" state is removed.",
+          "type": "Other",
+          "effectName": "DMG Reduction",
+          "statusName": "DMG Reduction",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -3940,11 +3823,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When this target deals DMG to enemy targets, the DMG received by enemy targets is reduced by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. This state is removed when the \"Corrosion\" state is removed.",
-          "type": "Other",
-          "effectName": "DMG Reduction",
-          "statusName": "DMG Reduction"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4605,9 +4484,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4615,6 +4492,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "DisableAction"
           ],
+          "description": "Restores a certain amount of HP and returns to battle during the next action.",
+          "type": "Other",
+          "statusName": "Indomitable Battle",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4713,17 +4594,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Restores a certain amount of HP and returns to battle during the next action.",
-          "type": "Other",
-          "statusName": "Indomitable Battle",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-180350393\">Monster_W4_Claymore_01_LocalLegend_Ability02_Perform</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-180350393\">Monster_W4_Claymore_01_LocalLegend_Ability02_Perform</a>"
         },
         {
           "name": "Modifier Construction",
@@ -4858,13 +4733,14 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1121280189\">Monster_W4_Claymore_01_LocalLegend_PartController_LockHP</a>",
+          "latentQueue": [
+            "InsertCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -5120,16 +4996,16 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "InsertCheck"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-883767978\">Monster_W4_Claymore_01_LocalLegend_DamageAdd</a>",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_DamageAdded"
+          ],
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5161,12 +5037,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageAdded"
-          ],
-          "latentQueue": [],
-          "addStacksPerTrigger": 1
+          ]
         }
       ],
       "references": []

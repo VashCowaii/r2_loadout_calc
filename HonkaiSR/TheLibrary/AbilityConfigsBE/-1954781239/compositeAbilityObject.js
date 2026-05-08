@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": -1954781239,
   "trimCharacterName": -1954781239,
   "abilityList": [
+    "-1954781239_Modifiers",
     "-1954781239_FantasticStory_PlusAbility_0053",
     "-1954781239_FantasticStory_PlusAbility_0052",
     "-1954781239_FantasticStory_PlusAbility_0051",
@@ -44,10 +45,966 @@ const compositeAbilityObject = {
     "-1954781239_FantasticStory_PlusAbility_0011",
     "-1954781239_FantasticStory_BaseAbility_0010_Deathrattle_Camera",
     "-1954781239_Modifier_FantasticStory_BaseAbility_0010_Insert",
-    "-1954781239_FantasticStory_BaseAbility_0010",
-    "-1954781239_Modifiers"
+    "-1954781239_FantasticStory_BaseAbility_0010"
   ],
   "abilityObject": {
+    "-1954781239_Modifiers": {
+      "fileName": "-1954781239_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1715545326\">Modifier_FantasticStory_BaseAbility_0050_plus3_sub2</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "ForceStanceDamage"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-28797912\">Modifier_FantasticStory_BaseAbility_0050_plus3_sub</a>[<span class=\"descriptionNumberColor\">Free Writing</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "When attacking via using Ultimate, ignore the enemy targets' Weakness to deal Toughness Reduction.",
+          "type": "Buff",
+          "statusName": "Free Writing",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "skillType": "Ultimate",
+            "showAsForcedReduction": true
+          },
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Owner]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1715545326\">Modifier_FantasticStory_BaseAbility_0050_plus3_sub2</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1715545326\">Modifier_FantasticStory_BaseAbility_0050_plus3_sub2</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__805201127\">Modifier_FantasticStory_BaseAbility_0050_plus2_sub</a>[<span class=\"descriptionNumberColor\">Picturesque</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Follow-Up ATK DMG dealt increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0052_ADF_1</span>. Follow-Up ATKs' Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0052_ADF_2</span>.",
+          "type": "Buff",
+          "statusName": "Picturesque",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Follow-up"
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "DV_FantasticStory_PlusAbility_0052_ADF_1"
+                        },
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
+                          "value": "DV_FantasticStory_PlusAbility_0052_ADF_2"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__225763044\">Modifier_FantasticStory_BaseAbility_0050_plus1_sub2</a>[<span class=\"descriptionNumberColor\">Arioso</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Break DMG taken increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0051_ADF_1</span>.",
+          "type": "Debuff",
+          "effectName": "Arioso",
+          "statusName": "Arioso",
+          "execute": [
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Break DMG"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                          "value": "DV_FantasticStory_PlusAbility_0051_ADF_1"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__937919550\">Modifier_FantasticStory_BaseAbility_0050_plus1_sub</a>[<span class=\"descriptionNumberColor\">Arioso</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "If Super Break DMG is dealt to enemies after using an attack, additionally charges Whimsicality by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0051_ADF_2</span> points.",
+          "type": "Buff",
+          "statusName": "Arioso",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Damage Tags",
+                    "damageTag": [
+                      "Super Break"
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "DV_FeverBreakDmgFlag",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Deal Damage End [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "DV_FeverBreakDmgFlag",
+                        "compareType": "=",
+                        "value2": 1
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "DV_AttackCount",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "DV_FantasticStory_BaseAbility_0050_CountSum",
+                      "value": {
+                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_0051_ADF_2) || ADD || RETURN",
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum + DV_FantasticStory_PlusAbility_0051_ADF_2)",
+                        "constants": [],
+                        "variables": [
+                          "DV_FantasticStory_BaseAbility_0050_CountSum",
+                          "DV_FantasticStory_PlusAbility_0051_ADF_2"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "DV_FeverBreakDmgFlag",
+                      "value": 0
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "DV_AttackCount",
+                      "value": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack Start [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "DV_AttackCount",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1558011426\">Modifier_FantasticStory_BaseAbility_0040_plus2_sub</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Boost</span>]",
+          "stackType": "Replace",
+          "description": "Increases DMG dealt by Ultimate by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0042_ADF_1</span>. After the Ultimate is cast, Whimsicality additionally gains <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0042_ADF_2</span> point(s) of Charge.",
+          "type": "Buff",
+          "effectName": "Ultimate DMG Boost",
+          "statusName": "Ultimate DMG Boost",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Ultimate"
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllTypes</span>&nbsp;",
+                          "value": "_DamageUpRatio"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "DV_FantasticStory_BaseAbility_0040_CountSum",
+                      "value": {
+                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_0042_ADF_2) || ADD || RETURN",
+                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum + DV_FantasticStory_PlusAbility_0042_ADF_2)",
+                        "constants": [],
+                        "variables": [
+                          "DV_FantasticStory_BaseAbility_0040_CountSum",
+                          "DV_FantasticStory_PlusAbility_0042_ADF_2"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1083847243\">Modifier_FantasticStory_BaseAbility_0030_plus6_sub</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage End [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Follow-up"
+                    ],
+                    "invertCondition": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Damage Data",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "_DamageSum",
+                      "context": "ContextModifier"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum",
+                      "value": {
+                        "operator": "Variables[0] (_DamageSum) || Variables[1] (_DamageSumRatio) || MUL || Variables[2] (DV_FantasticStory_BaseAbility_0030_DamageSum) || ADD || RETURN",
+                        "displayLines": "((_DamageSum * _DamageSumRatio) + DV_FantasticStory_BaseAbility_0030_DamageSum)",
+                        "constants": [],
+                        "variables": [
+                          "_DamageSum",
+                          "_DamageSumRatio",
+                          "DV_FantasticStory_BaseAbility_0030_DamageSum"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__639067431\">Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "This unit has <span class=\"descriptionNumberColor\">EntityStockSPForShow</span> points of extra Energy. This will be consumed first when using the Ultimate.",
+          "type": "Other",
+          "effectName": "Energy Overflow",
+          "statusName": "Energy Overflow"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1117415883\">Modifier_FantasticStory_BaseAbility_0030_plus5_AddStockedSP</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "_CurrentSP",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "EntityStockSP",
+                        "compareType": "<=",
+                        "value2": {
+                          "operator": "Variables[0] (EntityMaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
+                          "displayLines": "(EntityMaxSP - _CurrentSP)",
+                          "constants": [],
+                          "variables": [
+                            "EntityMaxSP",
+                            "_CurrentSP"
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Update Energy",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "value": {
+                            "operator": "Variables[0] (EntityStockSP) || RETURN",
+                            "displayLines": "EntityStockSP",
+                            "constants": [],
+                            "variables": [
+                              "EntityStockSP"
+                            ]
+                          },
+                          "isFixed": "(Fixed)"
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "EntityStockSP",
+                          "value": 0
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"639067431\">Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]"
+                        },
+                        "Modifier Deletes Itself"
+                      ],
+                      "failed": [
+                        {
+                          "name": "Update Energy",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "value": {
+                            "operator": "Variables[0] (EntityMaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
+                            "displayLines": "(EntityMaxSP - _CurrentSP)",
+                            "constants": [],
+                            "variables": [
+                              "EntityMaxSP",
+                              "_CurrentSP"
+                            ]
+                          },
+                          "isFixed": "(Fixed)"
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "EntityStockSP",
+                          "value": {
+                            "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityMaxSP) || SUB || Variables[2] (_CurrentSP) || ADD || RETURN",
+                            "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)",
+                            "constants": [],
+                            "variables": [
+                              "EntityStockSP",
+                              "EntityMaxSP",
+                              "_CurrentSP"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"639067431\">Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
+                          "valuePerStack": {
+                            "EntityStockSPForShow": {
+                              "operator": "Variables[0] (EntityStockSP) || RETURN",
+                              "displayLines": "EntityStockSP",
+                              "constants": [],
+                              "variables": [
+                                "EntityStockSP"
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1329142430\">Modifier_FantasticStory_BaseAbility_0030_plus5_AddSP</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Is Entity a Battle Event/Summon",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "EntityCurrentSP",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "EntityMaxSP",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "EntityCurrentSP",
+                      "value": {
+                        "operator": "Variables[0] (EntityCurrentSP) || Variables[1] (_AddSP) || Variables[2] (EntityMaxSP) || MUL || ADD || RETURN",
+                        "displayLines": "(EntityCurrentSP + (_AddSP * EntityMaxSP))",
+                        "constants": [],
+                        "variables": [
+                          "EntityCurrentSP",
+                          "_AddSP",
+                          "EntityMaxSP"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "EntityCurrentSP",
+                        "compareType": "<=",
+                        "value2": {
+                          "operator": "Variables[0] (EntityMaxSP) || RETURN",
+                          "displayLines": "EntityMaxSP",
+                          "constants": [],
+                          "variables": [
+                            "EntityMaxSP"
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Update Energy",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "value": {
+                            "operator": "Variables[0] (_AddSP) || Variables[1] (EntityMaxSP) || MUL || RETURN",
+                            "displayLines": "(_AddSP * EntityMaxSP)",
+                            "constants": [],
+                            "variables": [
+                              "_AddSP",
+                              "EntityMaxSP"
+                            ]
+                          },
+                          "isFixed": "(Fixed)"
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Update Energy",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "valuePercent": 1,
+                          "isFixed": "(Fixed)"
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "variableName": "EntityStockSP",
+                          "value": {
+                            "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityCurrentSP) || ADD || Variables[2] (EntityMaxSP) || SUB || RETURN",
+                            "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)",
+                            "constants": [],
+                            "variables": [
+                              "EntityStockSP",
+                              "EntityCurrentSP",
+                              "EntityMaxSP"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"639067431\">Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
+                          "valuePerStack": {
+                            "EntityStockSPForShow": {
+                              "operator": "Variables[0] (EntityStockSP) || RETURN",
+                              "displayLines": "EntityStockSP",
+                              "constants": [],
+                              "variables": [
+                                "EntityStockSP"
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "EntityCurrentSP",
+                      "value": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1737739841\">Modifier_FantasticStory_BaseAbility_0010_plus6_sub</a>",
+          "stackType": "ReplaceByCaster",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "skillType": [
+              "Ultimate"
+            ],
+            "conditions": {
+              "name": "Is Part Of",
+              "of": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player Team Ability Target Lock}}"
+              },
+              "mustBeAlive2": true
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": {
+                "operator": "Constants[0] (0) || Variables[0] (DV_FantasticStory_PlusAbility_0016_ADF_3) || SUB || RETURN",
+                "displayLines": "(0 - DV_FantasticStory_PlusAbility_0016_ADF_3)",
+                "constants": [
+                  0
+                ],
+                "variables": [
+                  "DV_FantasticStory_PlusAbility_0016_ADF_3"
+                ]
+              }
+            }
+          },
+          "execute": [
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate"
+                  },
+                  "passed": [
+                    {
+                      "name": "Action Advance/Delay",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "advanceType": "Set",
+                      "multiAdd": "(0 - DV_FantasticStory_PlusAbility_0016_ADF_3)"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-2046125016\">Modifier_FantasticStory_BaseAbility_0010_plus6_ultraDmgUp</a>[<span class=\"descriptionNumberColor\">Splash</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0016_ADF_2) || RETURN",
+                        "displayLines": "DV_FantasticStory_PlusAbility_0016_ADF_2",
+                        "constants": [],
+                        "variables": [
+                          "DV_FantasticStory_PlusAbility_0016_ADF_2"
+                        ]
+                      },
+                      "valuePerStack": {
+                        "DmgAddedRatio": {
+                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0016_ADF_1) || RETURN",
+                          "displayLines": "DV_FantasticStory_PlusAbility_0016_ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "DV_FantasticStory_PlusAbility_0016_ADF_1"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1440555734\">Modifier_FantasticStory_BaseAbility_0010_plus5_sub</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "DV_FantasticStory_PlusAbility_0015",
+                        "compareType": "=",
+                        "value2": 1,
+                        "contextScope": "ContextCaster"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder and Adjacent Targets}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>[<span class=\"descriptionNumberColor\">Scalded</span>]",
+                      "stackLimit": {
+                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_2) || RETURN",
+                        "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_2",
+                        "constants": [],
+                        "variables": [
+                          "DV_FantasticStory_PlusAbility_0015_ADF_2"
+                        ]
+                      },
+                      "valuePerStack": {
+                        "ReceiveDmgRatio": {
+                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_1) || RETURN",
+                          "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "DV_FantasticStory_PlusAbility_0015_ADF_1"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "DV_FantasticStory_PlusAbility_0015",
+                        "compareType": "=",
+                        "value2": 1,
+                        "contextScope": "ContextCaster"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder and Adjacent Targets}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>[<span class=\"descriptionNumberColor\">Scalded</span>]",
+                      "stackLimit": {
+                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_2) || RETURN",
+                        "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_2",
+                        "constants": [],
+                        "variables": [
+                          "DV_FantasticStory_PlusAbility_0015_ADF_2"
+                        ]
+                      },
+                      "valuePerStack": {
+                        "ReceiveDmgRatio": {
+                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_1) || RETURN",
+                          "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "DV_FantasticStory_PlusAbility_0015_ADF_1"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>[<span class=\"descriptionNumberColor\">Scalded</span>]",
+          "stackType": "Replace",
+          "stackData": [
+            "ReceiveDmgRatio"
+          ],
+          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">TotalDmgRatio</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Scalded",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "valueType": "Layer",
+                  "variableName": "_Current_Layer",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "TotalDmgRatio",
+                  "value": {
+                    "operator": "Variables[0] (_Current_Layer) || Variables[1] (ReceiveDmgRatio) || MUL || RETURN",
+                    "displayLines": "(_Current_Layer * ReceiveDmgRatio)",
+                    "constants": [],
+                    "variables": [
+                      "_Current_Layer",
+                      "ReceiveDmgRatio"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (TotalDmgRatio) || RETURN",
+                    "displayLines": "TotalDmgRatio",
+                    "constants": [],
+                    "variables": [
+                      "TotalDmgRatio"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "-1954781239_FantasticStory_PlusAbility_0053": {
       "fileName": "-1954781239_FantasticStory_PlusAbility_0053",
       "abilityType": null,
@@ -497,6 +1454,18 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2041839191\">Modifier_FantasticStory_BaseAbility_0050</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "ADF_1",
+            "ADF_2",
+            "ADF_3",
+            "TempHP"
+          ],
+          "latentQueue": [
+            "DV_FantasticStory_PlusAbility_0051",
+            "DV_FantasticStory_PlusAbility_0052",
+            "DV_FantasticStory_PlusAbility_0053",
+            "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1261,18 +2230,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "ADF_1",
-            "ADF_2",
-            "ADF_3",
-            "TempHP"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_0051",
-            "DV_FantasticStory_PlusAbility_0052",
-            "DV_FantasticStory_PlusAbility_0053",
-            "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag"
           ]
         }
       ]
@@ -1840,6 +2797,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__355925913\">Modifier_FantasticStory_BaseAbility_0040_plus3_sub</a>[<span class=\"descriptionNumberColor\">Bonus Charge</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "After attacking enemy targets, Whimsicality additionally gains <span class=\"descriptionNumberColor\">_Extra_Count</span> point(s) of Charge.",
+          "type": "Buff",
+          "effectName": "Bonus Charge",
+          "statusName": "Bonus Charge",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -1871,11 +2832,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After attacking enemy targets, Whimsicality additionally gains <span class=\"descriptionNumberColor\">_Extra_Count</span> point(s) of Charge.",
-          "type": "Buff",
-          "effectName": "Bonus Charge",
-          "statusName": "Bonus Charge"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1967,6 +2924,18 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1941026382\">Modifier_FantasticStory_BaseAbility_0040</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "ADF_1",
+            "ADF_2",
+            "ADF_3",
+            "TempHP"
+          ],
+          "latentQueue": [
+            "DV_FantasticStory_PlusAbility_0041",
+            "DV_FantasticStory_PlusAbility_0042",
+            "DV_FantasticStory_PlusAbility_0043",
+            "DV_FantasticStory_BaseAbility_0040_TriggerDamageFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2999,18 +3968,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "ADF_1",
-            "ADF_2",
-            "ADF_3",
-            "TempHP"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_0041",
-            "DV_FantasticStory_PlusAbility_0042",
-            "DV_FantasticStory_PlusAbility_0043",
-            "DV_FantasticStory_BaseAbility_0040_TriggerDamageFlag"
           ]
         }
       ]
@@ -3869,6 +4826,21 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1973742977\">Modifier_FantasticStory_BaseAbility_0030</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "ADF_1",
+            "ADF_2",
+            "TempHP"
+          ],
+          "latentQueue": [
+            "DV_FantasticStory_PlusAbility_0031",
+            "DV_FantasticStory_PlusAbility_0032",
+            "DV_FantasticStory_PlusAbility_0033",
+            "DV_FantasticStory_PlusAbility_0034",
+            "DV_FantasticStory_PlusAbility_0035",
+            "DV_FantasticStory_PlusAbility_0036",
+            "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
+            "DV_FantasticStory_PlusAbility_0031_TriggerDamageFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4853,21 +5825,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "ADF_1",
-            "ADF_2",
-            "TempHP"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_0031",
-            "DV_FantasticStory_PlusAbility_0032",
-            "DV_FantasticStory_PlusAbility_0033",
-            "DV_FantasticStory_PlusAbility_0034",
-            "DV_FantasticStory_PlusAbility_0035",
-            "DV_FantasticStory_PlusAbility_0036",
-            "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
-            "DV_FantasticStory_PlusAbility_0031_TriggerDamageFlag"
           ]
         }
       ]
@@ -6220,6 +7177,13 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Poison"
           ],
+          "useEntitySnapshot": true,
+          "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
+          "type": "Debuff",
+          "effectName": "Wind Shear",
+          "statusName": "Gimmick",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -6299,14 +7263,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
-          "type": "Debuff",
-          "effectName": "Wind Shear",
-          "statusName": "Gimmick",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6360,6 +7317,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1454047232\">Modifier_FantasticStory_BaseAbility_0020_sub5</a>[<span class=\"descriptionNumberColor\">Gimmick</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0027_ADF_1</span>. Upon Breaking an enemy target's Weakness, applies Wind Shear to all enemies.",
+          "type": "Buff",
+          "statusName": "Gimmick",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6382,15 +7342,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0027_ADF_1</span>. Upon Breaking an enemy target's Weakness, applies Wind Shear to all enemies.",
-          "type": "Buff",
-          "statusName": "Gimmick"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1437269613\">Modifier_FantasticStory_BaseAbility_0020_sub4</a>[<span class=\"descriptionNumberColor\">Verification</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">DmgAddedRatio</span> and increases SPD by <span class=\"descriptionNumberColor\">SpdAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG and SPD Boost",
+          "statusName": "Verification",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6429,11 +7390,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">DmgAddedRatio</span> and increases SPD by <span class=\"descriptionNumberColor\">SpdAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG and SPD Boost",
-          "statusName": "Verification"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6444,6 +7401,13 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Poison"
           ],
+          "useEntitySnapshot": true,
+          "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
+          "type": "Debuff",
+          "effectName": "Wind Shear",
+          "statusName": "Argument",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -6523,14 +7487,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
-          "type": "Debuff",
-          "effectName": "Wind Shear",
-          "statusName": "Argument",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6630,6 +7587,13 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Poison"
           ],
+          "useEntitySnapshot": true,
+          "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
+          "type": "Debuff",
+          "effectName": "Wind Shear",
+          "statusName": "Rumor",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -6709,14 +7673,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "Takes DoT Wind DMG at the start of each turn for a certain number of turns.",
-          "type": "Debuff",
-          "effectName": "Wind Shear",
-          "statusName": "Rumor",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7248,6 +8205,22 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1872930168\">Modifier_FantasticStory_BaseAbility_0020</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "ADF_1",
+            "ADF_2",
+            "ADF_3",
+            "TempHP"
+          ],
+          "latentQueue": [
+            "DV_FantasticStory_PlusAbility_0021",
+            "DV_FantasticStory_PlusAbility_0022",
+            "DV_FantasticStory_PlusAbility_0023",
+            "DV_FantasticStory_PlusAbility_0024",
+            "DV_FantasticStory_PlusAbility_0025",
+            "DV_FantasticStory_PlusAbility_0026",
+            "DV_FantasticStory_PlusAbility_0027",
+            "DV_FantasticStory_PlusAbility_0028"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7782,22 +8755,6 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [
-            "ADF_1",
-            "ADF_2",
-            "ADF_3",
-            "TempHP"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_0021",
-            "DV_FantasticStory_PlusAbility_0022",
-            "DV_FantasticStory_PlusAbility_0023",
-            "DV_FantasticStory_PlusAbility_0024",
-            "DV_FantasticStory_PlusAbility_0025",
-            "DV_FantasticStory_PlusAbility_0026",
-            "DV_FantasticStory_PlusAbility_0027",
-            "DV_FantasticStory_PlusAbility_0028"
           ]
         }
       ]
@@ -8488,6 +9445,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2046125016\">Modifier_FantasticStory_BaseAbility_0010_plus6_ultraDmgUp</a>[<span class=\"descriptionNumberColor\">Splash</span>]",
           "stackType": "Replace",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">DmgAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Splash",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -8510,16 +9471,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">DmgAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Splash"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__637313409\">Modifier_FantasticStory_BaseAbility_0010_plus3_ultraDmgUp</a>[<span class=\"descriptionNumberColor\">Rupture</span>]",
           "stackType": "Replace",
+          "description": "Ultimate deals <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0013_layerDmg</span> more DMG.",
+          "type": "Buff",
+          "effectName": "Ultimate DMG Boost",
+          "statusName": "Rupture",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -8573,11 +9534,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Ultimate deals <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0013_layerDmg</span> more DMG.",
-          "type": "Buff",
-          "effectName": "Ultimate DMG Boost",
-          "statusName": "Rupture"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8586,6 +9543,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Deathrattle"
           ],
+          "description": "When this unit's turn starts or when this unit is defeated, this unit and adjacent targets take a set amount of DMG based on the active number of Shatter stacks.",
+          "type": "Debuff",
+          "effectName": "Shatter",
+          "statusName": "Shatter",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -9168,11 +10129,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When this unit's turn starts or when this unit is defeated, this unit and adjacent targets take a set amount of DMG based on the active number of Shatter stacks.",
-          "type": "Debuff",
-          "effectName": "Shatter",
-          "statusName": "Shatter"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9686,6 +10643,19 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-508947277\">Modifier_FantasticStory_BaseAbility_0010</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "ADF_1",
+            "ADF_2",
+            "TempHP"
+          ],
+          "latentQueue": [
+            "DV_FantasticStory_PlusAbility_0011",
+            "DV_FantasticStory_PlusAbility_0012",
+            "DV_FantasticStory_PlusAbility_0013",
+            "DV_FantasticStory_PlusAbility_0014",
+            "DV_FantasticStory_PlusAbility_0016",
+            "DV_FantasticStory_PlusAbility_0018"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -10034,1063 +11004,9 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "ADF_1",
-            "ADF_2",
-            "TempHP"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_0011",
-            "DV_FantasticStory_PlusAbility_0012",
-            "DV_FantasticStory_PlusAbility_0013",
-            "DV_FantasticStory_PlusAbility_0014",
-            "DV_FantasticStory_PlusAbility_0016",
-            "DV_FantasticStory_PlusAbility_0018"
           ]
         }
       ]
-    },
-    "-1954781239_Modifiers": {
-      "fileName": "-1954781239_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1715545326\">Modifier_FantasticStory_BaseAbility_0050_plus3_sub2</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "ForceStanceDamage"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-28797912\">Modifier_FantasticStory_BaseAbility_0050_plus3_sub</a>[<span class=\"descriptionNumberColor\">Free Writing</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1715545326\">Modifier_FantasticStory_BaseAbility_0050_plus3_sub2</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1715545326\">Modifier_FantasticStory_BaseAbility_0050_plus3_sub2</a>"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag",
-            "DV_FantasticStory_PlusAbility_0053",
-            "DV_FantasticStory_PlusAbility_0052",
-            "DV_FantasticStory_PlusAbility_0051"
-          ],
-          "description": "When attacking via using Ultimate, ignore the enemy targets' Weakness to deal Toughness Reduction.",
-          "type": "Buff",
-          "statusName": "Free Writing",
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "skillType": "Ultimate",
-            "showAsForcedReduction": true
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__805201127\">Modifier_FantasticStory_BaseAbility_0050_plus2_sub</a>[<span class=\"descriptionNumberColor\">Picturesque</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Attack Type",
-                    "attackTypes": [
-                      "Follow-up"
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                          "value": "DV_FantasticStory_PlusAbility_0052_ADF_1"
-                        },
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
-                          "value": "DV_FantasticStory_PlusAbility_0052_ADF_2"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag",
-            "DV_FantasticStory_PlusAbility_0053",
-            "DV_FantasticStory_PlusAbility_0052",
-            "DV_FantasticStory_PlusAbility_0051"
-          ],
-          "description": "Follow-Up ATK DMG dealt increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0052_ADF_1</span>. Follow-Up ATKs' Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0052_ADF_2</span>.",
-          "type": "Buff",
-          "statusName": "Picturesque"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__225763044\">Modifier_FantasticStory_BaseAbility_0050_plus1_sub2</a>[<span class=\"descriptionNumberColor\">Arioso</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Attack Type",
-                    "attackTypes": [
-                      "Break DMG"
-                    ],
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Defender",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                          "value": "DV_FantasticStory_PlusAbility_0051_ADF_1"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag",
-            "DV_FantasticStory_PlusAbility_0053",
-            "DV_FantasticStory_PlusAbility_0052",
-            "DV_FantasticStory_PlusAbility_0051"
-          ],
-          "description": "Break DMG taken increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0051_ADF_1</span>.",
-          "type": "Debuff",
-          "effectName": "Arioso",
-          "statusName": "Arioso"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__937919550\">Modifier_FantasticStory_BaseAbility_0050_plus1_sub</a>[<span class=\"descriptionNumberColor\">Arioso</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Damage Tags",
-                    "damageTag": [
-                      "Super Break"
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "DV_FeverBreakDmgFlag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Deal Damage End [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "DV_FeverBreakDmgFlag",
-                        "compareType": "=",
-                        "value2": 1
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "DV_AttackCount",
-                        "compareType": "=",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "DV_FantasticStory_BaseAbility_0050_CountSum",
-                      "value": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_0051_ADF_2) || ADD || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum + DV_FantasticStory_PlusAbility_0051_ADF_2)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0050_CountSum",
-                          "DV_FantasticStory_PlusAbility_0051_ADF_2"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "DV_FeverBreakDmgFlag",
-                      "value": 0
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "DV_AttackCount",
-                      "value": 0
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack Start [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "DV_AttackCount",
-                  "value": 1
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag",
-            "DV_FantasticStory_PlusAbility_0053",
-            "DV_FantasticStory_PlusAbility_0052",
-            "DV_FantasticStory_PlusAbility_0051"
-          ],
-          "description": "If Super Break DMG is dealt to enemies after using an attack, additionally charges Whimsicality by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0051_ADF_2</span> points.",
-          "type": "Buff",
-          "statusName": "Arioso"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1558011426\">Modifier_FantasticStory_BaseAbility_0040_plus2_sub</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Boost</span>]",
-          "stackType": "Replace",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Attack Type",
-                    "attackTypes": [
-                      "Ultimate"
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllTypes</span>&nbsp;",
-                          "value": "_DamageUpRatio"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "DV_FantasticStory_BaseAbility_0040_CountSum",
-                      "value": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_0042_ADF_2) || ADD || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum + DV_FantasticStory_PlusAbility_0042_ADF_2)",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_BaseAbility_0040_CountSum",
-                          "DV_FantasticStory_PlusAbility_0042_ADF_2"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "_DamageUpRatio"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_BaseAbility_0040_TriggerDamageFlag",
-            "DV_FantasticStory_PlusAbility_0043",
-            "DV_FantasticStory_PlusAbility_0042",
-            "DV_FantasticStory_PlusAbility_0041"
-          ],
-          "description": "Increases DMG dealt by Ultimate by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0042_ADF_1</span>. After the Ultimate is cast, Whimsicality additionally gains <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0042_ADF_2</span> point(s) of Charge.",
-          "type": "Buff",
-          "effectName": "Ultimate DMG Boost",
-          "statusName": "Ultimate DMG Boost"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1083847243\">Modifier_FantasticStory_BaseAbility_0030_plus6_sub</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage End [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Attack Type",
-                    "attackTypes": [
-                      "Follow-up"
-                    ],
-                    "invertCondition": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Damage Data",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "_DamageSum",
-                      "context": "ContextModifier"
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum",
-                      "value": {
-                        "operator": "Variables[0] (_DamageSum) || Variables[1] (_DamageSumRatio) || MUL || Variables[2] (DV_FantasticStory_BaseAbility_0030_DamageSum) || ADD || RETURN",
-                        "displayLines": "((_DamageSum * _DamageSumRatio) + DV_FantasticStory_BaseAbility_0030_DamageSum)",
-                        "constants": [],
-                        "variables": [
-                          "_DamageSum",
-                          "_DamageSumRatio",
-                          "DV_FantasticStory_BaseAbility_0030_DamageSum"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "_DamageSumRatio"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_0031_TriggerDamageFlag",
-            "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
-            "DV_FantasticStory_PlusAbility_0036",
-            "DV_FantasticStory_PlusAbility_0035",
-            "DV_FantasticStory_PlusAbility_0034",
-            "DV_FantasticStory_PlusAbility_0033",
-            "DV_FantasticStory_PlusAbility_0032",
-            "DV_FantasticStory_PlusAbility_0031"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__639067431\">Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
-          "stackType": "ReplaceByCaster",
-          "description": "This unit has <span class=\"descriptionNumberColor\">EntityStockSPForShow</span> points of extra Energy. This will be consumed first when using the Ultimate.",
-          "type": "Other",
-          "effectName": "Energy Overflow",
-          "statusName": "Energy Overflow"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1117415883\">Modifier_FantasticStory_BaseAbility_0030_plus5_AddStockedSP</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "_CurrentSP",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "EntityStockSP",
-                        "compareType": "<=",
-                        "value2": {
-                          "operator": "Variables[0] (EntityMaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                          "displayLines": "(EntityMaxSP - _CurrentSP)",
-                          "constants": [],
-                          "variables": [
-                            "EntityMaxSP",
-                            "_CurrentSP"
-                          ]
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Update Energy",
-                          "on": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "value": {
-                            "operator": "Variables[0] (EntityStockSP) || RETURN",
-                            "displayLines": "EntityStockSP",
-                            "constants": [],
-                            "variables": [
-                              "EntityStockSP"
-                            ]
-                          },
-                          "isFixed": "(Fixed)"
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "EntityStockSP",
-                          "value": 0
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"639067431\">Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]"
-                        },
-                        "Modifier Deletes Itself"
-                      ],
-                      "failed": [
-                        {
-                          "name": "Update Energy",
-                          "on": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "value": {
-                            "operator": "Variables[0] (EntityMaxSP) || Variables[1] (_CurrentSP) || SUB || RETURN",
-                            "displayLines": "(EntityMaxSP - _CurrentSP)",
-                            "constants": [],
-                            "variables": [
-                              "EntityMaxSP",
-                              "_CurrentSP"
-                            ]
-                          },
-                          "isFixed": "(Fixed)"
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "EntityStockSP",
-                          "value": {
-                            "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityMaxSP) || SUB || Variables[2] (_CurrentSP) || ADD || RETURN",
-                            "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)",
-                            "constants": [],
-                            "variables": [
-                              "EntityStockSP",
-                              "EntityMaxSP",
-                              "_CurrentSP"
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"639067431\">Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
-                          "valuePerStack": {
-                            "EntityStockSPForShow": {
-                              "operator": "Variables[0] (EntityStockSP) || RETURN",
-                              "displayLines": "EntityStockSP",
-                              "constants": [],
-                              "variables": [
-                                "EntityStockSP"
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
-            "DV_FantasticStory_PlusAbility_0034",
-            "DV_FantasticStory_PlusAbility_0035"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1329142430\">Modifier_FantasticStory_BaseAbility_0030_plus5_AddSP</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "team": "Player Team"
-                      },
-                      {
-                        "name": "Is Entity a Battle Event/Summon",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "EntityCurrentSP",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
-                    },
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "EntityMaxSP",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "EntityCurrentSP",
-                      "value": {
-                        "operator": "Variables[0] (EntityCurrentSP) || Variables[1] (_AddSP) || Variables[2] (EntityMaxSP) || MUL || ADD || RETURN",
-                        "displayLines": "(EntityCurrentSP + (_AddSP * EntityMaxSP))",
-                        "constants": [],
-                        "variables": [
-                          "EntityCurrentSP",
-                          "_AddSP",
-                          "EntityMaxSP"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "EntityCurrentSP",
-                        "compareType": "<=",
-                        "value2": {
-                          "operator": "Variables[0] (EntityMaxSP) || RETURN",
-                          "displayLines": "EntityMaxSP",
-                          "constants": [],
-                          "variables": [
-                            "EntityMaxSP"
-                          ]
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Update Energy",
-                          "on": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "value": {
-                            "operator": "Variables[0] (_AddSP) || Variables[1] (EntityMaxSP) || MUL || RETURN",
-                            "displayLines": "(_AddSP * EntityMaxSP)",
-                            "constants": [],
-                            "variables": [
-                              "_AddSP",
-                              "EntityMaxSP"
-                            ]
-                          },
-                          "isFixed": "(Fixed)"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Update Energy",
-                          "on": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "valuePercent": 1,
-                          "isFixed": "(Fixed)"
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "variableName": "EntityStockSP",
-                          "value": {
-                            "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityCurrentSP) || ADD || Variables[2] (EntityMaxSP) || SUB || RETURN",
-                            "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)",
-                            "constants": [],
-                            "variables": [
-                              "EntityStockSP",
-                              "EntityCurrentSP",
-                              "EntityMaxSP"
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"639067431\">Modifier_FantasticStory_BaseAbility_0030_plus5_StockSPForShow</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
-                          "valuePerStack": {
-                            "EntityStockSPForShow": {
-                              "operator": "Variables[0] (EntityStockSP) || RETURN",
-                              "displayLines": "EntityStockSP",
-                              "constants": [],
-                              "variables": [
-                                "EntityStockSP"
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "EntityCurrentSP",
-                      "value": 0
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "_AddSP"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
-            "DV_FantasticStory_PlusAbility_0034",
-            "DV_FantasticStory_PlusAbility_0035"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1737739841\">Modifier_FantasticStory_BaseAbility_0010_plus6_sub</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate"
-                  },
-                  "passed": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "advanceType": "Set",
-                      "multiAdd": "(0 - DV_FantasticStory_PlusAbility_0016_ADF_3)"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-2046125016\">Modifier_FantasticStory_BaseAbility_0010_plus6_ultraDmgUp</a>[<span class=\"descriptionNumberColor\">Splash</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0016_ADF_2) || RETURN",
-                        "displayLines": "DV_FantasticStory_PlusAbility_0016_ADF_2",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_PlusAbility_0016_ADF_2"
-                        ]
-                      },
-                      "valuePerStack": {
-                        "DmgAddedRatio": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0016_ADF_1) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0016_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0016_ADF_1"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_0016",
-            "DV_FantasticStory_PlusAbility_0014",
-            "DV_FantasticStory_PlusAbility_0013",
-            "DV_FantasticStory_PlusAbility_0012"
-          ],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "skillType": [
-              "Ultimate"
-            ],
-            "conditions": {
-              "name": "Is Part Of",
-              "of": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "target": {
-                "name": "Target Name",
-                "target": "{{Player Team Ability Target Lock}}"
-              },
-              "mustBeAlive2": true
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": {
-                "operator": "Constants[0] (0) || Variables[0] (DV_FantasticStory_PlusAbility_0016_ADF_3) || SUB || RETURN",
-                "displayLines": "(0 - DV_FantasticStory_PlusAbility_0016_ADF_3)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "DV_FantasticStory_PlusAbility_0016_ADF_3"
-                ]
-              }
-            }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1440555734\">Modifier_FantasticStory_BaseAbility_0010_plus5_sub</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        }
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "DV_FantasticStory_PlusAbility_0015",
-                        "compareType": "=",
-                        "value2": 1,
-                        "contextScope": "ContextCaster"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder and Adjacent Targets}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>[<span class=\"descriptionNumberColor\">Scalded</span>]",
-                      "stackLimit": {
-                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_2) || RETURN",
-                        "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_2",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_PlusAbility_0015_ADF_2"
-                        ]
-                      },
-                      "valuePerStack": {
-                        "ReceiveDmgRatio": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_1) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0015_ADF_1"
-                          ]
-                        }
-                      },
-                      "addStacksPerTrigger": 1
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        }
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "DV_FantasticStory_PlusAbility_0015",
-                        "compareType": "=",
-                        "value2": 1,
-                        "contextScope": "ContextCaster"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder and Adjacent Targets}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>[<span class=\"descriptionNumberColor\">Scalded</span>]",
-                      "stackLimit": {
-                        "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_2) || RETURN",
-                        "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_2",
-                        "constants": [],
-                        "variables": [
-                          "DV_FantasticStory_PlusAbility_0015_ADF_2"
-                        ]
-                      },
-                      "valuePerStack": {
-                        "ReceiveDmgRatio": {
-                          "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0015_ADF_1) || RETURN",
-                          "displayLines": "DV_FantasticStory_PlusAbility_0015_ADF_1",
-                          "constants": [],
-                          "variables": [
-                            "DV_FantasticStory_PlusAbility_0015_ADF_1"
-                          ]
-                        }
-                      },
-                      "addStacksPerTrigger": 1
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_0016",
-            "DV_FantasticStory_PlusAbility_0014",
-            "DV_FantasticStory_PlusAbility_0013",
-            "DV_FantasticStory_PlusAbility_0012"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-749953922\">Modifier_FantasticStory_BaseAbility_0010_plus5_ReceiveDmgUp</a>[<span class=\"descriptionNumberColor\">Scalded</span>]",
-          "stackType": "Replace",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "valueType": "Layer",
-                  "variableName": "_Current_Layer",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "TotalDmgRatio",
-                  "value": {
-                    "operator": "Variables[0] (_Current_Layer) || Variables[1] (ReceiveDmgRatio) || MUL || RETURN",
-                    "displayLines": "(_Current_Layer * ReceiveDmgRatio)",
-                    "constants": [],
-                    "variables": [
-                      "_Current_Layer",
-                      "ReceiveDmgRatio"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (TotalDmgRatio) || RETURN",
-                    "displayLines": "TotalDmgRatio",
-                    "constants": [],
-                    "variables": [
-                      "TotalDmgRatio"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "ReceiveDmgRatio"
-          ],
-          "latentQueue": [
-            "DV_FantasticStory_PlusAbility_0012",
-            "DV_FantasticStory_PlusAbility_0013",
-            "DV_FantasticStory_PlusAbility_0014",
-            "DV_FantasticStory_PlusAbility_0016"
-          ],
-          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">TotalDmgRatio</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Scalded"
-        }
-      ],
-      "references": []
     }
   }
 }

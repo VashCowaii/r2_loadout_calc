@@ -150,11 +150,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_76) || RETURN",
-              "displayLines": "UnusedUnderThisBase_76",
+              "operator": "Variables[0] (UnusedUnderThisBase_11954) || RETURN",
+              "displayLines": "UnusedUnderThisBase_11954",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_76"
+                "UnusedUnderThisBase_11954"
               ]
             }
           }
@@ -273,11 +273,11 @@ const configAbility = {
           "name": "Define Custom Variable",
           "variableName": "_Skill05_LoseHpRatio",
           "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_78) || RETURN",
-            "displayLines": "UnusedUnderThisBase_78",
+            "operator": "Variables[0] (UnusedUnderThisBase_11951) || RETURN",
+            "displayLines": "UnusedUnderThisBase_11951",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_78"
+              "UnusedUnderThisBase_11951"
             ]
           }
         },
@@ -285,11 +285,11 @@ const configAbility = {
           "name": "Define Custom Variable",
           "variableName": "_Skill05_ActionDelay",
           "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_79) || RETURN",
-            "displayLines": "UnusedUnderThisBase_79",
+            "operator": "Variables[0] (UnusedUnderThisBase_11913) || RETURN",
+            "displayLines": "UnusedUnderThisBase_11913",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_79"
+              "UnusedUnderThisBase_11913"
             ]
           }
         },
@@ -297,11 +297,11 @@ const configAbility = {
           "name": "Define Custom Variable",
           "variableName": "_Skill05_Part_ActionDelay",
           "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_80) || RETURN",
-            "displayLines": "UnusedUnderThisBase_80",
+            "operator": "Variables[0] (UnusedUnderThisBase_11911) || RETURN",
+            "displayLines": "UnusedUnderThisBase_11911",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_80"
+              "UnusedUnderThisBase_11911"
             ]
           }
         }
@@ -384,15 +384,11 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-226864099\">Monster_W4_PolluxPart_R</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-226864099\">Monster_W4_PolluxPart_R</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-193308861\">Monster_W4_PolluxPart_L</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-193308861\">Monster_W4_PolluxPart_L</a>"
     },
     {
       "name": "Modifier Construction",
@@ -1007,13 +1003,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1130988503\">Monster_W4_Pollux_WaveStart</a>",
+      "latentQueue": [
+        "_WorldLevel",
+        "StoryMode"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -1021,11 +1019,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_WorldLevel",
-        "StoryMode"
       ]
     }
   ]

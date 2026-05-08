@@ -60,6 +60,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1527327304\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0002_02</a>[<span class=\"descriptionNumberColor\">Infantry and Cavalry</span>]",
+      "description": "Ignores <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0002_ADF_1</span> of the target's DEF when using Ultimate. After Ultimate deals DMG, the next Skill ignores <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0002_ADF_2</span> of the target's DEF.",
+      "type": "Other",
+      "statusName": "Infantry and Cavalry",
       "execute": [
         {
           "eventTrigger": "Deal Damage End [Owner]: Any",
@@ -211,10 +214,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Ignores <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0002_ADF_1</span> of the target's DEF when using Ultimate. After Ultimate deals DMG, the next Skill ignores <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0002_ADF_2</span> of the target's DEF.",
-      "type": "Other",
-      "statusName": "Infantry and Cavalry"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -269,9 +269,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

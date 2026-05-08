@@ -3,21 +3,193 @@ const compositeAbilityObject = {
   "fullCharacterName": 60029,
   "trimCharacterName": 60029,
   "abilityList": [
+    "60029_Modifiers",
+    "60029_BattleEventAbility_620101_Camera",
     "60029_MissionBattleEvent60024_PassiveAbility01",
-    "60029_MissionBattleEvent60024_Beta_Ability03_Camera",
-    "60029_MissionBattleEvent60024_Beta_Ability03_Part02",
-    "60029_MissionBattleEvent60024_Beta_Ability03_Part01",
-    "60029_MissionBattleEvent60024_Beta_Ability03_EnterReady",
     "60029_MissionBattleEvent60024_Ability03_Insert_Camera",
     "60029_MissionBattleEvent60024_Ability03_Insert_Part02",
     "60029_MissionBattleEvent60024_Ability03_Insert_Part01",
     "60029_MissionBattleEvent60024_Ability03_Camera",
     "60029_MissionBattleEvent60024_Ability03_Part02",
     "60029_MissionBattleEvent60024_Ability03_Part01",
-    "60029_MissionBattleEvent60024_Ability03_EnterReady",
-    "60029_Modifiers"
+    "60029_MissionBattleEvent60024_Ability03_EnterReady"
   ],
   "abilityObject": {
+    "60029_Modifiers": {
+      "fileName": "60029_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1322601933\">MissionBattleEvent60024_MainStory4</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1205158600\">MissionBattleEvent60024_MainStory3</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1221936219\">MissionBattleEvent60024_MainStory2</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1238713838\">MissionBattleEvent60024_MainStory1</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Level Entity}}"
+                    },
+                    "value1": "WeatherBEFlag",
+                    "compareType": "=",
+                    "value2": 0,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Level Entity}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "WeatherBEFlag"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Action Phase Start [Anyone][?]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Level Entity}}"
+                        },
+                        "value1": "WeatherBEFlag",
+                        "compareType": "=",
+                        "value2": 0
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Level Entity}}"
+                      },
+                      "variableName": "WeatherBEFlag",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Extra Action/Turn [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Character ID",
+                        "ID": 1408,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "characterName": "Phainon"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Level Entity}}"
+                        },
+                        "value1": "WeatherBEFlag",
+                        "compareType": "=",
+                        "value2": 0
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Level Entity}}"
+                      },
+                      "variableName": "WeatherBEFlag",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "60029_BattleEventAbility_620101_Camera": {
+      "fileName": "60029_BattleEventAbility_620101_Camera",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "60029_MissionBattleEvent60024_PassiveAbility01": {
       "fileName": "60029_MissionBattleEvent60024_PassiveAbility01",
       "childAbilityList": [
@@ -136,9 +308,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -182,13 +352,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-117751249\">MissionBattleEvent60024_Charge</a>",
+          "stackData": [
+            "MDF_MaxHPRatio",
+            "MDF_ExtraSP"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -335,12 +507,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxHPRatio",
-            "MDF_ExtraSP"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -348,316 +515,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
-      }
-    },
-    "60029_MissionBattleEvent60024_Beta_Ability03_Camera": {
-      "fileName": "60029_MissionBattleEvent60024_Beta_Ability03_Camera",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "60029_MissionBattleEvent60024_Beta_Ability03_Part02": {
-      "fileName": "60029_MissionBattleEvent60024_Beta_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"560024402\">Modifier_Monster_W4_DawnsEye_01_MaxHPAddHalo</a>",
-          "valuePerStack": {
-            "MDF_HPDelta": {
-              "operator": "Variables[0] (#BattleEvent_P1_ADF) || Variables[1] (BaseAttack) || MUL || RETURN",
-              "displayLines": "(#BattleEvent_P1_ADF * BaseAttack)",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P1_ADF",
-                "BaseAttack"
-              ]
-            },
-            "MDF_HealAddRatio": {
-              "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P4_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P4_ADF"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "BattleEventHeal_HPDeltaLayer",
-          "value": 1,
-          "max": 100
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable, exclude Netherwing)}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-815851324\">Modifier_Monster_W4_DawnsEye_01_MaxHPAdd</a>[<span class=\"descriptionNumberColor\">Flame-Chase</span>]",
-          "valuePerStack": {
-            "MDF_HPDelta": {
-              "operator": "Variables[0] (#BattleEvent_P1_ADF) || Variables[1] (BaseAttack) || MUL || RETURN",
-              "displayLines": "(#BattleEvent_P1_ADF * BaseAttack)",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P1_ADF",
-                "BaseAttack"
-              ]
-            },
-            "MDF_HealAddRatio": {
-              "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P4_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P4_ADF"
-              ]
-            },
-            "MDF_Layer": {
-              "operator": "Variables[0] (BattleEventHeal_HPDeltaLayer) || RETURN",
-              "displayLines": "BattleEventHeal_HPDeltaLayer",
-              "constants": [],
-              "variables": [
-                "BattleEventHeal_HPDeltaLayer"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable, exclude Netherwing)}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1825758342\">Modifier_Monster_W4_DawnsEye_01_MaxHPAddSub</a>",
-          "valuePerStack": {
-            "MDF_HPDelta": {
-              "operator": "Variables[0] (#BattleEvent_P1_ADF) || Variables[1] (BaseAttack) || MUL || RETURN",
-              "displayLines": "(#BattleEvent_P1_ADF * BaseAttack)",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P1_ADF",
-                "BaseAttack"
-              ]
-            },
-            "MDF_HealAddRatio": {
-              "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P4_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P4_ADF"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Lock HP",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "lockHolder": "<a class=\"gModGreen\" id=\"-1214340360\">Monster_W4_DawnsEye_LockHP</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1488863445\">Modifier_Monster_W4_DawnsEye_01_MuteSpeed</a>[<span class=\"descriptionNumberColor\">Tide-Corrosion</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(Exclude Netherwing)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"27951832\">Modifier_Monster_W4_DawnsEye_01_HOT</a>[<span class=\"descriptionNumberColor\">Eagerness</span>]",
-          "duration": {
-            "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P3_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P3_ADF"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_HPDelta": {
-              "operator": "Variables[0] (#BattleEvent_P2_ADF) || Variables[1] (BaseAttack) || MUL || RETURN",
-              "displayLines": "(#BattleEvent_P2_ADF * BaseAttack)",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P2_ADF",
-                "BaseAttack"
-              ]
-            },
-            "MDF_DamageAddRatio": {
-              "operator": "Variables[0] (#BattleEvent_P7_ADF) || RETURN",
-              "displayLines": "#BattleEvent_P7_ADF",
-              "constants": [],
-              "variables": [
-                "#BattleEvent_P7_ADF"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Is Part Of Team Location",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "team": "Player Team"
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Is Part Of Team Location",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "team": "Player Team",
-            "location": "Pos2"
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Is Part Of Team Location",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "team": "Player Team",
-            "location": "Pos3"
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Is Part Of Team Location",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "team": "Player Team",
-            "location": "Max"
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All(Exclude Netherwing)}}"
-          },
-          "includeDyingTargets": true,
-          "ifTargetFound": [
-            {
-              "name": "Heal",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "healFlat": {
-                "operator": "Variables[0] (#BattleEvent_P6_ADF) || Variables[1] (BaseAttack) || MUL || RETURN",
-                "displayLines": "(#BattleEvent_P6_ADF * BaseAttack)",
-                "constants": [],
-                "variables": [
-                  "#BattleEvent_P6_ADF",
-                  "BaseAttack"
-                ]
-              },
-              "formula": "Heal from Base Value"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "All Enemy Team Members"
-      }
-    },
-    "60029_MissionBattleEvent60024_Beta_Ability03_Part01": {
-      "fileName": "60029_MissionBattleEvent60024_Beta_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "MissionBattleEvent60024_Beta_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "All Enemy Team Members"
-      }
-    },
-    "60029_MissionBattleEvent60024_Beta_Ability03_EnterReady": {
-      "fileName": "60029_MissionBattleEvent60024_Beta_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "60029_MissionBattleEvent60024_Ability03_Insert_Camera": {
@@ -1677,9 +1534,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1735,178 +1590,6 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
       }
-    },
-    "60029_Modifiers": {
-      "fileName": "60029_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1322601933\">MissionBattleEvent60024_MainStory4</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1205158600\">MissionBattleEvent60024_MainStory3</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1221936219\">MissionBattleEvent60024_MainStory2</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1238713838\">MissionBattleEvent60024_MainStory1</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Level Entity}}"
-                    },
-                    "value1": "WeatherBEFlag",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "WeatherBEFlag"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Action Phase Start [Anyone][?]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Level Entity}}"
-                        },
-                        "value1": "WeatherBEFlag",
-                        "compareType": "=",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "variableName": "WeatherBEFlag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Extra Action/Turn [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Character ID",
-                        "ID": 1408,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": "Phainon"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Level Entity}}"
-                        },
-                        "value1": "WeatherBEFlag",
-                        "compareType": "=",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "variableName": "WeatherBEFlag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "references": []
     }
   },
   "enemyData": {

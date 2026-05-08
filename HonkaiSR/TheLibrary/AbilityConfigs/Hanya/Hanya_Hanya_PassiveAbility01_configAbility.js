@@ -83,6 +83,30 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-255935213\">Hanya_AbilityPreShowModifier</a>",
       "stackType": "ReplaceByCaster",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Player's Aim Target List}}"
+        },
+        "skillType": [
+          "Ultimate"
+        ],
+        "conditions": {
+          "name": "Has Modifier",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1743228292\">WHanya_Ability03Bonus</a>[<span class=\"descriptionNumberColor\">Edict</span>]",
+          "invertCondition": true
+        },
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": "(0.2 * MDF_Skill03_Speed)(SPD Change)"
+        }
+      },
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -120,33 +144,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "target": {
-          "name": "Target Name",
-          "target": "{{Player's Aim Target List}}"
-        },
-        "skillType": [
-          "Ultimate"
-        ],
-        "conditions": {
-          "name": "Has Modifier",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Parameter Target}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1743228292\">WHanya_Ability03Bonus</a>[<span class=\"descriptionNumberColor\">Edict</span>]",
-          "invertCondition": true
-        },
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": "(0.2 * MDF_Skill03_Speed)(SPD Change)"
-        }
-      }
+      ]
     }
   ],
   "targetObjectData": {

@@ -453,21 +453,15 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__2072809162\">Monster_W2_Yanqing_IF_AssistMark03</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__2072809162\">Monster_W2_Yanqing_IF_AssistMark03</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__2089586781\">Monster_W2_Yanqing_IF_AssistMark02</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__2089586781\">Monster_W2_Yanqing_IF_AssistMark02</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__2039253924\">Monster_W2_Yanqing_IF_AssistMark01</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__2039253924\">Monster_W2_Yanqing_IF_AssistMark01</a>"
     }
   ]
 }

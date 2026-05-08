@@ -21,6 +21,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
+      "description": "Decreases DEF by <span class=\"descriptionNumberColor\">#SkillEquip_P6_DefenceDown</span>.",
+      "type": "Debuff",
+      "effectName": "Theft",
+      "statusName": "Theft",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -43,11 +47,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Decreases DEF by <span class=\"descriptionNumberColor\">#SkillEquip_P6_DefenceDown</span>.",
-      "type": "Debuff",
-      "effectName": "Theft",
-      "statusName": "Theft"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -56,6 +56,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
+      "description": "Decreases DEF by <span class=\"descriptionNumberColor\">#SkillEquip_P3_DefenceDown</span>.",
+      "type": "Debuff",
+      "effectName": "Bamboozle",
+      "statusName": "Bamboozle",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -78,11 +82,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Decreases DEF by <span class=\"descriptionNumberColor\">#SkillEquip_P3_DefenceDown</span>.",
-      "type": "Debuff",
-      "effectName": "Bamboozle",
-      "statusName": "Bamboozle"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -168,9 +168,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

@@ -3,174 +3,18 @@ const compositeAbilityObject = {
   "fullCharacterName": 2022020,
   "trimCharacterName": 2022020,
   "abilityList": [
+    "2022020_Monster_W2_Abomi02_PassiveAbility_Insert_Fail_Part02",
+    "2022020_Monster_W2_Abomi02_PassiveAbility_Insert_Part02",
+    "2022020_Monster_W2_Abomi02_PassiveAbility_Insert_Fail",
+    "2022020_Monster_W2_Abomi02_PassiveAbility_Insert",
+    "2022020_Monster_W2_Abomi02_Passive01",
     "2022020_Monster_W2_Abomi02_Ability02_Part02",
     "2022020_Monster_W2_Abomi02_Ability02_Part01",
     "2022020_Monster_W2_Abomi02_Ability01_Part02",
     "2022020_Monster_W2_Abomi02_Ability01_Part01",
-    "2022020_Monster_W2_Abomi02_PassiveAbility_Insert_Fail_Part02",
-    "2022020_Monster_W2_Abomi02_PassiveAbility_Insert_Fail",
-    "2022020_Monster_W2_Abomi02_PassiveAbility_Insert_Part02",
-    "2022020_Monster_W2_Abomi02_PassiveAbility_Insert",
-    "2022020_Monster_W2_Abomi02_Passive01",
     "2022020_Modifiers"
   ],
   "abilityObject": {
-    "2022020_Monster_W2_Abomi02_Ability02_Part02": {
-      "fileName": "2022020_Monster_W2_Abomi02_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Shot Fired",
-          "execute": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2022020_Monster_W2_Abomi02_Ability02_Part01": {
-      "fileName": "2022020_Monster_W2_Abomi02_Ability02_Part01",
-      "childAbilityList": [
-        "2022020_Monster_W2_Abomi02_Ability02_Part01",
-        "2022020_Monster_W2_Abomi02_Ability02_Part02",
-        "2022020_Monster_W2_Abomi02_Ability02_Camera"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Abomi02_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "2022020_Monster_W2_Abomi02_Ability01_Part02": {
-      "fileName": "2022020_Monster_W2_Abomi02_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1875575825\">Monster_W2_Abomi02_Mark</a>[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]"
-        },
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "AttackCount",
-          "context": "TargetEntity",
-          "value": 1,
-          "max": 2
-        },
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "MarkRemainCount",
-          "context": "TargetEntity",
-          "value": 1,
-          "max": 2
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1723051927\">Monster_W2_Abomi02_TargetList</a>[<span class=\"descriptionNumberColor\">Core Formation</span>]"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2022020_Monster_W2_Abomi02_Ability01_Part01": {
-      "fileName": "2022020_Monster_W2_Abomi02_Ability01_Part01",
-      "childAbilityList": [
-        "2022020_Monster_W2_Abomi02_Ability01_Part01",
-        "2022020_Monster_W2_Abomi02_Ability01_Part02",
-        "2022020_Monster_W2_Abomi02_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Abomi02_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "2022020_Monster_W2_Abomi02_PassiveAbility_Insert_Fail_Part02": {
       "fileName": "2022020_Monster_W2_Abomi02_PassiveAbility_Insert_Fail_Part02",
       "abilityType": null,
@@ -223,32 +67,6 @@ const compositeAbilityObject = {
         {
           "name": "Mark Entity For Immediate Death"
         }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "All Player Team Members"
-      },
-      "references": []
-    },
-    "2022020_Monster_W2_Abomi02_PassiveAbility_Insert_Fail": {
-      "fileName": "2022020_Monster_W2_Abomi02_PassiveAbility_Insert_Fail",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Core Rupture"
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Abomi02_PassiveAbility_Insert_Fail_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
       ],
       "targetObjectData": {
         "primaryTarget": "All Player Team Members"
@@ -387,6 +205,32 @@ const compositeAbilityObject = {
         {
           "name": "Mark Entity For Immediate Death"
         }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "All Player Team Members"
+      },
+      "references": []
+    },
+    "2022020_Monster_W2_Abomi02_PassiveAbility_Insert_Fail": {
+      "fileName": "2022020_Monster_W2_Abomi02_PassiveAbility_Insert_Fail",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Core Rupture"
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Abomi02_PassiveAbility_Insert_Fail_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
       ],
       "targetObjectData": {
         "primaryTarget": "All Player Team Members"
@@ -600,11 +444,165 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
+    },
+    "2022020_Monster_W2_Abomi02_Ability02_Part02": {
+      "fileName": "2022020_Monster_W2_Abomi02_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Shot Fired",
+          "execute": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                  "displayLines": "{[Skill02[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill02[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2022020_Monster_W2_Abomi02_Ability02_Part01": {
+      "fileName": "2022020_Monster_W2_Abomi02_Ability02_Part01",
+      "childAbilityList": [
+        "2022020_Monster_W2_Abomi02_Ability02_Part01",
+        "2022020_Monster_W2_Abomi02_Ability02_Part02",
+        "2022020_Monster_W2_Abomi02_Ability02_Camera"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Abomi02_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "2022020_Monster_W2_Abomi02_Ability01_Part02": {
+      "fileName": "2022020_Monster_W2_Abomi02_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1875575825\">Monster_W2_Abomi02_Mark</a>[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]"
+        },
+        {
+          "name": "Define Custom Variable with Added Value",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "AttackCount",
+          "context": "TargetEntity",
+          "value": 1,
+          "max": 2
+        },
+        {
+          "name": "Define Custom Variable with Added Value",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "MarkRemainCount",
+          "context": "TargetEntity",
+          "value": 1,
+          "max": 2
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1723051927\">Monster_W2_Abomi02_TargetList</a>[<span class=\"descriptionNumberColor\">Core Formation</span>]"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2022020_Monster_W2_Abomi02_Ability01_Part01": {
+      "fileName": "2022020_Monster_W2_Abomi02_Ability01_Part01",
+      "childAbilityList": [
+        "2022020_Monster_W2_Abomi02_Ability01_Part01",
+        "2022020_Monster_W2_Abomi02_Ability01_Part02",
+        "2022020_Monster_W2_Abomi02_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Abomi02_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
     },
     "2022020_Modifiers": {
       "fileName": "2022020_Modifiers",
@@ -619,6 +617,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1599810700\">Monster_W2_Abomi02_EffectControl</a>",
+          "latentQueue": [
+            "IsInDeathRattle"
+          ],
           "variableValueChange": [
             {
               "name": "Variable Value Changes",
@@ -645,16 +646,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "IsInDeathRattle"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1875575825\">Monster_W2_Abomi02_Mark</a>[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
           "stackType": "Multiple",
+          "description": "Upon receiving a killing blow, the Disciples of Sanctus Medicus: Internal Alchemist deals DMG 1 time to targets that are inflicted with Spur of Thunderwoe by them.",
+          "type": "Debuff",
+          "effectName": "Thunderwoe Strike",
+          "statusName": "Spur of Thunderwoe",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -687,18 +688,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Upon receiving a killing blow, the Disciples of Sanctus Medicus: Internal Alchemist deals DMG 1 time to targets that are inflicted with Spur of Thunderwoe by them.",
-          "type": "Debuff",
-          "effectName": "Thunderwoe Strike",
-          "statusName": "Spur of Thunderwoe"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1723051927\">Monster_W2_Abomi02_TargetList</a>[<span class=\"descriptionNumberColor\">Core Formation</span>]",
           "stackType": "Replace",
+          "description": "Upon receiving a killing blow, the unit deals DMG 1 time to targets that are afflicted with Spur of Thunderwoe by them.<br>The current targets who have Spur of Thunderwoe on them are: %DynamicTargetName.",
+          "type": "Buff",
+          "effectName": "Core Formation",
+          "statusName": "Core Formation",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -880,13 +879,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Upon receiving a killing blow, the unit deals DMG 1 time to targets that are afflicted with Spur of Thunderwoe by them.<br>The current targets who have Spur of Thunderwoe on them are: %DynamicTargetName.",
-          "type": "Buff",
-          "effectName": "Core Formation",
-          "statusName": "Core Formation"
+          ]
         }
       ],
       "references": []

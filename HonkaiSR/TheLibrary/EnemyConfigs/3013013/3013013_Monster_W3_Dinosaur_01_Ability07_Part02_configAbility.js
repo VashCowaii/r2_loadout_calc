@@ -871,7 +871,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1974630244\">Enemy_W3_Dinosaur_01_Ability07_HitTag</a>",
-      "stackData": [],
       "latentQueue": [
         "Monster_W3_Dinosaur_01_Skill07_DeltaTime",
         "EffRandomYaw",

@@ -10,9 +10,99 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__222306094\">Enemy_XP_Minion04_EscapingCharge02</a>",
+      "modifierFlags": [
+        "MuteHitFly",
+        "Endurance",
+        "MuteBreak"
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "Change Character Transformation",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "phase": "Charge02"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed"
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Modify Weaknesses",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "action": "Protected",
+              "valueList": [
+                "Physical",
+                "Fire",
+                "Ice",
+                "Thunder",
+                "Wind",
+                "Quantum",
+                "Imaginary"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__205528475\">Enemy_XP_Minion04_EscapingCharge01</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "Change Character Transformation",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "phase": "Charge01"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Change Character Transformation",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "phase": "Normal"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Being Weakness Broken: End [Owner]",
+          "execute": [
+            "Modifier Deletes Itself"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1781853909\">Enemy_W4_Mascot_LocalLegend_MuteBreak</a>",
       "modifierFlags": [
         "MuteBreak"
+      ],
+      "latentQueue": [
+        "AISequence"
       ],
       "execute": [
         {
@@ -119,10 +209,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AISequence"
       ]
     },
     {
@@ -131,6 +217,9 @@ const configAbility = {
       "modifierFlags": [
         "Deathrattle",
         "KeepOnDeathrattle"
+      ],
+      "latentQueue": [
+        "AISequence"
       ],
       "execute": [
         {
@@ -157,15 +246,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AISequence"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1597331632\">Enemy_W4_Mascot_LocalLegend_ListenCorrectInteract</a>",
+      "stackData": [
+        "MDF_SuccessDamageRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -389,102 +477,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SuccessDamageRatio"
-      ],
-      "latentQueue": []
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__222306094\">Enemy_XP_Minion04_EscapingCharge02</a>",
-      "modifierFlags": [
-        "MuteHitFly",
-        "Endurance",
-        "MuteBreak"
-      ],
-      "execute": [
-        {
-          "eventTrigger": "When Constructing Modifier",
-          "execute": [
-            {
-              "name": "Change Character Transformation",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "phase": "Charge02"
-            }
-          ]
-        },
-        {
-          "eventTrigger": "When Modifier Destroyed/Removed"
-        },
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier",
-          "execute": [
-            {
-              "name": "Modify Weaknesses",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "action": "Protected",
-              "valueList": [
-                "Physical",
-                "Fire",
-                "Ice",
-                "Thunder",
-                "Wind",
-                "Quantum",
-                "Imaginary"
-              ]
-            }
-          ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": []
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__205528475\">Enemy_XP_Minion04_EscapingCharge01</a>",
-      "execute": [
-        {
-          "eventTrigger": "When Constructing Modifier",
-          "execute": [
-            {
-              "name": "Change Character Transformation",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "phase": "Charge01"
-            }
-          ]
-        },
-        {
-          "eventTrigger": "When Modifier Destroyed/Removed",
-          "execute": [
-            {
-              "name": "Change Character Transformation",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "phase": "Normal"
-            }
-          ]
-        },
-        {
-          "eventTrigger": "Being Weakness Broken: End [Owner]",
-          "execute": [
-            "Modifier Deletes Itself"
-          ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -514,18 +507,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AllDamageReduce"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1866632092\">Enemy_W4_Mascot_BlockDamage</a>",
-      "modifierFlags": [],
-      "stackData": [],
-      "latentQueue": []
+      "modifierFlags": []
     },
     {
       "name": "Modifier Construction",
@@ -551,9 +538,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -672,9 +657,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1333,11 +1316,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SuccessDamageRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1369,6 +1348,9 @@ const configAbility = {
         "MuteHitFly",
         "MuteBreak"
       ],
+      "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
+      "type": "Other",
+      "statusName": "Brainteaser",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1486,12 +1468,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
-      "type": "Other",
-      "statusName": "Brainteaser"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1523,6 +1500,9 @@ const configAbility = {
         "MuteHitFly",
         "MuteBreak"
       ],
+      "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
+      "type": "Other",
+      "statusName": "Brainteaser",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1646,12 +1626,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
-      "type": "Other",
-      "statusName": "Brainteaser"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1683,6 +1658,9 @@ const configAbility = {
         "MuteHitFly",
         "MuteBreak"
       ],
+      "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
+      "type": "Other",
+      "statusName": "Brainteaser",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1806,12 +1784,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
-      "type": "Other",
-      "statusName": "Brainteaser"
+      ]
     }
   ],
   "references": []

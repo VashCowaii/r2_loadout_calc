@@ -3,12 +3,37 @@ const compositeAbilityObject = {
   "fullCharacterName": 2011020,
   "trimCharacterName": 2011020,
   "abilityList": [
+    "2011020_Monster_W2_Mecha01_01_PassiveAbilityInitiate",
     "2011020_Monster_W2_Mecha01_01_Ability01_Part02",
     "2011020_Monster_W2_Mecha01_01_Ability01_Part01",
-    "2011020_Monster_W2_Mecha01_01_PassiveAbilityInitiate",
     "2011020_Modifiers"
   ],
   "abilityObject": {
+    "2011020_Monster_W2_Mecha01_01_PassiveAbilityInitiate": {
+      "fileName": "2011020_Monster_W2_Mecha01_01_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-588236531\">Enemy_W2_Mecha01_01_StandByLoopEffect</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            }
+          ]
+        }
+      ]
+    },
     "2011020_Monster_W2_Mecha01_01_Ability01_Part02": {
       "fileName": "2011020_Monster_W2_Mecha01_01_Ability01_Part02",
       "abilityType": null,
@@ -109,31 +134,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "2011020_Monster_W2_Mecha01_01_PassiveAbilityInitiate": {
-      "fileName": "2011020_Monster_W2_Mecha01_01_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-588236531\">Enemy_W2_Mecha01_01_StandByLoopEffect</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            }
-          ]
-        }
-      ]
     },
     "2011020_Modifiers": {
       "fileName": "2011020_Modifiers",

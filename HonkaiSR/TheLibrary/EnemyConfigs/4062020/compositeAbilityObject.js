@@ -5,10 +5,10 @@ const compositeAbilityObject = {
   "abilityList": [
     "4062020_Monster_W2_Beast01_04_AbilityP02_InsertAbility_Part02",
     "4062020_Monster_W2_Beast01_04_AbilityP02_InsertAbility_Part01",
-    "4062020_Monster_W2_Beast01_04_Ability01_Part02",
-    "4062020_Monster_W2_Beast01_04_Ability01_Part01",
     "4062020_Monster_W2_Beast01_04_AbilityP02",
     "4062020_Monster_W2_Beast01_04_AbilityP01",
+    "4062020_Monster_W2_Beast01_04_Ability01_Part02",
+    "4062020_Monster_W2_Beast01_04_Ability01_Part01",
     "4062020_Modifiers"
   ],
   "abilityObject": {
@@ -148,73 +148,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4062020_Monster_W2_Beast01_04_Ability01_Part02": {
-      "fileName": "4062020_Monster_W2_Beast01_04_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4062020_Monster_W2_Beast01_04_Ability01_Part01": {
-      "fileName": "4062020_Monster_W2_Beast01_04_Ability01_Part01",
-      "childAbilityList": [
-        "4062020_Monster_W2_Beast01_04_Ability01_Camera",
-        "4062020_Monster_W2_Beast01_04_Ability01_Part01",
-        "4062020_Monster_W2_Beast01_04_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Beast01_04_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "4062020_Monster_W2_Beast01_04_AbilityP02": {
       "fileName": "4062020_Monster_W2_Beast01_04_AbilityP02",
       "childAbilityList": [
@@ -339,11 +272,76 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "End Broken State [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
+    },
+    "4062020_Monster_W2_Beast01_04_Ability01_Part02": {
+      "fileName": "4062020_Monster_W2_Beast01_04_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4062020_Monster_W2_Beast01_04_Ability01_Part01": {
+      "fileName": "4062020_Monster_W2_Beast01_04_Ability01_Part01",
+      "childAbilityList": [
+        "4062020_Monster_W2_Beast01_04_Ability01_Camera",
+        "4062020_Monster_W2_Beast01_04_Ability01_Part01",
+        "4062020_Monster_W2_Beast01_04_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Beast01_04_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
     },
     "4062020_Modifiers": {
       "fileName": "4062020_Modifiers",
@@ -365,6 +363,12 @@ const compositeAbilityObject = {
             "CanBeAddedToServant",
             "CanListenServantCallback"
           ],
+          "useEntitySnapshot": true,
+          "description": "Take a set amount of <span class=\"descriptionNumberColor\">MDF_DamageValue</span> Imaginary DMG at the beginning of the turn.",
+          "type": "Debuff",
+          "effectName": "Hemotort Corruption",
+          "statusName": "Hemotort Corruption",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -432,17 +436,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "Take a set amount of <span class=\"descriptionNumberColor\">MDF_DamageValue</span> Imaginary DMG at the beginning of the turn.",
-          "type": "Debuff",
-          "effectName": "Hemotort Corruption",
-          "statusName": "Hemotort Corruption",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1221492183\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_DamageCalculator</a>",
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -584,25 +583,27 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-689374795\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_Attacked</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-689374795\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_Attacked</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1779981114\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_BeHit</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1779981114\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_BeHit</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-771052398\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_Enhance</a>[<span class=\"descriptionNumberColor\">Hemotort Stain</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_GoldBloodDOTDamageRatio"
+          ],
+          "description": "After attacking, applies \"Hemotort Corruption\" based on the amount of DMG taken (not offset by Shield) to the selected characters.",
+          "type": "Other",
+          "effectName": "Hemotort Stain",
+          "statusName": "Hemotort Stain",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -721,15 +722,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_GoldBloodDOTDamageRatio"
-          ],
-          "latentQueue": [],
-          "description": "After attacking, applies \"Hemotort Corruption\" based on the amount of DMG taken (not offset by Shield) to the selected characters.",
-          "type": "Other",
-          "effectName": "Hemotort Stain",
-          "statusName": "Hemotort Stain"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -764,9 +757,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

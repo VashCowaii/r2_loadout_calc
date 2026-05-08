@@ -3,11 +3,16 @@ const compositeAbilityObject = {
   "fullCharacterName": "Anaxa",
   "trimCharacterName": "Anaxa",
   "abilityList": [
+    "Anaxa_Modifiers",
+    "Anaxa_Anaxa_Trace03",
+    "Anaxa_Anaxa_Trace02",
     "Anaxa_Anaxa_Eidolon6",
     "Anaxa_Anaxa_Eidolon2",
     "Anaxa_Anaxa_Eidolon1",
-    "Anaxa_Anaxa_Trace03",
-    "Anaxa_Anaxa_Trace02",
+    "Anaxa_LocalPlayer_StandardAbility_AttackBreak",
+    "Anaxa_LocalPlayer_Anaxa_BeforeBattleFearListener",
+    "Anaxa_LocalPlayer_Anaxa_TechniqueUsage",
+    "Anaxa_LocalPlayer_Anaxa_NormalAtk01",
     "Anaxa_Anaxa_TechniqueInLevel",
     "Anaxa_Anaxa_PassiveAbility01",
     "Anaxa_Anaxa_Ability03_Part02",
@@ -17,135 +22,154 @@ const compositeAbilityObject = {
     "Anaxa_Anaxa_Ability02_Part01",
     "Anaxa_Anaxa_Ability01_Part02",
     "Anaxa_Anaxa_Ability01_Part01",
-    "Anaxa_Modifiers",
     "Anaxa_Functions"
   ],
   "abilityObject": {
-    "Anaxa_Anaxa_Eidolon6": {
-      "fileName": "Anaxa_Anaxa_Eidolon6",
-      "abilityType": null,
+    "Anaxa_Modifiers": {
+      "fileName": "Anaxa_Modifiers",
+      "abilityType": "Char. Modifiers",
       "energy": null,
-      "toughnessList": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
       "parse": [
         {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2017566930\">Anaxa_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
-          "valuePerStack": {
-            "MDF_PropertyRatio": {
-              "operator": "Variables[0] (1.3) || RETURN",
-              "displayLines": "1.3",
-              "constants": [],
-              "variables": [
-                1.3
-              ]
-            }
-          }
-        }
-      ],
-      "references": [
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__406447714\">ADV_StageAbility_Anaxa_IgnoreWeakness</a>",
+          "counter": 1,
+          "stackType": "Merge",
+          "modifierFlags": [
+            "EnterBattleAdvantage"
+          ]
+        },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2017566930\">Anaxa_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
-          "execute": [
+          "for": "<a class=\"gModGreen\" id=\"mod__524782816\">ADV_StageAbility_Anaxa_LineupAttackListener</a>",
+          "onAttack": [
             {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "value1": "CurrentHP%",
+                "compareType": ">"
+              },
+              "passed": [
                 {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-446302809\">ModifyDamageData_IndependentDamageAddedRatio</a>",
-                  "variables": {
-                    "parameter[0]_IndependentDamageAddedRatio": {
-                      "operator": "Variables[0] (MDF_PropertyRatio) || Constants[0] (1) || SUB || RETURN",
-                      "displayLines": "(MDF_PropertyRatio - 1)",
-                      "constants": [
-                        1
-                      ],
-                      "variables": [
-                        "MDF_PropertyRatio"
-                      ]
-                    }
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target List}}"
+                  },
+                  "modifier": null,
+                  "ID": "140502()",
+                  "counter": 1,
+                  "duration": 1,
+                  "conditions": {
+                    "name": "Has Flag",
+                    "flagName": "Fear"
                   }
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt is <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original DMG.",
-          "type": "Buff",
-          "statusName": "Everything Is in Everything"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Anaxa_Anaxa_Eidolon2": {
-      "fileName": "Anaxa_Anaxa_Eidolon2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"126451485\">Anaxa_Eidolon2</a>"
-        }
-      ],
-      "references": [
+          ]
+        },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1634329483\">M_Anaxa_Eidolon2_Bonus_OnCharacterCreate</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__1211991680\">ADV_StageAbility_Anaxa_BeforeBattleFearListener</a>",
+          "onRemoval": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Adventure Lineup}}"
+              },
+              "modifier": null,
+              "overworldID": 140503
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Adventure Enemy NPCs}}"
+              },
+              "modifier": null,
+              "overworldID": 140502
+            }
+          ],
+          "onBattlePrep": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
+              },
+              "modifier": null,
+              "ID": "140501(SkillMaze)",
+              "counter": 1,
+              "duration": {
+                "operator": "Variables[0] (10) || RETURN",
+                "displayLines": "10",
+                "constants": [],
+                "variables": [
+                  10
+                ]
+              },
+              "conditions": {
+                "name": "Has Flag",
+                "flagName": "Fear"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1095061274\">ADV_StageAbility_Maze_Anaxa_00</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "modifierFlags": [
+            "Fear",
+            "EnterBattleAdvantage"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1815988112\">M_Anaxa_StartFreeBP</a>",
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>"
+          },
           "execute": [
             {
-              "eventTrigger": "Entity Created [Anyone]",
+              "eventTrigger": "When Constructing Modifier",
               "execute": [
                 {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team"
-                  },
-                  "passed": [
+                  "name": "Update Ability Properties",
+                  "propertyList": [
                     {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-2143749742\">function_Anaxa_AddWeakness</a>",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      }
-                    },
+                      "name": "Ability Property Action",
+                      "propertyName": "Skill Point Cost",
+                      "propertyAction": "Multiply(by 0 if undefined)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Update Ability Properties",
+                  "propertyList": [
                     {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1219895923\">Anaxa_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
-                      "referenceModifier": "<a class=\"gModGreen\" id=\"-1864228635\">MReference_AllDamageTypeResistanceDown</a>",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
-                        }
-                      }
+                      "name": "Ability Property Action",
+                      "propertyName": "Skill Point Cost",
+                      "propertyAction": "Reset to Default"
                     }
                   ]
                 }
@@ -155,180 +179,511 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__126451485\">Anaxa_Eidolon2</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1540917869\">M_Anaxa_PrepareFreeBP</a>",
+          "stackType": "ReplaceByCaster",
+          "stackLimit": 99999,
           "execute": [
             {
-              "eventTrigger": "Enter Battle",
+              "eventTrigger": "Turn Start [Anyone]",
               "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-2143749742\">function_Anaxa_AddWeakness</a>",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      }
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1219895923\">Anaxa_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
-                      "referenceModifier": "<a class=\"gModGreen\" id=\"-1864228635\">MReference_AllDamageTypeResistanceDown</a>",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1634329483\">M_Anaxa_Eidolon2_Bonus_OnCharacterCreate</a>"
-                },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -80
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Anaxa_Anaxa_Eidolon1": {
-      "fileName": "Anaxa_Anaxa_Eidolon1",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"76118628\">Anaxa_Eidolon1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1900870399\">Anaxa_Eidolon1_FirstBP</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1900870399\">Anaxa_Eidolon1_FirstBP</a>",
-          "execute": [
+              ]
+            },
             {
               "eventTrigger": "Ability Use [Owner]: End",
               "execute": [
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Skill"
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1815988112\">M_Anaxa_StartFreeBP</a>"
                   },
                   "passed": [
                     {
-                      "name": "Skill Points Modification",
-                      "adjustmentValue": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
                       },
-                      "adjustmentType": "+"
+                      "modifier": "<a class=\"gModGreen\" id=\"1815988112\">M_Anaxa_StartFreeBP</a>"
                     },
-                    "Modifier Deletes Itself"
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>",
+                      "addStacksPerTrigger": -1
+                    }
                   ]
                 }
               ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__76118628\">Anaxa_Eidolon1</a>",
-          "execute": [
+            },
             {
-              "eventTrigger": "Attacker Finalizes DMG Data",
+              "eventTrigger": "Extra Turn Action Injection: Start",
               "execute": [
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Has DMG Instance Tag",
-                    "tag": "Anaxa_00_BP"
+                    "name": "Compare: Parameter String",
+                    "compareType": "=",
+                    "value2": "Anaxa_Passive"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
                         "name": "Target Name",
-                        "target": "{{Parameter Target}}"
+                        "target": "{{Caster}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"-266153828\">Anaxa_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Magician, Isolated by Stars</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
+                      "modifier": "<a class=\"gModGreen\" id=\"1815988112\">M_Anaxa_StartFreeBP</a>"
+                    },
+                    {
+                      "name": "UI Display Event",
+                      "popUpText": "Tetrad Wisdom Reigns Thrice"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1929414079\">M_Anaxa_InsertActionCheck</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "CustomEvent_InfiniteRefresh"
+          ],
+          "stackLimit": 99999,
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Action Choice Window [Anyone]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
+                }
+              ],
+              "priorityLevel": -55
+            },
+            {
+              "eventTrigger": "Custom Event",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "New Enemy Wave",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "invertCondition": true
                       },
-                      "referenceModifier": "<a class=\"gModGreen\" id=\"779501689\">MReference_DefenceRatioDown</a>",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.16) || RETURN",
-                          "displayLines": "0.16",
-                          "constants": [],
-                          "variables": [
-                            0.16
-                          ]
+                      {
+                        "name": "Living State",
+                        "state": "Mask_AliveOrRevivable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
                         }
                       }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
                     }
                   ]
                 }
               ]
             }
           ],
-          "stackData": [],
-          "latentQueue": []
+          "modifierFunctions": [
+            {
+              "name": "CharacterFunctions",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1862868553\">Anaxa_InsertRetarget</a>",
+              "parse": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "conditions": {
+                    "name": "Target Exists",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "living": true
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Looped Event",
+                      "maxLoops": {
+                        "operator": "Variables[0] (MDF_Layer) || RETURN",
+                        "displayLines": "MDF_Layer",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Layer"
+                        ]
+                      },
+                      "Event": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>",
+                          "addStacksPerTrigger": 1
+                        },
+                        {
+                          "name": "Inject Extra-Turn",
+                          "actionTag": "Anaxa_Passive",
+                          "skillType": "ControlSkill02",
+                          "forceAction": true,
+                          "castTarget": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "afterInjection": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>",
+                              "addStacksPerTrigger": -1
+                            },
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1929414079\">M_Anaxa_InsertActionCheck</a>",
+                              "addStacksPerTrigger": 1
+                            }
+                          ],
+                          "ignoreCost": true
+                        }
+                      ]
+                    },
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1588888193\">Anaxa_UltraDebuff</a>[<span class=\"descriptionNumberColor\">Sublimation</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "modifierFlags": [
+            "STAT_AttachWeakness"
+          ],
+          "description": "Physical, Fire, Ice, Lightning, Wind, Quantum, and Imaginary Weaknesses are added at the same time.",
+          "type": "Debuff",
+          "effectName": "Sublimation",
+          "statusName": "Sublimation",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_HaveCTRLResistance",
+                    "compareType": "=",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Target Exists",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "living": true
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "flagName": "STAT_CTRL_Frozen_Effect",
+                            "invertCondition": true
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_HaveCTRLResistance",
+                    "compareType": "=",
+                    "value2": 0
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ],
+                  "failed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ],
+              "priorityLevel": 200
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Flag Resistance",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_HaveCTRLResistance",
+                  "context": "ContextModifier",
+                  "flagName": "STAT_CTRL"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "MDF_HaveCTRLResistance",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "Endurance",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "EnduranceLogicOnly",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "EnduranceEnemyOnly",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "EnduranceEnemyLogicOnly",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Modifier Description",
+                      "popUpText": "Unable to take action. Physical, Fire, Ice, Lightning, Wind, Quantum, and Imaginary Weaknesses are added at the same time."
+                    },
+                    {
+                      "name": "Add Flags to Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "flagName": [
+                        "DisableAction",
+                        "STAT_CTRL",
+                        "STAT_CTRL_Frozen_Effect",
+                        "FixedPerformTime"
+                      ],
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1588888193\">Anaxa_UltraDebuff</a>[<span class=\"descriptionNumberColor\">Sublimation</span>]",
+                      "casterFilter": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Physical"
+                  ]
+                },
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Fire"
+                  ]
+                },
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Thunder"
+                  ]
+                },
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Ice"
+                  ]
+                },
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Wind"
+                  ]
+                },
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Quantum"
+                  ]
+                },
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Imaginary"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
+      "references": []
     },
     "Anaxa_Anaxa_Trace03": {
       "fileName": "Anaxa_Anaxa_Trace03",
@@ -394,9 +749,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -423,6 +776,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-992053376\">Anaxa_Trace02_SubAll</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "statusName": "Imperative Hiatus",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -445,15 +801,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "statusName": "Imperative Hiatus"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-879409639\">Anaxa_Trace02_Sub</a>[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "statusName": "Imperative Hiatus",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -476,10 +832,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "statusName": "Imperative Hiatus"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -829,13 +1182,640 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Anaxa_Anaxa_Eidolon6": {
+      "fileName": "Anaxa_Anaxa_Eidolon6",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2017566930\">Anaxa_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
+          "valuePerStack": {
+            "MDF_PropertyRatio": {
+              "operator": "Variables[0] (1.3) || RETURN",
+              "displayLines": "1.3",
+              "constants": [],
+              "variables": [
+                1.3
+              ]
+            }
+          }
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2017566930\">Anaxa_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
+          "stackData": [
+            "MDF_PropertyRatio"
+          ],
+          "description": "DMG dealt is <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original DMG.",
+          "type": "Buff",
+          "statusName": "Everything Is in Everything",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-446302809\">ModifyDamageData_IndependentDamageAddedRatio</a>",
+                  "variables": {
+                    "parameter[0]_IndependentDamageAddedRatio": {
+                      "operator": "Variables[0] (MDF_PropertyRatio) || Constants[0] (1) || SUB || RETURN",
+                      "displayLines": "(MDF_PropertyRatio - 1)",
+                      "constants": [
+                        1
+                      ],
+                      "variables": [
+                        "MDF_PropertyRatio"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Anaxa_Anaxa_Eidolon2": {
+      "fileName": "Anaxa_Anaxa_Eidolon2",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"126451485\">Anaxa_Eidolon2</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1634329483\">M_Anaxa_Eidolon2_Bonus_OnCharacterCreate</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Enemy Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-2143749742\">function_Anaxa_AddWeakness</a>",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1219895923\">Anaxa_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"-1864228635\">MReference_AllDamageTypeResistanceDown</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.2) || RETURN",
+                          "displayLines": "0.2",
+                          "constants": [],
+                          "variables": [
+                            0.2
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__126451485\">Anaxa_Eidolon2</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-2143749742\">function_Anaxa_AddWeakness</a>",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1219895923\">Anaxa_Eidolon2_Property</a>[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"-1864228635\">MReference_AllDamageTypeResistanceDown</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.2) || RETURN",
+                          "displayLines": "0.2",
+                          "constants": [],
+                          "variables": [
+                            0.2
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1634329483\">M_Anaxa_Eidolon2_Bonus_OnCharacterCreate</a>"
+                },
+                "Modifier Deletes Itself"
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Anaxa_Anaxa_Eidolon1": {
+      "fileName": "Anaxa_Anaxa_Eidolon1",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"76118628\">Anaxa_Eidolon1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1900870399\">Anaxa_Eidolon1_FirstBP</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1900870399\">Anaxa_Eidolon1_FirstBP</a>",
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Skill"
+                  },
+                  "passed": [
+                    {
+                      "name": "Skill Points Modification",
+                      "adjustmentValue": {
+                        "operator": "Variables[0] (1) || RETURN",
+                        "displayLines": "1",
+                        "constants": [],
+                        "variables": [
+                          1
+                        ]
+                      },
+                      "adjustmentType": "+"
+                    },
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__76118628\">Anaxa_Eidolon1</a>",
+          "execute": [
+            {
+              "eventTrigger": "Attacker Finalizes DMG Data",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has DMG Instance Tag",
+                    "tag": "Anaxa_00_BP"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-266153828\">Anaxa_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Magician, Isolated by Stars</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (2) || RETURN",
+                        "displayLines": "2",
+                        "constants": [],
+                        "variables": [
+                          2
+                        ]
+                      },
+                      "referenceModifier": "<a class=\"gModGreen\" id=\"779501689\">MReference_DefenceRatioDown</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.16) || RETURN",
+                          "displayLines": "0.16",
+                          "constants": [],
+                          "variables": [
+                            0.16
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Anaxa_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Anaxa_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Anaxa_LocalPlayer_Anaxa_BeforeBattleFearListener": {
+      "fileName": "Anaxa_LocalPlayer_Anaxa_BeforeBattleFearListener",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1211991680\">ADV_StageAbility_Anaxa_BeforeBattleFearListener</a>",
+          "counter": -1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Lineup}}"
+          },
+          "modifier": null,
+          "ID": "140503()",
+          "counter": -1
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Anaxa_LocalPlayer_Anaxa_TechniqueUsage": {
+      "fileName": "Anaxa_LocalPlayer_Anaxa_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Overworld Attack Instance",
+          "onAttack": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": null,
+              "ID": "140501(SkillMaze)",
+              "duration": {
+                "operator": "Variables[0] (10) || RETURN",
+                "displayLines": "10",
+                "constants": [],
+                "variables": [
+                  10
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Anaxa_LocalPlayer_Anaxa_NormalAtk01": {
+      "fileName": "Anaxa_LocalPlayer_Anaxa_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "Anaxa_Anaxa_TechniqueInLevel": {
@@ -1141,9 +2121,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1237,6 +2215,10 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "ListenBattleEventSkill"
           ],
+          "description": "Anaxa deals <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> increased DMG to the target. Furthermore, after using Basic ATK or Skill on the target, he uses 1 additional instance of Skill on it.",
+          "type": "Debuff",
+          "effectName": "Qualitative Disclosure",
+          "statusName": "Qualitative Disclosure",
           "execute": [
             {
               "eventTrigger": "Ability Use [Anyone]: Start",
@@ -1323,11 +2305,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Anaxa deals <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> increased DMG to the target. Furthermore, after using Basic ATK or Skill on the target, he uses 1 additional instance of Skill on it.",
-          "type": "Debuff",
-          "effectName": "Qualitative Disclosure",
-          "statusName": "Qualitative Disclosure"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1575,6 +2553,36 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-552811494\">Anaxa_Passive_Mark_Property</a>",
+              "haloStatus": true
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-353589008\">Anaxa_Passive_WeaknessListener</a>",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_WeaknessNeed": {
+                  "operator": "Variables[0] (5) || RETURN",
+                  "displayLines": "5",
+                  "constants": [],
+                  "variables": [
+                    5
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -1744,38 +2752,6 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-552811494\">Anaxa_Passive_Mark_Property</a>",
-              "haloStatus": true
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-353589008\">Anaxa_Passive_WeaknessListener</a>",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_WeaknessNeed": {
-                  "operator": "Variables[0] (5) || RETURN",
-                  "displayLines": "5",
-                  "constants": [],
-                  "variables": [
-                    5
-                  ]
-                }
-              }
             }
           ]
         }
@@ -2201,6 +3177,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__671072840\">Anaxa_BPAbility_Bonus</a>[<span class=\"descriptionNumberColor\">Blaze, Plunged to Canyon</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Blaze, Plunged to Canyon",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2224,15 +3207,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Blaze, Plunged to Canyon"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2251,9 +3226,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2304,9 +3277,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2451,570 +3422,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Anaxa_Modifiers": {
-      "fileName": "Anaxa_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1815988112\">M_Anaxa_StartFreeBP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Update Ability Properties",
-                  "propertyList": [
-                    {
-                      "name": "Ability Property Action",
-                      "propertyName": "Skill Point Cost",
-                      "propertyAction": "Multiply(by 0 if undefined)"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Update Ability Properties",
-                  "propertyList": [
-                    {
-                      "name": "Ability Property Action",
-                      "propertyName": "Skill Point Cost",
-                      "propertyAction": "Reset to Default"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>"
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1540917869\">M_Anaxa_PrepareFreeBP</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Turn Start [Anyone]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1815988112\">M_Anaxa_StartFreeBP</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1815988112\">M_Anaxa_StartFreeBP</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>",
-                      "addStacksPerTrigger": -1
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Extra Turn Action Injection: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Parameter String",
-                    "compareType": "=",
-                    "value2": "Anaxa_Passive"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1815988112\">M_Anaxa_StartFreeBP</a>"
-                    },
-                    {
-                      "name": "UI Display Event",
-                      "popUpText": "Tetrad Wisdom Reigns Thrice"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "stackLimit": 99999
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1929414079\">M_Anaxa_InsertActionCheck</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "CustomEvent_InfiniteRefresh"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Action Choice Window [Anyone]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
-                }
-              ],
-              "priorityLevel": -55
-            },
-            {
-              "eventTrigger": "Custom Event",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Anyone]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Living State",
-                        "state": "Mask_AliveOrRevivable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        }
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "modifierFunctions": [
-            {
-              "name": "CharacterFunctions",
-              "functionName": "<a class=\"gTempYellow\" id=\"fun__1862868553\">Anaxa_InsertRetarget</a>",
-              "parse": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Target Exists",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "living": true
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Looped Event",
-                      "maxLoops": {
-                        "operator": "Variables[0] (MDF_Layer) || RETURN",
-                        "displayLines": "MDF_Layer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Layer"
-                        ]
-                      },
-                      "Event": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>",
-                          "addStacksPerTrigger": 1
-                        },
-                        {
-                          "name": "Inject Extra-Turn",
-                          "actionTag": "Anaxa_Passive",
-                          "skillType": "ControlSkill02",
-                          "forceAction": true,
-                          "castTarget": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "afterInjection": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1540917869\">M_Anaxa_PrepareFreeBP</a>",
-                              "addStacksPerTrigger": -1
-                            },
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1929414079\">M_Anaxa_InsertActionCheck</a>",
-                              "addStacksPerTrigger": 1
-                            }
-                          ],
-                          "ignoreCost": true
-                        }
-                      ]
-                    },
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "stackLimit": 99999
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1588888193\">Anaxa_UltraDebuff</a>[<span class=\"descriptionNumberColor\">Sublimation</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "modifierFlags": [
-            "STAT_AttachWeakness"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_HaveCTRLResistance",
-                    "compareType": "=",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Target Exists",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "living": true
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "flagName": "STAT_CTRL_Frozen_Effect",
-                            "invertCondition": true
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_HaveCTRLResistance",
-                    "compareType": "=",
-                    "value2": 0
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ],
-                  "failed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ],
-              "priorityLevel": 200
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Flag Resistance",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_HaveCTRLResistance",
-                  "context": "ContextModifier",
-                  "flagName": "STAT_CTRL"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "MDF_HaveCTRLResistance",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "Endurance",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "EnduranceLogicOnly",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "EnduranceEnemyOnly",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "EnduranceEnemyLogicOnly",
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Modifier Description",
-                      "popUpText": "Unable to take action. Physical, Fire, Ice, Lightning, Wind, Quantum, and Imaginary Weaknesses are added at the same time."
-                    },
-                    {
-                      "name": "Add Flags to Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "flagName": [
-                        "DisableAction",
-                        "STAT_CTRL",
-                        "STAT_CTRL_Frozen_Effect",
-                        "FixedPerformTime"
-                      ],
-                      "modifierName": "<a class=\"gModGreen\" id=\"-1588888193\">Anaxa_UltraDebuff</a>[<span class=\"descriptionNumberColor\">Sublimation</span>]",
-                      "casterFilter": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Physical"
-                  ]
-                },
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Fire"
-                  ]
-                },
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Thunder"
-                  ]
-                },
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Ice"
-                  ]
-                },
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Wind"
-                  ]
-                },
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Quantum"
-                  ]
-                },
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Imaginary"
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Physical, Fire, Ice, Lightning, Wind, Quantum, and Imaginary Weaknesses are added at the same time.",
-          "type": "Debuff",
-          "effectName": "Sublimation",
-          "statusName": "Sublimation"
-        }
-      ],
-      "references": []
     },
     "Anaxa_Functions": {
       "fileName": "Anaxa_Functions",

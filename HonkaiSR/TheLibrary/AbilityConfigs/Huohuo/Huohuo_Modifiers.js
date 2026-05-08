@@ -10,6 +10,15 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1116329624\">ADV_Modifier_Maze_Huohuo_Fear</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "modifierFlags": [
+        "Fear"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-711212518\">Advanced_Huohuo_Eidolon2</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
@@ -109,6 +118,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1527901195\">Advanced_Huohuo_Eidolon2_ReviveCount</a>[<span class=\"descriptionNumberColor\">Sealed in Tail, Wraith Subdued</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "If Huohuo possesses \"Divine Provision\" when an ally target is struck by a killing blow, the ally will not be knocked down, and their HP will immediately be restored by an amount equal to <span class=\"descriptionNumberColor\">MDF_HealRatio</span> of their Max HP. This reduces the duration of \"Divine Provision\" by 1 turn. The remaining trigger count is <span class=\"descriptionNumberColor\">MDF_ReviveCount</span>.",
+      "type": "Buff",
+      "statusName": "Sealed in Tail, Wraith Subdued",
       "variableValueChange": [
         {
           "name": "Variable Value Changes",
@@ -208,20 +220,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_HealRatio",
-        "MDF_ReviveCount"
-      ],
-      "latentQueue": [],
-      "description": "If Huohuo possesses \"Divine Provision\" when an ally target is struck by a killing blow, the ally will not be knocked down, and their HP will immediately be restored by an amount equal to <span class=\"descriptionNumberColor\">MDF_HealRatio</span> of their Max HP. This reduces the duration of \"Divine Provision\" by 1 turn. The remaining trigger count is <span class=\"descriptionNumberColor\">MDF_ReviveCount</span>.",
-      "type": "Buff",
-      "statusName": "Sealed in Tail, Wraith Subdued"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__167222959\">Advanced_Huohuo_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -244,15 +252,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -297,14 +297,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1493871681\">Advanced_Huohuo_Eidolon1_HealUp</a>[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Outgoing Healing increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Outgoing Healing Boost",
+      "statusName": "Outgoing Healing Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -327,11 +329,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Outgoing Healing increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Outgoing Healing Boost",
-      "statusName": "Outgoing Healing Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -340,6 +338,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "SPD Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -362,16 +364,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "SPD Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__805273454\">Advanced_Huohuo_Ability03_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackUP</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "ATK Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -394,15 +396,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AttackUP"
-      ],
-      "latentQueue": [],
-      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackUP</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "ATK Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1154,6 +1148,93 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1246814229\">Advanced_Huohuo_Passive_HealMark</a>[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "When an ally target's turn starts or when an ally uses their Ultimate, restores HP for that ally and the ally unit with the lowest HP percentage by an amount equal to <span class=\"descriptionNumberColor\">MDF_HPRatio</span> of Huohuo's Max HP plus <span class=\"descriptionNumberColor\">MDF_HPValue</span>. Then, every ally target currently at <span class=\"descriptionNumberColor\">MDF_LowHP</span> HP percentage or lower receives healing once. When \"Divine Provision\" is triggered to provide healing for ally targets, dispel 1 debuff from the said ally. This effect's remaining trigger count is <span class=\"descriptionNumberColor\">MDF_DispelCount</span>.",
+      "type": "Buff",
+      "effectName": "Healing Over Time",
+      "statusName": "Divine Provision",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1273531270\">Advanced_Huohuo_Passive_HealHP</a>",
+          "haloStatus": true,
+          "valuePerStack": {
+            "HPRatio": {
+              "operator": "Variables[0] (MDF_HPRatio) || RETURN",
+              "displayLines": "MDF_HPRatio",
+              "constants": [],
+              "variables": [
+                "MDF_HPRatio"
+              ]
+            },
+            "HPValue": {
+              "operator": "Variables[0] (MDF_HPValue) || RETURN",
+              "displayLines": "MDF_HPValue",
+              "constants": [],
+              "variables": [
+                "MDF_HPValue"
+              ]
+            },
+            "_DispelNum": {
+              "operator": "Variables[0] (1) || RETURN",
+              "displayLines": "1",
+              "constants": [],
+              "variables": [
+                1
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"528503958\">Advanced_Huohuo_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 1
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (0.12) || RETURN",
+              "displayLines": "0.12",
+              "constants": [],
+              "variables": [
+                0.12
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1493871681\">Advanced_Huohuo_Eidolon1_HealUp</a>[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 1
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (0.2) || RETURN",
+              "displayLines": "0.2",
+              "constants": [],
+              "variables": [
+                0.2
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1336,100 +1417,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [
-        "MDF_HPRatio",
-        "MDF_HPValue",
-        "MDF_LowHP",
-        "MDF_DispelNum"
-      ],
-      "latentQueue": [],
-      "description": "When an ally target's turn starts or when an ally uses their Ultimate, restores HP for that ally and the ally unit with the lowest HP percentage by an amount equal to <span class=\"descriptionNumberColor\">MDF_HPRatio</span> of Huohuo's Max HP plus <span class=\"descriptionNumberColor\">MDF_HPValue</span>. Then, every ally target currently at <span class=\"descriptionNumberColor\">MDF_LowHP</span> HP percentage or lower receives healing once. When \"Divine Provision\" is triggered to provide healing for ally targets, dispel 1 debuff from the said ally. This effect's remaining trigger count is <span class=\"descriptionNumberColor\">MDF_DispelCount</span>.",
-      "type": "Buff",
-      "effectName": "Healing Over Time",
-      "statusName": "Divine Provision",
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members with Unselectables}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1273531270\">Advanced_Huohuo_Passive_HealHP</a>",
-          "haloStatus": true,
-          "valuePerStack": {
-            "HPRatio": {
-              "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-              "displayLines": "MDF_HPRatio",
-              "constants": [],
-              "variables": [
-                "MDF_HPRatio"
-              ]
-            },
-            "HPValue": {
-              "operator": "Variables[0] (MDF_HPValue) || RETURN",
-              "displayLines": "MDF_HPValue",
-              "constants": [],
-              "variables": [
-                "MDF_HPValue"
-              ]
-            },
-            "_DispelNum": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members with Unselectables}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"528503958\">Advanced_Huohuo_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-          "haloStatus": true,
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 1
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.12) || RETURN",
-              "displayLines": "0.12",
-              "constants": [],
-              "variables": [
-                0.12
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1493871681\">Advanced_Huohuo_Eidolon1_HealUp</a>[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
-          "haloStatus": true,
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 1
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
-            }
-          }
         }
       ]
     }

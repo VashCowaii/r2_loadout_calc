@@ -207,9 +207,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -252,15 +250,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__913171010\">Gallagher_PointB2_PreshowModifier</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -280,16 +274,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1477793302\">Gallagher_Eidolon2_Modifier</a>",
-      "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": []
+      "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-237144299\">Gallagher_PointB3_Modifier</a>",
-      "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": []
+      "stackType": "ReplaceByCaster"
     }
   ],
   "targetObjectData": {

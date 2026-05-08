@@ -3,129 +3,14 @@ const compositeAbilityObject = {
   "fullCharacterName": 3022010,
   "trimCharacterName": 3022010,
   "abilityList": [
-    "3022010_Monster_W3_SundayPart_Ability01_Assist_Part02_02",
-    "3022010_Monster_W3_SundayPart_Ability01_Assist_Part02_01",
-    "3022010_Monster_W3_SundayPart_AbilityP01",
     "3022010_Monster_W3_SundayPart_Ability06_Part01",
     "3022010_Monster_W3_SundayPart_Ability04_Part01",
+    "3022010_Monster_W3_SundayPart_AbilityP01",
     "3022010_Monster_W3_SundayPart_Ability01_Part02",
     "3022010_Monster_W3_SundayPart_Ability01_Part01",
     "3022010_Modifiers"
   ],
   "abilityObject": {
-    "3022010_Monster_W3_SundayPart_Ability01_Assist_Part02_02": {
-      "fileName": "3022010_Monster_W3_SundayPart_Ability01_Assist_Part02_02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "HitSplit": 0.5,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3022010_Monster_W3_SundayPart_Ability01_Assist_Part02_01": {
-      "fileName": "3022010_Monster_W3_SundayPart_Ability01_Assist_Part02_01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "HitSplit": 0.5,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3022010_Monster_W3_SundayPart_AbilityP01": {
-      "fileName": "3022010_Monster_W3_SundayPart_AbilityP01",
-      "childAbilityList": [
-        "3022010_Monster_W3_SundayPart_AbilityP01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1257223640\">Monster_W3_SundayPart_LittleChorus</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1222159240\">Enemy_W3_SundayPart_Part1Camera</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "3022010_Monster_W3_SundayPart_Ability06_Part01": {
       "fileName": "3022010_Monster_W3_SundayPart_Ability06_Part01",
       "abilityType": null,
@@ -256,6 +141,49 @@ const compositeAbilityObject = {
       },
       "references": []
     },
+    "3022010_Monster_W3_SundayPart_AbilityP01": {
+      "fileName": "3022010_Monster_W3_SundayPart_AbilityP01",
+      "childAbilityList": [
+        "3022010_Monster_W3_SundayPart_AbilityP01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1257223640\">Monster_W3_SundayPart_LittleChorus</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1222159240\">Enemy_W3_SundayPart_Part1Camera</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "3022010_Monster_W3_SundayPart_Ability01_Part02": {
       "fileName": "3022010_Monster_W3_SundayPart_Ability01_Part02",
       "abilityType": null,
@@ -369,9 +297,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -416,9 +342,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

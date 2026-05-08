@@ -46,6 +46,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__714755645\">TrialPlayer_101111_Luka_LimboAddAttack</a>",
+      "stackData": [
+        "MDF_AttackRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -77,11 +80,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AttackRatio"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

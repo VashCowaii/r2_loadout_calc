@@ -94,6 +94,17 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1422965526\">BlackSwan_Eidolon6</a>",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2050002598\">BlackSwan_Eidolon6_SubOnEnemy</a>",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier is Added [Anyone]",
@@ -243,19 +254,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE, with Unselectables)}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2050002598\">BlackSwan_Eidolon6_SubOnEnemy</a>",
-          "haloStatus": true
         }
       ]
     }

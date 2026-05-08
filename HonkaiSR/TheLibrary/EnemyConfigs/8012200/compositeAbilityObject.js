@@ -4,9 +4,9 @@ const compositeAbilityObject = {
   "trimCharacterName": 8012200,
   "abilityList": [
     "8012200_Monster_W2_HuanlongPart_PassiveAbility_Insert_Part01",
+    "8012200_Monster_W2_HuanlongPart_Passive01",
     "8012200_Monster_W2_HuanlongPart_Ability01_Part02",
     "8012200_Monster_W2_HuanlongPart_Ability01_Part01",
-    "8012200_Monster_W2_HuanlongPart_Passive01",
     "8012200_Modifiers"
   ],
   "abilityObject": {
@@ -55,65 +55,6 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8012200_Monster_W2_HuanlongPart_Ability01_Part02": {
-      "fileName": "8012200_Monster_W2_HuanlongPart_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Skill Points Modification",
-          "adjustmentValue": {
-            "operator": "Constants[0] (0) || Variables[0] ({[Skill01[0]]}) || SUB || RETURN",
-            "displayLines": "(0 - {[Skill01[0]]})",
-            "constants": [
-              0
-            ],
-            "variables": [
-              "{[Skill01[0]]}"
-            ]
-          },
-          "adjustmentType": "+"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8012200_Monster_W2_HuanlongPart_Ability01_Part01": {
-      "fileName": "8012200_Monster_W2_HuanlongPart_Ability01_Part01",
-      "childAbilityList": [
-        "8012200_Monster_W2_HuanlongPart_Ability01_Camera",
-        "8012200_Monster_W2_HuanlongPart_Ability01_Part01",
-        "8012200_Monster_W2_HuanlongPart_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_HuanlongPart_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []
@@ -257,9 +198,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -357,9 +296,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -367,11 +304,68 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteHitFly",
             "KeepOnDeathrattle"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
+    },
+    "8012200_Monster_W2_HuanlongPart_Ability01_Part02": {
+      "fileName": "8012200_Monster_W2_HuanlongPart_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Skill Points Modification",
+          "adjustmentValue": {
+            "operator": "Constants[0] (0) || Variables[0] ({[Skill01[0]]}) || SUB || RETURN",
+            "displayLines": "(0 - {[Skill01[0]]})",
+            "constants": [
+              0
+            ],
+            "variables": [
+              "{[Skill01[0]]}"
+            ]
+          },
+          "adjustmentType": "+"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "8012200_Monster_W2_HuanlongPart_Ability01_Part01": {
+      "fileName": "8012200_Monster_W2_HuanlongPart_Ability01_Part01",
+      "childAbilityList": [
+        "8012200_Monster_W2_HuanlongPart_Ability01_Camera",
+        "8012200_Monster_W2_HuanlongPart_Ability01_Part01",
+        "8012200_Monster_W2_HuanlongPart_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_HuanlongPart_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
     },
     "8012200_Modifiers": {
       "fileName": "8012200_Modifiers",
@@ -387,6 +381,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1471440713\">Monster_W2_HuanlongPart_Heal</a>[<span class=\"descriptionNumberColor\">Vigor</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_HealRatio"
+          ],
+          "description": "Every action taken restores <span class=\"descriptionNumberColor\">MDF_HealRatio</span> HP.",
+          "type": "Buff",
+          "effectName": "Vigor",
+          "statusName": "Vigor",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -439,15 +440,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HealRatio"
-          ],
-          "latentQueue": [],
-          "description": "Every action taken restores <span class=\"descriptionNumberColor\">MDF_HealRatio</span> HP.",
-          "type": "Buff",
-          "effectName": "Vigor",
-          "statusName": "Vigor"
+          ]
         }
       ],
       "references": []

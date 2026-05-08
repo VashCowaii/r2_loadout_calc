@@ -124,8 +124,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__679515294\">Huohuo_Eidolon1PreShow</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -154,15 +152,15 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1045223345\">Huohuo_PointB1_SelfSPRatio</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
+      "description": "Increases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">MDF_SPRatio</span>.",
+      "type": "Buff",
+      "effectName": "Energy Regeneration Rate Boost",
+      "statusName": "Energy Regeneration Rate Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "description": "Increases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">MDF_SPRatio</span>.",
-      "type": "Buff",
-      "effectName": "Energy Regeneration Rate Boost",
-      "statusName": "Energy Regeneration Rate Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -410,9 +408,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

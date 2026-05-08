@@ -10,7 +10,52 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1221389813\">ADV_StageAbility_PlayerBoy_30_BeforeBattleDebuffListener</a>",
+      "onBattlePrep": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Parameter Target List}}"
+          },
+          "modifier": null,
+          "ID": "800701(SkillMaze)",
+          "counter": 1,
+          "duration": {
+            "operator": "Variables[0] (10) || RETURN",
+            "displayLines": "10",
+            "constants": [],
+            "variables": [
+              10
+            ]
+          },
+          "conditions": {
+            "name": "Has Flag",
+            "flagName": "TimeLock"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1657383963\">ADV_StageAbility_Maze_PlayerBoy_30</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "TimeLock"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-915997562\">PlayerBoy_30_UltraState_Sub</a>",
+      "removalDependencies": {
+        "name": "Removal Dependency",
+        "dependancyName": "<a class=\"gModGreen\" id=\"-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
+        "casterFilter": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        }
+      },
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -58,20 +103,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "removalDependencies": {
-        "name": "Removal Dependency",
-        "dependancyName": "<a class=\"gModGreen\" id=\"-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
-        "casterFilter": {
-          "name": "Target Name",
-          "target": "{{Caster}}"
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "When Mem is on the field, Basic ATK is enhanced to \"Together, We Script Tomorrow!\"",
+      "type": "Other",
+      "effectName": "Epic",
+      "statusName": "Epic",
+      "stackLimit": 2,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -274,23 +317,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "When Mem is on the field, Basic ATK is enhanced to \"Together, We Script Tomorrow!\"",
-      "type": "Other",
-      "effectName": "Epic",
-      "statusName": "Epic",
-      "stackLimit": 2,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__409195494\">M_PlayerBoy_30_CreateServantPreshow</a>",
-      "stackData": [
-        "ServantID"
-      ],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -404,9 +435,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

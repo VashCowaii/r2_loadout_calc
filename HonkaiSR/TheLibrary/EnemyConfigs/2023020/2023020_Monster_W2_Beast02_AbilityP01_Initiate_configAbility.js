@@ -75,9 +75,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__2027241011\">W2_Beast02_MuteHitFly</a>",
       "modifierFlags": [
         "MuteHitFly"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

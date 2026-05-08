@@ -18,6 +18,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1291381400\">MStrongChallengeEX_Talent_StageAbility_PLY_077</a>[<span class=\"descriptionNumberColor\">Shatterstrike</span>]",
+      "description": "Increases Break DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue5</span>.",
+      "type": "Buff",
+      "statusName": "Shatterstrike",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -119,58 +122,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Break DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue5</span>.",
-      "type": "Buff",
-      "statusName": "Shatterstrike"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-703429744\">MStrongChallengeEX_Talent_StageAbility_LE_077</a>",
-      "execute": [
-        {
-          "eventTrigger": "Weakness Break [Anyone]",
-          "execute": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team"
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_BreakCount",
-                  "value": 1,
-                  "max": {
-                    "operator": "Variables[0] (#ADF_3) || RETURN",
-                    "displayLines": "#ADF_3",
-                    "constants": [],
-                    "variables": [
-                      "#ADF_3"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -214,6 +170,48 @@ const configAbility = {
               ]
             }
           }
+        }
+      ],
+      "execute": [
+        {
+          "eventTrigger": "Weakness Break [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Enemy Team"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable with Added Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_BreakCount",
+                  "value": 1,
+                  "max": {
+                    "operator": "Variables[0] (#ADF_3) || RETURN",
+                    "displayLines": "#ADF_3",
+                    "constants": [],
+                    "variables": [
+                      "#ADF_3"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

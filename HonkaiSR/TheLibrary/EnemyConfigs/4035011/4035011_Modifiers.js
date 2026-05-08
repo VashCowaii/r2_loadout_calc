@@ -20,61 +20,57 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2115479109\">Enemy_W4_IronTombPhantom_Part4</a>[<span class=\"descriptionNumberColor\">ERROR: Core Damaged</span>]",
+      "description": "\"FINAL PROCESS: ERROR LOG 4\"<br><br>[Intrusion Variable] Dan Heng: Input SkoPeo365 Value ▀█Storage Anomaly█▄ Unable to Delete<br>[Intrusion Variable] March 7th: Input PhiLia093 Value▄ ▀System Time Rollback█▀ Infinite Loop<br>NeiKos496: Merge-Split Detected ▀▀█▄Core Damaged▄▄▄ Critical Process Terminated▄▄▄<br><br>MAJOR WARNING: System crashed. Terminating operations.<br><br>Notice: Detected PhiLia093 managing permissions.",
+      "type": "Other",
+      "statusName": "ERROR: Core Damaged",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "description": "\"FINAL PROCESS: ERROR LOG 4\"<br><br>[Intrusion Variable] Dan Heng: Input SkoPeo365 Value ▀█Storage Anomaly█▄ Unable to Delete<br>[Intrusion Variable] March 7th: Input PhiLia093 Value▄ ▀System Time Rollback█▀ Infinite Loop<br>NeiKos496: Merge-Split Detected ▀▀█▄Core Damaged▄▄▄ Critical Process Terminated▄▄▄<br><br>MAJOR WARNING: System crashed. Terminating operations.<br><br>Notice: Detected PhiLia093 managing permissions.",
-      "type": "Other",
-      "statusName": "ERROR: Core Damaged"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1998035776\">Enemy_W4_IronTombPhantom_Part3</a>[<span class=\"descriptionNumberColor\">ERROR: Main Process Compromised</span>]",
+      "description": "\"FINAL PROCESS: ERROR LOG 3\"<br><br>PoleMos600: Abnormal Loading ██Data Wipe Attack▄▄ Copy Lost<br>EpieiKeia216: Abnormal Loading █▀Subprocess Frozen▄█ Unable to Terminate<br>EleOs252: Abnormal Loading ▀▄Stack Overflow█▄ Insufficient RAM<br><br>WARNING: Calculation process terminated. Massive amount of corruption detected.",
+      "type": "Other",
+      "statusName": "ERROR: Main Process Compromised",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "\"FINAL PROCESS: ERROR LOG 3\"<br><br>PoleMos600: Abnormal Loading ██Data Wipe Attack▄▄ Copy Lost<br>EpieiKeia216: Abnormal Loading █▀Subprocess Frozen▄█ Unable to Terminate<br>EleOs252: Abnormal Loading ▀▄Stack Overflow█▄ Insufficient RAM<br><br>WARNING: Calculation process terminated. Massive amount of corruption detected.",
-      "type": "Other",
-      "statusName": "ERROR: Main Process Compromised"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2014813395\">Enemy_W4_IronTombPhantom_Part2</a>[<span class=\"descriptionNumberColor\">ERROR: Repair System Compromised</span>]",
+      "description": "\"FINAL PROCESS: ERROR LOG 2\"<br><br>KaLos618: Abnormal Loading ▀▄Throttle Failed▄█ Performance Overload<br>SkeMma720: Abnormal Loading █▀Malicious Code Injected▄█ System Out of Control<br>OreXis945: Abnormal Loading ▀█Parameters Distorted▄█ Massive Logic Errors<br><br>WARNING: Repair system not responding. Internal attack detected.",
+      "type": "Other",
+      "statusName": "ERROR: Repair System Compromised",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "description": "\"FINAL PROCESS: ERROR LOG 2\"<br><br>KaLos618: Abnormal Loading ▀▄Throttle Failed▄█ Performance Overload<br>SkeMma720: Abnormal Loading █▀Malicious Code Injected▄█ System Out of Control<br>OreXis945: Abnormal Loading ▀█Parameters Distorted▄█ Massive Logic Errors<br><br>WARNING: Repair system not responding. Internal attack detected.",
-      "type": "Other",
-      "statusName": "ERROR: Repair System Compromised"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2031591014\">Enemy_W4_IronTombPhantom_Part1</a>[<span class=\"descriptionNumberColor\">ERROR: Security System Compromised</span>]",
+      "description": "\"FINAL PROCESS: ERROR LOG 1\"<br><br>HapLotes405: Error Loading ▀█Transfer Loop█▄ Information Database Connection Timeout<br>ApoRia432: Error Loading █▀Assertion Failed▄█ Detection System Unresponsive<br>HubRis504: Error Loading ▀▄Illegal Protocol█▄ Firewall Deactivated<br><br>WARNING: Security system disrupted. Electrical signal anomaly detected.",
+      "type": "Other",
+      "statusName": "ERROR: Security System Compromised",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "description": "\"FINAL PROCESS: ERROR LOG 1\"<br><br>HapLotes405: Error Loading ▀█Transfer Loop█▄ Information Database Connection Timeout<br>ApoRia432: Error Loading █▀Assertion Failed▄█ Detection System Unresponsive<br>HubRis504: Error Loading ▀▄Illegal Protocol█▄ Firewall Deactivated<br><br>WARNING: Security system disrupted. Electrical signal anomaly detected.",
-      "type": "Other",
-      "statusName": "ERROR: Security System Compromised"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-385769957\">MEnemy_W4_IronTombCore_Main_CharacterForceVisible</a>",
       "modifierFlags": [
         "STAT_ForceActionable"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -238,9 +234,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -409,13 +403,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1771971765\">Enemy_W4_IronTombCore_Main_P2PhaseController</a>",
+      "latentQueue": [
+        "_PhaseCheck",
+        "InsertCheck",
+        "AIFlag",
+        "_ChangePhaseEnd"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -511,13 +509,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_PhaseCheck",
-        "InsertCheck",
-        "AIFlag",
-        "_ChangePhaseEnd"
       ]
     },
     {
@@ -805,27 +796,30 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__7842154\">Enemy_W4_IronTombCore_Main_LoseMark</a>",
-      "stackData": [],
       "latentQueue": [
         "_PhaseLock"
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__848031818\">Enemy_W4_IronTombCore_WorldErosion_MainMark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__848031818\">Enemy_W4_IronTombCore_WorldErosion_MainMark</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-642581629\">Enemy_W4_IronTombCore_Main_BanUltra</a>",
+      "latentQueue": [
+        "_ChangePhaseEnd",
+        "AIFlag",
+        "InsertCheck",
+        "_PhaseCheck",
+        "InsertCheck02",
+        "_HpLockCheck"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -847,15 +841,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_ChangePhaseEnd",
-        "AIFlag",
-        "InsertCheck",
-        "_PhaseCheck",
-        "InsertCheck02",
-        "_HpLockCheck"
       ]
     },
     {
@@ -874,9 +859,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -906,9 +889,7 @@ const configAbility = {
         {
           "eventTrigger": "Leave Battle"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -916,16 +897,13 @@ const configAbility = {
       "modifierFlags": [
         "DisableAction"
       ],
-      "stackData": [],
       "latentQueue": [
         "_PhaseLock"
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1399635214\">Enemy_W4_IronTombCore_Main_Ability07Tag</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1399635214\">Enemy_W4_IronTombCore_Main_Ability07Tag</a>"
     },
     {
       "name": "Modifier Construction",
@@ -1173,9 +1151,7 @@ const configAbility = {
         {
           "eventTrigger": "Leave Battle"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1995,9 +1971,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2045,13 +2019,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__464716604\">Enemy_W4_IronTombCore_Main_P2PhaseDamageReduceController</a>",
+      "latentQueue": [
+        "_PhaseCheck",
+        "InsertCheck",
+        "AIFlag",
+        "_ChangePhaseEnd"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -2092,13 +2070,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_PhaseCheck",
-        "InsertCheck",
-        "AIFlag",
-        "_ChangePhaseEnd"
       ]
     },
     {
@@ -2275,9 +2246,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2309,9 +2278,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2343,9 +2310,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2379,9 +2344,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2457,9 +2420,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3280,13 +3241,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1626881642\">Enemy_W4_IronTombCore_Main_P3_AvatarDamageAdded</a>[<span class=\"descriptionNumberColor\">Chronicled \"Love\"</span>]",
+      "description": "Cyrene's \"Love\" greatly increases DMG dealt by the target.",
+      "type": "Buff",
+      "statusName": "Chronicled \"Love\"",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3311,14 +3273,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Cyrene's \"Love\" greatly increases DMG dealt by the target.",
-      "type": "Buff",
-      "statusName": "Chronicled \"Love\""
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1529513281\">Enemy_W4_IronTombCore_Main_P3_AvatarDamageAdded_Listener</a>",
+      "latentQueue": [
+        "_MissionTalkType",
+        "_PhaseCheck",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3381,17 +3345,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_MissionTalkType",
-        "_PhaseCheck",
-        "AIFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-470333037\">Enemy_W4_IronTombCore_Main_P3_HpRatioAdded</a>",
+      "latentQueue": [
+        "_MissionTalkType",
+        "_PhaseCheck",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3418,18 +3381,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_MissionTalkType",
-        "_PhaseCheck",
-        "AIFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2081954099\">Enemy_W4_IronTombCore_BlackBlood</a>[<span class=\"descriptionNumberColor\">Descent into Chaos</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Maximum Restorable HP and Maximum Recoverable Skill Points are reduced. This effect can be weakened when \"Amphorean Hatred\" decreases.",
+      "type": "Debuff",
+      "statusName": "Descent into Chaos",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3452,16 +3412,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Maximum Restorable HP and Maximum Recoverable Skill Points are reduced. This effect can be weakened when \"Amphorean Hatred\" decreases.",
-      "type": "Debuff",
-      "statusName": "Descent into Chaos"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-453954106\">Enemy_W4_IronTombCorePart_DamageTransfer</a>[<span class=\"descriptionNumberColor\">Damage Resonance</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "When the target takes damage, \"Anti-Creator\" will also take the same damage.",
       "type": "Other",
       "statusName": "Damage Resonance"
@@ -3475,6 +3430,15 @@ const configAbility = {
         "STAT_CTRL",
         "DisableAction"
       ],
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_SPConvert",
+        "MDF_ActionDelayConvert"
+      ],
+      "description": "This target's action value will not change because of the end of any target's turn. This target can reduce the \"Unlock Value\" through action advance effects or Energy regeneration. When the \"Unlock Value\" is depleted, this state will be dispelled.",
+      "type": "Debuff",
+      "effectName": "Action Lock",
+      "statusName": "Action Lock",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -3844,17 +3808,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_SPConvert",
-        "MDF_ActionDelayConvert"
-      ],
-      "latentQueue": [],
-      "description": "This target's action value will not change because of the end of any target's turn. This target can reduce the \"Unlock Value\" through action advance effects or Energy regeneration. When the \"Unlock Value\" is depleted, this state will be dispelled.",
-      "type": "Debuff",
-      "effectName": "Action Lock",
-      "statusName": "Action Lock"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3870,15 +3824,11 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-827834429\">MModifier_W4_IronTombCore_TimeLock_UIEff</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-827834429\">MModifier_W4_IronTombCore_TimeLock_UIEff</a>"
     },
     {
       "name": "Modifier Construction",
@@ -3914,9 +3864,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3958,6 +3906,44 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1914142012\">MModifier_W4_IronTombCore_BlackBP</a>",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_BPMaxCost",
+        "MDF_DirtyHPRatio_PerLayer"
+      ],
+      "latentQueue": [
+        "_MissionTalkType",
+        "_PhaseCheck",
+        "AIFlag",
+        "_IsTrigger75",
+        "_MissionTalkEnd",
+        "_IsTrigger25",
+        "#CL_First",
+        "_FirstTutorial",
+        "#PassiveSkill01_P3_Percentage",
+        "#PassiveSkill01_P2_Percentage",
+        "#PassiveSkill01_P1_Percentage"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2081954099\">Enemy_W4_IronTombCore_BlackBlood</a>[<span class=\"descriptionNumberColor\">Descent into Chaos</span>]",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_DirtyHPRatio": {
+              "operator": "Variables[0] (MDF_DirtyHPRatio_PerLayer) || RETURN",
+              "displayLines": "MDF_DirtyHPRatio_PerLayer",
+              "constants": [],
+              "variables": [
+                "MDF_DirtyHPRatio_PerLayer"
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4059,44 +4045,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [
-        "MDF_BPMaxCost",
-        "MDF_DirtyHPRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "_MissionTalkType",
-        "_PhaseCheck",
-        "AIFlag",
-        "_IsTrigger75",
-        "_MissionTalkEnd",
-        "_IsTrigger25",
-        "#CL_First",
-        "_FirstTutorial",
-        "#PassiveSkill01_P3_Percentage",
-        "#PassiveSkill01_P2_Percentage",
-        "#PassiveSkill01_P1_Percentage"
-      ],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2081954099\">Enemy_W4_IronTombCore_BlackBlood</a>[<span class=\"descriptionNumberColor\">Descent into Chaos</span>]",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_DirtyHPRatio": {
-              "operator": "Variables[0] (MDF_DirtyHPRatio_PerLayer) || RETURN",
-              "displayLines": "MDF_DirtyHPRatio_PerLayer",
-              "constants": [],
-              "variables": [
-                "MDF_DirtyHPRatio_PerLayer"
-              ]
-            }
-          }
         }
       ]
     },
@@ -4312,18 +4260,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1381137894\">MModifier_W4_IronTombCore_Ability07_MuteBreak</a>",
       "modifierFlags": [
         "MuteBreak"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4356,9 +4300,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4366,6 +4308,9 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
+      "description": "\"Anti-Creator\" enters Charging state, and will use \"Immolate the Heavens, Abandon the World\" in the next action. Dispel the Charging state by dealing a killing blow to \"Mythos\" and \"Logos.\"",
+      "type": "Other",
+      "statusName": "Resist and Destroy",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4563,12 +4508,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "\"Anti-Creator\" enters Charging state, and will use \"Immolate the Heavens, Abandon the World\" in the next action. Dispel the Charging state by dealing a killing blow to \"Mythos\" and \"Logos.\"",
-      "type": "Other",
-      "statusName": "Resist and Destroy"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4580,6 +4520,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2078801645\">Enemy_W4_IronTombCorePart_Break</a>[<span class=\"descriptionNumberColor\">Grave Wound</span>]",
+      "description": "Target cannot take action.",
+      "type": "Other",
+      "effectName": "Grave Wound",
+      "statusName": "Grave Wound",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4683,11 +4627,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Target cannot take action.",
-      "type": "Other",
-      "effectName": "Grave Wound",
-      "statusName": "Grave Wound"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -5193,6 +5133,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2029275245\">Enemy_W4_IronTombCore_P3_PartController</a>",
+      "latentQueue": [
+        "_PhaseCheck",
+        "InsertCheck",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -5251,12 +5196,6 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_PhaseCheck",
-        "InsertCheck",
-        "AIFlag"
       ]
     },
     {
@@ -5320,9 +5259,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -5774,9 +5711,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -5785,9 +5720,7 @@ const configAbility = {
         {
           "eventTrigger": "Turn [Pre-action Phase]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

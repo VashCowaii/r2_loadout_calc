@@ -18,20 +18,26 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__947859829\">Modifier_BattleEventAbility_Challenge_Xianzhou_05_Sub2</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
+      "description": "When destroyed, re-summon 1 Entranced Ingenium: Illumination Dragonfish",
+      "type": "Other",
+      "effectName": "Memory Imprint",
+      "statusName": "Memory Imprint",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
         }
-      ],
-      "description": "When destroyed, re-summon 1 Entranced Ingenium: Illumination Dragonfish",
-      "type": "Other",
-      "effectName": "Memory Imprint",
-      "statusName": "Memory Imprint"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__897526972\">Modifier_BattleEventAbility_Challenge_Xianzhou_05_Sub1</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>, up to <span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span> stack(s).",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Memory Imprint",
+      "stackLimit": 10,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -65,13 +71,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>, up to <span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span> stack(s).",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Memory Imprint",
-      "stackLimit": 10,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -259,9 +259,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

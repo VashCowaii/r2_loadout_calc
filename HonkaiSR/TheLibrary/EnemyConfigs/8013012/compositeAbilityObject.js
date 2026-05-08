@@ -3,7 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 8013012,
   "trimCharacterName": 8013012,
   "abilityList": [
-    "8013012_Monster_AML_Elite01_MainLineN2_SpecialWin",
+    "8013012_Monster_AML_Elite01_PassiveAbility_N2SpecialVictory",
     "8013012_Monster_Standard_PassiveAbility_Break",
     "8013012_Monster_AML_Elite01_Ability05_Part02",
     "8013012_Monster_AML_Elite01_Ability05_Part01",
@@ -15,13 +15,13 @@ const compositeAbilityObject = {
     "8013012_Monster_AML_Elite01_Ability02_Part01",
     "8013012_Monster_AML_Elite01_Ability01_Part02",
     "8013012_Monster_AML_Elite01_Ability01_Part01",
-    "8013012_Monster_AML_Elite01_PassiveAbility_N2SpecialVictory",
     "8013012_Modifiers"
   ],
   "abilityObject": {
-    "8013012_Monster_AML_Elite01_MainLineN2_SpecialWin": {
-      "fileName": "8013012_Monster_AML_Elite01_MainLineN2_SpecialWin",
-      "abilityType": null,
+    "8013012_Monster_AML_Elite01_PassiveAbility_N2SpecialVictory": {
+      "fileName": "8013012_Monster_AML_Elite01_PassiveAbility_N2SpecialVictory",
+      "skillTrigger": "PassiveSkill03",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -31,26 +31,94 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"1444322537\">Monster_AML_Elite01_Level_SpecialWin</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"2126695781\">Monster_AML_Elite01_N2SpecialAim</a>"
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1444322537\">Monster_AML_Elite01_Level_SpecialWin</a>",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
+          "for": "<a class=\"gModGreen\" id=\"mod__-967087637\">Monster_AML_Elite01_N2SpecialAim_Hint</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2126695781\">Monster_AML_Elite01_N2SpecialAim</a>",
           "execute": [
             {
-              "eventTrigger": "When Modifier Destroyed/Removed"
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Name",
+                    "skillName": "Skill05"
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-967087637\">Monster_AML_Elite01_N2SpecialAim_Hint</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Character ID",
+                        "ID": 8001,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "characterName": "Trailblazer - Destruction[M]"
+                      },
+                      {
+                        "name": "Character ID",
+                        "ID": 8002,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "characterName": "Trailblazer - Destruction[F]"
+                      }
+                    ]
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-967087637\">Monster_AML_Elite01_N2SpecialAim_Hint</a>"
+                    }
+                  ]
+                }
+              ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -124,9 +192,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1153791118\">Monster_AML_Elite01_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -164,9 +230,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -178,9 +242,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Choice Window [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -725,112 +787,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8013012_Monster_AML_Elite01_PassiveAbility_N2SpecialVictory": {
-      "fileName": "8013012_Monster_AML_Elite01_PassiveAbility_N2SpecialVictory",
-      "skillTrigger": "PassiveSkill03",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2126695781\">Monster_AML_Elite01_N2SpecialAim</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-967087637\">Monster_AML_Elite01_N2SpecialAim_Hint</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2126695781\">Monster_AML_Elite01_N2SpecialAim</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Name",
-                    "skillName": "Skill05"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-967087637\">Monster_AML_Elite01_N2SpecialAim_Hint</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Character ID",
-                        "ID": 8001,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": "Trailblazer - Destruction[M]"
-                      },
-                      {
-                        "name": "Character ID",
-                        "ID": 8002,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": "Trailblazer - Destruction[F]"
-                      }
-                    ]
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-967087637\">Monster_AML_Elite01_N2SpecialAim_Hint</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "8013012_Modifiers": {
       "fileName": "8013012_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -909,9 +865,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -981,9 +935,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -998,9 +950,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1010,17 +960,15 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
+          "description": "%CasterName will focus attacks on this target.",
+          "type": "Other",
+          "effectName": "Lock On",
+          "statusName": "Lock On",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "%CasterName will focus attacks on this target.",
-          "type": "Other",
-          "effectName": "Lock On",
-          "statusName": "Lock On"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1068,9 +1016,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

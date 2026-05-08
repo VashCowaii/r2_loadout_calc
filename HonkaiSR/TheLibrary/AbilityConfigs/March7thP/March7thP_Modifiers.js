@@ -10,11 +10,22 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1164145122\">ADV_StageAbility_Maze_Mar_7th</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1541241593\">March7th_BPAbility_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "Shield"
       ],
+      "useEntitySnapshot": true,
+      "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
+      "type": "Buff",
+      "effectName": "Shield",
+      "statusName": "Shield",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -140,20 +151,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_HealPercentage",
-        "MDF_HealValue",
-        "MDF_ShieldPercentage",
-        "MDF_ShieldValue",
-        "MDF_AggroUp"
-      ],
-      "latentQueue": [],
-      "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
-      "type": "Buff",
-      "effectName": "Shield",
-      "statusName": "Shield"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -204,9 +202,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -245,9 +241,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -303,9 +297,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

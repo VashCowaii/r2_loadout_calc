@@ -10,9 +10,19 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1872577593\">ADV_StageAbility_Maze_Sushang</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__398733795\">Sushang_Eidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "DMG Mitigation",
+      "statusName": "Refine in Toil",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -35,15 +45,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "DMG Mitigation",
-      "statusName": "Refine in Toil"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -52,6 +54,12 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "Dancing Blade",
+      "stackLimit": 2,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -86,17 +94,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "Dancing Blade",
-      "stackLimit": 2,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -105,6 +103,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "Dancing Blade",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -127,25 +129,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "Dancing Blade"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1886129975\">Sushang_PointB2_Bonus</a>[<span class=\"descriptionNumberColor\">Riposte</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_Max_Layer"
-      ],
-      "latentQueue": [],
       "description": "Increases Sword Stance DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> for each stack, up to <span class=\"descriptionNumberColor\">MDF_Max_Layer</span> stack(s).",
       "type": "Buff",
       "statusName": "Riposte",
@@ -156,6 +145,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1472874588\">Sushang_UltraBonus</a>[<span class=\"descriptionNumberColor\">Dawn Herald</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and receives 2 extra chances to trigger Sword Stance when using Skill.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Dawn Herald",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -259,21 +252,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and receives 2 extra chances to trigger Sword Stance when using Skill.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Dawn Herald"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__420113807\">Sushang_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Guileless</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Lowers the chances of being attacked by enemies.",
+      "type": "Buff",
+      "effectName": "Aggro Chance Reduction",
+      "statusName": "Guileless",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -298,11 +287,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Lowers the chances of being attacked by enemies.",
-      "type": "Buff",
-      "effectName": "Aggro Chance Reduction",
-      "statusName": "Guileless"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -410,12 +395,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_HPRatio",
-        "MDF_AggroDown"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

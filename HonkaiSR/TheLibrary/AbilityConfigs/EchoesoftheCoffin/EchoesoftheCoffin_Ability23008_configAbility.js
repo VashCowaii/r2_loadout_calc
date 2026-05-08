@@ -21,6 +21,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedDeltaAdd</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "SPD Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -43,15 +47,45 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedDeltaAdd</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "SPD Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1747972242\">LC_23008_Main</a>",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "NOT",
+                "condition": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1558750701\">LC_23008_SpeedDeltaAddedRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
+                }
+              }
+            }
+          ]
+        },
+        "skillType": [
+          "Ultimate"
+        ],
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": "12(SPD Change)"
+        }
+      },
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -146,43 +180,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "target": {
-          "name": "Target Sequence",
-          "Sequence": [
-            {
-              "name": "Target Name",
-              "target": "{{Player Team All}}"
-            },
-            {
-              "name": "Target Filter",
-              "conditions": {
-                "name": "NOT",
-                "condition": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1558750701\">LC_23008_SpeedDeltaAddedRatio</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
-                }
-              }
-            }
-          ]
-        },
-        "skillType": [
-          "Ultimate"
-        ],
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": "12(SPD Change)"
-        }
-      }
+      ]
     }
   ],
   "isLightcone": true,

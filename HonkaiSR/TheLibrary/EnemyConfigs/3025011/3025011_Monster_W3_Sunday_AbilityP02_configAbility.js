@@ -52,8 +52,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1064173182\">Enemy_W3_Sunday_Preshow_3</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -97,8 +95,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1047395563\">Enemy_W3_Sunday_Preshow_2</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -139,11 +135,11 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (UnusedUnderThisBase_286) || RETURN",
-            "displayLines": "UnusedUnderThisBase_286",
+            "operator": "Variables[0] (UnusedUnderThisBase_10112) || RETURN",
+            "displayLines": "UnusedUnderThisBase_10112",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_286"
+              "UnusedUnderThisBase_10112"
             ]
           }
         }
@@ -152,8 +148,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1097728420\">Enemy_W3_Sunday_Preshow_1</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -232,7 +226,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "advanceType": "Set",
-                  "multiAdd": "UnusedUnderThisBase_286"
+                  "multiAdd": "UnusedUnderThisBase_10112"
                 }
               ],
               "failed": [
@@ -249,9 +243,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

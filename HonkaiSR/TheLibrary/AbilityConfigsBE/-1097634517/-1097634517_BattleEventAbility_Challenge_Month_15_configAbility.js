@@ -22,6 +22,10 @@ const configAbility = {
         "Deathrattle",
         "RemoveWhenCasterDead"
       ],
+      "description": "Increases the received Skill and Ultimate DMG by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>. After this unit gets defeated, inflicts all enemies with Vulnerability.",
+      "type": "Debuff",
+      "effectName": "Memory Imprint",
+      "statusName": "Memory Imprint",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -186,11 +190,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases the received Skill and Ultimate DMG by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>. After this unit gets defeated, inflicts all enemies with Vulnerability.",
-      "type": "Debuff",
-      "effectName": "Memory Imprint",
-      "statusName": "Memory Imprint"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -305,9 +305,7 @@ const configAbility = {
           ],
           "priorityLevel": -45
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

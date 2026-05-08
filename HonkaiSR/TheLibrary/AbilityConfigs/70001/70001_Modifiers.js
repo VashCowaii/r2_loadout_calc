@@ -351,6 +351,9 @@ const configAbility = {
       "modifierFlags": [
         "ElationEchoPoint"
       ],
+      "description": "Missing Description",
+      "type": "Buff",
+      "duration": 2,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -373,10 +376,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff",
-      "duration": 2
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -385,6 +385,9 @@ const configAbility = {
       "modifierFlags": [
         "ElationEchoPoint"
       ],
+      "description": "Missing Description",
+      "type": "Buff",
+      "duration": 2,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -407,10 +410,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff",
-      "duration": 2
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1689,14 +1689,61 @@ const configAbility = {
           "eventTrigger": "Aha Instant: Start",
           "execute": [
             "Unknown EventType1 (Not always an error)",
-            "Override Priority Tags (true) [OBJECT WIP]"
+            {
+              "name": "Override Priority Tags",
+              "dynamicStringsArray": [
+                {
+                  "name": "MonsterReviveSelf",
+                  "value": "DuringElationTime_MonsterReviveSelf"
+                },
+                {
+                  "name": "MonsterHealSelf",
+                  "value": "DuringElationTime_MonsterHealSelf"
+                },
+                {
+                  "name": "MonsterReviveOthers",
+                  "value": "DuringElationTime_MonsterReviveOthers"
+                },
+                {
+                  "name": "MonsterHealOthers",
+                  "value": "DuringElationTime_MonsterHealOthers"
+                },
+                {
+                  "name": "MonsterDeathRattleByLevel",
+                  "value": "DuringElationTime_MonsterDeathRattleByLevel"
+                },
+                {
+                  "name": "MonsterDeathRattle",
+                  "value": "DuringElationTime_MonsterDeathRattle"
+                },
+                {
+                  "name": "MonsterSummon",
+                  "value": "DuringElationTime_MonsterSummon"
+                },
+                {
+                  "name": "MonsterBuffSelf_Elation",
+                  "value": "DuringElationTime_MonsterBuffSelf_Elation"
+                },
+                {
+                  "name": "MonsterBuffOthers_Elation",
+                  "value": "DuringElationTime_MonsterBuffOthers_Elation"
+                },
+                {
+                  "name": "UseElationSkill",
+                  "value": "DuringElationTime_UseElationSkill"
+                }
+              ]
+            }
           ],
           "priorityLevel": 100
         },
         {
           "eventTrigger": "Aha Instant: End",
           "execute": [
-            "Override Priority Tags (false) [OBJECT WIP]",
+            {
+              "name": "Override Priority Tags",
+              "reset": true
+            },
             "Unknown EventType2 (Not always an error)[1 false]",
             "Unknown EventType1 (Not always an error)[1 false][2 true]",
             {
@@ -1862,9 +1909,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1891,13 +1936,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-881220179\">MLevel_ElationBE_ActionStateFalse</a>",
+      "latentQueue": [
+        "ElationTime_IsNoConsume"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1920,10 +1966,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "ElationTime_IsNoConsume"
       ]
     },
     {
@@ -2053,9 +2095,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

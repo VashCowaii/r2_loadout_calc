@@ -3,10 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": 3024022,
   "trimCharacterName": 3024022,
   "abilityList": [
-    "3024022_Monster_W3_Sam_PassiveAbility_InsertSpecial",
-    "3024022_Monster_W3_Sam_PassiveAbility_Insert",
     "3024022_Monster_W3_Sam_PassiveAbility_Insert_Part02",
     "3024022_Monster_W3_Sam_PassiveAbility_Insert_Part01",
+    "3024022_Monster_W3_Sam_PassiveAbility_InsertSpecial",
+    "3024022_Monster_W3_Sam_PassiveAbility_Insert",
+    "3024022_Monster_W3_Sam_Passive01",
     "3024022_Monster_W3_Sam_Ability06_Part02",
     "3024022_Monster_W3_Sam_Ability06_Part01",
     "3024022_Monster_W3_Sam_Ability05_Part02",
@@ -19,11 +20,118 @@ const compositeAbilityObject = {
     "3024022_Monster_W3_Sam_Ability02_Part01",
     "3024022_Monster_W3_Sam_Ability01_Part02",
     "3024022_Monster_W3_Sam_Ability01_Part01",
-    "3024022_Monster_W3_Sam_Passive01",
     "3024022_Monster_W3_Sam_PassiveAbility_BGM",
     "3024022_Modifiers"
   ],
   "abilityObject": {
+    "3024022_Monster_W3_Sam_PassiveAbility_Insert_Part02": {
+      "fileName": "3024022_Monster_W3_Sam_PassiveAbility_Insert_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"671626404\">Monster_W3_Sam_MainEnd</a>"
+        },
+        {
+          "name": "Consume",
+          "consumeFrom": "MaxHP",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "consumePercent": {
+            "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
+            "displayLines": "{[Skill04[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill04[1]]}"
+            ]
+          },
+          "consumeFloor": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-909732184\">Monster_W3_Sam_Enhance</a>[<span class=\"descriptionNumberColor\">Secondary Combustion</span>]",
+          "valuePerStack": {
+            "MDF_DamagePercentage": {
+              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[3]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[3]]}"
+              ]
+            },
+            "MDF_SpeedUpRatio": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+              "displayLines": "{[Skill04[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "MDF_ChangeHPRatio": {
+              "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
+              "displayLines": "{[Skill04[3]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[3]]}"
+              ]
+            }
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3024022_Monster_W3_Sam_PassiveAbility_Insert_Part01": {
+      "fileName": "3024022_Monster_W3_Sam_PassiveAbility_Insert_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_Sam_PassiveAbility_Insert_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "3024022_Monster_W3_Sam_PassiveAbility_InsertSpecial": {
       "fileName": "3024022_Monster_W3_Sam_PassiveAbility_InsertSpecial",
       "abilityType": null,
@@ -290,9 +398,10 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "3024022_Monster_W3_Sam_PassiveAbility_Insert_Part02": {
-      "fileName": "3024022_Monster_W3_Sam_PassiveAbility_Insert_Part02",
-      "abilityType": null,
+    "3024022_Monster_W3_Sam_Passive01": {
+      "fileName": "3024022_Monster_W3_Sam_Passive01",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -300,26 +409,64 @@ const compositeAbilityObject = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"671626404\">Monster_W3_Sam_MainEnd</a>"
-        },
-        {
-          "name": "Consume",
-          "consumeFrom": "MaxHP",
-          "target": {
-            "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "consumePercent": {
-            "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-            "displayLines": "{[Skill04[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[1]]}"
-            ]
+          "modifier": "<a class=\"gModGreen\" id=\"606972422\">W3_Sam_BattleScore1</a>"
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 3024021,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "Stellaron Hunter: Sam"
           },
-          "consumeFloor": 1
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"574655319\">Monster_W3_Sam_Main</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1279716150\">Monster_W3_Sam_Deathrattle</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 3024022,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "Stellaron Hunter: Sam",
+            "isBaseCompare": true
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-613973055\">Monster_W3_Sam_PartController</a>"
+            }
+          ]
         },
         {
           "name": "Add Events/Bonuses",
@@ -327,76 +474,218 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-909732184\">Monster_W3_Sam_Enhance</a>[<span class=\"descriptionNumberColor\">Secondary Combustion</span>]",
-          "valuePerStack": {
-            "MDF_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[3]]}"
-              ]
-            },
-            "MDF_SpeedUpRatio": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "MDF_ChangeHPRatio": {
-              "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-              "displayLines": "{[Skill04[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[3]]}"
-              ]
+          "modifier": "<a class=\"gModGreen\" id=\"1337606012\">Monster_W3_Sam_AIChange</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1457316398\">Monster_W3_Sam_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)}}"
+          },
+          "searchRandom": true,
+          "ifTargetFound": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "BurningBPDamageUpRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[2]]}"
+                ]
+              }
             }
-          }
+          ]
+        },
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
-      "references": []
-    },
-    "3024022_Monster_W3_Sam_PassiveAbility_Insert_Part01": {
-      "fileName": "3024022_Monster_W3_Sam_PassiveAbility_Insert_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_Sam_PassiveAbility_Insert_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
-      "references": []
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1337606012\">Monster_W3_Sam_AIChange</a>",
+          "modifierFlags": [
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Pre-Death [Owner]",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1797892283\">Monster_W3_Sam_BurningBP</a>[<span class=\"descriptionNumberColor\">Molten Core</span>]"
+                },
+                {
+                  "name": "Set SkillPoint Mechanic",
+                  "modifierNameRemoved": "<a class=\"gModGreen\" id=\"909865518\">Monster_W3_Sam_UseBurningBP</a>",
+                  "isRemove": true
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "InsertCheck",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "CurrentHP%",
+                        "compareType": ">",
+                        "value2": 0
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "InsertCheck",
+                      "value": 1
+                    },
+                    {
+                      "name": "Inject Ability Use",
+                      "abilityName": "Monster_W3_Sam_Ability06_Part01",
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "priorityTag": "EnemyPhaseChange",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "allowAbilityTriggers": false
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value1": "InsertCheck",
+                            "compareType": "=",
+                            "value2": 0
+                          },
+                          {
+                            "name": "Compare: Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value1": "CurrentHP%",
+                            "compareType": "=",
+                            "value2": 0
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-613973055\">Monster_W3_Sam_PartController</a>"
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "variableName": "InsertCheck",
+                          "value": 1
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "InsertSpecial",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "End Broken State [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1457316398\">Monster_W3_Sam_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
+                },
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "revertDefault": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     "3024022_Monster_W3_Sam_Ability06_Part02": {
       "fileName": "3024022_Monster_W3_Sam_Ability06_Part02",
@@ -633,11 +922,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-498176717\">Enemy_W3_Sam_RLBoss_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">Thermocumulative Upgrade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_283) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_283",
+                      "operator": "Variables[0] (UnusedUnderThisBase_9945) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_9945",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_283"
+                        "UnusedUnderThisBase_9945"
                       ]
                     }
                   },
@@ -1133,11 +1422,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-498176717\">Enemy_W3_Sam_RLBoss_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">Thermocumulative Upgrade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_283) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_283",
+                      "operator": "Variables[0] (UnusedUnderThisBase_9945) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_9945",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_283"
+                        "UnusedUnderThisBase_9945"
                       ]
                     }
                   },
@@ -1317,11 +1606,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-498176717\">Enemy_W3_Sam_RLBoss_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">Thermocumulative Upgrade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_283) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_283",
+                      "operator": "Variables[0] (UnusedUnderThisBase_9945) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_9945",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_283"
+                        "UnusedUnderThisBase_9945"
                       ]
                     }
                   },
@@ -1712,11 +2001,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-498176717\">Enemy_W3_Sam_RLBoss_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">Thermocumulative Upgrade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_283) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_283",
+                      "operator": "Variables[0] (UnusedUnderThisBase_9945) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_9945",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_283"
+                        "UnusedUnderThisBase_9945"
                       ]
                     }
                   },
@@ -1862,297 +2151,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "3024022_Monster_W3_Sam_Passive01": {
-      "fileName": "3024022_Monster_W3_Sam_Passive01",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"606972422\">W3_Sam_BattleScore1</a>"
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 3024021,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Stellaron Hunter: Sam"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"574655319\">Monster_W3_Sam_Main</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1279716150\">Monster_W3_Sam_Deathrattle</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 3024022,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Stellaron Hunter: Sam",
-            "isBaseCompare": true
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-613973055\">Monster_W3_Sam_PartController</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1337606012\">Monster_W3_Sam_AIChange</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1457316398\">Monster_W3_Sam_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}"
-          },
-          "searchRandom": true,
-          "ifTargetFound": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "BurningBPDamageUpRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[2]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1337606012\">Monster_W3_Sam_AIChange</a>",
-          "modifierFlags": [
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Pre-Death [Owner]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1797892283\">Monster_W3_Sam_BurningBP</a>[<span class=\"descriptionNumberColor\">Molten Core</span>]"
-                },
-                {
-                  "name": "Set SkillPoint Mechanic",
-                  "modifierNameRemoved": "<a class=\"gModGreen\" id=\"909865518\">Monster_W3_Sam_UseBurningBP</a>",
-                  "isRemove": true
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "InsertCheck",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": ">",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "InsertCheck",
-                      "value": 1
-                    },
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Monster_W3_Sam_Ability06_Part01",
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "priorityTag": "EnemyPhaseChange",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "InsertCheck",
-                            "compareType": "=",
-                            "value2": 0
-                          },
-                          {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "CurrentHP%",
-                            "compareType": "=",
-                            "value2": 0
-                          },
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-613973055\">Monster_W3_Sam_PartController</a>"
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "variableName": "InsertCheck",
-                          "value": 1
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "InsertSpecial",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1457316398\">Monster_W3_Sam_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
-                },
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "revertDefault": true
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "3024022_Monster_W3_Sam_PassiveAbility_BGM": {
       "fileName": "3024022_Monster_W3_Sam_PassiveAbility_BGM",
       "childAbilityList": [
@@ -2257,9 +2255,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2364,9 +2360,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2508,22 +2502,28 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__671626404\">Monster_W3_Sam_MainEnd</a>",
           "modifierFlags": [
             "DisableAction"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1431346612\">Monster_W3_Sam_TakenDamage</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "stackData": [
+            "MDF_DamageTakenUpRatio_PerLayer"
+          ],
+          "latentQueue": [
+            "AIFlag"
+          ],
+          "description": "Takes <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span> more DMG. This effect expires when Sam recovers from Weakness Break state.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2552,17 +2552,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageTakenUpRatio_PerLayer"
-          ],
-          "latentQueue": [
-            "AIFlag"
-          ],
-          "description": "Takes <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span> more DMG. This effect expires when Sam recovers from Weakness Break state.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2623,9 +2613,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2634,9 +2622,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Enter Battle"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3400,6 +3386,14 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1797892283\">Monster_W3_Sam_BurningBP</a>[<span class=\"descriptionNumberColor\">Molten Core</span>]",
+          "stackData": [
+            "MDF_HealDownRatio",
+            "MDF_DamageUpRatio"
+          ],
+          "description": "When an ally consumes Combusted Skill Points, loses HP and additionally deals a set amount of Fire DMG equal to <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span> of the original DMG. When they receive healing from sources other than oneself, the amount of HP restored is massively reduced.",
+          "type": "Other",
+          "effectName": "Molten Core",
+          "statusName": "Molten Core",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -3650,21 +3644,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HealDownRatio",
-            "MDF_DamageUpRatio"
-          ],
-          "latentQueue": [],
-          "description": "When an ally consumes Combusted Skill Points, loses HP and additionally deals a set amount of Fire DMG equal to <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span> of the original DMG. When they receive healing from sources other than oneself, the amount of HP restored is massively reduced.",
-          "type": "Other",
-          "effectName": "Molten Core",
-          "statusName": "Molten Core"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1568615261\">Monster_W3_Sam_FireAccelerate</a>",
           "stackType": "Replace",
+          "stackLimit": 4,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3694,9 +3681,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 4,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3704,6 +3689,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak"
           ],
+          "latentQueue": [
+            "InsertCheck",
+            "InsertSpecial"
+          ],
+          "description": "Sam's Toughness cannot be reduced before entering the Secondary Combustion state.",
+          "type": "Other",
+          "statusName": "Weakness Protected",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3727,15 +3719,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "InsertCheck",
-            "InsertSpecial"
-          ],
-          "description": "Sam's Toughness cannot be reduced before entering the Secondary Combustion state.",
-          "type": "Other",
-          "statusName": "Weakness Protected"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3746,6 +3730,16 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Burn"
           ],
+          "useEntitySnapshot": true,
+          "stackLimit": 5,
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+            "displayLines": "ModifierStackLayer",
+            "constants": [],
+            "variables": [
+              "ModifierStackLayer"
+            ]
+          },
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3906,17 +3900,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackLimit": 5,
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4009,13 +3993,20 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-909732184\">Monster_W3_Sam_Enhance</a>[<span class=\"descriptionNumberColor\">Secondary Combustion</span>]",
+          "stackData": [
+            "MDF_DamagePercentage",
+            "MDF_SpeedUpRatio",
+            "MDF_ChangeHPRatio"
+          ],
+          "description": "All attacks consume HP. Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span> and gains an additional action. <span class=\"descriptionNumberColor\">MDF_CurrentPoint</span> point(s) of Molten Energy remain before the Secondary Combustion state expires.",
+          "type": "Other",
+          "effectName": "Secondary Combustion",
+          "statusName": "Secondary Combustion",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4556,17 +4547,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamagePercentage",
-            "MDF_SpeedUpRatio",
-            "MDF_ChangeHPRatio"
-          ],
-          "latentQueue": [],
-          "description": "All attacks consume HP. Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span> and gains an additional action. <span class=\"descriptionNumberColor\">MDF_CurrentPoint</span> point(s) of Molten Energy remain before the Secondary Combustion state expires.",
-          "type": "Other",
-          "effectName": "Secondary Combustion",
-          "statusName": "Secondary Combustion"
+          ]
         }
       ],
       "references": []

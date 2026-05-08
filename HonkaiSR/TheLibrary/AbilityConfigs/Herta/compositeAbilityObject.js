@@ -3,20 +3,172 @@ const compositeAbilityObject = {
   "fullCharacterName": "Herta",
   "trimCharacterName": "Herta",
   "abilityList": [
+    "Herta_Modifiers",
     "Herta_Herta_Trace02",
+    "Herta_LocalPlayer_StandardAbility_AttackBreak",
+    "Herta_LocalPlayer_Herta_TechniqueUsage",
+    "Herta_LocalPlayer_Herta_NormalAtk01",
     "Herta_Herta_TechniqueInLevel",
     "Herta_Herta_PassiveAtkReady_Ability",
     "Herta_Herta_PassiveAbility01",
+    "Herta_Herta_Ability03_EnterReady",
     "Herta_Herta_Ability03_Part02",
     "Herta_Herta_Ability03_Part01",
-    "Herta_Herta_Ability03_EnterReady",
     "Herta_Herta_Ability02_Part02",
     "Herta_Herta_Ability02_Part01",
     "Herta_Herta_Ability01_Part02",
-    "Herta_Herta_Ability01_Part01",
-    "Herta_Modifiers"
+    "Herta_Herta_Ability01_Part01"
   ],
   "abilityObject": {
+    "Herta_Modifiers": {
+      "fileName": "Herta_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-963165664\">ADV_StageAbility_Maze_Herta</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1076207439\">Herta_Passive_Flag</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-256958111\">Herta_Passive_ATK</a>",
+          "execute": [
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Herta_Count_ATK",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Herta_Count",
+                        "compareType": ">",
+                        "value2": 0
+                      },
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1076207439\">Herta_Passive_Flag</a>",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Enemies Still Alive",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "Herta_Count_ATK",
+                          "value": 1
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "Herta_Count_Insert",
+                          "value": 1
+                        },
+                        {
+                          "name": "Inject Ability Use",
+                          "condition": {
+                            "name": "Insert Ability Condition",
+                            "type": "AbilityOwnerInsertUnusedCount",
+                            "typeValue": 1
+                          },
+                          "abilityName": "Herta_PassiveAtkReady_Ability",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
+                          "priorityTag": "CharacterAttackFromSelf",
+                          "canHitNonTargets": true,
+                          "showInActionOrder": true,
+                          "abortFlags": [
+                            "STAT_CTRL",
+                            "DisableAction"
+                          ],
+                          "allowAbilityTriggers": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-677386583\">Herta_Passive_Charge</a>",
+          "stackType": "ReplaceByCaster",
+          "stackLimit": 4,
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "multiplier": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "Herta_Herta_Trace02": {
       "fileName": "Herta_Herta_Trace02",
       "abilityType": null,
@@ -46,6 +198,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__499178350\">Herta_Trace02_Resistance</a>",
+          "stackData": [
+            "MDF_Resistance"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -68,15 +223,307 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Resistance"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Herta_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Herta_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Herta_LocalPlayer_Herta_TechniqueUsage": {
+      "fileName": "Herta_LocalPlayer_Herta_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "101301(SkillMaze)",
+          "duration": -1
+        },
+        "Submit Technique Use"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Herta_LocalPlayer_Herta_NormalAtk01": {
+      "fileName": "Herta_LocalPlayer_Herta_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "failed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "Herta_Herta_TechniqueInLevel": {
@@ -107,6 +554,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-516353123\">Herta_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">It Can Still Be Optimized</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "It Can Still Be Optimized",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -129,11 +580,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "It Can Still Be Optimized"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -182,9 +629,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -509,6 +954,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1482818607\">Herta_AbilityEidolon4_DamageUp</a>",
+          "stackData": [
+            "SkillRank_Rank04_P1_DamagePercentage"
+          ],
+          "latentQueue": [
+            "Herta_Count_Insert"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -525,18 +976,23 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "SkillRank_Rank04_P1_DamagePercentage"
-          ],
-          "latentQueue": [
-            "Herta_Count_Insert"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1736222640\">Herta_AbilityEidolon2_CriticalChance</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_CriticalChance"
+          ],
+          "latentQueue": [
+            "Herta_Count_Insert"
+          ],
+          "description": "Each stack increases CRIT rate by <span class=\"descriptionNumberColor\">MDF_CriticalChance</span>, up to 5 stacks.",
+          "type": "Buff",
+          "effectName": "CRIT Rate Boost",
+          "statusName": "CRIT Rate Boost",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -570,18 +1026,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_CriticalChance"
-          ],
-          "latentQueue": [
-            "Herta_Count_Insert"
-          ],
-          "description": "Each stack increases CRIT rate by <span class=\"descriptionNumberColor\">MDF_CriticalChance</span>, up to 5 stacks.",
-          "type": "Buff",
-          "effectName": "CRIT Rate Boost",
-          "statusName": "CRIT Rate Boost",
-          "addStacksPerTrigger": 1
+          ]
         }
       ],
       "targetObjectData": {
@@ -891,9 +1336,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -901,6 +1344,17 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Herta_Herta_Ability03_EnterReady": {
+      "fileName": "Herta_Herta_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
       }
     },
     "Herta_Herta_Ability03_Part02": {
@@ -1041,6 +1495,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-429248408\">Herta_AbilityEidolon6_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_AttackAddRatio"
+          ],
+          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "ATK Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1063,20 +1524,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AttackAddRatio"
-          ],
-          "latentQueue": [],
-          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "ATK Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1926403261\">Herta_Trace03_AddDamageUp</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_AllDamageTakenRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -1093,11 +1549,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageTakenRatio"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1138,17 +1590,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Herta_Herta_Ability03_EnterReady": {
-      "fileName": "Herta_Herta_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Herta_Herta_Ability02_Part02": {
@@ -1309,9 +1750,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1543,9 +1982,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1587,157 +2024,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Herta_Modifiers": {
-      "fileName": "Herta_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1076207439\">Herta_Passive_Flag</a>",
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-256958111\">Herta_Passive_ATK</a>",
-          "execute": [
-            {
-              "eventTrigger": "Attack DMG End [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Herta_Count_ATK",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Herta_Count",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1076207439\">Herta_Passive_Flag</a>",
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Enemies Still Alive",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            }
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "Herta_Count_ATK",
-                          "value": 1
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "Herta_Count_Insert",
-                          "value": 1
-                        },
-                        {
-                          "name": "Inject Ability Use",
-                          "condition": {
-                            "name": "Insert Ability Condition",
-                            "type": "AbilityOwnerInsertUnusedCount",
-                            "typeValue": 1
-                          },
-                          "abilityName": "Herta_PassiveAtkReady_Ability",
-                          "abilitySource": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "abilityTarget": {
-                            "name": "Target Name",
-                            "target": "{{Hostile Entities(AOE)}}"
-                          },
-                          "priorityTag": "CharacterAttackFromSelf",
-                          "canHitNonTargets": true,
-                          "showInActionOrder": true,
-                          "abortFlags": [
-                            "STAT_CTRL",
-                            "DisableAction"
-                          ],
-                          "allowAbilityTriggers": false
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Herta_Count_Insert",
-            "Herta_Count_ATK",
-            "MAvatar_Herta_Passive_CoolDown"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-677386583\">Herta_Passive_Charge</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "MDF_Layer",
-                  "multiplier": 1
-                }
-              ]
-            }
-          ],
-          "stackLimit": 4,
-          "addStacksPerTrigger": 1
-        }
-      ],
-      "references": []
     }
   }
 }

@@ -3,18 +3,9 @@ const compositeAbilityObject = {
   "fullCharacterName": 8002070,
   "trimCharacterName": 8002070,
   "abilityList": [
-    "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_Xuwu",
-    "8002070_Monster_XP_Minion04_02_AbilityP01_Xuwu",
-    "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Cunhu",
-    "8002070_Monster_XP_Minion04_02_AbilityP01_Cunhu",
-    "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Fengrao_02",
-    "8002070_Monster_XP_Minion04_02_AbilityP01_Fengrao_02",
     "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_Fengrao",
     "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Fengrao",
     "8002070_Monster_XP_Minion04_02_AbilityP01_Fengrao",
-    "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_Huimie",
-    "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Huimie",
-    "8002070_Monster_XP_Minion04_02_AbilityP01",
     "8002070_Monster_XP_Minion04_02_Ability03_Part02",
     "8002070_Monster_XP_Minion04_02_Ability03_Part01",
     "8002070_Monster_XP_Minion04_02_Ability02_Part02",
@@ -24,1092 +15,6 @@ const compositeAbilityObject = {
     "8002070_Modifiers"
   ],
   "abilityObject": {
-    "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_Xuwu": {
-      "fileName": "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_Xuwu",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "searchRandom": true,
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "DispelSuccess",
-              "value": 0
-            },
-            {
-              "name": "Dispel Debuffs",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "typeOverride": "Buff",
-              "dispelCount": 1,
-              "dispelOrder": "LastAdded",
-              "counterKey": "DispelSuccess"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "DispelSuccess",
-                "compareType": ">",
-                "value2": 0.5
-              },
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
-                  "duration": 1,
-                  "baseChance": {
-                    "operator": "Variables[0] (DispelSuccess) || RETURN",
-                    "displayLines": "DispelSuccess",
-                    "constants": [],
-                    "variables": [
-                      "DispelSuccess"
-                    ]
-                  },
-                  "valuePerStack": {
-                    "Modifier_Frozen_DamagePercentage": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__42) || RETURN",
-                      "displayLines": "ENEMIES_OBJECT_UNUSED__42",
-                      "constants": [],
-                      "variables": [
-                        "ENEMIES_OBJECT_UNUSED__42"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "searchRandom": true,
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "DispelSuccess",
-              "value": 0
-            },
-            {
-              "name": "Dispel Debuffs",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "typeOverride": "Buff",
-              "dispelCount": 1,
-              "dispelOrder": "LastAdded",
-              "counterKey": "DispelSuccess"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "DispelSuccess",
-                "compareType": ">",
-                "value2": 0.5
-              },
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1592948509\">Standard_AttackRatioDown</a>[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
-                  "duration": {
-                    "operator": "Constants[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [
-                      1
-                    ],
-                    "variables": []
-                  },
-                  "baseChance": {
-                    "operator": "Variables[0] (DispelSuccess) || RETURN",
-                    "displayLines": "DispelSuccess",
-                    "constants": [],
-                    "variables": [
-                      "DispelSuccess"
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__44) || RETURN",
-                      "displayLines": "ENEMIES_OBJECT_UNUSED__44",
-                      "constants": [],
-                      "variables": [
-                        "ENEMIES_OBJECT_UNUSED__44"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "searchRandom": true,
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "DispelSuccess",
-              "value": 0
-            },
-            {
-              "name": "Dispel Debuffs",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "typeOverride": "Buff",
-              "dispelCount": 1,
-              "dispelOrder": "LastAdded",
-              "counterKey": "DispelSuccess"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "DispelSuccess",
-                "compareType": ">",
-                "value2": 0.5
-              },
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]",
-                  "duration": 1,
-                  "baseChance": {
-                    "operator": "Variables[0] (DispelSuccess) || RETURN",
-                    "displayLines": "DispelSuccess",
-                    "constants": [],
-                    "variables": [
-                      "DispelSuccess"
-                    ]
-                  },
-                  "valuePerStack": {
-                    "Modifier_Burn_DamagePercentage": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__46) || RETURN",
-                      "displayLines": "ENEMIES_OBJECT_UNUSED__46",
-                      "constants": [],
-                      "variables": [
-                        "ENEMIES_OBJECT_UNUSED__46"
-                      ]
-                    }
-                  },
-                  "stackFlag": "CharacterSkill"
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8002070_Monster_XP_Minion04_02_AbilityP01_Xuwu": {
-      "fileName": "8002070_Monster_XP_Minion04_02_AbilityP01_Xuwu",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-456326727\">Enemy_XP_Minion04_02_P01_Xuwu</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1496273538\">Enemy_XP_Minion04_02_P01_Xuwu_00</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-456326727\">Enemy_XP_Minion04_02_P01_Xuwu</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1496273538\">Enemy_XP_Minion04_02_P01_Xuwu_00</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Monster_XP_Minion04_02_AbilityP01_InsertAbility_Xuwu",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "priorityTag": "EnemyAttackFromSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "abortFlags": [
-                        "STAT_CTRL",
-                        "Break",
-                        "DisableAction"
-                      ],
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1496273538\">Enemy_XP_Minion04_02_P01_Xuwu_00</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Cunhu": {
-      "fileName": "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Cunhu",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "STAT_CTRL",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "DisableAction",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "Break",
-                "invertCondition": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1092716228\">Enemy_XP_Minion04_02_Cunhu_Caster</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
-              "counter": {
-                "operator": "Variables[0] (UnusedUnderThisBase_135) || RETURN",
-                "displayLines": "UnusedUnderThisBase_135",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_135"
-                ]
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Animation Event",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "state": "Skill04",
-              "passed": [
-                {
-                  "name": "Animation Task"
-                },
-                {
-                  "name": "Animation Task",
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1092716228\">Enemy_XP_Minion04_02_Cunhu_Caster</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
-                      "counter": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_135) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_135",
-                        "constants": [],
-                        "variables": [
-                          "UnusedUnderThisBase_135"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8002070_Monster_XP_Minion04_02_AbilityP01_Cunhu": {
-      "fileName": "8002070_Monster_XP_Minion04_02_AbilityP01_Cunhu",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1092716228\">Enemy_XP_Minion04_02_Cunhu_Caster</a>"
-                      },
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Cunhu_CurrentCount"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]"
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable with Modifier Values",
-                          "variableName": "Cunhu_CurrentCount",
-                          "modifierName": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
-                          "multiplier": 1
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1149684871\">Enemy_XP_Minion04_02_Cunhu_Bonus</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
-                          "counter": {
-                            "operator": "Variables[0] (Cunhu_CurrentCount) || RETURN",
-                            "displayLines": "Cunhu_CurrentCount",
-                            "constants": [],
-                            "variables": [
-                              "Cunhu_CurrentCount"
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Exit Broken-State",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  }
-                },
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Cunhu",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "priorityTag": "EnemyBattleCry",
-                  "canHitNonTargets": true,
-                  "showInActionOrder": true,
-                  "allowAbilityTriggers": false
-                }
-              ],
-              "priorityLevel": -55
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Fengrao_02": {
-      "fileName": "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Fengrao_02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "STAT_CTRL",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "DisableAction",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "Break",
-                "invertCondition": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"2041908574\">Enemy_XP_Minion04_02_Fengrao_02_Caster</a>",
-              "counter": {
-                "operator": "Variables[0] (Enemy_XP_Minion04_02_Fengrao_02_Caster) || RETURN",
-                "displayLines": "Enemy_XP_Minion04_02_Fengrao_02_Caster",
-                "constants": [],
-                "variables": [
-                  "Enemy_XP_Minion04_02_Fengrao_02_Caster"
-                ]
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Animation Event",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "state": "Skill04",
-              "passed": [
-                {
-                  "name": "Animation Task"
-                },
-                {
-                  "name": "Animation Task",
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2041908574\">Enemy_XP_Minion04_02_Fengrao_02_Caster</a>",
-                      "counter": {
-                        "operator": "Variables[0] (Enemy_XP_Minion04_02_Fengrao_02_Caster) || RETURN",
-                        "displayLines": "Enemy_XP_Minion04_02_Fengrao_02_Caster",
-                        "constants": [],
-                        "variables": [
-                          "Enemy_XP_Minion04_02_Fengrao_02_Caster"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2041908574\">Enemy_XP_Minion04_02_Fengrao_02_Caster</a>",
-          "counter": 100,
-          "modifierFlags": [
-            "ListenBattleEventSkill"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: End",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "CurrentCount",
-                  "value": 0
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "searchRandom": true,
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": "<",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable with HP%",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "CostCount"
-                    },
-                    {
-                      "name": "Looped Event",
-                      "maxLoops": 10,
-                      "Event": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "value1": "CostCount",
-                            "compareType": "<",
-                            "value2": 1
-                          },
-                          "passed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "CurrentCount",
-                              "value": {
-                                "operator": "Variables[0] (CurrentCount) || Constants[0] (1) || ADD || RETURN",
-                                "displayLines": "(CurrentCount + 1)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "CurrentCount"
-                                ]
-                              }
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "CostCount",
-                              "value": {
-                                "operator": "Variables[0] (CostCount) || Constants[0] (0.1) || ADD || RETURN",
-                                "displayLines": "(CostCount + 0.1)",
-                                "constants": [
-                                  0.1
-                                ],
-                                "variables": [
-                                  "CostCount"
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Heal",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "healPercent": 1,
-                      "formula": "Heal from Target MaxHP"
-                    }
-                  ]
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 20,
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": "<",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable with HP%",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "CostCount"
-                    },
-                    {
-                      "name": "Looped Event",
-                      "maxLoops": 10,
-                      "Event": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "value1": "CostCount",
-                            "compareType": "<",
-                            "value2": 1
-                          },
-                          "passed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "CurrentCount",
-                              "value": {
-                                "operator": "Variables[0] (CurrentCount) || Constants[0] (1) || ADD || RETURN",
-                                "displayLines": "(CurrentCount + 1)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "CurrentCount"
-                                ]
-                              }
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "CostCount",
-                              "value": {
-                                "operator": "Variables[0] (CostCount) || Constants[0] (0.1) || ADD || RETURN",
-                                "displayLines": "(CostCount + 0.1)",
-                                "constants": [
-                                  0.1
-                                ],
-                                "variables": [
-                                  "CostCount"
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Heal",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "healPercent": 1,
-                      "formula": "Heal from Target MaxHP"
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
-                },
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "variableName": "CostCount",
-                  "modifierName": "<a class=\"gModGreen\" id=\"2041908574\">Enemy_XP_Minion04_02_Fengrao_02_Caster</a>",
-                  "multiplier": 1
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "CurrentCount",
-                    "compareType": ">",
-                    "value2": {
-                      "operator": "Variables[0] (CostCount) || RETURN",
-                      "displayLines": "CostCount",
-                      "constants": [],
-                      "variables": [
-                        "CostCount"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "CurrentCount",
-                      "value": {
-                        "operator": "Variables[0] (CostCount) || RETURN",
-                        "displayLines": "CostCount",
-                        "constants": [],
-                        "variables": [
-                          "CostCount"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Define Modifier Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifierName": "<a class=\"gModGreen\" id=\"2041908574\">Enemy_XP_Minion04_02_Fengrao_02_Caster</a>",
-                  "function": "Add",
-                  "value": {
-                    "operator": "Variables[0] (CurrentCount) || INVERT || RETURN",
-                    "displayLines": "-CurrentCount",
-                    "constants": [],
-                    "variables": [
-                      "CurrentCount"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1435692684\">Enemy_XP_Minion04_02_Fengrao_02_Minion</a>",
-          "execute": [
-            {
-              "eventTrigger": "Take Damage End [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1935414098\">Enemy_XP_Minion04_02_Fengrao_02_Minion_Hit</a>"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "8002070_Monster_XP_Minion04_02_AbilityP01_Fengrao_02": {
-      "fileName": "8002070_Monster_XP_Minion04_02_AbilityP01_Fengrao_02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Exit Broken-State",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  }
-                },
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Fengrao_02",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "priorityTag": "EnemyBattleCry",
-                  "canHitNonTargets": true,
-                  "showInActionOrder": true,
-                  "allowAbilityTriggers": false
-                }
-              ],
-              "priorityLevel": -55
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_Fengrao": {
       "fileName": "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_Fengrao",
       "abilityType": null,
@@ -1212,21 +117,15 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__956566396\">Enemy_XP_Minion04_02_Fengrao_SelfDamage</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__956566396\">Enemy_XP_Minion04_02_Fengrao_SelfDamage</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1933857712\">Enemy_XP_Minion04_02_Fengrao_Trigger1</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1933857712\">Enemy_XP_Minion04_02_Fengrao_Trigger1</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1608084385\">Enemy_XP_Minion04_02_Fengrao_Trigger</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1608084385\">Enemy_XP_Minion04_02_Fengrao_Trigger</a>"
         }
       ]
     },
@@ -1490,8 +389,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__606850892\">Enemy_XP_Minion04_03_Introduce</a>[<span class=\"descriptionNumberColor\">C—Cure You</span>]",
-          "stackData": [],
-          "latentQueue": [],
           "description": "When a friendly unit is attacked by a target, Trotter of Abundance consumes its own HP to heal the attacked friendly unit.",
           "type": "Other",
           "effectName": "C—Cure You",
@@ -1587,380 +484,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -55
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_Huimie": {
-      "fileName": "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_Huimie",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": {
-            "operator": "Variables[0] (Huimie_BeHitCounter) || RETURN",
-            "displayLines": "Huimie_BeHitCounter",
-            "constants": [],
-            "variables": [
-              "Huimie_BeHitCounter"
-            ]
-          },
-          "Event": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Fire",
-                "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_7) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_7",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_7"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null
-              }
-            }
           ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Huimie_BeHitCounter"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "XP_Minion04_02_Huimie_InsertFlag"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"224113690\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Huimie": {
-      "fileName": "8002070_Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Huimie",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "STAT_CTRL",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "DisableAction",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "Break",
-                "invertCondition": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1715207705\">Enemy_XP_Minion04_02_Huimie_EffectPaths</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1010578616\">Enemy_XP_Minion04_02_Huimie_EffectGround</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-60334252\">Enemy_XP_Minion04_02_Bonus_Huimie_Caster</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Animation Event",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "state": "Skill04",
-              "passed": [
-                {
-                  "name": "Animation Task",
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1715207705\">Enemy_XP_Minion04_02_Huimie_EffectPaths</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1010578616\">Enemy_XP_Minion04_02_Huimie_EffectGround</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Animation Task"
-                },
-                {
-                  "name": "Animation Task",
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-60334252\">Enemy_XP_Minion04_02_Bonus_Huimie_Caster</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8002070_Monster_XP_Minion04_02_AbilityP01": {
-      "fileName": "8002070_Monster_XP_Minion04_02_AbilityP01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2118515591\">Enemy_XP_Minion04_02_Introduce</a>[<span class=\"descriptionNumberColor\">T—Taking Revenge</span>]"
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": 1,
-          "entityClass": "Enemy",
-          "maximum": 1,
-          "assignState": "True"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2118515591\">Enemy_XP_Minion04_02_Introduce</a>[<span class=\"descriptionNumberColor\">T—Taking Revenge</span>]",
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When a friendly unit is attacked, Trotter of Destruction will attack all targets. The attack count is equal to the number of the targets attacked.",
-          "type": "Other",
-          "effectName": "T—Taking Revenge",
-          "statusName": "T—Taking Revenge"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-60334252\">Enemy_XP_Minion04_02_Bonus_Huimie_Caster</a>"
-                      },
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Exit Broken-State",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  }
-                },
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Huimie",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "priorityTag": "EnemyBattleCry",
-                  "canHitNonTargets": true,
-                  "showInActionOrder": true,
-                  "allowAbilityTriggers": false
-                }
-              ],
-              "priorityLevel": -55
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
         }
       ]
     },
@@ -2246,9 +770,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2280,9 +802,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2418,9 +938,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2429,9 +947,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2447,9 +963,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Pre-Death [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2459,9 +973,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2471,9 +983,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2660,9 +1170,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2769,13 +1277,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1146816007\">Enemy_XP_Minion04_02_Fengrao_Minion</a>",
+          "stackData": [
+            "_HealRatio",
+            "_LoseRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3018,18 +1528,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "_HealRatio",
-            "_LoseRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1268901097\">Enemy_XP_Minion04_02_Fengrao_BeHit</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1268901097\">Enemy_XP_Minion04_02_Fengrao_BeHit</a>"
         },
         {
           "name": "Modifier Construction",
@@ -3053,9 +1556,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3065,9 +1566,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3077,9 +1576,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3089,9 +1586,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3111,6 +1606,10 @@ const compositeAbilityObject = {
             "BlockDamageExcludeDot",
             "MuteBreak"
           ],
+          "description": "Each stack of P—Protect You can absorb DMG from 1 incoming hit. P—Protect You stacks are shared across the team.",
+          "type": "Buff",
+          "effectName": "P—Protect You",
+          "statusName": "P—Protect You",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3241,13 +1740,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Each stack of P—Protect You can absorb DMG from 1 incoming hit. P—Protect You stacks are shared across the team.",
-          "type": "Buff",
-          "effectName": "P—Protect You",
-          "statusName": "P—Protect You"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3256,9 +1749,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3334,11 +1825,11 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_135) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_135",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12969) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12969",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_135"
+                      "UnusedUnderThisBase_12969"
                     ]
                   },
                   "entityClass": "Enemy",
@@ -3347,9 +1838,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

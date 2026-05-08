@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__222357741\">LC_22001_Sub</a>[<span class=\"descriptionNumberColor\">Outgoing Healing Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases Outgoing Healing by <span class=\"descriptionNumberColor\">#SkillEquip_P2_HealRatio</span>.",
+      "type": "Buff",
+      "effectName": "Outgoing Healing Boost",
+      "statusName": "Outgoing Healing Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,11 +44,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Outgoing Healing by <span class=\"descriptionNumberColor\">#SkillEquip_P2_HealRatio</span>.",
-      "type": "Buff",
-      "effectName": "Outgoing Healing Boost",
-      "statusName": "Outgoing Healing Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -80,9 +80,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

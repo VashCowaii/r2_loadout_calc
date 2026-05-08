@@ -214,6 +214,23 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1718410596\">Modifier_FantasticStory_BaseAbility_2160_sub</a>",
       "stackType": "ReplaceByCaster",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1172490940\">Modifier_FantasticStory_BaseAbility_2160_Plus5_ForShow</a>[<span class=\"descriptionNumberColor\">Cinnabar Inscription</span>]",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "DV_FantasticStory_PlusAbility_2165",
+            "compareType": "=",
+            "value2": 1
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -556,29 +573,20 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1172490940\">Modifier_FantasticStory_BaseAbility_2160_Plus5_ForShow</a>[<span class=\"descriptionNumberColor\">Cinnabar Inscription</span>]",
-          "haloStatus": true,
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "DV_FantasticStory_PlusAbility_2165",
-            "compareType": "=",
-            "value2": 1
-          }
-        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__535245381\">Modifier_FantasticStory_BaseAbility_2160</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_2161",
+        "DV_FantasticStory_PlusAbility_2162",
+        "DV_FantasticStory_PlusAbility_2163",
+        "DV_FantasticStory_PlusAbility_2164",
+        "DV_FantasticStory_PlusAbility_2165",
+        "DV_FantasticStory_BaseAbility_TriggerFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -1113,15 +1121,6 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2161",
-        "DV_FantasticStory_PlusAbility_2162",
-        "DV_FantasticStory_PlusAbility_2163",
-        "DV_FantasticStory_PlusAbility_2164",
-        "DV_FantasticStory_PlusAbility_2165",
-        "DV_FantasticStory_BaseAbility_TriggerFlag"
       ]
     },
     {
@@ -1137,6 +1136,18 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-149468610\">Modifier_FantasticStory_HPParentChild</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "DV_FantasticStory_BaseAbility_TriggerFlag",
+        "DV_FantasticStory_PlusAbility_2165",
+        "DV_FantasticStory_PlusAbility_2164",
+        "DV_FantasticStory_PlusAbility_2163",
+        "DV_FantasticStory_PlusAbility_2162",
+        "DV_FantasticStory_PlusAbility_2161"
+      ],
+      "description": "After non-Elite enemy targets are defeated, receive DMG based on a certain percentage of this unit's Max HP.",
+      "type": "Buff",
+      "effectName": "Binding Obligation",
+      "statusName": "Binding Obligation",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1184,20 +1195,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_TriggerFlag",
-        "DV_FantasticStory_PlusAbility_2165",
-        "DV_FantasticStory_PlusAbility_2164",
-        "DV_FantasticStory_PlusAbility_2163",
-        "DV_FantasticStory_PlusAbility_2162",
-        "DV_FantasticStory_PlusAbility_2161"
-      ],
-      "description": "After non-Elite enemy targets are defeated, receive DMG based on a certain percentage of this unit's Max HP.",
-      "type": "Buff",
-      "effectName": "Binding Obligation",
-      "statusName": "Binding Obligation"
+      ]
     }
   ]
 }

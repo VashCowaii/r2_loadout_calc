@@ -18,6 +18,12 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-686777299\">Relic_105_Sub</a>[<span class=\"descriptionNumberColor\">Champion of Streetwise Boxing</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">#SkillRelic_105_4_P1_AttackAddedRatio</span>, up to <span class=\"descriptionNumberColor\">#SkillRelic_105_4_P2_Maxlayer</span> stack(s).",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Champion of Streetwise Boxing",
+      "stackLimit": 6,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -51,13 +57,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">#SkillRelic_105_4_P1_AttackAddedRatio</span>, up to <span class=\"descriptionNumberColor\">#SkillRelic_105_4_P2_Maxlayer</span> stack(s).",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Champion of Streetwise Boxing",
-      "stackLimit": 6,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -105,9 +105,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

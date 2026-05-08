@@ -3,12 +3,54 @@ const compositeAbilityObject = {
   "fullCharacterName": 4012062,
   "trimCharacterName": 4012062,
   "abilityList": [
+    "4012062_Monster_W4_HearsePart_Passive01",
     "4012062_Monster_W4_HearsePart_Ability01_Part02",
     "4012062_Monster_W4_HearsePart_Ability01_Part01",
-    "4012062_Monster_W4_HearsePart_Passive01",
     "4012062_Modifiers"
   ],
   "abilityObject": {
+    "4012062_Monster_W4_HearsePart_Passive01": {
+      "fileName": "4012062_Monster_W4_HearsePart_Passive01",
+      "skillTrigger": "Passive01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1743011783\">Monster_W4_HearsePart_PassivePre</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"637369732\">Monster_W4_HearsePart_Effect</a>"
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1169600683\">Monster_W4_HearsePart_Stop</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "4012062_Monster_W4_HearsePart_Ability01_Part02": {
       "fileName": "4012062_Monster_W4_HearsePart_Ability01_Part02",
       "abilityType": null,
@@ -61,48 +103,6 @@ const compositeAbilityObject = {
           "isTrigger": true
         },
         "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012062_Monster_W4_HearsePart_Passive01": {
-      "fileName": "4012062_Monster_W4_HearsePart_Passive01",
-      "skillTrigger": "Passive01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1743011783\">Monster_W4_HearsePart_PassivePre</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"637369732\">Monster_W4_HearsePart_Effect</a>"
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1169600683\">Monster_W4_HearsePart_Stop</a>"
-        }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
@@ -188,9 +188,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -214,13 +212,14 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__323182003\">Monster_W4_HearsePart_Soul_B</a>[<span class=\"descriptionNumberColor\">Conquer</span>]",
+          "description": "\"Mydeimos, Lance of Fury\" conquered %CasterName's soul and will take <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span> more DMG from %CasterName's attacks. After being defeated by targets, dispel \"Conquered\" on %CasterName.",
+          "type": "Other",
+          "statusName": "Conquer",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -295,14 +294,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "\"Mydeimos, Lance of Fury\" conquered %CasterName's soul and will take <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span> more DMG from %CasterName's attacks. After being defeated by targets, dispel \"Conquered\" on %CasterName.",
-          "type": "Other",
-          "statusName": "Conquer"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1774231954\">Monster_W4_HearsePart_Soul</a>[<span class=\"descriptionNumberColor\">Conquer</span>]",
+          "description": "\"The Giver, Master of Legions, Lance of Fury\" conquered %CasterName's soul and will take <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span> more DMG from %CasterName's attacks. After being defeated by targets, dispel \"Conquered\" on %CasterName.",
+          "type": "Other",
+          "statusName": "Conquer",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Hit",
@@ -377,14 +376,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "\"The Giver, Master of Legions, Lance of Fury\" conquered %CasterName's soul and will take <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span> more DMG from %CasterName's attacks. After being defeated by targets, dispel \"Conquered\" on %CasterName.",
-          "type": "Other",
-          "statusName": "Conquer"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__241895029\">Monster_W4_HearsePart_BlackBlood_Enhance</a>[<span class=\"descriptionNumberColor\">Conquered Eon</span>]",
+          "description": "Permanently reduces Max HP that can be restored by <span class=\"descriptionNumberColor\">MDF_DirtyHPRatio</span>.",
+          "type": "Other",
+          "effectName": "Conquered Eon",
+          "statusName": "Conquered Eon",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -407,15 +407,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Permanently reduces Max HP that can be restored by <span class=\"descriptionNumberColor\">MDF_DirtyHPRatio</span>.",
-          "type": "Other",
-          "effectName": "Conquered Eon",
-          "statusName": "Conquered Eon"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1382334396\">Monster_W4_HearsePart_BlackBlood</a>[<span class=\"descriptionNumberColor\">Conquered</span>]",
+          "description": "Decreases Maximum Restorable HP by <span class=\"descriptionNumberColor\">MDF_DirtyHPRatio</span>. You can reclaim a Tested Spirit by attacking the \"Conquer or Be Conquered\" corresponding to this unit.",
+          "type": "Other",
+          "effectName": "Conquered",
+          "statusName": "Conquered",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -438,11 +438,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Decreases Maximum Restorable HP by <span class=\"descriptionNumberColor\">MDF_DirtyHPRatio</span>. You can reclaim a Tested Spirit by attacking the \"Conquer or Be Conquered\" corresponding to this unit.",
-          "type": "Other",
-          "effectName": "Conquered",
-          "statusName": "Conquered"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1370,9 +1366,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

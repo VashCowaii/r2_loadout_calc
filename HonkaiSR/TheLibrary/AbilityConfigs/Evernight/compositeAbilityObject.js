@@ -5,37 +5,2044 @@ const compositeAbilityObject = {
   "summonName": "Evey",
   "trimSummonName": "Evey",
   "abilityList": [
+    "Evernight_Modifiers",
+    "Evernight_LocalPlayer_StandardAbility_AttackBreak",
+    "Evernight_LocalPlayer_Evernight_TechniqueUsage",
+    "Evernight_LocalPlayer_Evernight_NormalAtk01",
     "Evernight_Evernight_TechniqueInLevel",
     "Evernight_Evernight_PassiveAbility01",
-    "Evernight_Evernight_Ability03_Part02",
     "Evernight_Evernight_Ability03_Part02_Charge",
-    "Evernight_Evernight_Ability03_Servant_Damage",
+    "Evernight_Evernight_Ability03_Part02",
     "Evernight_Evernight_Ability03_Part01",
-    "Evernight_Evernight_Ability03_Servant",
     "Evernight_Evernight_Ability03_EnterReady",
     "Evernight_Evernight_Ability21_Part02",
-    "Evernight_Evernight_Ability02_Part02",
     "Evernight_Evernight_Ability21_Part01",
-    "Evernight_Evernight_Ability02_2_Servant",
-    "Evernight_Evernight_Ability02_Servant",
+    "Evernight_Evernight_Ability02_Part02",
     "Evernight_Evernight_Ability02_Part01",
     "Evernight_Evernight_Ability01_Part02",
     "Evernight_Evernight_Ability01_Part01",
-    "Evernight_Modifiers",
     "Evernight_Functions",
+    "Evey_Modifiers",
+    "Evey_Evernight_Ability03_Servant_Damage",
+    "Evey_Evernight_Ability03_Servant",
+    "Evey_Evernight_Ability02_2_Servant",
+    "Evey_Evernight_Ability02_Servant",
     "Evey_Servant_EvernightServant_DeathRattle",
     "Evey_Servant_EvernightServant_BattleCry",
+    "Evey_Servant_EvernightServant_PassiveAbility01_Resummon",
     "Evey_Servant_EvernightServant_PassiveAbility01",
+    "Evey_Servant_EvernightServant_Ability11_EnterReady",
     "Evey_Servant_EvernightServant_Ability12_Part02",
     "Evey_Servant_EvernightServant_Ability11_Part02",
     "Evey_Servant_EvernightServant_Ability11_Part01",
-    "Evey_Servant_EvernightServant_Ability11_EnterReady",
     "Evey_Servant_EvernightServant_Ability01_Part02",
     "Evey_Servant_EvernightServant_Ability01_Part01",
-    "Evey_Servant_EvernightServant_PassiveAbility01_Resummon",
-    "Evey_Modifiers"
+    "Evey_Functions"
   ],
   "abilityObject": {
+    "Evernight_Modifiers": {
+      "fileName": "Evernight_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__636196699\">ADV_StageAbility_Maze_Evernight_00</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1080789313\">Evernight_Weapon_Show_2</a>",
+          "stackType": "Replace",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1064011694\">Evernight_Weapon_Show_1</a>",
+          "stackType": "Replace",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "EnduranceLogicOnly",
+            500
+          ],
+          "description": "This unit and their memosprite are immune to Crowd Control debuffs, and the DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Darkest Riddle",
+          "statusName": "Darkest Riddle",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Join Targets",
+                "TargetList": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Caster's Memosprite}}"
+                  },
+                  {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  }
+                ]
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"778280081\">Evernight_UltraMode_Bonus</a>",
+              "aliveOnly": "True",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                  "displayLines": "MDF_PropertyValue",
+                  "constants": [],
+                  "variables": [
+                    "MDF_PropertyValue"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1347842886\">Evernight_UltraMode_Debuff</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+              "aliveOnly": "True",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
+                  "displayLines": "MDF_PropertyValue_2",
+                  "constants": [],
+                  "variables": [
+                    "MDF_PropertyValue_2"
+                  ]
+                }
+              }
+            }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Change Character UI",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Memosprite}}"
+                  },
+                  "icon": "11413.png"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Change Character UI",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Memosprite}}"
+                  },
+                  "icon": "11413_02.png"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1347842886\">Evernight_UltraMode_Debuff</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Darkest Riddle",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-967456061\">Evernight_UltraMode_Energy_0</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+          "description": "When Evernight's turn begins, she exits the \"Darkest Riddle\" state.",
+          "type": "Other",
+          "statusName": "Darkest Riddle",
+          "execute": [
+            {
+              "eventTrigger": "Turn Start [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-960144998\">Evernight_TryRemoveUltra_Flag</a>"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Memosprite}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-967456061\">Evernight_UltraMode_Energy_0</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-960144998\">Evernight_TryRemoveUltra_Flag</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+          "counter": 1,
+          "description": "The memosprite Evey consumes 1 Charge after it uses \"Dream, Dissolving, as Dew.\" When Evernight's turn begins, if no Charge remains, she exits the \"Darkest Riddle\" state.",
+          "type": "Other",
+          "statusName": "Darkest Riddle",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-967456061\">Evernight_UltraMode_Energy_0</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1643770860\">Evernight_UltraMode_Energy_Cost</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1643770860\">Evernight_UltraMode_Energy_Cost</a>"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "<a class=\"gModGreen\" id=\"339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+                        "compareType": ">",
+                        "value2": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Modifier Variable",
+                          "modifierName": null,
+                          "function": "Add"
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-967456061\">Evernight_UltraMode_Energy_0</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                        },
+                        "Modifier Deletes Itself"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1643770860\">Evernight_UltraMode_Energy_Cost</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1307478561\">Evernight_UltraMode_Effect</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Memosprite}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>",
+                  "casterAssign": "TargetSelf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1807727255\">Evernight_UltraMode_Effect_Normal</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-895132658\">Evernight_ServantTarget</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__132344239\">Evernight_Ability02_ChangeSkill</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityName": "Skill02",
+                  "skillSlot": "Skill",
+                  "enableSecondaryType": "ControlSkill02"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityName": "Skill21",
+                  "skillSlot": "Skill",
+                  "enableSecondaryType": "ControlSkill02"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1586544037\">Evernight_TryKillServant_Flag</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__778280081\">Evernight_UltraMode_Bonus</a>",
+          "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__645822293\">Evernight_Ability02_Bonus_PointB3</a>[<span class=\"descriptionNumberColor\">Kindle the Morn, Drop the Rain</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Kindle the Morn, Drop the Rain",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Day Gently Slips",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "MDF_CritBase",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_PropertyValue",
+                  "value": {
+                    "operator": "Variables[0] (MDF_Conv) || Variables[1] (MDF_CritBase) || MUL || RETURN",
+                    "displayLines": "(MDF_Conv * MDF_CritBase)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_Conv",
+                      "MDF_CritBase"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  },
+                  "isRefresh": true
+                }
+              ]
+            }
+          ],
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "MDF_PropertyValue",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "maxValue": 9999999,
+                  "includeMaxValueInRange": true,
+                  "whenValueChanges": [
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                        "displayLines": "MDF_PropertyValue",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyValue"
+                        ]
+                      },
+                      "isRefresh": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1894879081\">Evernight_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "While this effect persists, CRIT DMG increases for all ally memosprites.",
+          "type": "Other",
+          "statusName": "Day Gently Slips",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_Conv": {
+                  "operator": "Variables[0] (MDF_CritBase) || RETURN",
+                  "displayLines": "MDF_CritBase",
+                  "constants": [],
+                  "variables": [
+                    "MDF_CritBase"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"645822293\">Evernight_Ability02_Bonus_PointB3</a>[<span class=\"descriptionNumberColor\">Kindle the Morn, Drop the Rain</span>]",
+              "haloStatus": true,
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Trace Activated",
+                    "conditionList": "Kindle the Morn, Drop the Rain"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_PropertyValue",
+                    "compareType": ">",
+                    "value2": 0
+                  }
+                ]
+              },
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                  "displayLines": "MDF_PropertyValue",
+                  "constants": [],
+                  "variables": [
+                    "MDF_PropertyValue"
+                  ]
+                }
+              }
+            }
+          ],
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "S02_ExtraRatio",
+              "from": "ContextCaster",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "variableName": "MDF_CritBase",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Conv",
+                      "value": {
+                        "operator": "Variables[0] (0.24) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
+                        "displayLines": "(0.24 + S02_ExtraRatio)",
+                        "constants": [],
+                        "variables": [
+                          0.24,
+                          "S02_ExtraRatio"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_TMP_NEW_VAL",
+                      "value": {
+                        "operator": "Variables[0] (MDF_Conv) || Variables[1] (MDF_CritBase) || MUL || RETURN",
+                        "displayLines": "(MDF_Conv * MDF_CritBase)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Conv",
+                          "MDF_CritBase"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]"
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Modifier-Specific Variable",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifierName": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+                              "variableName": "MDF_PropertyValue",
+                              "value": {
+                                "operator": "Variables[0] (_TMP_NEW_VAL) || RETURN",
+                                "displayLines": "_TMP_NEW_VAL",
+                                "constants": [],
+                                "variables": [
+                                  "_TMP_NEW_VAL"
+                                ]
+                              }
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+                              "valuePerStack": {
+                                "MDF_Conv": {
+                                  "operator": "Variables[0] (MDF_CritBase) || RETURN",
+                                  "displayLines": "MDF_CritBase",
+                                  "constants": [],
+                                  "variables": [
+                                    "MDF_CritBase"
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "variableName": "MDF_CritBase",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_TMP_NEW_VAL",
+                      "value": {
+                        "operator": "Variables[0] (MDF_Conv) || Variables[1] (MDF_CritBase) || MUL || RETURN",
+                        "displayLines": "(MDF_Conv * MDF_CritBase)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Conv",
+                          "MDF_CritBase"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]"
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Modifier-Specific Variable",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifierName": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+                              "variableName": "MDF_PropertyValue",
+                              "value": {
+                                "operator": "Variables[0] (_TMP_NEW_VAL) || RETURN",
+                                "displayLines": "_TMP_NEW_VAL",
+                                "constants": [],
+                                "variables": [
+                                  "_TMP_NEW_VAL"
+                                ]
+                              }
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+                              "valuePerStack": {
+                                "MDF_Conv": {
+                                  "operator": "Variables[0] (MDF_CritBase) || RETURN",
+                                  "displayLines": "MDF_CritBase",
+                                  "constants": [],
+                                  "variables": [
+                                    "MDF_CritBase"
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Listen Up, the Slumber Speaks Soft",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "With Me, This Night",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1356856923\">Evernight_HPChange_Trigger</a>",
+          "stackType": "Replace",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
+                  "duration": {
+                    "operator": "Variables[0] (2) || RETURN",
+                    "displayLines": "2",
+                    "constants": [],
+                    "variables": [
+                      2
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (0.6) || RETURN",
+                      "displayLines": "0.6",
+                      "constants": [],
+                      "variables": [
+                        0.6
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Memosprite}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
+                  "duration": {
+                    "operator": "Variables[0] (2) || RETURN",
+                    "displayLines": "2",
+                    "constants": [],
+                    "variables": [
+                      2
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (0.6) || RETURN",
+                      "displayLines": "0.6",
+                      "constants": [],
+                      "variables": [
+                        0.6
+                      ]
+                    }
+                  }
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__86729012\">Evernight_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">Wake Up, the Tomorrow is Yours</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Wake Up, the Tomorrow is Yours",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Memosprite}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_PropertyValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyValue_1) || Variables[1] (MDF_PropertyValue_2) || ADD || RETURN",
+                        "displayLines": "(MDF_PropertyValue_1 + MDF_PropertyValue_2)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyValue_1",
+                          "MDF_PropertyValue_2"
+                        ]
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_PropertyValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyValue_1) || RETURN",
+                        "displayLines": "MDF_PropertyValue_1",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyValue_1"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__376015846\">Evernight_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">Like This, Always</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Like This, Always",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2043260870\">Evernight_HPChange</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Action Choice Window [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Check_isHeal",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Dealt Damage while Crowd/Mind Controlled [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_Check_isCharmAttack",
+                    "compareType": "=",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Check_isCharmAttack",
+                      "value": 1
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Check_isAttack",
+                      "value": 1
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -100
+            },
+            {
+              "eventTrigger": "Dealt Damage (END) while Crowd/Mind Controlled [Anyone]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Check_isCharmAttack",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Check_isAttack",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Turn End [Anyone]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Check_isAttack",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Check_AttackStart",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Check_isHeal",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Entity a Battle Event/Summon",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_Check_AttackStart",
+                        "compareType": "<",
+                        "value2": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_Check_isAttack",
+                          "value": 1
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Check_AttackStart",
+                      "value": 1
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Check_isAttack",
+                      "value": 1
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Attack Type",
+                        "attackTypes": [
+                          "DOT",
+                          "Additional DMG"
+                        ],
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      },
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "MDF_Check_AttackStart",
+                            "compareType": "<",
+                            "value2": 1
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "MDF_Check_isAttack",
+                              "value": 1
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Receiving Heal Start [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Healing",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_HealValue"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_HealValue",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Check_isHeal",
+                      "value": 1
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": 200
+            },
+            {
+              "eventTrigger": "Receiving Heal End [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Check_isHeal",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "HP Change [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_Check_isHeal",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "ParameterValue",
+                        "compareType": "<",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "MDF_Check_isAttack",
+                            "compareType": "<",
+                            "value2": 1
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "MDF_Check_AttackStart",
+                              "value": 0
+                            },
+                            {
+                              "name": "Define Custom Variable with Added Value",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "variableName": "_Partner_Count_Show",
+                              "value": {
+                                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_Evernight_00_Extra_Energy) || ADD || RETURN",
+                                "displayLines": "(MDF_PropertyValue + _Evernight_00_Extra_Energy)",
+                                "constants": [],
+                                "variables": [
+                                  "MDF_PropertyValue",
+                                  "_Evernight_00_Extra_Energy"
+                                ]
+                              }
+                            },
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Compare: Target Count",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster's Memosprite}}"
+                                },
+                                "compareType": ">",
+                                "value2": 0,
+                                "livingTargets": true
+                              },
+                              "passed": [
+                                {
+                                  "name": "Define Custom Variable with Added Value",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster's Memosprite}}"
+                                  },
+                                  "variableName": "_Partner_Count",
+                                  "context": "TargetEntity",
+                                  "value": {
+                                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_Evernight_00_Extra_Energy) || ADD || RETURN",
+                                    "displayLines": "(MDF_PropertyValue + _Evernight_00_Extra_Energy)",
+                                    "constants": [],
+                                    "variables": [
+                                      "MDF_PropertyValue",
+                                      "_Evernight_00_Extra_Energy"
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1356856923\">Evernight_HPChange_Trigger</a>",
+                              "casterAssign": "TargetSelf"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Attacked Start [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Check_AttackStart",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Check_isAttack",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Check_AttackStart",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1710373270\">Evernight_PointB1_Crit</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "description": "CRIT Rate increases <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Dark the Night, Still the Moon",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1910251570\">Evernight_SummonServantPreshow</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "entityType": "Servant",
+            "entityID": 11413,
+            "skillType": [
+              "Skill",
+              "Ultimate"
+            ],
+            "conditions": {
+              "name": "Compare: Target Count",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
+              "compareType": "<=",
+              "value2": 0,
+              "livingTargets": true
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": "0(Set AV)"
+            }
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "Dark the Night, Still the Moon",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__720331211\">Evernight_PointB1_Servant</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Owner]: Start",
+              "execute": [
+                {
+                  "name": "Consume",
+                  "consumeFrom": "CurrentHP",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "consumePercent": {
+                    "operator": "Variables[0] (MDF_Cost) || RETURN",
+                    "displayLines": "MDF_Cost",
+                    "constants": [],
+                    "variables": [
+                      "MDF_Cost"
+                    ]
+                  },
+                  "consumeFloor": 1,
+                  "attackType": "Unknown"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+                  "duration": {
+                    "operator": "Variables[0] (MDF_LifeTime) || RETURN",
+                    "displayLines": "MDF_LifeTime",
+                    "constants": [],
+                    "variables": [
+                      "MDF_LifeTime"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                      "displayLines": "MDF_PropertyValue",
+                      "constants": [],
+                      "variables": [
+                        "MDF_PropertyValue"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Memosprite}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+                  "duration": {
+                    "operator": "Variables[0] (MDF_LifeTime) || RETURN",
+                    "displayLines": "MDF_LifeTime",
+                    "constants": [],
+                    "variables": [
+                      "MDF_LifeTime"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                      "displayLines": "MDF_PropertyValue",
+                      "constants": [],
+                      "variables": [
+                        "MDF_PropertyValue"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__557640561\">Evernight_PointB1_Aura</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"720331211\">Evernight_PointB1_Servant</a>",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                  "displayLines": "MDF_PropertyValue",
+                  "constants": [],
+                  "variables": [
+                    "MDF_PropertyValue"
+                  ]
+                },
+                "MDF_Cost": {
+                  "operator": "Variables[0] (MDF_Cost) || RETURN",
+                  "displayLines": "MDF_Cost",
+                  "constants": [],
+                  "variables": [
+                    "MDF_Cost"
+                  ]
+                },
+                "MDF_LifeTime": {
+                  "operator": "Variables[0] (MDF_LifeTime) || RETURN",
+                  "displayLines": "MDF_LifeTime",
+                  "constants": [],
+                  "variables": [
+                    "MDF_LifeTime"
+                  ]
+                }
+              }
+            }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Owner]: Start",
+              "execute": [
+                {
+                  "name": "Consume",
+                  "consumeFrom": "CurrentHP",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "consumePercent": {
+                    "operator": "Variables[0] (MDF_Cost) || RETURN",
+                    "displayLines": "MDF_Cost",
+                    "constants": [],
+                    "variables": [
+                      "MDF_Cost"
+                    ]
+                  },
+                  "consumeFloor": 1,
+                  "attackType": "Unknown"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+                  "duration": {
+                    "operator": "Variables[0] (MDF_LifeTime) || RETURN",
+                    "displayLines": "MDF_LifeTime",
+                    "constants": [],
+                    "variables": [
+                      "MDF_LifeTime"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                      "displayLines": "MDF_PropertyValue",
+                      "constants": [],
+                      "variables": [
+                        "MDF_PropertyValue"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Memosprite}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1391660847\">Evernight_PointB1_Bonus</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+                  "duration": {
+                    "operator": "Variables[0] (MDF_LifeTime) || RETURN",
+                    "displayLines": "MDF_LifeTime",
+                    "constants": [],
+                    "variables": [
+                      "MDF_LifeTime"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                      "displayLines": "MDF_PropertyValue",
+                      "constants": [],
+                      "variables": [
+                        "MDF_PropertyValue"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "Evernight_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Evernight_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Evernight_LocalPlayer_Evernight_TechniqueUsage": {
+      "fileName": "Evernight_LocalPlayer_Evernight_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "141301(SkillMaze)",
+          "duration": -1
+        },
+        "Submit Technique Use"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Evernight_LocalPlayer_Evernight_NormalAtk01": {
+      "fileName": "Evernight_LocalPlayer_Evernight_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "failed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
     "Evernight_Evernight_TechniqueInLevel": {
       "fileName": "Evernight_Evernight_TechniqueInLevel",
       "childAbilityList": [
@@ -298,9 +2305,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -673,9 +2678,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -999,9 +3002,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1009,9 +3010,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "EnduranceLogicOnly",
             500
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1153,13 +3152,14 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -92
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1315509793\">Evernight_PointB2_EnterBattle</a>",
+          "latentQueue": [
+            "_Evernight_PL_Layer"
+          ],
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -1228,15 +3228,14 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_Evernight_PL_Layer"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__531716506\">Evernight_Eidolon1_ListenDamage</a>",
+          "latentQueue": [
+            "_Evernight_PL_Layer"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Anyone]: Any",
@@ -1415,16 +3414,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_Evernight_PL_Layer"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1433121158\">Evernight_Eidolon4_Aura</a>",
-          "stackData": [],
           "latentQueue": [
             "_Evernight_PL_Layer"
           ],
@@ -1461,7 +3455,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1327507720\">Evernight_Eidolon6_Aura</a>",
-          "stackData": [],
           "latentQueue": [
             "_Evernight_PL_Layer"
           ],
@@ -1490,6 +3483,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1224536114\">Evernight_ViewMode_Control</a>",
+          "latentQueue": [
+            "_Evernight_PL_Layer"
+          ],
           "execute": [
             {
               "eventTrigger": "Enter View-Mode [Anyone]",
@@ -1519,10 +3515,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_Evernight_PL_Layer"
           ]
         },
         {
@@ -1580,15 +3572,35 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
       "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Evernight_Evernight_Ability03_Part02_Charge": {
+      "fileName": "Evernight_Evernight_Ability03_Part02_Charge",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "valuePercent": 1,
+          "ofAbilitySplit": true,
+          "isFixed": "* ERR"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
     },
@@ -1770,87 +3782,9 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1950285194\">Evernight_S03</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1950285194\">Evernight_S03</a>"
         }
       ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Evernight_Evernight_Ability03_Part02_Charge": {
-      "fileName": "Evernight_Evernight_Ability03_Part02_Charge",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "valuePercent": 1,
-          "ofAbilitySplit": true,
-          "isFixed": "* ERR"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Evernight_Evernight_Ability03_Servant_Damage": {
-      "fileName": "Evernight_Evernight_Ability03_Servant_Damage",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}.[[getSummoner]]"
-          },
-          "ability": "Evernight_Ability03_Part02_Charge",
-          "isTrigger": true
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (_Skill03_P1_DamagePercentage) || RETURN",
-              "displayLines": "_Skill03_P1_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "_Skill03_P1_DamagePercentage"
-              ]
-            },
-            "dmgFormula": "Max HP Scaling",
-            "Toughness": {
-              "operator": "Variables[0] (_Skill03_Stance) || RETURN",
-              "displayLines": "_Skill03_Stance",
-              "constants": [],
-              "variables": [
-                "_Skill03_Stance"
-              ]
-            },
-            "ToughnessDMGType": {
-              "DamageType": "Ice"
-            },
-            "Tags": null,
-            "attackType": "Ultimate"
-          }
-        },
-        "Trigger: Attack End"
-      ],
-      "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
@@ -1898,152 +3832,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Evernight_Evernight_Ability03_Servant": {
-      "fileName": "Evernight_Evernight_Ability03_Servant",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"294638745\">function_Evernight_Group_SizeControl_Perf</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
-        },
-        "Deleted bullshit",
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_Partner_Count",
-            "compareType": "<",
-            "value2": {
-              "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (4) || MUL || RETURN",
-              "displayLines": "(_Partner_CountThresHold * 4)",
-              "constants": [
-                4
-              ],
-              "variables": [
-                "_Partner_CountThresHold"
-              ]
-            }
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_Partner_Count",
-            "compareType": "<",
-            "value2": {
-              "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (3) || MUL || RETURN",
-              "displayLines": "(_Partner_CountThresHold * 3)",
-              "constants": [
-                3
-              ],
-              "variables": [
-                "_Partner_CountThresHold"
-              ]
-            }
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_Partner_Count",
-            "compareType": "<",
-            "value2": {
-              "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (2) || MUL || RETURN",
-              "displayLines": "(_Partner_CountThresHold * 2)",
-              "constants": [
-                2
-              ],
-              "variables": [
-                "_Partner_CountThresHold"
-              ]
-            }
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_Partner_Count",
-            "compareType": "<",
-            "value2": {
-              "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (1) || MUL || RETURN",
-              "displayLines": "(_Partner_CountThresHold * 1)",
-              "constants": [
-                1
-              ],
-              "variables": [
-                "_Partner_CountThresHold"
-              ]
-            }
-          }
-        }
-      ],
-      "functions": [
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__-367389928\">Evernight_Ability03_TriggerAnim_Man</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__431919247\">Evernight_Ability03_TriggerAnim_01</a>",
-          "parse": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
-            }
-          ]
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__448696866\">Evernight_Ability03_TriggerAnim_02</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__465474485\">Evernight_Ability03_TriggerAnim_03</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__348031152\">Evernight_Ability03_TriggerAnim_04</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__364808771\">Evernight_Ability03_TriggerAnim_05</a>",
-          "parse": []
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
       }
     },
     "Evernight_Evernight_Ability03_EnterReady": {
@@ -2480,6 +4268,100 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Ability Target List}}"
       }
     },
+    "Evernight_Evernight_Ability21_Part01": {
+      "fileName": "Evernight_Evernight_Ability21_Part01",
+      "childAbilityList": [
+        "Evernight_Evernight_Ability21_Part01",
+        "Evernight_Evernight_Ability21_Part02"
+      ],
+      "skillTrigger": "Skill21",
+      "abilityType": "Skill",
+      "energy": 30,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"1349241137\">function_Evernight_Group_SizeControl_Perf2</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+          },
+          "passed": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
+              "ability": "Evernight_Ability02_2_Servant",
+              "isTrigger": true
+            },
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "ability": "Evernight_Ability21_Part02",
+              "isTrigger": true
+            },
+            "Deleted bullshit",
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>",
+              "casterAssign": "TargetSelf"
+            }
+          ],
+          "failed": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
+              "ability": "Evernight_Ability02_Servant",
+              "isTrigger": true
+            },
+            "Deleted bullshit",
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "ability": "Evernight_Ability21_Part02",
+              "isTrigger": true
+            }
+          ]
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1393796287\">function_Evernight_Group_SizeControl_STB2</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "Evernight_Evernight_Ability02_Part02": {
       "fileName": "Evernight_Evernight_Ability02_Part02",
       "abilityType": null,
@@ -2914,274 +4796,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Ability Target List}}"
       }
     },
-    "Evernight_Evernight_Ability21_Part01": {
-      "fileName": "Evernight_Evernight_Ability21_Part01",
-      "childAbilityList": [
-        "Evernight_Evernight_Ability21_Part01",
-        "Evernight_Evernight_Ability21_Part02"
-      ],
-      "skillTrigger": "Skill21",
-      "abilityType": "Skill",
-      "energy": 30,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"1349241137\">function_Evernight_Group_SizeControl_Perf2</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
-          },
-          "passed": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster's Memosprite}}"
-              },
-              "ability": "Evernight_Ability02_2_Servant",
-              "isTrigger": true
-            },
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "ability": "Evernight_Ability21_Part02",
-              "isTrigger": true
-            },
-            "Deleted bullshit",
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>",
-              "casterAssign": "TargetSelf"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster's Memosprite}}"
-              },
-              "ability": "Evernight_Ability02_Servant",
-              "isTrigger": true
-            },
-            "Deleted bullshit",
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "ability": "Evernight_Ability21_Part02",
-              "isTrigger": true
-            }
-          ]
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-1393796287\">function_Evernight_Group_SizeControl_STB2</a>"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Evernight_Evernight_Ability02_2_Servant": {
-      "fileName": "Evernight_Evernight_Ability02_2_Servant",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
-        },
-        {
-          "name": "Trigger Multiple Functions",
-          "variables": {},
-          "functionList": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-293387564\">Evernight_Ability02_2_TriggerAnim_Pos</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"448281105\">Evernight_Ability02_2_TriggerAnim_01</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"397948248\">Evernight_Ability02_2_TriggerAnim_02</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"414725867\">Evernight_Ability02_2_TriggerAnim_03</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"498613962\">Evernight_Ability02_2_TriggerAnim_04</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"515391581\">Evernight_Ability02_2_TriggerAnim_05</a>"
-            }
-          ]
-        }
-      ],
-      "functions": [
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__-293387564\">Evernight_Ability02_2_TriggerAnim_Pos</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__448281105\">Evernight_Ability02_2_TriggerAnim_01</a>",
-          "parse": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
-            }
-          ]
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__397948248\">Evernight_Ability02_2_TriggerAnim_02</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__414725867\">Evernight_Ability02_2_TriggerAnim_03</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__498613962\">Evernight_Ability02_2_TriggerAnim_04</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__515391581\">Evernight_Ability02_2_TriggerAnim_05</a>",
-          "parse": []
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "Evernight_Evernight_Ability02_Servant": {
-      "fileName": "Evernight_Evernight_Ability02_Servant",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
-        },
-        {
-          "name": "Trigger Multiple Functions",
-          "variables": {},
-          "functionList": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"462618785\">Evernight_Ability02_TriggerAnim_Pos</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1560757358\">Evernight_Ability02_TriggerAnim_01</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1577534977\">Evernight_Ability02_TriggerAnim_02</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1594312596\">Evernight_Ability02_TriggerAnim_03</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1611090215\">Evernight_Ability02_TriggerAnim_04</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1627867834\">Evernight_Ability02_TriggerAnim_05</a>"
-            }
-          ]
-        }
-      ],
-      "functions": [
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__462618785\">Evernight_Ability02_TriggerAnim_Pos</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1560757358\">Evernight_Ability02_TriggerAnim_01</a>",
-          "parse": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
-            }
-          ]
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1577534977\">Evernight_Ability02_TriggerAnim_02</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1594312596\">Evernight_Ability02_TriggerAnim_03</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1611090215\">Evernight_Ability02_TriggerAnim_04</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1627867834\">Evernight_Ability02_TriggerAnim_05</a>",
-          "parse": []
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
     "Evernight_Evernight_Ability02_Part01": {
       "fileName": "Evernight_Evernight_Ability02_Part01",
       "childAbilityList": [
@@ -3398,8 +5012,310 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       }
     },
-    "Evernight_Modifiers": {
-      "fileName": "Evernight_Modifiers",
+    "Evernight_Functions": {
+      "fileName": "Evernight_Functions",
+      "abilityType": "Char. Functions",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "length": 8,
+      "parse": [
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1711321550\">function_Evernight_Group_FollowControl_00</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1551336747\">function_Evernight_Group_FollowControl_STB</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__724548436\">function_Evernight_Group_FollowControl_ViewMode</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1946909591\">function_Evernight_Group_SizeControl_STB</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1393796287\">function_Evernight_Group_SizeControl_STB2</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1349241137\">function_Evernight_Group_SizeControl_Perf2</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__294638745\">function_Evernight_Group_SizeControl_Perf</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1497424763\">function_Evernight_TryCreateServant</a>",
+          "parse": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target Count",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster's Memosprite}}"
+                },
+                "compareType": "<=",
+                "value2": 0,
+                "livingTargets": true
+              },
+              "passed": [
+                {
+                  "name": "Summon Memosprite",
+                  "memoID": 11413,
+                  "valuePerStack": {
+                    "Init_Count": {
+                      "operator": "Variables[0] (DV_Partner_Count) || RETURN",
+                      "displayLines": "DV_Partner_Count",
+                      "constants": [],
+                      "variables": [
+                        "DV_Partner_Count"
+                      ]
+                    },
+                    "Init_HP_Ratio": {
+                      "operator": "Variables[0] (DV_HP_Ratio) || RETURN",
+                      "displayLines": "DV_HP_Ratio",
+                      "constants": [],
+                      "variables": [
+                        "DV_HP_Ratio"
+                      ]
+                    },
+                    "Init_Delay": {
+                      "operator": "Variables[0] (DV_Delay) || RETURN",
+                      "displayLines": "DV_Delay",
+                      "constants": [],
+                      "variables": [
+                        "DV_Delay"
+                      ]
+                    },
+                    "AbilityP01_P1_AddCount": {
+                      "operator": "Variables[0] (2) || RETURN",
+                      "displayLines": "2",
+                      "constants": [],
+                      "variables": [
+                        2
+                      ]
+                    },
+                    "_Evernight_Extra_Energy": {
+                      "operator": "Variables[0] (2) || RETURN",
+                      "displayLines": "2",
+                      "constants": [],
+                      "variables": [
+                        2
+                      ]
+                    },
+                    "AbilityRank_Eidolon6_P1_Ratio": {
+                      "operator": "Variables[0] (0.3) || RETURN",
+                      "displayLines": "0.3",
+                      "constants": [],
+                      "variables": [
+                        0.3
+                      ]
+                    }
+                  },
+                  "afterSummon": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_Evernight_00_DeathRattle_Layer",
+                      "value": 0
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Trace Activated",
+                        "conditionList": "Dark the Night, Still the Moon",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1710373270\">Evernight_PointB1_Crit</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.35) || RETURN",
+                              "displayLines": "0.35",
+                              "constants": [],
+                              "variables": [
+                                0.35
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Eidolon Activated",
+                        "eidolon": 2,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.4) || RETURN",
+                              "displayLines": "0.4",
+                              "constants": [],
+                              "variables": [
+                                0.4
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"2043260870\">Evernight_HPChange</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (2) || RETURN",
+                          "displayLines": "2",
+                          "constants": [],
+                          "variables": [
+                            2
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "DV_Partner_Count",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (_Partner_Count_Max) || RETURN",
+                          "displayLines": "_Partner_Count_Max",
+                          "constants": [],
+                          "variables": [
+                            "_Partner_Count_Max"
+                          ]
+                        }
+                      },
+                      "failed": [
+                        {
+                          "name": "Force Auto-Battle on Target",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "enable": true
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"132344239\">Evernight_Ability02_ChangeSkill</a>"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                      },
+                      "passed": [
+                        {
+                          "name": "Change Character UI",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "icon": "11413_02.png"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>",
+                            "invertCondition": true
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>",
+                          "casterAssign": "TargetSelf"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "Evey_Modifiers": {
+      "fileName": "Evey_Modifiers",
       "abilityType": "Char. Modifiers",
       "energy": null,
       "toughnessList": [
@@ -3436,39 +5352,6 @@ const compositeAbilityObject = {
             "EnduranceLogicOnly",
             500
           ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Change Character UI",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Memosprite}}"
-                  },
-                  "icon": "11413.png"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Change Character UI",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Memosprite}}"
-                  },
-                  "icon": "11413_02.png"
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_PropertyValue_2"
-          ],
-          "latentQueue": [],
           "description": "This unit and their memosprite are immune to Crowd Control debuffs, and the DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Buff",
           "effectName": "Darkest Riddle",
@@ -3523,6 +5406,34 @@ const compositeAbilityObject = {
                 }
               }
             }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Change Character UI",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Memosprite}}"
+                  },
+                  "icon": "11413.png"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Change Character UI",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Memosprite}}"
+                  },
+                  "icon": "11413_02.png"
+                }
+              ]
+            }
           ]
         },
         {
@@ -3531,6 +5442,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Darkest Riddle",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3553,19 +5471,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Darkest Riddle"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-967456061\">Evernight_UltraMode_Energy_0</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
+          "description": "When Evernight's turn begins, she exits the \"Darkest Riddle\" state.",
+          "type": "Other",
+          "statusName": "Darkest Riddle",
           "execute": [
             {
               "eventTrigger": "Turn Start [Anyone]",
@@ -3636,10 +5549,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When Evernight's turn begins, she exits the \"Darkest Riddle\" state.",
-          "type": "Other",
-          "statusName": "Darkest Riddle"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3649,6 +5559,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__339150756\">Evernight_UltraMode_Energy</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]",
           "counter": 1,
+          "description": "The memosprite Evey consumes 1 Charge after it uses \"Dream, Dissolving, as Dew.\" When Evernight's turn begins, if no Charge remains, she exits the \"Darkest Riddle\" state.",
+          "type": "Other",
+          "statusName": "Darkest Riddle",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3720,12 +5633,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The memosprite Evey consumes 1 Charge after it uses \"Dream, Dissolving, as Dew.\" When Evernight's turn begins, if no Charge remains, she exits the \"Darkest Riddle\" state.",
-          "type": "Other",
-          "statusName": "Darkest Riddle"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3753,9 +5661,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3767,18 +5673,14 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-895132658\">Evernight_ServantTarget</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3794,7 +5696,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "abilityName": "Skill02",
-                  "skillSlot": "Skill",
+                  "skillSlot": "Basic ATK",
                   "enableSecondaryType": "ControlSkill02"
                 }
               ]
@@ -3809,7 +5711,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "abilityName": "Skill21",
-                  "skillSlot": "Skill",
+                  "skillSlot": "Basic ATK",
                   "enableSecondaryType": "ControlSkill02"
                 }
               ]
@@ -3824,6 +5726,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__778280081\">Evernight_UltraMode_Bonus</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3846,11 +5751,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3859,6 +5760,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Kindle the Morn, Drop the Rain",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3881,10 +5785,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Kindle the Morn, Drop the Rain"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3893,6 +5794,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Day Gently Slips",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3971,16 +5875,71 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Day Gently Slips"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1894879081\">Evernight_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "While this effect persists, CRIT DMG increases for all ally memosprites.",
+          "type": "Other",
+          "statusName": "Day Gently Slips",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_Conv": {
+                  "operator": "Variables[0] (MDF_CritBase) || RETURN",
+                  "displayLines": "MDF_CritBase",
+                  "constants": [],
+                  "variables": [
+                    "MDF_CritBase"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"645822293\">Evernight_Ability02_Bonus_PointB3</a>[<span class=\"descriptionNumberColor\">Kindle the Morn, Drop the Rain</span>]",
+              "haloStatus": true,
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Trace Activated",
+                    "conditionList": "PointB3"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_PropertyValue",
+                    "compareType": ">",
+                    "value2": 0
+                  }
+                ]
+              },
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                  "displayLines": "MDF_PropertyValue",
+                  "constants": [],
+                  "variables": [
+                    "MDF_PropertyValue"
+                  ]
+                }
+              }
+            }
+          ],
           "variableValueChange": [
             {
               "name": "Variable Value Changes",
@@ -4003,11 +5962,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_Conv",
                       "value": {
-                        "operator": "Variables[0] (0.24) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
-                        "displayLines": "(0.24 + S02_ExtraRatio)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_7132) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_7132 + S02_ExtraRatio)",
                         "constants": [],
                         "variables": [
-                          0.24,
+                          "UnusedUnderThisBase_7132",
                           "S02_ExtraRatio"
                         ]
                       }
@@ -4182,77 +6141,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Conv",
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "_S02_Char_Count"
-          ],
-          "description": "While this effect persists, CRIT DMG increases for all ally memosprites.",
-          "type": "Other",
-          "statusName": "Day Gently Slips",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1355223559\">Evernight_Ability02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_Conv": {
-                  "operator": "Variables[0] (MDF_CritBase) || RETURN",
-                  "displayLines": "MDF_CritBase",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CritBase"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"645822293\">Evernight_Ability02_Bonus_PointB3</a>[<span class=\"descriptionNumberColor\">Kindle the Morn, Drop the Rain</span>]",
-              "haloStatus": true,
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Trace Activated",
-                    "conditionList": "Kindle the Morn, Drop the Rain"
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_PropertyValue",
-                    "compareType": ">",
-                    "value2": 0
-                  }
-                ]
-              },
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
-                }
-              }
-            }
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Listen Up, the Slumber Speaks Soft",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4275,19 +6172,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Listen Up, the Slumber Speaks Soft"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "With Me, This Night",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4310,11 +6204,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "With Me, This Night"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4332,20 +6222,20 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
+                    "operator": "Variables[0] (UnusedUnderThisBase_4660) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_4660",
                     "constants": [],
                     "variables": [
-                      2
+                      "UnusedUnderThisBase_4660"
                     ]
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
+                      "operator": "Variables[0] (3) || RETURN",
+                      "displayLines": "3",
                       "constants": [],
                       "variables": [
-                        0.6
+                        3
                       ]
                     }
                   }
@@ -4358,20 +6248,20 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
                   "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
+                    "operator": "Variables[0] (UnusedUnderThisBase_4660) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_4660",
                     "constants": [],
                     "variables": [
-                      2
+                      "UnusedUnderThisBase_4660"
                     ]
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
+                      "operator": "Variables[0] (3) || RETURN",
+                      "displayLines": "3",
                       "constants": [],
                       "variables": [
-                        0.6
+                        3
                       ]
                     }
                   }
@@ -4388,6 +6278,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Wake Up, the Tomorrow is Yours",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4453,17 +6346,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue_1",
-            "MDF_PropertyValue_2"
-          ],
-          "latentQueue": [
-            "_Evernight_PL_Layer"
-          ],
-          "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Wake Up, the Tomorrow is Yours"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4472,6 +6355,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Like This, Always",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4494,16 +6380,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "_Evernight_PL_Layer"
-          ],
-          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Like This, Always"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4835,12 +6712,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "_Evernight_PL_Layer"
           ]
         },
         {
@@ -4849,6 +6720,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "CRIT Rate increases <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Dark the Night, Still the Moon",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4871,20 +6745,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "CRIT Rate increases <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Dark the Night, Still the Moon"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1910251570\">Evernight_SummonServantPreshow</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -4917,6 +6782,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "Dark the Night, Still the Moon",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4939,11 +6808,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "Dark the Night, Still the Moon"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5032,6 +6897,43 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__557640561\">Evernight_PointB1_Aura</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"720331211\">Evernight_PointB1_Servant</a>",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                  "displayLines": "MDF_PropertyValue",
+                  "constants": [],
+                  "variables": [
+                    "MDF_PropertyValue"
+                  ]
+                },
+                "MDF_Cost": {
+                  "operator": "Variables[0] (MDF_Cost) || RETURN",
+                  "displayLines": "MDF_Cost",
+                  "constants": [],
+                  "variables": [
+                    "MDF_Cost"
+                  ]
+                },
+                "MDF_LifeTime": {
+                  "operator": "Variables[0] (MDF_LifeTime) || RETURN",
+                  "displayLines": "MDF_LifeTime",
+                  "constants": [],
+                  "variables": [
+                    "MDF_LifeTime"
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -5108,348 +7010,469 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_Cost",
-            "MDF_LifeTime"
-          ],
-          "latentQueue": [],
-          "subModList": [
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1418513049\">Memosprite_EvernightServant_TriggerDeathrattle</a>",
+          "execute": [
             {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Memosprite}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"720331211\">Evernight_PointB1_Servant</a>",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
-                },
-                "MDF_Cost": {
-                  "operator": "Variables[0] (MDF_Cost) || RETURN",
-                  "displayLines": "MDF_Cost",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Cost"
-                  ]
-                },
-                "MDF_LifeTime": {
-                  "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                  "displayLines": "MDF_LifeTime",
-                  "constants": [],
-                  "variables": [
-                    "MDF_LifeTime"
-                  ]
+              "eventTrigger": "Got a Queued Kill [Owner]",
+              "execute": [
+                {
+                  "name": "Update Energy",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "value": 10,
+                  "isFixed": "* ERR"
                 }
-              }
+              ]
             }
           ]
-        }
-      ],
-      "references": []
-    },
-    "Evernight_Functions": {
-      "fileName": "Evernight_Functions",
-      "abilityType": "Char. Functions",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "length": 8,
-      "parse": [
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1711321550\">function_Evernight_Group_FollowControl_00</a>",
-          "parse": []
         },
         {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1551336747\">function_Evernight_Group_FollowControl_STB</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__724548436\">function_Evernight_Group_FollowControl_ViewMode</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1946909591\">function_Evernight_Group_SizeControl_STB</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1393796287\">function_Evernight_Group_SizeControl_STB2</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__1349241137\">function_Evernight_Group_SizeControl_Perf2</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__294638745\">function_Evernight_Group_SizeControl_Perf</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__1497424763\">function_Evernight_TryCreateServant</a>",
-          "parse": [
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__683715754\">Memosprite_EvernightServant_TriggerNormal</a>",
+          "execute": [
             {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target Count",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster's Memosprite}}"
-                },
-                "compareType": "<=",
-                "value2": 0,
-                "livingTargets": true
-              },
-              "passed": [
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
                 {
-                  "name": "Summon Memosprite",
-                  "memoID": 11413,
-                  "valuePerStack": {
-                    "Init_Count": {
-                      "operator": "Variables[0] (DV_Partner_Count) || RETURN",
-                      "displayLines": "DV_Partner_Count",
-                      "constants": [],
-                      "variables": [
-                        "DV_Partner_Count"
-                      ]
-                    },
-                    "Init_HP_Ratio": {
-                      "operator": "Variables[0] (DV_HP_Ratio) || RETURN",
-                      "displayLines": "DV_HP_Ratio",
-                      "constants": [],
-                      "variables": [
-                        "DV_HP_Ratio"
-                      ]
-                    },
-                    "Init_Delay": {
-                      "operator": "Variables[0] (DV_Delay) || RETURN",
-                      "displayLines": "DV_Delay",
-                      "constants": [],
-                      "variables": [
-                        "DV_Delay"
-                      ]
-                    },
-                    "AbilityP01_P1_AddCount": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
-                    },
-                    "_Evernight_Extra_Energy": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
-                    },
-                    "AbilityRank_Eidolon6_P1_Ratio": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
-                    }
+                  "name": "Define Custom Variable (VFX)",
+                  "variableName": "_TriggerNormal_Cutin",
+                  "value": 0
+                },
+                {
+                  "name": "Force Auto-Battle on Target",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
                   },
-                  "afterSummon": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_Evernight_00_DeathRattle_Layer",
-                      "value": 0
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Trace Activated",
-                        "conditionList": "Dark the Night, Still the Moon",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1710373270\">Evernight_PointB1_Crit</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.35) || RETURN",
-                              "displayLines": "0.35",
-                              "constants": [],
-                              "variables": [
-                                0.35
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Eidolon Activated",
-                        "eidolon": 2,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.4) || RETURN",
-                              "displayLines": "0.4",
-                              "constants": [],
-                              "variables": [
-                                0.4
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2043260870\">Evernight_HPChange</a>",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "DV_Partner_Count",
-                        "compareType": ">=",
-                        "value2": {
-                          "operator": "Variables[0] (_Partner_Count_Max) || RETURN",
-                          "displayLines": "_Partner_Count_Max",
-                          "constants": [],
-                          "variables": [
-                            "_Partner_Count_Max"
-                          ]
-                        }
-                      },
-                      "failed": [
-                        {
-                          "name": "Force Auto-Battle on Target",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "enable": true
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"132344239\">Evernight_Ability02_ChangeSkill</a>"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
+                  "enable": true
+                },
+                {
+                  "name": "Update Ability Enhance Button",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "display": "Hide",
+                  "abilityName": "Basic ATK"
+                },
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "abilityName": "Skill01",
+                  "skillSlot": "Memosprite"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-373711832\">Memosprite_EvernightServant_TriggerNormal_NoEnemy</a>"
+                },
+                {
+                  "name": "Define Custom Variable (VFX)",
+                  "variableName": "_TriggerNormal_Cutin",
+                  "value": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                        "flagName": "STAT_CTRL"
                       },
-                      "passed": [
-                        {
-                          "name": "Change Character UI",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "icon": "11413_02.png"
-                        }
-                      ]
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "flagName": "DisableAction"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster's Summoner}}"
+                        },
+                        "flagName": "STAT_CTRL"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster's Summoner}}"
+                        },
+                        "flagName": "DisableAction"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable (VFX)",
+                      "variableName": "_TriggerNormal_Cutin",
+                      "value": 0
                     },
+                    {
+                      "name": "Force Auto-Battle on Target",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "enable": true
+                    },
+                    {
+                      "name": "Update Ability Enhance Button",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "display": "Hide",
+                      "abilityName": "Basic ATK"
+                    },
+                    {
+                      "name": "Update Ability Binding",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "abilityName": "Skill01",
+                      "skillSlot": "Memosprite"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Update Ability Enhance Button",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "display": "Show",
+                      "abilityName": "Basic ATK"
+                    },
+                    {
+                      "name": "Update Ability Binding",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "abilityName": "Skill11",
+                      "skillSlot": "Memosprite"
+                    },
+                    {
+                      "name": "Force Auto-Battle on Target",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Current Turn Is",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
                     {
                       "name": "IF",
                       "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
-                          },
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>",
-                            "invertCondition": true
-                          }
-                        ]
+                        "name": "Current Turn's Action Phase is Over"
                       },
                       "passed": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
+                          "name": "Action Advance/Delay",
+                          "advanceType": "Set",
+                          "target": {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>",
-                          "casterAssign": "TargetSelf"
+                          "set": 0
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Assign Advance/Delay to Current Ability Use",
+                          "adjustmentValue": -1,
+                          "adjustmentType": "Advance"
                         }
                       ]
                     }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Action Advance/Delay",
+                      "advanceType": "Set",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "set": 0
+                    }
                   ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier is Added [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Modifier Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "flagName": "STAT_CTRL"
+                          },
+                          {
+                            "name": "Modifier Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "flagName": "DisableAction"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster's Summoner}}"
+                        }
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable (VFX)",
+                      "variableName": "_TriggerNormal_Cutin",
+                      "value": 0
+                    },
+                    {
+                      "name": "Force Auto-Battle on Target",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "enable": true
+                    },
+                    {
+                      "name": "Update Ability Enhance Button",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "display": "Hide",
+                      "abilityName": "Basic ATK"
+                    },
+                    {
+                      "name": "Update Ability Binding",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "abilityName": "Skill01",
+                      "skillSlot": "Memosprite"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster's Summoner}}"
+                        },
+                        "flagName": "DisableAction",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster's Summoner}}"
+                        },
+                        "flagName": "STAT_CTRL",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster's Summoner}}"
+                        }
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Ability Enhance Button",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "display": "Show",
+                      "abilityName": "Basic ATK"
+                    },
+                    {
+                      "name": "Update Ability Binding",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "abilityName": "Skill11",
+                      "skillSlot": "Memosprite"
+                    },
+                    {
+                      "name": "Force Auto-Battle on Target",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-373711832\">Memosprite_EvernightServant_TriggerNormal_NoEnemy</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1678641611\">Memosprite_EvernightServant_PassiveBonus</a>[<span class=\"descriptionNumberColor\">Solitude, Drifting, In Murk</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Solitude, Drifting, In Murk",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2040095871\">Memosprite_EvernightServant_DeathRattle_Speed</a>[<span class=\"descriptionNumberColor\">You, Parting, Beyond Reach</span>]",
+          "modifierFlags": [
+            "STAT_SpeedUp"
+          ],
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_Show</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "You, Parting, Beyond Reach",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Show",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_PropertyValue_2) || Variables[2] (_Evernight_00_DeathRattle_Layer) || MUL || ADD || RETURN",
+                    "displayLines": "(MDF_PropertyValue + (MDF_PropertyValue_2 * _Evernight_00_DeathRattle_Layer))",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue",
+                      "MDF_PropertyValue_2",
+                      "_Evernight_00_DeathRattle_Layer"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_Show) || RETURN",
+                    "displayLines": "MDF_Show",
+                    "constants": [],
+                    "variables": [
+                      "MDF_Show"
+                    ]
+                  }
                 }
               ]
             }
@@ -5457,6 +7480,380 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "Evey_Evernight_Ability03_Servant_Damage": {
+      "fileName": "Evey_Evernight_Ability03_Servant_Damage",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}.[[getSummoner]]"
+          },
+          "ability": "Evernight_Ability03_Part02_Charge",
+          "isTrigger": true
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] (_Skill03_P1_DamagePercentage) || RETURN",
+              "displayLines": "_Skill03_P1_DamagePercentage",
+              "constants": [],
+              "variables": [
+                "_Skill03_P1_DamagePercentage"
+              ]
+            },
+            "dmgFormula": "Max HP Scaling",
+            "Toughness": {
+              "operator": "Variables[0] (_Skill03_Stance) || RETURN",
+              "displayLines": "_Skill03_Stance",
+              "constants": [],
+              "variables": [
+                "_Skill03_Stance"
+              ]
+            },
+            "ToughnessDMGType": {
+              "DamageType": "Ice"
+            },
+            "Tags": null,
+            "attackType": "Ultimate"
+          }
+        },
+        "Trigger: Attack End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "Evey_Evernight_Ability03_Servant": {
+      "fileName": "Evey_Evernight_Ability03_Servant",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"294638745\">function_Evernight_Group_SizeControl_Perf</a>"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
+        },
+        "Deleted bullshit",
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Summoner}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_Partner_Count",
+            "compareType": "<",
+            "value2": {
+              "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (4) || MUL || RETURN",
+              "displayLines": "(_Partner_CountThresHold * 4)",
+              "constants": [
+                4
+              ],
+              "variables": [
+                "_Partner_CountThresHold"
+              ]
+            }
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_Partner_Count",
+            "compareType": "<",
+            "value2": {
+              "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (3) || MUL || RETURN",
+              "displayLines": "(_Partner_CountThresHold * 3)",
+              "constants": [
+                3
+              ],
+              "variables": [
+                "_Partner_CountThresHold"
+              ]
+            }
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_Partner_Count",
+            "compareType": "<",
+            "value2": {
+              "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (2) || MUL || RETURN",
+              "displayLines": "(_Partner_CountThresHold * 2)",
+              "constants": [
+                2
+              ],
+              "variables": [
+                "_Partner_CountThresHold"
+              ]
+            }
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_Partner_Count",
+            "compareType": "<",
+            "value2": {
+              "operator": "Variables[0] (_Partner_CountThresHold) || Constants[0] (1) || MUL || RETURN",
+              "displayLines": "(_Partner_CountThresHold * 1)",
+              "constants": [
+                1
+              ],
+              "variables": [
+                "_Partner_CountThresHold"
+              ]
+            }
+          }
+        }
+      ],
+      "functions": [
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-367389928\">Evernight_Ability03_TriggerAnim_Man</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__431919247\">Evernight_Ability03_TriggerAnim_01</a>",
+          "parse": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
+            }
+          ]
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__448696866\">Evernight_Ability03_TriggerAnim_02</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__465474485\">Evernight_Ability03_TriggerAnim_03</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__348031152\">Evernight_Ability03_TriggerAnim_04</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__364808771\">Evernight_Ability03_TriggerAnim_05</a>",
+          "parse": []
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "Evey_Evernight_Ability02_2_Servant": {
+      "fileName": "Evey_Evernight_Ability02_2_Servant",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1807727255\">Evernight_UltraMode_Effect_Normal</a>"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
+        },
+        {
+          "name": "Trigger Multiple Functions",
+          "variables": {},
+          "functionList": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-293387564\">Evernight_Ability02_2_TriggerAnim_Pos</a>"
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"448281105\">Evernight_Ability02_2_TriggerAnim_01</a>"
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"397948248\">Evernight_Ability02_2_TriggerAnim_02</a>"
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"414725867\">Evernight_Ability02_2_TriggerAnim_03</a>"
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"498613962\">Evernight_Ability02_2_TriggerAnim_04</a>"
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"515391581\">Evernight_Ability02_2_TriggerAnim_05</a>"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-293387564\">Evernight_Ability02_2_TriggerAnim_Pos</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__448281105\">Evernight_Ability02_2_TriggerAnim_01</a>",
+          "parse": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
+            }
+          ]
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__397948248\">Evernight_Ability02_2_TriggerAnim_02</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__414725867\">Evernight_Ability02_2_TriggerAnim_03</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__498613962\">Evernight_Ability02_2_TriggerAnim_04</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__515391581\">Evernight_Ability02_2_TriggerAnim_05</a>",
+          "parse": []
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "Evey_Evernight_Ability02_Servant": {
+      "fileName": "Evey_Evernight_Ability02_Servant",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
+        },
+        {
+          "name": "Trigger Multiple Functions",
+          "variables": {},
+          "functionList": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"462618785\">Evernight_Ability02_TriggerAnim_Pos</a>"
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1560757358\">Evernight_Ability02_TriggerAnim_01</a>"
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1577534977\">Evernight_Ability02_TriggerAnim_02</a>"
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1594312596\">Evernight_Ability02_TriggerAnim_03</a>"
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1611090215\">Evernight_Ability02_TriggerAnim_04</a>"
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1627867834\">Evernight_Ability02_TriggerAnim_05</a>"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__462618785\">Evernight_Ability02_TriggerAnim_Pos</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1560757358\">Evernight_Ability02_TriggerAnim_01</a>",
+          "parse": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1551336747\">function_Evernight_Group_FollowControl_STB</a>"
+            }
+          ]
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1577534977\">Evernight_Ability02_TriggerAnim_02</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1594312596\">Evernight_Ability02_TriggerAnim_03</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1611090215\">Evernight_Ability02_TriggerAnim_04</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1627867834\">Evernight_Ability02_TriggerAnim_05</a>",
+          "parse": []
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
     },
     "Evey_Servant_EvernightServant_DeathRattle": {
       "fileName": "Evey_Servant_EvernightServant_DeathRattle",
@@ -5521,9 +7918,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -5563,6 +7958,71 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Evey_Servant_EvernightServant_PassiveAbility01_Resummon": {
+      "fileName": "Evey_Servant_EvernightServant_PassiveAbility01_Resummon",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Multiple Functions",
+          "variables": {},
+          "functionList": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"102906663\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk01TriggerAnim</a>"
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1662147576\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk02TriggerAnim</a>"
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"537057537\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk03TriggerAnim</a>"
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1934801254\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk04TriggerAnim</a>"
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1334839220\">Servant_EvernightServant_PassiveAbility01_Resummon_TriggerAnim</a>"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1334839220\">Servant_EvernightServant_PassiveAbility01_Resummon_TriggerAnim</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__102906663\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk01TriggerAnim</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1662147576\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk02TriggerAnim</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__537057537\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk03TriggerAnim</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1934801254\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk04TriggerAnim</a>",
+          "parse": []
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
       }
     },
     "Evey_Servant_EvernightServant_PassiveAbility01": {
@@ -5970,9 +8430,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6030,9 +8488,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6109,9 +8565,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6208,9 +8662,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6263,13 +8715,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2112363426\">Memosprite_EvernightServant_HitAnimControl</a>",
+          "latentQueue": [
+            "_Partner_Size"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn End [Anyone]",
@@ -6331,16 +8784,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_Partner_Size"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__339933329\">Memosprite_EvernightServant_Ability11_StancePreshow</a>",
-          "stackData": [],
           "latentQueue": [
             "_Partner_Size"
           ]
@@ -6348,8 +8796,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1232599773\">Memosprite_EvernightServant_PassiveBonus_Aura</a>",
-          "stackData": [],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -6375,6 +8821,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1971728394\">Memosprite_EvernightServant_Ability11_LoseHPPreshow</a>",
+          "latentQueue": [
+            "_Partner_Size"
+          ],
           "execute": [
             {
               "eventTrigger": "Update Target Selected(UI) [Owner]",
@@ -6420,15 +8869,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_Partner_Size"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1842559180\">Memosprite_EvernightServant_TryKill</a>",
+          "latentQueue": [
+            "_Partner_Size"
+          ],
           "execute": [
             {
               "eventTrigger": "Action Completed [Anyone]",
@@ -6483,10 +8931,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_Partner_Size"
           ]
         }
       ],
@@ -6495,6 +8939,62 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Evey_Servant_EvernightServant_Ability11_EnterReady": {
+      "fileName": "Evey_Servant_EvernightServant_Ability11_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable (VFX)",
+          "variableName": "Is_S11_Ready",
+          "value": 1
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"294638745\">function_Evernight_Group_SizeControl_Perf</a>"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Summoner}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_TriggerNormal_Cutin",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "UI Display Event",
+              "popUpText": "With Me, This Night"
+            },
+            {
+              "name": "Define Custom Variable (VFX)",
+              "variableName": "_TriggerNormal_Cutin",
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
       }
     },
     "Evey_Servant_EvernightServant_Ability12_Part02": {
@@ -7399,62 +9899,6 @@ const compositeAbilityObject = {
         "subTarget": "All Other Team Members"
       }
     },
-    "Evey_Servant_EvernightServant_Ability11_EnterReady": {
-      "fileName": "Evey_Servant_EvernightServant_Ability11_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable (VFX)",
-          "variableName": "Is_S11_Ready",
-          "value": 1
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"294638745\">function_Evernight_Group_SizeControl_Perf</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-1711321550\">function_Evernight_Group_FollowControl_00</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_TriggerNormal_Cutin",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "UI Display Event",
-              "popUpText": "With Me, This Night"
-            },
-            {
-              "name": "Define Custom Variable (VFX)",
-              "variableName": "_TriggerNormal_Cutin",
-              "value": 0
-            }
-          ]
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
     "Evey_Servant_EvernightServant_Ability01_Part02": {
       "fileName": "Evey_Servant_EvernightServant_Ability01_Part02",
       "abilityType": null,
@@ -8120,559 +10564,304 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       }
     },
-    "Evey_Servant_EvernightServant_PassiveAbility01_Resummon": {
-      "fileName": "Evey_Servant_EvernightServant_PassiveAbility01_Resummon",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Multiple Functions",
-          "variables": {},
-          "functionList": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"102906663\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk01TriggerAnim</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1662147576\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk02TriggerAnim</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"537057537\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk03TriggerAnim</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1934801254\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk04TriggerAnim</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1334839220\">Servant_EvernightServant_PassiveAbility01_Resummon_TriggerAnim</a>"
-            }
-          ]
-        }
-      ],
-      "functions": [
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1334839220\">Servant_EvernightServant_PassiveAbility01_Resummon_TriggerAnim</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__102906663\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk01TriggerAnim</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1662147576\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk02TriggerAnim</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__537057537\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk03TriggerAnim</a>",
-          "parse": []
-        },
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1934801254\">Servant_EvernightServant_PassiveAbility01_Resummon_Junk04TriggerAnim</a>",
-          "parse": []
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "Evey_Modifiers": {
-      "fileName": "Evey_Modifiers",
-      "abilityType": "Char. Modifiers",
+    "Evey_Functions": {
+      "fileName": "Evey_Functions",
+      "abilityType": "Char. Functions",
       "energy": null,
       "toughnessList": [
         0,
         0,
         0
       ],
+      "length": 8,
       "parse": [
         {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1418513049\">Memosprite_EvernightServant_TriggerDeathrattle</a>",
-          "execute": [
-            {
-              "eventTrigger": "Got a Queued Kill [Owner]",
-              "execute": [
-                {
-                  "name": "Update Energy",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "value": 10,
-                  "isFixed": "* ERR"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1711321550\">function_Evernight_Group_FollowControl_00</a>",
+          "parse": []
         },
         {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__683715754\">Memosprite_EvernightServant_TriggerNormal</a>",
-          "execute": [
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1551336747\">function_Evernight_Group_FollowControl_STB</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__724548436\">function_Evernight_Group_FollowControl_ViewMode</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1946909591\">function_Evernight_Group_SizeControl_STB</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1393796287\">function_Evernight_Group_SizeControl_STB2</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1349241137\">function_Evernight_Group_SizeControl_Perf2</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__294638745\">function_Evernight_Group_SizeControl_Perf</a>",
+          "parse": []
+        },
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1497424763\">function_Evernight_TryCreateServant</a>",
+          "parse": [
             {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Define Custom Variable (VFX)",
-                  "variableName": "_TriggerNormal_Cutin",
-                  "value": 0
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target Count",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster's Memosprite}}"
                 },
+                "compareType": "<=",
+                "value2": 0,
+                "livingTargets": true
+              },
+              "passed": [
                 {
-                  "name": "Force Auto-Battle on Target",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
+                  "name": "Summon Memosprite",
+                  "memoID": 11413,
+                  "valuePerStack": {
+                    "Init_Count": {
+                      "operator": "Variables[0] (DV_Partner_Count) || RETURN",
+                      "displayLines": "DV_Partner_Count",
+                      "constants": [],
+                      "variables": [
+                        "DV_Partner_Count"
+                      ]
+                    },
+                    "Init_HP_Ratio": {
+                      "operator": "Variables[0] (DV_HP_Ratio) || RETURN",
+                      "displayLines": "DV_HP_Ratio",
+                      "constants": [],
+                      "variables": [
+                        "DV_HP_Ratio"
+                      ]
+                    },
+                    "Init_Delay": {
+                      "operator": "Variables[0] (DV_Delay) || RETURN",
+                      "displayLines": "DV_Delay",
+                      "constants": [],
+                      "variables": [
+                        "DV_Delay"
+                      ]
+                    },
+                    "AbilityP01_P1_AddCount": {
+                      "operator": "Variables[0] (UnusedUnderThisBase_4663) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_4663",
+                      "constants": [],
+                      "variables": [
+                        "UnusedUnderThisBase_4663"
+                      ]
+                    },
+                    "_Evernight_Extra_Energy": {
+                      "operator": "Variables[0] (UnusedUnderThisBase_4649) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_4649",
+                      "constants": [],
+                      "variables": [
+                        "UnusedUnderThisBase_4649"
+                      ]
+                    },
+                    "AbilityRank_Eidolon6_P1_Ratio": {
+                      "operator": "Variables[0] (UnusedUnderThisBase_6796) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_6796",
+                      "constants": [],
+                      "variables": [
+                        "UnusedUnderThisBase_6796"
+                      ]
+                    }
                   },
-                  "enable": true
-                },
-                {
-                  "name": "Update Ability Enhance Button",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "display": "Hide",
-                  "abilityName": "Basic ATK"
-                },
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "abilityName": "Skill01",
-                  "skillSlot": "Memosprite"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-373711832\">Memosprite_EvernightServant_TriggerNormal_NoEnemy</a>"
-                },
-                {
-                  "name": "Define Custom Variable (VFX)",
-                  "variableName": "_TriggerNormal_Cutin",
-                  "value": 1
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "STAT_CTRL"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "DisableAction"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster's Summoner}}"
-                        },
-                        "flagName": "STAT_CTRL"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster's Summoner}}"
-                        },
-                        "flagName": "DisableAction"
-                      }
-                    ]
-                  },
-                  "passed": [
+                  "afterSummon": [
                     {
-                      "name": "Define Custom Variable (VFX)",
-                      "variableName": "_TriggerNormal_Cutin",
+                      "name": "Define Custom Variable",
+                      "variableName": "_Evernight_00_DeathRattle_Layer",
                       "value": 0
                     },
-                    {
-                      "name": "Force Auto-Battle on Target",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "enable": true
-                    },
-                    {
-                      "name": "Update Ability Enhance Button",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "display": "Hide",
-                      "abilityName": "Basic ATK"
-                    },
-                    {
-                      "name": "Update Ability Binding",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "abilityName": "Skill01",
-                      "skillSlot": "Memosprite"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Update Ability Enhance Button",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "display": "Show",
-                      "abilityName": "Basic ATK"
-                    },
-                    {
-                      "name": "Update Ability Binding",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "abilityName": "Skill11",
-                      "skillSlot": "Memosprite"
-                    },
-                    {
-                      "name": "Force Auto-Battle on Target",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Current Turn Is",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    }
-                  },
-                  "passed": [
                     {
                       "name": "IF",
                       "conditions": {
-                        "name": "Current Turn's Action Phase is Over"
+                        "name": "Trace Activated",
+                        "conditionList": "PointB1",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       "passed": [
                         {
-                          "name": "Action Advance/Delay",
-                          "advanceType": "Set",
-                          "target": {
+                          "name": "Add Events/Bonuses",
+                          "to": {
                             "name": "Target Name",
-                            "target": "{{Caster}}"
+                            "target": "{{Parameter Target}}"
                           },
-                          "set": 0
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Assign Advance/Delay to Current Ability Use",
-                          "adjustmentValue": -1,
-                          "adjustmentType": "Advance"
+                          "modifier": "<a class=\"gModGreen\" id=\"1710373270\">Evernight_PointB1_Crit</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (UnusedUnderThisBase_13136) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13136",
+                              "constants": [],
+                              "variables": [
+                                "UnusedUnderThisBase_13136"
+                              ]
+                            }
+                          }
                         }
                       ]
-                    }
-                  ],
-                  "failed": [
+                    },
                     {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Eidolon Activated",
+                        "eidolon": 2,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (UnusedUnderThisBase_13144) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13144",
+                              "constants": [],
+                              "variables": [
+                                "UnusedUnderThisBase_13144"
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"2043260870\">Evernight_HPChange</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (UnusedUnderThisBase_4663) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_4663",
+                          "constants": [],
+                          "variables": [
+                            "UnusedUnderThisBase_4663"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "DV_Partner_Count",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (_Partner_Count_Max) || RETURN",
+                          "displayLines": "_Partner_Count_Max",
+                          "constants": [],
+                          "variables": [
+                            "_Partner_Count_Max"
+                          ]
+                        }
+                      },
+                      "failed": [
+                        {
+                          "name": "Force Auto-Battle on Target",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "enable": true
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "set": 0
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "OR",
+                      "modifier": "<a class=\"gModGreen\" id=\"132344239\">Evernight_Ability02_ChangeSkill</a>"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
+                      },
+                      "passed": [
+                        {
+                          "name": "Change Character UI",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "icon": "11413_02.png"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
                         "conditionList": [
                           {
-                            "name": "Modifier Has Flag",
+                            "name": "Has Modifier",
                             "target": {
                               "name": "Target Name",
-                              "target": "{{Parameter Target}}"
+                              "target": "{{Caster}}"
                             },
-                            "flagName": "STAT_CTRL"
+                            "modifier": "<a class=\"gModGreen\" id=\"-889130257\">Evernight_UltraMode</a>[<span class=\"descriptionNumberColor\">Darkest Riddle</span>]"
                           },
                           {
-                            "name": "Modifier Has Flag",
+                            "name": "Has Modifier",
                             "target": {
                               "name": "Target Name",
-                              "target": "{{Parameter Target}}"
+                              "target": "{{Caster}}"
                             },
-                            "flagName": "DisableAction"
+                            "modifier": "<a class=\"gModGreen\" id=\"-1950285194\">Evernight_S03</a>",
+                            "invertCondition": true
                           }
                         ]
                       },
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Caster's Summoner}}"
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1307478561\">Evernight_UltraMode_Effect</a>",
+                          "casterAssign": "TargetSelf"
                         }
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable (VFX)",
-                      "variableName": "_TriggerNormal_Cutin",
-                      "value": 0
-                    },
-                    {
-                      "name": "Force Auto-Battle on Target",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "enable": true
-                    },
-                    {
-                      "name": "Update Ability Enhance Button",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "display": "Hide",
-                      "abilityName": "Basic ATK"
-                    },
-                    {
-                      "name": "Update Ability Binding",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "abilityName": "Skill01",
-                      "skillSlot": "Memosprite"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster's Summoner}}"
-                        },
-                        "flagName": "DisableAction",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster's Summoner}}"
-                        },
-                        "flagName": "STAT_CTRL",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Caster's Summoner}}"
-                        }
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Ability Enhance Button",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "display": "Show",
-                      "abilityName": "Basic ATK"
-                    },
-                    {
-                      "name": "Update Ability Binding",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "abilityName": "Skill11",
-                      "skillSlot": "Memosprite"
-                    },
-                    {
-                      "name": "Force Auto-Battle on Target",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      }
+                      ]
                     }
                   ]
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-373711832\">Memosprite_EvernightServant_TriggerNormal_NoEnemy</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1678641611\">Memosprite_EvernightServant_PassiveBonus</a>[<span class=\"descriptionNumberColor\">Solitude, Drifting, In Murk</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Solitude, Drifting, In Murk"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2040095871\">Memosprite_EvernightServant_DeathRattle_Speed</a>[<span class=\"descriptionNumberColor\">You, Parting, Beyond Reach</span>]",
-          "modifierFlags": [
-            "STAT_SpeedUp"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_Show",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_PropertyValue_2) || Variables[2] (_Evernight_00_DeathRattle_Layer) || MUL || ADD || RETURN",
-                    "displayLines": "(MDF_PropertyValue + (MDF_PropertyValue_2 * _Evernight_00_DeathRattle_Layer))",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_PropertyValue_2",
-                      "_Evernight_00_DeathRattle_Layer"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_Show) || RETURN",
-                    "displayLines": "MDF_Show",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Show"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_PropertyValue_2"
-          ],
-          "latentQueue": [],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_Show</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "You, Parting, Beyond Reach"
+          ]
         }
       ],
       "references": []

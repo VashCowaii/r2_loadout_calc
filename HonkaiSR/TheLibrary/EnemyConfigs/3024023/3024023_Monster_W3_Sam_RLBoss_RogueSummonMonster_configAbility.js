@@ -69,9 +69,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1368487968\">Enemy_W3_Sam_RLBoss_SummonMonster</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1368487968\">Enemy_W3_Sam_RLBoss_SummonMonster</a>"
     }
   ]
 }

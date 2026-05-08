@@ -118,6 +118,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_Fatigue"
       ],
+      "description": "Deals <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> less DMG.",
+      "type": "Debuff",
+      "effectName": "Weaken",
+      "statusName": "Weaken",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -140,16 +144,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Deals <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> less DMG.",
-      "type": "Debuff",
-      "effectName": "Weaken",
-      "statusName": "Weaken"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1838655775\">Luocha_Passive01_HealHPSelf</a>[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "After using an attack on an enemy, restores HP to self.",
+      "type": "Other",
+      "statusName": "Cycle of Life",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -211,15 +214,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "After using an attack on an enemy, restores HP to self.",
-      "type": "Other",
-      "statusName": "Cycle of Life"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1378311281\">Luocha_Passive01_HealHP</a>[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "After using an attack on an enemy, restores HP to self.",
+      "type": "Other",
+      "statusName": "Cycle of Life",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -281,41 +284,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "After using an attack on an enemy, restores HP to self.",
-      "type": "Other",
-      "statusName": "Cycle of Life"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1807885982\">Luocha_Passive01_HealHPArea</a>",
       "stackType": "ReplaceByCaster",
-      "execute": [
-        {
-          "eventTrigger": "When Modifier Destroyed/Removed",
-          "execute": [
-            {
-              "name": "Update Displayed Energy Bar",
-              "value": 0,
-              "maximum": 2,
-              "priorState": "Normal",
-              "bar#": 2
-            }
-          ]
-        },
-        {
-          "eventTrigger": "Pre-Death [Owner]",
-          "execute": [
-            {
-              "name": "Update Displayed Energy Bar",
-              "value": 0,
-              "maximum": 2,
-              "priorState": "Normal",
-              "bar#": 2
-            }
-          ]
-        }
-      ],
       "stackData": [
         "MDF_PropertyValue",
         "MDF_PropertyRatio",
@@ -467,6 +441,32 @@ const configAbility = {
               ]
             }
           }
+        }
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": 0,
+              "maximum": 2,
+              "priorState": "Normal",
+              "bar#": 2
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Pre-Death [Owner]",
+          "execute": [
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": 0,
+              "maximum": 2,
+              "priorState": "Normal",
+              "bar#": 2
+            }
+          ]
         }
       ]
     }

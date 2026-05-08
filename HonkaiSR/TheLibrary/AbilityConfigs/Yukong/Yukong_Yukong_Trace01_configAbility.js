@@ -50,6 +50,12 @@ const configAbility = {
       "modifierFlags": [
         "ImmuneDebuff"
       ],
+      "stackData": [
+        "MDF_ResistCD"
+      ],
+      "description": "Blocks 1 debuff.",
+      "type": "Buff",
+      "statusName": "Debuff Block",
       "execute": [
         {
           "eventTrigger": "Debuff Immunity[?]",
@@ -80,14 +86,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ResistCD"
-      ],
-      "latentQueue": [],
-      "description": "Blocks 1 debuff.",
-      "type": "Buff",
-      "statusName": "Debuff Block"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -171,9 +170,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

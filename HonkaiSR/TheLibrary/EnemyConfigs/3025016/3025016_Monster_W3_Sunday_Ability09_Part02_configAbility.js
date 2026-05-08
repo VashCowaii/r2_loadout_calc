@@ -842,6 +842,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-983902167\">Enemy_W3_Sunday_Ability09_DelayToast</a>",
+      "latentQueue": [
+        "W3_Sunday_00_TimePause_ActionCounter",
+        "W3_Sunday_00_Skill09_Round"
+      ],
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -849,11 +853,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "W3_Sunday_00_TimePause_ActionCounter",
-        "W3_Sunday_00_Skill09_Round"
       ]
     }
   ]

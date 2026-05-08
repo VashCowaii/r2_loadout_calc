@@ -8,15 +8,12 @@ const compositeAbilityObject = {
     "1013021_WMonster_W1_Mecha_05_Ability12_Part01",
     "1013021_WMonster_W1_Mecha_05_Ability11_Part02",
     "1013021_WMonster_W1_Mecha_05_Ability11_Part01",
-    "1013021_WMonster_W1_Mecha_05_AbilityP09_Part02",
-    "1013021_WMonster_W1_Mecha_05_AbilityP09_Part01",
     "1013021_WMonster_W1_Mecha_05_Ability09_Part02",
     "1013021_WMonster_W1_Mecha_05_Ability09_Part01",
     "1013021_WMonster_W1_Mecha_05_Ability07_Part02",
     "1013021_WMonster_W1_Mecha_05_Ability07_Part01",
     "1013021_WMonster_W1_Mecha_05_Ability06_Part02",
     "1013021_WMonster_W1_Mecha_05_Ability06_Part01",
-    "1013021_Monster_W1_Mecha04_PassiveAbility_KlaraSpecialVictory",
     "1013021_Modifiers"
   ],
   "abilityObject": {
@@ -131,8 +128,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1945457431\">Monster_W1_Mecha04_PassiveMDF</a>[<span class=\"descriptionNumberColor\">Hounding Pursuit</span>]",
-          "stackData": [],
-          "latentQueue": [],
           "description": "If \"Felling Order\" hits one target that does not currently have a Shield, immediately use \"Dismantle\" on a random target.",
           "type": "Other",
           "statusName": "Hounding Pursuit"
@@ -286,18 +281,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-69428728\">WMonster_Mecha_02_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -309,9 +300,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Choice Window [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -419,9 +408,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -588,9 +575,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -835,103 +820,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "1013021_WMonster_W1_Mecha_05_AbilityP09_Part02": {
-      "fileName": "1013021_WMonster_W1_Mecha_05_AbilityP09_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
-              "displayLines": "{[Skill09[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill09[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-95545360\">W1_Mecha02_ThunderDOT</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
-          "duration": 2,
-          "baseChance": 1,
-          "stackLimit": {
-            "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-            "displayLines": "{[Skill06[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[3]]}"
-            ]
-          },
-          "valuePerStack": {
-            "Modifier_Bleed_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-              "displayLines": "{[Skill06[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[1]]}"
-              ]
-            },
-            "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-              "displayLines": "{[Skill06[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[3]]}"
-              ]
-            }
-          }
-        },
-        "Trigger: Attack End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "1013021_WMonster_W1_Mecha_05_AbilityP09_Part01": {
-      "fileName": "1013021_WMonster_W1_Mecha_05_AbilityP09_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "WMonster_W1_Mecha_05_AbilityP09_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       },
       "references": []
     },
@@ -1819,64 +1707,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "1013021_Monster_W1_Mecha04_PassiveAbility_KlaraSpecialVictory": {
-      "fileName": "1013021_Monster_W1_Mecha04_PassiveAbility_KlaraSpecialVictory",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-220942891\">Monster_W1_Mecha04_KlaraSpecialVictory_LockHP</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__151548297\">Monster_W1_Mecha04_Instance_DisableAction</a>",
-          "modifierFlags": [
-            "DisableAction"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-220942891\">Monster_W1_Mecha04_KlaraSpecialVictory_LockHP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.01
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Locked HP Floor Reached [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"151548297\">Monster_W1_Mecha04_Instance_DisableAction</a>"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "1013021_Modifiers": {
       "fileName": "1013021_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1901,6 +1731,12 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1670817312\">W1_Mecha02_AttackBonus</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">ModifierDamageUpValue</span>.",
+          "type": "Buff",
+          "effectName": "Charging",
+          "statusName": "Charging",
+          "duration": 1,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1982,13 +1818,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">ModifierDamageUpValue</span>.",
-          "type": "Buff",
-          "effectName": "Charging",
-          "statusName": "Charging",
-          "duration": 1,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1998,17 +1828,15 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
+          "description": "%CasterName will focus attacks on this target.",
+          "type": "Other",
+          "effectName": "Lock On",
+          "statusName": "Lock On",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "%CasterName will focus attacks on this target.",
-          "type": "Other",
-          "effectName": "Lock On",
-          "statusName": "Lock On"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2019,6 +1847,23 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Bleed"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "Modifier_Bleed_DamagePercentage",
+            "MDF_MaxLayer"
+          ],
+          "latentQueue": [
+            "Mecha04_BattleScore2_Flag",
+            "Monster_W1_Mecha04_00_InsertFlag",
+            "Mecha04_EnemySelector"
+          ],
+          "description": "For a certain number of turns, receive Physical DMG based on Max HP at the beginning of each turn, stacking up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+          "type": "Debuff",
+          "effectName": "Bleed",
+          "statusName": "Bleed",
+          "duration": 3,
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -2121,24 +1966,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "Modifier_Bleed_DamagePercentage",
-            "MDF_MaxLayer"
-          ],
-          "latentQueue": [
-            "Mecha04_BattleScore2_Flag",
-            "Monster_W1_Mecha04_00_InsertFlag",
-            "Mecha04_EnemySelector"
-          ],
-          "description": "For a certain number of turns, receive Physical DMG based on Max HP at the beginning of each turn, stacking up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-          "type": "Debuff",
-          "effectName": "Bleed",
-          "statusName": "Bleed",
-          "duration": 3,
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2189,13 +2017,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__413586706\">Enemy_W1_Mecha04_ChainSawSpeedUpAgain</a>",
+          "latentQueue": [
+            "Monster_W1_Mecha04_00_InsertFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -2211,15 +2040,14 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Monster_W1_Mecha04_00_InsertFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1520229010\">Enemy_W1_Mecha04_ChainSawSpeedUp</a>",
+          "latentQueue": [
+            "Monster_W1_Mecha04_00_InsertFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2279,15 +2107,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Monster_W1_Mecha04_00_InsertFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__86526796\">Monster_W1_Mecha04_RemoveAim</a>",
+          "latentQueue": [
+            "Mecha04_BattleScore2_Flag",
+            "Monster_W1_Mecha04_00_InsertFlag",
+            "Mecha04_EnemySelector",
+            "Mecha04_AttackCount"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -2329,13 +2159,6 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Mecha04_BattleScore2_Flag",
-            "Monster_W1_Mecha04_00_InsertFlag",
-            "Mecha04_EnemySelector",
-            "Mecha04_AttackCount"
           ]
         },
         {
@@ -2346,7 +2169,6 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
-          "stackData": [],
           "latentQueue": [
             "Mecha04_Aim_Flag"
           ],
@@ -2363,7 +2185,6 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
-          "stackData": [],
           "latentQueue": [
             "Mecha04_Aim_Flag"
           ],
@@ -2444,9 +2265,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

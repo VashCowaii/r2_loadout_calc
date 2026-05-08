@@ -188,9 +188,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Put in Deathstate Limbo"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -224,9 +222,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -245,9 +241,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2357,6 +2351,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__216530002\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part3</a>[<span class=\"descriptionNumberColor\">Imaginary Mark</span>]",
+          "description": "Toughness can be reduced by attacks from Imaginary Infused allied targets.",
+          "type": "Other",
+          "statusName": "Imaginary Mark",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2376,14 +2373,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Toughness can be reduced by attacks from Imaginary Infused allied targets.",
-          "type": "Other",
-          "statusName": "Imaginary Mark"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__182974764\">Enemy_AML_Boss_Part2_IF_AbilityP01_Weakness_Part1</a>[<span class=\"descriptionNumberColor\">Quantum Mark</span>]",
+          "description": "Toughness can be reduced by attacks from Quantum Infused allied targets.",
+          "type": "Other",
+          "statusName": "Quantum Mark",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2403,10 +2400,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Toughness can be reduced by attacks from Quantum Infused allied targets.",
-          "type": "Other",
-          "statusName": "Quantum Mark"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2495,7 +2489,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1178360880\">Enemy_AML_Boss_Part2_IF_Ability13_Mark</a>",
-          "stackData": [],
           "latentQueue": [
             "AML_Boss_00_BattleScore2_Flag"
           ]
@@ -2826,13 +2819,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1128742763\">Enemy_AML_Boss_Part2_Ability11_Charge</a>",
+          "useEntitySnapshot": true,
+          "latentQueue": [
+            "AML_Boss_00_BattleScore2_Flag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2921,11 +2916,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": [
-            "AML_Boss_00_BattleScore2_Flag"
           ]
         },
         {
@@ -2988,14 +2978,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1797898351\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability08_Frensnel</a>",
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3003,6 +2991,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -3052,22 +3041,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1548805762\">Enemy_AML_Boss_Part2_IF_Enhancement_Ability07_Frensnel</a>",
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3075,6 +3059,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -3124,10 +3109,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3234,6 +3216,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__150642610\">Enemy_AML_Boss_Part2_IF_Enhancement_DisplayLV2</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
+          "description": "Skill is enhanced. Current Enhancement Level: 2",
+          "type": "Other",
+          "effectName": "Amplification",
+          "statusName": "Amplification",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3303,11 +3289,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Skill is enhanced. Current Enhancement Level: 2",
-          "type": "Other",
-          "effectName": "Amplification",
-          "statusName": "Amplification"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3321,6 +3303,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2123264245\">Enemy_AML_Boss_Part2_IF_Enhancement</a>",
           "stackType": "ReplaceByCaster",
+          "stackLimit": 2,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3491,10 +3474,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "stackLimit": 2
+          ]
         },
         {
           "name": "Modifier Construction",

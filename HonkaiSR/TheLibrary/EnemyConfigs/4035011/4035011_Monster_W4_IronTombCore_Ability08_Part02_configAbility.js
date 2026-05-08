@@ -641,11 +641,11 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (_PhaseLock) || INVERT || Variables[1] (_TargetMaxSP) || MUL || RETURN",
-                        "displayLines": "(-_PhaseLock * _TargetMaxSP)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_11354) || INVERT || Variables[1] (_TargetMaxSP) || MUL || RETURN",
+                        "displayLines": "(-UnusedUnderThisBase_11354 * _TargetMaxSP)",
                         "constants": [],
                         "variables": [
-                          "_PhaseLock",
+                          "UnusedUnderThisBase_11354",
                           "_TargetMaxSP"
                         ]
                       },
@@ -692,9 +692,7 @@ const configAbility = {
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

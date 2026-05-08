@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1737580295\">MLevel_BattleEventAbility_Challenge_Month_06</a>[<span class=\"descriptionNumberColor\">Lightning Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "At the beginning of each Cycle, increases the Lightning DMG taken by all enemies by <span class=\"descriptionNumberColor\">ADF_1</span>, lasting until the enemies' next action begins.",
+      "type": "Debuff",
+      "effectName": "Lightning Vulnerability",
+      "statusName": "Lightning Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -47,11 +51,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "description": "At the beginning of each Cycle, increases the Lightning DMG taken by all enemies by <span class=\"descriptionNumberColor\">ADF_1</span>, lasting until the enemies' next action begins.",
-      "type": "Debuff",
-      "effectName": "Lightning Vulnerability",
-      "statusName": "Lightning Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -106,9 +106,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

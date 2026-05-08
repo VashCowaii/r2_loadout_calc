@@ -3,205 +3,33 @@ const compositeAbilityObject = {
   "fullCharacterName": 4012077,
   "trimCharacterName": 4012077,
   "abilityList": [
-    "4012077_Monster_W4_PolluxPart_IF_L_PassiveAbility_Initiate",
-    "4012077_Monster_W4_PolluxPart_IF_PassiveAbility_Initiate",
+    "4012077_Monster_W4_PolluxPart_IF_AbilityEX01",
     "4012077_Monster_W4_PolluxPart_IF_AbilityP01_Insert02_Part02",
     "4012077_Monster_W4_PolluxPart_IF_AbilityP01_Insert02_Part01",
     "4012077_Monster_W4_PolluxPart_IF_AbilityP01_Insert01_Part02",
     "4012077_Monster_W4_PolluxPart_IF_AbilityP01_Insert01_Part01",
     "4012077_Monster_W4_PolluxPart_IF_AbilityP01",
+    "4012077_Monster_W4_PolluxPart_IF_L_PassiveAbility_Initiate",
     "4012077_Monster_W4_PolluxPart_IF_Ability02_L_Part02",
     "4012077_Monster_W4_PolluxPart_IF_Ability02_L_Part01",
-    "4012077_Monster_W4_PolluxPart_IF_Ability02_Part02",
-    "4012077_Monster_W4_PolluxPart_IF_Ability02_Part01",
     "4012077_Monster_W4_PolluxPart_IF_Ability01_L_Part02",
     "4012077_Monster_W4_PolluxPart_IF_Ability01_L_Part01",
-    "4012077_Monster_W4_PolluxPart_IF_Ability01_Part02",
-    "4012077_Monster_W4_PolluxPart_IF_Ability01_Part01",
-    "4012077_Monster_W4_Pollux_IF_AbilityEX05",
-    "4012077_Monster_W4_Pollux_IF_AbilityEX04",
-    "4012077_Monster_W4_Pollux_IF_AbilityEX03",
-    "4012077_Monster_W4_Pollux_IF_AbilityEX02",
-    "4012077_Monster_W4_PolluxPart_IF_AbilityEX01",
-    "4012077_Monster_W4_Pollux_IF_AbilityEX01",
-    "4012077_Monster_W4_Pollux_IF_Stun_Insert",
-    "4012077_Monster_W4_Pollux_IF_TeamFormation",
-    "4012077_Monster_W4_Pollux_IF_AbilityP01_Insert01_Part02",
-    "4012077_Monster_W4_Pollux_IF_AbilityP01_Insert01_Part01",
-    "4012077_Monster_W4_Pollux_IF_PassiveAbility_Insert",
-    "4012077_Monster_W4_Pollux_IF_AbilityP05",
-    "4012077_Monster_W4_Pollux_IF_AbilityP04",
-    "4012077_Monster_W4_Pollux_IF_AbilityP03",
-    "4012077_Monster_W4_Pollux_IF_AbilityP02",
-    "4012077_Monster_W4_Pollux_IF_AbilityP01",
-    "4012077_Monster_W4_Pollux_IF_Ability06_Part02",
-    "4012077_Monster_W4_Pollux_IF_Ability06_Part01",
-    "4012077_Monster_W4_Pollux_IF_Ability05_Part02",
-    "4012077_Monster_W4_Pollux_IF_Ability05_Part01",
-    "4012077_Monster_W4_Pollux_IF_Ability04_Part02",
-    "4012077_Monster_W4_Pollux_IF_Ability04_Part01",
-    "4012077_Monster_W4_Pollux_IF_Ability03_Part02",
-    "4012077_Monster_W4_Pollux_IF_Ability03_Part01",
-    "4012077_Monster_W4_Pollux_IF_Ability02_Part02",
-    "4012077_Monster_W4_Pollux_IF_Ability02_Part01",
-    "4012077_Monster_W4_Pollux_IF_Ability01_Part02",
-    "4012077_Monster_W4_Pollux_IF_Ability01_Part01",
     "4012077_Modifiers",
     "4012077_Functions"
   ],
   "abilityObject": {
-    "4012077_Monster_W4_PolluxPart_IF_L_PassiveAbility_Initiate": {
-      "fileName": "4012077_Monster_W4_PolluxPart_IF_L_PassiveAbility_Initiate",
-      "skillTrigger": "Passive",
+    "4012077_Monster_W4_PolluxPart_IF_AbilityEX01": {
+      "fileName": "4012077_Monster_W4_PolluxPart_IF_AbilityEX01",
+      "skillTrigger": "SkillEX01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"385444056\">Enemy_W4_PolluxPart_IF_Status</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1636257193\">Enemy_W4_PolluxPart_IF_MinionsSuperArmorController</a>",
-          "valuePerStack": {
-            "MDF_MinionsSuperArmor_AllDamageReduce": {
-              "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-              "displayLines": "{[SkillEX01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[0]]}"
-              ]
-            },
-            "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio": {
-              "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-              "displayLines": "{[SkillEX01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[1]]}"
-              ]
-            },
-            "MDF_SetActionDelayValue": {
-              "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
-              "displayLines": "{[SkillEX01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[2]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "StanceDamagePreshowValue",
-          "value": {
-            "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-            "displayLines": "{[SkillP01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[0]]}"
-            ]
-          }
-        }
-      ],
+      "parse": [],
+      "whenAdded": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
       "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_PolluxPart_IF_PassiveAbility_Initiate": {
-      "fileName": "4012077_Monster_W4_PolluxPart_IF_PassiveAbility_Initiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"385444056\">Enemy_W4_PolluxPart_IF_Status</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1636257193\">Enemy_W4_PolluxPart_IF_MinionsSuperArmorController</a>",
-          "valuePerStack": {
-            "MDF_MinionsSuperArmor_AllDamageReduce": {
-              "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-              "displayLines": "{[SkillEX01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[0]]}"
-              ]
-            },
-            "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio": {
-              "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-              "displayLines": "{[SkillEX01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[1]]}"
-              ]
-            },
-            "MDF_SetActionDelayValue": {
-              "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
-              "displayLines": "{[SkillEX01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[2]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "StanceDamagePreshowValue",
-          "value": {
-            "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-            "displayLines": "{[SkillP01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[0]]}"
-            ]
-          }
-        }
-      ],
-      "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -603,6 +431,82 @@ const compositeAbilityObject = {
       },
       "references": []
     },
+    "4012077_Monster_W4_PolluxPart_IF_L_PassiveAbility_Initiate": {
+      "fileName": "4012077_Monster_W4_PolluxPart_IF_L_PassiveAbility_Initiate",
+      "skillTrigger": "Passive",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"385444056\">Enemy_W4_PolluxPart_IF_Status</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1636257193\">Enemy_W4_PolluxPart_IF_MinionsSuperArmorController</a>",
+          "valuePerStack": {
+            "MDF_MinionsSuperArmor_AllDamageReduce": {
+              "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
+              "displayLines": "{[SkillEX01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX01[0]]}"
+              ]
+            },
+            "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio": {
+              "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
+              "displayLines": "{[SkillEX01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX01[1]]}"
+              ]
+            },
+            "MDF_SetActionDelayValue": {
+              "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
+              "displayLines": "{[SkillEX01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX01[2]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Summoner}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "StanceDamagePreshowValue",
+          "value": {
+            "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+            "displayLines": "{[SkillP01[0]]}",
+            "constants": [],
+            "variables": [
+              "{[SkillP01[0]]}"
+            ]
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "4012077_Monster_W4_PolluxPart_IF_Ability02_L_Part02": {
       "fileName": "4012077_Monster_W4_PolluxPart_IF_Ability02_L_Part02",
       "abilityType": null,
@@ -802,195 +706,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4012077_Monster_W4_PolluxPart_IF_Ability02_Part02": {
-      "fileName": "4012077_Monster_W4_PolluxPart_IF_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill02[2]]}) || MUL || RETURN",
-                  "displayLines": "(_MaxHP * {[Skill02[2]]})",
-                  "constants": [],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill02[2]]}"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                  "displayLines": "{[Skill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[1]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill02[3]]}) || MUL || RETURN",
-                  "displayLines": "(_MaxHP * {[Skill02[3]]})",
-                  "constants": [],
-                  "variables": [
-                    "_MaxHP",
-                    "{[Skill02[3]]}"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Target Left of Ability Target(ST)}}"
-          },
-          "maxTargets": 1
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Target Right of Ability Target(ST)}}"
-          },
-          "maxTargets": 1
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"1601406944\">TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb_FX</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-766570299\">TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_PolluxPart_IF_Ability02_Part01": {
-      "fileName": "4012077_Monster_W4_PolluxPart_IF_Ability02_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_PolluxPart_IF_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
     "4012077_Monster_W4_PolluxPart_IF_Ability01_L_Part02": {
       "fileName": "4012077_Monster_W4_PolluxPart_IF_Ability01_L_Part02",
       "abilityType": null,
@@ -1067,2992 +782,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4012077_Monster_W4_PolluxPart_IF_Ability01_Part02": {
-      "fileName": "4012077_Monster_W4_PolluxPart_IF_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"1601406944\">TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb_FX</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-766570299\">TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_PolluxPart_IF_Ability01_Part01": {
-      "fileName": "4012077_Monster_W4_PolluxPart_IF_Ability01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_PolluxPart_IF_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_AbilityEX05": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_AbilityEX05",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_AbilityEX04": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_AbilityEX04",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": ">=",
-            "value2": 4
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1339116785\">Enemy_W4_Pollux_IF_AbilityEX04</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_AbilityEX03": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_AbilityEX03",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": ">=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1389449642\">Enemy_W4_Pollux_IF_AbilityEX03</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_AbilityEX02": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_AbilityEX02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": ">=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1372672023\">Enemy_W4_Pollux_IF_AbilityEX02</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_PolluxPart_IF_AbilityEX01": {
-      "fileName": "4012077_Monster_W4_PolluxPart_IF_AbilityEX01",
-      "skillTrigger": "SkillEX01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_AbilityEX01": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_AbilityEX01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": ">=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1423004880\">Enemy_W4_Pollux_IF_AbilityEX01</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_Stun_Insert": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_Stun_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Consume",
-          "consumeFrom": "MaxHP",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "consumePercent": {
-            "operator": "Variables[0] (UnusedUnderThisBase_106) || RETURN",
-            "displayLines": "UnusedUnderThisBase_106",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_106"
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2005725125\">Enemy_W4_Pollux_IF_Strengthen_Break</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_TeamFormation": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_TeamFormation",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_AbilityP01_Insert01_Part02": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_AbilityP01_Insert01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2037214572\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Controller</a>",
-          "valuePerStack": {
-            "MDF_NegativeBlood_Target_DeathCountDown": {
-              "operator": "Variables[0] (UnusedUnderThisBase_103) || RETURN",
-              "displayLines": "UnusedUnderThisBase_103",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_103"
-              ]
-            },
-            "MDF_NegativeBlood_Target_FatigueRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_104) || RETURN",
-              "displayLines": "UnusedUnderThisBase_104",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_104"
-              ]
-            },
-            "MDF_NegativeBlood_Target_StanceBreakDownRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_105) || RETURN",
-              "displayLines": "UnusedUnderThisBase_105",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_105"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1112261788\">Enemy_W4_PolluxPart_IF_Reflex</a>[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]",
-          "valuePerStack": {
-            "MDF_ReflexDamageValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_102) || RETURN",
-              "displayLines": "UnusedUnderThisBase_102",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_102"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_AbilityP01_Insert01_Part01": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_AbilityP01_Insert01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Pollux_IF_AbilityP01_Insert01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_PassiveAbility_Insert": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_PassiveAbility_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Modifier Behavior Flag(s)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}} + {{Caster's Minions}}"
-          },
-          "flagNames": []
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1989762066\">Enemy_W4_PolluxPart_IF_Link</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1112261788\">Enemy_W4_PolluxPart_IF_Reflex</a>[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]",
-          "valuePerStack": {
-            "MDF_ReflexDamageValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_102) || RETURN",
-              "displayLines": "UnusedUnderThisBase_102",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_102"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1688517080\">Enemy_W4_Pollux_Endurance</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "set": 0
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "searchRandom": true,
-          "ifTargetFound": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1902031976\">Monster_ChangePhase_ParamEntity</a>"
-            }
-          ]
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1837027601\">Monster_W4_Pollux_IF_PartController_LockHP</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2005725125\">Enemy_W4_Pollux_IF_Strengthen_Break</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1288968302\">Enemy_W4_Pollux_IF_Strengthen_BreakMark</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_EnergyValue",
-          "value": 0
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": {
-            "operator": "Variables[0] (_EnergyValue) || RETURN",
-            "displayLines": "_EnergyValue",
-            "constants": [],
-            "variables": [
-              "_EnergyValue"
-            ]
-          },
-          "entityClass": "Enemy",
-          "maximum": 1,
-          "assignState": "True",
-          "state": "Normal",
-          "trigger": "SpEff_Trigger"
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_101) || RETURN",
-              "displayLines": "UnusedUnderThisBase_101",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_101"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1754480095\">Monster_Standard_WeakControl</a>[<span class=\"descriptionNumberColor\">Toughness Protection</span>]"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage Type",
-                "stageType": "Challenge"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "VerseSimulation"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "StrongChallengeActivity"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "RogueRelic"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "GridFightActivity"
-              }
-            ]
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_AbilityP05": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_AbilityP05",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_AbilityP04": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_AbilityP04",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_AbilityP03": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_AbilityP03",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_AbilityP02": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_AbilityP02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_AbilityP01": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_AbilityP01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1116201427\">W4_Pollux_BattleScore2</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1099423808\">W4_Pollux_BattleScore3</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-147958761\">Enemy_W4_Pollux_IF_Status</a>"
-        },
-        {
-          "name": "Create Enemies",
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonID0) || RETURN",
-                "displayLines": "SummonID0",
-                "constants": [],
-                "variables": [
-                  "SummonID0"
-                ]
-              },
-              "locationType": "BeforeCaster",
-              "locationOffset": -1,
-              "leader": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Recently Summoned Enemies}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-193308861\">Monster_W4_PolluxPart_L</a>"
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": 1.3,
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonID1) || RETURN",
-                "displayLines": "SummonID1",
-                "constants": [],
-                "variables": [
-                  "SummonID1"
-                ]
-              },
-              "locationType": "AfterCaster",
-              "locationOffset": 1,
-              "leader": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Recently Summoned Enemies}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-226864099\">Monster_W4_PolluxPart_R</a>"
-        },
-        {
-          "name": "Create Shared HP Group",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "subTarget": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "removeShields": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_101) || RETURN",
-              "displayLines": "UnusedUnderThisBase_101",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_101"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1754480095\">Monster_Standard_WeakControl</a>[<span class=\"descriptionNumberColor\">Toughness Protection</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-740454395\">Enemy_W4_Pollux_IF_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-313862182\">Enemy_W4_Pollux_IF_RemoveOneMore</a>"
-        },
-        {
-          "name": "Set Enemy Phase"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1837027601\">Monster_W4_Pollux_IF_PartController_LockHP</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-354779130\">Enemy_W4_Pollux_IF_AbilityP01_WeaknessControl</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_Skill05_ActionDelay",
-          "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_100) || RETURN",
-            "displayLines": "UnusedUnderThisBase_100",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_100"
-            ]
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_Skill05_Part_ActionDelay",
-          "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_99) || RETURN",
-            "displayLines": "UnusedUnderThisBase_99",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_99"
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1922809357\">Enemy_W4_Pollux_IF_HintToastController</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1423004880\">Enemy_W4_Pollux_IF_AbilityEX01</a>"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
-              "valuePerStack": {
-                "MDF_IF_BOSS_BreakDelay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_98) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_98",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_98"
-                  ]
-                },
-                "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_97) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_97",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_97"
-                  ]
-                },
-                "MDF_IF_BOSS_Standard_Defence": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_96) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_96",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_96"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
-              "valuePerStack": {
-                "MDF_FrenzyStartDelay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_92) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_92",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_92"
-                  ]
-                },
-                "MDF_FrenzyIntervalDelay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_93) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_93",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_93"
-                  ]
-                },
-                "MDF_MaxFrenzyLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_94) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_94",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_94"
-                  ]
-                },
-                "MDF_TokenDMGAddRatioPerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_95) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_95",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_95"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1339116785\">Enemy_W4_Pollux_IF_AbilityEX04</a>"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}} + {{Caster's Minions}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-146543153\">Enemy_W2_Cocolia_IF_WeaknessCount</a>",
-              "valuePerStack": {
-                "MDF_TokenDamageReduceRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_90) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_90",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_90"
-                  ]
-                },
-                "MDF_TokenDamageAddRatioPerlayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_91) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_91",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_91"
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"599310144\">Monster_W4_Pollux_FX_Ground</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-261920057\">Enemy_W4_Pollux_IF_EnterBattle</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-226864099\">Monster_W4_PolluxPart_R</a>",
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-193308861\">Monster_W4_PolluxPart_L</a>",
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "4012077_Monster_W4_Pollux_IF_Ability06_Part02": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_Ability06_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Define Custom Variable",
-          "variableName": "IsNeedFade",
-          "value": 1
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"599310144\">Monster_W4_Pollux_FX_Ground</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"235074644\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_Display</a>[<span class=\"descriptionNumberColor\">Death Rattle</span>]"
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "variableName": "_TargetNegativeHp",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;",
-                  "context": "ContextAbility"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_TargetNegativeHp",
-                  "value": {
-                    "operator": "Variables[0] (CEIL) || Variables[1] (_TargetNegativeHp) || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(_TargetNegativeHp)",
-                    "constants": [],
-                    "variables": [
-                      "CEIL",
-                      "_TargetNegativeHp"
-                    ]
-                  }
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>"
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Quantum",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (_TargetNegativeHp) || RETURN",
-                      "displayLines": "_TargetNegativeHp",
-                      "constants": [],
-                      "variables": [
-                        "_TargetNegativeHp"
-                      ]
-                    },
-                    "dmgFormulaFinal": "Converted DMG Base",
-                    "Toughness": null,
-                    "Tags": null,
-                    "behaviorTag": "DirectlyLoseHpHit",
-                    "attackType": "Additional DMG"
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "variableName": "_MaxHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Quantum",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_109) || MUL || Constants[0] (0.25) || MUL || RETURN",
-                      "displayLines": "((_MaxHP * UnusedUnderThisBase_109) * 0.25)",
-                      "constants": [
-                        0.25
-                      ],
-                      "variables": [
-                        "_MaxHP",
-                        "UnusedUnderThisBase_109"
-                      ]
-                    },
-                    "dmgFormulaFinal": "Converted DMG Base",
-                    "Toughness": null,
-                    "Tags": null,
-                    "behaviorTag": "DirectlyLoseHpHit",
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "25%"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>",
-                "invertCondition": true
-              },
-              "failed": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "variableName": "_MaxHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Quantum",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_109) || MUL || Constants[0] (0.25) || MUL || RETURN",
-                      "displayLines": "((_MaxHP * UnusedUnderThisBase_109) * 0.25)",
-                      "constants": [
-                        0.25
-                      ],
-                      "variables": [
-                        "_MaxHP",
-                        "UnusedUnderThisBase_109"
-                      ]
-                    },
-                    "dmgFormulaFinal": "Converted DMG Base",
-                    "Toughness": null,
-                    "Tags": null,
-                    "behaviorTag": "DirectlyLoseHpHit",
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "25%"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>",
-                "invertCondition": true
-              },
-              "failed": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "variableName": "_MaxHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Quantum",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_109) || MUL || Constants[0] (0.25) || MUL || RETURN",
-                      "displayLines": "((_MaxHP * UnusedUnderThisBase_109) * 0.25)",
-                      "constants": [
-                        0.25
-                      ],
-                      "variables": [
-                        "_MaxHP",
-                        "UnusedUnderThisBase_109"
-                      ]
-                    },
-                    "dmgFormulaFinal": "Converted DMG Base",
-                    "Toughness": null,
-                    "Tags": null,
-                    "behaviorTag": "DirectlyLoseHpHit",
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "25%"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>",
-                "invertCondition": true
-              },
-              "failed": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "variableName": "_MaxHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Quantum",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_109) || MUL || Constants[0] (0.25) || MUL || RETURN",
-                      "displayLines": "((_MaxHP * UnusedUnderThisBase_109) * 0.25)",
-                      "constants": [
-                        0.25
-                      ],
-                      "variables": [
-                        "_MaxHP",
-                        "UnusedUnderThisBase_109"
-                      ]
-                    },
-                    "dmgFormulaFinal": "Converted DMG Base",
-                    "Toughness": null,
-                    "Tags": null,
-                    "behaviorTag": "DirectlyLoseHpHit",
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "25%"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
-              "valuePerStack": {
-                "MDF_DamagePercentage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_86) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_86",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_86"
-                  ]
-                },
-                "MDF_DamageHpAddedRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_87) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_87",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_87"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"599310144\">Monster_W4_Pollux_FX_Ground</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "IsNeedFade",
-          "value": 0
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_Ability06_Part01": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_Ability06_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Pollux_IF_Ability06_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_Ability05_Part02": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_Ability05_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": ">=",
-                "value2": 2
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 4014033,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Castorice, Hand of Shadow",
-                "isBaseCompare": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-822435931\">Enemy_W4_Pollux_IF_UltraReadyMark</a>"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 3
-            }
-          ],
-          "failed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_108) || MUL || Constants[0] (0.125) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * UnusedUnderThisBase_108) * 0.125)",
-                  "constants": [
-                    0.125
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "UnusedUnderThisBase_108"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "12.5%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_108) || MUL || Constants[0] (0.125) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * UnusedUnderThisBase_108) * 0.125)",
-                  "constants": [
-                    0.125
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "UnusedUnderThisBase_108"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "12.5%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_108) || MUL || Constants[0] (0.125) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * UnusedUnderThisBase_108) * 0.125)",
-                  "constants": [
-                    0.125
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "UnusedUnderThisBase_108"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "12.5%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_108) || MUL || Constants[0] (0.125) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * UnusedUnderThisBase_108) * 0.125)",
-                  "constants": [
-                    0.125
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "UnusedUnderThisBase_108"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "12.5%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_108) || MUL || Constants[0] (0.125) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * UnusedUnderThisBase_108) * 0.125)",
-                  "constants": [
-                    0.125
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "UnusedUnderThisBase_108"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "12.5%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_108) || MUL || Constants[0] (0.125) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * UnusedUnderThisBase_108) * 0.125)",
-                  "constants": [
-                    0.125
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "UnusedUnderThisBase_108"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "12.5%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_108) || MUL || Constants[0] (0.125) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * UnusedUnderThisBase_108) * 0.125)",
-                  "constants": [
-                    0.125
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "UnusedUnderThisBase_108"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "12.5%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_108) || MUL || Constants[0] (0.125) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * UnusedUnderThisBase_108) * 0.125)",
-                  "constants": [
-                    0.125
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "UnusedUnderThisBase_108"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "12.5%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 2
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team(Exclude Memosprites)}}"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
-              "valuePerStack": {
-                "MDF_DamagePercentage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_86) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_86",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_86"
-                  ]
-                },
-                "MDF_DamageHpAddedRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_87) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_87",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_87"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
-          "valuePerStack": {
-            "MDF_ShowValue1": {
-              "operator": "Variables[0] (UnusedUnderThisBase_81) || RETURN",
-              "displayLines": "UnusedUnderThisBase_81",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_81"
-              ]
-            },
-            "MDF_SpeedUpRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_81) || RETURN",
-              "displayLines": "UnusedUnderThisBase_81",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_81"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1112261788\">Enemy_W4_PolluxPart_IF_Reflex</a>[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1989762066\">Enemy_W4_PolluxPart_IF_Link</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "target2": {
-              "name": "Target Name",
-              "target": "{{Current Turn Owner}}"
-            }
-          },
-          "passed": [
-            {
-              "name": "Assign Advance/Delay to Current Ability Use",
-              "adjustmentValue": {
-                "operator": "Variables[0] (_Skill05_ActionDelay) || RETURN",
-                "displayLines": "_Skill05_ActionDelay",
-                "constants": [],
-                "variables": [
-                  "_Skill05_ActionDelay"
-                ]
-              },
-              "adjustmentType": "="
-            },
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "advanceType": "Set",
-              "multiAdd": "(_Skill05_ActionDelay - 1)"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Action Advance/Delay",
-              "advanceType": "Set",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "multiBase": {
-                "operator": "Variables[0] (_Skill05_ActionDelay) || RETURN",
-                "displayLines": "_Skill05_ActionDelay",
-                "constants": [],
-                "variables": [
-                  "_Skill05_ActionDelay"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_Ability05_Part01": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_Ability05_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_ReadyToCharge",
-          "value": 0
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "ability": "Monster_W4_Pollux_IF_Ability05_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "onAbort": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_ReadyToCharge",
-          "value": 0
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_Ability04_Part02": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "flagName": "Break"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Exit Broken-State",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            {
-              "name": "Reset Toughness",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            {
-              "name": "Action Advance/Delay",
-              "advanceType": "Set",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "set": 0
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_Ability04_Part01": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_Ability04_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Pollux_IF_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_Ability03_Part02": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "flagName": "Taunt",
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 3,
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>"
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemies by Aggro}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>"
-                }
-              ]
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 2,
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>",
-                "invertCondition": true
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target Count",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Pollox Mourning Departed Target}}"
-            },
-            "compareType": "=",
-            "value2": 1,
-            "livingTargets": true
-          },
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target Count",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Pollox Mourning Departed Target}}"
-                },
-                "compareType": "=",
-                "value2": 2,
-                "livingTargets": true
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target Count",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Pollox Mourning Departed Target}}"
-            },
-            "compareType": "=",
-            "value2": 1,
-            "livingTargets": true
-          },
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target Count",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Pollox Mourning Departed Target}}"
-                },
-                "compareType": "=",
-                "value2": 2,
-                "livingTargets": true
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Pollox Mourning Departed Target}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_64) || MUL || Constants[0] (0.15) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * UnusedUnderThisBase_64) * 0.15)",
-                  "constants": [
-                    0.15
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "UnusedUnderThisBase_64"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "15%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Pollox Mourning Departed Target}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Pollox Mourning Departed Target}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Pollox Mourning Departed Target}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_64) || MUL || Constants[0] (0.15) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * UnusedUnderThisBase_64) * 0.15)",
-                  "constants": [
-                    0.15
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "UnusedUnderThisBase_64"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "15%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Pollox Mourning Departed Target}}"
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Pollox Mourning Departed Target}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_64) || MUL || Constants[0] (0.15) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * UnusedUnderThisBase_64) * 0.15)",
-                  "constants": [
-                    0.15
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "UnusedUnderThisBase_64"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "15%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Pollox Mourning Departed Target}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_64) || MUL || Constants[0] (0.15) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * UnusedUnderThisBase_64) * 0.15)",
-                  "constants": [
-                    0.15
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "UnusedUnderThisBase_64"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "15%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Pollox Mourning Departed Target}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_64) || MUL || Constants[0] (0.15) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * UnusedUnderThisBase_64) * 0.15)",
-                  "constants": [
-                    0.15
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "UnusedUnderThisBase_64"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "15%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Pollox Mourning Departed Target}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_64) || MUL || Constants[0] (0.25) || MUL || RETURN",
-                  "displayLines": "((_MaxHP * UnusedUnderThisBase_64) * 0.25)",
-                  "constants": [
-                    0.25
-                  ],
-                  "variables": [
-                    "_MaxHP",
-                    "UnusedUnderThisBase_64"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "25%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Pollox Mourning Departed Target}}"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
-              "valuePerStack": {
-                "MDF_DamagePercentage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_86) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_86",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_86"
-                  ]
-                },
-                "MDF_DamageHpAddedRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_87) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_87",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_87"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"1601406944\">TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb_FX</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-766570299\">TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_Ability03_Part01": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Pollux_IF_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_Ability02_Part02": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "variableName": "_PlayerNum",
-          "livingTargets": true
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || Variables[1] (_PlayerNum) || DIV || RETURN",
-              "displayLines": "({[Skill02[0]]} / _PlayerNum)",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}",
-                "_PlayerNum"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "variableName": "_MaxHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Quantum",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_89) || MUL || RETURN",
-                      "displayLines": "(_MaxHP * UnusedUnderThisBase_89)",
-                      "constants": [],
-                      "variables": [
-                        "_MaxHP",
-                        "UnusedUnderThisBase_89"
-                      ]
-                    },
-                    "dmgFormulaFinal": "Converted DMG Base",
-                    "Toughness": null,
-                    "Tags": null,
-                    "behaviorTag": "DirectlyLoseHpHit",
-                    "attackType": "Basic ATK"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
-              "valuePerStack": {
-                "MDF_DamagePercentage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_86) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_86",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_86"
-                  ]
-                },
-                "MDF_DamageHpAddedRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_87) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_87",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_87"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"1601406944\">TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb_FX</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-766570299\">TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_Ability02_Part01": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_Ability02_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Pollux_IF_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_Ability01_Part02": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "variableName": "_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "DamageFlat": {
-                  "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_88) || MUL || RETURN",
-                  "displayLines": "(_MaxHP * UnusedUnderThisBase_88)",
-                  "constants": [],
-                  "variables": [
-                    "_MaxHP",
-                    "UnusedUnderThisBase_88"
-                  ]
-                },
-                "dmgFormulaFinal": "Converted DMG Base",
-                "Toughness": null,
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Basic ATK"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
-                "invertCondition": true
-              },
-              {
-                "name": "Is Part Of Team",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "team": "Player Team"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-976528853\">Enemy_W4_Pollux_IF_ThirstBlood</a>[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
-              "valuePerStack": {
-                "MDF_DamagePercentage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_86) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_86",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_86"
-                  ]
-                },
-                "MDF_DamageHpAddedRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_87) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_87",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_87"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"1601406944\">TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb_FX</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-766570299\">TaskList_Monster_W4_Pollux_IF_Strengthen_EggAbsorb</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4012077_Monster_W4_Pollux_IF_Ability01_Part01": {
-      "fileName": "4012077_Monster_W4_Pollux_IF_Ability01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Pollux_IF_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
     "4012077_Modifiers": {
       "fileName": "4012077_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -4071,6 +800,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_DOT"
           ],
+          "useEntitySnapshot": true,
+          "description": "Receives DMG at the start of the turn. The higher the target's current HP percentage, the more DMG they receive.",
+          "type": "Debuff",
+          "effectName": "DoT",
+          "statusName": "Hastened Death",
+          "stackLimit": 1,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -4183,19 +919,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_DamagePercentage",
-            "MDF_DamageHpAddedRatio"
-          ],
-          "latentQueue": [],
-          "description": "Receives DMG at the start of the turn. The higher the target's current HP percentage, the more DMG they receive.",
-          "type": "Debuff",
-          "effectName": "DoT",
-          "statusName": "Hastened Death",
-          "stackLimit": 1,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4263,9 +987,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4424,9 +1146,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4537,9 +1257,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4548,6 +1266,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Endurance"
           ],
+          "description": "\"The Living Shan't Flee\" enhances to \"The Dead Shan't Avoid.\"",
+          "type": "Other",
+          "effectName": "Enhance",
+          "statusName": "Overdue Obituary",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -4588,35 +1310,23 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "\"The Living Shan't Flee\" enhances to \"The Dead Shan't Avoid.\"",
-          "type": "Other",
-          "effectName": "Enhance",
-          "statusName": "Overdue Obituary"
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1339116785\">Enemy_W4_Pollux_IF_AbilityEX04</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1339116785\">Enemy_W4_Pollux_IF_AbilityEX04</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1389449642\">Enemy_W4_Pollux_IF_AbilityEX03</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1389449642\">Enemy_W4_Pollux_IF_AbilityEX03</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1372672023\">Enemy_W4_Pollux_IF_AbilityEX02</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1372672023\">Enemy_W4_Pollux_IF_AbilityEX02</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1423004880\">Enemy_W4_Pollux_IF_AbilityEX01</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1423004880\">Enemy_W4_Pollux_IF_AbilityEX01</a>"
         },
         {
           "name": "Modifier Construction",
@@ -4733,15 +1443,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-740454395\">Enemy_W4_Pollux_IF_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]",
-          "stackData": [],
-          "latentQueue": [],
           "description": "When ally targets' HP reduces, accumulates \"Desperate Bubble.\" When \"Desperate Bubble\" reaches the limit, this unit enters the \"Fragrance of Death\" state.",
           "type": "Other",
           "statusName": "Dream of Demise"
@@ -4778,9 +1484,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -45
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4827,11 +1531,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1112261788\">Enemy_W4_PolluxPart_IF_Reflex</a>[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]",
                   "valuePerStack": {
                     "MDF_ReflexDamageValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_102) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_102",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11888) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11888",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_102"
+                        "UnusedUnderThisBase_11888"
                       ]
                     }
                   }
@@ -4852,9 +1556,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5490,6 +2192,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Attacks against \"Guide of Withering and Decay\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
+          "type": "Other",
+          "effectName": "Enhance",
+          "statusName": "Fragrance of Death",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5532,19 +2238,19 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1512844653\">Enemy_W4_Pollux_IF_Strengthen_Shield</a>",
                   "valuePerStack": {
                     "MDF_ShieldPercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_112) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_112",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11902) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11902",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_112"
+                        "UnusedUnderThisBase_11902"
                       ]
                     },
                     "MDF_ShieldAttack_HealRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_111) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_111",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11885) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11885",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_111"
+                        "UnusedUnderThisBase_11885"
                       ]
                     }
                   }
@@ -5720,22 +2426,21 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ShowValue1",
-            "MDF_SpeedUpRatio"
-          ],
-          "latentQueue": [
-            "AIFlag"
-          ],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Attacks against \"Guide of Withering and Decay\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
-          "type": "Other",
-          "effectName": "Enhance",
-          "statusName": "Fragrance of Death"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1989762066\">Enemy_W4_PolluxPart_IF_Link</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-2030876773\">Enemy_W4_PolluxPart_IF_Shield</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]"
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -5826,20 +2531,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
-          ],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2030876773\">Enemy_W4_PolluxPart_IF_Shield</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]"
-            }
           ]
         },
         {
@@ -5879,6 +2570,16 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1112261788\">Enemy_W4_PolluxPart_IF_Reflex</a>[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]",
+          "stackData": [
+            "MDF_ReflexDamageValue"
+          ],
+          "latentQueue": [
+            "StunCheck"
+          ],
+          "description": "After attacking this target, the attacker will receive minor Quantum \"Atrophy DMG.\"",
+          "type": "Other",
+          "effectName": "Corrosive Retaliation",
+          "statusName": "Corrosive Retaliation",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -6081,17 +2782,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ReflexDamageValue"
-          ],
-          "latentQueue": [
-            "StunCheck"
-          ],
-          "description": "After attacking this target, the attacker will receive minor Quantum \"Atrophy DMG.\"",
-          "type": "Other",
-          "effectName": "Corrosive Retaliation",
-          "statusName": "Corrosive Retaliation"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6100,6 +2791,9 @@ const compositeAbilityObject = {
             "STAT_SuperArmorBreak",
             "STAT_AITargetKeepActionDelay"
           ],
+          "description": "\"Guide of Withering and Decay\" is currently in \"Safeguard Breach\" state, this unit's DMG received increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
+          "type": "Debuff",
+          "statusName": "Physical Falter",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -6211,15 +2905,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "\"Guide of Withering and Decay\" is currently in \"Safeguard Breach\" state, this unit's DMG received increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
-          "type": "Debuff",
-          "statusName": "Physical Falter"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2031085573\">Enemy_W4_PolluxPart_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Physical Enhancement</span>]",
           "modifierFlags": [],
+          "description": "\"Guide of Withering and Decay\" is currently in \"Steadfast Safeguard\" state, this unit's DMG received decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
+          "type": "Buff",
+          "statusName": "Physical Enhancement",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -6448,14 +3142,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "\"Guide of Withering and Decay\" is currently in \"Steadfast Safeguard\" state, this unit's DMG received decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
-          "type": "Buff",
-          "statusName": "Physical Enhancement"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1636257193\">Enemy_W4_PolluxPart_IF_MinionsSuperArmorController</a>",
+          "stackData": [
+            "MDF_MinionsSuperArmor_AllDamageReduce",
+            "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
+            "MDF_SetActionDelayValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -6596,13 +3292,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MinionsSuperArmor_AllDamageReduce",
-            "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
-            "MDF_SetActionDelayValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6727,9 +3417,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6995,12 +3683,12 @@ const compositeAbilityObject = {
                       },
                       "variableName": "_EnergyValue",
                       "value": {
-                        "operator": "Variables[0] (_HPChangeRatio) || Variables[1] (UnusedUnderThisBase_110) || MUL || RETURN",
-                        "displayLines": "(_HPChangeRatio * UnusedUnderThisBase_110)",
+                        "operator": "Variables[0] (_HPChangeRatio) || Variables[1] (UnusedUnderThisBase_11901) || MUL || RETURN",
+                        "displayLines": "(_HPChangeRatio * UnusedUnderThisBase_11901)",
                         "constants": [],
                         "variables": [
                           "_HPChangeRatio",
-                          "UnusedUnderThisBase_110"
+                          "UnusedUnderThisBase_11901"
                         ]
                       },
                       "max": 1
@@ -7456,9 +4144,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7466,6 +4152,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_Fatigue"
           ],
+          "description": "Target has accumulated \"HP Overload.\" Heal <span class=\"descriptionNumberColor\">MDF_NegativeBlood</span> HP to remove this state. DMG dealt is reduced by <span class=\"descriptionNumberColor\">MDF_FatigueRatio</span>, and Weakness Break Efficiency is reduced by <span class=\"descriptionNumberColor\">MDF_StanceBreakDownRatio</span>. When its duration ends, the target will receive fatal damage. Remaining duration: <span class=\"descriptionNumberColor\">MDF_LifetimeDisplay</span> turn(s).",
+          "type": "Other",
+          "statusName": "Death Rattle",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -7970,14 +4659,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Target has accumulated \"HP Overload.\" Heal <span class=\"descriptionNumberColor\">MDF_NegativeBlood</span> HP to remove this state. DMG dealt is reduced by <span class=\"descriptionNumberColor\">MDF_FatigueRatio</span>, and Weakness Break Efficiency is reduced by <span class=\"descriptionNumberColor\">MDF_StanceBreakDownRatio</span>. When its duration ends, the target will receive fatal damage. Remaining duration: <span class=\"descriptionNumberColor\">MDF_LifetimeDisplay</span> turn(s).",
-          "type": "Other",
-          "statusName": "Death Rattle"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>",
+          "latentQueue": [
+            "MDF_LifetimeDisplay"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7985,15 +4674,15 @@ const compositeAbilityObject = {
                 "Allow NEGATIVE HP"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_LifetimeDisplay"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__267358493\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target</a>[<span class=\"descriptionNumberColor\">Overloadable</span>]",
+          "description": "Target's HP cannot be reduced below 1, and any excess damage beyond an amount of their current HP will be converted to \"HP Overload.\" When receiving healing, prioritizes restoring their \"HP Overload.\"",
+          "type": "Other",
+          "effectName": "Overloadable",
+          "statusName": "Overloadable",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -8203,15 +4892,48 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Target's HP cannot be reduced below 1, and any excess damage beyond an amount of their current HP will be converted to \"HP Overload.\" When receiving healing, prioritizes restoring their \"HP Overload.\"",
-          "type": "Other",
-          "effectName": "Overloadable",
-          "statusName": "Overloadable"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2037214572\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Controller</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"267358493\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target</a>[<span class=\"descriptionNumberColor\">Overloadable</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_NegativeBlood_DeathCountDown": {
+                  "operator": "Variables[0] (MDF_NegativeBlood_Target_DeathCountDown) || RETURN",
+                  "displayLines": "MDF_NegativeBlood_Target_DeathCountDown",
+                  "constants": [],
+                  "variables": [
+                    "MDF_NegativeBlood_Target_DeathCountDown"
+                  ]
+                },
+                "MDF_NegativeBlood_FatigueRatio": {
+                  "operator": "Variables[0] (MDF_NegativeBlood_Target_FatigueRatio) || RETURN",
+                  "displayLines": "MDF_NegativeBlood_Target_FatigueRatio",
+                  "constants": [],
+                  "variables": [
+                    "MDF_NegativeBlood_Target_FatigueRatio"
+                  ]
+                },
+                "MDF_NegativeBlood_StanceBreakDownRatio": {
+                  "operator": "Variables[0] (MDF_NegativeBlood_Target_StanceBreakDownRatio) || RETURN",
+                  "displayLines": "MDF_NegativeBlood_Target_StanceBreakDownRatio",
+                  "constants": [],
+                  "variables": [
+                    "MDF_NegativeBlood_Target_StanceBreakDownRatio"
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -8253,49 +4975,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_NegativeBlood_Target_DeathCountDown",
-            "MDF_NegativeBlood_Target_FatigueRatio",
-            "MDF_NegativeBlood_Target_StanceBreakDownRatio"
-          ],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"267358493\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target</a>[<span class=\"descriptionNumberColor\">Overloadable</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_NegativeBlood_DeathCountDown": {
-                  "operator": "Variables[0] (MDF_NegativeBlood_Target_DeathCountDown) || RETURN",
-                  "displayLines": "MDF_NegativeBlood_Target_DeathCountDown",
-                  "constants": [],
-                  "variables": [
-                    "MDF_NegativeBlood_Target_DeathCountDown"
-                  ]
-                },
-                "MDF_NegativeBlood_FatigueRatio": {
-                  "operator": "Variables[0] (MDF_NegativeBlood_Target_FatigueRatio) || RETURN",
-                  "displayLines": "MDF_NegativeBlood_Target_FatigueRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_NegativeBlood_Target_FatigueRatio"
-                  ]
-                },
-                "MDF_NegativeBlood_StanceBreakDownRatio": {
-                  "operator": "Variables[0] (MDF_NegativeBlood_Target_StanceBreakDownRatio) || RETURN",
-                  "displayLines": "MDF_NegativeBlood_Target_StanceBreakDownRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_NegativeBlood_Target_StanceBreakDownRatio"
-                  ]
-                }
-              }
-            }
           ]
         },
         {
@@ -8308,10 +4987,6 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
           ]
         }
       ],

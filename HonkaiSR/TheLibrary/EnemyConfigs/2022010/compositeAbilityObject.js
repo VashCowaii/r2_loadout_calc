@@ -3,357 +3,17 @@ const compositeAbilityObject = {
   "fullCharacterName": 2022010,
   "trimCharacterName": 2022010,
   "abilityList": [
-    "2022010_Monster_W2_Abomi01_Ability02_Part02",
-    "2022010_Monster_W2_Abomi01_Ability02_Part01",
-    "2022010_Monster_W2_Abomi01_Ability01_Part02",
-    "2022010_Monster_W2_Abomi01_Ability01_Part01",
     "2022010_Monster_W2_Abomi01_PassiveAbility_Insert02_Part01",
     "2022010_Monster_W2_Abomi01_PassiveAbility_Insert02_Part00",
     "2022010_Monster_W2_Abomi01_PassiveAbility_Insert_Part01",
     "2022010_Monster_W2_Abomi01_Passive01",
+    "2022010_Monster_W2_Abomi01_Ability02_Part02",
+    "2022010_Monster_W2_Abomi01_Ability02_Part01",
+    "2022010_Monster_W2_Abomi01_Ability01_Part02",
+    "2022010_Monster_W2_Abomi01_Ability01_Part01",
     "2022010_Modifiers"
   ],
   "abilityObject": {
-    "2022010_Monster_W2_Abomi01_Ability02_Part02": {
-      "fileName": "2022010_Monster_W2_Abomi01_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Monster_W2_Abomi01_00_HitFlyFlag"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.25) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * 0.25)",
-              "constants": [
-                0.25
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "25%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.25) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * 0.25)",
-              "constants": [
-                0.25
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "25%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "50%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-            "displayLines": "{[Skill01[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[2]]}"
-            ]
-          },
-          "baseChance": {
-            "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-            "displayLines": "{[Skill01[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[4]]}"
-            ]
-          },
-          "valuePerStack": {
-            "Modifier_Poison_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            }
-          },
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-            "displayLines": "{[Skill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[1]]}"
-            ]
-          },
-          "stackFlag": "CharacterSkill"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2022010_Monster_W2_Abomi01_Ability02_Part01": {
-      "fileName": "2022010_Monster_W2_Abomi01_Ability02_Part01",
-      "childAbilityList": [
-        "2022010_Monster_W2_Abomi01_Ability02_Camera",
-        "2022010_Monster_W2_Abomi01_Ability02_Part01",
-        "2022010_Monster_W2_Abomi01_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Abomi01_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "2022010_Monster_W2_Abomi01_Ability01_Part02": {
-      "fileName": "2022010_Monster_W2_Abomi01_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Monster_W2_Abomi01_00_HitFlyFlag"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.25) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * 0.25)",
-              "constants": [
-                0.25
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "25%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.25) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * 0.25)",
-              "constants": [
-                0.25
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "25%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.5) || MUL || RETURN",
-              "displayLines": "({[Skill01[0]]} * 0.5)",
-              "constants": [
-                0.5
-              ],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "50%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-            "displayLines": "{[Skill01[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[2]]}"
-            ]
-          },
-          "baseChance": {
-            "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-            "displayLines": "{[Skill01[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[4]]}"
-            ]
-          },
-          "valuePerStack": {
-            "Modifier_Poison_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            }
-          },
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-            "displayLines": "{[Skill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[1]]}"
-            ]
-          },
-          "stackFlag": "CharacterSkill"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2022010_Monster_W2_Abomi01_Ability01_Part01": {
-      "fileName": "2022010_Monster_W2_Abomi01_Ability01_Part01",
-      "childAbilityList": [
-        "2022010_Monster_W2_Abomi01_Ability01_Camera",
-        "2022010_Monster_W2_Abomi01_Ability01_Part01",
-        "2022010_Monster_W2_Abomi01_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Abomi01_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "2022010_Monster_W2_Abomi01_PassiveAbility_Insert02_Part01": {
       "fileName": "2022010_Monster_W2_Abomi01_PassiveAbility_Insert02_Part01",
       "abilityType": null,
@@ -883,9 +543,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -920,9 +578,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -955,6 +611,7 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1968583742\">Monster_W2_Abomi01_DanHeng</a>",
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1004,14 +661,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1592917856\">Monster_W2_Abomi01_Sushang</a>",
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1051,21 +706,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1913097491\">Monster_W2_Abomi01_Standard_Servant</a>",
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": []
+          "useEntitySnapshot": true
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-508592004\">Monster_W2_Abomi01_IsHit</a>",
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -1080,12 +731,349 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
+    },
+    "2022010_Monster_W2_Abomi01_Ability02_Part02": {
+      "fileName": "2022010_Monster_W2_Abomi01_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Monster_W2_Abomi01_00_HitFlyFlag"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Wind",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.25) || MUL || RETURN",
+              "displayLines": "({[Skill01[0]]} * 0.25)",
+              "constants": [
+                0.25
+              ],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "25%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Wind",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.25) || MUL || RETURN",
+              "displayLines": "({[Skill01[0]]} * 0.25)",
+              "constants": [
+                0.25
+              ],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "25%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Wind",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.5) || MUL || RETURN",
+              "displayLines": "({[Skill01[0]]} * 0.5)",
+              "constants": [
+                0.5
+              ],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "50%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
+            "displayLines": "{[Skill01[2]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[2]]}"
+            ]
+          },
+          "baseChance": {
+            "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
+            "displayLines": "{[Skill01[4]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[4]]}"
+            ]
+          },
+          "valuePerStack": {
+            "Modifier_Poison_DamagePercentage": {
+              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+              "displayLines": "{[Skill01[3]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[3]]}"
+              ]
+            }
+          },
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+            "displayLines": "{[Skill01[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[1]]}"
+            ]
+          },
+          "stackFlag": "CharacterSkill"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2022010_Monster_W2_Abomi01_Ability02_Part01": {
+      "fileName": "2022010_Monster_W2_Abomi01_Ability02_Part01",
+      "childAbilityList": [
+        "2022010_Monster_W2_Abomi01_Ability02_Camera",
+        "2022010_Monster_W2_Abomi01_Ability02_Part01",
+        "2022010_Monster_W2_Abomi01_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Abomi01_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "2022010_Monster_W2_Abomi01_Ability01_Part02": {
+      "fileName": "2022010_Monster_W2_Abomi01_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Monster_W2_Abomi01_00_HitFlyFlag"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Wind",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.25) || MUL || RETURN",
+              "displayLines": "({[Skill01[0]]} * 0.25)",
+              "constants": [
+                0.25
+              ],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "25%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Wind",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.25) || MUL || RETURN",
+              "displayLines": "({[Skill01[0]]} * 0.25)",
+              "constants": [
+                0.25
+              ],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "25%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Wind",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || Constants[0] (0.5) || MUL || RETURN",
+              "displayLines": "({[Skill01[0]]} * 0.5)",
+              "constants": [
+                0.5
+              ],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "50%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
+            "displayLines": "{[Skill01[2]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[2]]}"
+            ]
+          },
+          "baseChance": {
+            "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
+            "displayLines": "{[Skill01[4]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[4]]}"
+            ]
+          },
+          "valuePerStack": {
+            "Modifier_Poison_DamagePercentage": {
+              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+              "displayLines": "{[Skill01[3]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[3]]}"
+              ]
+            }
+          },
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+            "displayLines": "{[Skill01[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[1]]}"
+            ]
+          },
+          "stackFlag": "CharacterSkill"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2022010_Monster_W2_Abomi01_Ability01_Part01": {
+      "fileName": "2022010_Monster_W2_Abomi01_Ability01_Part01",
+      "childAbilityList": [
+        "2022010_Monster_W2_Abomi01_Ability01_Camera",
+        "2022010_Monster_W2_Abomi01_Ability01_Part01",
+        "2022010_Monster_W2_Abomi01_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Abomi01_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
     },
     "2022010_Modifiers": {
       "fileName": "2022010_Modifiers",
@@ -1100,6 +1088,17 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__345912758\">Monster_W2_Abomi01_Accelerate</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "stackData": [
+            "MDF_SpeedRatio"
+          ],
+          "latentQueue": [
+            "Monster_W2_Abomi01_00_HitFlyFlag",
+            "Monster_W2_Abomi01_00_ReviveEff"
+          ],
+          "description": "SPD Increased.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1122,18 +1121,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedRatio"
-          ],
-          "latentQueue": [
-            "Monster_W2_Abomi01_00_HitFlyFlag",
-            "Monster_W2_Abomi01_00_ReviveEff"
-          ],
-          "description": "SPD Increased.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1156,6 +1144,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]",
+          "description": "Upon receiving a killing blow, restores a certain amount of HP.",
+          "type": "Buff",
+          "effectName": "Rebirth",
+          "statusName": "Rebirth",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1373,24 +1365,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Upon receiving a killing blow, restores a certain amount of HP.",
-          "type": "Buff",
-          "effectName": "Rebirth",
-          "statusName": "Rebirth"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1865884989\">Monster_W2_Abomi01_DanHeng_Hide</a>",
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": []
+          "useEntitySnapshot": true
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1907438637\">Monster_W2_Abomi01_BeingHit</a>",
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -1398,10 +1383,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

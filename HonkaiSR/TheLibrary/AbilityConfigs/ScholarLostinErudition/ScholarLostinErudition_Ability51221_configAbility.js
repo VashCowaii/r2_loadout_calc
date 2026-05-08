@@ -17,6 +17,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1050600358\">Relic_122_Sub</a>[<span class=\"descriptionNumberColor\">Scholar Lost in Erudition</span>]",
+      "description": "Increases DMG dealt when using Skill by <span class=\"descriptionNumberColor\">#SkillRelic_122_4_P2_DamageAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "Skill DMG Boost",
+      "statusName": "Scholar Lost in Erudition",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -78,11 +82,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG dealt when using Skill by <span class=\"descriptionNumberColor\">#SkillRelic_122_4_P2_DamageAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "Skill DMG Boost",
-      "statusName": "Scholar Lost in Erudition"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -137,9 +137,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

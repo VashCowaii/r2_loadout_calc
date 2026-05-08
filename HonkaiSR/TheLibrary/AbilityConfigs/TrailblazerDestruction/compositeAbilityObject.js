@@ -3,9 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": "Trailblazer - Destruction",
   "trimCharacterName": "TrailblazerDestruction",
   "abilityList": [
-    "TrailblazerDestruction_PlayerBoy_Eidolon6",
+    "TrailblazerDestruction_Modifiers",
     "TrailblazerDestruction_PlayerBoy_Trace03",
     "TrailblazerDestruction_PlayerBoy_Trace01",
+    "TrailblazerDestruction_PlayerBoy_Eidolon6",
+    "TrailblazerDestruction_LocalPlayer_StandardAbility_AttackBreak",
+    "TrailblazerDestruction_LocalPlayer_PlayerBoy_TechniqueUsage",
+    "TrailblazerDestruction_LocalPlayer_PlayerBoy_NormalAtk01",
     "TrailblazerDestruction_PlayerBoy_AutoUseUltraAbility",
     "TrailblazerDestruction_PlayerBoy_PassiveAbility01",
     "TrailblazerDestruction_PlayerBoy_Ability03_EnterReady",
@@ -16,20 +20,133 @@ const compositeAbilityObject = {
     "TrailblazerDestruction_PlayerBoy_Ability11_Part02",
     "TrailblazerDestruction_PlayerBoy_Ability11_Part01",
     "TrailblazerDestruction_PlayerBoy_Ability01_Part02",
-    "TrailblazerDestruction_PlayerBoy_Ability01_Part01",
-    "TrailblazerDestruction_Modifiers"
+    "TrailblazerDestruction_PlayerBoy_Ability01_Part01"
   ],
   "abilityObject": {
-    "TrailblazerDestruction_PlayerBoy_Eidolon6": {
-      "fileName": "TrailblazerDestruction_PlayerBoy_Eidolon6",
-      "abilityType": null,
+    "TrailblazerDestruction_Modifiers": {
+      "fileName": "TrailblazerDestruction_Modifiers",
+      "abilityType": "Char. Modifiers",
       "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__784141078\">PlayerWarrior_Ultimate_Transform</a>",
+          "lifeCyclePhaseAllowed": "ActionPhaseEnd",
+          "modifierFlags": [
+            "STAT_Burst"
+          ],
+          "duration": 2,
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityName": "Skill01",
+                  "skillSlot": "Basic ATK"
+                },
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityName": "Skill02",
+                  "skillSlot": "Skill",
+                  "enableSecondaryType": "ControlSkill02"
+                },
+                {
+                  "name": "Update Ult Alt Display"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__470799784\">PlayerBoy_Trace03_DamageAddedRatio</a>",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Hit",
+              "execute": [
+                {
+                  "name": "Adjust Target Stats",
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "0.25"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__451418523\">PlayerBoy_Eidolon1_Check_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "Got a Kill [Owner]",
+              "execute": [
+                {
+                  "name": "Update Energy",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "value": {
+                    "operator": "Variables[0] (10) || RETURN",
+                    "displayLines": "10",
+                    "constants": [],
+                    "variables": [
+                      10
+                    ]
+                  },
+                  "isFixed": "* ERR"
+                },
+                "Modifier Deletes Itself"
+              ]
+            },
+            {
+              "eventTrigger": "Got a Queued Kill [Owner]",
+              "execute": [
+                {
+                  "name": "Update Energy",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "value": {
+                    "operator": "Variables[0] (10) || RETURN",
+                    "displayLines": "10",
+                    "constants": [],
+                    "variables": [
+                      10
+                    ]
+                  },
+                  "isFixed": "* ERR"
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
     },
     "TrailblazerDestruction_PlayerBoy_Trace03": {
       "fileName": "TrailblazerDestruction_PlayerBoy_Trace03",
@@ -104,13 +221,309 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerDestruction_PlayerBoy_Eidolon6": {
+      "fileName": "TrailblazerDestruction_PlayerBoy_Eidolon6",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerDestruction_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "TrailblazerDestruction_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerDestruction_LocalPlayer_PlayerBoy_TechniqueUsage": {
+      "fileName": "TrailblazerDestruction_LocalPlayer_PlayerBoy_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        "Overworld HP adjustment(which we don't care about)",
+        "Submit Technique Use"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerDestruction_LocalPlayer_PlayerBoy_NormalAtk01": {
+      "fileName": "TrailblazerDestruction_LocalPlayer_PlayerBoy_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "failed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "TrailblazerDestruction_PlayerBoy_AutoUseUltraAbility": {
@@ -131,9 +544,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-707210254\">M_Player_AutoUseUltraAbility</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-707210254\">M_Player_AutoUseUltraAbility</a>"
         }
       ],
       "targetObjectData": {
@@ -202,6 +613,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1618202918\">PlayerWarrior_SkilTree02_BreakDefUp</a>[<span class=\"descriptionNumberColor\">Tenacity</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MDF_Max_Layer</span> stack(s).",
+          "type": "Buff",
+          "effectName": "DEF Boost",
+          "statusName": "Tenacity",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -235,18 +652,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MDF_Max_Layer</span> stack(s).",
-          "type": "Buff",
-          "effectName": "DEF Boost",
-          "statusName": "Tenacity",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-417743675\">PlayerWarrior_Passive_BreakAtkUp</a>[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MDF_Max_Layer</span> stack(s).",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Perfect Pickoff",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -280,13 +697,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MDF_Max_Layer</span> stack(s).",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Perfect Pickoff",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -463,9 +874,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -499,9 +908,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -597,9 +1004,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1159,135 +1564,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "TrailblazerDestruction_Modifiers": {
-      "fileName": "TrailblazerDestruction_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__784141078\">PlayerWarrior_Ultimate_Transform</a>",
-          "lifeCyclePhaseAllowed": "ActionPhaseEnd",
-          "modifierFlags": [
-            "STAT_Burst"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityName": "Skill01",
-                  "skillSlot": "Basic ATK"
-                },
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityName": "Skill02",
-                  "skillSlot": "Skill",
-                  "enableSecondaryType": "ControlSkill02"
-                },
-                {
-                  "name": "Update Ult Alt Display"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "duration": 2
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__470799784\">PlayerBoy_Trace03_DamageAddedRatio</a>",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "Adjust Target Stats",
-                  "modifiedValuesArray": [
-                    {
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": "0.25"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__451418523\">PlayerBoy_Eidolon1_Check_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Got a Kill [Owner]",
-              "execute": [
-                {
-                  "name": "Update Energy",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "value": {
-                    "operator": "Variables[0] (10) || RETURN",
-                    "displayLines": "10",
-                    "constants": [],
-                    "variables": [
-                      10
-                    ]
-                  },
-                  "isFixed": "* ERR"
-                },
-                "Modifier Deletes Itself"
-              ]
-            },
-            {
-              "eventTrigger": "Got a Queued Kill [Owner]",
-              "execute": [
-                {
-                  "name": "Update Energy",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "value": {
-                    "operator": "Variables[0] (10) || RETURN",
-                    "displayLines": "10",
-                    "constants": [],
-                    "variables": [
-                      10
-                    ]
-                  },
-                  "isFixed": "* ERR"
-                },
-                "Modifier Deletes Itself"
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "references": []
     }
   }
 }

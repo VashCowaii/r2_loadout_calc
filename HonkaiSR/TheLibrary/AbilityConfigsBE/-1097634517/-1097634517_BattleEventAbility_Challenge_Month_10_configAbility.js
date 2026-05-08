@@ -19,6 +19,11 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1406945547\">MLevel_BattleEventAbility_Challenge_Month_10_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
       "stackType": "Replace",
+      "description": "Each stack decreases DMG received by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>, up to <span class=\"descriptionNumberColor\">_MaxLayer</span> stack(s).",
+      "type": "Buff",
+      "effectName": "DMG Mitigation",
+      "statusName": "Memory Imprint",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -52,12 +57,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack decreases DMG received by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>, up to <span class=\"descriptionNumberColor\">_MaxLayer</span> stack(s).",
-      "type": "Buff",
-      "effectName": "DMG Mitigation",
-      "statusName": "Memory Imprint",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -310,9 +310,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

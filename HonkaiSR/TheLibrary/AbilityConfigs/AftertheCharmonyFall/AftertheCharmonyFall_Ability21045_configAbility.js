@@ -21,6 +21,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">#SkillEquip_P2_SpeedAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "SPD Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -43,15 +47,35 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">#SkillEquip_P2_SpeedAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "SPD Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1198267127\">LC_21045_Main</a>",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
+        "skillType": [
+          "Ultimate"
+        ],
+        "conditions": {
+          "name": "Has Modifier",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1163720690\">LC_21045_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "invertCondition": true
+        },
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": "0.08(SPD Change)"
+        }
+      },
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -83,33 +107,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "target": {
-          "name": "Target Name",
-          "target": "{{Modifier Holder}}"
-        },
-        "skillType": [
-          "Ultimate"
-        ],
-        "conditions": {
-          "name": "Has Modifier",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1163720690\">LC_21045_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-          "invertCondition": true
-        },
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": "0.08(SPD Change)"
-        }
-      }
+      ]
     }
   ],
   "isLightcone": true,

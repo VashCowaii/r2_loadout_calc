@@ -5,10 +5,9 @@ const compositeAbilityObject = {
   "abilityList": [
     "8012204_Monster_W2_HuanlongPart_IF_Recover",
     "8012204_Monster_W2_HuanlongPart_IF_PassiveAbility_Insert_Part01",
+    "8012204_Monster_W2_HuanlongPart_IF_Passive01",
     "8012204_Monster_W2_HuanlongPart_IF_Ability01_Part02",
     "8012204_Monster_W2_HuanlongPart_IF_Ability01_Part01",
-    "8012204_Monster_W2_HuanlongPart_02_IF_Passive01",
-    "8012204_Monster_W2_HuanlongPart_IF_Passive01",
     "8012204_Modifiers"
   ],
   "abilityObject": {
@@ -175,288 +174,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8012204_Monster_W2_HuanlongPart_IF_Ability01_Part02": {
-      "fileName": "8012204_Monster_W2_HuanlongPart_IF_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "value": {
-            "operator": "Constants[0] (1) || INVERT || Variables[0] ({[Skill01[0]]}) || MUL || RETURN",
-            "displayLines": "(-1 * {[Skill01[0]]})",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "{[Skill01[0]]}"
-            ]
-          },
-          "isFixed": "(Fixed)"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8012204_Monster_W2_HuanlongPart_IF_Ability01_Part01": {
-      "fileName": "8012204_Monster_W2_HuanlongPart_IF_Ability01_Part01",
-      "childAbilityList": [
-        "8012204_Monster_W2_HuanlongPart_01_Ability03_Camera",
-        "8012204_Monster_W2_HuanlongPart_IF_Ability01_Part01",
-        "8012204_Monster_W2_HuanlongPart_IF_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_HuanlongPart_IF_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "8012204_Monster_W2_HuanlongPart_02_IF_Passive01": {
-      "fileName": "8012204_Monster_W2_HuanlongPart_02_IF_Passive01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2020538755\">Monster_W2_HuanlongPart_02_IF_Deathrattle</a>"
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "variableName": "SummonerMaxHPValue",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"342076450\">Monster_W2_HuanlongPart_IF_Break</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1603687642\">Monster_W2_HuanlongPart_IF_Mark</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-268148846\">Monster_W2_HuanlongPart_MuteHitFly</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__342076450\">Monster_W2_HuanlongPart_IF_Break</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-69472783\">Monster_W2_HuanlongPart_IF_Active</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-69472783\">Monster_W2_HuanlongPart_IF_Active</a>"
-                },
-                {
-                  "name": "Action Advance/Delay",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "advanceType": "Set",
-                  "multiAdd": "{[PassiveSkill03[0]]}"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-69472783\">Monster_W2_HuanlongPart_IF_Active</a>"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2020538755\">Monster_W2_HuanlongPart_02_IF_Deathrattle</a>",
-          "modifierFlags": [
-            "Deathrattle",
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Was Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Dispel Debuffs",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "silent": true
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Summoner of Modifier Holder}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "CurrentHP",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "CurrentHP",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Monster_W2_HuanlongPart_IF_PassiveAbility_Insert_Part01",
-                      "priorityTag": "EnemyForceKill",
-                      "ownerState": "Mask_AliveOrLimbo",
-                      "targetState": "Mask_AliveOrLimbo",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "checkOverride": {
-                        "name": "Condition Priority",
-                        "overridePriority": "MonsterForceKill",
-                        "condition": {
-                          "name": "Compare: Ability Value",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Summoner of Modifier Holder}}"
-                          },
-                          "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                          "compareType": "<=",
-                          "value2": 0
-                        }
-                      },
-                      "abilityName": "Monster_W2_HuanlongPart_IF_PassiveAbility_Insert_Part01",
-                      "priorityTag": "EnemyDeathEffect",
-                      "ownerState": "Mask_AliveOrLimbo",
-                      "targetState": "Mask_AliveOrLimbo",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                },
-                {
-                  "name": "Mark Entity For Immediate Death"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-268148846\">Monster_W2_HuanlongPart_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "8012204_Monster_W2_HuanlongPart_IF_Passive01": {
       "fileName": "8012204_Monster_W2_HuanlongPart_IF_Passive01",
       "skillTrigger": "PassiveSkill03",
@@ -565,9 +282,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -665,20 +380,79 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-268148846\">Monster_W2_HuanlongPart_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
+    },
+    "8012204_Monster_W2_HuanlongPart_IF_Ability01_Part02": {
+      "fileName": "8012204_Monster_W2_HuanlongPart_IF_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "value": {
+            "operator": "Constants[0] (1) || INVERT || Variables[0] ({[Skill01[0]]}) || MUL || RETURN",
+            "displayLines": "(-1 * {[Skill01[0]]})",
+            "constants": [
+              1
+            ],
+            "variables": [
+              "{[Skill01[0]]}"
+            ]
+          },
+          "isFixed": "(Fixed)"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "8012204_Monster_W2_HuanlongPart_IF_Ability01_Part01": {
+      "fileName": "8012204_Monster_W2_HuanlongPart_IF_Ability01_Part01",
+      "childAbilityList": [
+        "8012204_Monster_W2_HuanlongPart_01_Ability03_Camera",
+        "8012204_Monster_W2_HuanlongPart_IF_Ability01_Part01",
+        "8012204_Monster_W2_HuanlongPart_IF_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_HuanlongPart_IF_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
     },
     "8012204_Modifiers": {
       "fileName": "8012204_Modifiers",
@@ -783,9 +557,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

@@ -82,6 +82,10 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "ListenBattleEventSkill"
       ],
+      "description": "Anaxa deals <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> increased DMG to the target. Furthermore, after using Basic ATK or Skill on the target, he uses 1 additional instance of Skill on it.",
+      "type": "Debuff",
+      "effectName": "Qualitative Disclosure",
+      "statusName": "Qualitative Disclosure",
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: Start",
@@ -168,11 +172,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Anaxa deals <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> increased DMG to the target. Furthermore, after using Basic ATK or Skill on the target, he uses 1 additional instance of Skill on it.",
-      "type": "Debuff",
-      "effectName": "Qualitative Disclosure",
-      "statusName": "Qualitative Disclosure"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -420,6 +420,36 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-552811494\">Anaxa_Passive_Mark_Property</a>",
+          "haloStatus": true
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-353589008\">Anaxa_Passive_WeaknessListener</a>",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_WeaknessNeed": {
+              "operator": "Variables[0] (5) || RETURN",
+              "displayLines": "5",
+              "constants": [],
+              "variables": [
+                5
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -589,38 +619,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-552811494\">Anaxa_Passive_Mark_Property</a>",
-          "haloStatus": true
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-353589008\">Anaxa_Passive_WeaknessListener</a>",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_WeaknessNeed": {
-              "operator": "Variables[0] (5) || RETURN",
-              "displayLines": "5",
-              "constants": [],
-              "variables": [
-                5
-              ]
-            }
-          }
         }
       ]
     }

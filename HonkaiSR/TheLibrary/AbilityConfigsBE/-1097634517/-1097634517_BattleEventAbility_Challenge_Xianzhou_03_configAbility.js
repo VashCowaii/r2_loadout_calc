@@ -27,6 +27,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-668032397\">Modifier_BattleEventAbility_Challenge_Xianzhou_03_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
       "stackType": "Replace",
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">#BattleEvent_P3_ADF</span> and reduces DMG received by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>.",
+      "type": "Buff",
+      "effectName": "Memory Imprint",
+      "statusName": "Memory Imprint",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -65,11 +69,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">#BattleEvent_P3_ADF</span> and reduces DMG received by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>.",
-      "type": "Buff",
-      "effectName": "Memory Imprint",
-      "statusName": "Memory Imprint"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -164,9 +164,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

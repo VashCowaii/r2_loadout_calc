@@ -32,6 +32,11 @@ const configAbility = {
         "STAT_CTRL_Frozen",
         "STAT_CTRL"
       ],
+      "useEntitySnapshot": true,
+      "description": "Cannot take action for a certain number of turns and takes Ice Additional DMG at the beginning of each turn.",
+      "type": "Debuff",
+      "effectName": "Frozen",
+      "statusName": "Frozen",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -161,12 +166,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Cannot take action for a certain number of turns and takes Ice Additional DMG at the beginning of each turn.",
-      "type": "Debuff",
-      "effectName": "Frozen",
-      "statusName": "Frozen"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -317,9 +317,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

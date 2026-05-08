@@ -13,6 +13,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-231503615\">WStandard_DOT_ThunderCurse</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "useEntitySnapshot": true,
       "execute": [
         {
           "eventTrigger": "Being Attacked End [Owner]",
@@ -48,8 +49,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true
+      ]
     }
   ],
   "references": []

@@ -11,24 +11,28 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>",
+      "latentQueue": [
+        "MDF_Right",
+        "MDF_Left"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1988286038\">Monster_W2_Kafka_RL_Part03EnhanceEffect</a>",
+      "latentQueue": [
+        "MDF_Right",
+        "MDF_Left"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -129,12 +133,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_LowHPRatio"
-      ],
-      "latentQueue": [
-        "DisPelCount"
       ]
     },
     {
@@ -456,9 +454,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -477,6 +473,13 @@ const configAbility = {
       "modifierFlags": [
         "DispelPriorityHigh"
       ],
+      "latentQueue": [
+        "ShowHint04"
+      ],
+      "description": "Cannot deal DMG to Kafka. Will become Dominated when the next \"Revelation\" occurs. Can be dispelled.",
+      "type": "Debuff",
+      "effectName": "Revelation",
+      "statusName": "Psychological Suggestion Revelation",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -491,15 +494,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "ShowHint04"
-      ],
-      "description": "Cannot deal DMG to Kafka. Will become Dominated when the next \"Revelation\" occurs. Can be dispelled.",
-      "type": "Debuff",
-      "effectName": "Revelation",
-      "statusName": "Psychological Suggestion Revelation"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -508,12 +503,6 @@ const configAbility = {
         "DispelPriorityHigh",
         "RemoveWhenCasterDead"
       ],
-      "execute": [
-        {
-          "eventTrigger": "When Constructing Modifier"
-        }
-      ],
-      "stackData": [],
       "latentQueue": [
         "BattleEventFlag",
         "MindControlCount",
@@ -523,12 +512,22 @@ const configAbility = {
       "description": "Triggered at the next Revelation. Can be removed before that action.",
       "type": "Debuff",
       "effectName": "Psychological Suggestion",
-      "statusName": "Psychological Suggestion"
+      "statusName": "Psychological Suggestion",
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier"
+        }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2053914629\">Monster_W2_Kafka_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "Replace",
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -558,16 +557,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
+      "stackData": [
+        "MDF_DamageUpRatio_PerLayer"
+      ],
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -617,12 +615,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
-      "latentQueue": [],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -819,19 +812,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "DisPelCount"
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__488971952\">Monster_W2_Kafka_RL_Ability04_Target</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__488971952\">Monster_W2_Kafka_RL_Ability04_Target</a>"
     },
     {
       "name": "Modifier Construction",
@@ -973,10 +958,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DisPelCount"
       ]
     },
     {
@@ -1165,22 +1146,19 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DisPelCount"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1510857703\">Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect</a>",
+      "latentQueue": [
+        "ElectricFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1189,13 +1167,17 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__593237238\">Monster_W2_Kafka_IF_LowHP</a>",
+      "stackData": [
+        "MDF_LowHPRatio"
+      ],
+      "latentQueue": [
+        "DisPelCount"
+      ],
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -1282,12 +1264,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_LowHPRatio"
-      ],
-      "latentQueue": [
-        "DisPelCount"
       ]
     },
     {
@@ -1609,9 +1585,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1625,6 +1599,9 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1707949525\">Monster_W2_Kafka_IF_MindControl_TrueEffect</a>",
       "modifierFlags": [
         "DispelPriorityHigh"
+      ],
+      "latentQueue": [
+        "ShowHint04"
       ],
       "execute": [
         {
@@ -1640,10 +1617,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "ShowHint04"
       ]
     },
     {
@@ -1656,18 +1629,13 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MindControlCount",
-        "ShowHint04",
-        "FinalPhase"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__472862856\">Monster_W2_Kafka_IF_DamageUp</a>",
       "stackType": "Replace",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1697,12 +1665,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1236261740\">Monster_W2_Kafka_IF_MeleeAttack</a>",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1752,8 +1720,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1854,6 +1821,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1086358837\">Monster_W2_Kafka_IF_Power</a>",
+      "stackData": [
+        "MDF_DamageUpRatio_PerLayer"
+      ],
+      "latentQueue": [
+        "DisPelCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1920,25 +1893,20 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "DisPelCount"
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1330368689\">Monster_W2_Kafka_IF_Ability04_Target</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1330368689\">Monster_W2_Kafka_IF_Ability04_Target</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-857035022\">Monster_W2_Kafka_IF_Pursuit</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
+      ],
+      "latentQueue": [
+        "DisPelCount"
       ],
       "execute": [
         {
@@ -2074,10 +2042,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DisPelCount"
       ]
     },
     {
@@ -2266,15 +2230,14 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DisPelCount"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__781148168\">Monster_W2_Kafka_IF_HPRatioTriggerAOE</a>",
+      "latentQueue": [
+        "DisPelCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2314,10 +2277,6 @@ const configAbility = {
         {
           "eventTrigger": "HP Change [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DisPelCount"
       ]
     },
     {
@@ -2344,16 +2303,11 @@ const configAbility = {
         {
           "eventTrigger": "Entity Death [Anyone]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DisPelCount"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1155608240\">Monster_W2_Kafka_IF02_ContainJXDTag</a>",
-      "stackData": [],
       "latentQueue": [
         "MDF_HasTarget",
         "JustinBreak"
@@ -2366,9 +2320,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2509,6 +2461,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1659045581\">Monster_W2_Kafka_IF02_PartController</a>",
+      "latentQueue": [
+        "DisPelCount"
+      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -2686,16 +2641,11 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DisPelCount"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>",
-      "stackData": [],
       "latentQueue": [
         "MDF_HasTarget"
       ]
@@ -2703,7 +2653,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1769956032\">Monster_W2_Kafka_IF02_SecondMonsterTag</a>",
-      "stackData": [],
       "latentQueue": [
         "MDF_Right",
         "MDF_Left"
@@ -2965,9 +2914,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2979,10 +2926,6 @@ const configAbility = {
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "PursuitCheck"
       ]
     },
     {
@@ -3030,6 +2973,10 @@ const configAbility = {
         "AvatarBreak",
         "RemoveWhenCasterDead"
       ],
+      "description": "Makes a single target unable to take action. Target will use Basic ATK to attack a random ally of theirs. If an ability is cast on the target to remove a debuff, the Dominated status will be removed first.",
+      "type": "Debuff",
+      "effectName": "Dominated",
+      "statusName": "Dominated",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -3174,11 +3121,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Makes a single target unable to take action. Target will use Basic ATK to attack a random ally of theirs. If an ability is cast on the target to remove a debuff, the Dominated status will be removed first.",
-      "type": "Debuff",
-      "effectName": "Dominated",
-      "statusName": "Dominated"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3205,11 +3148,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_15) || Variables[1] (SkillMaxHit) || DIV || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_15 / SkillMaxHit)",
+                  "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__252) || Variables[1] (SkillMaxHit) || DIV || RETURN",
+                  "displayLines": "(ENEMIES_OBJECT_UNUSED__252 / SkillMaxHit)",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_15",
+                    "ENEMIES_OBJECT_UNUSED__252",
                     "SkillMaxHit"
                   ]
                 },
@@ -3231,12 +3174,15 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "latentQueue": [
+        "MDF_Right",
+        "MDF_Left"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3254,10 +3200,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3573,12 +3516,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Count"
-      ],
-      "latentQueue": [
-        "DisPelCount"
       ]
     }
   ],

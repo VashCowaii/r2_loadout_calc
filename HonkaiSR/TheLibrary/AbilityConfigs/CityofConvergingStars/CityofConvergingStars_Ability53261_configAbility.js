@@ -17,6 +17,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__164381588\">Relic_326_Sub4</a>[<span class=\"descriptionNumberColor\">City of Converging Stars</span>]",
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">#SkillRelic_326_2_P3_CriticalDamage</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "City of Converging Stars",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -39,11 +43,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">#SkillRelic_326_2_P3_CriticalDamage</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "City of Converging Stars"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -84,6 +84,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__47200936\">Relic_326_Sub</a>[<span class=\"descriptionNumberColor\">City of Converging Stars</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "ATK increases by <span class=\"descriptionNumberColor\">#SkillRelic_326_2_P1_AttackAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "City of Converging Stars",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -106,15 +110,22 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "ATK increases by <span class=\"descriptionNumberColor\">#SkillRelic_326_2_P1_AttackAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "City of Converging Stars"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-480070573\">Relic_326_Main</a>",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"130826350\">Relic_326_Sub2</a>",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Attack Start [Owner]",
@@ -147,19 +158,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"130826350\">Relic_326_Sub2</a>",
-          "haloStatus": true
         }
       ]
     }

@@ -66,6 +66,10 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-258343603\">Enemy_W5_Ranger_Debuff</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "stackData": [
+        "MDF_AllDamageTypeTakenRatio",
+        "MDF_ResistanceDelta"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -234,12 +238,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AllDamageTypeTakenRatio",
-        "MDF_ResistanceDelta"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -279,6 +278,10 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak",
         "Endurance"
+      ],
+      "stackData": [
+        "MDF_MaxCharge",
+        "MDF_HitCharge"
       ],
       "execute": [
         {
@@ -1344,12 +1347,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_MaxCharge",
-        "MDF_HitCharge"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

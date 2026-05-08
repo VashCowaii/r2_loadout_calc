@@ -182,6 +182,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2106884568\">Enemy_W3_Sunday_MainDieBGMBlend</a>",
+      "latentQueue": [
+        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo",
@@ -201,11 +205,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-        "AIFlag"
       ]
     },
     {
@@ -213,6 +212,10 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1084281577\">Enemy_W3_Sunday_TalkSentenceTriggerController</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
+      ],
+      "latentQueue": [
+        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
+        "AIFlag"
       ],
       "execute": [
         {
@@ -510,11 +513,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-        "AIFlag"
       ]
     }
   ]

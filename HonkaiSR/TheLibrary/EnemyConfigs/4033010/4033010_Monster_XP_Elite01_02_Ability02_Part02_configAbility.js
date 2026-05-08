@@ -280,7 +280,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2055465700\">Enemy_XP_Elite01_02_Ability02AlreadyAttacked</a>",
-      "stackData": [],
       "latentQueue": [
         "FireBallNum"
       ]

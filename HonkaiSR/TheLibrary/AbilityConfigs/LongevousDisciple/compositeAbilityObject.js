@@ -26,6 +26,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1696785974\">Relic_113_Sub</a>[<span class=\"descriptionNumberColor\">Longevous Disciple</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases CRIT Rate by <span class=\"descriptionNumberColor\">#SkillRelic_113_4_P1_CriticalChance</span>, up to <span class=\"descriptionNumberColor\">#SkillRelic_113_4_P3_MaxLayer</span> stacks.",
+          "type": "Buff",
+          "effectName": "CRIT Rate Boost",
+          "statusName": "Longevous Disciple",
+          "stackLimit": 4,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -59,13 +65,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases CRIT Rate by <span class=\"descriptionNumberColor\">#SkillRelic_113_4_P1_CriticalChance</span>, up to <span class=\"descriptionNumberColor\">#SkillRelic_113_4_P3_MaxLayer</span> stacks.",
-          "type": "Buff",
-          "effectName": "CRIT Rate Boost",
-          "statusName": "Longevous Disciple",
-          "stackLimit": 4,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -160,9 +160,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

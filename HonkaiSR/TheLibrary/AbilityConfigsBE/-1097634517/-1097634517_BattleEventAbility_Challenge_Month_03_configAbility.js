@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1653692200\">MLevel_BattleEventAbility_Challenge_Month_03</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "In the current Cycle, receives <span class=\"descriptionNumberColor\">ADF_1</span> more DMG from Follow-Up ATKs and Ultimates.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Vulnerability",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -51,11 +55,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "In the current Cycle, receives <span class=\"descriptionNumberColor\">ADF_1</span> more DMG from Follow-Up ATKs and Ultimates.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -116,9 +116,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

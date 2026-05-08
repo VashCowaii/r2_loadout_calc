@@ -45,6 +45,14 @@ const configAbility = {
       "modifierFlags": [
         "Shield"
       ],
+      "stackData": [
+        "MDF_ShieldPercentage",
+        "MDF_MaxHPHitPercentage1",
+        "MDF_MaxHPHitPercentage2"
+      ],
+      "latentQueue": [
+        "UsedShieldFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -399,14 +407,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ShieldPercentage",
-        "MDF_MaxHPHitPercentage1",
-        "MDF_MaxHPHitPercentage2"
-      ],
-      "latentQueue": [
-        "UsedShieldFlag"
       ]
     },
     {
@@ -414,6 +414,9 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1831540372\">Enemy_W1_Gepard_IF_ListenBeingAttacked</a>",
       "modifierFlags": [
         "MuteHitH"
+      ],
+      "latentQueue": [
+        "ReturnAttackCounter"
       ],
       "execute": [
         {
@@ -524,10 +527,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "ReturnAttackCounter"
       ]
     },
     {
@@ -759,15 +758,15 @@ const configAbility = {
                     "variables": []
                   },
                   "valuePercent": {
-                    "operator": "Variables[0] (MDF_ShieldPercentage) || Constants[0] (5) || DIV || Variables[1] (MDF_Count) || MUL || Variables[2] (UnusedUnderThisBase_148) || MUL || RETURN",
-                    "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_148)",
+                    "operator": "Variables[0] (MDF_ShieldPercentage) || Constants[0] (5) || DIV || Variables[1] (MDF_Count) || MUL || Variables[2] (UnusedUnderThisBase_7854) || MUL || RETURN",
+                    "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_7854)",
                     "constants": [
                       5
                     ],
                     "variables": [
                       "MDF_ShieldPercentage",
                       "MDF_Count",
-                      "UnusedUnderThisBase_148"
+                      "UnusedUnderThisBase_7854"
                     ]
                   },
                   "formula": "HP Scaling (Shield)"
@@ -873,24 +872,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ShieldPercentage",
-        "MDF_MaxHPHitPercentage1",
-        "MDF_MaxHPHitPercentage2"
-      ],
-      "latentQueue": [
-        "UsedShieldFlag"
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-243818097\">SPRL_Flag</a>",
-      "stackData": [],
-      "latentQueue": [
-        "SPRLCount",
-        "Strike_SPRLCount"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-243818097\">SPRL_Flag</a>"
     },
     {
       "name": "Modifier Construction",
@@ -920,16 +906,11 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "UsedShieldFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1185722758\">Gepard_RL_ShieldIcon2</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]",
-      "stackData": [],
       "latentQueue": [
         "UsedShieldFlag"
       ],
@@ -941,7 +922,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1788931056\">Gepard_RL_ShieldIcon</a>[<span class=\"descriptionNumberColor\">Collective Shield</span>]",
-      "stackData": [],
       "latentQueue": [
         "UsedShieldFlag"
       ],
@@ -975,10 +955,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "UsedShieldFlag"
       ]
     },
     {
@@ -1289,14 +1265,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ShieldPercentage",
-        "MDF_MaxHPHitPercentage1",
-        "MDF_MaxHPHitPercentage2"
-      ],
-      "latentQueue": [
-        "UsedShieldFlag"
       ]
     },
     {
@@ -1305,6 +1273,10 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
+      "description": "Toughness cannot be reduced.",
+      "type": "Other",
+      "effectName": "Toughness Protection",
+      "statusName": "Toughness Protection",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1328,15 +1300,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "UsedShieldFlag"
-      ],
-      "description": "Toughness cannot be reduced.",
-      "type": "Other",
-      "effectName": "Toughness Protection",
-      "statusName": "Toughness Protection"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1365,6 +1329,11 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__352751855\">Monster_W1_Gepard_RL_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1398,16 +1367,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1415,6 +1375,14 @@ const configAbility = {
       "modifierFlags": [
         "MuteHitH"
       ],
+      "latentQueue": [
+        "ReturnAttackCounter",
+        "MDF_AttackFlag"
+      ],
+      "description": "Uses a Powerful Counter on the attacker after being attacked.",
+      "type": "Buff",
+      "effectName": "Counter",
+      "statusName": "Counter",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1530,20 +1498,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "ReturnAttackCounter",
-        "MDF_AttackFlag"
-      ],
-      "description": "Uses a Powerful Counter on the attacker after being attacked.",
-      "type": "Buff",
-      "effectName": "Counter",
-      "statusName": "Counter"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__321901706\">Monster_W1_Gepard_RL_Revive</a>",
+      "latentQueue": [
+        "UsedShieldFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -1689,13 +1651,14 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__802362263\">Monster_W1_Gepard_RL_AIWatcher</a>",
+      "latentQueue": [
+        "UsedShieldFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1710,10 +1673,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "UsedShieldFlag"
       ]
     },
     {
@@ -1722,6 +1681,7 @@ const configAbility = {
       "modifierFlags": [
         "DisableHealHP"
       ],
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1732,8 +1692,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "duration": 1
+      ]
     }
   ],
   "references": []

@@ -290,9 +290,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-618537723\">Enemy_Monster_W3_Theater_Part02Recover</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-618537723\">Enemy_Monster_W3_Theater_Part02Recover</a>"
     }
   ]
 }

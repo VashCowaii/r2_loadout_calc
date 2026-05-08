@@ -3,14 +3,151 @@ const compositeAbilityObject = {
   "fullCharacterName": 8012010,
   "trimCharacterName": 8012010,
   "abilityList": [
+    "8012010_Monster_AML_Minion02_Passive01",
     "8012010_Monster_AML_Minion02_Ability02_Part02",
     "8012010_Monster_AML_Minion02_Ability02_Part01",
     "8012010_Monster_AML_Minion02_Ability01_Part02",
     "8012010_Monster_AML_Minion02_Ability01_Part01",
-    "8012010_Monster_AML_Minion02_Passive01",
     "8012010_Modifiers"
   ],
   "abilityObject": {
+    "8012010_Monster_AML_Minion02_Passive01": {
+      "fileName": "8012010_Monster_AML_Minion02_Passive01",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1098566226\">Monster_AML_Minion02_EffectController</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1098566226\">Monster_AML_Minion02_EffectController</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
+                  },
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1582498358\">Monster_AML_Minion02_Effect</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1582498358\">Monster_AML_Minion02_Effect</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "End Broken State [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1582498358\">Monster_AML_Minion02_Effect</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-128058290\">Monster_AML_Minion02_PassiveSpeedUp</a>",
+          "execute": [
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1771820857\">Monster_AML_Minion02_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                  "duration": {
+                    "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+                    "displayLines": "{[PassiveSkill01[1]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill01[1]]}"
+                    ]
+                  },
+                  "stackLimit": {
+                    "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+                    "displayLines": "{[PassiveSkill01[2]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill01[2]]}"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_SpeedAddedRatio_PerLayer": {
+                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+                      "displayLines": "{[PassiveSkill01[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[PassiveSkill01[0]]}"
+                      ]
+                    },
+                    "MDF_MaxLayer": {
+                      "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+                      "displayLines": "{[PassiveSkill01[2]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[PassiveSkill01[2]]}"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "8012010_Monster_AML_Minion02_Ability02_Part02": {
       "fileName": "8012010_Monster_AML_Minion02_Ability02_Part02",
       "abilityType": null,
@@ -386,145 +523,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8012010_Monster_AML_Minion02_Passive01": {
-      "fileName": "8012010_Monster_AML_Minion02_Passive01",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1098566226\">Monster_AML_Minion02_EffectController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1098566226\">Monster_AML_Minion02_EffectController</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-898477955\">StanceBreakState</a>"
-                  },
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1582498358\">Monster_AML_Minion02_Effect</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1582498358\">Monster_AML_Minion02_Effect</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1582498358\">Monster_AML_Minion02_Effect</a>"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-128058290\">Monster_AML_Minion02_PassiveSpeedUp</a>",
-          "execute": [
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1771820857\">Monster_AML_Minion02_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-                  "duration": {
-                    "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill01[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill01[1]]}"
-                    ]
-                  },
-                  "stackLimit": {
-                    "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill01[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill01[2]]}"
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_SpeedAddedRatio_PerLayer": {
-                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[0]]}"
-                      ]
-                    },
-                    "MDF_MaxLayer": {
-                      "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[2]]}"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "8012010_Modifiers": {
       "fileName": "8012010_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -542,15 +540,31 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1771820857\">Monster_AML_Minion02_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "stackType": "Replace",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_SpeedAddedRatio_PerLayer",
+            "MDF_MaxLayer"
+          ],
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio_PerLayer</span>. Can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
+          "duration": 1,
+          "stackLimit": 3,
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+            "displayLines": "ModifierStackLayer",
+            "constants": [],
+            "variables": [
+              "ModifierStackLayer"
+            ]
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -580,26 +594,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedAddedRatio_PerLayer",
-            "MDF_MaxLayer"
-          ],
-          "latentQueue": [],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio_PerLayer</span>. Can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost",
-          "duration": 1,
-          "stackLimit": 3,
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
-          }
+          ]
         }
       ],
       "references": []

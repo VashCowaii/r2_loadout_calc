@@ -252,9 +252,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -361,9 +359,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -427,9 +423,7 @@ const configAbility = {
         {
           "eventTrigger": "Exit View-Mode [Anyone]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -451,9 +445,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__704406634\">Enemy_W3_Theater_ImmuneDebuff</a>",
       "modifierFlags": [
         "ImmuneDebuff"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1012,9 +1004,7 @@ const configAbility = {
         {
           "eventTrigger": "Weakness Break [Anyone]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

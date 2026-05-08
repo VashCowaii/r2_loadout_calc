@@ -51,6 +51,8 @@ teamData.js
 
 stats4.js
 stats4Global.js
+stats4GlobalUnused.js
+stats4GlobalUnusedArray.js
 stats4Functions.js
 stats4Exceptions.js
 stats4Priority.js

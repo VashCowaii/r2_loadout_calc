@@ -37,10 +37,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "performAccFlag"
       ]
     },
     {
@@ -79,13 +75,14 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1828577143\">Enemy_SW_Boss_01_IF_AbilityEX03_SummonEnhanceCounter</a>",
+      "latentQueue": [
+        "SummonDelayRatio2"
+      ],
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -173,10 +170,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "SummonDelayRatio2"
       ]
     },
     {
@@ -258,9 +251,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -825,9 +816,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -856,9 +845,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -988,6 +975,19 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-103304753\">Enemy_SW_Boss_01_IF_MinionsEnhancement</a>[<span class=\"descriptionNumberColor\">Growth Hormones</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_AttackAddedRatio"
+      ],
+      "latentQueue": [
+        "SummonDelayRatio2",
+        "CurrentSummonCount"
+      ],
+      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>.",
+      "type": "Other",
+      "effectName": "Growth Hormones",
+      "statusName": "Growth Hormones",
+      "stackLimit": 3,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1128,20 +1128,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AttackAddedRatio"
-      ],
-      "latentQueue": [
-        "SummonDelayRatio2",
-        "CurrentSummonCount"
-      ],
-      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>.",
-      "type": "Other",
-      "effectName": "Growth Hormones",
-      "statusName": "Growth Hormones",
-      "stackLimit": 3,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1154,6 +1141,12 @@ const configAbility = {
       "modifierFlags": [
         "RetainCountZero"
       ],
+      "stackData": [
+        "MDF_DamageReduce"
+      ],
+      "description": "Lose 1 Insect Egg when attacked by \"Entomon Eulogy\" or \"Decay Eulogy.\"",
+      "type": "Other",
+      "statusName": "Insect Egg",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1252,18 +1245,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageReduce"
-      ],
-      "latentQueue": [],
-      "description": "Lose 1 Insect Egg when attacked by \"Entomon Eulogy\" or \"Decay Eulogy.\"",
-      "type": "Other",
-      "statusName": "Insect Egg"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-77514845\">Enemy_SW_Boss_01_IF_SwarmArmorController</a>",
+      "stackData": [
+        "MDF_Armor_DamageReduce",
+        "MDF_Armor_CountNormal"
+      ],
+      "latentQueue": [
+        "SummonDelayRatio2"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1396,18 +1389,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Armor_DamageReduce",
-        "MDF_Armor_CountNormal"
-      ],
-      "latentQueue": [
-        "SummonDelayRatio2"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__654310441\">Enemy_SW_Boss_01_IF_StanceDamageController</a>",
+      "stackData": [
+        "MDF_ExplodeDamageTakenRatio",
+        "MDF_ExplodeStanceDamage"
+      ],
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -1483,12 +1473,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ExplodeDamageTakenRatio",
-        "MDF_ExplodeStanceDamage"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1524,33 +1509,23 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1900288072\">Enemy_SW_Boss_01_IF_AbilityEX04</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1900288072\">Enemy_SW_Boss_01_IF_AbilityEX04</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__2017731405\">Enemy_SW_Boss_01_IF_AbilityEX03</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__2017731405\">Enemy_SW_Boss_01_IF_AbilityEX03</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__2000953786\">Enemy_SW_Boss_01_IF_AbilityEX02</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__2000953786\">Enemy_SW_Boss_01_IF_AbilityEX02</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1984176167\">Enemy_SW_Boss_01_IF_AbilityEX01</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1984176167\">Enemy_SW_Boss_01_IF_AbilityEX01</a>"
     },
     {
       "name": "Modifier Construction",
@@ -1571,9 +1546,7 @@ const configAbility = {
         {
           "eventTrigger": "End Broken State [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1605,9 +1578,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1689,9 +1660,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1773,9 +1742,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1857,9 +1824,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2031,9 +1996,7 @@ const configAbility = {
         {
           "eventTrigger": "End Broken State [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2065,9 +2028,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2085,10 +2046,6 @@ const configAbility = {
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Phase2FirstTurn"
       ]
     },
     {
@@ -2107,10 +2064,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Phase2FirstTurn"
       ]
     },
     {
@@ -2321,16 +2274,17 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Phase2FirstTurn"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-257262548\">Monster_SW_Boss_01_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "Replace",
+      "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Vulnerability",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2360,16 +2314,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Vulnerability",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-850302516\">Monster_SW_Boss_01_DamageReduce</a>[<span class=\"descriptionNumberColor\">Multiply</span>]",
+      "description": "Reduces DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageReduceRatio</span>. Summons a regular Swarm every time this unit is attacked. When this unit's Weakness is Broken, deals Toughness Reduction equal to its own max Toughness to all friendly units and increases the DMG taken by all other friendly units besides the target themselves.",
+      "type": "Buff",
+      "effectName": "Multiply",
+      "statusName": "Multiply",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -2386,18 +2340,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageReduceRatio"
-      ],
-      "latentQueue": [
-        "Phase2FirstTurn"
-      ],
-      "description": "Reduces DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageReduceRatio</span>. Summons a regular Swarm every time this unit is attacked. When this unit's Weakness is Broken, deals Toughness Reduction equal to its own max Toughness to all friendly units and increases the DMG taken by all other friendly units besides the target themselves.",
-      "type": "Buff",
-      "effectName": "Multiply",
-      "statusName": "Multiply",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2478,9 +2421,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2489,9 +2430,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2588,9 +2527,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2684,6 +2621,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1730193233\">Enemy_SW_Boss_01_SummonMinion</a>",
       "stackType": "Multiple",
+      "stackData": [
+        "MDF_SummonID",
+        "MDF_SummonDelay"
+      ],
+      "latentQueue": [
+        "AbilityFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2906,13 +2850,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SummonID",
-        "MDF_SummonDelay"
-      ],
-      "latentQueue": [
-        "AbilityFlag"
       ]
     }
   ],

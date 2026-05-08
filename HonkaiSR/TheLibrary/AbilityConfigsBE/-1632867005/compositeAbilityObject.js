@@ -3,18 +3,10 @@ const compositeAbilityObject = {
   "fullCharacterName": -1632867005,
   "trimCharacterName": -1632867005,
   "abilityList": [
-    "-1632867005_StageBattleEventAbility_Standard",
-    "-1632867005_Modifiers"
+    "-1632867005_Modifiers",
+    "-1632867005_StageBattleEventAbility_Standard"
   ],
   "abilityObject": {
-    "-1632867005_StageBattleEventAbility_Standard": {
-      "fileName": "-1632867005_StageBattleEventAbility_Standard",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": []
-    },
     "-1632867005_Modifiers": {
       "fileName": "-1632867005_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -557,6 +549,14 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "-1632867005_StageBattleEventAbility_Standard": {
+      "fileName": "-1632867005_StageBattleEventAbility_Standard",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
       "references": []
     }
   }

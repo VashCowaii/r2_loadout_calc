@@ -4,13 +4,13 @@ const compositeAbilityObject = {
   "trimCharacterName": 8022012,
   "abilityList": [
     "8022012_Monster_SW_Minion01_PassiveAbility_Insert_Part01",
+    "8022012_Monster_SW_Minion01_Passive01",
     "8022012_Monster_SW_Minion01_Ability03_Part02",
     "8022012_Monster_SW_Minion01_Ability03_Part01",
     "8022012_Monster_SW_Minion01_Ability02_Part02",
     "8022012_Monster_SW_Minion01_Ability02_Part01",
     "8022012_Monster_SW_Minion01_Ability01_Part02",
     "8022012_Monster_SW_Minion01_Ability01_Part01",
-    "8022012_Monster_SW_Minion01_Passive01",
     "8022012_Modifiers"
   ],
   "abilityObject": {
@@ -185,6 +185,104 @@ const compositeAbilityObject = {
         "primaryTarget": "{{All Team Members}}"
       },
       "references": []
+    },
+    "8022012_Monster_SW_Minion01_Passive01": {
+      "fileName": "8022012_Monster_SW_Minion01_Passive01",
+      "skillTrigger": "Monster_SW_Minion01_00_Passive01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "SW_Minion01_Sam01",
+            "invertCondition": true
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1780753426\">Monster_SW_Minion01_Split</a>[<span class=\"descriptionNumberColor\">Mitosis: Warning</span>]"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1848557291\">Monster_SW_Minion01_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1918463862\">Monster_SW_Minion01_Deathrattle</a>"
+        }
+      ],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1918463862\">Monster_SW_Minion01_Deathrattle</a>",
+          "modifierFlags": [
+            "Deathrattle",
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Was Killed (Queued) [Owner]",
+              "execute": [
+                {
+                  "name": "Dispel Debuffs",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "silent": true
+                },
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_SW_Minion01_PassiveAbility_Insert_Part01",
+                  "priorityTag": "EnemyDeathEffect",
+                  "ownerState": "Mask_AliveOrLimbo",
+                  "targetState": "Mask_AliveOrLimbo",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                },
+                {
+                  "name": "Mark Entity For Immediate Death"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1848557291\">Monster_SW_Minion01_MuteHitFly</a>",
+          "modifierFlags": [
+            "MuteHitFly"
+          ]
+        }
+      ]
     },
     "8022012_Monster_SW_Minion01_Ability03_Part02": {
       "fileName": "8022012_Monster_SW_Minion01_Ability03_Part02",
@@ -746,108 +844,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8022012_Monster_SW_Minion01_Passive01": {
-      "fileName": "8022012_Monster_SW_Minion01_Passive01",
-      "skillTrigger": "Monster_SW_Minion01_00_Passive01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "value": "SW_Minion01_Sam01",
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1780753426\">Monster_SW_Minion01_Split</a>[<span class=\"descriptionNumberColor\">Mitosis: Warning</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1848557291\">Monster_SW_Minion01_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1918463862\">Monster_SW_Minion01_Deathrattle</a>"
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1918463862\">Monster_SW_Minion01_Deathrattle</a>",
-          "modifierFlags": [
-            "Deathrattle",
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Was Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Dispel Debuffs",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "silent": true
-                },
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_SW_Minion01_PassiveAbility_Insert_Part01",
-                  "priorityTag": "EnemyDeathEffect",
-                  "ownerState": "Mask_AliveOrLimbo",
-                  "targetState": "Mask_AliveOrLimbo",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                },
-                {
-                  "name": "Mark Entity For Immediate Death"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1848557291\">Monster_SW_Minion01_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "8022012_Modifiers": {
       "fileName": "8022012_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -860,13 +856,15 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__976017528\">Monster_SW_Minion01_Split_Old</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__976017528\">Monster_SW_Minion01_Split_Old</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-157441217\">Monster_SW_Minion01_SplitEffect</a>[<span class=\"descriptionNumberColor\">Propagation</span>]",
+          "description": "Propagate in the next turn.",
+          "type": "Other",
+          "effectName": "Propagation",
+          "statusName": "Propagation",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -877,15 +875,15 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "description": "Propagate in the next turn.",
-          "type": "Other",
-          "effectName": "Propagation",
-          "statusName": "Propagation"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1780753426\">Monster_SW_Minion01_Split</a>[<span class=\"descriptionNumberColor\">Mitosis: Warning</span>]",
+          "description": "Propagate after <span class=\"descriptionNumberColor\">Modifier_TurnCount</span> turn(s). Cannot propagate during the turn in which this unit recovers from Weakness Break.",
+          "type": "Other",
+          "effectName": "Mitosis: Warning",
+          "statusName": "Mitosis: Warning",
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Owner]",
@@ -1064,13 +1062,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Propagate after <span class=\"descriptionNumberColor\">Modifier_TurnCount</span> turn(s). Cannot propagate during the turn in which this unit recovers from Weakness Break.",
-          "type": "Other",
-          "effectName": "Mitosis: Warning",
-          "statusName": "Mitosis: Warning"
+          ]
         }
       ],
       "references": []

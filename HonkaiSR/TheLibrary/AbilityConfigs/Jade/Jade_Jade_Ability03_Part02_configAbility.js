@@ -112,20 +112,19 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1732030848\">Jade_Ultimate_Insert</a>[<span class=\"descriptionNumberColor\">Follow-Up ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
-      "execute": [
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier"
-        }
-      ],
       "stackData": [
         "MDF_PropertyRatio",
         "MDF_Count"
       ],
-      "latentQueue": [],
       "description": "Increases the multiplier for the DMG dealt by Talent's Follow-Up ATK by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. This can take effect for up to <span class=\"descriptionNumberColor\">MDF_Count</span> time(s).",
       "type": "Buff",
       "effectName": "Follow-Up ATK Boost",
-      "statusName": "Follow-Up ATK Boost"
+      "statusName": "Follow-Up ATK Boost",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier"
+        }
+      ]
     }
   ],
   "targetObjectData": {

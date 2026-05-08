@@ -111,35 +111,35 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"766895631\">Standard_Monster_Floating_DamageReduceController</a>",
               "valuePerStack": {
                 "MDF_LockHpActionDecreaseRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_599) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_599",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12539) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12539",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_599"
+                    "UnusedUnderThisBase_12539"
                   ]
                 },
                 "MDF_LockHpUpLimitRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_598) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_598",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12507) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12507",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_598"
+                    "UnusedUnderThisBase_12507"
                   ]
                 },
                 "MDF_DamageReduceRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_597) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_597",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12510) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12510",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_597"
+                    "UnusedUnderThisBase_12510"
                   ]
                 },
                 "MDF_LastLockHpRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_596) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_596",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12506) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12506",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_596"
+                    "UnusedUnderThisBase_12506"
                   ]
                 }
               }

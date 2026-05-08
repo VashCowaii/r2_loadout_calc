@@ -3,10 +3,6 @@ const compositeAbilityObject = {
   "fullCharacterName": 8002101,
   "trimCharacterName": 8002101,
   "abilityList": [
-    "8002101_Monster_XP_Minion04_06_Ability02_Part02",
-    "8002101_Monster_XP_Minion04_06_Ability02_Part01",
-    "8002101_Monster_XP_Minion04_06_Ability01_Part02",
-    "8002101_Monster_XP_Minion04_06_Ability01_Part01",
     "8002101_Monster_XP_Minion04_06_Passive01",
     "8002101_Monster_XP_Minion04_01_Ability03_Part02",
     "8002101_Monster_XP_Minion04_01_Ability03_Part01",
@@ -14,58 +10,9 @@ const compositeAbilityObject = {
     "8002101_Monster_XP_Minion04_01_Ability02_Part01",
     "8002101_Monster_XP_Minion04_01_Ability01_Part02",
     "8002101_Monster_XP_Minion04_01_Ability01_Part01",
-    "8002101_Monster_XP_Minion04_01_Passive01",
     "8002101_Modifiers"
   ],
   "abilityObject": {
-    "8002101_Monster_XP_Minion04_06_Ability02_Part02": {
-      "fileName": "8002101_Monster_XP_Minion04_06_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8002101_Monster_XP_Minion04_06_Ability02_Part01": {
-      "fileName": "8002101_Monster_XP_Minion04_06_Ability02_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8002101_Monster_XP_Minion04_06_Ability01_Part02": {
-      "fileName": "8002101_Monster_XP_Minion04_06_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8002101_Monster_XP_Minion04_06_Ability01_Part01": {
-      "fileName": "8002101_Monster_XP_Minion04_06_Ability01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
     "8002101_Monster_XP_Minion04_06_Passive01": {
       "fileName": "8002101_Monster_XP_Minion04_06_Passive01",
       "skillTrigger": "PassiveSkill",
@@ -272,18 +219,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8002101_Monster_XP_Minion04_01_Passive01": {
-      "fileName": "8002101_Monster_XP_Minion04_01_Passive01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "8002101_Modifiers": {
       "fileName": "8002101_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -342,9 +277,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -383,9 +316,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

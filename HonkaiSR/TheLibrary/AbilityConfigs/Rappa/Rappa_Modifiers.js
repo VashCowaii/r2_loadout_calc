@@ -10,8 +10,78 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__2126707950\">M_ADV_Maze_Rappa_StopSprintFlag</a>",
+      "counter": 1,
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1023191181\">ADV_Modifier_Maze_Rappa_SummonUnit</a>",
+      "onCreation": [
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 13171
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "summonID": 13171
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1835153663\">ADV_Modifier_Maze_Rappa_HolyShield</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "HolyShield"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1641564581\">ADV_Modifier_Maze_Rappa</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "duration": 20,
+      "onCreation": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Skill Type",
+            "skillType": "Technique[?]"
+          }
+        }
+      ],
+      "onStageExit": [
+        "Modifier Deletes Itself"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-770906695\">ADV_Modifier_Maze_Rappa_IsHit</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__509266484\">ADV_StageAbility_Maze_Rappa</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1458859803\">Rappa_Break_Modifier_ForShow</a>[<span class=\"descriptionNumberColor\">Ninja Tech: Endurance Gauge</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "The next time the third hit of \"Ningu: Demonbane Petalblade\" is launched, the additionally dealt Break DMG multiplier increases by <span class=\"descriptionNumberColor\">_CurrentRatio</span>, and the Toughness Reduction increases by <span class=\"descriptionNumberColor\">_CurrentValue</span>.",
+      "type": "Buff",
+      "statusName": "Ninja Tech: Endurance Gauge",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -50,12 +120,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "The next time the third hit of \"Ningu: Demonbane Petalblade\" is launched, the additionally dealt Break DMG multiplier increases by <span class=\"descriptionNumberColor\">_CurrentRatio</span>, and the Toughness Reduction increases by <span class=\"descriptionNumberColor\">_CurrentValue</span>.",
-      "type": "Buff",
-      "statusName": "Ninja Tech: Endurance Gauge"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -64,6 +129,9 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">#SkillRank_Rank04_P1_Ratio</span>.",
+      "type": "Buff",
+      "statusName": "Lost Is the Nindō Devoured by Time",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -86,15 +154,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">#SkillRank_Rank04_P1_Ratio</span>.",
-      "type": "Buff",
-      "statusName": "Lost Is the Nindō Devoured by Time"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1412694552\">Rappa_AbilityEidolon1</a>[<span class=\"descriptionNumberColor\">Returned Is the Revenant With No Ferry Toll</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">SkillRank_Rank01_P1_Ratio</span> of the enemy targets' DEF. After exiting \"Sealform,\" regenerates <span class=\"descriptionNumberColor\">#SkillRank_Rank01_P2_Value</span> Energy.",
+      "type": "Buff",
+      "statusName": "Returned Is the Revenant With No Ferry Toll",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -111,10 +179,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">SkillRank_Rank01_P1_Ratio</span> of the enemy targets' DEF. After exiting \"Sealform,\" regenerates <span class=\"descriptionNumberColor\">#SkillRank_Rank01_P2_Value</span> Energy.",
-      "type": "Buff",
-      "statusName": "Returned Is the Revenant With No Ferry Toll"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -209,9 +274,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -249,6 +312,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1239346790\">Rappa_PointB3_Enemy</a>[<span class=\"descriptionNumberColor\">Ninjutsu Inscription: Withered Leaf</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Break DMG taken increases by <span class=\"descriptionNumberColor\">MDF_TotalRatio</span>.",
+      "type": "Debuff",
+      "statusName": "Ninjutsu Inscription: Withered Leaf",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -294,10 +360,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Break DMG taken increases by <span class=\"descriptionNumberColor\">MDF_TotalRatio</span>.",
-      "type": "Debuff",
-      "statusName": "Ninjutsu Inscription: Withered Leaf"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -468,6 +531,17 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__421544848\">Rappa_Trace03</a>",
       "stackType": "ReplaceByCaster",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"615135704\">Rappa_PointB3_Enemy_Aura</a>",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -475,23 +549,6 @@ const configAbility = {
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"1198981265\">Rappa_Trace03_Sub</a>"
-            }
-          ]
-        }
-      ],
-      "abilityValueChange": [
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"1198981265\">Rappa_Trace03_Sub</a>"
-                }
-              ]
             }
           ]
         }
@@ -593,17 +650,21 @@ const configAbility = {
           ]
         }
       ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
+      "abilityValueChange": [
         {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"615135704\">Rappa_PointB3_Enemy_Aura</a>",
-          "haloStatus": true
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "whenValueChanges": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1198981265\">Rappa_Trace03_Sub</a>"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -777,9 +838,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -810,10 +869,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_AMMO_RELOADED"
       ]
     },
     {
@@ -864,16 +919,76 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_AMMO_RELOADED"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1748394699\">Rappa_UltraMode</a>[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and Break Effect by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
+      "type": "Buff",
+      "statusName": "Nindō Supreme: Aishiteru",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1498869655\">Rappa_PointB2_Enemy</a>",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Ninjutsu Inscription: Sea Echo"
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue2": {
+              "operator": "Variables[0] (0.6) || RETURN",
+              "displayLines": "0.6",
+              "constants": [],
+              "variables": [
+                0.6
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1412694552\">Rappa_AbilityEidolon1</a>[<span class=\"descriptionNumberColor\">Returned Is the Revenant With No Ferry Toll</span>]",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 1
+          },
+          "valuePerStack": {
+            "AbilityRank_Eidolon1_P1_Ratio": {
+              "operator": "Variables[0] (0.15) || RETURN",
+              "displayLines": "0.15",
+              "constants": [],
+              "variables": [
+                0.15
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1496582647\">Rappa_AbilityEidolon4</a>[<span class=\"descriptionNumberColor\">Lost Is the Nindō Devoured by Time</span>]",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 4
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1189,77 +1304,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_PropertyValue2"
-      ],
-      "latentQueue": [
-        "_AMMO_RELOADED"
-      ],
-      "description": "Increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and Break Effect by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
-      "type": "Buff",
-      "statusName": "Nindō Supreme: Aishiteru",
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1498869655\">Rappa_PointB2_Enemy</a>",
-          "haloStatus": true,
-          "conditions": {
-            "name": "Trace Activated",
-            "conditionList": "Ninjutsu Inscription: Sea Echo"
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue2": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1412694552\">Rappa_AbilityEidolon1</a>[<span class=\"descriptionNumberColor\">Returned Is the Revenant With No Ferry Toll</span>]",
-          "haloStatus": true,
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 1
-          },
-          "valuePerStack": {
-            "AbilityRank_Eidolon1_P1_Ratio": {
-              "operator": "Variables[0] (0.15) || RETURN",
-              "displayLines": "0.15",
-              "constants": [],
-              "variables": [
-                0.15
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members with Unselectables}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1496582647\">Rappa_AbilityEidolon4</a>[<span class=\"descriptionNumberColor\">Lost Is the Nindō Devoured by Time</span>]",
-          "haloStatus": true,
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 4
-          }
         }
       ]
     }

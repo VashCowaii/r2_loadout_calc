@@ -116,6 +116,9 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
+      "latentQueue": [
+        "Kafka_Listen_Rank1"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -489,10 +492,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Kafka_Listen_Rank1"
       ]
     },
     {
@@ -825,6 +824,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2072212341\">Advanced_Kafka_Passive_DotSpecialMark_Listen</a>",
+      "latentQueue": [
+        "Kafka_Listen_Rank1",
+        "Kafka_Listen_Rank2",
+        "Kafka_Listen_Rank6"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -941,12 +945,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Kafka_Listen_Rank1",
-        "Kafka_Listen_Rank2",
-        "Kafka_Listen_Rank6"
       ]
     }
   ],

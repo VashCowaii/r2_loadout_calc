@@ -191,6 +191,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedDown"
       ],
+      "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Slow",
+      "statusName": "Slow",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -215,15 +219,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Slow",
-      "statusName": "Slow"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2025698986\">DanHeng_Ability02_CheckCritical_Modifier</a>",
+      "stackData": [
+        "MDF_Chance"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -273,11 +276,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Chance"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

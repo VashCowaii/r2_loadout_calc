@@ -366,6 +366,11 @@ const configAbility = {
       "modifierFlags": [
         "DisableAction"
       ],
+      "latentQueue": [
+        "_PhaseCheck",
+        "InsertCheck",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
@@ -395,12 +400,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_PhaseCheck",
-        "InsertCheck",
-        "AIFlag"
       ]
     }
   ]

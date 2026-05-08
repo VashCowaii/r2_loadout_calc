@@ -3,12 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": 4064013,
   "trimCharacterName": 4064013,
   "abilityList": [
+    "4064013_Monster_W4_Serpent_01_SummonDeathrattle",
+    "4064013_Monster_W4_Serpent_01_ChangePhase1",
+    "4064013_Monster_W4_Serpent_01_PassiveAbility",
     "4064013_Monster_W4_Serpent_01_Ability07_Part02",
     "4064013_Monster_W4_Serpent_01_Ability07_Part01",
     "4064013_Monster_W4_Serpent_01_Ability06_3_Part02",
     "4064013_Monster_W4_Serpent_01_Ability06_3_Part01",
-    "4064013_BattleEvent_W4_Serpent_01_Part01",
-    "4064013_BattleEvent_W4_Serpent_01_EnterReady",
     "4064013_Monster_W4_Serpent_01_Ability06_Part02",
     "4064013_Monster_W4_Serpent_01_Ability06_Part01",
     "4064013_Monster_W4_Serpent_01_Ability05_Part02",
@@ -18,20 +19,772 @@ const compositeAbilityObject = {
     "4064013_Monster_W4_Serpent_01_Ability04_Part01",
     "4064013_Monster_W4_Serpent_01_Ability03_Part02",
     "4064013_Monster_W4_Serpent_01_Ability03_Part01",
-    "4064013_Monster_W4_Serpent_01_SummonNoDeathrattle",
-    "4064013_Monster_W4_Serpent_01_SummonDeathrattle",
     "4064013_Monster_W4_Serpent_01_Ability02_Part02",
     "4064013_Monster_W4_Serpent_01_Ability02_Part01",
     "4064013_Monster_W4_Serpent_01_Ability01_Part03",
     "4064013_Monster_W4_Serpent_01_Ability01_Part02",
     "4064013_Monster_W4_Serpent_01_Ability01_Part01",
-    "4064013_Monster_W4_Serpent_01_ChangePhase1",
-    "4064013_Monster_W4_Serpent_01_PassiveAbility",
     "4064013_Monster_W4_Serpent_01_PassiveAbility_BGM",
     "4064013_Modifiers",
     "4064013_BE_BattleEvents"
   ],
   "abilityObject": {
+    "4064013_Monster_W4_Serpent_01_SummonDeathrattle": {
+      "fileName": "4064013_Monster_W4_Serpent_01_SummonDeathrattle",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "Summon_Deathrattle"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "includeDyingTargets": true,
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "value1": "MDF_Deathrattle",
+            "compareType": "=",
+            "value2": 1,
+            "contextScope": "TargetEntity"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Define Custom Variable with Team Count",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
+              },
+              "variableName": "Summon_Deathrattle"
+            },
+            {
+              "name": "Deal Toughness DMG",
+              "value": {
+                "operator": "Variables[0] ({[Skill02[2]]}) || Variables[1] (Summon_Deathrattle) || MUL || RETURN",
+                "displayLines": "({[Skill02[2]]} * Summon_Deathrattle)",
+                "constants": [],
+                "variables": [
+                  "{[Skill02[2]]}",
+                  "Summon_Deathrattle"
+                ]
+              },
+              "defender": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "ignoreAttackerBonuses": true,
+              "canDelay": true,
+              "ToughnessDMGType": {
+                "name": "Damage Type Source",
+                "sourceType": {}
+              }
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "scope": "TargetEntity",
+          "variableName": "Deathrattle",
+          "value": 0
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4064013_Monster_W4_Serpent_01_ChangePhase1": {
+      "fileName": "4064013_Monster_W4_Serpent_01_ChangePhase1",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 2
+          },
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 3
+              }
+            }
+          ]
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "multiBase": 0
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1717754231\">Enemy_W4_Serpent_01_Passive_Sub</a>[<span class=\"descriptionNumberColor\">Expedite Verdict</span>]",
+          "valuePerStack": {
+            "MDF_AllDamageReduce": {
+              "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkillInitiate[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkillInitiate[0]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1404590263\">Standard_Endurance</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "ChangePhase",
+          "value": 1
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 1
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 2
+          },
+          "passed": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "Phase_Flag",
+              "value": 2
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 3
+              },
+              "passed": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "Phase_Flag",
+                  "value": 3
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4064013_Monster_W4_Serpent_01_PassiveAbility": {
+      "fileName": "4064013_Monster_W4_Serpent_01_PassiveAbility",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Assign Unique Name",
+          "uniqueName": "W4_Serpent_01",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "RLBoss"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1413842812\">Enemy_W4_Serpent_01_RLBoss_ChangePhaseController</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-227770037\">Monster_W4_Serpent_01_RLBoss_Passive</a>",
+              "valuePerStack": {
+                "MDF_DamageUpRatio_PerLayer": {
+                  "operator": "Variables[0] (UnusedUnderThisBase_12194) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12194",
+                  "constants": [],
+                  "variables": [
+                    "UnusedUnderThisBase_12194"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Preload Battle Event(s)",
+              "eventID": [
+                20038
+              ]
+            },
+            {
+              "name": "Add Battle Event",
+              "teamName": "Player Team",
+              "dmgCountsForTeam": "Enemy Team",
+              "eventID": 20038,
+              "variables": null,
+              "whenCreated": [
+                {
+                  "name": "Assign Unique Name",
+                  "uniqueName": "SelectTarget",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1234779090\">Enemy_W4_Serpent_01_PickUpMessage</a>"
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Enemy ID",
+                    "ID": 4064013,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": "Ichor Memosprite: Judge of Oblivion",
+                    "isBaseCompare": true,
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Enemy ID",
+                    "ID": 4064014,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": "Ichor Memosprite: Judge of Oblivion",
+                    "isBaseCompare": true,
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2038153082\">Enemy_W4_Serpent_01_ChangePhaseController</a>"
+                }
+              ]
+            },
+            {
+              "name": "Preload Battle Event(s)",
+              "eventID": [
+                20030
+              ]
+            },
+            {
+              "name": "Add Battle Event",
+              "teamName": "Player Team",
+              "dmgCountsForTeam": "Enemy Team",
+              "eventID": 20030,
+              "variables": null,
+              "whenCreated": [
+                {
+                  "name": "Assign Unique Name",
+                  "uniqueName": "SelectTarget",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1234779090\">Enemy_W4_Serpent_01_PickUpMessage</a>"
+                },
+                "Show BattleEvent Button"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-501224004\">Enemy_W4_Serpent_01_Passive</a>",
+          "valuePerStack": {
+            "MDF_AllDamageReduce": {
+              "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkillInitiate[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkillInitiate[0]]}"
+              ]
+            },
+            "MDF_ActionDelay": {
+              "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
+              "displayLines": "{[PassiveSkillInitiate[1]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkillInitiate[1]]}"
+              ]
+            },
+            "MDF_AllDamageTypeTakenRatio": {
+              "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
+              "displayLines": "{[PassiveSkillInitiate[2]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkillInitiate[2]]}"
+              ]
+            },
+            "MDF_DamagePercentage": {
+              "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
+              "displayLines": "{[PassiveSkillInitiate[3]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkillInitiate[3]]}"
+              ]
+            }
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1234779090\">Enemy_W4_Serpent_01_PickUpMessage</a>",
+          "execute": [
+            {
+              "eventTrigger": "Ultimate Prep-Phase [Owner]"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1413842812\">Enemy_W4_Serpent_01_RLBoss_ChangePhaseController</a>",
+          "execute": [
+            {
+              "eventTrigger": "Waiting for Healing in Limbo",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "HP_Bars_Remaining",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "ChangePhase",
+                        "compareType": "=",
+                        "value2": 1,
+                        "contextScope": "TargetEntity"
+                      },
+                      "passed": [
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster's Minions}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"120636483\">Enemy_W4_Serpent_01_Summon_Deathrattle</a>[<span class=\"descriptionNumberColor\">Execution Squad</span>]"
+                        },
+                        {
+                          "name": "Force Entity Death",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster's Minions}}"
+                          }
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1560904792\">Enemy_W4_Serpent_01_Charge01</a>[<span class=\"descriptionNumberColor\">Pursuer</span>]"
+                        },
+                        {
+                          "name": "Declare Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "scope": "TargetEntity",
+                          "variableName": "ChangePhase"
+                        },
+                        {
+                          "name": "Dispel Debuffs",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "silent": true
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1404590263\">Standard_Endurance</a>"
+                        },
+                        {
+                          "name": "Set Enemy Phase",
+                          "mode": "Inc"
+                        },
+                        {
+                          "name": "Inject Ability Use",
+                          "abilityName": "Monster_W4_Serpent_01_ChangePhase1",
+                          "priorityTag": "EnemyPhaseChange",
+                          "ownerState": "Mask_AliveOrLimbo",
+                          "targetState": "Mask_AliveOrLimbo",
+                          "canHitNonTargets": true,
+                          "showInActionOrder": true,
+                          "allowAbilityTriggers": false
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "HP_Bars_Remaining",
+                        "compareType": "=",
+                        "value2": 2
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value1": "ChangePhase",
+                            "compareType": "=",
+                            "value2": 1,
+                            "contextScope": "TargetEntity"
+                          },
+                          "passed": [
+                            {
+                              "name": "Remove Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster's Minions}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"120636483\">Enemy_W4_Serpent_01_Summon_Deathrattle</a>[<span class=\"descriptionNumberColor\">Execution Squad</span>]"
+                            },
+                            {
+                              "name": "Force Entity Death",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Caster's Minions}}"
+                              }
+                            },
+                            {
+                              "name": "Remove Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1560904792\">Enemy_W4_Serpent_01_Charge01</a>[<span class=\"descriptionNumberColor\">Pursuer</span>]"
+                            },
+                            {
+                              "name": "Declare Custom Variable",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "scope": "TargetEntity",
+                              "variableName": "ChangePhase"
+                            },
+                            {
+                              "name": "Dispel Debuffs",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "silent": true
+                            },
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1404590263\">Standard_Endurance</a>"
+                            },
+                            {
+                              "name": "Set Enemy Phase",
+                              "mode": "Inc"
+                            },
+                            {
+                              "name": "Inject Ability Use",
+                              "abilityName": "Monster_W4_Serpent_01_ChangePhase1",
+                              "priorityTag": "EnemyPhaseChange",
+                              "ownerState": "Mask_AliveOrLimbo",
+                              "targetState": "Mask_AliveOrLimbo",
+                              "canHitNonTargets": true,
+                              "showInActionOrder": true,
+                              "allowAbilityTriggers": false
+                            }
+                          ]
+                        },
+                        "Modifier Deletes Itself"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -90
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2038153082\">Enemy_W4_Serpent_01_ChangePhaseController</a>",
+          "execute": [
+            {
+              "eventTrigger": "Waiting for Healing in Limbo",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "ChangePhase",
+                    "compareType": "=",
+                    "value2": 1,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Minions}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"120636483\">Enemy_W4_Serpent_01_Summon_Deathrattle</a>[<span class=\"descriptionNumberColor\">Execution Squad</span>]"
+                    },
+                    {
+                      "name": "Force Entity Death",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Minions}}"
+                      }
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1560904792\">Enemy_W4_Serpent_01_Charge01</a>[<span class=\"descriptionNumberColor\">Pursuer</span>]"
+                    },
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "ChangePhase"
+                    },
+                    {
+                      "name": "Dispel Debuffs",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "silent": true
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1404590263\">Standard_Endurance</a>"
+                    },
+                    {
+                      "name": "Set Enemy Phase",
+                      "mode": "Inc"
+                    },
+                    {
+                      "name": "Inject Ability Use",
+                      "abilityName": "Monster_W4_Serpent_01_ChangePhase1",
+                      "priorityTag": "EnemyPhaseChange",
+                      "ownerState": "Mask_AliveOrLimbo",
+                      "targetState": "Mask_AliveOrLimbo",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                },
+                "Modifier Deletes Itself"
+              ],
+              "priorityLevel": -90
+            }
+          ]
+        }
+      ]
+    },
     "4064013_Monster_W4_Serpent_01_Ability07_Part02": {
       "fileName": "4064013_Monster_W4_Serpent_01_Ability07_Part02",
       "abilityType": null,
@@ -592,242 +1345,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4064013_BattleEvent_W4_Serpent_01_Part01": {
-      "fileName": "4064013_BattleEvent_W4_Serpent_01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Add Target by Unique Identifier",
-            "identifier": "W4_Serpent_01"
-          },
-          "revertDefault": true
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1584375052\">Enemy_W4_Serpent_01_Locking</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"986864876\">Enemy_W4_Serpent_01_MuteUltra</a>"
-        },
-        "Deleted bullshit",
-        {
-          "name": "Animation Event",
-          "target": {
-            "name": "Add Target by Unique Identifier",
-            "identifier": "W4_Serpent_01"
-          },
-          "state": "Skill06_3",
-          "passed": [
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": 4064012,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null,
-                    "isBaseCompare": true
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1733522141\">Enemy_W4_Serpent_01_IF_Charge02_Target</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
-                      "casterAssign": "TargetSelf"
-                    }
-                  ],
-                  "noTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-2034245301\">Enemy_W4_Serpent_01_Charge02_Target</a>[<span class=\"descriptionNumberColor\">First Offense</span>]",
-                      "casterAssign": "TargetSelf"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Add Target by Unique Identifier",
-                      "identifier": "W4_Serpent_01"
-                    },
-                    "value": "RLBoss"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"968355900\">Monster_W4_Serpent_01_RLBoss_Ability06Choose</a>[<span class=\"descriptionNumberColor\">Hemotort Drench</span>]"
-                    }
-                  ]
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": 4064012,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null,
-                    "isBaseCompare": true
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
-                      },
-                      "includeDyingTargets": true,
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"1733522141\">Enemy_W4_Serpent_01_IF_Charge02_Target</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Is Entity Type",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "type": "Character"
-                          }
-                        ]
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target List}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1649628252\">Enemy_W4_Serpent_01_IF_Charge02_Target_Sub</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
-                          "casterAssign": "TargetSelf"
-                        }
-                      ]
-                    }
-                  ],
-                  "noTargetFound": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
-                      },
-                      "includeDyingTargets": true,
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-2034245301\">Enemy_W4_Serpent_01_Charge02_Target</a>[<span class=\"descriptionNumberColor\">First Offense</span>]",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Is Entity Type",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "type": "Character"
-                          }
-                        ]
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target List}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"839686414\">Enemy_W4_Serpent_01_Charge02_Target_Sub</a>[<span class=\"descriptionNumberColor\">Accomplice</span>]",
-                          "casterAssign": "TargetSelf"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        "Wait for Pending Ability Completions",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4064013_BattleEvent_W4_Serpent_01_EnterReady": {
-      "fileName": "4064013_BattleEvent_W4_Serpent_01_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
     "4064013_Monster_W4_Serpent_01_Ability06_Part02": {
       "fileName": "4064013_Monster_W4_Serpent_01_Ability06_Part02",
       "abilityType": null,
@@ -939,9 +1456,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1763,111 +2278,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4064013_Monster_W4_Serpent_01_SummonNoDeathrattle": {
-      "fileName": "4064013_Monster_W4_Serpent_01_SummonNoDeathrattle",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Mark Entity For Immediate Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "onAbort": [
-        {
-          "name": "Mark Entity For Immediate Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4064013_Monster_W4_Serpent_01_SummonDeathrattle": {
-      "fileName": "4064013_Monster_W4_Serpent_01_SummonDeathrattle",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "Summon_Deathrattle"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "includeDyingTargets": true,
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "value1": "MDF_Deathrattle",
-            "compareType": "=",
-            "value2": 1,
-            "contextScope": "TargetEntity"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Team Count",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target List}}"
-              },
-              "variableName": "Summon_Deathrattle"
-            },
-            {
-              "name": "Deal Toughness DMG",
-              "value": {
-                "operator": "Variables[0] ({[Skill02[2]]}) || Variables[1] (Summon_Deathrattle) || MUL || RETURN",
-                "displayLines": "({[Skill02[2]]} * Summon_Deathrattle)",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[2]]}",
-                  "Summon_Deathrattle"
-                ]
-              },
-              "defender": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "ignoreAttackerBonuses": true,
-              "canDelay": true,
-              "ToughnessDMGType": {
-                "name": "Damage Type Source",
-                "sourceType": {}
-              }
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "scope": "TargetEntity",
-          "variableName": "Deathrattle",
-          "value": 0
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4064013_Monster_W4_Serpent_01_Ability02_Part02": {
       "fileName": "4064013_Monster_W4_Serpent_01_Ability02_Part02",
       "abilityType": null,
@@ -2283,691 +2693,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4064013_Monster_W4_Serpent_01_ChangePhase1": {
-      "fileName": "4064013_Monster_W4_Serpent_01_ChangePhase1",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 2
-          },
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 3
-              }
-            }
-          ]
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 0
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1717754231\">Enemy_W4_Serpent_01_Passive_Sub</a>[<span class=\"descriptionNumberColor\">Expedite Verdict</span>]",
-          "valuePerStack": {
-            "MDF_AllDamageReduce": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[0]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1404590263\">Standard_Endurance</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ChangePhase",
-          "value": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "Phase_Flag",
-              "value": 2
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 3
-              },
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Phase_Flag",
-                  "value": 3
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4064013_Monster_W4_Serpent_01_PassiveAbility": {
-      "fileName": "4064013_Monster_W4_Serpent_01_PassiveAbility",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "W4_Serpent_01",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "value": "RLBoss"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1413842812\">Enemy_W4_Serpent_01_RLBoss_ChangePhaseController</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-227770037\">Monster_W4_Serpent_01_RLBoss_Passive</a>",
-              "valuePerStack": {
-                "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_220) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_220",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_220"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Preload Battle Event(s)",
-              "eventID": [
-                20038
-              ]
-            },
-            {
-              "name": "Add Battle Event",
-              "teamName": "Player Team",
-              "dmgCountsForTeam": "Enemy Team",
-              "eventID": 20038,
-              "variables": null,
-              "whenCreated": [
-                {
-                  "name": "Assign Unique Name",
-                  "uniqueName": "SelectTarget",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1234779090\">Enemy_W4_Serpent_01_PickUpMessage</a>"
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Enemy ID",
-                    "ID": 4064013,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Ichor Memosprite: Judge of Oblivion",
-                    "isBaseCompare": true,
-                    "invertCondition": true
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 4064014,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Ichor Memosprite: Judge of Oblivion",
-                    "isBaseCompare": true,
-                    "invertCondition": true
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"2038153082\">Enemy_W4_Serpent_01_ChangePhaseController</a>"
-                }
-              ]
-            },
-            {
-              "name": "Preload Battle Event(s)",
-              "eventID": [
-                20030
-              ]
-            },
-            {
-              "name": "Add Battle Event",
-              "teamName": "Player Team",
-              "dmgCountsForTeam": "Enemy Team",
-              "eventID": 20030,
-              "variables": null,
-              "whenCreated": [
-                {
-                  "name": "Assign Unique Name",
-                  "uniqueName": "SelectTarget",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1234779090\">Enemy_W4_Serpent_01_PickUpMessage</a>"
-                },
-                "Show BattleEvent Button"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-501224004\">Enemy_W4_Serpent_01_Passive</a>",
-          "valuePerStack": {
-            "MDF_AllDamageReduce": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[0]]}"
-              ]
-            },
-            "MDF_ActionDelay": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[1]]}"
-              ]
-            },
-            "MDF_AllDamageTypeTakenRatio": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[2]]}"
-              ]
-            },
-            "MDF_DamagePercentage": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[3]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1234779090\">Enemy_W4_Serpent_01_PickUpMessage</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ultimate Prep-Phase [Owner]"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1413842812\">Enemy_W4_Serpent_01_RLBoss_ChangePhaseController</a>",
-          "execute": [
-            {
-              "eventTrigger": "Waiting for Healing in Limbo",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "ChangePhase",
-                        "compareType": "=",
-                        "value2": 1,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster's Minions}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"120636483\">Enemy_W4_Serpent_01_Summon_Deathrattle</a>[<span class=\"descriptionNumberColor\">Execution Squad</span>]"
-                        },
-                        {
-                          "name": "Force Entity Death",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster's Minions}}"
-                          }
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1560904792\">Enemy_W4_Serpent_01_Charge01</a>[<span class=\"descriptionNumberColor\">Pursuer</span>]"
-                        },
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "ChangePhase"
-                        },
-                        {
-                          "name": "Dispel Debuffs",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "silent": true
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1404590263\">Standard_Endurance</a>"
-                        },
-                        {
-                          "name": "Set Enemy Phase",
-                          "mode": "Inc"
-                        },
-                        {
-                          "name": "Inject Ability Use",
-                          "abilityName": "Monster_W4_Serpent_01_ChangePhase1",
-                          "priorityTag": "EnemyPhaseChange",
-                          "ownerState": "Mask_AliveOrLimbo",
-                          "targetState": "Mask_AliveOrLimbo",
-                          "canHitNonTargets": true,
-                          "showInActionOrder": true,
-                          "allowAbilityTriggers": false
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "HP_Bars_Remaining",
-                        "compareType": "=",
-                        "value2": 2
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "ChangePhase",
-                            "compareType": "=",
-                            "value2": 1,
-                            "contextScope": "TargetEntity"
-                          },
-                          "passed": [
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster's Minions}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"120636483\">Enemy_W4_Serpent_01_Summon_Deathrattle</a>[<span class=\"descriptionNumberColor\">Execution Squad</span>]"
-                            },
-                            {
-                              "name": "Force Entity Death",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster's Minions}}"
-                              }
-                            },
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1560904792\">Enemy_W4_Serpent_01_Charge01</a>[<span class=\"descriptionNumberColor\">Pursuer</span>]"
-                            },
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "ChangePhase"
-                            },
-                            {
-                              "name": "Dispel Debuffs",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "silent": true
-                            },
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1404590263\">Standard_Endurance</a>"
-                            },
-                            {
-                              "name": "Set Enemy Phase",
-                              "mode": "Inc"
-                            },
-                            {
-                              "name": "Inject Ability Use",
-                              "abilityName": "Monster_W4_Serpent_01_ChangePhase1",
-                              "priorityTag": "EnemyPhaseChange",
-                              "ownerState": "Mask_AliveOrLimbo",
-                              "targetState": "Mask_AliveOrLimbo",
-                              "canHitNonTargets": true,
-                              "showInActionOrder": true,
-                              "allowAbilityTriggers": false
-                            }
-                          ]
-                        },
-                        "Modifier Deletes Itself"
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -90
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2038153082\">Enemy_W4_Serpent_01_ChangePhaseController</a>",
-          "execute": [
-            {
-              "eventTrigger": "Waiting for Healing in Limbo",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "ChangePhase",
-                    "compareType": "=",
-                    "value2": 1,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Minions}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"120636483\">Enemy_W4_Serpent_01_Summon_Deathrattle</a>[<span class=\"descriptionNumberColor\">Execution Squad</span>]"
-                    },
-                    {
-                      "name": "Force Entity Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Minions}}"
-                      }
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1560904792\">Enemy_W4_Serpent_01_Charge01</a>[<span class=\"descriptionNumberColor\">Pursuer</span>]"
-                    },
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "ChangePhase"
-                    },
-                    {
-                      "name": "Dispel Debuffs",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "silent": true
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1404590263\">Standard_Endurance</a>"
-                    },
-                    {
-                      "name": "Set Enemy Phase",
-                      "mode": "Inc"
-                    },
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Monster_W4_Serpent_01_ChangePhase1",
-                      "priorityTag": "EnemyPhaseChange",
-                      "ownerState": "Mask_AliveOrLimbo",
-                      "targetState": "Mask_AliveOrLimbo",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                },
-                "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -90
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "4064013_Monster_W4_Serpent_01_PassiveAbility_BGM": {
       "fileName": "4064013_Monster_W4_Serpent_01_PassiveAbility_BGM",
       "childAbilityList": [
@@ -3072,9 +2797,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3095,8 +2818,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__968355900\">Monster_W4_Serpent_01_RLBoss_Ability06Choose</a>[<span class=\"descriptionNumberColor\">Hemotort Drench</span>]",
-          "stackData": [],
-          "latentQueue": [],
           "description": "The character that has been selected by \"Name the Culprit.\"",
           "type": "Other",
           "statusName": "Hemotort Drench"
@@ -3104,6 +2825,7 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__986553475\">Monster_W4_Serpent_01_RLBoss_TriggerDamage</a>",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3129,12 +2851,14 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-227770037\">Monster_W4_Serpent_01_RLBoss_Passive</a>",
+          "stackData": [
+            "MDF_DamageUpRatio_PerLayer"
+          ],
           "execute": [
             {
               "eventTrigger": "Ability Use [Owner]: Start",
@@ -3257,11 +2981,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUpRatio_PerLayer"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3282,14 +3002,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1161309154\">W4_Serpent_01_BattleScore1</a>",
           "stackType": "Replace",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3347,9 +3067,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3357,6 +3075,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "AttackSign"
           ],
+          "description": "When \"%DynamicTargetName\" uses \"Hemotort Decapitation\", they take maximum damage, and if any DMG is not offset by Shield, they will be inflicted with \"Hemotort Corruption.\"",
+          "type": "Other",
+          "effectName": "First Offense",
+          "statusName": "First Offense",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3375,13 +3097,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When \"%DynamicTargetName\" uses \"Hemotort Decapitation\", they take maximum damage, and if any DMG is not offset by Shield, they will be inflicted with \"Hemotort Corruption.\"",
-          "type": "Other",
-          "effectName": "First Offense",
-          "statusName": "First Offense"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3389,6 +3105,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "AttackSign"
           ],
+          "description": "\"%DynamicTargetName\" takes damage when using \"Hemotort Decapitation.\"",
+          "type": "Other",
+          "effectName": "Accomplice",
+          "statusName": "Accomplice",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3407,17 +3127,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "\"%DynamicTargetName\" takes damage when using \"Hemotort Decapitation.\"",
-          "type": "Other",
-          "effectName": "Accomplice",
-          "statusName": "Accomplice"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1611237649\">Enemy_W4_Serpent_01_Charge02</a>[<span class=\"descriptionNumberColor\">Penance Prep</span>]",
+          "description": "Use \"Hemotort Decapitation\" in the next action. This effect is dispelled when this unit becomes Weakness Broken.",
+          "type": "Other",
+          "effectName": "Penance Prep",
+          "statusName": "Penance Prep",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3472,13 +3190,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Use \"Hemotort Decapitation\" in the next action. This effect is dispelled when this unit becomes Weakness Broken.",
-          "type": "Other",
-          "effectName": "Penance Prep",
-          "statusName": "Penance Prep"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3499,9 +3211,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3515,6 +3225,11 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
+          "description": "Will receive <span class=\"descriptionNumberColor\">MDF_Layer</span> instances of Single Target attacks from \"%CasterName.\" If this unit has Shield, when hit by \"%CasterName's\" Single Target attacks, reduces Toughness. This effect is dispelled when \"%CasterName\" is Weakness Broken.",
+          "type": "Other",
+          "effectName": "Pursuit Target",
+          "statusName": "Pursuit Target",
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3587,19 +3302,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Will receive <span class=\"descriptionNumberColor\">MDF_Layer</span> instances of Single Target attacks from \"%CasterName.\" If this unit has Shield, when hit by \"%CasterName's\" Single Target attacks, reduces Toughness. This effect is dispelled when \"%CasterName\" is Weakness Broken.",
-          "type": "Other",
-          "effectName": "Pursuit Target",
-          "statusName": "Pursuit Target",
-          "addStacksPerTrigger": -1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1560904792\">Enemy_W4_Serpent_01_Charge01</a>[<span class=\"descriptionNumberColor\">Pursuer</span>]",
           "stackType": "Replace",
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Will launch <span class=\"descriptionNumberColor\">MDF_Count</span> instance(s) of Single Target attacks on %DynamicTargetName. This effect is dispelled when this unit's Weakness is Broken.",
+          "type": "Other",
+          "effectName": "Pursuer",
+          "statusName": "Pursuer",
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3982,14 +3695,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Will launch <span class=\"descriptionNumberColor\">MDF_Count</span> instance(s) of Single Target attacks on %DynamicTargetName. This effect is dispelled when this unit's Weakness is Broken.",
-          "type": "Other",
-          "effectName": "Pursuer",
-          "statusName": "Pursuer",
-          "addStacksPerTrigger": -1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3999,6 +3705,10 @@ const compositeAbilityObject = {
             "KeepOnDeathrattle",
             "RemoveWhenCasterDead"
           ],
+          "description": "When defeated, reduces the Toughness of \"Ichor Memosprite: Judge of Oblivion.\"",
+          "type": "Other",
+          "effectName": "Execution Squad",
+          "statusName": "Execution Squad",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4128,18 +3838,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When defeated, reduces the Toughness of \"Ichor Memosprite: Judge of Oblivion.\"",
-          "type": "Other",
-          "effectName": "Execution Squad",
-          "statusName": "Execution Squad"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__149951100\">Enemy_W4_Serpent_01_Passive_StanceDamage</a>",
           "stackType": "Multiple",
+          "stackData": [
+            "MDF_StanceDamage"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4162,11 +3869,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_StanceDamage"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4174,6 +3877,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SuperArmorBreak"
           ],
+          "description": "Takes <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span> more DMG. Dispelled when recovering from the Weakness Break state.",
+          "type": "Other",
+          "statusName": "Expedite Verdict",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4255,10 +3961,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Takes <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span> more DMG. Dispelled when recovering from the Weakness Break state.",
-          "type": "Other",
-          "statusName": "Expedite Verdict"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4266,6 +3969,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SuperArmor"
           ],
+          "stackData": [
+            "MDF_AllDamageReduce"
+          ],
+          "description": "DMG received decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. When this unit is Weakness Broken, this effect is dispelled, its action will be further delayed, and deals massive Imaginary DMG to this unit.",
+          "type": "Other",
+          "effectName": "Expedite Verdict",
+          "statusName": "Expedite Verdict",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -4304,19 +4014,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageReduce"
-          ],
-          "latentQueue": [],
-          "description": "DMG received decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. When this unit is Weakness Broken, this effect is dispelled, its action will be further delayed, and deals massive Imaginary DMG to this unit.",
-          "type": "Other",
-          "effectName": "Expedite Verdict",
-          "statusName": "Expedite Verdict"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-501224004\">Enemy_W4_Serpent_01_Passive</a>",
+          "stackData": [
+            "MDF_AllDamageReduce",
+            "MDF_ActionDelay",
+            "MDF_AllDamageTypeTakenRatio",
+            "MDF_DamagePercentage"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4495,14 +4203,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageReduce",
-            "MDF_ActionDelay",
-            "MDF_AllDamageTypeTakenRatio",
-            "MDF_DamagePercentage"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

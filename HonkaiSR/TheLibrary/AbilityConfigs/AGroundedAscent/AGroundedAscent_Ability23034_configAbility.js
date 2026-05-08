@@ -26,8 +26,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1900448438\">LC_23034_Sub2</a>[<span class=\"descriptionNumberColor\">Departing Anew</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "description": "\"Departing Anew\"'s Skill Point recovery effect cannot be triggered.",
       "type": "Other",
       "statusName": "Departing Anew"
@@ -36,6 +34,11 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2022288380\">LC_23034_Sub</a>[<span class=\"descriptionNumberColor\">Hymn</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P2_DamageAddedRatio</span>, up to <span class=\"descriptionNumberColor\">#SkillEquip_P3_MaxLayer</span> stack(s).",
+      "type": "Buff",
+      "effectName": "Hymn",
+      "statusName": "Hymn",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -81,12 +84,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P2_DamageAddedRatio</span>, up to <span class=\"descriptionNumberColor\">#SkillEquip_P3_MaxLayer</span> stack(s).",
-      "type": "Buff",
-      "effectName": "Hymn",
-      "statusName": "Hymn",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -353,9 +351,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

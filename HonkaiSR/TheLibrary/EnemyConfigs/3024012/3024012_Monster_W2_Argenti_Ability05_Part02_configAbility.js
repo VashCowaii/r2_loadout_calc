@@ -101,11 +101,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"352751855\">Monster_W1_Gepard_RL_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "valuePerStack": {
             "MDF_DamageAddedRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_13) || RETURN",
-              "displayLines": "UnusedUnderThisBase_13",
+              "operator": "Variables[0] (UnusedUnderThisBase_8329) || RETURN",
+              "displayLines": "UnusedUnderThisBase_8329",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_13"
+                "UnusedUnderThisBase_8329"
               ]
             }
           }

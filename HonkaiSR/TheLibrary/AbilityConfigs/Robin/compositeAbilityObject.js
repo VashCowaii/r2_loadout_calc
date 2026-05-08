@@ -3,9 +3,12 @@ const compositeAbilityObject = {
   "fullCharacterName": "Robin",
   "trimCharacterName": "Robin",
   "abilityList": [
+    "Robin_Modifiers",
+    "Robin_LocalPlayer_StandardAbility_AttackBreak",
+    "Robin_LocalPlayer_Robin_TechniqueUsage",
+    "Robin_LocalPlayer_Robin_NormalAtk01",
     "Robin_Robin_TechniqueInLevel",
     "Robin_Robin_PassiveAbility01",
-    "Robin_BattleEventAbility_Robin_Ability03",
     "Robin_Robin_Ability03_Part02",
     "Robin_Robin_Ability03_Part01",
     "Robin_Robin_Ability03_EnterReady",
@@ -14,575 +17,9 @@ const compositeAbilityObject = {
     "Robin_Robin_Ability02_Part01",
     "Robin_Robin_Ability01_Part02",
     "Robin_Robin_Ability01_Part01",
-    "Robin_Modifiers",
     "Robin_BE_BattleEvents"
   ],
   "abilityObject": {
-    "Robin_Robin_TechniqueInLevel": {
-      "fileName": "Robin_Robin_TechniqueInLevel",
-      "childAbilityList": [
-        "Robin_Robin_TechniqueInLevel"
-      ],
-      "skillTrigger": "SkillMaze",
-      "abilityType": "Technique",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1129624601\">StageAbility_Maze_Robin_Modifier</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1129624601\">StageAbility_Maze_Robin_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Update Energy",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "value": {
-                    "operator": "Variables[0] (5) || RETURN",
-                    "displayLines": "5",
-                    "constants": [],
-                    "variables": [
-                      5
-                    ]
-                  },
-                  "isFixed": "* ERR"
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Robin_Robin_PassiveAbility01": {
-      "fileName": "Robin_Robin_PassiveAbility01",
-      "childAbilityList": [
-        "Robin_Robin_PassiveAbility01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1781438521\">Robin_Passive</a>"
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": 0,
-          "maximum": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
-          },
-          "assignState": "True",
-          "priorState": "Normal",
-          "bar#": 3,
-          "cooldown": 0
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Robin_BattleEventAbility_Robin_Ability03": {
-      "fileName": "Robin_BattleEventAbility_Robin_Ability03",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"594877276\">Robin_PassiveAbility01_BattleEvent</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"906631439\">Robin_PassiveAbility01_BattleEvent_BaseSpeed</a>"
-        },
-        {
-          "name": "Block Advance/Delay Effects",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "whitelist": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "whitelistTag": "Mask_TurnBasedAdvance"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__906631439\">Robin_PassiveAbility01_BattleEvent_BaseSpeed</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (BattleEvent_Geji_BaseSpeed) || RETURN",
-                    "displayLines": "BattleEvent_Geji_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "BattleEvent_Geji_BaseSpeed"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Robin_Robin_Ability03_Part02": {
-      "fileName": "Robin_Robin_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"32210681\">Robin_Ability03Area</a>"
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "valuePercent": 1,
-          "ofAbilitySplit": true,
-          "isFixed": "* ERR"
-        },
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "Robin_Robin_Ability03_Part01": {
-      "fileName": "Robin_Robin_Ability03_Part01",
-      "childAbilityList": [
-        "Robin_Robin_Ability03_Camera",
-        "Robin_Robin_Ability03_EnterReady",
-        "Robin_Robin_Ability03_Part01",
-        "Robin_Robin_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Ultimate",
-      "energy": 5,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations"
-          }
-        },
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Robin_Ability03_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Robin_Robin_Ability03_EnterReady": {
-      "fileName": "Robin_Robin_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "Robin_Robin_Ability02_FriendAttack": {
-      "fileName": "Robin_Robin_Ability02_FriendAttack",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-341772219\">Robin_Ability02_DmgUpCasterListener</a>[<span class=\"descriptionNumberColor\">Aria</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"853884831\">Robin_Ability02_Aura</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-341772219\">Robin_Ability02_DmgUpCasterListener</a>[<span class=\"descriptionNumberColor\">Aria</span>]",
-          "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
-          }
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
-          },
-          "assignState": "True",
-          "priorState": "Active",
-          "bar#": 3,
-          "cooldown": 0
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "Robin_Robin_Ability02_Part02": {
-      "fileName": "Robin_Robin_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Trace Activated",
-            "conditionList": "Sequential Passage"
-          },
-          "passed": [
-            {
-              "name": "Update Energy",
-              "on": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "value": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
-              },
-              "isFixed": "* ERR"
-            }
-          ]
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Robin_Ability02_FriendAttack"
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "valuePercent": 1,
-          "ofAbilitySplit": true,
-          "isFixed": "* ERR"
-        },
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "Robin_Robin_Ability02_Part01": {
-      "fileName": "Robin_Robin_Ability02_Part01",
-      "childAbilityList": [
-        "Robin_Robin_Ability02_Camera",
-        "Robin_Robin_Ability02_Part01",
-        "Robin_Robin_Ability02_Part02",
-        "Robin_Robin_Ability02_FriendAttack"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": 30,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Robin_Ability02_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Robin_Robin_Ability01_Part02": {
-      "fileName": "Robin_Robin_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Shot Fired",
-          "caster": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
-            },
-            "HitSplit": 0.33,
-            "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
-            },
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
-            },
-            "HitSplit": 0.33,
-            "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
-            },
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
-            },
-            "HitSplit": 0.34,
-            "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
-            },
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "Robin_Robin_Ability01_Part01": {
-      "fileName": "Robin_Robin_Ability01_Part01",
-      "childAbilityList": [
-        "Robin_Robin_Ability01_Camera",
-        "Robin_Robin_Ability01_Part01",
-        "Robin_Robin_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": 20,
-      "toughnessList": [
-        10,
-        0,
-        0
-      ],
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Robin_Ability01_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      }
-    },
     "Robin_Modifiers": {
       "fileName": "Robin_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -593,6 +30,85 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__186905595\">ADV_StageAbility_Maze_Robin_Enemy</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "onCreation": [
+            {
+              "name": "Set Target Parameter",
+              "readTarget": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "summonID": 13091
+              },
+              "paramTarget": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "variableName": "_Robin_Taunt_Count"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target Count",
+                "target": {
+                  "name": "Target Sequence",
+                  "Sequence": [
+                    {
+                      "name": "Add Target by Summoned Units",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "summonID": 13091
+                    }
+                  ]
+                },
+                "compareType": ">=",
+                "value2": 6
+              }
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-193060010\">ADV_StageAbility_Maze_Robin_Enemy_ForShow</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "modifierFlags": [
+            "Enchanted"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1925937127\">ADV_StageAbility_Maze_Robin_Self</a>",
+          "counter": 1,
+          "stackType": "Merge",
+          "onCreation": [
+            {
+              "name": "Create Overworld Entity",
+              "summonID": 13091
+            }
+          ],
+          "onRemoval": [
+            {
+              "name": "Remove Overworld Entity",
+              "summon": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "summonID": 13091
+              }
+            }
+          ]
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-24245169\">Robin_AbilityEidolon6_ExtraRatioForShow</a>[<span class=\"descriptionNumberColor\">Moonless Midnight</span>]",
@@ -606,6 +122,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-893534812\">Robin_PassiveAbility_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Tonal Resonance</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">#SkillP01_P1_Ratio</span>.",
+          "type": "Buff",
+          "statusName": "Tonal Resonance",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -628,10 +147,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">#SkillP01_P1_Ratio</span>.",
-          "type": "Buff",
-          "statusName": "Tonal Resonance"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -657,29 +173,29 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-169791812\">Robin_Ability03_AtkUp_FriendForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases ATK by <span class=\"descriptionNumberColor\">BaseAttack_Total</span>. Robin deals Additional DMG after attacking.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Concerto",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "description": "Increases ATK by <span class=\"descriptionNumberColor\">BaseAttack_Total</span>. Robin deals Additional DMG after attacking.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Concerto"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1126110528\">Robin_Ability03_AtkUp_CasterForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases ATK by <span class=\"descriptionNumberColor\">BaseAttack_Total</span> and becomes immune to Crowd Control debuffs.",
+          "type": "Buff",
+          "effectName": "ATK Boost, immune to Crowd Control debuffs",
+          "statusName": "Concerto",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "description": "Increases ATK by <span class=\"descriptionNumberColor\">BaseAttack_Total</span> and becomes immune to Crowd Control debuffs.",
-          "type": "Buff",
-          "effectName": "ATK Boost, immune to Crowd Control debuffs",
-          "statusName": "Concerto"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -695,6 +211,10 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-341772219\">Robin_Ability02_DmgUpCasterListener</a>[<span class=\"descriptionNumberColor\">Aria</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">Skill02_P1_DmgUpForShow</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Aria",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -709,13 +229,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">Skill02_P1_DmgUpForShow</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Aria"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1024,6 +538,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-184831783\">Robin_AbilityEidolon4_ResistAll</a>[<span class=\"descriptionNumberColor\">Raindrop Key</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases Effect RES by <span class=\"descriptionNumberColor\">#SkillRank_Rank04_P1_Ratio</span>.",
+          "type": "Buff",
+          "effectName": "Effect RES Boost",
+          "statusName": "Raindrop Key",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1046,11 +564,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases Effect RES by <span class=\"descriptionNumberColor\">#SkillRank_Rank04_P1_Ratio</span>.",
-          "type": "Buff",
-          "effectName": "Effect RES Boost",
-          "statusName": "Raindrop Key"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1120,6 +634,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">#SkillRank_Rank02_P1_ExtraRatio</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "Afternoon Tea For Two",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1142,17 +660,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">#SkillRank_Rank02_P1_ExtraRatio</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "Afternoon Tea For Two"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__712086196\">Robin_AbilityEidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Land of Smiles</span>]",
           "stackType": "Replace",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Increases All-Type RES PEN by <span class=\"descriptionNumberColor\">#SkillRank_Rank01_P1_Ratio</span>.",
+          "type": "Buff",
+          "effectName": "All-Type RES PEN Boost",
+          "statusName": "Land of Smiles",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1175,16 +693,156 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases All-Type RES PEN by <span class=\"descriptionNumberColor\">#SkillRank_Rank01_P1_Ratio</span>.",
-          "type": "Buff",
-          "effectName": "All-Type RES PEN Boost",
-          "statusName": "Land of Smiles"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__32210681\">Robin_Ability03Area</a>",
           "stackType": "ReplaceByCaster",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-169791812\">Robin_Ability03_AtkUp_FriendForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "BaseAttack_Total": {
+                  "operator": "Variables[0] (Skill03_BaseAttack_Total) || RETURN",
+                  "displayLines": "Skill03_BaseAttack_Total",
+                  "constants": [],
+                  "variables": [
+                    "Skill03_BaseAttack_Total"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"102391588\">Robin_Ability03_AtkUp</a>",
+              "haloStatus": true,
+              "valuePerStack": {
+                "Ability03_AtkUpValue": {
+                  "operator": "Variables[0] (Skill03_BaseAttack_Total) || RETURN",
+                  "displayLines": "Skill03_BaseAttack_Total",
+                  "constants": [],
+                  "variables": [
+                    "Skill03_BaseAttack_Total"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1181361675\">Robin_Ability03_PursuedDmg</a>",
+              "haloStatus": true,
+              "valuePerStack": {
+                "Ability03_DmgRatio": {
+                  "operator": "Variables[0] (1.2) || RETURN",
+                  "displayLines": "1.2",
+                  "constants": [],
+                  "variables": [
+                    1.2
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1854203506\">Robin_Trace02_InsertDmgUp</a>[<span class=\"descriptionNumberColor\">Impromptu Flourish</span>]",
+              "haloStatus": true,
+              "conditions": {
+                "name": "Trace Activated",
+                "conditionList": "Impromptu Flourish"
+              },
+              "valuePerStack": {
+                "Trace_PointB2_P1_Ratio": {
+                  "operator": "Variables[0] (0.25) || RETURN",
+                  "displayLines": "0.25",
+                  "constants": [],
+                  "variables": [
+                    0.25
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"712086196\">Robin_AbilityEidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Land of Smiles</span>]",
+              "haloStatus": true,
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 1
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-644782265\">Robin_AbilityEidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Afternoon Tea For Two</span>]",
+              "haloStatus": true,
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 2
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-184831783\">Robin_AbilityEidolon4_ResistAll</a>[<span class=\"descriptionNumberColor\">Raindrop Key</span>]",
+              "haloStatus": true,
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 4
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-24245169\">Robin_AbilityEidolon6_ExtraRatioForShow</a>[<span class=\"descriptionNumberColor\">Moonless Midnight</span>]",
+              "haloStatus": true,
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 6
+              },
+              "valuePerStack": {
+                "AbilityRank_Eidolon6_P2_ExtraRatio": {
+                  "operator": "Variables[0] (4.5) || RETURN",
+                  "displayLines": "4.5",
+                  "constants": [],
+                  "variables": [
+                    4.5
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1525,160 +1183,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-169791812\">Robin_Ability03_AtkUp_FriendForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "BaseAttack_Total": {
-                  "operator": "Variables[0] (Skill03_BaseAttack_Total) || RETURN",
-                  "displayLines": "Skill03_BaseAttack_Total",
-                  "constants": [],
-                  "variables": [
-                    "Skill03_BaseAttack_Total"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectables}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"102391588\">Robin_Ability03_AtkUp</a>",
-              "haloStatus": true,
-              "valuePerStack": {
-                "Ability03_AtkUpValue": {
-                  "operator": "Variables[0] (Skill03_BaseAttack_Total) || RETURN",
-                  "displayLines": "Skill03_BaseAttack_Total",
-                  "constants": [],
-                  "variables": [
-                    "Skill03_BaseAttack_Total"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectables}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1181361675\">Robin_Ability03_PursuedDmg</a>",
-              "haloStatus": true,
-              "valuePerStack": {
-                "Ability03_DmgRatio": {
-                  "operator": "Variables[0] (1.2) || RETURN",
-                  "displayLines": "1.2",
-                  "constants": [],
-                  "variables": [
-                    1.2
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectables}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1854203506\">Robin_Trace02_InsertDmgUp</a>[<span class=\"descriptionNumberColor\">Impromptu Flourish</span>]",
-              "haloStatus": true,
-              "conditions": {
-                "name": "Trace Activated",
-                "conditionList": "Impromptu Flourish"
-              },
-              "valuePerStack": {
-                "Trace_PointB2_P1_Ratio": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectables}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"712086196\">Robin_AbilityEidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Land of Smiles</span>]",
-              "haloStatus": true,
-              "conditions": {
-                "name": "Eidolon Activated",
-                "eidolon": 1
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectables}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-644782265\">Robin_AbilityEidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Afternoon Tea For Two</span>]",
-              "haloStatus": true,
-              "conditions": {
-                "name": "Eidolon Activated",
-                "eidolon": 2
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectables}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-184831783\">Robin_AbilityEidolon4_ResistAll</a>[<span class=\"descriptionNumberColor\">Raindrop Key</span>]",
-              "haloStatus": true,
-              "conditions": {
-                "name": "Eidolon Activated",
-                "eidolon": 4
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-24245169\">Robin_AbilityEidolon6_ExtraRatioForShow</a>[<span class=\"descriptionNumberColor\">Moonless Midnight</span>]",
-              "haloStatus": true,
-              "conditions": {
-                "name": "Eidolon Activated",
-                "eidolon": 6
-              },
-              "valuePerStack": {
-                "AbilityRank_Eidolon6_P2_ExtraRatio": {
-                  "operator": "Variables[0] (4.5) || RETURN",
-                  "displayLines": "4.5",
-                  "constants": [],
-                  "variables": [
-                    4.5
-                  ]
-                }
-              }
-            }
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__853884831\">Robin_Ability02_Aura</a>",
           "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -1805,9 +1315,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1866,6 +1374,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1854203506\">Robin_Trace02_InsertDmgUp</a>[<span class=\"descriptionNumberColor\">Impromptu Flourish</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "SkillTree_PointB2_P1_Ratio"
+          ],
+          "description": "Increases Follow-Up ATK CRIT DMG by <span class=\"descriptionNumberColor\">SkillTree_PointB2_P1_Ratio</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "Impromptu Flourish",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1896,15 +1411,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [
-            "SkillTree_PointB2_P1_Ratio"
-          ],
-          "latentQueue": [],
-          "description": "Increases Follow-Up ATK CRIT DMG by <span class=\"descriptionNumberColor\">SkillTree_PointB2_P1_Ratio</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "Impromptu Flourish"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2526,12 +2033,795 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []
+    },
+    "Robin_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Robin_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Robin_LocalPlayer_Robin_TechniqueUsage": {
+      "fileName": "Robin_LocalPlayer_Robin_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "130902(SkillMaze)",
+          "duration": {
+            "operator": "Variables[0] (15) || RETURN",
+            "displayLines": "15",
+            "constants": [],
+            "variables": [
+              15
+            ]
+          }
+        },
+        "Submit Technique Use"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Robin_LocalPlayer_Robin_NormalAtk01": {
+      "fileName": "Robin_LocalPlayer_Robin_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Robin_Robin_TechniqueInLevel": {
+      "fileName": "Robin_Robin_TechniqueInLevel",
+      "childAbilityList": [
+        "Robin_Robin_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
+      "abilityType": "Technique",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1129624601\">StageAbility_Maze_Robin_Modifier</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1129624601\">StageAbility_Maze_Robin_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Update Energy",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "value": {
+                    "operator": "Variables[0] (5) || RETURN",
+                    "displayLines": "5",
+                    "constants": [],
+                    "variables": [
+                      5
+                    ]
+                  },
+                  "isFixed": "* ERR"
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "Robin_Robin_PassiveAbility01": {
+      "fileName": "Robin_Robin_PassiveAbility01",
+      "childAbilityList": [
+        "Robin_Robin_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1781438521\">Robin_Passive</a>"
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": 0,
+          "maximum": {
+            "operator": "Variables[0] (3) || RETURN",
+            "displayLines": "3",
+            "constants": [],
+            "variables": [
+              3
+            ]
+          },
+          "assignState": "True",
+          "priorState": "Normal",
+          "bar#": 3,
+          "cooldown": 0
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Robin_Robin_Ability03_Part02": {
+      "fileName": "Robin_Robin_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"32210681\">Robin_Ability03Area</a>"
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "valuePercent": 1,
+          "ofAbilitySplit": true,
+          "isFixed": "* ERR"
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "Robin_Robin_Ability03_Part01": {
+      "fileName": "Robin_Robin_Ability03_Part01",
+      "childAbilityList": [
+        "Robin_Robin_Ability03_Camera",
+        "Robin_Robin_Ability03_EnterReady",
+        "Robin_Robin_Ability03_Part01",
+        "Robin_Robin_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Ultimate",
+      "energy": 5,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Active: Fast-Forward Animations"
+          }
+        },
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Robin_Ability03_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Robin_Robin_Ability03_EnterReady": {
+      "fileName": "Robin_Robin_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "Robin_Robin_Ability02_FriendAttack": {
+      "fileName": "Robin_Robin_Ability02_FriendAttack",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-341772219\">Robin_Ability02_DmgUpCasterListener</a>[<span class=\"descriptionNumberColor\">Aria</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"853884831\">Robin_Ability02_Aura</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-341772219\">Robin_Ability02_DmgUpCasterListener</a>[<span class=\"descriptionNumberColor\">Aria</span>]",
+          "duration": {
+            "operator": "Variables[0] (3) || RETURN",
+            "displayLines": "3",
+            "constants": [],
+            "variables": [
+              3
+            ]
+          }
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": {
+            "operator": "Variables[0] (3) || RETURN",
+            "displayLines": "3",
+            "constants": [],
+            "variables": [
+              3
+            ]
+          },
+          "assignState": "True",
+          "priorState": "Active",
+          "bar#": 3,
+          "cooldown": 0
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "Robin_Robin_Ability02_Part02": {
+      "fileName": "Robin_Robin_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Sequential Passage"
+          },
+          "passed": [
+            {
+              "name": "Update Energy",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "value": {
+                "operator": "Variables[0] (5) || RETURN",
+                "displayLines": "5",
+                "constants": [],
+                "variables": [
+                  5
+                ]
+              },
+              "isFixed": "* ERR"
+            }
+          ]
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Robin_Ability02_FriendAttack"
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "valuePercent": 1,
+          "ofAbilitySplit": true,
+          "isFixed": "* ERR"
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "Robin_Robin_Ability02_Part01": {
+      "fileName": "Robin_Robin_Ability02_Part01",
+      "childAbilityList": [
+        "Robin_Robin_Ability02_Camera",
+        "Robin_Robin_Ability02_Part01",
+        "Robin_Robin_Ability02_Part02",
+        "Robin_Robin_Ability02_FriendAttack"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": 30,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Robin_Ability02_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Robin_Robin_Ability01_Part02": {
+      "fileName": "Robin_Robin_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Shot Fired",
+          "caster": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] (1) || RETURN",
+              "displayLines": "1",
+              "constants": [],
+              "variables": [
+                1
+              ]
+            },
+            "HitSplit": 0.33,
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] (1) || RETURN",
+              "displayLines": "1",
+              "constants": [],
+              "variables": [
+                1
+              ]
+            },
+            "HitSplit": 0.33,
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] (1) || RETURN",
+              "displayLines": "1",
+              "constants": [],
+              "variables": [
+                1
+              ]
+            },
+            "HitSplit": 0.34,
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "Robin_Robin_Ability01_Part01": {
+      "fileName": "Robin_Robin_Ability01_Part01",
+      "childAbilityList": [
+        "Robin_Robin_Ability01_Camera",
+        "Robin_Robin_Ability01_Part01",
+        "Robin_Robin_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": 20,
+      "toughnessList": [
+        10,
+        0,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Robin_Ability01_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Robin_BE_BattleEvents": {
       "fileName": "Robin_BE_BattleEvents",

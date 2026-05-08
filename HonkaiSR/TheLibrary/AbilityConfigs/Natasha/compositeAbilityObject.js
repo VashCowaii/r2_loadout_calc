@@ -3,11 +3,15 @@ const compositeAbilityObject = {
   "fullCharacterName": "Natasha",
   "trimCharacterName": "Natasha",
   "abilityList": [
+    "Natasha_Modifiers",
+    "Natasha_Natasha_Trace02",
+    "Natasha_Natasha_Eidolon4",
+    "Natasha_Natasha_Eidolon1",
+    "Natasha_LocalPlayer_StandardAbility_AttackBreak",
+    "Natasha_LocalPlayer_Natasha_TechniqueUsage",
+    "Natasha_LocalPlayer_Natasha_NormalAtk01",
     "Natasha_Natasha_Eidolon1_InsertAbility_Part02",
     "Natasha_Natasha_Eidolon1_InsertAbility_Part01",
-    "Natasha_Natasha_Eidolon1",
-    "Natasha_Natasha_Eidolon4",
-    "Natasha_Natasha_Trace02",
     "Natasha_Natasha_TechniqueInLevel",
     "Natasha_Natasha_PassiveAbility01",
     "Natasha_Natasha_Ability03_Part02",
@@ -16,47 +20,177 @@ const compositeAbilityObject = {
     "Natasha_Natasha_Ability02_Part02",
     "Natasha_Natasha_Ability02_Part01",
     "Natasha_Natasha_Ability01_Part02",
-    "Natasha_Natasha_Ability01_Part01",
-    "Natasha_Modifiers"
+    "Natasha_Natasha_Ability01_Part01"
   ],
   "abilityObject": {
-    "Natasha_Natasha_Eidolon1_InsertAbility_Part02": {
-      "fileName": "Natasha_Natasha_Eidolon1_InsertAbility_Part02",
+    "Natasha_Modifiers": {
+      "fileName": "Natasha_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1196866712\">ADV_StageAbility_Maze_Natasha</a>",
+          "counter": 1,
+          "stackType": "Merge",
+          "duration": 20
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1227965702\">Natasha_BPAbility_DefenceRatioUp</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>",
+          "type": "Buff",
+          "effectName": "DEF Boost",
+          "statusName": "DEF Boost",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__453099626\">Natasha_Passive_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_Fatigue"
+          ],
+          "description": "Deals <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> less DMG to your team.",
+          "type": "Debuff",
+          "effectName": "Weaken",
+          "statusName": "Weaken",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1462346849\">Natasha_HOT_HPByMaxHP</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "useEntitySnapshot": true,
+          "description": "Restores a certain amount of HP at the start of each turn.",
+          "type": "Buff",
+          "effectName": "Healing Over Time",
+          "statusName": "Healing Over Time",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "CurrentHP",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Heal",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "healPercent": {
+                        "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
+                        "displayLines": "MDF_ShowValue1",
+                        "constants": [],
+                        "variables": [
+                          "MDF_ShowValue1"
+                        ]
+                      },
+                      "healFlat": {
+                        "operator": "Variables[0] (MDF_ShowValue2) || RETURN",
+                        "displayLines": "MDF_ShowValue2",
+                        "constants": [],
+                        "variables": [
+                          "MDF_ShowValue2"
+                        ]
+                      },
+                      "formula": "Heal from Healer's MaxHP"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "Natasha_Natasha_Trace02": {
+      "fileName": "Natasha_Natasha_Trace02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Heal",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "healPercent": {
-            "operator": "Variables[0] (0.15) || RETURN",
-            "displayLines": "0.15",
-            "constants": [],
-            "variables": [
-              0.15
-            ]
-          },
-          "healFlat": {
-            "operator": "Variables[0] (400) || RETURN",
-            "displayLines": "400",
-            "constants": [],
-            "variables": [
-              400
-            ]
-          },
-          "formula": "Heal from Healer's MaxHP"
-        },
-        {
-          "name": "Remove Events/Bonuses",
+          "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1397815058\">Natasha_Eidolon1_Check</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-202375119\">M_Trace_HealRatioUp</a>",
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (0.1) || RETURN",
+              "displayLines": "0.1",
+              "constants": [],
+              "variables": [
+                0.1
+              ]
+            }
+          }
         }
       ],
       "references": [],
@@ -64,24 +198,50 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "Natasha_Natasha_Eidolon1_InsertAbility_Part01": {
-      "fileName": "Natasha_Natasha_Eidolon1_InsertAbility_Part01",
+    "Natasha_Natasha_Eidolon4": {
+      "fileName": "Natasha_Natasha_Eidolon4",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Trigger Ability",
-          "from": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Natasha_Eidolon1_InsertAbility_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
+          "modifier": "<a class=\"gModGreen\" id=\"1974553501\">Natasha_Eidolon4_Check</a>"
+        }
       ],
-      "references": [],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1974553501\">Natasha_Eidolon4_Check</a>",
+          "execute": [
+            {
+              "eventTrigger": "Being Attacked End [Owner]",
+              "execute": [
+                {
+                  "name": "Update Energy",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "value": {
+                    "operator": "Variables[0] (5) || RETURN",
+                    "displayLines": "5",
+                    "constants": [],
+                    "variables": [
+                      5
+                    ]
+                  },
+                  "isFixed": "* ERR"
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
@@ -153,19 +313,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "Natasha_Natasha_Eidolon4": {
-      "fileName": "Natasha_Natasha_Eidolon4",
-      "abilityType": null,
-      "energy": null,
+    "Natasha_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Natasha_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
       "toughnessList": null,
       "parse": [
         {
@@ -174,68 +332,496 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"1974553501\">Natasha_Eidolon4_Check</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
         }
       ],
-      "references": [
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Natasha_LocalPlayer_Natasha_TechniqueUsage": {
+      "fileName": "Natasha_LocalPlayer_Natasha_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
         {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1974553501\">Natasha_Eidolon4_Check</a>",
-          "execute": [
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "name": "Shot Fired",
               "execute": [
                 {
-                  "name": "Update Energy",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "value": {
-                    "operator": "Variables[0] (5) || RETURN",
-                    "displayLines": "5",
-                    "constants": [],
-                    "variables": [
-                      5
-                    ]
-                  },
-                  "isFixed": "* ERR"
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "110501(SkillMaze)"
+                    }
+                  ]
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "110501(SkillMaze)"
+                    }
+                  ]
                 }
               ]
             }
           ],
-          "stackData": [],
-          "latentQueue": []
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "110501(SkillMaze)"
+                    }
+                  ]
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "110501(SkillMaze)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
+      "references": [],
       "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
-    "Natasha_Natasha_Trace02": {
-      "fileName": "Natasha_Natasha_Trace02",
+    "Natasha_LocalPlayer_Natasha_NormalAtk01": {
+      "fileName": "Natasha_LocalPlayer_Natasha_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "from": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "to": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
+                "value1": "Distance_Between_Entities",
+                "compareType": "<=",
+                "value2": 7.5
+              },
+              "passed": [
+                {
+                  "name": "Shot Fired",
+                  "execute": [
+                    {
+                      "name": "Overworld Attack Instance",
+                      "onHit": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "AND",
+                            "conditionList": [
+                              "Compare Projectile Visual Lifetime",
+                              {
+                                "name": "Target Exists",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Projectile's Target}}"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "projectileFinished": [
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Shot Fired",
+                  "execute": [
+                    {
+                      "name": "Overworld Attack Instance",
+                      "onAttack": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "AND",
+                            "conditionList": [
+                              "Compare Projectile Visual Lifetime",
+                              {
+                                "name": "Target Exists",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Projectile's Target}}"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "projectileFinished": [
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance",
+                  "onAttack": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          "Compare Projectile Visual Lifetime",
+                          {
+                            "name": "Target Exists",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Projectile's Target}}"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Natasha_Natasha_Eidolon1_InsertAbility_Part02": {
+      "fileName": "Natasha_Natasha_Eidolon1_InsertAbility_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Add Events/Bonuses",
+          "name": "Heal",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "healPercent": {
+            "operator": "Variables[0] (0.15) || RETURN",
+            "displayLines": "0.15",
+            "constants": [],
+            "variables": [
+              0.15
+            ]
+          },
+          "healFlat": {
+            "operator": "Variables[0] (400) || RETURN",
+            "displayLines": "400",
+            "constants": [],
+            "variables": [
+              400
+            ]
+          },
+          "formula": "Heal from Healer's MaxHP"
+        },
+        {
+          "name": "Remove Events/Bonuses",
           "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-202375119\">M_Trace_HealRatioUp</a>",
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.1) || RETURN",
-              "displayLines": "0.1",
-              "constants": [],
-              "variables": [
-                0.1
-              ]
-            }
-          }
+          "modifier": "<a class=\"gModGreen\" id=\"-1397815058\">Natasha_Eidolon1_Check</a>"
         }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Natasha_Natasha_Eidolon1_InsertAbility_Part01": {
+      "fileName": "Natasha_Natasha_Eidolon1_InsertAbility_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Natasha_Eidolon1_InsertAbility_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
       ],
       "references": [],
       "targetObjectData": {
@@ -364,9 +950,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -516,9 +1100,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -668,6 +1250,15 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-251008638\">Natasha_Eidolon2_HOT_HPByMaxHP</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_ShowValue1",
+            "MDF_ShowValue2"
+          ],
+          "description": "Restores a certain amount of HP at the start of each turn.",
+          "type": "Buff",
+          "effectName": "Healing Over Time",
+          "statusName": "Healing Over Time",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -713,17 +1304,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_ShowValue1",
-            "MDF_ShowValue2"
-          ],
-          "latentQueue": [],
-          "description": "Restores a certain amount of HP at the start of each turn.",
-          "type": "Buff",
-          "effectName": "Healing Over Time",
-          "statusName": "Healing Over Time"
+          ]
         }
       ],
       "targetObjectData": {
@@ -1097,153 +1678,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Natasha_Modifiers": {
-      "fileName": "Natasha_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1227965702\">Natasha_BPAbility_DefenceRatioUp</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>",
-          "type": "Buff",
-          "effectName": "DEF Boost",
-          "statusName": "DEF Boost"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__453099626\">Natasha_Passive_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_Fatigue"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Deals <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> less DMG to your team.",
-          "type": "Debuff",
-          "effectName": "Weaken",
-          "statusName": "Weaken"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1462346849\">Natasha_HOT_HPByMaxHP</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "CurrentHP",
-                    "compareType": ">",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "Heal",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "healPercent": {
-                        "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
-                        "displayLines": "MDF_ShowValue1",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ShowValue1"
-                        ]
-                      },
-                      "healFlat": {
-                        "operator": "Variables[0] (MDF_ShowValue2) || RETURN",
-                        "displayLines": "MDF_ShowValue2",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ShowValue2"
-                        ]
-                      },
-                      "formula": "Heal from Healer's MaxHP"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_ShowValue1",
-            "MDF_ShowValue2"
-          ],
-          "latentQueue": [],
-          "description": "Restores a certain amount of HP at the start of each turn.",
-          "type": "Buff",
-          "effectName": "Healing Over Time",
-          "statusName": "Healing Over Time"
-        }
-      ],
-      "references": []
     }
   }
 }

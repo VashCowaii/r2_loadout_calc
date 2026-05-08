@@ -273,13 +273,18 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1278468708\">Monster_W3_Death_MuteHitFly</a>",
       "modifierFlags": [
         "MuteHitFly"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1332827782\">Enemy_W3_Death_MainCustomString</a>",
+      "latentQueue": [
+        "DeathPart_AppearSkill_Flag",
+        "Effect_Flag",
+        "UsedSkill08_Flag",
+        "Bullet_Flag",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -312,19 +317,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-117176315\">Monster_W3_Death_SpecialVictory_LockHP</a>",
       "latentQueue": [
         "DeathPart_AppearSkill_Flag",
         "Effect_Flag",
         "UsedSkill08_Flag",
         "Bullet_Flag",
         "AIFlag"
-      ]
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-117176315\">Monster_W3_Death_SpecialVictory_LockHP</a>",
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -405,14 +409,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DeathPart_AppearSkill_Flag",
-        "Effect_Flag",
-        "UsedSkill08_Flag",
-        "Bullet_Flag",
-        "AIFlag"
       ]
     },
     {
@@ -616,9 +612,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

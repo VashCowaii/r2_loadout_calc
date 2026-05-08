@@ -3,20 +3,94 @@ const compositeAbilityObject = {
   "fullCharacterName": 60018,
   "trimCharacterName": 60018,
   "abilityList": [
-    "60018_MissionBattleEvent60018_Ability03_Camera",
+    "60018_MissionBattleEvent60018_Ability03_Part01",
     "60018_MissionBattleEvent60018_Insert_Part01",
-    "60018_MissionBattleEvent60018_Ability03_Part01"
+    "60018_MissionBattleEvent60018_Ability03_Camera"
   ],
   "abilityObject": {
-    "60018_MissionBattleEvent60018_Ability03_Camera": {
-      "fileName": "60018_MissionBattleEvent60018_Ability03_Camera",
-      "abilityType": null,
-      "energy": null,
+    "60018_MissionBattleEvent60018_Ability03_Part01": {
+      "fileName": "60018_MissionBattleEvent60018_Ability03_Part01",
+      "childAbilityList": [
+        "60018_MissionBattleEvent60018_Ability03_Part01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
       "toughnessList": null,
       "parse": [],
-      "references": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1616458391\">MStageMissionBattleEvent60018</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1616458391\">MStageMissionBattleEvent60018</a>",
+          "modifierFlags": [
+            "BlockDamage",
+            "Stealth"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Ability",
+                  "abilityName": "MissionBattleEvent60018_Insert_Part01"
+                },
+                {
+                  "name": "Add Ability",
+                  "abilityName": "MissionBattleEvent60018_Ability03_Camera"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Got a Kill [Owner]"
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]"
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                "Deleted bullshit",
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "MissionBattleEvent60018_Insert_Part01",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "priorityTag": "STAGE_Character",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                }
+              ],
+              "priorityLevel": -90
+            },
+            {
+              "eventTrigger": "Leave Battle"
+            }
+          ]
+        }
+      ],
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       }
     },
     "60018_MissionBattleEvent60018_Insert_Part01": {
@@ -106,91 +180,15 @@ const compositeAbilityObject = {
         "primaryTarget": "Inherent Target"
       }
     },
-    "60018_MissionBattleEvent60018_Ability03_Part01": {
-      "fileName": "60018_MissionBattleEvent60018_Ability03_Part01",
-      "childAbilityList": [
-        "60018_MissionBattleEvent60018_Ability03_Part01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
+    "60018_MissionBattleEvent60018_Ability03_Camera": {
+      "fileName": "60018_MissionBattleEvent60018_Ability03_Camera",
+      "abilityType": null,
+      "energy": null,
       "toughnessList": null,
       "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1616458391\">MStageMissionBattleEvent60018</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1616458391\">MStageMissionBattleEvent60018</a>",
-          "modifierFlags": [
-            "BlockDamage",
-            "Stealth"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Ability",
-                  "abilityName": "MissionBattleEvent60018_Insert_Part01"
-                },
-                {
-                  "name": "Add Ability",
-                  "abilityName": "MissionBattleEvent60018_Ability03_Camera"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Got a Kill [Owner]"
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]"
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                "Deleted bullshit",
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "MissionBattleEvent60018_Insert_Part01",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "priorityTag": "STAGE_Character",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ],
-              "priorityLevel": -90
-            },
-            {
-              "eventTrigger": "Leave Battle"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
+      "references": [],
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
       }
     }
   },

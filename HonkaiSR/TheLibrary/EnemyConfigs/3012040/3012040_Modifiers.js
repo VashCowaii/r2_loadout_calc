@@ -10,9 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1556449697\">Enemy_W3_Ghost_DebuffDispeled</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1556449697\">Enemy_W3_Ghost_DebuffDispeled</a>"
     },
     {
       "name": "Modifier Construction",
@@ -31,9 +29,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -101,9 +97,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -211,9 +205,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -300,6 +292,15 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-892811864\">Enemy_W3_Ghost_Ability01_Parasitize_Target</a>[<span class=\"descriptionNumberColor\">Deception's Crown</span>]",
       "modifierFlags": [],
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_HealPercentage_BeAttacked",
+        "MDF_ElementDamageTakenUp"
+      ],
+      "description": "Restores HP after being attacked but additionally gains Physical and Fire-Type Weaknesses and takes increased Break DMG. This state will be dispelled after being Weakness Broken.",
+      "type": "Other",
+      "effectName": "Deception's Crown",
+      "statusName": "Deception's Crown",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -620,17 +621,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_HealPercentage_BeAttacked",
-        "MDF_ElementDamageTakenUp"
-      ],
-      "latentQueue": [],
-      "description": "Restores HP after being attacked but additionally gains Physical and Fire-Type Weaknesses and takes increased Break DMG. This state will be dispelled after being Weakness Broken.",
-      "type": "Other",
-      "effectName": "Deception's Crown",
-      "statusName": "Deception's Crown"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -642,9 +633,7 @@ const configAbility = {
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

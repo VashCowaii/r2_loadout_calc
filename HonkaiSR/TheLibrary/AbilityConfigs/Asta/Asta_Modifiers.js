@@ -10,8 +10,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__427635047\">ADV_StageAbility_Maze_Asta</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2135184996\">Asta_Passive_SPRatioUp</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Energy Regeneration Rate +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Energy Regeneration Rate Boost",
+      "statusName": "Energy Regeneration Rate Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -34,24 +44,22 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Energy Regeneration Rate +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Energy Regeneration Rate Boost",
-      "statusName": "Energy Regeneration Rate Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1558109509\">Asta_Eidolon2Flag</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "duration": 1
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__216386907\">Asta_TeamAttackUP</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to 5 stacks.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Charging",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -87,11 +95,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to 5 stacks.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Charging"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -99,6 +103,10 @@ const configAbility = {
       "counter": 5,
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to 5 stacks.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Charging",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -393,19 +401,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AttackAddedRatio",
-        "MDF_DefenceAddedRatio",
-        "MDF_BuffLayer",
-        "MDF_SPRatio",
-        "MDF_CostLayer"
-      ],
-      "latentQueue": [],
-      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to 5 stacks.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Charging"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -433,11 +429,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

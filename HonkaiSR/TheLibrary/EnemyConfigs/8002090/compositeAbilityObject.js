@@ -3,180 +3,17 @@ const compositeAbilityObject = {
   "fullCharacterName": 8002090,
   "trimCharacterName": 8002090,
   "abilityList": [
-    "8002090_Monster_XP_Minion04_Ability03_Part02",
-    "8002090_Monster_XP_Minion04_Ability03_Part01",
-    "8002090_Monster_XP_Minion04_Ability02_Part02",
-    "8002090_Monster_XP_Minion04_Ability02_Part01",
-    "8002090_Monster_XP_Minion04_Ability01_Part02",
-    "8002090_Monster_XP_Minion04_Ability01_Part01",
     "8002090_Monster_XP_Minion04_08_PassiveAbility_Tutorial",
-    "8002090_Monster_XP_Minion04_PassiveAbility_Tutorial",
-    "8002090_Monster_XP_Minion04_PassiveAbilityInitiate",
+    "8002090_Monster_XP_Minion04_01_Passive01",
     "8002090_Monster_XP_Minion04_01_Ability03_Part02",
     "8002090_Monster_XP_Minion04_01_Ability03_Part01",
     "8002090_Monster_XP_Minion04_01_Ability02_Part02",
     "8002090_Monster_XP_Minion04_01_Ability02_Part01",
     "8002090_Monster_XP_Minion04_01_Ability01_Part02",
     "8002090_Monster_XP_Minion04_01_Ability01_Part01",
-    "8002090_Monster_XP_Minion04_01_Passive01",
     "8002090_Modifiers"
   ],
   "abilityObject": {
-    "8002090_Monster_XP_Minion04_Ability03_Part02": {
-      "fileName": "8002090_Monster_XP_Minion04_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"222306094\">Enemy_XP_Minion04_EscapingCharge02</a>"
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Mark Entity For Immediate Death"
-        },
-        "Trigger: Ability End",
-        {
-          "name": "Entity Escape Battle",
-          "triggerEnemyEscape": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8002090_Monster_XP_Minion04_Ability03_Part01": {
-      "fileName": "8002090_Monster_XP_Minion04_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Minion04_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8002090_Monster_XP_Minion04_Ability02_Part02": {
-      "fileName": "8002090_Monster_XP_Minion04_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"205528475\">Enemy_XP_Minion04_EscapingCharge01</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"222306094\">Enemy_XP_Minion04_EscapingCharge02</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8002090_Monster_XP_Minion04_Ability02_Part01": {
-      "fileName": "8002090_Monster_XP_Minion04_Ability02_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Minion04_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8002090_Monster_XP_Minion04_Ability01_Part02": {
-      "fileName": "8002090_Monster_XP_Minion04_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"205528475\">Enemy_XP_Minion04_EscapingCharge01</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8002090_Monster_XP_Minion04_Ability01_Part01": {
-      "fileName": "8002090_Monster_XP_Minion04_Ability01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Minion04_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "8002090_Monster_XP_Minion04_08_PassiveAbility_Tutorial": {
       "fileName": "8002090_Monster_XP_Minion04_08_PassiveAbility_Tutorial",
       "skillTrigger": "PassiveSkill_Tutorial",
@@ -192,48 +29,21 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8002090_Monster_XP_Minion04_PassiveAbility_Tutorial": {
-      "fileName": "8002090_Monster_XP_Minion04_PassiveAbility_Tutorial",
-      "abilityType": null,
+    "8002090_Monster_XP_Minion04_01_Passive01": {
+      "fileName": "8002090_Monster_XP_Minion04_01_Passive01",
+      "skillTrigger": "PassiveSkill",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
       "parse": [],
+      "whenAdded": [],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
-    },
-    "8002090_Monster_XP_Minion04_PassiveAbilityInitiate": {
-      "fileName": "8002090_Monster_XP_Minion04_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1012060513\">Enemy_XP_Minion04_BeHitSoundController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1012060513\">Enemy_XP_Minion04_BeHitSoundController</a>",
-          "execute": [
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Hit"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
     },
     "8002090_Monster_XP_Minion04_01_Ability03_Part02": {
       "fileName": "8002090_Monster_XP_Minion04_01_Ability03_Part02",
@@ -416,22 +226,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8002090_Monster_XP_Minion04_01_Passive01": {
-      "fileName": "8002090_Monster_XP_Minion04_01_Passive01",
-      "skillTrigger": "PassiveSkill",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "8002090_Modifiers": {
       "fileName": "8002090_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -489,9 +283,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -529,9 +321,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -581,9 +371,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -622,9 +410,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

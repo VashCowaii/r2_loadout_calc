@@ -10,15 +10,23 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1324497127\">TheHerta_Ability21</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__276886007\">ADV_StageAbility_Maze_TheHerta_RogueExtraEffect</a>",
+      "counter": 1,
+      "stackType": "Merge"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-424945107\">TheHerta_Trace02_MainTarget</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1507655097\">ADV_StageAbility_Maze_TheHerta</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1324497127\">TheHerta_Ability21</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-424945107\">TheHerta_Trace02_MainTarget</a>"
     },
     {
       "name": "Modifier Construction",
@@ -514,6 +522,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__555212333\">TheHerta_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "ATK Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -536,29 +548,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "_Hat"
-      ],
-      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "ATK Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__184474088\">TheHerta_SKL03_Sort_Storge</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__184474088\">TheHerta_SKL03_Sort_Storge</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1940766665\">TheHerta_SKL02_Mark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1940766665\">TheHerta_SKL02_Mark</a>"
     },
     {
       "name": "Modifier Construction",
@@ -620,12 +618,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__489116474\">TheHerta_Eidolon2_PreShow</a>",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "Skill21_Layer_Max"
-      ],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -731,28 +723,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Skill21_Layer_Max"
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__27955030\">TheHerta_Passive_MagicMark_Burst_Show</a>",
-      "stackData": [],
-      "latentQueue": [
-        "Orig_Layer"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__27955030\">TheHerta_Passive_MagicMark_Burst_Show</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-333672562\">TheHerta_Passive_MagicMark_Burst</a>",
-      "stackData": [],
-      "latentQueue": [
-        "Orig_Layer",
-        "S03_Mark_Damage"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-333672562\">TheHerta_Passive_MagicMark_Burst</a>"
     },
     {
       "name": "Modifier Construction",
@@ -763,6 +742,9 @@ const configAbility = {
         "ListenBattleEventSkill",
         "KeepOnDeathrattle"
       ],
+      "description": "The Herta's Enhanced Skill will additionally deal DMG to all enemies based on the number of \"Interpretation\" stacks on the target.",
+      "type": "Other",
+      "statusName": "Interpretation",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2517,18 +2499,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [
-        "MagicMark_MaxCount_Max",
-        "MagicMark_MaxCount",
-        "MagicMark_Ratio"
-      ],
-      "latentQueue": [
-        "Orig_Layer"
-      ],
-      "description": "The Herta's Enhanced Skill will additionally deal DMG to all enemies based on the number of \"Interpretation\" stacks on the target.",
-      "type": "Other",
-      "statusName": "Interpretation"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2650,12 +2621,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "Skill21_Layer_Max"
-      ],
       "description": "Each stack increases the multiplier of the DMG dealt by Ultimate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Other",
       "statusName": "Answer"
@@ -2664,21 +2629,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]",
       "counter": 1,
-      "stackData": [],
-      "latentQueue": [
-        "Skill21_Layer_Max"
-      ],
       "description": "Skill is enhanced to \"Hear Me Out.\"",
       "type": "Other",
       "statusName": "Inspiration"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__410301042\">TheHerta_Passive_MagicMark_Effect_Block_42</a>",
-      "stackData": [],
-      "latentQueue": [
-        "Orig_Layer"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__410301042\">TheHerta_Passive_MagicMark_Effect_Block_42</a>"
     },
     {
       "name": "Modifier Construction",
@@ -2686,9 +2643,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__426098232\">TheHerta_Passive_MagicMark_42_Block</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__426098232\">TheHerta_Passive_MagicMark_42_Block</a>"
     },
     {
       "name": "Modifier Construction",
@@ -2697,9 +2652,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2707,6 +2660,9 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "The Sixteenth Key",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2729,10 +2685,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "The Sixteenth Key"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2894,12 +2847,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "Skill21_Layer_Max"
       ]
     },
     {
@@ -2927,12 +2874,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "Orig_Layer"
       ]
     },
     {
@@ -2960,12 +2901,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "Skill21_Layer_Max"
       ]
     },
     {

@@ -10,13 +10,16 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__769637727\">Enemy_W1_Mecha03_02_RLElite_ReFreshMark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__769637727\">Enemy_W1_Mecha03_02_RLElite_ReFreshMark</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1792031086\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier02</a>",
+      "latentQueue": [
+        "isRefreshFlag",
+        "SoldierCount02",
+        "SoldierCount01"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -48,17 +51,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "isRefreshFlag",
-        "SoldierCount02",
-        "SoldierCount01"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1775253467\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier01</a>",
+      "latentQueue": [
+        "isRefreshFlag",
+        "SoldierCount02",
+        "SoldierCount01"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -90,12 +92,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "isRefreshFlag",
-        "SoldierCount02",
-        "SoldierCount01"
       ]
     }
   ],

@@ -3,19 +3,9 @@ const compositeAbilityObject = {
   "fullCharacterName": 5024012,
   "trimCharacterName": 5024012,
   "abilityList": [
-    "5024012_Monster_W5_Ripper_SpecialWin_Insert2",
-    "5024012_Monster_W5_Ripper_SpecialWin_Insert1",
-    "5024012_BattleEventAbility_TVBroadcast_Positive_Effect",
-    "5024012_BattleEventAbility_TVBroadcast_Positive",
-    "5024012_BattleEventAbility_TVBroadcast_Neutral_Effect",
-    "5024012_BattleEventAbility_TVBroadcast_Neutral",
-    "5024012_BattleEventAbility_TVBroadcast_Negative_Effect",
-    "5024012_BattleEventAbility_TVBroadcast_Negative",
-    "5024012_Monster_W5_Ripper_TriggerSummon",
-    "5024012_Monster_W5_Ripper_FleshChange",
-    "5024012_Monster_W5_Ripper_FleshBonus",
-    "5024012_Monster_W5_Ripper_SummonMonster_Ability",
     "5024012_Monster_W5_Ripper_PassiveAbility_Insert",
+    "5024012_Monster_W5_Ripper_TriggerSummon",
+    "5024012_Monster_W5_Ripper_Passive01",
     "5024012_Monster_W5_Ripper_Ability08_Part02",
     "5024012_Monster_W5_Ripper_Ability08_Part01",
     "5024012_Monster_W5_Ripper_Ability06_Part02",
@@ -26,968 +16,11 @@ const compositeAbilityObject = {
     "5024012_Monster_W5_Ripper_Ability04_Part01",
     "5024012_Monster_W5_Ripper_Ability03_Part02",
     "5024012_Monster_W5_Ripper_Ability03_Part01",
-    "5024012_Monster_W5_Ripper_Ability02_Part02",
-    "5024012_Monster_W5_Ripper_Ability02_Part01",
     "5024012_Monster_W5_Ripper_Ability01_Part02",
     "5024012_Monster_W5_Ripper_Ability01_Part01",
-    "5024012_Monster_W5_Ripper_Passive01",
-    "5024012_Monster_W5_Ripper_PassiveAbility_BGM",
     "5024012_Modifiers"
   ],
   "abilityObject": {
-    "5024012_Monster_W5_Ripper_SpecialWin_Insert2": {
-      "fileName": "5024012_Monster_W5_Ripper_SpecialWin_Insert2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5024012_Monster_W5_Ripper_SpecialWin_Insert1": {
-      "fileName": "5024012_Monster_W5_Ripper_SpecialWin_Insert1",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5024012_BattleEventAbility_TVBroadcast_Positive_Effect": {
-      "fileName": "5024012_BattleEventAbility_TVBroadcast_Positive_Effect",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Adjust Team Punchline Value",
-          "value": {
-            "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-            "displayLines": "BattleEvent_P1_ADF",
-            "constants": [],
-            "variables": [
-              "BattleEvent_P1_ADF"
-            ]
-          },
-          "adjustment": "Add"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}.[[removeMemosprite]]"
-          },
-          "advanceType": "Set",
-          "multiAdd": "(0 - BattleEvent_P2_ADF)"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}.[[removeMemosprite]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"365398491\">Standard_CriticalDamageUp</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
-          "duration": 1,
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (BattleEvent_P4_ADF) || RETURN",
-              "displayLines": "BattleEvent_P4_ADF",
-              "constants": [],
-              "variables": [
-                "BattleEvent_P4_ADF"
-              ]
-            }
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-350128982\">Monster_W5_Ripper_MainBETrigger3</a>"
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-350128982\">Monster_W5_Ripper_MainBETrigger3</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5024012_BattleEventAbility_TVBroadcast_Positive": {
-      "fileName": "5024012_BattleEventAbility_TVBroadcast_Positive",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": {
-            "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P3_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P3_ADF"
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1938760859\">Modifier_BattleEventAbility_TVBroadcast_Positive</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "BattleEvent_P1_ADF",
-          "value": {
-            "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P1_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P1_ADF"
-            ]
-          }
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "BattleEvent_P2_ADF",
-          "value": {
-            "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P2_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P2_ADF"
-            ]
-          }
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "BattleEvent_P4_ADF",
-          "value": {
-            "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P4_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P4_ADF"
-            ]
-          }
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "TVBroadcast_Positive",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1938760859\">Modifier_BattleEventAbility_TVBroadcast_Positive</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "condition": {
-                    "name": "Insert Ability Condition",
-                    "type": "AbilityOwnerInsertUnusedCount",
-                    "typeValue": 1
-                  },
-                  "abilityName": "BattleEventAbility_TVBroadcast_Positive_Effect",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "priorityTag": "STAGE_Character",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Ability",
-                  "abilityName": "BattleEventAbility_TVBroadcast_Positive_Effect"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "5024012_BattleEventAbility_TVBroadcast_Neutral_Effect": {
-      "fileName": "5024012_BattleEventAbility_TVBroadcast_Neutral_Effect",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-333351363\">Monster_W5_Ripper_MainBETrigger2</a>"
-          },
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Random Chance",
-                "chance": 0.7
-              }
-            }
-          ]
-        },
-        {
-          "name": "Adjust Team Punchline Value",
-          "value": {
-            "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-            "displayLines": "BattleEvent_P1_ADF",
-            "constants": [],
-            "variables": [
-              "BattleEvent_P1_ADF"
-            ]
-          },
-          "adjustment": "Add"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-333351363\">Monster_W5_Ripper_MainBETrigger2</a>"
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-333351363\">Monster_W5_Ripper_MainBETrigger2</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5024012_BattleEventAbility_TVBroadcast_Neutral": {
-      "fileName": "5024012_BattleEventAbility_TVBroadcast_Neutral",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": {
-            "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P2_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P2_ADF"
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"200611719\">Modifier_BattleEventAbility_TVBroadcast_Neutral</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "BattleEvent_P1_ADF",
-          "value": {
-            "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P1_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P1_ADF"
-            ]
-          }
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "TVBroadcast_Neutral",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__200611719\">Modifier_BattleEventAbility_TVBroadcast_Neutral</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "condition": {
-                    "name": "Insert Ability Condition",
-                    "type": "AbilityOwnerInsertUnusedCount",
-                    "typeValue": 1
-                  },
-                  "abilityName": "BattleEventAbility_TVBroadcast_Neutral_Effect",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "priorityTag": "STAGE_Character",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Ability",
-                  "abilityName": "BattleEventAbility_TVBroadcast_Neutral_Effect"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "5024012_BattleEventAbility_TVBroadcast_Negative_Effect": {
-      "fileName": "5024012_BattleEventAbility_TVBroadcast_Negative_Effect",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Random Chance",
-            "chance": 0.7
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}.[[removeMemosprite]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-958879550\">Monster_Standard_SpeedRatioDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
-          "duration": 2,
-          "baseChance": 1,
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
-              "displayLines": "BattleEvent_P1_ADF",
-              "constants": [],
-              "variables": [
-                "BattleEvent_P1_ADF"
-              ]
-            }
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-383684220\">Monster_W5_Ripper_MainBETrigger1</a>"
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-383684220\">Monster_W5_Ripper_MainBETrigger1</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5024012_BattleEventAbility_TVBroadcast_Negative": {
-      "fileName": "5024012_BattleEventAbility_TVBroadcast_Negative",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": {
-            "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P2_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P2_ADF"
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-573307177\">Modifier_BattleEventAbility_TVBroadcast_Negative</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "BattleEvent_P1_ADF",
-          "value": {
-            "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
-            "displayLines": "#BattleEvent_P1_ADF",
-            "constants": [],
-            "variables": [
-              "#BattleEvent_P1_ADF"
-            ]
-          }
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "TVBroadcast_Negative",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-573307177\">Modifier_BattleEventAbility_TVBroadcast_Negative</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "condition": {
-                    "name": "Insert Ability Condition",
-                    "type": "AbilityOwnerInsertUnusedCount",
-                    "typeValue": 1
-                  },
-                  "abilityName": "BattleEventAbility_TVBroadcast_Negative_Effect",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "priorityTag": "STAGE_Character",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Ability",
-                  "abilityName": "BattleEventAbility_TVBroadcast_Negative_Effect"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "5024012_Monster_W5_Ripper_TriggerSummon": {
-      "fileName": "5024012_Monster_W5_Ripper_TriggerSummon",
-      "skillTrigger": "Skill07",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Define Modifier-Specific Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifierName": "<a class=\"gModGreen\" id=\"1728959136\">Monster_W5_Ripper_Passive</a>",
-          "variableName": "MDF_InsertCheck",
-          "value": 0
-        },
-        {
-          "name": "Define Modifier-Specific Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifierName": "<a class=\"gModGreen\" id=\"1728959136\">Monster_W5_Ripper_Passive</a>",
-          "variableName": "MDF_CurrentCount",
-          "value": 0
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": 0,
-          "entityClass": "Enemy",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "maximum": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
-          },
-          "assignState": "True",
-          "state": "Normal",
-          "trigger": "SpEff_Trigger"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-98226572\">Monster_W5_Ripper_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Teasing</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[5]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[5]]}"
-            ]
-          },
-          "stackLimit": {
-            "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[2]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[2]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_DamageTakenUpRatio_PerLayer": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
-            }
-          },
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1271467699\">Monster_W5_RipperPart_Bonus</a>[<span class=\"descriptionNumberColor\">Wicked Grin</span>]"
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1271467699\">Monster_W5_RipperPart_Bonus</a>[<span class=\"descriptionNumberColor\">Wicked Grin</span>]"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5024012_Monster_W5_Ripper_FleshChange": {
-      "fileName": "5024012_Monster_W5_Ripper_FleshChange",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2109211182\">Monster_W5_Ripper_Bonus</a>[<span class=\"descriptionNumberColor\">Inverted Severance</span>]",
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ripper: Self}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-100211662\">Monster_W5_Ripper_AddFleshImmediately</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5024012_Monster_W5_Ripper_FleshBonus": {
-      "fileName": "5024012_Monster_W5_Ripper_FleshBonus",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Compare: Monster Rank",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "compareType": ">=",
-            "value2": 4
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2073151026\">WMonster_W5_RipperPart_Bonus</a>",
-              "stackLimit": {
-                "operator": "Variables[0] (Buff_MaxLayer) || RETURN",
-                "displayLines": "Buff_MaxLayer",
-                "constants": [],
-                "variables": [
-                  "Buff_MaxLayer"
-                ]
-              },
-              "valuePerStack": {
-                "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (Buff_DamageUpRatio) || RETURN",
-                  "displayLines": "Buff_DamageUpRatio",
-                  "constants": [],
-                  "variables": [
-                    "Buff_DamageUpRatio"
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5024012_Monster_W5_Ripper_SummonMonster_Ability": {
-      "fileName": "5024012_Monster_W5_Ripper_SummonMonster_Ability",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "SummonLayer",
-          "value": 0
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "SummonCount",
-          "value": 0
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "DelayRatio",
-          "value": 0
-        },
-        {
-          "name": "Define Custom Variable with Modifier Values",
-          "valueType": "Layer",
-          "variableName": "SummonLayer",
-          "modifierName": "<a class=\"gModGreen\" id=\"-287768944\">Monster_W5_Ripper_Summon</a>",
-          "multiplier": 1
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": {
-            "operator": "Variables[0] (SummonLayer) || RETURN",
-            "displayLines": "SummonLayer",
-            "constants": [],
-            "variables": [
-              "SummonLayer"
-            ]
-          },
-          "Event": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Enemy Team All}}"
-                },
-                "value1": "TeamCharacterCount",
-                "compareType": "<",
-                "value2": 5
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "SummonCount",
-                  "value": {
-                    "operator": "Variables[0] (SummonCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(SummonCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "SummonCount"
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "SummonCount",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "DelayRatio",
-                      "value": 0.5
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "SummonCount",
-                      "value": 0
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "DelayRatio",
-                      "value": 1
-                    }
-                  ]
-                },
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] (DelayRatio) || RETURN",
-                    "displayLines": "DelayRatio",
-                    "constants": [],
-                    "variables": [
-                      "DelayRatio"
-                    ]
-                  },
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": 5022010,
-                      "locationType": "KeepOnEdge"
-                    }
-                  ]
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Recently Summoned Enemies}}"
-                  },
-                  "variableName": "Buff_DamageUpRatio",
-                  "value": {
-                    "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill01[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill01[3]]}"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Recently Summoned Enemies}}"
-                  },
-                  "variableName": "Buff_MaxLayer",
-                  "value": {
-                    "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill01[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill01[4]]}"
-                    ]
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-287768944\">Monster_W5_Ripper_Summon</a>",
-                  "addStacksPerTrigger": -1
-                },
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "valueType": "Layer",
-                  "variableName": "SummonLayer",
-                  "modifierName": "<a class=\"gModGreen\" id=\"-287768944\">Monster_W5_Ripper_Summon</a>",
-                  "multiplier": 1
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "SummonLayer",
-                    "compareType": "=",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-287768944\">Monster_W5_Ripper_Summon</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "5024012_Monster_W5_Ripper_PassiveAbility_Insert": {
       "fileName": "5024012_Monster_W5_Ripper_PassiveAbility_Insert",
       "abilityType": null,
@@ -1132,6 +165,387 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5024012_Monster_W5_Ripper_TriggerSummon": {
+      "fileName": "5024012_Monster_W5_Ripper_TriggerSummon",
+      "skillTrigger": "Skill07",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Define Modifier-Specific Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifierName": "<a class=\"gModGreen\" id=\"1728959136\">Monster_W5_Ripper_Passive</a>",
+          "variableName": "MDF_InsertCheck",
+          "value": 0
+        },
+        {
+          "name": "Define Modifier-Specific Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifierName": "<a class=\"gModGreen\" id=\"1728959136\">Monster_W5_Ripper_Passive</a>",
+          "variableName": "MDF_CurrentCount",
+          "value": 0
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": 0,
+          "entityClass": "Enemy",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "maximum": {
+            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+            "displayLines": "{[PassiveSkill01[0]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill01[0]]}"
+            ]
+          },
+          "assignState": "True",
+          "state": "Normal",
+          "trigger": "SpEff_Trigger"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-98226572\">Monster_W5_Ripper_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Teasing</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
+            "displayLines": "{[PassiveSkill01[5]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill01[5]]}"
+            ]
+          },
+          "stackLimit": {
+            "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+            "displayLines": "{[PassiveSkill01[2]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill01[2]]}"
+            ]
+          },
+          "valuePerStack": {
+            "MDF_DamageTakenUpRatio_PerLayer": {
+              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[1]]}"
+              ]
+            }
+          },
+          "addStacksPerTrigger": 1
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1271467699\">Monster_W5_RipperPart_Bonus</a>[<span class=\"descriptionNumberColor\">Wicked Grin</span>]"
+          },
+          "passed": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1271467699\">Monster_W5_RipperPart_Bonus</a>[<span class=\"descriptionNumberColor\">Wicked Grin</span>]"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5024012_Monster_W5_Ripper_Passive01": {
+      "fileName": "5024012_Monster_W5_Ripper_Passive01",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1570402941\">W5_Ripper_BattleScore1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1520070084\">W5_Ripper_BattleScore2</a>"
+        },
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-764241521\">Monster_W5_Ripper_HeartEffectPrepare</a>"
+        },
+        {
+          "name": "Assign Unique Name",
+          "uniqueName": "Monster_W5_Ripper_00",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1728959136\">Monster_W5_Ripper_Passive</a>",
+          "valuePerStack": {
+            "MDF_TriggerSummonCount": {
+              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[0]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "ENEMIES_OBJECT_UNUSED__246"
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 5024011,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Paramount Bliss Inverted: Illwish Archlotus"
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"62518190\">Monster_W5_Ripper_Main</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"766895631\">Standard_Monster_Floating_DamageReduceController</a>",
+                  "valuePerStack": {
+                    "MDF_LockHpActionDecreaseRatio": {
+                      "operator": "Variables[0] (UnusedUnderThisBase_12539) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12539",
+                      "constants": [],
+                      "variables": [
+                        "UnusedUnderThisBase_12539"
+                      ]
+                    },
+                    "MDF_LockHpUpLimitRatio": {
+                      "operator": "Variables[0] (UnusedUnderThisBase_12507) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12507",
+                      "constants": [],
+                      "variables": [
+                        "UnusedUnderThisBase_12507"
+                      ]
+                    },
+                    "MDF_DamageReduceRatio": {
+                      "operator": "Variables[0] (UnusedUnderThisBase_12510) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12510",
+                      "constants": [],
+                      "variables": [
+                        "UnusedUnderThisBase_12510"
+                      ]
+                    },
+                    "MDF_LastLockHpRatio": {
+                      "operator": "Variables[0] (UnusedUnderThisBase_12506) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12506",
+                      "constants": [],
+                      "variables": [
+                        "UnusedUnderThisBase_12506"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"159168932\">Monster_W5_Ripper_Main_HPTrigger1</a>",
+                  "valuePerStack": {
+                    "MDF_HPTriggerRatio": 0.45,
+                    "MDF_HPTriggerCompareRatio": 0.4
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"209501789\">Monster_W5_Ripper_Main_HPTrigger2</a>",
+                  "valuePerStack": {
+                    "MDF_HPTriggerRatio": 0.15,
+                    "MDF_HPTriggerCompareRatio": 0.1
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": 502401100,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": null
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      "maxTargets": 1,
+                      "conditions": {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Character ID",
+                            "ID": 8009,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "characterName": "{NICKNAME}"
+                          },
+                          {
+                            "name": "Character ID",
+                            "ID": 8010,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "characterName": "{NICKNAME}"
+                          }
+                        ]
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1116201071\">Monster_W5_Ripper_MainPerform</a>"
+                        },
+                        {
+                          "name": "Update Energy",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "valuePercent": 1,
+                          "isFixed": "(Fixed)"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"2042265236\">Monster_W5_Ripper_Main2</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1759914466\">Monster_W5_Ripper_PartController</a>"
+            }
+          ]
+        }
+      ],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -3793,65 +3207,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "5024012_Monster_W5_Ripper_Ability02_Part02": {
-      "fileName": "5024012_Monster_W5_Ripper_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_29) || RETURN",
-              "displayLines": "UnusedUnderThisBase_29",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_29"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "5024012_Monster_W5_Ripper_Ability02_Part01": {
-      "fileName": "5024012_Monster_W5_Ripper_Ability02_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Ripper_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
     "5024012_Monster_W5_Ripper_Ability01_Part02": {
       "fileName": "5024012_Monster_W5_Ripper_Ability01_Part02",
       "abilityType": null,
@@ -3925,377 +3280,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "5024012_Monster_W5_Ripper_Passive01": {
-      "fileName": "5024012_Monster_W5_Ripper_Passive01",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1570402941\">W5_Ripper_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1520070084\">W5_Ripper_BattleScore2</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-764241521\">Monster_W5_Ripper_HeartEffectPrepare</a>"
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "Monster_W5_Ripper_00",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1728959136\">Monster_W5_Ripper_Passive</a>",
-          "valuePerStack": {
-            "MDF_TriggerSummonCount": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "value": "ENEMIES_OBJECT_UNUSED__246"
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": 5024011,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Paramount Bliss Inverted: Illwish Archlotus"
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"62518190\">Monster_W5_Ripper_Main</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"766895631\">Standard_Monster_Floating_DamageReduceController</a>",
-                  "valuePerStack": {
-                    "MDF_LockHpActionDecreaseRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_599) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_599",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_599"
-                      ]
-                    },
-                    "MDF_LockHpUpLimitRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_598) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_598",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_598"
-                      ]
-                    },
-                    "MDF_DamageReduceRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_597) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_597",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_597"
-                      ]
-                    },
-                    "MDF_LastLockHpRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_596) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_596",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_596"
-                      ]
-                    }
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"159168932\">Monster_W5_Ripper_Main_HPTrigger1</a>",
-                  "valuePerStack": {
-                    "MDF_HPTriggerRatio": 0.45,
-                    "MDF_HPTriggerCompareRatio": 0.4
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"209501789\">Monster_W5_Ripper_Main_HPTrigger2</a>",
-                  "valuePerStack": {
-                    "MDF_HPTriggerRatio": 0.15,
-                    "MDF_HPTriggerCompareRatio": 0.1
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": 502401100,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": null
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Character ID",
-                            "ID": 8009,
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "characterName": "{NICKNAME}"
-                          },
-                          {
-                            "name": "Character ID",
-                            "ID": 8010,
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "characterName": "{NICKNAME}"
-                          }
-                        ]
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1116201071\">Monster_W5_Ripper_MainPerform</a>"
-                        },
-                        {
-                          "name": "Update Energy",
-                          "on": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "valuePercent": 1,
-                          "isFixed": "(Fixed)"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2042265236\">Monster_W5_Ripper_Main2</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1759914466\">Monster_W5_Ripper_PartController</a>"
-            }
-          ]
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5024012_Monster_W5_Ripper_PassiveAbility_BGM": {
-      "fileName": "5024012_Monster_W5_Ripper_PassiveAbility_BGM",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage Type",
-                "stageType": "Challenge"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "VerseSimulation"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "StrongChallengeActivity"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "RogueRelic"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "GridFightActivity"
-              }
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1024861\">Enemy_W5_Ripper_ResetStageBGM</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1024861\">Enemy_W5_Ripper_ResetStageBGM</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex",
-                  "value": "CurWaveIndex"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave: Start",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex2",
-                  "value": "CurWaveIndex"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_WaveIndex",
-                    "compareType": "NOT=",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
-                      "displayLines": "MDF_WaveIndex2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_WaveIndex2"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "5024012_Modifiers": {
       "fileName": "5024012_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -4347,9 +3331,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4383,13 +3365,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__209501789\">Monster_W5_Ripper_Main_HPTrigger2</a>",
+          "stackData": [
+            "MDF_HPTriggerRatio",
+            "MDF_HPTriggerCompareRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -4456,16 +3440,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HPTriggerRatio",
-            "MDF_HPTriggerCompareRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__159168932\">Monster_W5_Ripper_Main_HPTrigger1</a>",
+          "stackData": [
+            "MDF_HPTriggerRatio",
+            "MDF_HPTriggerCompareRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -4532,12 +3515,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HPTriggerRatio",
-            "MDF_HPTriggerCompareRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4556,9 +3534,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1116201071\">Monster_W5_Ripper_MainPerform</a>",
           "modifierFlags": [
             "STAT_ForceActionable"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4614,6 +3590,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak"
           ],
+          "description": "While \"Paramount Bliss Inverted: Illwish Lotus\" is in the Charging state, this unit's Toughness cannot be reduced.",
+          "type": "Other",
+          "effectName": "Weakness Protected",
+          "statusName": "Weakness Protected",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4637,11 +3617,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "While \"Paramount Bliss Inverted: Illwish Lotus\" is in the Charging state, this unit's Toughness cannot be reduced.",
-          "type": "Other",
-          "effectName": "Weakness Protected",
-          "statusName": "Weakness Protected"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5050,35 +4026,35 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"766895631\">Standard_Monster_Floating_DamageReduceController</a>",
                       "valuePerStack": {
                         "MDF_LockHpActionDecreaseRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_599) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_599",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12539) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12539",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_599"
+                            "UnusedUnderThisBase_12539"
                           ]
                         },
                         "MDF_LockHpUpLimitRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_598) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_598",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12507) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12507",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_598"
+                            "UnusedUnderThisBase_12507"
                           ]
                         },
                         "MDF_DamageReduceRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_597) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_597",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12510) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12510",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_597"
+                            "UnusedUnderThisBase_12510"
                           ]
                         },
                         "MDF_LastLockHpRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_596) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_596",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12506) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12506",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_596"
+                            "UnusedUnderThisBase_12506"
                           ]
                         }
                       }
@@ -5313,9 +4289,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5406,41 +4380,47 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1788107220\">Monster_W5_Ripper_Ability06_SpecialFlesh</a>",
-          "stackData": [],
           "latentQueue": [
             "MainCount"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1415873063\">Monster_W5_Ripper_Ability03_Mark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1415873063\">Monster_W5_Ripper_Ability03_Mark</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1098328598\">Monster_W5_Ripper_Ability06_Mark</a>",
+          "latentQueue": [
+            "MainCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MainCount"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-98226572\">Monster_W5_Ripper_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Teasing</span>]",
           "stackType": "Replace",
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_DamageTakenUpRatio_PerLayer"
+          ],
+          "latentQueue": [
+            "MDF_InsertCheck"
+          ],
+          "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Teasing",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5470,19 +4450,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_DamageTakenUpRatio_PerLayer"
-          ],
-          "latentQueue": [
-            "MDF_InsertCheck"
-          ],
-          "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Teasing",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5510,6 +4478,24 @@ const compositeAbilityObject = {
             147,
             "AvatarBreak"
           ],
+          "stackData": [
+            "MDF_FleshElationPoint",
+            "MDF_FleshExtraChance",
+            "MDF_FleshExtraElationPoint",
+            "MDF_AttackEnemyChance",
+            "MDF_DamagePercentage",
+            "MDF_MaxDamageRatio",
+            "MDF_MinDamageRatio",
+            "MDF_ExtraDamageMultiple",
+            "MDF_EnemyExtraDamageMultiple"
+          ],
+          "latentQueue": [
+            "MainCount"
+          ],
+          "description": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline.",
+          "type": "Debuff",
+          "effectName": "Happiness Puppet",
+          "statusName": "Happiness Puppet",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -5559,7 +4545,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__34096710\">Monster_W5_Ripper_FleshEffect</a>",
           "stackData": [
             "MDF_FleshElationPoint",
             "MDF_FleshExtraChance",
@@ -5574,14 +4564,6 @@ const compositeAbilityObject = {
           "latentQueue": [
             "MainCount"
           ],
-          "description": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline.",
-          "type": "Debuff",
-          "effectName": "Happiness Puppet",
-          "statusName": "Happiness Puppet"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__34096710\">Monster_W5_Ripper_FleshEffect</a>",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -5670,20 +4652,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_FleshElationPoint",
-            "MDF_FleshExtraChance",
-            "MDF_FleshExtraElationPoint",
-            "MDF_AttackEnemyChance",
-            "MDF_DamagePercentage",
-            "MDF_MaxDamageRatio",
-            "MDF_MinDamageRatio",
-            "MDF_ExtraDamageMultiple",
-            "MDF_EnemyExtraDamageMultiple"
-          ],
-          "latentQueue": [
-            "MainCount"
           ]
         },
         {
@@ -5918,9 +4886,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5968,6 +4934,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2110673178\">Monster_W5_Ripper_SummonMonster</a>",
           "stackType": "Replace",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6185,13 +5152,13 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-287768944\">Monster_W5_Ripper_Summon</a>",
           "stackType": "Replace",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase] [Anyone]",
@@ -6219,15 +5186,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2109211182\">Monster_W5_Ripper_Bonus</a>[<span class=\"descriptionNumberColor\">Inverted Severance</span>]",
           "stackType": "Replace",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_CriticalDamageUpRatio</span> and becomes immune to the \"Happiness Puppet\" effect for the duration.",
+          "type": "Buff",
+          "effectName": "Inverted Severance",
+          "statusName": "Inverted Severance",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6250,11 +5218,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_CriticalDamageUpRatio</span> and becomes immune to the \"Happiness Puppet\" effect for the duration.",
-          "type": "Buff",
-          "effectName": "Inverted Severance",
-          "statusName": "Inverted Severance"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6263,6 +5227,20 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_MaxLayer",
+            "MDF_AddLayer",
+            "MDF_SummonCount"
+          ],
+          "latentQueue": [
+            "MainCount",
+            "ParasitismLayer"
+          ],
+          "description": "At the start of each turn, gains <span class=\"descriptionNumberColor\">MDF_AddLayer</span> stack(s). Loses 1 stack when an enemy summons \"Illwish Lotus\" or after attacking an enemy target, and loses an additional stack after eliminating an enemy target. At the end of the turn, if stacks are greater than or equal to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span>, the character will be converted into a \"Happiness Puppet.\" When stacks reach <span class=\"descriptionNumberColor\">MDF_RemoveLayer</span>, this state is dispelled and the \"Inverted Severance\" effect is inflicted.",
+          "type": "Other",
+          "effectName": "Happiness",
+          "statusName": "Happiness",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -6906,21 +5884,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxLayer",
-            "MDF_AddLayer",
-            "MDF_SummonCount"
-          ],
-          "latentQueue": [
-            "MainCount",
-            "ParasitismLayer"
-          ],
-          "description": "At the start of each turn, gains <span class=\"descriptionNumberColor\">MDF_AddLayer</span> stack(s). Loses 1 stack when an enemy summons \"Illwish Lotus\" or after attacking an enemy target, and loses an additional stack after eliminating an enemy target. At the end of the turn, if stacks are greater than or equal to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span>, the character will be converted into a \"Happiness Puppet.\" When stacks reach <span class=\"descriptionNumberColor\">MDF_RemoveLayer</span>, this state is dispelled and the \"Inverted Severance\" effect is inflicted.",
-          "type": "Other",
-          "effectName": "Happiness",
-          "statusName": "Happiness",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6928,7 +5892,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
-          "stackData": [],
           "latentQueue": [
             "MainCount"
           ]
@@ -6972,9 +5935,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7132,9 +6093,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7382,6 +6341,20 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1648139352\">Monster_W5_Ripper_MindControl</a>",
+          "stackData": [
+            "MDF_FleshElationPoint",
+            "MDF_FleshExtraChance",
+            "MDF_FleshExtraElationPoint",
+            "MDF_AttackEnemyChance",
+            "MDF_DamagePercentage",
+            "MDF_MaxDamageRatio",
+            "MDF_MinDamageRatio",
+            "MDF_ExtraDamageMultiple",
+            "MDF_EnemyExtraDamageMultiple"
+          ],
+          "latentQueue": [
+            "MainCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -7738,20 +6711,6 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_FleshElationPoint",
-            "MDF_FleshExtraChance",
-            "MDF_FleshExtraElationPoint",
-            "MDF_AttackEnemyChance",
-            "MDF_DamagePercentage",
-            "MDF_MaxDamageRatio",
-            "MDF_MinDamageRatio",
-            "MDF_ExtraDamageMultiple",
-            "MDF_EnemyExtraDamageMultiple"
-          ],
-          "latentQueue": [
-            "MainCount"
           ]
         },
         {
@@ -7780,9 +6739,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7794,6 +6751,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1728959136\">Monster_W5_Ripper_Passive</a>",
+          "stackData": [
+            "MDF_TriggerSummonCount"
+          ],
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -8087,11 +7047,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "End Broken State [Owner]"
             }
-          ],
-          "stackData": [
-            "MDF_TriggerSummonCount"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

@@ -3,16 +3,70 @@ const compositeAbilityObject = {
   "fullCharacterName": 8002010,
   "trimCharacterName": 8002010,
   "abilityList": [
+    "8002010_Monster_XP_Minion02_PassiveAbility_Initiate",
     "8002010_Monster_XP_Minion02_Ability03_Part02",
     "8002010_Monster_XP_Minion02_Ability03_Part01",
     "8002010_Monster_XP_Minion02_Ability02_Part02",
     "8002010_Monster_XP_Minion02_Ability02_Part01",
     "8002010_Monster_XP_Minion02_Ability01_Part02",
     "8002010_Monster_XP_Minion02_Ability01_Part01",
-    "8002010_Monster_XP_Minion02_PassiveAbility_Initiate",
     "8002010_Modifiers"
   ],
   "abilityObject": {
+    "8002010_Monster_XP_Minion02_PassiveAbility_Initiate": {
+      "fileName": "8002010_Monster_XP_Minion02_PassiveAbility_Initiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-979817918\">Enemy_XP_Minion02_PassiveArmor</a>"
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-922335175\">XP_Minion02_Effect</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-979817918\">Enemy_XP_Minion02_PassiveArmor</a>",
+          "execute": [
+            {
+              "eventTrigger": "End Broken State [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-922335175\">XP_Minion02_Effect</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "8002010_Monster_XP_Minion02_Ability03_Part02": {
       "fileName": "8002010_Monster_XP_Minion02_Ability03_Part02",
       "abilityType": null,
@@ -315,62 +369,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8002010_Monster_XP_Minion02_PassiveAbility_Initiate": {
-      "fileName": "8002010_Monster_XP_Minion02_PassiveAbility_Initiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-979817918\">Enemy_XP_Minion02_PassiveArmor</a>"
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-922335175\">XP_Minion02_Effect</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-979817918\">Enemy_XP_Minion02_PassiveArmor</a>",
-          "execute": [
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-922335175\">XP_Minion02_Effect</a>"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "8002010_Modifiers": {
       "fileName": "8002010_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -384,6 +382,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1446174465\">XP_Minion02_Armor</a>[<span class=\"descriptionNumberColor\">Repulsive Force</span>]",
+          "description": "Reduces damage taken from non-Weakness Type attacks by <span class=\"descriptionNumberColor\">MDF_Resistance</span>. This effect is removed when Weakness is broken.",
+          "type": "Buff",
+          "effectName": "DMG Reduction",
+          "statusName": "Repulsive Force",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -422,11 +424,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "description": "Reduces damage taken from non-Weakness Type attacks by <span class=\"descriptionNumberColor\">MDF_Resistance</span>. This effect is removed when Weakness is broken.",
-          "type": "Buff",
-          "effectName": "DMG Reduction",
-          "statusName": "Repulsive Force"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -441,9 +439,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -451,6 +447,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "stackData": [
+            "MDF_DamageAddedRatio"
+          ],
+          "description": "Uses Carolburst during the next action and increases DMG dealt to targets by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Defensive Position",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -485,15 +488,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageAddedRatio"
-          ],
-          "latentQueue": [],
-          "description": "Uses Carolburst during the next action and increases DMG dealt to targets by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Defensive Position"
+          ]
         }
       ],
       "references": []

@@ -122,6 +122,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-810912311\">Standard_Resistance_Physical</a>",
+      "latentQueue": [
+        "MaxChargeValue"
+      ],
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -211,15 +214,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MaxChargeValue"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1406200933\">Standard_Resistance_Imaginary</a>",
+      "latentQueue": [
+        "MaxChargeValue"
+      ],
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -309,15 +311,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MaxChargeValue"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__338359600\">Standard_Resistance_Fire</a>",
+      "latentQueue": [
+        "MaxChargeValue"
+      ],
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -407,15 +408,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MaxChargeValue"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-460724503\">Standard_Resistance_Quantum</a>",
+      "latentQueue": [
+        "MaxChargeValue"
+      ],
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -505,10 +505,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MaxChargeValue"
       ]
     },
     {
@@ -541,18 +537,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1534116188\">Enemy_W5_Ranger_MuteHitFly</a>",
       "modifierFlags": [
         "MuteHitFly"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

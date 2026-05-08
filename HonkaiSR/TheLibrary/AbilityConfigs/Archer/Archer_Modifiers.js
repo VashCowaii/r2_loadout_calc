@@ -10,7 +10,17 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-300810177\">ADV_StageAbility_Maze_Archer</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1612899858\">Archer_BonusTrigger</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
+      "description": "After using Skill, if there are sufficient Skill Points to use it again, the turn will not end.",
+      "type": "Other",
+      "effectName": "Circuit Connection",
+      "statusName": "Circuit Connection",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -249,19 +259,17 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_AlreadyInBonusAction"
-      ],
-      "description": "After using Skill, if there are sufficient Skill Points to use it again, the turn will not end.",
-      "type": "Other",
-      "effectName": "Circuit Connection",
-      "statusName": "Circuit Connection"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-130031811\">Archer_BonusAbility02Ready</a>",
+      "latentQueue": [
+        "MDF_InBonus",
+        "MDF_Flag_HaveOtherAction",
+        "MDF_AlreadyInBonusAction",
+        "MDF_IsWindfurySkill"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -305,13 +313,6 @@ const configAbility = {
         {
           "eventTrigger": "Update Target Selected(UI) [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_AlreadyInBonusAction",
-        "MDF_InBonus",
-        "MDF_Flag_HaveOtherAction",
-        "MDF_IsWindfurySkill"
       ]
     },
     {
@@ -319,6 +320,10 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__308886295\">Archer_BPAbility_AddDamagePercentage</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Each stack increases DMG dealt by Skill by <span class=\"descriptionNumberColor\">#Skill02_P2_ExtraDamage</span>.",
+      "type": "Buff",
+      "effectName": "Enhanced Skill",
+      "statusName": "Circuit Connection",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -367,18 +372,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "MDF_AlreadyInBonusAction",
-        "MDF_IsWindfurySkill"
-      ],
-      "description": "Each stack increases DMG dealt by Skill by <span class=\"descriptionNumberColor\">#Skill02_P2_ExtraDamage</span>.",
-      "type": "Buff",
-      "effectName": "Enhanced Skill",
-      "statusName": "Circuit Connection"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -387,6 +381,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AttachWeakness"
       ],
+      "description": "Additionally implanted Quantum Weakness. Quantum RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Implanted Quantum Weakness",
+      "statusName": "The Unfulfilled Happiness",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -409,25 +407,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Additionally implanted Quantum Weakness. Quantum RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Implanted Quantum Weakness",
-      "statusName": "The Unfulfilled Happiness"
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__496562314\">Archer_Insert_Target</a>",
-      "stackData": [],
-      "latentQueue": [
-        "MDF_InsertUsed",
-        "MDF_HasMainTarget",
-        "OnInsertAbort_Flg"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__496562314\">Archer_Insert_Target</a>"
     }
   ],
   "references": []

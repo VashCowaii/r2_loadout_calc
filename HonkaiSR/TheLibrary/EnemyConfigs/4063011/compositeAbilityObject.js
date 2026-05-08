@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 4063011,
   "trimCharacterName": 4063011,
   "abilityList": [
+    "4063011_Monster_W4_Serpent_PassiveAbilityInitiate",
     "4063011_Monster_W4_Serpent_Ability05ToStb_Insert",
     "4063011_Monster_W4_Serpent_Ability05_Insert",
     "4063011_Monster_W4_Serpent_Ability04_Part02",
@@ -13,10 +14,49 @@ const compositeAbilityObject = {
     "4063011_Monster_W4_Serpent_Ability02_Part01",
     "4063011_Monster_W4_Serpent_Ability01_Part02",
     "4063011_Monster_W4_Serpent_Ability01_Part01",
-    "4063011_Monster_W4_Serpent_PassiveAbilityInitiate",
     "4063011_Modifiers"
   ],
   "abilityObject": {
+    "4063011_Monster_W4_Serpent_PassiveAbilityInitiate": {
+      "fileName": "4063011_Monster_W4_Serpent_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": 0,
+          "entityClass": "Enemy",
+          "maximum": 1,
+          "assignState": "True",
+          "state": "CoolDown"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "4063011_Monster_W4_Serpent_Ability05ToStb_Insert": {
       "fileName": "4063011_Monster_W4_Serpent_Ability05ToStb_Insert",
       "abilityType": null,
@@ -955,46 +995,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4063011_Monster_W4_Serpent_PassiveAbilityInitiate": {
-      "fileName": "4063011_Monster_W4_Serpent_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": 0,
-          "entityClass": "Enemy",
-          "maximum": 1,
-          "assignState": "True",
-          "state": "CoolDown"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4063011_Modifiers": {
       "fileName": "4063011_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1008,6 +1008,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1224800253\">W4_Serpent_BattleScore1</a>",
+          "latentQueue": [
+            "MDF_Trigger"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1024,10 +1027,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_Trigger"
           ]
         },
         {
@@ -1056,9 +1055,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1111,6 +1108,11 @@ const compositeAbilityObject = {
             "MuteHitH",
             "ListenBattleEventSkill"
           ],
+          "description": "After being hit by attacks from target units, uses \"Torque Counter\" and loses 1 stack of \"Whirl.\" During any unit's turn, each target unit can only trigger this effect once. When the \"Whirl\" stack reaches 0, the Charging state is dispelled. When Weakness is Broken, this unit loses all \"Whirl\" stacks.",
+          "type": "Other",
+          "effectName": "Whirl",
+          "statusName": "Whirl",
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1595,14 +1597,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "After being hit by attacks from target units, uses \"Torque Counter\" and loses 1 stack of \"Whirl.\" During any unit's turn, each target unit can only trigger this effect once. When the \"Whirl\" stack reaches 0, the Charging state is dispelled. When Weakness is Broken, this unit loses all \"Whirl\" stacks.",
-          "type": "Other",
-          "effectName": "Whirl",
-          "statusName": "Whirl",
-          "addStacksPerTrigger": -1
+          ]
         }
       ],
       "references": []

@@ -128,6 +128,16 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1463150719\">Phainon_PassiveAbility02</a>",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "conditions": {
+          "name": "Skill Name",
+          "skillName": "Skill22",
+          "useActive": true
+        },
+        "multiplier": 0.25
+      },
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -407,19 +417,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "conditions": {
-          "name": "Skill Name",
-          "skillName": "Skill22",
-          "useActive": true
-        },
-        "multiplier": 0.25
-      }
+      ]
     }
   ],
   "targetObjectData": {

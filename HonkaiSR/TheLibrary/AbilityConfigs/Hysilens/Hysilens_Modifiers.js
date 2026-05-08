@@ -10,6 +10,21 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__50915189\">ADV_StageAbility_Maze_Harscyline_Enemy_ForShow</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "modifierFlags": [
+        "Enchanted"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1537124449\">ADV_StageAbility_Maze_Harscyline_00</a>",
+      "counter": 1,
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__762236364\">Harscyline_Eidolon1_DamageUp</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -98,11 +113,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -115,6 +126,13 @@ const configAbility = {
         "CanBeAddedToServant",
         "CanListenServantCallback"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Wind DMG at the start of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Wind Shear",
+      "statusName": "Wind Shear",
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -194,14 +212,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Wind DMG at the start of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Wind Shear",
-      "statusName": "Wind Shear",
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -214,6 +225,13 @@ const configAbility = {
         "CanBeAddedToServant",
         "CanListenServantCallback"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Fire DMG at the start of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Burn",
+      "statusName": "Burn",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -340,14 +358,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Fire DMG at the start of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Burn",
-      "statusName": "Burn",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -360,6 +371,13 @@ const configAbility = {
         "CanBeAddedToServant",
         "CanListenServantCallback"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Lightning DMG at the start of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Shock",
+      "statusName": "Shock",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -461,14 +479,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Lightning DMG at the start of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Shock",
-      "statusName": "Shock",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -481,6 +492,13 @@ const configAbility = {
         "CanBeAddedToServant",
         "CanListenServantCallback"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Physical DMG at the start of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Bleed",
+      "statusName": "Bleed",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -738,14 +756,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Physical DMG at the start of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Bleed",
-      "statusName": "Bleed",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -758,6 +769,13 @@ const configAbility = {
         "CanBeAddedToServant",
         "CanListenServantCallback"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Wind DMG at the start of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Wind Shear",
+      "statusName": "Wind Shear",
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -837,14 +855,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Wind DMG at the start of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Wind Shear",
-      "statusName": "Wind Shear",
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -857,6 +868,13 @@ const configAbility = {
         "CanBeAddedToServant",
         "CanListenServantCallback"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Fire DMG at the start of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Burn",
+      "statusName": "Burn",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -983,14 +1001,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Fire DMG at the start of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Burn",
-      "statusName": "Burn",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1003,6 +1014,13 @@ const configAbility = {
         "CanBeAddedToServant",
         "CanListenServantCallback"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Lightning DMG at the start of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Shock",
+      "statusName": "Shock",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1104,14 +1122,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Lightning DMG at the start of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Shock",
-      "statusName": "Shock",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1124,6 +1135,13 @@ const configAbility = {
         "CanBeAddedToServant",
         "CanListenServantCallback"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Physical DMG at the start of each turn for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Bleed",
+      "statusName": "Bleed",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1398,14 +1416,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Physical DMG at the start of each turn for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Bleed",
-      "statusName": "Bleed",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2190,6 +2201,9 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Buff",
+      "statusName": "The Fiddle of Pearls",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2212,14 +2226,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Buff",
-      "statusName": "The Fiddle of Pearls"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2229,6 +2236,9 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "STAT_DefenceDown"
       ],
+      "description": "Enemy targets within the Zone have their ATK decreased by <span class=\"descriptionNumberColor\">MDF_AttackDownRatio</span> and DEF decreased by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>. For every 1 instance of DoT they receive, they will take Physical DoT equal to <span class=\"descriptionNumberColor\">MDF_DOTDamagePercentage</span> of Hysilens's ATK. This damage triggers at the start of each turn or after one attack by an ally target, up to <span class=\"descriptionNumberColor\">MDF_TriggerDOTMaxCount</span> time(s). And it cannot repeatedly trigger this effect.",
+      "type": "Debuff",
+      "statusName": "Maelstrom Rhapsody",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2306,15 +2316,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Enemy targets within the Zone have their ATK decreased by <span class=\"descriptionNumberColor\">MDF_AttackDownRatio</span> and DEF decreased by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>. For every 1 instance of DoT they receive, they will take Physical DoT equal to <span class=\"descriptionNumberColor\">MDF_DOTDamagePercentage</span> of Hysilens's ATK. This damage triggers at the start of each turn or after one attack by an ally target, up to <span class=\"descriptionNumberColor\">MDF_TriggerDOTMaxCount</span> time(s). And it cannot repeatedly trigger this effect.",
-      "type": "Debuff",
-      "statusName": "Maelstrom Rhapsody"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__511580758\">Harscyline_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Overtone Hum: Chorus After Dark Tides</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Overtone Hum: Chorus After Dark Tides",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2337,15 +2348,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Overtone Hum: Chorus After Dark Tides"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2358,9 +2361,7 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "KeepOnDeathrattle"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2371,155 +2372,6 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "ListenBattleEventSkill"
       ],
-      "execute": [
-        {
-          "eventTrigger": "When Modifier Destroyed/Removed",
-          "execute": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] - {{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1957610629\">Harscyline_PointB3_DamageAdded</a>[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]"
-            },
-            {
-              "name": "Update Displayed Energy Bar",
-              "value": 0,
-              "maximum": {
-                "operator": "Variables[0] (Skill03_HaloLifeTime) || RETURN",
-                "displayLines": "Skill03_HaloLifeTime",
-                "constants": [],
-                "variables": [
-                  "Skill03_HaloLifeTime"
-                ]
-              },
-              "priorState": "Normal"
-            }
-          ]
-        },
-        {
-          "eventTrigger": "Action Phase Start [Owner][?]",
-          "execute": [
-            {
-              "name": "Define Custom Variable with Modifier Values",
-              "valueType": "LifeTime",
-              "variableName": "MDF_Layer",
-              "modifierName": "<a class=\"gModGreen\" id=\"-1383903101\">Harscyline_Ability03_HaloStatus</a>",
-              "multiplier": 1
-            },
-            {
-              "name": "Update Displayed Energy Bar",
-              "value": {
-                "operator": "Variables[0] (MDF_Layer) || RETURN",
-                "displayLines": "MDF_Layer",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer"
-                ]
-              },
-              "maximum": {
-                "operator": "Variables[0] (Skill03_HaloLifeTime) || RETURN",
-                "displayLines": "Skill03_HaloLifeTime",
-                "constants": [],
-                "variables": [
-                  "Skill03_HaloLifeTime"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier",
-          "execute": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Trace Activated",
-                "conditionList": "The Gladius of Conquest"
-              },
-              "passed": [
-                {
-                  "name": "Skill Points Modification",
-                  "adjustmentValue": {
-                    "operator": "Variables[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [],
-                    "variables": [
-                      1
-                    ]
-                  },
-                  "adjustmentType": "+"
-                }
-              ]
-            },
-            {
-              "name": "Define Custom Variable with Modifier Values",
-              "valueType": "LifeTime",
-              "variableName": "MDF_Layer",
-              "modifierName": "<a class=\"gModGreen\" id=\"-1383903101\">Harscyline_Ability03_HaloStatus</a>",
-              "multiplier": 1
-            },
-            {
-              "name": "Update Displayed Energy Bar",
-              "value": {
-                "operator": "Variables[0] (MDF_Layer) || RETURN",
-                "displayLines": "MDF_Layer",
-                "constants": [],
-                "variables": [
-                  "MDF_Layer"
-                ]
-              },
-              "maximum": {
-                "operator": "Variables[0] (Skill03_HaloLifeTime) || RETURN",
-                "displayLines": "Skill03_HaloLifeTime",
-                "constants": [],
-                "variables": [
-                  "Skill03_HaloLifeTime"
-                ]
-              },
-              "priorState": "Active",
-              "bar#": 3
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1815201624\">Harscyline_Maze_Flag</a>"
-              },
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Trace Activated",
-                    "conditionList": "The Gladius of Conquest"
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1815201624\">Harscyline_Maze_Flag</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "stackData": [
-        "MDF_DOTDamagePercentageTemp",
-        "MDF_TriggerDOTMaxCountTemp",
-        "MDF_DefenceDownRatioTemp",
-        "MDF_ResistanceDownRatioTemp",
-        "MDF_AttackDownRatioTemp"
-      ],
-      "latentQueue": [],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -2663,6 +2515,147 @@ const configAbility = {
               ]
             }
           }
+        }
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] - {{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1957610629\">Harscyline_PointB3_DamageAdded</a>[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]"
+            },
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": 0,
+              "maximum": {
+                "operator": "Variables[0] (Skill03_HaloLifeTime) || RETURN",
+                "displayLines": "Skill03_HaloLifeTime",
+                "constants": [],
+                "variables": [
+                  "Skill03_HaloLifeTime"
+                ]
+              },
+              "priorState": "Normal"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Action Phase Start [Owner][?]",
+          "execute": [
+            {
+              "name": "Define Custom Variable with Modifier Values",
+              "valueType": "LifeTime",
+              "variableName": "MDF_Layer",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1383903101\">Harscyline_Ability03_HaloStatus</a>",
+              "multiplier": 1
+            },
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": {
+                "operator": "Variables[0] (MDF_Layer) || RETURN",
+                "displayLines": "MDF_Layer",
+                "constants": [],
+                "variables": [
+                  "MDF_Layer"
+                ]
+              },
+              "maximum": {
+                "operator": "Variables[0] (Skill03_HaloLifeTime) || RETURN",
+                "displayLines": "Skill03_HaloLifeTime",
+                "constants": [],
+                "variables": [
+                  "Skill03_HaloLifeTime"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Trace Activated",
+                "conditionList": "The Gladius of Conquest"
+              },
+              "passed": [
+                {
+                  "name": "Skill Points Modification",
+                  "adjustmentValue": {
+                    "operator": "Variables[0] (1) || RETURN",
+                    "displayLines": "1",
+                    "constants": [],
+                    "variables": [
+                      1
+                    ]
+                  },
+                  "adjustmentType": "+"
+                }
+              ]
+            },
+            {
+              "name": "Define Custom Variable with Modifier Values",
+              "valueType": "LifeTime",
+              "variableName": "MDF_Layer",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1383903101\">Harscyline_Ability03_HaloStatus</a>",
+              "multiplier": 1
+            },
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": {
+                "operator": "Variables[0] (MDF_Layer) || RETURN",
+                "displayLines": "MDF_Layer",
+                "constants": [],
+                "variables": [
+                  "MDF_Layer"
+                ]
+              },
+              "maximum": {
+                "operator": "Variables[0] (Skill03_HaloLifeTime) || RETURN",
+                "displayLines": "Skill03_HaloLifeTime",
+                "constants": [],
+                "variables": [
+                  "Skill03_HaloLifeTime"
+                ]
+              },
+              "priorState": "Active",
+              "bar#": 3
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1815201624\">Harscyline_Maze_Flag</a>"
+              },
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Trace Activated",
+                    "conditionList": "The Gladius of Conquest"
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1815201624\">Harscyline_Maze_Flag</a>"
+                }
+              ]
+            }
+          ]
         }
       ]
     }

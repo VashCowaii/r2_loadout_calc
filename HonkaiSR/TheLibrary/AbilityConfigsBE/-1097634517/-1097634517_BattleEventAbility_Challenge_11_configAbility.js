@@ -19,6 +19,12 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1542704800\">MLevel_BattleEventAbility_Challenge_11</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases CRIT Rate by <span class=\"descriptionNumberColor\">ADF_1</span>, up to 5 stacks.",
+      "type": "Buff",
+      "effectName": "CRIT Rate Boost",
+      "statusName": "CRIT Rate Boost",
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -52,13 +58,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases CRIT Rate by <span class=\"descriptionNumberColor\">ADF_1</span>, up to 5 stacks.",
-      "type": "Buff",
-      "effectName": "CRIT Rate Boost",
-      "statusName": "CRIT Rate Boost",
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -108,9 +108,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

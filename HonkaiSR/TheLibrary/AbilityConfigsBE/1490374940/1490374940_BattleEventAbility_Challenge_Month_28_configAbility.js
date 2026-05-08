@@ -116,6 +116,9 @@ const configAbility = {
         "Deathrattle",
         "RemoveWhenCasterDead"
       ],
+      "description": "This unit will immediately be defeated when its Weakness is Broken. After being defeated, the attacker's action will be Advanced Forward by <span class=\"descriptionNumberColor\">BattleEvent_P2_ADF</span>.",
+      "type": "Debuff",
+      "statusName": "Fatal Weakness",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -344,10 +347,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "This unit will immediately be defeated when its Weakness is Broken. After being defeated, the attacker's action will be Advanced Forward by <span class=\"descriptionNumberColor\">BattleEvent_P2_ADF</span>.",
-      "type": "Debuff",
-      "statusName": "Fatal Weakness"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1278,9 +1278,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

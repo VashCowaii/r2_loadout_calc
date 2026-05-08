@@ -468,6 +468,31 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2047770355\">MStrongChallengeEX_OneMoreAction_OnSub_1</a>",
       "stackType": "ReplaceByCaster",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
+        "conditions": {
+          "name": "Compare: Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "value1": null,
+          "compareType": ">=",
+          "value2": 1,
+          "valueType": "Layer"
+        },
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": -100
+        },
+        "changeDelay": true
+      },
+      "addStacksPerTrigger": -1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -497,37 +522,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "target": {
-          "name": "Target Name",
-          "target": "{{Modifier Holder}}"
-        },
-        "conditions": {
-          "name": "Compare: Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "value1": null,
-          "compareType": ">=",
-          "value2": 1,
-          "valueType": "Layer"
-        },
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": -100
-        },
-        "changeDelay": true
-      },
-      "addStacksPerTrigger": -1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1810685690\">MStrongChallengeEX_OneMoreAction_OnAvatar</a>",
       "stackType": "ReplaceByCaster",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -628,8 +629,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "addStacksPerTrigger": 1
+      ]
     }
   ],
   "targetObjectData": {

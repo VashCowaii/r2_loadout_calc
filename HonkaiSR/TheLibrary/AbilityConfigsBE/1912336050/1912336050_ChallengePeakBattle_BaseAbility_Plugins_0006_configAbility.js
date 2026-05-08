@@ -76,6 +76,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__720269094\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_04</a>",
+      "stackData": [
+        "ChallengePeakBattle_Plugins_0006_ADF_1",
+        "ChallengePeakBattle_Plugins_0006_ADF_2",
+        "ChallengePeakBattle_Plugins_0006_ADF_3"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -117,18 +122,21 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "ChallengePeakBattle_Plugins_0006_ADF_1",
-        "ChallengePeakBattle_Plugins_0006_ADF_2",
-        "ChallengePeakBattle_Plugins_0006_ADF_3"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__770601951\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_03</a>[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "ChallengePeakBattle_Plugins_0006_ADF_1",
+        "ChallengePeakBattle_Plugins_0006_ADF_2"
+      ],
+      "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0006_ADF_2</span>.",
+      "type": "Other",
+      "effectName": "SPD Boost",
+      "statusName": "Fluid Dash",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -158,21 +166,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "ChallengePeakBattle_Plugins_0006_ADF_1",
-        "ChallengePeakBattle_Plugins_0006_ADF_2"
-      ],
-      "latentQueue": [],
-      "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0006_ADF_2</span>.",
-      "type": "Other",
-      "effectName": "SPD Boost",
-      "statusName": "Fluid Dash",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__753824332\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0006_02</a>[<span class=\"descriptionNumberColor\">Fluid Dash</span>]",
+      "description": "All-Type RES PEN for DoT dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0006_ADF_1</span>.",
+      "type": "Other",
+      "statusName": "Fluid Dash",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -200,10 +201,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "All-Type RES PEN for DoT dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0006_ADF_1</span>.",
-      "type": "Other",
-      "statusName": "Fluid Dash"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -330,9 +328,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

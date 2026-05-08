@@ -11,6 +11,15 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-557071994\">XP_Ice_Elite_Powerful_Modifier</a>[<span class=\"descriptionNumberColor\">Freezing Point</span>]",
+      "stackData": [
+        "Modifier_AllDamageTypeResistance",
+        "Modifier_StanceWeakAddedRatio",
+        "Modifier_Stance"
+      ],
+      "description": "Ice Out of Space's attack mode is enhanced.",
+      "type": "Other",
+      "effectName": "Freezing Point",
+      "statusName": "Freezing Point",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -42,17 +51,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "Modifier_AllDamageTypeResistance",
-        "Modifier_StanceWeakAddedRatio",
-        "Modifier_Stance"
-      ],
-      "latentQueue": [],
-      "description": "Ice Out of Space's attack mode is enhanced.",
-      "type": "Other",
-      "effectName": "Freezing Point",
-      "statusName": "Freezing Point"
+      ]
     }
   ],
   "references": []

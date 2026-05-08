@@ -37,6 +37,10 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1465401968\">Seele_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Nightshade</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Lowers the chances of being attacked by enemies.",
+      "type": "Buff",
+      "effectName": "Aggro Chance Reduction",
+      "statusName": "Nightshade",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -61,16 +65,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Lowers the chances of being attacked by enemies.",
-      "type": "Buff",
-      "effectName": "Aggro Chance Reduction",
-      "statusName": "Nightshade"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-730910953\">Seele_LowHP_AggroDown</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_HPRatio",
+        "MDF_AggroDown"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -173,12 +177,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_HPRatio",
-        "MDF_AggroDown"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

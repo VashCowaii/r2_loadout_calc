@@ -15,6 +15,10 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "Reduces all DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Upon defeat, a certain percentage of %CasterName's Max HP will be lost.",
+      "type": "Buff",
+      "effectName": "Fate's Convergence",
+      "statusName": "Fate's Convergence",
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo",
@@ -58,15 +62,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Reduces all DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Upon defeat, a certain percentage of %CasterName's Max HP will be lost.",
-      "type": "Buff",
-      "effectName": "Fate's Convergence",
-      "statusName": "Fate's Convergence"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-858410577\">Standard_EliteField_Elite</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
+      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Causes other enemy targets to obtain \"Fate's Convergence.\"",
+      "type": "Buff",
+      "effectName": "Binding Obligation",
+      "statusName": "Binding Obligation",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -159,16 +163,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AllDamageReduce",
-        "MDF_DamageByRatio"
-      ],
-      "latentQueue": [],
-      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Causes other enemy targets to obtain \"Fate's Convergence.\"",
-      "type": "Buff",
-      "effectName": "Binding Obligation",
-      "statusName": "Binding Obligation"
+      ]
     }
   ],
   "references": []

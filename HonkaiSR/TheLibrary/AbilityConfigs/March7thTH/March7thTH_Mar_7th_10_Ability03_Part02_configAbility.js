@@ -75,6 +75,15 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1546960372\">Mar_7th_10_Ability03_Enhance_Normal</a>[<span class=\"descriptionNumberColor\">March 7th, the Apex Heroine</span>]",
+      "stackData": [
+        "MDF_Value",
+        "MDF_Chance",
+        "MDF_PropertyRatio"
+      ],
+      "description": "Increases the next Enhanced Basic ATK's initial Hits Per Action by <span class=\"descriptionNumberColor\">MDF_Value</span>. The fixed chance of additionally dealing DMG increases by <span class=\"descriptionNumberColor\">MDF_Chance</span>.",
+      "type": "Other",
+      "effectName": "Enhanced Basic Attack Boost",
+      "statusName": "March 7th, the Apex Heroine",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -236,17 +245,7 @@ const configAbility = {
         {
           "eventTrigger": "Ultimate Prep-Phase [Anyone]"
         }
-      ],
-      "stackData": [
-        "MDF_Value",
-        "MDF_Chance",
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "Increases the next Enhanced Basic ATK's initial Hits Per Action by <span class=\"descriptionNumberColor\">MDF_Value</span>. The fixed chance of additionally dealing DMG increases by <span class=\"descriptionNumberColor\">MDF_Chance</span>.",
-      "type": "Other",
-      "effectName": "Enhanced Basic Attack Boost",
-      "statusName": "March 7th, the Apex Heroine"
+      ]
     }
   ],
   "targetObjectData": {

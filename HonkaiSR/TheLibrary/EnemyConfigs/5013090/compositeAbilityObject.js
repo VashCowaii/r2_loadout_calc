@@ -3,21 +3,23 @@ const compositeAbilityObject = {
   "fullCharacterName": 5013090,
   "trimCharacterName": 5013090,
   "abilityList": [
+    "5013090_Monster_W5_RangerGroup_SpecialWin",
     "5013090_Monster_W5_RangerGroup_PassiveAbility01_Insert",
     "5013090_Monster_W5_RangerGroup_PassiveAbilityInitiate",
-    "5013090_Monster_W5_RangerGroup_SpecialWin",
-    "5013090_Monster_W5_RangerGroup_Revive",
-    "5013090_Monster_W5_Ranger_Ability04_Camera_Main",
-    "5013090_Monster_W5_Ranger_Ability04_Part02_Main",
-    "5013090_Monster_W5_Ranger_Ability04_Part01_Main",
-    "5013090_Monster_W5_Ranger_01_Main_Ability03_Part02",
-    "5013090_Monster_W5_Ranger_01_Main_Ability03_Part01",
-    "5013090_Monster_W5_Ranger_Main_Ability03_Part02",
-    "5013090_Monster_W5_Ranger_Main_Ability03_Part01",
-    "5013090_Monster_W5_Ranger_Main_PassiveAbility01",
     "5013090_Modifiers"
   ],
   "abilityObject": {
+    "5013090_Monster_W5_RangerGroup_SpecialWin": {
+      "fileName": "5013090_Monster_W5_RangerGroup_SpecialWin",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "5013090_Monster_W5_RangerGroup_PassiveAbility01_Insert": {
       "fileName": "5013090_Monster_W5_RangerGroup_PassiveAbility01_Insert",
       "abilityType": null,
@@ -168,660 +170,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "5013090_Monster_W5_RangerGroup_SpecialWin": {
-      "fileName": "5013090_Monster_W5_RangerGroup_SpecialWin",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013090_Monster_W5_RangerGroup_Revive": {
-      "fileName": "5013090_Monster_W5_RangerGroup_Revive",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1502379157\">Enemy_W5_RangerGroup_SummonedLockHp</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-488756959\">Enemy_W5_RangerGroup_SpecialWin</a>"
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "valuePercent": 1,
-          "isFixed": "(Fixed)"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "multiBase": 1
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "set": 0
-        },
-        {
-          "name": "Assign Advance/Delay to Current Ability Use",
-          "adjustmentValue": 0,
-          "adjustmentType": "="
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1761388509\">Enemy_W5_Ranger_Main_Ultra</a>[<span class=\"descriptionNumberColor\">Ultimate Daybreak</span>]"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1577274573\">Enemy_W5_Ranger_Main_UltraViewMode</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter View-Mode [Anyone]"
-            },
-            {
-              "eventTrigger": "Exit View-Mode [Anyone]"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1761388509\">Enemy_W5_Ranger_Main_Ultra</a>[<span class=\"descriptionNumberColor\">Ultimate Daybreak</span>]",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate",
-                    "invertCondition": true
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate",
-                    "invertCondition": true
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ultimate Prep-Phase [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1577274573\">Enemy_W5_Ranger_Main_UltraViewMode</a>"
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": 10
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Cannot be knocked down. Ultimate DMG greatly increases.",
-          "type": "Buff",
-          "effectName": "Ultimate Daybreak",
-          "statusName": "Ultimate Daybreak"
-        }
-      ]
-    },
-    "5013090_Monster_W5_Ranger_Ability04_Camera_Main": {
-      "fileName": "5013090_Monster_W5_Ranger_Ability04_Camera_Main",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "5013090_Monster_W5_Ranger_Ability04_Part02_Main": {
-      "fileName": "5013090_Monster_W5_Ranger_Ability04_Part02_Main",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2082758660\">Enemy_W5_RangerGroup_MainEnd</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1823743995\">AvatarChange_W5_Ranger_Shield</a>[<span class=\"descriptionNumberColor\">Daybreak Temperance</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1811426878\">Enemy_W5_Ranger_Main_Revive</a>"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_154) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "(UnusedUnderThisBase_154 * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "UnusedUnderThisBase_154"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_154) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "(UnusedUnderThisBase_154 * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "UnusedUnderThisBase_154"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_154) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "(UnusedUnderThisBase_154 * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "UnusedUnderThisBase_154"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_154) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "(UnusedUnderThisBase_154 * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "UnusedUnderThisBase_154"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_154) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "(UnusedUnderThisBase_154 * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "UnusedUnderThisBase_154"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_154) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "(UnusedUnderThisBase_154 * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "UnusedUnderThisBase_154"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_154) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "(UnusedUnderThisBase_154 * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "UnusedUnderThisBase_154"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_154) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "(UnusedUnderThisBase_154 * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "UnusedUnderThisBase_154"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_154) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "(UnusedUnderThisBase_154 * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "UnusedUnderThisBase_154"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_154) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "(UnusedUnderThisBase_154 * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "UnusedUnderThisBase_154"
-              ]
-            },
-            "HitSplit": 0.55,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Inject Ability Use",
-          "abilityName": "Monster_W5_RangerGroup_Revive",
-          "abilitySource": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "priorityTag": "CharacterReviveSelf",
-          "allowAbilityTriggers": false
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1811426878\">Enemy_W5_Ranger_Main_Revive</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Add Ability",
-                  "abilityName": "Monster_W5_RangerGroup_Revive"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "5013090_Monster_W5_Ranger_Ability04_Part01_Main": {
-      "fileName": "5013090_Monster_W5_Ranger_Ability04_Part01_Main",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Shadow Dance of the Daybreak Blade"
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W5_Ranger_Ability04_Part02_Main",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "5013090_Monster_W5_Ranger_01_Main_Ability03_Part02": {
-      "fileName": "5013090_Monster_W5_Ranger_01_Main_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1643569913\">Enemy_W5_Ranger_Main_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-          "valuePerStack": {
-            "MDF_DamageUp": {
-              "operator": "Variables[0] (UnusedUnderThisBase_592) || RETURN",
-              "displayLines": "UnusedUnderThisBase_592",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_592"
-              ]
-            }
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013090_Monster_W5_Ranger_01_Main_Ability03_Part01": {
-      "fileName": "5013090_Monster_W5_Ranger_01_Main_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Ranger_01_Main_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013090_Monster_W5_Ranger_Main_Ability03_Part02": {
-      "fileName": "5013090_Monster_W5_Ranger_Main_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-680453013\">Enemy_W5_Ranger_Main_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-          "valuePerStack": {
-            "MDF_SpeedUp": {
-              "operator": "Variables[0] (UnusedUnderThisBase_593) || RETURN",
-              "displayLines": "UnusedUnderThisBase_593",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_593"
-              ]
-            }
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013090_Monster_W5_Ranger_Main_Ability03_Part01": {
-      "fileName": "5013090_Monster_W5_Ranger_Main_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Ranger_Main_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013090_Monster_W5_Ranger_Main_PassiveAbility01": {
-      "fileName": "5013090_Monster_W5_Ranger_Main_PassiveAbility01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1534116188\">Enemy_W5_Ranger_MuteHitFly</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1534116188\">Enemy_W5_Ranger_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "5013090_Modifiers": {
       "fileName": "5013090_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -909,9 +257,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -974,14 +320,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1643569913\">Enemy_W5_Ranger_Main_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUp</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1004,21 +353,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUp"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUp</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-680453013\">Enemy_W5_Ranger_Main_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1041,16 +386,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedUp"
-          ],
-          "latentQueue": [],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1077,9 +413,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1222,9 +556,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1344,9 +676,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

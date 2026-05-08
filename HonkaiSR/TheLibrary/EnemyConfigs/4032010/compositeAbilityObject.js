@@ -3,12 +3,132 @@ const compositeAbilityObject = {
   "fullCharacterName": 4032010,
   "trimCharacterName": 4032010,
   "abilityList": [
+    "4032010_Monster_AML_Minion02_01_AbilityP01",
     "4032010_Monster_AML_Minion02_01_Ability01_Part02",
     "4032010_Monster_AML_Minion02_01_Ability01_Part01",
-    "4032010_Monster_AML_Minion02_01_AbilityP01",
     "4032010_Modifiers"
   ],
   "abilityObject": {
+    "4032010_Monster_AML_Minion02_01_AbilityP01": {
+      "fileName": "4032010_Monster_AML_Minion02_01_AbilityP01",
+      "childAbilityList": [
+        "4032010_Monster_AML_Minion02_01_AbilityP01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"528776627\">Enemy_AML_Minion02_01_AbilityP01</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1754811478\">Enemy_AML_Minion02_01_EffectController</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Stage Type",
+            "stageType": "Mainline"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"351278960\">Enemy_AML_Minion02_01_RallyHP_Tutorial</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__528776627\">Enemy_AML_Minion02_01_AbilityP01</a>",
+          "execute": [
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player Team All}}"
+                    },
+                    "value1": "TeamCharacterCount",
+                    "compareType": ">=",
+                    "value2": 1,
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1799178922\">Enemy_AML_Minion02_01_RallyHP_V2</a>[<span class=\"descriptionNumberColor\">Corrosion</span>]"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1799178922\">Enemy_AML_Minion02_01_RallyHP_V2</a>[<span class=\"descriptionNumberColor\">Corrosion</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player Team All}}"
+                        },
+                        "value1": "TeamCharacterCount",
+                        "compareType": "<=",
+                        "value2": 0,
+                        "conditions": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1799178922\">Enemy_AML_Minion02_01_RallyHP_V2</a>[<span class=\"descriptionNumberColor\">Corrosion</span>]"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "4032010_Monster_AML_Minion02_01_Ability01_Part02": {
       "fileName": "4032010_Monster_AML_Minion02_01_Ability01_Part02",
       "abilityType": null,
@@ -276,128 +396,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4032010_Monster_AML_Minion02_01_AbilityP01": {
-      "fileName": "4032010_Monster_AML_Minion02_01_AbilityP01",
-      "childAbilityList": [
-        "4032010_Monster_AML_Minion02_01_AbilityP01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"528776627\">Enemy_AML_Minion02_01_AbilityP01</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1754811478\">Enemy_AML_Minion02_01_EffectController</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Stage Type",
-            "stageType": "Mainline"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"351278960\">Enemy_AML_Minion02_01_RallyHP_Tutorial</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__528776627\">Enemy_AML_Minion02_01_AbilityP01</a>",
-          "execute": [
-            {
-              "eventTrigger": "Attack DMG End [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Player Team All}}"
-                    },
-                    "value1": "TeamCharacterCount",
-                    "compareType": ">=",
-                    "value2": 1,
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1799178922\">Enemy_AML_Minion02_01_RallyHP_V2</a>[<span class=\"descriptionNumberColor\">Corrosion</span>]"
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1799178922\">Enemy_AML_Minion02_01_RallyHP_V2</a>[<span class=\"descriptionNumberColor\">Corrosion</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Player Team All}}"
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": "<=",
-                        "value2": 0,
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1799178922\">Enemy_AML_Minion02_01_RallyHP_V2</a>[<span class=\"descriptionNumberColor\">Corrosion</span>]"
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "4032010_Modifiers": {
       "fileName": "4032010_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -427,11 +425,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1287044096\">AML_Minion02_01_Rage</a>",
                   "valuePerStack": {
                     "PassiveAbilityInitiate_P1_AttackAddedRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_388) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_388",
+                      "operator": "Variables[0] (UnusedUnderThisBase_7326) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_7326",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_388"
+                        "UnusedUnderThisBase_7326"
                       ]
                     },
                     "PassiveAbilityInitiate_P2_DefenceAddedRatio": {
@@ -454,6 +452,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1287044096\">AML_Minion02_01_Rage</a>",
+          "stackData": [
+            "PassiveSkillInitiate_P1_AttackAddedRatio",
+            "PassiveSkillInitiate_P2_DefenceAddedRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -554,12 +556,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "PassiveSkillInitiate_P1_AttackAddedRatio",
-            "PassiveSkillInitiate_P2_DefenceAddedRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -568,9 +565,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Leave Battle"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -579,9 +574,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -631,6 +624,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1714614232\">Enemy_AML_Minion02_01_RallyHP_V2_Strongth</a>[<span class=\"descriptionNumberColor\">Renewal</span>]",
+          "description": "The next attack's DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Renewal",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -711,16 +708,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "The next attack's DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Renewal"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1799178922\">Enemy_AML_Minion02_01_RallyHP_V2</a>[<span class=\"descriptionNumberColor\">Corrosion</span>]",
           "stackType": "Replace",
+          "useEntitySnapshot": true,
+          "description": "After attacking, restore a portion of Corroded HP. The more targets are attacked, the more HP is restored. When Corrosion is dispelled via restorative means, obtain \"Renewal.\"",
+          "type": "Other",
+          "statusName": "Corrosion",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1183,16 +1180,13 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "After attacking, restore a portion of Corroded HP. The more targets are attacked, the more HP is restored. When Corrosion is dispelled via restorative means, obtain \"Renewal.\"",
-          "type": "Other",
-          "statusName": "Corrosion"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1719491347\">Enemy_AML_Minion02_01_RallyHP</a>",
           "stackType": "Replace",
+          "useEntitySnapshot": true,
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -1356,12 +1350,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_RallyTransferRatio",
+            "MDF_Rally_HealPercentage",
+            "MDF_Rally_HealUpRatio",
+            "MDF_Rally_Strongth_AllDamageTypeAddedRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -1545,93 +1545,6 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "maxValue": 1,
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"1966517473\">TaskList_Standard_RallyHP_ListenDirtyHPChange</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlockFlat</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "maxValue": 1000000000,
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"1966517473\">TaskList_Standard_RallyHP_ListenDirtyHPChange</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "maxValue": 1000000000,
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-1785562897\">TaskList_Standard_RallyHP_ListenMaxHPChange</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "maxValue": 1000000000,
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-1785562897\">TaskList_Standard_RallyHP_ListenMaxHPChange</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "maxValue": 1000000000,
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-1785562897\">TaskList_Standard_RallyHP_ListenMaxHPChange</a>"
-                    }
                   ]
                 }
               ]
@@ -1897,14 +1810,93 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_RallyTransferRatio",
-            "MDF_Rally_HealPercentage",
-            "MDF_Rally_HealUpRatio",
-            "MDF_Rally_Strongth_AllDamageTypeAddedRatio"
-          ],
-          "latentQueue": []
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "maxValue": 1,
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1966517473\">TaskList_Standard_RallyHP_ListenDirtyHPChange</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlockFlat</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "maxValue": 1000000000,
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1966517473\">TaskList_Standard_RallyHP_ListenDirtyHPChange</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "maxValue": 1000000000,
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1785562897\">TaskList_Standard_RallyHP_ListenMaxHPChange</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "maxValue": 1000000000,
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1785562897\">TaskList_Standard_RallyHP_ListenMaxHPChange</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "maxValue": 1000000000,
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1785562897\">TaskList_Standard_RallyHP_ListenMaxHPChange</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Modifier Construction",

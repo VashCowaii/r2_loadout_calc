@@ -56,6 +56,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1564570329\">Enemy_W2_Lycan_RageStatusEnhance</a>[<span class=\"descriptionNumberColor\">Moon Rage</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Enters the Moon Rage state and can take an extra action every turn. There is a high chance of inflicting Bleed on the target when attacking. This state will be removed when this unit is Weakness Broken.",
+      "type": "Buff",
+      "effectName": "Additional Bleed",
+      "statusName": "Moon Rage",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -162,16 +166,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Enters the Moon Rage state and can take an extra action every turn. There is a high chance of inflicting Bleed on the target when attacking. This state will be removed when this unit is Weakness Broken.",
-      "type": "Buff",
-      "effectName": "Additional Bleed",
-      "statusName": "Moon Rage"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1495768773\">Enemy_W2_Lycan_RageStatus</a>[<span class=\"descriptionNumberColor\">Moon Rage</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. There is a high chance of inflicting Bleed on the target when attacking. This state will be removed when this unit is Weakness Broken.",
+      "type": "Buff",
+      "effectName": "Additional Bleed",
+      "statusName": "Moon Rage",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -286,11 +290,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. There is a high chance of inflicting Bleed on the target when attacking. This state will be removed when this unit is Weakness Broken.",
-      "type": "Buff",
-      "effectName": "Additional Bleed",
-      "statusName": "Moon Rage"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -352,9 +352,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

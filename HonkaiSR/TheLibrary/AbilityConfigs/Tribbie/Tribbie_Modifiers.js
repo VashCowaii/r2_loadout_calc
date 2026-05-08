@@ -10,13 +10,17 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1461237391\">ADV_StageAbility_Maze_Tribbie</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1724674064\">Tribbie_CanTriggerInsertTag</a>[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [],
-      "latentQueue": [],
       "description": "After using Ultimate, Tribbie can launch Follow-Up ATK.",
       "type": "Other",
       "statusName": "Busy as Tribbie"
@@ -24,6 +28,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1508822063\">Tribbie_SKL03_Bonus_Debuff</a>[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
+      "description": "Received DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Guess Who Lives Here",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -46,11 +54,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Received DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Guess Who Lives Here"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -551,7 +555,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__890101932\">Tribbie_SKL03_Bonus_HighestHPMark</a>",
-      "stackData": [],
       "latentQueue": [
         "MDF_Attacked",
         "PERF_CNT"
@@ -560,7 +563,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1926771974\">Tribbie_SKL03_Bonus_Mark</a>",
-      "stackData": [],
       "latentQueue": [
         "MDF_Attacked"
       ]
@@ -568,6 +570,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1046659157\">Tribbie_SKL03_PointB2</a>[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
+      "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Max HP Boost",
+      "statusName": "Glass Ball with Wings!",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -722,11 +728,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Max HP Boost",
-      "statusName": "Glass Ball with Wings!"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1050,26 +1052,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1351986018\">Tribbie_SKL03_Bonus</a>[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "execute": [
-        {
-          "eventTrigger": "When Modifier Destroyed/Removed"
-        }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_PropertyValue2",
-        "MDF_PointB2_Value"
-      ],
-      "latentQueue": [],
       "description": "While the Zone exists, increases all enemies' DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, and all allies deal Additional DMG when attacking enemies.",
       "type": "Other",
       "effectName": "Guess Who Lives Here",
@@ -1147,12 +1136,21 @@ const configAbility = {
             "conditionList": "Glass Ball with Wings!"
           }
         }
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed"
+        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1699792479\">Tribbie_SKL02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "All-Type RES PEN Boost",
+      "statusName": "Numinosity",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1175,16 +1173,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "All-Type RES PEN Boost",
-      "statusName": "Numinosity"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__357538519\">Tribbie_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">Peace of Empathy Bond</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the enemy target's DEF.",
+      "type": "Buff",
+      "effectName": "Peace of Empathy Bond",
+      "statusName": "Peace of Empathy Bond",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1201,44 +1199,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the enemy target's DEF.",
-      "type": "Buff",
-      "effectName": "Peace of Empathy Bond",
-      "statusName": "Peace of Empathy Bond"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1664293665\">Tribbie_SKL02_Bonus</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "execute": [
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier",
-          "execute": [
-            {
-              "name": "Stack Target Stat Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
-              "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
-              }
-            }
-          ]
-        }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
       "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "All-Type RES PEN Boost",
@@ -1288,12 +1255,40 @@ const configAbility = {
             }
           }
         }
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                "displayLines": "MDF_PropertyValue",
+                "constants": [],
+                "variables": [
+                  "MDF_PropertyValue"
+                ]
+              }
+            }
+          ]
+        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__361990450\">Tribbie_PointB1_DamageUpModifier</a>[<span class=\"descriptionNumberColor\">Lamb Outside the Wall...</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">#SkillTree_PointB1_P1_Ratio</span>. This effect stacks up to <span class=\"descriptionNumberColor\">#SkillTree_PointB1_P2_MaxLayer</span> time(s).",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Lamb Outside the Wall...",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1339,16 +1334,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "OnInsertAbort_Flg"
-      ],
-      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">#SkillTree_PointB1_P1_Ratio</span>. This effect stacks up to <span class=\"descriptionNumberColor\">#SkillTree_PointB1_P2_MaxLayer</span> time(s).",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Lamb Outside the Wall...",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1381,20 +1367,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__559634045\">Tribbie_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">Morrow of Star Shine</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
       "description": "The DMG dealt by Talent's Follow-Up ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "statusName": "Morrow of Star Shine"

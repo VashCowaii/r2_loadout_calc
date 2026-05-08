@@ -10,6 +10,85 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__186905595\">ADV_StageAbility_Maze_Robin_Enemy</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "onCreation": [
+        {
+          "name": "Set Target Parameter",
+          "readTarget": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "summonID": 13091
+          },
+          "paramTarget": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "variableName": "_Robin_Taunt_Count"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target Count",
+            "target": {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Add Target by Summoned Units",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "summonID": 13091
+                }
+              ]
+            },
+            "compareType": ">=",
+            "value2": 6
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-193060010\">ADV_StageAbility_Maze_Robin_Enemy_ForShow</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "modifierFlags": [
+        "Enchanted"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1925937127\">ADV_StageAbility_Maze_Robin_Self</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "onCreation": [
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 13091
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "summonID": 13091
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-24245169\">Robin_AbilityEidolon6_ExtraRatioForShow</a>[<span class=\"descriptionNumberColor\">Moonless Midnight</span>]",
       "stackType": "ReplaceByCaster",
       "description": "Additionally increases the CRIT DMG for the Ultimate's Physical Additional DMG dealt by <span class=\"descriptionNumberColor\">SkillRank_Rank06_P2_ExtraRatio</span>. The remaining triggerable count is <span class=\"descriptionNumberColor\">_Rank06_BigDmgCount</span>.",
@@ -21,6 +100,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-893534812\">Robin_PassiveAbility_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Tonal Resonance</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">#SkillP01_P1_Ratio</span>.",
+      "type": "Buff",
+      "statusName": "Tonal Resonance",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -43,10 +125,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">#SkillP01_P1_Ratio</span>.",
-      "type": "Buff",
-      "statusName": "Tonal Resonance"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -72,29 +151,29 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-169791812\">Robin_Ability03_AtkUp_FriendForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases ATK by <span class=\"descriptionNumberColor\">BaseAttack_Total</span>. Robin deals Additional DMG after attacking.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Concerto",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "description": "Increases ATK by <span class=\"descriptionNumberColor\">BaseAttack_Total</span>. Robin deals Additional DMG after attacking.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Concerto"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1126110528\">Robin_Ability03_AtkUp_CasterForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases ATK by <span class=\"descriptionNumberColor\">BaseAttack_Total</span> and becomes immune to Crowd Control debuffs.",
+      "type": "Buff",
+      "effectName": "ATK Boost, immune to Crowd Control debuffs",
+      "statusName": "Concerto",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "description": "Increases ATK by <span class=\"descriptionNumberColor\">BaseAttack_Total</span> and becomes immune to Crowd Control debuffs.",
-      "type": "Buff",
-      "effectName": "ATK Boost, immune to Crowd Control debuffs",
-      "statusName": "Concerto"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -110,6 +189,10 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-341772219\">Robin_Ability02_DmgUpCasterListener</a>[<span class=\"descriptionNumberColor\">Aria</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">Skill02_P1_DmgUpForShow</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Aria",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -124,13 +207,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">Skill02_P1_DmgUpForShow</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Aria"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -439,6 +516,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-184831783\">Robin_AbilityEidolon4_ResistAll</a>[<span class=\"descriptionNumberColor\">Raindrop Key</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases Effect RES by <span class=\"descriptionNumberColor\">#SkillRank_Rank04_P1_Ratio</span>.",
+      "type": "Buff",
+      "effectName": "Effect RES Boost",
+      "statusName": "Raindrop Key",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -461,11 +542,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Effect RES by <span class=\"descriptionNumberColor\">#SkillRank_Rank04_P1_Ratio</span>.",
-      "type": "Buff",
-      "effectName": "Effect RES Boost",
-      "statusName": "Raindrop Key"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -535,6 +612,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">#SkillRank_Rank02_P1_ExtraRatio</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "Afternoon Tea For Two",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -557,17 +638,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">#SkillRank_Rank02_P1_ExtraRatio</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "Afternoon Tea For Two"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__712086196\">Robin_AbilityEidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Land of Smiles</span>]",
       "stackType": "Replace",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Increases All-Type RES PEN by <span class=\"descriptionNumberColor\">#SkillRank_Rank01_P1_Ratio</span>.",
+      "type": "Buff",
+      "effectName": "All-Type RES PEN Boost",
+      "statusName": "Land of Smiles",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -590,16 +671,156 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases All-Type RES PEN by <span class=\"descriptionNumberColor\">#SkillRank_Rank01_P1_Ratio</span>.",
-      "type": "Buff",
-      "effectName": "All-Type RES PEN Boost",
-      "statusName": "Land of Smiles"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__32210681\">Robin_Ability03Area</a>",
       "stackType": "ReplaceByCaster",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-169791812\">Robin_Ability03_AtkUp_FriendForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]",
+          "haloStatus": true,
+          "valuePerStack": {
+            "BaseAttack_Total": {
+              "operator": "Variables[0] (Skill03_BaseAttack_Total) || RETURN",
+              "displayLines": "Skill03_BaseAttack_Total",
+              "constants": [],
+              "variables": [
+                "Skill03_BaseAttack_Total"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"102391588\">Robin_Ability03_AtkUp</a>",
+          "haloStatus": true,
+          "valuePerStack": {
+            "Ability03_AtkUpValue": {
+              "operator": "Variables[0] (Skill03_BaseAttack_Total) || RETURN",
+              "displayLines": "Skill03_BaseAttack_Total",
+              "constants": [],
+              "variables": [
+                "Skill03_BaseAttack_Total"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1181361675\">Robin_Ability03_PursuedDmg</a>",
+          "haloStatus": true,
+          "valuePerStack": {
+            "Ability03_DmgRatio": {
+              "operator": "Variables[0] (1.2) || RETURN",
+              "displayLines": "1.2",
+              "constants": [],
+              "variables": [
+                1.2
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1854203506\">Robin_Trace02_InsertDmgUp</a>[<span class=\"descriptionNumberColor\">Impromptu Flourish</span>]",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Impromptu Flourish"
+          },
+          "valuePerStack": {
+            "Trace_PointB2_P1_Ratio": {
+              "operator": "Variables[0] (0.25) || RETURN",
+              "displayLines": "0.25",
+              "constants": [],
+              "variables": [
+                0.25
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"712086196\">Robin_AbilityEidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Land of Smiles</span>]",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 1
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-644782265\">Robin_AbilityEidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Afternoon Tea For Two</span>]",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 2
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-184831783\">Robin_AbilityEidolon4_ResistAll</a>[<span class=\"descriptionNumberColor\">Raindrop Key</span>]",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 4
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-24245169\">Robin_AbilityEidolon6_ExtraRatioForShow</a>[<span class=\"descriptionNumberColor\">Moonless Midnight</span>]",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          },
+          "valuePerStack": {
+            "AbilityRank_Eidolon6_P2_ExtraRatio": {
+              "operator": "Variables[0] (4.5) || RETURN",
+              "displayLines": "4.5",
+              "constants": [],
+              "variables": [
+                4.5
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -940,160 +1161,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-169791812\">Robin_Ability03_AtkUp_FriendForShow</a>[<span class=\"descriptionNumberColor\">Concerto</span>]",
-          "haloStatus": true,
-          "valuePerStack": {
-            "BaseAttack_Total": {
-              "operator": "Variables[0] (Skill03_BaseAttack_Total) || RETURN",
-              "displayLines": "Skill03_BaseAttack_Total",
-              "constants": [],
-              "variables": [
-                "Skill03_BaseAttack_Total"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members with Unselectables}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"102391588\">Robin_Ability03_AtkUp</a>",
-          "haloStatus": true,
-          "valuePerStack": {
-            "Ability03_AtkUpValue": {
-              "operator": "Variables[0] (Skill03_BaseAttack_Total) || RETURN",
-              "displayLines": "Skill03_BaseAttack_Total",
-              "constants": [],
-              "variables": [
-                "Skill03_BaseAttack_Total"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members with Unselectables}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1181361675\">Robin_Ability03_PursuedDmg</a>",
-          "haloStatus": true,
-          "valuePerStack": {
-            "Ability03_DmgRatio": {
-              "operator": "Variables[0] (1.2) || RETURN",
-              "displayLines": "1.2",
-              "constants": [],
-              "variables": [
-                1.2
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members with Unselectables}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1854203506\">Robin_Trace02_InsertDmgUp</a>[<span class=\"descriptionNumberColor\">Impromptu Flourish</span>]",
-          "haloStatus": true,
-          "conditions": {
-            "name": "Trace Activated",
-            "conditionList": "Impromptu Flourish"
-          },
-          "valuePerStack": {
-            "Trace_PointB2_P1_Ratio": {
-              "operator": "Variables[0] (0.25) || RETURN",
-              "displayLines": "0.25",
-              "constants": [],
-              "variables": [
-                0.25
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members with Unselectables}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"712086196\">Robin_AbilityEidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Land of Smiles</span>]",
-          "haloStatus": true,
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 1
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members with Unselectables}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-644782265\">Robin_AbilityEidolon2_Bonus</a>[<span class=\"descriptionNumberColor\">Afternoon Tea For Two</span>]",
-          "haloStatus": true,
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 2
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members with Unselectables}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-184831783\">Robin_AbilityEidolon4_ResistAll</a>[<span class=\"descriptionNumberColor\">Raindrop Key</span>]",
-          "haloStatus": true,
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 4
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-24245169\">Robin_AbilityEidolon6_ExtraRatioForShow</a>[<span class=\"descriptionNumberColor\">Moonless Midnight</span>]",
-          "haloStatus": true,
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 6
-          },
-          "valuePerStack": {
-            "AbilityRank_Eidolon6_P2_ExtraRatio": {
-              "operator": "Variables[0] (4.5) || RETURN",
-              "displayLines": "4.5",
-              "constants": [],
-              "variables": [
-                4.5
-              ]
-            }
-          }
-        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__853884831\">Robin_Ability02_Aura</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -1220,9 +1293,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1281,6 +1352,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1854203506\">Robin_Trace02_InsertDmgUp</a>[<span class=\"descriptionNumberColor\">Impromptu Flourish</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "SkillTree_PointB2_P1_Ratio"
+      ],
+      "description": "Increases Follow-Up ATK CRIT DMG by <span class=\"descriptionNumberColor\">SkillTree_PointB2_P1_Ratio</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "Impromptu Flourish",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1311,15 +1389,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [
-        "SkillTree_PointB2_P1_Ratio"
-      ],
-      "latentQueue": [],
-      "description": "Increases Follow-Up ATK CRIT DMG by <span class=\"descriptionNumberColor\">SkillTree_PointB2_P1_Ratio</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "Impromptu Flourish"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1941,9 +2011,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

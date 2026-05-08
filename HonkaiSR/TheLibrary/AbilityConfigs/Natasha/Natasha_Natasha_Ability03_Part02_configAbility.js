@@ -138,6 +138,15 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-251008638\">Natasha_Eidolon2_HOT_HPByMaxHP</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_ShowValue1",
+        "MDF_ShowValue2"
+      ],
+      "description": "Restores a certain amount of HP at the start of each turn.",
+      "type": "Buff",
+      "effectName": "Healing Over Time",
+      "statusName": "Healing Over Time",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -183,17 +192,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_ShowValue1",
-        "MDF_ShowValue2"
-      ],
-      "latentQueue": [],
-      "description": "Restores a certain amount of HP at the start of each turn.",
-      "type": "Buff",
-      "effectName": "Healing Over Time",
-      "statusName": "Healing Over Time"
+      ]
     }
   ],
   "targetObjectData": {

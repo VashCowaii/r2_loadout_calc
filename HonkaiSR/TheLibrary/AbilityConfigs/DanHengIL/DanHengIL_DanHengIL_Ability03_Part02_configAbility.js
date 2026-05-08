@@ -563,9 +563,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1340732042\">DanHengIL_Ability03Target</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1340732042\">DanHengIL_Ability03Target</a>"
     }
   ],
   "targetObjectData": {

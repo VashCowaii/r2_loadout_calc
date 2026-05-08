@@ -48,9 +48,7 @@ const configAbility = {
           ],
           "priorityLevel": -70
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",

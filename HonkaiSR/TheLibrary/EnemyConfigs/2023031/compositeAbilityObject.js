@@ -3,74 +3,26 @@ const compositeAbilityObject = {
   "fullCharacterName": 2023031,
   "trimCharacterName": 2023031,
   "abilityList": [
-    "2023031_Monster_XP_Elite02_02_RLElite_BattlePerformAbility",
-    "2023031_Monster_XP_Elite02_02_RLElite_InstantDirtyHPAbility",
-    "2023031_Monster_XP_Elite02_02_RLElite_MuteDirtyHPAbility",
+    "2023031_Monster_XP_Elite02_02_RLElite_AbilityP01",
+    "2023031_Monster_XP_Elite02_02_RLElite_Passive01",
     "2023031_Monster_XP_Elite02_02_RLElite_Ability05_Part02",
     "2023031_Monster_XP_Elite02_02_RLElite_Ability05_Part01",
-    "2023031_Monster_XP_Elite02_02_RLElite_Ability04_Part02",
-    "2023031_Monster_XP_Elite02_02_RLElite_Ability04_Part01",
     "2023031_Monster_XP_Elite02_02_RLElite_Ability03_Part02",
     "2023031_Monster_XP_Elite02_02_RLElite_Ability03_Part01",
     "2023031_Monster_XP_Elite02_02_RLElite_Ability02_Part02",
     "2023031_Monster_XP_Elite02_02_RLElite_Ability02_Part01",
     "2023031_Monster_XP_Elite02_02_RLElite_Ability01_Part02",
     "2023031_Monster_XP_Elite02_02_RLElite_Ability01_Part01",
-    "2023031_Monster_XP_Elite02_02_RLElite_AbilityP01",
-    "2023031_Monster_XP_Elite02_02_RLElite_Passive01",
     "2023031_Modifiers"
   ],
   "abilityObject": {
-    "2023031_Monster_XP_Elite02_02_RLElite_BattlePerformAbility": {
-      "fileName": "2023031_Monster_XP_Elite02_02_RLElite_BattlePerformAbility",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"752842393\">Monster_XP_Elite02_02_RLElite_BattlePerform_LockHP</a>"
-        }
+    "2023031_Monster_XP_Elite02_02_RLElite_AbilityP01": {
+      "fileName": "2023031_Monster_XP_Elite02_02_RLElite_AbilityP01",
+      "childAbilityList": [
+        "2023031_Monster_XP_Elite02_02_RLElite_AbilityP01"
       ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1548498812\">Monster_XP_Elite02_02_RLElite_Instance_DisableAction</a>",
-          "modifierFlags": [
-            "DisableAction"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__752842393\">Monster_XP_Elite02_02_RLElite_BattlePerform_LockHP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Put in Deathstate Limbo"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2023031_Monster_XP_Elite02_02_RLElite_InstantDirtyHPAbility": {
-      "fileName": "2023031_Monster_XP_Elite02_02_RLElite_InstantDirtyHPAbility",
-      "abilityType": null,
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -78,7 +30,7 @@ const compositeAbilityObject = {
           "name": "Declare Custom Variable",
           "target": {
             "name": "Target Name",
-            "target": "{{Modifier Holder}}"
+            "target": "{{Caster}}"
           },
           "scope": "TargetEntity",
           "variableName": "SpecialFlag",
@@ -88,11 +40,18 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
-    "2023031_Monster_XP_Elite02_02_RLElite_MuteDirtyHPAbility": {
-      "fileName": "2023031_Monster_XP_Elite02_02_RLElite_MuteDirtyHPAbility",
-      "abilityType": null,
+    "2023031_Monster_XP_Elite02_02_RLElite_Passive01": {
+      "fileName": "2023031_Monster_XP_Elite02_02_RLElite_Passive01",
+      "childAbilityList": [
+        "2023031_Monster_XP_Elite02_02_RLElite_Passive01"
+      ],
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -102,18 +61,54 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"233985809\">Monster_XP_Elite02_02_RLElite_MuteDirtyHP</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-826764478\">Monster_XP_Elite02_02_RLElite_PartControl</a>"
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__233985809\">Monster_XP_Elite02_02_RLElite_MuteDirtyHP</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-826764478\">Monster_XP_Elite02_02_RLElite_PartControl</a>",
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "AIFlag",
+                  "value": 3
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -185,60 +180,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2023031_Monster_XP_Elite02_02_RLElite_Ability04_Part02": {
-      "fileName": "2023031_Monster_XP_Elite02_02_RLElite_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-773012193\">Monster_XP_Elite02_02_RLElite_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Japa</span>]"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "SpecialFlag",
-            "compareType": "=",
-            "value2": 0,
-            "contextScope": "TargetEntity"
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2023031_Monster_XP_Elite02_02_RLElite_Ability04_Part01": {
-      "fileName": "2023031_Monster_XP_Elite02_02_RLElite_Ability04_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Elite02_02_RLElite_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
       },
       "references": []
     },
@@ -1015,104 +956,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2023031_Monster_XP_Elite02_02_RLElite_AbilityP01": {
-      "fileName": "2023031_Monster_XP_Elite02_02_RLElite_AbilityP01",
-      "childAbilityList": [
-        "2023031_Monster_XP_Elite02_02_RLElite_AbilityP01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "SpecialFlag",
-          "value": 2
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2023031_Monster_XP_Elite02_02_RLElite_Passive01": {
-      "fileName": "2023031_Monster_XP_Elite02_02_RLElite_Passive01",
-      "childAbilityList": [
-        "2023031_Monster_XP_Elite02_02_RLElite_Passive01"
-      ],
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-826764478\">Monster_XP_Elite02_02_RLElite_PartControl</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-826764478\">Monster_XP_Elite02_02_RLElite_PartControl</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 3
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "2023031_Modifiers": {
       "fileName": "2023031_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1173,9 +1016,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1183,6 +1024,9 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "MDF_DirtyHPAddedRatio"
           ],
           "execute": [
             {
@@ -1568,15 +1412,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DirtyHPAddedRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-773012193\">Monster_XP_Elite02_02_RLElite_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Japa</span>]",
+          "latentQueue": [
+            "AIFlag"
+          ],
+          "description": "Uses Black Prana's Snare on all targets during the next action.",
+          "type": "Buff",
+          "effectName": "Japa",
+          "statusName": "Japa",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1598,15 +1445,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
-          ],
-          "description": "Uses Black Prana's Snare on all targets during the next action.",
-          "type": "Buff",
-          "effectName": "Japa",
-          "statusName": "Japa"
+          ]
         }
       ],
       "references": []

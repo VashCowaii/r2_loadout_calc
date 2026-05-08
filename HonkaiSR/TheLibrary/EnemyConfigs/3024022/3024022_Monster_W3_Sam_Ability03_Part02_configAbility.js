@@ -74,11 +74,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-498176717\">Enemy_W3_Sam_RLBoss_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">Thermocumulative Upgrade</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_283) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_283",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9945) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9945",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_283"
+                    "UnusedUnderThisBase_9945"
                   ]
                 }
               },

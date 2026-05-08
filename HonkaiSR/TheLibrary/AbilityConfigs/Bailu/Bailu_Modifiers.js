@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1591380745\">ADV_StageAbility_Maze_Bailu</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1496935031\">Bailu_Revive_Mark</a>",
       "execute": [
         {
@@ -105,6 +111,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2145916157\">Bailu_Eidolon4_AttackUp</a>[<span class=\"descriptionNumberColor\">Evil Excision</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_AttackUpRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Evil Excision",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -150,11 +160,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_AttackUpRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Evil Excision"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -200,14 +206,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1195469105\">Bailu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Sylphic Slumber</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases Outgoing Healing by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Outgoing Healing Boost",
+      "statusName": "Sylphic Slumber",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -230,19 +238,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Increases Outgoing Healing by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Outgoing Healing Boost",
-      "statusName": "Sylphic Slumber"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__249464740\">Bailu_PointB3</a>[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
+      "description": "Reduces DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageResistance</span>.",
+      "type": "Buff",
+      "effectName": "DMG Mitigation",
+      "statusName": "Aquatic Benediction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -265,20 +269,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageResistance"
-      ],
-      "latentQueue": [],
-      "description": "Reduces DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageResistance</span>.",
-      "type": "Buff",
-      "effectName": "DMG Mitigation",
-      "statusName": "Aquatic Benediction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-469925889\">Bailu_PointB1_HPIncrease</a>[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Max HP +<span class=\"descriptionNumberColor\">MDF_HPIncrease</span>.",
+      "type": "Buff",
+      "effectName": "Max HP Boost",
+      "statusName": "Qihuang Analects",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -301,11 +301,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Max HP +<span class=\"descriptionNumberColor\">MDF_HPIncrease</span>.",
-      "type": "Buff",
-      "effectName": "Max HP Boost",
-      "statusName": "Qihuang Analects"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -454,15 +450,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
       "counter": 1,
       "stackType": "ReplaceByCaster",
+      "useEntitySnapshot": true,
+      "description": "Restores HP when attacked.",
+      "type": "Buff",
+      "effectName": "Invigoration",
+      "statusName": "Invigoration",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -591,20 +590,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF__HealPercentage2",
-        "MDF__HealValue2",
-        "MDF_AddSP",
-        "MDF_HealCount",
-        "MDF_HealCountExtra"
-      ],
-      "latentQueue": [],
-      "description": "Restores HP when attacked.",
-      "type": "Buff",
-      "effectName": "Invigoration",
-      "statusName": "Invigoration"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -724,9 +710,7 @@ const configAbility = {
         {
           "eventTrigger": "Being Attacked End [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

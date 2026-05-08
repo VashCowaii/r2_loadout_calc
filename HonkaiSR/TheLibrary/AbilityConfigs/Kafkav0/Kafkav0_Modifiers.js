@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-501590050\">ADV_StageAbility_Maze_Kafka</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-287625887\">Kafka_Eidolon4_Sub</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
@@ -119,12 +125,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Kafka_Listen_Rank1",
-        "Kafka_Listen_Rank2",
-        "Kafka_Listen_Rank6"
       ]
     },
     {
@@ -133,6 +133,9 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "Increases DoT dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Fortississimo",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -155,20 +158,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Increases DoT dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Fortississimo"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-899885235\">Kafka_Passive_CanAttackCD</a>[<span class=\"descriptionNumberColor\">Gentle but Cruel</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "The effect of Talent \"Gentle but Cruel\" cannot be triggered.",
       "type": "Other",
       "statusName": "Gentle but Cruel",

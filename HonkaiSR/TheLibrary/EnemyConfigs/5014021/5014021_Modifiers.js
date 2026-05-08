@@ -12,14 +12,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__223685370\">Monster_W5_Pam_SummonedMinions_Appear</a>",
       "stackType": "Replace",
+      "latentQueue": [
+        "MDF_BEAlive"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_BEAlive"
       ]
     },
     {
@@ -53,9 +52,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -184,9 +181,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -224,14 +219,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-299555653\">Monster_W5_Pam_SummonedMinions_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MDF_BuffMaxLayer</span> stack(s).",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -261,12 +259,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MDF_BuffMaxLayer</span> stack(s).",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -396,13 +389,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-94545998\">Monster_W5_Pam_MainStory_ActionImmediately</a>",
+      "stackData": [
+        "MDF_Lock_Radio"
+      ],
+      "latentQueue": [
+        "MDF_FirstUltraSkill"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -583,12 +580,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Lock_Radio"
-      ],
-      "latentQueue": [
-        "MDF_FirstUltraSkill"
       ]
     },
     {
@@ -992,6 +983,16 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "RemoveWhenCasterUnstage"
       ],
+      "stackData": [
+        "MDF_PropertyValue01",
+        "MDF_PropertyValue02",
+        "MDF_PropertyValue03",
+        "MDF_PropertyValue04"
+      ],
+      "description": "After using Basic ATK, triggers the \"Shiny\" effect, additionally deals True DMG equal to <span class=\"descriptionNumberColor\">MDF_PropertyValue02</span> of the target's Max HP, and gains <span class=\"descriptionNumberColor\">MDF_PropertyValue03</span> Punchline(s). After using Skill, triggers the \"Pristine\" effect and recovers <span class=\"descriptionNumberColor\">MDF_PropertyValue04</span> Skill Point(s). This effect can trigger a max of 1 time while the \"Work Is Bliss!\" effect is active.",
+      "type": "Other",
+      "effectName": "Deep Clean",
+      "statusName": "Work Is Bliss!",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1150,18 +1151,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue01",
-        "MDF_PropertyValue02",
-        "MDF_PropertyValue03",
-        "MDF_PropertyValue04"
-      ],
-      "latentQueue": [],
-      "description": "After using Basic ATK, triggers the \"Shiny\" effect, additionally deals True DMG equal to <span class=\"descriptionNumberColor\">MDF_PropertyValue02</span> of the target's Max HP, and gains <span class=\"descriptionNumberColor\">MDF_PropertyValue03</span> Punchline(s). After using Skill, triggers the \"Pristine\" effect and recovers <span class=\"descriptionNumberColor\">MDF_PropertyValue04</span> Skill Point(s). This effect can trigger a max of 1 time while the \"Work Is Bliss!\" effect is active.",
-      "type": "Other",
-      "effectName": "Deep Clean",
-      "statusName": "Work Is Bliss!"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1172,6 +1162,16 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1556520356\">Modifier_Monster_W5_Pam_Rage</a>[<span class=\"descriptionNumberColor\">Steam Wash</span>]",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": [
+        "MDF_IsAngry"
+      ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Steam Wash",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1194,22 +1194,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "MDF_IsAngry"
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Steam Wash"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2053579476\">Modifier_Monster_W5_Pam_DamageDown</a>",
       "stackType": "Replace",
+      "stackLimit": 3,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1240,9 +1232,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 3,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1458,9 +1448,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1536,6 +1524,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1808092737\">Monster_W5_Pam_SummonedMinions_die_count</a>",
       "stackType": "Replace",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1583,8 +1572,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1612,6 +1600,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-458099336\">Monster_W5_Pam_zangshui_layer_display_02</a>",
       "stackType": "Replace",
+      "latentQueue": [
+        "MDF_IsAngry"
+      ],
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1990,17 +1982,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_IsAngry"
-      ],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__989212197\">Monster_W5_Pam_zangshui_layer_display</a>",
       "stackType": "Replace",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2162,8 +2150,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2171,6 +2158,13 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
+      "latentQueue": [
+        "MDF_FirstUltraSkill"
+      ],
+      "description": "When \"Alloy Mechatron: King Pom-Pom\" is in the \"Raring to Go\" state, this unit's Toughness cannot be reduced.",
+      "type": "Other",
+      "effectName": "Weakness Protected",
+      "statusName": "Weakness Protected",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2194,21 +2188,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_FirstUltraSkill"
-      ],
-      "description": "When \"Alloy Mechatron: King Pom-Pom\" is in the \"Raring to Go\" state, this unit's Toughness cannot be reduced.",
-      "type": "Other",
-      "effectName": "Weakness Protected",
-      "statusName": "Weakness Protected"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1583873554\">Modifier_Monster_W5_Pam_Endurance</a>",
       "modifierFlags": [
         "MuteHitH"
+      ],
+      "latentQueue": [
+        "_Is_BOSS"
       ],
       "execute": [
         {
@@ -2229,16 +2218,23 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_Is_BOSS"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-983171602\">Modifier_Monster_W5_Pam_DefenceUp</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": [
+        "MDF_IsAngry"
+      ],
+      "description": "Each stack decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. When all stacks are removed, exits the \"Steam Wash\" state and takes massive DMG.",
+      "type": "Buff",
+      "effectName": "DMG Received Reduction",
+      "statusName": "Lasting Antibac",
+      "addStacksPerTrigger": -1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2658,18 +2654,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "MDF_IsAngry"
-      ],
-      "description": "Each stack decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. When all stacks are removed, exits the \"Steam Wash\" state and takes massive DMG.",
-      "type": "Buff",
-      "effectName": "DMG Received Reduction",
-      "statusName": "Lasting Antibac",
-      "addStacksPerTrigger": -1
+      ]
     }
   ],
   "references": []

@@ -564,28 +564,28 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_376) || RETURN",
-                "displayLines": "UnusedUnderThisBase_376",
+                "operator": "Variables[0] (UnusedUnderThisBase_12690) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12690",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_376"
+                  "UnusedUnderThisBase_12690"
                 ]
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_375) || RETURN",
-                "displayLines": "UnusedUnderThisBase_375",
+                "operator": "Variables[0] (UnusedUnderThisBase_12683) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12683",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_375"
+                  "UnusedUnderThisBase_12683"
                 ]
               },
               "valuePerStack": {
                 "MDF_DamagePercentage_Layer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_377) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_377",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12691) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12691",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_377"
+                    "UnusedUnderThisBase_12691"
                   ]
                 }
               }
@@ -863,28 +863,28 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_376) || RETURN",
-                "displayLines": "UnusedUnderThisBase_376",
+                "operator": "Variables[0] (UnusedUnderThisBase_12690) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12690",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_376"
+                  "UnusedUnderThisBase_12690"
                 ]
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_375) || RETURN",
-                "displayLines": "UnusedUnderThisBase_375",
+                "operator": "Variables[0] (UnusedUnderThisBase_12683) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12683",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_375"
+                  "UnusedUnderThisBase_12683"
                 ]
               },
               "valuePerStack": {
                 "MDF_DamagePercentage_Layer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_377) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_377",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12691) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12691",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_377"
+                    "UnusedUnderThisBase_12691"
                   ]
                 }
               }
@@ -1162,28 +1162,28 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_376) || RETURN",
-                "displayLines": "UnusedUnderThisBase_376",
+                "operator": "Variables[0] (UnusedUnderThisBase_12690) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12690",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_376"
+                  "UnusedUnderThisBase_12690"
                 ]
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_375) || RETURN",
-                "displayLines": "UnusedUnderThisBase_375",
+                "operator": "Variables[0] (UnusedUnderThisBase_12683) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12683",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_375"
+                  "UnusedUnderThisBase_12683"
                 ]
               },
               "valuePerStack": {
                 "MDF_DamagePercentage_Layer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_377) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_377",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12691) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12691",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_377"
+                    "UnusedUnderThisBase_12691"
                   ]
                 }
               }
@@ -1461,28 +1461,28 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_376) || RETURN",
-                "displayLines": "UnusedUnderThisBase_376",
+                "operator": "Variables[0] (UnusedUnderThisBase_12690) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12690",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_376"
+                  "UnusedUnderThisBase_12690"
                 ]
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_375) || RETURN",
-                "displayLines": "UnusedUnderThisBase_375",
+                "operator": "Variables[0] (UnusedUnderThisBase_12683) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12683",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_375"
+                  "UnusedUnderThisBase_12683"
                 ]
               },
               "valuePerStack": {
                 "MDF_DamagePercentage_Layer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_377) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_377",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12691) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12691",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_377"
+                    "UnusedUnderThisBase_12691"
                   ]
                 }
               }
@@ -1590,21 +1590,15 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1715953719\">Monster_W4_Griffin_Ability02_Target03</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1715953719\">Monster_W4_Griffin_Ability02_Target03</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1699176100\">Monster_W4_Griffin_Ability02_Target02</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1699176100\">Monster_W4_Griffin_Ability02_Target02</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1749508957\">Monster_W4_Griffin_Ability02_Target01</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
     }
   ]
 }

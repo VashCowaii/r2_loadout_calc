@@ -20,6 +20,9 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">#SkillRelic_323_2_P2_SpeedAddRatio</span>.",
+      "type": "Buff",
+      "statusName": "Amphoreus, The Eternal Land",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -42,15 +45,23 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">#SkillRelic_323_2_P2_SpeedAddRatio</span>.",
-      "type": "Buff",
-      "statusName": "Amphoreus, The Eternal Land"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1067881267\">Relic_323_Sub2</a>",
       "stackType": "ReplaceByCaster",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1051103648\">Relic_323_Sub3</a>[<span class=\"descriptionNumberColor\">Amphoreus, The Eternal Land</span>]",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -88,17 +99,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1051103648\">Relic_323_Sub3</a>[<span class=\"descriptionNumberColor\">Amphoreus, The Eternal Land</span>]",
-          "haloStatus": true
-        }
       ]
     },
     {
@@ -134,9 +134,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

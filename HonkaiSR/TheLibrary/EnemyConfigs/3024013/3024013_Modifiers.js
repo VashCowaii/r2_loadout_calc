@@ -232,14 +232,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1784319990\">Enemy_W2_Argenti_IF_EX_EnemyCount_Sub</a>[<span class=\"descriptionNumberColor\">Stellar Aegis</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddRatio</span> and reduces DMG received by <span class=\"descriptionNumberColor\">MDF_TokenDMGRduceRatio</span>.",
+      "type": "Buff",
+      "statusName": "Stellar Aegis",
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -286,17 +289,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddRatio</span> and reduces DMG received by <span class=\"descriptionNumberColor\">MDF_TokenDMGRduceRatio</span>.",
-      "type": "Buff",
-      "statusName": "Stellar Aegis",
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1397396521\">Enemy_W2_Argenti_IF_EX_EnemyCount</a>",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_ShowValue1",
+        "MDF_ShowValue2"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -421,18 +423,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ShowValue1",
-        "MDF_ShowValue2"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__806413908\">Enemy_W2_Argenti_IF_EX_ExtraEnhanceController</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__806413908\">Enemy_W2_Argenti_IF_EX_ExtraEnhanceController</a>"
     },
     {
       "name": "Modifier Construction",
@@ -802,9 +797,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -813,6 +806,11 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Soul Enhancement",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -854,17 +852,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Soul Enhancement",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1768656268\">Enemy_W2_Argenti_IF_EX_PowerUpDark</a>[<span class=\"descriptionNumberColor\">Regain Enhancement</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Regain Enhancement",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -912,24 +910,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Regain Enhancement",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1645398218\">Enemy_W2_Argenti_IF_EX_PowerAddMax</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1645398218\">Enemy_W2_Argenti_IF_EX_PowerAddMax</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-169910900\">Enemy_W2_Argenti_IF_EX_PowerAdd</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-169910900\">Enemy_W2_Argenti_IF_EX_PowerAdd</a>"
     },
     {
       "name": "Modifier Construction",
@@ -941,6 +930,20 @@ const configAbility = {
         "KeepOnDeathrattle",
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_LightPowerUp",
+        "MDF_DamageAddedRatio"
+      ],
+      "latentQueue": [
+        "MDF_IF_BOSS_PowerFlag01",
+        "MDF_IF_BOSS_PowerFlag02",
+        "MDF_IF_BOSS_PowerFlag03",
+        "MDF_IF_BOSS_PowerFlag04"
+      ],
+      "description": "The knight's prayers bid the liberation of souls. Abilities have been enhanced.",
+      "type": "Buff",
+      "effectName": "Soulfreed",
+      "statusName": "Soulfreed",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -1116,21 +1119,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_LightPowerUp",
-        "MDF_DamageAddedRatio"
-      ],
-      "latentQueue": [
-        "MDF_IF_BOSS_PowerFlag01",
-        "MDF_IF_BOSS_PowerFlag02",
-        "MDF_IF_BOSS_PowerFlag03",
-        "MDF_IF_BOSS_PowerFlag04"
-      ],
-      "description": "The knight's prayers bid the liberation of souls. Abilities have been enhanced.",
-      "type": "Buff",
-      "effectName": "Soulfreed",
-      "statusName": "Soulfreed"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1148,15 +1137,19 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-274903726\">Monster_W2_Argenti_IF_AccumulatePower</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-274903726\">Monster_W2_Argenti_IF_AccumulatePower</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1011475287\">W2_Argenti_BattleScore2</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
+      ],
+      "latentQueue": [
+        "Monster_IF_InsertCount",
+        "Monster_IF_InsertCameraFlag",
+        "Monster_IF_InsertCount02",
+        "Monster_IF_InsertCameraFlag02"
       ],
       "execute": [
         {
@@ -1239,9 +1232,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1258,6 +1249,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1028252906\">W2_Argenti_BattleScore1</a>",
+      "latentQueue": [
+        "Monster_IF_InsertCount",
+        "Monster_IF_InsertCameraFlag",
+        "Monster_IF_InsertCount02",
+        "Monster_IF_InsertCameraFlag02"
+      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -1310,9 +1307,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1538,9 +1533,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1961,14 +1954,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1546767870\">Monster_W2_Argenti_IF_FlowerPower</a>[<span class=\"descriptionNumberColor\">Wreath</span>]",
       "stackType": "Replace",
+      "description": "Every stack additionally adds one instance of DMG dealt for Undeniable Fate.",
+      "type": "Buff",
+      "effectName": "Wreath",
+      "statusName": "Wreath",
+      "stackLimit": 4,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2008,13 +2005,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Every stack additionally adds one instance of DMG dealt for Undeniable Fate.",
-      "type": "Buff",
-      "effectName": "Wreath",
-      "statusName": "Wreath",
-      "stackLimit": 4,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2053,6 +2044,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1334735657\">Enemy_W2_Argenti_IF_Boss_Enhance</a>",
+      "latentQueue": [
+        "Monster_IF_InsertCount",
+        "Monster_IF_InsertCameraFlag",
+        "Monster_IF_InsertCount02",
+        "Monster_IF_InsertCameraFlag02"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2112,13 +2109,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Monster_IF_InsertCount",
-        "Monster_IF_InsertCameraFlag",
-        "Monster_IF_InsertCount02",
-        "Monster_IF_InsertCameraFlag02"
       ]
     },
     {
@@ -2475,6 +2465,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]",
       "stackType": "Refresh",
+      "description": "The knight's prayers completely ascended the soul. This is regarded as equal to \"Soulfreed.\"",
+      "type": "Buff",
+      "effectName": "Soul Ascension",
+      "statusName": "Soul Ascension",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2482,18 +2476,16 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "The knight's prayers completely ascended the soul. This is regarded as equal to \"Soulfreed.\"",
-      "type": "Buff",
-      "effectName": "Soul Ascension",
-      "statusName": "Soul Ascension"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]",
       "stackType": "Refresh",
+      "description": "The knight's prayers bid the liberation of souls. Abilities have been enhanced.",
+      "type": "Buff",
+      "effectName": "Soulfreed",
+      "statusName": "Soulfreed",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2501,13 +2493,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "The knight's prayers bid the liberation of souls. Abilities have been enhanced.",
-      "type": "Buff",
-      "effectName": "Soulfreed",
-      "statusName": "Soulfreed"
+      ]
     }
   ],
   "references": []

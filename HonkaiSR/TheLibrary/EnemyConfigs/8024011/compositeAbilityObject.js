@@ -3,11 +3,10 @@ const compositeAbilityObject = {
   "fullCharacterName": 8024011,
   "trimCharacterName": 8024011,
   "abilityList": [
+    "8024011_Monster_SW_Boss_PassiveAbility_Insert_Part01",
     "8024011_Monster_SW_Boss_PassiveAbility_Insert2",
     "8024011_Monster_SW_Boss_PassiveAbility_Insert",
-    "8024011_Monster_SW_Boss_PassiveAbility_Insert_Part01",
-    "8024011_Monster_SW_Boss_Ability10_Part02",
-    "8024011_Monster_SW_Boss_Ability10_Part01",
+    "8024011_Monster_SW_Boss_Passive01",
     "8024011_Monster_SW_Boss_Ability08_Part02",
     "8024011_Monster_SW_Boss_Ability08_Part01",
     "8024011_Monster_SW_Boss_Ability07_Part02",
@@ -16,6 +15,8 @@ const compositeAbilityObject = {
     "8024011_Monster_SW_Boss_Ability06_Part01",
     "8024011_Monster_SW_Boss_Ability05_Part02",
     "8024011_Monster_SW_Boss_Ability05_Part01",
+    "8024011_Monster_SW_Boss_Ability10_Part02",
+    "8024011_Monster_SW_Boss_Ability10_Part01",
     "8024011_Monster_SW_Boss_Ability04_Part02",
     "8024011_Monster_SW_Boss_Ability04_Part01",
     "8024011_Monster_SW_Boss_Ability03_Part02",
@@ -24,10 +25,181 @@ const compositeAbilityObject = {
     "8024011_Monster_SW_Boss_Ability02_Part01",
     "8024011_Monster_SW_Boss_Ability01_Part02",
     "8024011_Monster_SW_Boss_Ability01_Part01",
-    "8024011_Monster_SW_Boss_Passive01",
     "8024011_Modifiers"
   ],
   "abilityObject": {
+    "8024011_Monster_SW_Boss_PassiveAbility_Insert_Part01": {
+      "fileName": "8024011_Monster_SW_Boss_PassiveAbility_Insert_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Entomon Eulogy"
+        },
+        "Deleted bullshit",
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Animation Event",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "state": "PassiveSkill01",
+          "passed": [
+            {
+              "name": "Animation Task",
+              "passed": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Wind",
+                    "Damage": {
+                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
+                      "displayLines": "{[PassiveSkill02[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[PassiveSkill02[0]]}"
+                      ]
+                    },
+                    "dmgFormula": "Max HP Scaling",
+                    "Toughness": {
+                      "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
+                      "displayLines": "{[PassiveSkill02[5]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[PassiveSkill02[5]]}"
+                      ]
+                    },
+                    "ToughnessDMGType": {
+                      "DamageType": "Wind"
+                    },
+                    "Tags": null,
+                    "attackType": "Basic ATK"
+                  }
+                },
+                "Trigger: Attack End",
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Level Entity}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"664236628\">StageAbility_RogueDLC_Floor03_02_Modifier</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members(Exclude Self)}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-658511969\">Monster_SW_Boss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+                      "duration": {
+                        "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
+                        "displayLines": "{[PassiveSkill02[3]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[PassiveSkill02[3]]}"
+                        ]
+                      },
+                      "stackLimit": {
+                        "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
+                        "displayLines": "{[PassiveSkill02[4]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[PassiveSkill02[4]]}"
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_DamageTakenUpRatio_PerLayer": {
+                          "operator": "Variables[0] ({[PassiveSkill02[2]]}) || Variables[1] ({[PassiveSkill01[1]]}) || ADD || RETURN",
+                          "displayLines": "({[PassiveSkill02[2]]} + {[PassiveSkill01[1]]})",
+                          "constants": [],
+                          "variables": [
+                            "{[PassiveSkill02[2]]}",
+                            "{[PassiveSkill01[1]]}"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": {
+                        "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
+                        "displayLines": "{[PassiveSkill02[1]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[PassiveSkill02[1]]}"
+                        ]
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members(Exclude Self)}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-658511969\">Monster_SW_Boss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+                      "duration": {
+                        "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
+                        "displayLines": "{[PassiveSkill02[3]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[PassiveSkill02[3]]}"
+                        ]
+                      },
+                      "stackLimit": {
+                        "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
+                        "displayLines": "{[PassiveSkill02[4]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[PassiveSkill02[4]]}"
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_DamageTakenUpRatio_PerLayer": {
+                          "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
+                          "displayLines": "{[PassiveSkill02[2]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[PassiveSkill02[2]]}"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": {
+                        "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
+                        "displayLines": "{[PassiveSkill02[1]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[PassiveSkill02[1]]}"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "references": []
+    },
     "8024011_Monster_SW_Boss_PassiveAbility_Insert2": {
       "fileName": "8024011_Monster_SW_Boss_PassiveAbility_Insert2",
       "abilityType": null,
@@ -246,585 +418,110 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8024011_Monster_SW_Boss_PassiveAbility_Insert_Part01": {
-      "fileName": "8024011_Monster_SW_Boss_PassiveAbility_Insert_Part01",
-      "abilityType": null,
+    "8024011_Monster_SW_Boss_Passive01": {
+      "fileName": "8024011_Monster_SW_Boss_Passive01",
+      "skillTrigger": "PassiveSkill02",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
-      "parse": [
+      "parse": [],
+      "whenAdded": [
         {
-          "name": "UI Display Event",
-          "popUpText": "Entomon Eulogy"
-        },
-        "Deleted bullshit",
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Animation Event",
-          "target": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "state": "PassiveSkill01",
-          "passed": [
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Wind",
-                    "Damage": {
-                      "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[0]]}"
-                      ]
-                    },
-                    "dmgFormula": "Max HP Scaling",
-                    "Toughness": {
-                      "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill02[5]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill02[5]]}"
-                      ]
-                    },
-                    "ToughnessDMGType": {
-                      "DamageType": "Wind"
-                    },
-                    "Tags": null,
-                    "attackType": "Basic ATK"
-                  }
-                },
-                "Trigger: Attack End",
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Level Entity}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"664236628\">StageAbility_RogueDLC_Floor03_02_Modifier</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members(Exclude Self)}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-658511969\">Monster_SW_Boss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-                      "duration": {
-                        "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill02[3]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill02[3]]}"
-                        ]
-                      },
-                      "stackLimit": {
-                        "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill02[4]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill02[4]]}"
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_DamageTakenUpRatio_PerLayer": {
-                          "operator": "Variables[0] ({[PassiveSkill02[2]]}) || Variables[1] ({[PassiveSkill01[1]]}) || ADD || RETURN",
-                          "displayLines": "({[PassiveSkill02[2]]} + {[PassiveSkill01[1]]})",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[2]]}",
-                            "{[PassiveSkill01[1]]}"
-                          ]
-                        }
-                      },
-                      "addStacksPerTrigger": {
-                        "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill02[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill02[1]]}"
-                        ]
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members(Exclude Self)}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-658511969\">Monster_SW_Boss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-                      "duration": {
-                        "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill02[3]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill02[3]]}"
-                        ]
-                      },
-                      "stackLimit": {
-                        "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill02[4]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill02[4]]}"
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_DamageTakenUpRatio_PerLayer": {
-                          "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[2]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[2]]}"
-                          ]
-                        }
-                      },
-                      "addStacksPerTrigger": {
-                        "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                        "displayLines": "{[PassiveSkill02[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[PassiveSkill02[1]]}"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{All Team Members}}"
-      },
-      "references": []
-    },
-    "8024011_Monster_SW_Boss_Ability10_Part02": {
-      "fileName": "8024011_Monster_SW_Boss_Ability10_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{All Team Members(Exclude Self)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">=",
-            "value2": 4
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": 8022010,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": "Juvenile Sting"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Remove Modifier Behavior Flag(s)",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "flagNames": []
-                },
-                {
-                  "name": "Mark Entity For Immediate Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  }
-                },
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  }
-                }
-              ]
-            }
-          ]
+          "modifier": "<a class=\"gModGreen\" id=\"-1661664796\">SW_Boss_BattleScore1</a>"
         },
         {
-          "name": "Create Enemies",
-          "delayPercent": 0.5,
-          "enemyList": [
-            {
-              "name": "Create Enemy from Custom",
-              "value": "SummonID0",
-              "summonLocation": "AfterCaster"
-            }
-          ]
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1611331939\">SW_Boss_BattleScore2</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1628109558\">SW_Boss_BattleScore3</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1882682188\">Monster_SW_Boss_AIChange</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1817540919\">Monster_SW_Boss_MuteHitFly</a>"
         },
         {
           "name": "Find New Target",
           "from": {
             "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": {
-                  "operator": "Variables[0] (SummonID0) || RETURN",
-                  "displayLines": "SummonID0",
-                  "constants": [],
-                  "variables": [
-                    "SummonID0"
-                  ]
-                },
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": null
-              }
-            ]
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
+            "target": "{{All Team Members(Exclude Self)}}"
           },
           "searchRandom": true,
           "maxTargets": 1,
           "conditions": {
-            "name": "Has Modifier",
+            "name": "Compare: Monster Rank",
             "target": {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "<a class=\"gModGreen\" id=\"507878310\">Monster_SW_Boss_Ability04Target</a>",
-            "invertCondition": true
+            "compareType": "=",
+            "value2": 4
           },
-          "ifTargetFound": [
+          "noTargetFound": [
             {
-              "name": "Shot Fired"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"507878310\">Monster_SW_Boss_Ability04Target</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": {
-                  "operator": "Variables[0] (SummonID0) || RETURN",
-                  "displayLines": "SummonID0",
-                  "constants": [],
-                  "variables": [
-                    "SummonID0"
-                  ]
-                },
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": null
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"335567830\">Monster_SW_Boss_Ability04Mark</a>",
-                "invertCondition": true
-              }
-            ]
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": {
-              "operator": "Variables[0] (SummonID0) || RETURN",
-              "displayLines": "SummonID0",
-              "constants": [],
-              "variables": [
-                "SummonID0"
-              ]
-            },
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-736124809\">Monster_SW_Boss_SplitMark</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"721379857\">Monster_SW_Boss_PartController</a>"
-            },
-            {
-              "name": "Set Enemy Phase",
+              "name": "Boss Bar Display",
               "target": {
                 "name": "Target Name",
-                "target": "{{Parameter Target}}"
+                "target": "{{Caster}}"
               },
-              "phase": 3
+              "display": true
             }
           ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "DamageUpRatio",
-          "value": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
-          }
         },
         {
           "name": "IF",
           "conditions": {
-            "name": "Has Modifier",
+            "name": "Enemy ID",
+            "ID": 8024013,
             "target": {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable with Modifier Values",
-              "valueType": "Layer",
-              "variableName": "DamageUpLayer",
-              "modifierName": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-              "multiplier": 1
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "NOT",
-                "condition": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
-                }
-              },
-              "ifTargetFound": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Enemy ID",
-                        "ID": 8024010,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "characterName": "Swarm: True Sting (Complete)",
-                        "isBaseCompare": true
-                      },
-                      {
-                        "name": "Enemy ID",
-                        "ID": 8024012,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "characterName": "Swarm: True Sting (Complete)",
-                        "isBaseCompare": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-                      "valuePerStack": {
-                        "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[0]]}"
-                          ]
-                        }
-                      },
-                      "addStacksPerTrigger": {
-                        "operator": "Variables[0] (DamageUpLayer) || RETURN",
-                        "displayLines": "DamageUpLayer",
-                        "constants": [],
-                        "variables": [
-                          "DamageUpLayer"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "scope": "TargetEntity",
-          "variableName": "MonsterNumDamageUpLayer",
-          "value": 1
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "MonsterNumDamageUpLayer",
-            "compareType": "=",
-            "value2": 0,
-            "contextScope": "TargetEntity"
+            "characterName": "Swarm: True Sting",
+            "isBaseCompare": true
           },
           "failed": [
             {
-              "name": "IF",
-              "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Enemy ID",
-                    "ID": 8024010,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Swarm: True Sting (Complete)",
-                    "isBaseCompare": true
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 8024012,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Swarm: True Sting (Complete)",
-                    "isBaseCompare": true
-                  }
-                ]
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
               },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-                  "valuePerStack": {
-                    "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[0]]}"
-                      ]
-                    }
-                  },
-                  "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MonsterNumDamageUpLayer) || RETURN",
-                    "displayLines": "MonsterNumDamageUpLayer",
-                    "constants": [],
-                    "variables": [
-                      "MonsterNumDamageUpLayer"
-                    ]
-                  }
-                }
-              ]
+              "modifier": "<a class=\"gModGreen\" id=\"721379857\">Monster_SW_Boss_PartController</a>"
             }
           ]
         },
@@ -832,45 +529,18 @@ const compositeAbilityObject = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Caster's Minions}}"
+            "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"335567830\">Monster_SW_Boss_Ability04Mark</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-1836586522\">Monster_SW_Boss_Deathrattle</a>"
         },
         {
-          "name": "Define Custom Variable",
-          "scope": "TargetEntity",
-          "variableName": "MonsterNumDamageUpLayer",
-          "value": 0
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8024011_Monster_SW_Boss_Ability10_Part01": {
-      "fileName": "8024011_Monster_SW_Boss_Ability10_Part01",
-      "childAbilityList": [
-        "8024011_Monster_SW_Boss_Ability10_Camera",
-        "8024011_Monster_SW_Boss_Ability10_Part01",
-        "8024011_Monster_SW_Boss_Ability10_Part02"
-      ],
-      "skillTrigger": "Skill10",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
+          "name": "Change Character Transformation",
+          "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_SW_Boss_Ability10_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
+          "phase": "Phase1"
+        }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
@@ -878,7 +548,99 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
-      "references": []
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1836586522\">Monster_SW_Boss_Deathrattle</a>",
+          "modifierFlags": [
+            "Deathrattle",
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Was Killed (Queued) [Owner]",
+              "execute": [
+                {
+                  "name": "Dispel Debuffs",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "silent": true
+                },
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_SW_Boss_PassiveAbility_Insert_Part01",
+                  "priorityTag": "EnemyDeathEffect",
+                  "ownerState": "Mask_AliveOrLimbo",
+                  "targetState": "Mask_AliveOrLimbo",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                },
+                {
+                  "name": "Mark Entity For Immediate Death"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1882682188\">Monster_SW_Boss_AIChange</a>",
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "AIFlag",
+                    "compareType": "<=",
+                    "value2": 3,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "AIFlag",
+                      "value": 1
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "AIFlag",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1817540919\">Monster_SW_Boss_MuteHitFly</a>",
+          "modifierFlags": [
+            "MuteHitFly"
+          ]
+        }
+      ]
     },
     "8024011_Monster_SW_Boss_Ability08_Part02": {
       "fileName": "8024011_Monster_SW_Boss_Ability08_Part02",
@@ -932,11 +694,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_184) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_184",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12848) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12848",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_184"
+                    "UnusedUnderThisBase_12848"
                   ]
                 },
                 "Toughness": null,
@@ -2588,6 +2350,468 @@ const compositeAbilityObject = {
       },
       "references": []
     },
+    "8024011_Monster_SW_Boss_Ability10_Part02": {
+      "fileName": "8024011_Monster_SW_Boss_Ability10_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{All Team Members(Exclude Self)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": ">=",
+            "value2": 4
+          },
+          "passed": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 8022010,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": "Juvenile Sting"
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Remove Modifier Behavior Flag(s)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "flagNames": []
+                },
+                {
+                  "name": "Mark Entity For Immediate Death",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
+                },
+                {
+                  "name": "Force Entity Death",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Create Enemies",
+          "delayPercent": 0.5,
+          "enemyList": [
+            {
+              "name": "Create Enemy from Custom",
+              "value": "SummonID0",
+              "summonLocation": "AfterCaster"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "searchRandom": true,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": {
+                  "operator": "Variables[0] (SummonID0) || RETURN",
+                  "displayLines": "SummonID0",
+                  "constants": [],
+                  "variables": [
+                    "SummonID0"
+                  ]
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": null
+              }
+            ]
+          }
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"507878310\">Monster_SW_Boss_Ability04Target</a>",
+            "invertCondition": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"507878310\">Monster_SW_Boss_Ability04Target</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "searchRandom": true,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": {
+                  "operator": "Variables[0] (SummonID0) || RETURN",
+                  "displayLines": "SummonID0",
+                  "constants": [],
+                  "variables": [
+                    "SummonID0"
+                  ]
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": null
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"335567830\">Monster_SW_Boss_Ability04Mark</a>",
+                "invertCondition": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "searchRandom": true,
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": {
+              "operator": "Variables[0] (SummonID0) || RETURN",
+              "displayLines": "SummonID0",
+              "constants": [],
+              "variables": [
+                "SummonID0"
+              ]
+            },
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "characterName": null
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-736124809\">Monster_SW_Boss_SplitMark</a>"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"721379857\">Monster_SW_Boss_PartController</a>"
+            },
+            {
+              "name": "Set Enemy Phase",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "phase": 3
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "DamageUpRatio",
+          "value": {
+            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+            "displayLines": "{[PassiveSkill01[0]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill01[0]]}"
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable with Modifier Values",
+              "valueType": "Layer",
+              "variableName": "DamageUpLayer",
+              "modifierName": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "multiplier": 1
+            },
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster's Minions}}"
+              },
+              "searchRandom": true,
+              "conditions": {
+                "name": "NOT",
+                "condition": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                }
+              },
+              "ifTargetFound": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Enemy ID",
+                        "ID": 8024010,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "characterName": "Swarm: True Sting (Complete)",
+                        "isBaseCompare": true
+                      },
+                      {
+                        "name": "Enemy ID",
+                        "ID": 8024012,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "characterName": "Swarm: True Sting (Complete)",
+                        "isBaseCompare": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                      "valuePerStack": {
+                        "MDF_DamageUpRatio_PerLayer": {
+                          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+                          "displayLines": "{[PassiveSkill01[0]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[PassiveSkill01[0]]}"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": {
+                        "operator": "Variables[0] (DamageUpLayer) || RETURN",
+                        "displayLines": "DamageUpLayer",
+                        "constants": [],
+                        "variables": [
+                          "DamageUpLayer"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "scope": "TargetEntity",
+          "variableName": "MonsterNumDamageUpLayer",
+          "value": 1
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "MonsterNumDamageUpLayer",
+            "compareType": "=",
+            "value2": 0,
+            "contextScope": "TargetEntity"
+          },
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Enemy ID",
+                    "ID": 8024010,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": "Swarm: True Sting (Complete)",
+                    "isBaseCompare": true
+                  },
+                  {
+                    "name": "Enemy ID",
+                    "ID": 8024012,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": "Swarm: True Sting (Complete)",
+                    "isBaseCompare": true
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "valuePerStack": {
+                    "MDF_DamageUpRatio_PerLayer": {
+                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+                      "displayLines": "{[PassiveSkill01[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[PassiveSkill01[0]]}"
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": {
+                    "operator": "Variables[0] (MonsterNumDamageUpLayer) || RETURN",
+                    "displayLines": "MonsterNumDamageUpLayer",
+                    "constants": [],
+                    "variables": [
+                      "MonsterNumDamageUpLayer"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"335567830\">Monster_SW_Boss_Ability04Mark</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "scope": "TargetEntity",
+          "variableName": "MonsterNumDamageUpLayer",
+          "value": 0
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8024011_Monster_SW_Boss_Ability10_Part01": {
+      "fileName": "8024011_Monster_SW_Boss_Ability10_Part01",
+      "childAbilityList": [
+        "8024011_Monster_SW_Boss_Ability10_Camera",
+        "8024011_Monster_SW_Boss_Ability10_Part01",
+        "8024011_Monster_SW_Boss_Ability10_Part02"
+      ],
+      "skillTrigger": "Skill10",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_SW_Boss_Ability10_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "8024011_Monster_SW_Boss_Ability04_Part02": {
       "fileName": "8024011_Monster_SW_Boss_Ability04_Part02",
       "abilityType": null,
@@ -3766,236 +3990,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8024011_Monster_SW_Boss_Passive01": {
-      "fileName": "8024011_Monster_SW_Boss_Passive01",
-      "skillTrigger": "PassiveSkill02",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1661664796\">SW_Boss_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1611331939\">SW_Boss_BattleScore2</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1628109558\">SW_Boss_BattleScore3</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1882682188\">Monster_SW_Boss_AIChange</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1817540919\">Monster_SW_Boss_MuteHitFly</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Compare: Monster Rank",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "compareType": "=",
-            "value2": 4
-          },
-          "noTargetFound": [
-            {
-              "name": "Boss Bar Display",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "display": true
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 8024013,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Swarm: True Sting",
-            "isBaseCompare": true
-          },
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"721379857\">Monster_SW_Boss_PartController</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1836586522\">Monster_SW_Boss_Deathrattle</a>"
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1836586522\">Monster_SW_Boss_Deathrattle</a>",
-          "modifierFlags": [
-            "Deathrattle",
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Was Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Dispel Debuffs",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "silent": true
-                },
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_SW_Boss_PassiveAbility_Insert_Part01",
-                  "priorityTag": "EnemyDeathEffect",
-                  "ownerState": "Mask_AliveOrLimbo",
-                  "targetState": "Mask_AliveOrLimbo",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                },
-                {
-                  "name": "Mark Entity For Immediate Death"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1882682188\">Monster_SW_Boss_AIChange</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "AIFlag",
-                    "compareType": "<=",
-                    "value2": 3,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 1
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1817540919\">Monster_SW_Boss_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "8024011_Modifiers": {
       "fileName": "8024011_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -4010,6 +4004,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-407978863\">SW_Boss_BattleScore3_CharacterListen</a>",
           "stackType": "Replace",
+          "useEntitySnapshot": true,
+          "stackLimit": 2,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Action End [Owner]",
@@ -4059,10 +4056,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackLimit": 2,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4165,9 +4159,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4227,9 +4219,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4304,9 +4294,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4321,14 +4309,11 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__335567830\">Monster_SW_Boss_Ability04Mark</a>",
-          "stackData": [],
           "latentQueue": [
             "Phase2FirstSummon"
           ]
@@ -4336,27 +4321,31 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__507878310\">Monster_SW_Boss_Ability04Target</a>",
-          "stackData": [],
           "latentQueue": [
             "Phase2FirstSummon"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2020120612\">Monster_SW_Boss_Ability06Mark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-2020120612\">Monster_SW_Boss_Ability06Mark</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-736124809\">Monster_SW_Boss_SplitMark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-736124809\">Monster_SW_Boss_SplitMark</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-658511969\">Monster_SW_Boss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "stackType": "Replace",
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_DamageTakenUpRatio_PerLayer"
+          ],
+          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4386,22 +4375,23 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_DamageTakenUpRatio_PerLayer"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_DamageUpRatio_PerLayer"
+          ],
+          "latentQueue": [
+            "Phase2FirstSummon"
+          ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect is stackable.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4431,18 +4421,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUpRatio_PerLayer"
-          ],
-          "latentQueue": [
-            "Phase2FirstSummon"
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect is stackable.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4455,9 +4434,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1638258882\">Monster_SW_Boss_Ability07_Mark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1638258882\">Monster_SW_Boss_Ability07_Mark</a>"
         },
         {
           "name": "Modifier Construction",
@@ -4468,6 +4445,16 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Poison"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "Modifier_Poison_DamagePercentage"
+          ],
+          "description": "Takes Wind DMG at the start of each turn for a certain number of turns.",
+          "type": "Debuff",
+          "effectName": "Wind Shear",
+          "statusName": "Wind Shear",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -4547,22 +4534,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "Modifier_Poison_DamagePercentage"
-          ],
-          "latentQueue": [],
-          "description": "Takes Wind DMG at the start of each turn for a certain number of turns.",
-          "type": "Debuff",
-          "effectName": "Wind Shear",
-          "statusName": "Wind Shear",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-395700903\">Monster_SW_Boss_DOTExtra</a>",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -4594,12 +4571,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1913825605\">Monster_SW_Boss_PoisonDamage</a>",
+          "latentQueue": [
+            "Skill02First"
+          ],
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4617,17 +4597,13 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Skill02First"
-          ],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-378348755\">Monster_SW_Boss_PoisonCount</a>",
           "stackType": "Replace",
+          "stackLimit": 5,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4688,8 +4664,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 5
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4849,9 +4824,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

@@ -26,6 +26,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__343139295\">LC_20023_Sub</a>[<span class=\"descriptionNumberColor\">Elation Boost</span>]",
+          "description": "Elation increases by <span class=\"descriptionNumberColor\">#SkillEquip_P1_ElationDamageAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "Elation Boost",
+          "statusName": "Elation Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -48,11 +52,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Elation increases by <span class=\"descriptionNumberColor\">#SkillEquip_P1_ElationDamageAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "Elation Boost",
-          "statusName": "Elation Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -84,9 +84,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

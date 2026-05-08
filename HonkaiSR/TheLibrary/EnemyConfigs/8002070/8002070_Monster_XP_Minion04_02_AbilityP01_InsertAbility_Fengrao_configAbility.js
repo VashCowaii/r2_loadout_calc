@@ -100,21 +100,15 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__956566396\">Enemy_XP_Minion04_02_Fengrao_SelfDamage</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__956566396\">Enemy_XP_Minion04_02_Fengrao_SelfDamage</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1933857712\">Enemy_XP_Minion04_02_Fengrao_Trigger1</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1933857712\">Enemy_XP_Minion04_02_Fengrao_Trigger1</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1608084385\">Enemy_XP_Minion04_02_Fengrao_Trigger</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1608084385\">Enemy_XP_Minion04_02_Fengrao_Trigger</a>"
     }
   ]
 }

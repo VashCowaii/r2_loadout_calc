@@ -110,9 +110,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__831068002\">Enemy_W3_Sunday_Ability02Mark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__831068002\">Enemy_W3_Sunday_Ability02Mark</a>"
     }
   ]
 }

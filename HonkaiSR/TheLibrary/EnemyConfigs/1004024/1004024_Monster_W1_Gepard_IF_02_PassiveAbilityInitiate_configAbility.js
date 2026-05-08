@@ -104,6 +104,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1450457480\">Enemy_W1_Gepard_IF_02_ListenSelfBreak</a>",
+      "latentQueue": [
+        "Gepard_SummonCounter",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -128,16 +132,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Gepard_SummonCounter",
-        "AIFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1728585241\">Enemy_W1_Gepard_IF_02_Command</a>",
+      "latentQueue": [
+        "Gepard_SummonCounter",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -169,11 +172,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Gepard_SummonCounter",
-        "AIFlag"
       ]
     }
   ]

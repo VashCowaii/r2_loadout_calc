@@ -5,10 +5,7 @@ const compositeAbilityObject = {
   "abilityList": [
     "8032032_Monster_W3_AventurinePart_NoDeathRattle_RL",
     "8032032_Monster_W3_AventurinePart_DeathRattle_RL",
-    "8032032_Monster_W3_AventurinePart_Ability02_Part02_RL",
-    "8032032_Monster_W3_AventurinePart_Ability02_Part01_RL",
     "8032032_Monster_W3_AventurinePart_01_Passive01_RL",
-    "8032032_Monster_W3_AventurinePart_Passive01_RL",
     "8032032_Monster_W3_AventurinePart_Ability04_Part02",
     "8032032_Monster_W3_AventurinePart_Ability04_Part01",
     "8032032_Monster_W3_AventurinePart_Ability03_Part02",
@@ -17,7 +14,6 @@ const compositeAbilityObject = {
     "8032032_Monster_W3_AventurinePart_Ability02_Part01",
     "8032032_Monster_W3_AventurinePart_Ability01_Part02",
     "8032032_Monster_W3_AventurinePart_Ability01_Part01",
-    "8032032_Monster_W3_AventurinePart_Passive01",
     "8032032_Modifiers"
   ],
   "abilityObject": {
@@ -166,404 +162,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8032032_Monster_W3_AventurinePart_Ability02_Part02_RL": {
-      "fileName": "8032032_Monster_W3_AventurinePart_Ability02_Part02_RL",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-804462384\">Monster_W3_AventurinePart_OddsZero_RL</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-804462384\">Monster_W3_AventurinePart_OddsZero_RL</a>"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Add Target by Unique Identifier",
-                  "identifier": "W3_Aventurine_00"
-                },
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
-                  "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_193) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_193",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_193"
-                    ]
-                  },
-                  "addStacksPerTrigger": {
-                    "operator": "Variables[0] (GambleOdds) || RETURN",
-                    "displayLines": "GambleOdds",
-                    "constants": [],
-                    "variables": [
-                      "GambleOdds"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Add Target by Unique Identifier",
-                  "identifier": "W3_Aventurine_00"
-                },
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 2
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
-                  "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_195) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_195",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_195"
-                    ]
-                  },
-                  "addStacksPerTrigger": {
-                    "operator": "Variables[0] (GambleOdds) || RETURN",
-                    "displayLines": "GambleOdds",
-                    "constants": [],
-                    "variables": [
-                      "GambleOdds"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Add Target by Unique Identifier",
-                  "identifier": "W3_Aventurine_00"
-                },
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 3
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
-                  "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_194) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_194",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_194"
-                    ]
-                  },
-                  "addStacksPerTrigger": {
-                    "operator": "Variables[0] (GambleOdds) || RETURN",
-                    "displayLines": "GambleOdds",
-                    "constants": [],
-                    "variables": [
-                      "GambleOdds"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>"
-              },
-              {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value1": "DiceGamblingInsertCheck_RL",
-                "compareType": "=",
-                "value2": 1
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Add Target by Unique Identifier",
-                  "identifier": "W3_Aventurine_00"
-                },
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
-                  "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_193) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_193",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_193"
-                    ]
-                  },
-                  "addStacksPerTrigger": {
-                    "operator": "Variables[0] (GambleOdds) || RETURN",
-                    "displayLines": "GambleOdds",
-                    "constants": [],
-                    "variables": [
-                      "GambleOdds"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Add Target by Unique Identifier",
-                  "identifier": "W3_Aventurine_00"
-                },
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 2
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
-                  "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_195) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_195",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_195"
-                    ]
-                  },
-                  "addStacksPerTrigger": {
-                    "operator": "Variables[0] (GambleOdds) || RETURN",
-                    "displayLines": "GambleOdds",
-                    "constants": [],
-                    "variables": [
-                      "GambleOdds"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Add Target by Unique Identifier",
-                  "identifier": "W3_Aventurine_00"
-                },
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 3
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
-                  "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_194) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_194",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_194"
-                    ]
-                  },
-                  "addStacksPerTrigger": {
-                    "operator": "Variables[0] (GambleOdds) || RETURN",
-                    "displayLines": "GambleOdds",
-                    "constants": [],
-                    "variables": [
-                      "GambleOdds"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "DiceGamblingInsertCheck_RL",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "8032032_Monster_W3_AventurinePart_Ability02_Part01_RL": {
-      "fileName": "8032032_Monster_W3_AventurinePart_Ability02_Part01_RL",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target Group}}"
-          },
-          "ability": "Monster_W3_AventurinePart_Ability02_Part02_RL",
-          "isTrigger": true
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-804462384\">Monster_W3_AventurinePart_OddsZero_RL</a>"
-              },
-              {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>"
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value1": "DiceGamblingInsertCheck_RL",
-                    "compareType": "=",
-                    "value2": 1
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
     "8032032_Monster_W3_AventurinePart_01_Passive01_RL": {
       "fileName": "8032032_Monster_W3_AventurinePart_01_Passive01_RL",
       "skillTrigger": "PassiveSkill01",
@@ -593,52 +191,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       },
       "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8032032_Monster_W3_AventurinePart_Passive01_RL": {
-      "fileName": "8032032_Monster_W3_AventurinePart_Passive01_RL",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-804462384\">Monster_W3_AventurinePart_OddsZero_RL</a>"
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1404216721\">Monster_W3_AventurinePart_01_BlockDamage_RL</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1321309283\">Monster_W3_AventurinePart_SpeedZero_RL</a>[<span class=\"descriptionNumberColor\">Forever Concealed</span>]"
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "W3_AventurinePart_00_RL",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -1530,35 +1082,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8032032_Monster_W3_AventurinePart_Passive01": {
-      "fileName": "8032032_Monster_W3_AventurinePart_Passive01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"126188110\">Monster_W3_AventurinePart_SpeedZero</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "8032032_Modifiers": {
       "fileName": "8032032_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1573,6 +1096,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-96862504\">Monster_W3_AventurinePart_Odds_EnergyBar_RL</a>[<span class=\"descriptionNumberColor\">Odds</span>]",
           "stackType": "Replace",
+          "description": "Current Odds — 1:<span class=\"descriptionNumberColor\">MDF_Layer</span>. Highest Odds — 1:<span class=\"descriptionNumberColor\">MDF_MaxLayer</span>.",
+          "type": "Other",
+          "effectName": "Double Odds",
+          "statusName": "Odds",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1605,11 +1132,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Current Odds — 1:<span class=\"descriptionNumberColor\">MDF_Layer</span>. Highest Odds — 1:<span class=\"descriptionNumberColor\">MDF_MaxLayer</span>.",
-          "type": "Other",
-          "effectName": "Double Odds",
-          "statusName": "Odds"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1662,6 +1185,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
           "stackType": "Replace",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1912,18 +1436,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DiceGamblingInsertCheck_RL"
-          ],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-804462384\">Monster_W3_AventurinePart_OddsZero_RL</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-804462384\">Monster_W3_AventurinePart_OddsZero_RL</a>"
         },
         {
           "name": "Modifier Construction",
@@ -1962,9 +1479,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1972,6 +1487,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteSpeed"
           ],
+          "description": "When this unit is attacked by a target that has entered the Gamble, the Gamble's odds are doubled.",
+          "type": "Other",
+          "statusName": "Forever Concealed",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2003,16 +1521,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When this unit is attacked by a target that has entered the Gamble, the Gamble's odds are doubled.",
-          "type": "Other",
-          "statusName": "Forever Concealed"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__288143778\">Monster_W3_AventurinePart_DeathRattle_RL</a>[<span class=\"descriptionNumberColor\">Influx of Fortuity</span>]",
+          "description": "When this unit is attacked by a target that has entered the Gamble, this unit always generates a roll of 6, and uses Punishment of Defeat when the Gamble ends.",
+          "type": "Other",
+          "effectName": "Influx of Fortuity",
+          "statusName": "Influx of Fortuity",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2033,11 +1550,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When this unit is attacked by a target that has entered the Gamble, this unit always generates a roll of 6, and uses Punishment of Defeat when the Gamble ends.",
-          "type": "Other",
-          "effectName": "Influx of Fortuity",
-          "statusName": "Influx of Fortuity"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2047,6 +1560,9 @@ const compositeAbilityObject = {
             "Deathrattle",
             "KeepOnDeathrattle"
           ],
+          "description": "The minimum HP is 1. When attacked by a target that has entered the gamble, this unit gains a random number from 1 to 6. when its health drops to 1, this unit gains the Influx of Fortuity effect.",
+          "type": "Other",
+          "statusName": "Fickle Fortune",
           "execute": [
             {
               "eventTrigger": "Take Damage End [Owner]: Hit",
@@ -2318,12 +1834,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The minimum HP is 1. When attacked by a target that has entered the gamble, this unit gains a random number from 1 to 6. when its health drops to 1, this unit gains the Influx of Fortuity effect.",
-          "type": "Other",
-          "statusName": "Fickle Fortune"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2333,6 +1844,8 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-699513905\">Monster_W3_AventurinePart_ResultCount</a>",
           "stackType": "Replace",
+          "stackLimit": 999,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Owner]",
@@ -3873,13 +3386,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 999,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-34127136\">Monster_W3_AventurinePart_Result</a>",
+          "latentQueue": [
+            "DiceGamblingInsertCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5108,10 +4622,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DiceGamblingInsertCheck"
           ]
         },
         {
@@ -5155,7 +4665,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1604729097\">Monster_W3_AventurinePart_ResultTarget</a>",
-          "stackData": [],
           "latentQueue": [
             "DiceGamblingInsertCheck"
           ]
@@ -5166,6 +4675,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteSpeed"
           ],
+          "description": "Immune to DMG. When this unit is attacked by a target that has entered the Gamble, apply 1 random number (between 1 and 6) to the target.",
+          "type": "Other",
+          "statusName": "Fickle Fortune",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5197,12 +4709,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Immune to DMG. When this unit is attacked by a target that has entered the Gamble, apply 1 random number (between 1 and 6) to the target.",
-          "type": "Other",
-          "statusName": "Fickle Fortune"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5372,21 +4879,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__718327308\">Monster_W3_AventurinePart_Speed</a>",
+          "latentQueue": [
+            "DiceGamblingInsertCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DiceGamblingInsertCheck"
           ]
         }
       ],

@@ -14,6 +14,9 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
+      "description": "Toughness cannot be reduced before the Nightfall state ends.",
+      "type": "Other",
+      "statusName": "Weakness Protected",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -52,14 +55,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Bullet_Flag"
-      ],
-      "description": "Toughness cannot be reduced before the Nightfall state ends.",
-      "type": "Other",
-      "statusName": "Weakness Protected"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -177,6 +173,16 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2051878613\">Monster_W3_Death_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">Elegy</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_DamageUpRatio_PerLayer",
+        "MDF_DeathPartMaxHPCount",
+        "MDF_DeathPartAddHPCount"
+      ],
+      "description": "Deals <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span> more DMG and increases Sombrous Sepulcher's HP by <span class=\"descriptionNumberColor\">MDF_DeathPartAddHPCount</span> bar(s). This effect is stackable. The initial HP for Sombrous Sepulcher is currently <span class=\"descriptionNumberColor\">MDF_DeathPartMaxHPCount</span> bars.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Elegy",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -206,22 +212,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer",
-        "MDF_DeathPartMaxHPCount",
-        "MDF_DeathPartAddHPCount"
-      ],
-      "latentQueue": [],
-      "description": "Deals <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span> more DMG and increases Sombrous Sepulcher's HP by <span class=\"descriptionNumberColor\">MDF_DeathPartAddHPCount</span> bar(s). This effect is stackable. The initial HP for Sombrous Sepulcher is currently <span class=\"descriptionNumberColor\">MDF_DeathPartMaxHPCount</span> bars.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Elegy",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__91362459\">Modifier_W3_Death_RLBoss_PartController_LockHP</a>",
+      "latentQueue": [
+        "DeathPart_AppearSkill_Flag",
+        "Effect_Flag",
+        "UsedSkill08_Flag",
+        "Bullet_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -343,13 +344,6 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DeathPart_AppearSkill_Flag",
-        "Effect_Flag",
-        "UsedSkill08_Flag",
-        "Bullet_Flag"
       ]
     },
     {
@@ -433,13 +427,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1087767431\">Enemy_W3_Deathpart_Appear</a>",
+      "latentQueue": [
+        "DeathPart_AppearSkill_Flag",
+        "Effect_Flag",
+        "UsedSkill08_Flag",
+        "Bullet_Flag",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: Start",
@@ -483,14 +482,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DeathPart_AppearSkill_Flag",
-        "Effect_Flag",
-        "UsedSkill08_Flag",
-        "Bullet_Flag",
-        "AIFlag"
       ]
     },
     {
@@ -542,31 +533,32 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Bullet_Flag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1728469043\">Death_UseAbility07_Modifier</a>",
-      "stackData": [],
       "latentQueue": [
         "Skill07_EffectFlag"
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1176710437\">Monster_W3_Death_IsSummoner</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1176710437\">Monster_W3_Death_IsSummoner</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__606573810\">Monster_W3_Death_AllDamageUp</a>[<span class=\"descriptionNumberColor\">Biting Obituary</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [],
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_ShowValue1"
+      ],
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. This effect is removed when this unit becomes Weakness Broken.",
+      "type": "Buff",
+      "effectName": "Biting Obituary",
+      "statusName": "Biting Obituary",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -642,16 +634,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_ShowValue1"
-      ],
-      "latentQueue": [],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. This effect is removed when this unit becomes Weakness Broken.",
-      "type": "Buff",
-      "effectName": "Biting Obituary",
-      "statusName": "Biting Obituary"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -664,6 +647,10 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
+      "description": "Locks on to the next 2 characters who either use their Basic ATK, Skill, or Ultimate.",
+      "type": "Other",
+      "effectName": "Nightfall",
+      "statusName": "Nightfall",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -805,13 +792,7 @@ const configAbility = {
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Locks on to the next 2 characters who either use their Basic ATK, Skill, or Ultimate.",
-      "type": "Other",
-      "effectName": "Nightfall",
-      "statusName": "Nightfall"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -845,6 +826,13 @@ const configAbility = {
       "modifierFlags": [
         "TeamAction"
       ],
+      "latentQueue": [
+        "Bullet_Flag"
+      ],
+      "description": "Locked On by \"Something Unto Death\" as an attack target.",
+      "type": "Other",
+      "effectName": "Lock On",
+      "statusName": "Lock On",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -889,15 +877,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Bullet_Flag"
-      ],
-      "description": "Locked On by \"Something Unto Death\" as an attack target.",
-      "type": "Other",
-      "effectName": "Lock On",
-      "statusName": "Lock On"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -974,6 +954,10 @@ const configAbility = {
         "Stealth",
         "DisableHealHP"
       ],
+      "description": "Cannot be selected, cannot take action.",
+      "type": "Other",
+      "effectName": "Morbid Dream",
+      "statusName": "Morbid Dream",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1042,11 +1026,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Cannot be selected, cannot take action.",
-      "type": "Other",
-      "effectName": "Morbid Dream",
-      "statusName": "Morbid Dream"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1055,6 +1035,11 @@ const configAbility = {
         "AlwaysSuccess",
         "STAT_ForceControl",
         "STAT_CTRL_UnOperable"
+      ],
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_HealHPPercentage",
+        "MDF_AddSPValue"
       ],
       "execute": [
         {
@@ -1158,13 +1143,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_HealHPPercentage",
-        "MDF_AddSPValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1175,6 +1154,11 @@ const configAbility = {
         "UnOperable",
         "STAT_CTRL_UnOperable"
       ],
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_HealHPPercentage",
+        "MDF_AddSPValue"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1277,13 +1261,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_HealHPPercentage",
-        "MDF_AddSPValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1378,13 +1356,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1091581769\">Monster_W3_Death_ListenBreak</a>",
+      "latentQueue": [
+        "DeathPart_AppearSkill_Flag",
+        "Effect_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1549,11 +1529,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DeathPart_AppearSkill_Flag",
-        "Effect_Flag"
       ]
     },
     {
@@ -1614,13 +1589,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__690221189\">Modifier_W3_Death_HuntingMode3</a>[<span class=\"descriptionNumberColor\">Sunset</span>]",
+      "description": "Gained 3 stacks of Sunset. It is about to deal a killing blow.",
+      "type": "Other",
+      "effectName": "The Sun Sinks, Night Falls",
+      "statusName": "Sunset",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1635,17 +1612,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Gained 3 stacks of Sunset. It is about to deal a killing blow.",
-      "type": "Other",
-      "effectName": "The Sun Sinks, Night Falls",
-      "statusName": "Sunset"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__673443570\">Modifier_W3_Death_HuntingMode2</a>[<span class=\"descriptionNumberColor\">Sunset</span>]",
+      "description": "Gained 2 stacks of Sunset.",
+      "type": "Other",
+      "effectName": "The Sun Sinks, Dusk Arrives",
+      "statusName": "Sunset",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1660,17 +1635,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Gained 2 stacks of Sunset.",
-      "type": "Other",
-      "effectName": "The Sun Sinks, Dusk Arrives",
-      "statusName": "Sunset"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__656665951\">Modifier_W3_Death_HuntingMode1</a>[<span class=\"descriptionNumberColor\">Sunset</span>]",
+      "description": "Gained 1 stack of Sunset.",
+      "type": "Other",
+      "effectName": "The Sun Sinks, In Dying Light",
+      "statusName": "Sunset",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1685,13 +1658,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Gained 1 stack of Sunset.",
-      "type": "Other",
-      "effectName": "The Sun Sinks, In Dying Light",
-      "statusName": "Sunset"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1924,14 +1891,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1646802425\">Modifier_W3_Death_BonusAttackCounter</a>",
       "stackType": "Replace",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2023,8 +1989,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2125,9 +2090,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2135,7 +2098,6 @@ const configAbility = {
       "modifierFlags": [
         "DisableHealHP"
       ],
-      "stackData": [],
       "latentQueue": [
         "Bullet_Flag",
         "UsedSkill08_Flag",
@@ -2146,6 +2108,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-745487733\">Modifier_W3_Death_PartController_LockHP</a>",
+      "latentQueue": [
+        "DeathPart_AppearSkill_Flag",
+        "Effect_Flag",
+        "UsedSkill08_Flag",
+        "Bullet_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -2215,13 +2183,6 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DeathPart_AppearSkill_Flag",
-        "Effect_Flag",
-        "UsedSkill08_Flag",
-        "Bullet_Flag"
       ]
     },
     {
@@ -2246,9 +2207,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__2003204085\">Enemy_W3_Death_Mainline_Battle1_CatchID1</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__2003204085\">Enemy_W3_Death_Mainline_Battle1_CatchID1</a>"
     }
   ],
   "references": []

@@ -6,8 +6,8 @@ const compositeAbilityObject = {
     "60039_MissionBattleEvent60039_AbilityP01",
     "60039_MissionBattleEvent60039_Ability03_Camera",
     "60039_MissionBattleEvent60039_Ability03_Part02",
-    "60039_MissionBattleEvent60039_Player_Ability03_Part01",
-    "60039_MissionBattleEvent60039_Ability03_Part01"
+    "60039_MissionBattleEvent60039_Ability03_Part01",
+    "60039_MissionBattleEvent60039_Player_Ability03_Part01"
   ],
   "abilityObject": {
     "60039_MissionBattleEvent60039_AbilityP01": {
@@ -144,9 +144,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -164,9 +162,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -225,9 +221,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -274,9 +268,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Energy Change"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -288,9 +280,7 @@ const compositeAbilityObject = {
                 "Show BattleEvent Button"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -628,24 +618,11 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-2000427421\">MissionBattleEvent60039_CharacterForceVisible</a>",
           "modifierFlags": [
             "STAT_ForceActionable"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "60039_MissionBattleEvent60039_Player_Ability03_Part01": {
-      "fileName": "60039_MissionBattleEvent60039_Player_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
       }
     },
     "60039_MissionBattleEvent60039_Ability03_Part01": {
@@ -689,6 +666,17 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "All Enemy Team"
+      }
+    },
+    "60039_MissionBattleEvent60039_Player_Ability03_Part01": {
+      "fileName": "60039_MissionBattleEvent60039_Player_Ability03_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
       }
     }
   },

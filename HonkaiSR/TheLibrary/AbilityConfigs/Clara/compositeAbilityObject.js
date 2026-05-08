@@ -3,10 +3,14 @@ const compositeAbilityObject = {
   "fullCharacterName": "Clara",
   "trimCharacterName": "Clara",
   "abilityList": [
-    "Clara_Klara_Eidolon6",
-    "Clara_Klara_Eidolon4",
+    "Clara_Modifiers",
     "Clara_Klara_Trace02",
     "Clara_Klara_Trace01",
+    "Clara_Klara_Eidolon6",
+    "Clara_Klara_Eidolon4",
+    "Clara_LocalPlayer_StandardAbility_AttackBreak",
+    "Clara_LocalPlayer_Klara_TechniqueUsage",
+    "Clara_LocalPlayer_Klara_NormalAtk01",
     "Clara_Klara_TechniqueInLevel",
     "Clara_Klara_PassiveAbility01_InsertAbility",
     "Clara_Klara_PassiveAbility01",
@@ -16,10 +20,294 @@ const compositeAbilityObject = {
     "Clara_Klara_Ability02_Part02",
     "Clara_Klara_Ability02_Part01",
     "Clara_Klara_Ability01_Part02",
-    "Clara_Klara_Ability01_Part01",
-    "Clara_Modifiers"
+    "Clara_Klara_Ability01_Part01"
   ],
   "abilityObject": {
+    "Clara_Modifiers": {
+      "fileName": "Clara_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1225360211\">ADV_StageAbility_Maze_Klara</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1602537794\">Klara_Passive_ShowAmmo</a>",
+          "stackType": "ReplaceByCaster"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-796199138\">Klara_Passive_DamageReduce</a>[<span class=\"descriptionNumberColor\">Guardian</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Guardian",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__90816647\">Klara_BPAbility_Revenge</a>[<span class=\"descriptionNumberColor\">Mark of Counter</span>]",
+          "modifierFlags": [
+            "ListenBattleEventSkill",
+            "RemoveWhenCasterDead"
+          ],
+          "description": "The target is Marked by Svarog.",
+          "type": "Other",
+          "statusName": "Mark of Counter",
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Toggle Skill Mark"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Active Ability Chosen [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Toggle Skill Mark",
+                      "toggle": true,
+                      "skillTypesAllow": [
+                        "Skill"
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Toggle Skill Mark"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-459252663\">Klara_TechniqueUsage_AggroUP</a>[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Higher chance to be attacked.",
+          "type": "Buff",
+          "statusName": "A Small Price for Victory",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1426674462\">Klara_PassiveATK_Mark</a>",
+          "execute": [
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Klara_PassiveAbility01_InsertAbility",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "priorityTag": "CharacterAttackFromSelf",
+                  "showInActionOrder": true,
+                  "abortFlags": [
+                    "STAT_CTRL",
+                    "DisableAction"
+                  ],
+                  "allowAbilityTriggers": false
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "Clara_Klara_Trace02": {
+      "fileName": "Clara_Klara_Trace02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Stack Target Resistance",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "statName": "STAT_CTRL",
+          "value": {
+            "operator": "Variables[0] (0.35) || RETURN",
+            "displayLines": "0.35",
+            "constants": [],
+            "variables": [
+              0.35
+            ]
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Clara_Klara_Trace01": {
+      "fileName": "Clara_Klara_Trace01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1111450796\">Klara_Trace01</a>",
+          "valuePerStack": {
+            "MDF_Chance": {
+              "operator": "Variables[0] (0.35) || RETURN",
+              "displayLines": "0.35",
+              "constants": [],
+              "variables": [
+                0.35
+              ]
+            }
+          }
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1111450796\">Klara_Trace01</a>",
+          "stackData": [
+            "MDF_Chance"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Being Attacked Start [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Random Chance",
+                    "chance": {
+                      "operator": "Variables[0] (MDF_Chance) || RETURN",
+                      "displayLines": "MDF_Chance",
+                      "constants": [],
+                      "variables": [
+                        "MDF_Chance"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Dispel Debuffs",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "dispelCount": 1,
+                      "dispelOrder": "LastAdded"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "Clara_Klara_Eidolon6": {
       "fileName": "Clara_Klara_Eidolon6",
       "abilityType": null,
@@ -105,6 +393,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2032783017\">Klara_Eidolon6_Passive</a>",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -187,11 +478,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -219,6 +506,9 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__202295497\">Klara_Eidolon4_DamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "DMG Mitigation",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -241,10 +531,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "DMG Mitigation"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -275,47 +562,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "Clara_Klara_Trace02": {
-      "fileName": "Clara_Klara_Trace02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Stack Target Resistance",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "statName": "STAT_CTRL",
-          "value": {
-            "operator": "Variables[0] (0.35) || RETURN",
-            "displayLines": "0.35",
-            "constants": [],
-            "variables": [
-              0.35
-            ]
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Clara_Klara_Trace01": {
-      "fileName": "Clara_Klara_Trace01",
-      "abilityType": null,
-      "energy": null,
+    "Clara_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Clara_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
       "toughnessList": null,
       "parse": [
         {
@@ -324,63 +581,317 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1111450796\">Klara_Trace01</a>",
-          "valuePerStack": {
-            "MDF_Chance": {
-              "operator": "Variables[0] (0.35) || RETURN",
-              "displayLines": "0.35",
-              "constants": [],
-              "variables": [
-                0.35
-              ]
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
             }
-          }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
         }
       ],
-      "references": [
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Clara_LocalPlayer_Klara_TechniqueUsage": {
+      "fileName": "Clara_LocalPlayer_Klara_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
         {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1111450796\">Klara_Trace01</a>",
-          "execute": [
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
             {
-              "eventTrigger": "Being Attacked Start [Owner]",
-              "execute": [
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
                 {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Random Chance",
-                    "chance": {
-                      "operator": "Variables[0] (MDF_Chance) || RETURN",
-                      "displayLines": "MDF_Chance",
-                      "constants": [],
-                      "variables": [
-                        "MDF_Chance"
-                      ]
-                    }
-                  },
-                  "passed": [
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
                     {
-                      "name": "Dispel Debuffs",
-                      "target": {
+                      "name": "Add Events/Bonuses",
+                      "to": {
                         "name": "Target Name",
-                        "target": "{{Caster}}"
+                        "target": "{{Parameter Target}}"
                       },
-                      "dispelCount": 1,
-                      "dispelOrder": "LastAdded"
+                      "modifier": null,
+                      "ID": "110701(SkillMaze)"
                     }
                   ]
                 }
               ]
             }
           ],
-          "stackData": [
-            "MDF_Chance"
-          ],
-          "latentQueue": []
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "110701(SkillMaze)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
+      "onAbortReg": [],
+      "references": [],
       "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Clara_LocalPlayer_Klara_NormalAtk01": {
+      "fileName": "Clara_LocalPlayer_Klara_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "Clara_Klara_TechniqueInLevel": {
@@ -462,9 +973,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -725,6 +1234,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1077895558\">Klara_Trace03</a>",
+          "stackData": [
+            "MDF_AllDamageTypeAddRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -741,11 +1253,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageTypeAddRatio"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -861,13 +1369,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1664082780\">Klara_PassiveAbility01_ListenCounter</a>",
+          "stackData": [
+            "MDF_Chance"
+          ],
           "execute": [
             {
               "eventTrigger": "Being Attacked Start [Owner]",
@@ -911,11 +1420,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Chance"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1161,6 +1666,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-632500359\">Klara_Eidolon2_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "Refresh",
+          "stackData": [
+            "MDF_AttackUP"
+          ],
+          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackUP</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "ATK Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1183,15 +1695,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AttackUP"
-          ],
-          "latentQueue": [],
-          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackUP</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "ATK Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1230,6 +1734,12 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-526728231\">Klara_PassiveATKCount</a>[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
           "counter": 1,
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_ShowAmmo"
+          ],
+          "description": "Teammates being attacked will also trigger Counter, for which the DMG multiplier is also increased.",
+          "type": "Buff",
+          "statusName": "Enhanced Counter",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1353,14 +1863,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ShowAmmo"
-          ],
-          "latentQueue": [],
-          "description": "Teammates being attacked will also trigger Counter, for which the DMG multiplier is also increased.",
-          "type": "Buff",
-          "statusName": "Enhanced Counter"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1369,6 +1872,14 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_Burst"
           ],
+          "stackData": [
+            "MDF_AggroAddedRatio",
+            "MDF_PropertyValue"
+          ],
+          "description": "Receives less DMG with a higher chance to be attacked.",
+          "type": "Buff",
+          "effectName": "DMG Mitigation",
+          "statusName": "Promise, Not Command",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1407,16 +1918,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AggroAddedRatio",
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Receives less DMG with a higher chance to be attacked.",
-          "type": "Buff",
-          "effectName": "DMG Mitigation",
-          "statusName": "Promise, Not Command"
+          ]
         }
       ],
       "targetObjectData": {
@@ -1699,199 +2201,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Clara_Modifiers": {
-      "fileName": "Clara_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1602537794\">Klara_Passive_ShowAmmo</a>",
-          "stackType": "ReplaceByCaster"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-796199138\">Klara_Passive_DamageReduce</a>[<span class=\"descriptionNumberColor\">Guardian</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Guardian"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__90816647\">Klara_BPAbility_Revenge</a>[<span class=\"descriptionNumberColor\">Mark of Counter</span>]",
-          "modifierFlags": [
-            "ListenBattleEventSkill",
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Toggle Skill Mark"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Active Ability Chosen [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Toggle Skill Mark",
-                      "toggle": true,
-                      "skillTypesAllow": [
-                        "Skill"
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Toggle Skill Mark"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The target is Marked by Svarog.",
-          "type": "Other",
-          "statusName": "Mark of Counter"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-459252663\">Klara_TechniqueUsage_AggroUP</a>[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Higher chance to be attacked.",
-          "type": "Buff",
-          "statusName": "A Small Price for Victory"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1426674462\">Klara_PassiveATK_Mark</a>",
-          "execute": [
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Klara_PassiveAbility01_InsertAbility",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "priorityTag": "CharacterAttackFromSelf",
-                  "showInActionOrder": true,
-                  "abortFlags": [
-                    "STAT_CTRL",
-                    "DisableAction"
-                  ],
-                  "allowAbilityTriggers": false
-                },
-                "Modifier Deletes Itself"
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "references": []
     }
   }
 }

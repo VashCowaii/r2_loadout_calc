@@ -603,6 +603,96 @@ const configAbility = {
           ]
         }
       ],
+      "modifierFunctions": [
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-432640007\">Feixiao_InsertCheck</a>",
+          "parse": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "flagName": "STAT_CTRL",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "flagName": "DisableAction",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "Inject Ability Use",
+                      "condition": {
+                        "name": "Insert Ability Condition",
+                        "type": "AbilityOwnerInsertUnusedCount",
+                        "typeValue": 1
+                      },
+                      "abilityName": "Feixiao_Insert_SelectTarget",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "priorityTag": "CharacterAttackFromSelf",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "abortFlags": [
+                        "STAT_CTRL",
+                        "DisableAction"
+                      ],
+                      "allowAbilityTriggers": false
+                    }
+                  ],
+                  "noTargetFound": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"248447225\">M_Feixiao_InsertCheck</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "variableValueChange": [
         {
           "name": "Variable Value Changes",
@@ -746,99 +836,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "modifierFunctions": [
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__-432640007\">Feixiao_InsertCheck</a>",
-          "parse": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "flagName": "STAT_CTRL",
-                    "invertCondition": true
-                  },
-                  {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "flagName": "DisableAction",
-                    "invertCondition": true
-                  },
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]"
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "Feixiao_Insert_SelectTarget",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "priorityTag": "CharacterAttackFromSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "abortFlags": [
-                        "STAT_CTRL",
-                        "DisableAction"
-                      ],
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "noTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"248447225\">M_Feixiao_InsertCheck</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

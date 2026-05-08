@@ -3,18 +3,66 @@ const compositeAbilityObject = {
   "fullCharacterName": 8002040,
   "trimCharacterName": 8002040,
   "abilityList": [
+    "8002040_Monster_XP_Minion04_PassiveAbility_Tutorial",
+    "8002040_Monster_XP_Minion04_PassiveAbilityInitiate",
     "8002040_Monster_XP_Minion04_Ability03_Part02",
     "8002040_Monster_XP_Minion04_Ability03_Part01",
     "8002040_Monster_XP_Minion04_Ability02_Part02",
     "8002040_Monster_XP_Minion04_Ability02_Part01",
     "8002040_Monster_XP_Minion04_Ability01_Part02",
     "8002040_Monster_XP_Minion04_Ability01_Part01",
-    "8002040_Monster_XP_Minion04_08_PassiveAbility_Tutorial",
-    "8002040_Monster_XP_Minion04_PassiveAbility_Tutorial",
-    "8002040_Monster_XP_Minion04_PassiveAbilityInitiate",
     "8002040_Modifiers"
   ],
   "abilityObject": {
+    "8002040_Monster_XP_Minion04_PassiveAbility_Tutorial": {
+      "fileName": "8002040_Monster_XP_Minion04_PassiveAbility_Tutorial",
+      "skillTrigger": "PassiveSkill_Tutorial",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8002040_Monster_XP_Minion04_PassiveAbilityInitiate": {
+      "fileName": "8002040_Monster_XP_Minion04_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1012060513\">Enemy_XP_Minion04_BeHitSoundController</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1012060513\">Enemy_XP_Minion04_BeHitSoundController</a>",
+          "execute": [
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Hit"
+            }
+          ]
+        }
+      ]
+    },
     "8002040_Monster_XP_Minion04_Ability03_Part02": {
       "fileName": "8002040_Monster_XP_Minion04_Ability03_Part02",
       "abilityType": null,
@@ -197,68 +245,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8002040_Monster_XP_Minion04_08_PassiveAbility_Tutorial": {
-      "fileName": "8002040_Monster_XP_Minion04_08_PassiveAbility_Tutorial",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8002040_Monster_XP_Minion04_PassiveAbility_Tutorial": {
-      "fileName": "8002040_Monster_XP_Minion04_PassiveAbility_Tutorial",
-      "skillTrigger": "PassiveSkill_Tutorial",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8002040_Monster_XP_Minion04_PassiveAbilityInitiate": {
-      "fileName": "8002040_Monster_XP_Minion04_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1012060513\">Enemy_XP_Minion04_BeHitSoundController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1012060513\">Enemy_XP_Minion04_BeHitSoundController</a>",
-          "execute": [
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Hit"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "8002040_Modifiers": {
       "fileName": "8002040_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -316,9 +302,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -356,9 +340,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

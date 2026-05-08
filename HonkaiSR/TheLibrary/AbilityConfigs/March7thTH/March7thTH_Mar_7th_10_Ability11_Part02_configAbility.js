@@ -607,7 +607,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__218557064\">M_Mar_7th_10_Ability11_Preshow</a>",
-      "stackData": [],
       "latentQueue": [
         "_have_gain_sp"
       ],

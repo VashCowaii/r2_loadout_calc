@@ -27,6 +27,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-268122719\">Seele_Eidolon4</a>",
+      "stackData": [
+        "MDF_AddSP"
+      ],
       "execute": [
         {
           "eventTrigger": "Got a Kill [Owner]",
@@ -49,11 +52,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AddSP"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

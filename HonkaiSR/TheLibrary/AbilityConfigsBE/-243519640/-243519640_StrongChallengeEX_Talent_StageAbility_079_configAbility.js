@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-675587525\">MStrongChallengeEX_Talent_StageAbility_PLY_079_Extra</a>[<span class=\"descriptionNumberColor\">Unto Apotheosis</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> time(s).",
+      "type": "Buff",
+      "statusName": "Unto Apotheosis",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -48,11 +52,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> time(s).",
-      "type": "Buff",
-      "statusName": "Unto Apotheosis",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -179,9 +179,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

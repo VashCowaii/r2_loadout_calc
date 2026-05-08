@@ -53,6 +53,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1139116212\">Modifier_BattleEventAbility_RogueDLCRuin_DamageUp</a>",
       "stackType": "ReplaceByCaster",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -86,10 +87,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "addStacksPerTrigger": 1
+      ]
     }
   ],
   "targetObjectData": {

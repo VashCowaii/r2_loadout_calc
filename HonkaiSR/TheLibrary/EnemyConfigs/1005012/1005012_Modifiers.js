@@ -91,9 +91,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -102,6 +100,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1780808632\">Enemy_W1_CocoliaP2_MarkPlayer10_Controller</a>",
+      "latentQueue": [
+        "Cocolia_AICounter",
+        "Cocolia_Tips_Taunt"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -149,11 +151,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Cocolia_AICounter",
-        "Cocolia_Tips_Taunt"
       ]
     },
     {
@@ -295,13 +292,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1361193715\">Enemy_W1_CocoliaP2_SpinSpeedController</a>",
+      "latentQueue": [
+        "Cocolia_AICounter",
+        "Cocolia_Tips_Taunt"
+      ],
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo"
@@ -312,25 +311,19 @@ const configAbility = {
         {
           "eventTrigger": "End Broken State [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Cocolia_AICounter",
-        "Cocolia_Tips_Taunt"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2030503230\">Enemy_W1_CocoliaP2_EnvironmentEffect_ALL</a>",
+      "latentQueue": [
+        "Cocolia_AICounter",
+        "Cocolia_Tips_Taunt"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Cocolia_AICounter",
-        "Cocolia_Tips_Taunt"
       ]
     },
     {
@@ -340,22 +333,19 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-856191872\">Enemy_W1_CocoliaP2_EnvironmentEffect_01</a>",
+      "latentQueue": [
+        "Cocolia_AICounter",
+        "Cocolia_Tips_Taunt"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Cocolia_AICounter",
-        "Cocolia_Tips_Taunt"
       ]
     },
     {
@@ -421,9 +411,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -432,23 +420,19 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "AttackSign"
       ],
+      "description": "%CasterName will focus attacks on this target.",
+      "type": "Other",
+      "effectName": "Harbinger of Annihilation",
+      "statusName": "Harbinger of Annihilation",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "%CasterName will focus attacks on this target.",
-      "type": "Other",
-      "effectName": "Harbinger of Annihilation",
-      "statusName": "Harbinger of Annihilation"
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1444596959\">Enemy_W1_CocoliaP2_Weekly</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1444596959\">Enemy_W1_CocoliaP2_Weekly</a>"
     }
   ],
   "references": []

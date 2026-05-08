@@ -10,8 +10,17 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1309114737\">ADV_StageAbility_Maze_Bronya</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2015057793\">Bronya_Tree02_DefenceUp</a>[<span class=\"descriptionNumberColor\">Battlefield</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>",
+      "type": "Buff",
+      "statusName": "Battlefield",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -34,14 +43,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DefenceAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>",
-      "type": "Buff",
-      "statusName": "Battlefield"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -69,11 +71,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AllDamageTypeAddedRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -82,6 +80,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "SPD +<span class=\"descriptionNumberColor\">Bronya_SpeedUP_Ratio</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "SPD Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -104,16 +106,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD +<span class=\"descriptionNumberColor\">Bronya_SpeedUP_Ratio</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "SPD Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__133730263\">Bronya_BPAbility_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -136,20 +138,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-379855100\">Bronya_Ultimate_PowerUp</a>[<span class=\"descriptionNumberColor\">The Belobog March</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span> and CRIT DMG +<span class=\"descriptionNumberColor\">Bronya_CriticalDamage</span>.",
+      "type": "Buff",
+      "effectName": "ATK and CRIT DMG Boost",
+      "statusName": "The Belobog March",
+      "duration": 2,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -188,23 +187,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AttackAddedRatio",
-        "Bronya_CriticalDamage"
-      ],
-      "latentQueue": [],
-      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span> and CRIT DMG +<span class=\"descriptionNumberColor\">Bronya_CriticalDamage</span>.",
-      "type": "Buff",
-      "effectName": "ATK and CRIT DMG Boost",
-      "statusName": "The Belobog March",
-      "duration": 2
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1374988833\">Bronya_Eidolon1_CoolDown</a>[<span class=\"descriptionNumberColor\">Hone Your Strength</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "Hone Your Strength effect cannot be triggered.",
       "type": "Other",
       "statusName": "Hone Your Strength"
@@ -213,6 +200,29 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-308500305\">Bronya_BPAbility_Eidolon2_Listen</a>",
       "stackType": "ReplaceByCaster",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
+        "conditions": {
+          "name": "NOT",
+          "condition": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-691391461\">Bronya_BPAbility_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
+          }
+        },
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": "Bronya_SpeedUP_Ratio_01(SPD Change)"
+        }
+      },
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -239,34 +249,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [
-        "Bronya_SpeedUP_Ratio_01"
-      ],
-      "latentQueue": [],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "target": {
-          "name": "Target Name",
-          "target": "{{Modifier Holder}}"
-        },
-        "conditions": {
-          "name": "NOT",
-          "condition": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-691391461\">Bronya_BPAbility_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
-          }
-        },
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": "Bronya_SpeedUP_Ratio_01(SPD Change)"
-        }
-      }
+      ]
     }
   ],
   "references": []

@@ -10,6 +10,63 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-842574102\">ADV_StageAbility_Maze_Jade</a>",
+      "counter": 1,
+      "stackType": "Replace",
+      "modifierFlags": [
+        "Blind"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1106061455\">ADV_StageAbility_Maze_Jade_Flag</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1900960567\">ADV_StageAbility_Maze_Jade_TiggerExit</a>",
+      "stackType": "Merge",
+      "onCreation": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Team Leader",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            }
+          },
+          "passed": [
+            {
+              "name": "Create Overworld Entity",
+              "summonID": 13141
+            }
+          ]
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "summonID": 13141
+          }
+        }
+      ],
+      "onStageEntry": [
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 13141
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__68476876\">Jade_Eidolon6_QuantumPenetrate</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
@@ -34,16 +91,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1189146824\">Jade_Eidolon4_DefPenetrate</a>[<span class=\"descriptionNumberColor\">Sincerity? Put Option Only</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of enemy targets' DEF.",
+      "type": "Buff",
+      "effectName": "Sincerity? Put Option Only",
+      "statusName": "Sincerity? Put Option Only",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -72,19 +129,15 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of enemy targets' DEF.",
-      "type": "Buff",
-      "effectName": "Sincerity? Put Option Only",
-      "statusName": "Sincerity? Put Option Only"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-759179558\">Jade_Eidolon2_CriticalChance</a>[<span class=\"descriptionNumberColor\">Morality? Herein Authenticated</span>]",
+      "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "CRIT Rate Boost",
+      "statusName": "Morality? Herein Authenticated",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -107,11 +160,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "CRIT Rate Boost",
-      "statusName": "Morality? Herein Authenticated"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -147,11 +196,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -283,14 +328,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2143808418\">Jade_Passive_Rate</a>[<span class=\"descriptionNumberColor\">Pawned Asset</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Pawned Asset",
+      "statusName": "Pawned Asset",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -399,16 +446,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_PropertyValue2"
-      ],
-      "latentQueue": [],
-      "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Pawned Asset",
-      "statusName": "Pawned Asset"
+      ]
     },
     {
       "name": "Modifier Construction",

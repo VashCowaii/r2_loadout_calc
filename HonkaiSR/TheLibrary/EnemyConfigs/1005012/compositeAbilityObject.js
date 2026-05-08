@@ -3,21 +3,9 @@ const compositeAbilityObject = {
   "fullCharacterName": 1005012,
   "trimCharacterName": 1005012,
   "abilityList": [
-    "1005012_Monster_W1_CocoliaP2_PassiveAbilityMainBattle",
-    "1005012_Monster_W1_CocoliaP2_SpecialAbility_M3_3_2",
-    "1005012_Monster_W1_CocoliaP2_PerformAbility_Battle3",
-    "1005012_Monster_W1_CocoliaP2_PerformAbility_Battle2",
     "1005012_Monster_W1_CocoliaP2_AbilityP02",
     "1005012_Monster_W1_CocoliaP2_PassiveAbility_Insert",
     "1005012_Monster_W1_CocoliaP2_PassiveAbilityInitiate",
-    "1005012_Monster_W1_CocoliaP2_PassiveAbility_Battle3Extra",
-    "1005012_Monster_W1_CocoliaP2_AbilityPerform01_Part02",
-    "1005012_Monster_W1_CocoliaP2_AbilityPerform01_Part01",
-    "1005012_Monster_W1_CocoliaP2_PassiveAbility_Battle2Extra",
-    "1005012_Monster_W1_CocoliaP2_Ability12_Part02",
-    "1005012_Monster_W1_CocoliaP2_Ability12_Part01",
-    "1005012_Monster_W1_CocoliaP2_Ability11_Part02",
-    "1005012_Monster_W1_CocoliaP2_Ability11_Part01",
     "1005012_Monster_W1_CocoliaP2_Ability10_Part02",
     "1005012_Monster_W1_CocoliaP2_Ability10_Part01",
     "1005012_Monster_W1_CocoliaP2_Ability09_Part02",
@@ -37,360 +25,6 @@ const compositeAbilityObject = {
     "1005012_Modifiers"
   ],
   "abilityObject": {
-    "1005012_Monster_W1_CocoliaP2_PassiveAbilityMainBattle": {
-      "fileName": "1005012_Monster_W1_CocoliaP2_PassiveAbilityMainBattle",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"917098959\">Enemy_W1_CocoliaP2_PassiveAbilityMainBattle</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1446013526\">Enemy_W1_CocoliaP2_MainBattle_FirstActionMoreDelay</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1592345722\">Enemy_W1_CocoliaP2_FirstSummonSpecial</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1592345722\">Enemy_W1_CocoliaP2_FirstSummonSpecial</a>",
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1446013526\">Enemy_W1_CocoliaP2_MainBattle_FirstActionMoreDelay</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Action Advance/Delay",
-                  "advanceType": "Set",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "multiBase": 0.5
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__917098959\">Enemy_W1_CocoliaP2_PassiveAbilityMainBattle</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Action Advance/Delay",
-                  "advanceType": "Set",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "multiBase": 0
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}}"
-                  },
-                  "searchRandom": true,
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Character ID",
-                        "ID": 8003,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": "Trailblazer - Preservation[M]"
-                      },
-                      {
-                        "name": "Character ID",
-                        "ID": 8004,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": "Trailblazer - Preservation[F]"
-                      }
-                    ]
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "multiBase": 0.5
-                    }
-                  ]
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{All Unselectable Targets}}"
-                  },
-                  "searchRandom": true,
-                  "conditions": {
-                    "name": "Battle Event ID",
-                    "ID": 60001,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Update Energy",
-                      "on": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": 100,
-                      "isFixed": "(Fixed)"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "1005012_Monster_W1_CocoliaP2_SpecialAbility_M3_3_2": {
-      "fileName": "1005012_Monster_W1_CocoliaP2_SpecialAbility_M3_3_2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"411454568\">Enemy_W1_CocoliaP2_SpecialDelay</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__411454568\">Enemy_W1_CocoliaP2_SpecialDelay</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "Cocolia_AICounter",
-                    "compareType": "=",
-                    "value2": 3,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Stack Target Stat Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                      "value": -0.5
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "1005012_Monster_W1_CocoliaP2_PerformAbility_Battle3": {
-      "fileName": "1005012_Monster_W1_CocoliaP2_PerformAbility_Battle3",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"299120408\">Enemy_W1_CocoliaP2_PerformAbility_Battle3</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1661939499\">Enemy_W1_CocoliaP2_PerformAbility_Battle3_2</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1678717118\">Enemy_W1_CocoliaP2_PerformAbility_Battle3_3</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1678717118\">Enemy_W1_CocoliaP2_PerformAbility_Battle3_3</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Name",
-                    "skillName": "Skill09"
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1661939499\">Enemy_W1_CocoliaP2_PerformAbility_Battle3_2</a>",
-          "modifierFlags": [
-            "ListenBattleEventSkill"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Battle Event ID",
-                    "ID": 60001,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__299120408\">Enemy_W1_CocoliaP2_PerformAbility_Battle3</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "1005012_Monster_W1_CocoliaP2_PerformAbility_Battle2": {
-      "fileName": "1005012_Monster_W1_CocoliaP2_PerformAbility_Battle2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"315898027\">Enemy_W1_CocoliaP2_PerformAbility_Battle2</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__315898027\">Enemy_W1_CocoliaP2_PerformAbility_Battle2</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "1005012_Monster_W1_CocoliaP2_AbilityP02": {
       "fileName": "1005012_Monster_W1_CocoliaP2_AbilityP02",
       "childAbilityList": [
@@ -431,6 +65,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak"
           ],
+          "description": "Cocolia, Mother of Deception's Toughness cannot be reduced while there are enemies on the field.",
+          "type": "Buff",
+          "effectName": "Weakness Protected",
+          "statusName": "Weakness Protected",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -457,11 +95,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Cocolia, Mother of Deception's Toughness cannot be reduced while there are enemies on the field.",
-          "type": "Buff",
-          "effectName": "Weakness Protected",
-          "statusName": "Weakness Protected"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -572,9 +206,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -780,6 +412,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1981362800\">Enemy_W1_CocoliaP2_FinalPhase_SpeedUp</a>",
+          "stackData": [
+            "MDF_SpeedDelta"
+          ],
+          "latentQueue": [
+            "Cocolia_AICounter"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -802,12 +440,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedDelta"
-          ],
-          "latentQueue": [
-            "Cocolia_AICounter"
           ]
         },
         {
@@ -817,9 +449,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -956,6 +586,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1894460121\">Enemy_W1_CocoliaP2_TauntResistanceDown</a>",
+          "latentQueue": [
+            "Cocolia_AICounter",
+            "Cocolia_Tips_Taunt"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -971,11 +605,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Cocolia_AICounter",
-            "Cocolia_Tips_Taunt"
           ]
         },
         {
@@ -1088,9 +717,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1100,6 +727,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__964527705\">Enemy_W1_CocoliaP2_PartController</a>",
           "counter": 1,
+          "latentQueue": [
+            "Cocolia_AICounter",
+            "Cocolia_Tips_Taunt"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1211,545 +842,9 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Cocolia_AICounter",
-            "Cocolia_Tips_Taunt"
           ]
         }
       ]
-    },
-    "1005012_Monster_W1_CocoliaP2_PassiveAbility_Battle3Extra": {
-      "fileName": "1005012_Monster_W1_CocoliaP2_PassiveAbility_Battle3Extra",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1755008882\">Enemy_W1_CocoliaP2_Battle3LockHP</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1755008882\">Enemy_W1_CocoliaP2_Battle3LockHP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Minions of Modifier Holder}}"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.5
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "W1_CocoliaP2_00_Battle3LockHP_Trigger"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Related Summoned Entity",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Lock HP",
-                      "threshold": 0,
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Locked HP Floor Reached [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "W1_CocoliaP2_00_Battle3LockHP_Trigger",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1592345722\">Enemy_W1_CocoliaP2_FirstSummonSpecial</a>"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "multiBase": 0
-                    },
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "W1_CocoliaP2_00_Battle3LockHP_Trigger",
-                      "value": 1
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "Cocolia_AICounter",
-                            "compareType": "=",
-                            "value2": 3,
-                            "contextScope": "TargetEntity"
-                          },
-                          {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "Cocolia_AICounter",
-                            "compareType": "=",
-                            "value2": 9,
-                            "contextScope": "TargetEntity"
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-1592345722\">Enemy_W1_CocoliaP2_FirstSummonSpecial</a>"
-                          },
-                          "passed": [
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1592345722\">Enemy_W1_CocoliaP2_FirstSummonSpecial</a>"
-                            },
-                            {
-                              "name": "Find New Target",
-                              "from": {
-                                "name": "Target Name",
-                                "target": "{{Player Team All(with Unselectable)V2}}"
-                              },
-                              "searchRandom": true,
-                              "conditions": {
-                                "name": "OR",
-                                "conditionList": [
-                                  {
-                                    "name": "Character ID",
-                                    "ID": 8003,
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "characterName": "Trailblazer - Preservation[M]"
-                                  },
-                                  {
-                                    "name": "Character ID",
-                                    "ID": 8004,
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "characterName": "Trailblazer - Preservation[F]"
-                                  }
-                                ]
-                              },
-                              "ifTargetFound": [
-                                {
-                                  "name": "Add Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"377799243\">MLevelEntity_Colossus_MainBattlePerform</a>"
-                                }
-                              ]
-                            },
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "Cocolia_AICounter",
-                          "value": 4
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "1005012_Monster_W1_CocoliaP2_AbilityPerform01_Part02": {
-      "fileName": "1005012_Monster_W1_CocoliaP2_AbilityPerform01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-280575711\">Enemy_W1_CocoliaP2_Battle2Invisible</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1005012_Monster_W1_CocoliaP2_AbilityPerform01_Part01": {
-      "fileName": "1005012_Monster_W1_CocoliaP2_AbilityPerform01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1403193826\">EnterBattleRage</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1403193826\">EnterBattleRage</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Trigger Ability",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "ability": "Monster_W1_CocoliaP2_AbilityPerform01_Part02",
-                  "isTrigger": true
-                },
-                "Deleted bullshit"
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "1005012_Monster_W1_CocoliaP2_PassiveAbility_Battle2Extra": {
-      "fileName": "1005012_Monster_W1_CocoliaP2_PassiveAbility_Battle2Extra",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1500051709\">Enemy_W1_CocoliaP2_Battle2DamageTakenLimit</a>"
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-280575711\">Enemy_W1_CocoliaP2_Battle2Invisible</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1500051709\">Enemy_W1_CocoliaP2_Battle2DamageTakenLimit</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "Cocolia_MaxHPValue",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "Cocolia_B2DMGLimit",
-                  "value": {
-                    "operator": "Variables[0] (Cocolia_MaxHPValue) || Constants[0] (0.05) || MUL || RETURN",
-                    "displayLines": "(Cocolia_MaxHPValue * 0.05)",
-                    "constants": [
-                      0.05
-                    ],
-                    "variables": [
-                      "Cocolia_MaxHPValue"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "Adjust Target Stats",
-                  "modifiedValuesArray": [
-                    {
-                      "on": "AttackData",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DMGValueMax</span>&nbsp;",
-                      "value": "Cocolia_B2DMGLimit"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-280575711\">Enemy_W1_CocoliaP2_Battle2Invisible</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "1005012_Monster_W1_CocoliaP2_Ability12_Part02": {
-      "fileName": "1005012_Monster_W1_CocoliaP2_Ability12_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1052811320\">Enemy_W1_CocoliaP2_Ability10_Aiming</a>"
-        },
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1281838321\">Enemy_W1_CocoliaP2_Ability10_TargetLock</a>[<span class=\"descriptionNumberColor\">Harbinger of Annihilation</span>]"
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "PhaseAim"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1005012_Monster_W1_CocoliaP2_Ability12_Part01": {
-      "fileName": "1005012_Monster_W1_CocoliaP2_Ability12_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W1_CocoliaP2_Ability12_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1005012_Monster_W1_CocoliaP2_Ability11_Part02": {
-      "fileName": "1005012_Monster_W1_CocoliaP2_Ability11_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1005012_Monster_W1_CocoliaP2_Ability11_Part01": {
-      "fileName": "1005012_Monster_W1_CocoliaP2_Ability11_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W1_CocoliaP2_Ability11_Part02",
-          "isTrigger": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
     },
     "1005012_Monster_W1_CocoliaP2_Ability10_Part02": {
       "fileName": "1005012_Monster_W1_CocoliaP2_Ability10_Part02",
@@ -2131,13 +1226,15 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1681589484\">Enemy_W1_CocoliaP2_Ability08_Charge</a>[<span class=\"descriptionNumberColor\">The Creation's Prelude</span>]",
+          "description": "The next attack will cause Last Choir of Genesis to all targets.",
+          "type": "Other",
+          "effectName": "The Creation's Prelude",
+          "statusName": "The Creation's Prelude",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2197,13 +1294,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The next attack will cause Last Choir of Genesis to all targets.",
-          "type": "Other",
-          "effectName": "The Creation's Prelude",
-          "statusName": "The Creation's Prelude"
+          ]
         }
       ]
     },
@@ -3128,9 +2219,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3139,6 +2228,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1780808632\">Enemy_W1_CocoliaP2_MarkPlayer10_Controller</a>",
+          "latentQueue": [
+            "Cocolia_AICounter",
+            "Cocolia_Tips_Taunt"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3186,11 +2279,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Cocolia_AICounter",
-            "Cocolia_Tips_Taunt"
           ]
         },
         {
@@ -3332,13 +2420,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1361193715\">Enemy_W1_CocoliaP2_SpinSpeedController</a>",
+          "latentQueue": [
+            "Cocolia_AICounter",
+            "Cocolia_Tips_Taunt"
+          ],
           "execute": [
             {
               "eventTrigger": "When Put in Deathstate Limbo"
@@ -3349,25 +2439,19 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "End Broken State [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Cocolia_AICounter",
-            "Cocolia_Tips_Taunt"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2030503230\">Enemy_W1_CocoliaP2_EnvironmentEffect_ALL</a>",
+          "latentQueue": [
+            "Cocolia_AICounter",
+            "Cocolia_Tips_Taunt"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Cocolia_AICounter",
-            "Cocolia_Tips_Taunt"
           ]
         },
         {
@@ -3377,22 +2461,19 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-856191872\">Enemy_W1_CocoliaP2_EnvironmentEffect_01</a>",
+          "latentQueue": [
+            "Cocolia_AICounter",
+            "Cocolia_Tips_Taunt"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Cocolia_AICounter",
-            "Cocolia_Tips_Taunt"
           ]
         },
         {
@@ -3458,9 +2539,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3469,23 +2548,19 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
+          "description": "%CasterName will focus attacks on this target.",
+          "type": "Other",
+          "effectName": "Harbinger of Annihilation",
+          "statusName": "Harbinger of Annihilation",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "%CasterName will focus attacks on this target.",
-          "type": "Other",
-          "effectName": "Harbinger of Annihilation",
-          "statusName": "Harbinger of Annihilation"
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1444596959\">Enemy_W1_CocoliaP2_Weekly</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1444596959\">Enemy_W1_CocoliaP2_Weekly</a>"
         }
       ],
       "references": []

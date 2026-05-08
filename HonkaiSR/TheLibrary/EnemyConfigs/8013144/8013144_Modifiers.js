@@ -84,13 +84,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__596990185\">Enemy_W0_Boss_Part2_Ability11_Modifier</a>",
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_AttackAddedRatio"
+      ],
+      "latentQueue": [
+        "AML_Boss_00_BattleScore2_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -259,13 +264,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_AttackAddedRatio"
-      ],
-      "latentQueue": [
-        "AML_Boss_00_BattleScore2_Flag"
       ]
     },
     {
@@ -274,7 +272,6 @@ const configAbility = {
       "modifierFlags": [
         "DisableAction"
       ],
-      "stackData": [],
       "latentQueue": [
         "AML_Boss_00_BattleScore2_Flag"
       ]
@@ -282,14 +279,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-859851761\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Frensnel</a>",
+      "useEntitySnapshot": true,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -297,6 +292,7 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
+      "useEntitySnapshot": true,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -328,22 +324,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-354136848\">Enemy_W0_Boss_Part2_AttackUp_Ability07_Frensnel</a>",
+      "useEntitySnapshot": true,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -351,6 +342,7 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
+      "useEntitySnapshot": true,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -382,14 +374,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_AttackAddedRatio"
+      ],
+      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>. Abilities are enhanced.",
+      "type": "Buff",
+      "effectName": "Amplification",
+      "statusName": "Amplification",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -457,16 +454,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_AttackAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>. Abilities are enhanced.",
-      "type": "Buff",
-      "effectName": "Amplification",
-      "statusName": "Amplification"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -704,6 +692,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>",
       "stackType": "ReplaceByCaster",
+      "useEntitySnapshot": true,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -717,14 +706,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1383210331\">Enemy_W0_Boss_Part2_OnPhase3SpeedUp</a>[<span class=\"descriptionNumberColor\">Burst</span>]",
+      "stackData": [
+        "MDF_SpeedAddedRatio"
+      ],
+      "description": "Speed increased.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "Burst",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -747,19 +740,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SpeedAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "Speed increased.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "Burst"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-842741041\">Enemy_AML_Boss_Part2_Ability11_ListenSelfDieModifier</a>",
+      "latentQueue": [
+        "AML_Boss_00_BattleScore2_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -793,10 +781,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AML_Boss_00_BattleScore2_Flag"
       ]
     }
   ],

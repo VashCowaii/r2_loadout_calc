@@ -3,98 +3,51 @@ const compositeAbilityObject = {
   "fullCharacterName": 3021022,
   "trimCharacterName": 3021022,
   "abilityList": [
-    "3021022_Monster_W2_ArgentiTotem_IF_Power_AbilityP01_Part01",
-    "3021022_Monster_W2_ArgentiTotem_IF_Power_AbilityP01_Insert",
-    "3021022_Monster_W2_ArgentiTotem_01_IF_AbilityP01_Part01",
-    "3021022_Monster_W2_ArgentiTotem_01_IF_AbilityP01_Insert",
-    "3021022_Monster_W2_ArgentiTotem_01_IF_Ability01_Part02_Assist",
-    "3021022_Monster_W2_ArgentiTotem_01_IF_Ability01_Part01_Assist",
-    "3021022_Monster_W2_ArgentiTotem_01_IF_Ability01_Part02",
-    "3021022_Monster_W2_ArgentiTotem_01_IF_Ability01_Part01",
-    "3021022_Monster_W2_ArgentiTotem_01_IF_PassiveAbilityInitiate",
-    "3021022_Monster_W2_ArgentiTotem_02_IF_AbilityP01_Part01",
-    "3021022_Monster_W2_ArgentiTotem_02_IF_AbilityP01_Insert",
-    "3021022_Monster_W2_ArgentiTotem_02_Ability01_IF_Part02",
-    "3021022_Monster_W2_ArgentiTotem_02_Ability01_IF_Part01",
-    "3021022_Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part02",
-    "3021022_Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part01",
-    "3021022_Monster_W2_ArgentiTotem_02_IF_PassiveAbilityInitiate",
-    "3021022_Monster_W2_ArgentiTotem_IF_AbilityP01_Part01",
-    "3021022_Monster_W2_ArgentiTotem_IF_AbilityP01_Insert",
-    "3021022_Monster_W2_ArgentiTotem_IF_Ability01_Part02",
-    "3021022_Monster_W2_ArgentiTotem_IF_Ability01_Part01",
     "3021022_Monster_W2_ArgentiTotem_IF_ForceKill_Part02",
     "3021022_Monster_W2_ArgentiTotem_IF_ForceKill_Part01",
-    "3021022_Monster_W2_ArgentiTotem_IF_AssistAbility01_Part02",
-    "3021022_Monster_W2_ArgentiTotem_IF_AssistAbility01_Part01",
-    "3021022_Monster_W2_ArgentiTotem_IF_PassiveAbilityInitiate",
+    "3021022_Monster_W2_ArgentiTotem_01_IF_PassiveAbilityInitiate",
+    "3021022_Monster_W2_ArgentiTotem_01_IF_AbilityP01_Part01",
+    "3021022_Monster_W2_ArgentiTotem_01_IF_AbilityP01_Insert",
+    "3021022_Monster_W2_ArgentiTotem_01_AbilityP01_Part01",
+    "3021022_Monster_W2_ArgentiTotem_01_AbilityP01_Insert",
+    "3021022_Monster_W2_ArgentiTotem_01_IF_Ability01_Part02",
+    "3021022_Monster_W2_ArgentiTotem_01_IF_Ability01_Part01",
     "3021022_Modifiers",
     "3021022_Functions"
   ],
   "abilityObject": {
-    "3021022_Monster_W2_ArgentiTotem_IF_Power_AbilityP01_Part01": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_IF_Power_AbilityP01_Part01",
+    "3021022_Monster_W2_ArgentiTotem_IF_ForceKill_Part02": {
+      "fileName": "3021022_Monster_W2_ArgentiTotem_IF_ForceKill_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Level Entity}}"
-            },
-            "value1": "Monster_IF_InsertCameraFlag02",
-            "compareType": "=",
-            "value2": 1
+          "name": "Mark Entity For Immediate Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
           }
         },
         {
-          "name": "Add Events/Bonuses",
-          "to": {
+          "name": "Force Entity Death",
+          "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1869945151\">Enemy_W2_Argenti_IF_Power_Trigger</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Level Entity}}"
-            },
-            "value1": "Monster_IF_InsertCount02",
-            "compareType": "=",
-            "value2": 0
           }
         }
       ],
       "targetObjectData": {
-        "primaryTarget": "Inherent Target"
+        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },
-    "3021022_Monster_W2_ArgentiTotem_IF_Power_AbilityP01_Insert": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_IF_Power_AbilityP01_Insert",
+    "3021022_Monster_W2_ArgentiTotem_IF_ForceKill_Part01": {
+      "fileName": "3021022_Monster_W2_ArgentiTotem_IF_ForceKill_Part01",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "variableName": "Monster_IF_InsertCount02",
-          "context": "TargetEntity",
-          "value": -1,
-          "max": 100
-        },
         {
           "name": "Exit Broken-State",
           "target": {
@@ -103,74 +56,164 @@ const compositeAbilityObject = {
           }
         },
         {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Level Entity}}"
-            },
-            "value1": "Monster_IF_InsertCameraFlag02",
-            "compareType": "=",
-            "value2": 0
-          },
-          "passed": [
-            "Deleted bullshit"
-          ]
-        },
-        {
           "name": "Trigger Ability",
           "from": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W2_ArgentiTotem_IF_Power_AbilityP01_Part01",
+          "ability": "Monster_W2_ArgentiTotem_IF_ForceKill_Part02",
           "isTrigger": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Level Entity}}"
-            },
-            "value1": "Monster_IF_InsertCameraFlag02",
-            "compareType": "=",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "Monster_IF_InsertCameraFlag02",
-              "value": 1
-            },
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "Monster_IF_InsertCameraFlag",
-              "value": 0
-            }
-          ]
         }
       ],
       "targetObjectData": {
-        "primaryTarget": "Inherent Target"
+        "primaryTarget": "{{Caster}}"
       },
       "references": []
+    },
+    "3021022_Monster_W2_ArgentiTotem_01_IF_PassiveAbilityInitiate": {
+      "fileName": "3021022_Monster_W2_ArgentiTotem_01_IF_PassiveAbilityInitiate",
+      "skillTrigger": "SkillP01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1851629784\">Enemy_W2_ArgentiTotem_01_IF_Initiate</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1914692042\">Enemy_W2_Argenti_IF_Power_Mute</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1851629784\">Enemy_W2_ArgentiTotem_01_IF_Initiate</a>",
+          "modifierFlags": [
+            "Deathrattle",
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "Was Killed (Queued) [Owner]",
+              "execute": [
+                {
+                  "name": "Dispel Debuffs",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "silent": true
+                },
+                {
+                  "name": "Mark Entity For Immediate Death"
+                },
+                {
+                  "name": "Inject Ability Use",
+                  "checkOverride": {
+                    "name": "Condition Priority",
+                    "overridePriority": "MonsterForceKill",
+                    "condition": {
+                      "name": "Compare: Ability Value",
+                      "target": {
+                        "name": "Target Sequence",
+                        "Sequence": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Check Boolean Value",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "value": "PowerFlag"
+                            }
+                          }
+                        ]
+                      },
+                      "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                      "compareType": "<=",
+                      "value2": 0
+                    }
+                  },
+                  "abilityName": "Monster_W2_ArgentiTotem_01_IF_AbilityP01_Insert",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "priorityTag": "EnemyDeathEffect",
+                  "ownerState": "Mask_AliveOrLimbo",
+                  "targetState": "Mask_AliveOrLimbo",
+                  "canHitNonTargets": true,
+                  "showInActionOrder": true,
+                  "abortFlags": [
+                    "STAT_MonsterChangePhase"
+                  ],
+                  "allowAbilityTriggers": false
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier is Added [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     "3021022_Monster_W2_ArgentiTotem_01_IF_AbilityP01_Part01": {
       "fileName": "3021022_Monster_W2_ArgentiTotem_01_IF_AbilityP01_Part01",
@@ -351,71 +394,197 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "3021022_Monster_W2_ArgentiTotem_01_IF_Ability01_Part02_Assist": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_01_IF_Ability01_Part02_Assist",
+    "3021022_Monster_W2_ArgentiTotem_01_AbilityP01_Part01": {
+      "fileName": "3021022_Monster_W2_ArgentiTotem_01_AbilityP01_Part01",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Find New Target",
-          "from": {
+          "name": "Exit Broken-State",
+          "target": {
             "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "maxTargets": 1,
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "IF",
           "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "value": "PowerFlag"
+            "name": "Compare: Variable",
+            "value1": "PowerFlag",
+            "compareType": "=",
+            "value2": 1,
+            "contextScope": "TargetEntity"
           },
-          "ifTargetFound": [
+          "passed": [
             {
-              "name": "Remove Events/Bonuses",
-              "to": {
+              "name": "Find New Target",
+              "from": {
                 "name": "Target Name",
-                "target": "{{Caster}}"
+                "target": "{{All Team Members(Exclude Self)}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+              "searchRandom": true,
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "PowerFlag"
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-444895536\">W2_ArgentiTotem_01_BattleScore1</a>"
+                }
+              ]
             },
             {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Name",
-                "target": "{{Parameter Target}}"
+                "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-1768656268\">Enemy_W2_Argenti_IF_EX_PowerUpDark</a>[<span class=\"descriptionNumberColor\">Regain Enhancement</span>]",
-              "casterAssign": "TargetSelf"
+              "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "duration": {
+                "operator": "Variables[0] (UnusedUnderThisBase_8240) || RETURN",
+                "displayLines": "UnusedUnderThisBase_8240",
+                "constants": [],
+                "variables": [
+                  "UnusedUnderThisBase_8240"
+                ]
+              },
+              "valuePerStack": {
+                "MDF_ShowValue1": {
+                  "operator": "Variables[0] (UnusedUnderThisBase_8246) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8246",
+                  "constants": [],
+                  "variables": [
+                    "UnusedUnderThisBase_8246"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": {
+                "operator": "Variables[0] (UnusedUnderThisBase_8241) || Constants[0] (1) || SUB || RETURN",
+                "displayLines": "(UnusedUnderThisBase_8241 - 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "UnusedUnderThisBase_8241"
+                ]
+              }
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "duration": {
+                "operator": "Variables[0] (UnusedUnderThisBase_8240) || RETURN",
+                "displayLines": "UnusedUnderThisBase_8240",
+                "constants": [],
+                "variables": [
+                  "UnusedUnderThisBase_8240"
+                ]
+              },
+              "valuePerStack": {
+                "MDF_ShowValue1": {
+                  "operator": "Variables[0] (UnusedUnderThisBase_8246) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8246",
+                  "constants": [],
+                  "variables": [
+                    "UnusedUnderThisBase_8246"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": 1
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "duration": {
+                "operator": "Variables[0] (UnusedUnderThisBase_8240) || RETURN",
+                "displayLines": "UnusedUnderThisBase_8240",
+                "constants": [],
+                "variables": [
+                  "UnusedUnderThisBase_8240"
+                ]
+              },
+              "valuePerStack": {
+                "MDF_ShowValue1": {
+                  "operator": "Variables[0] (UnusedUnderThisBase_8246) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8246",
+                  "constants": [],
+                  "variables": [
+                    "UnusedUnderThisBase_8246"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": {
+                "operator": "Variables[0] (UnusedUnderThisBase_8247) || RETURN",
+                "displayLines": "UnusedUnderThisBase_8247",
+                "constants": [],
+                "variables": [
+                  "UnusedUnderThisBase_8247"
+                ]
+              }
             }
           ]
         }
       ],
       "targetObjectData": {
-        "primaryTarget": "All Enemy Team Members"
+        "primaryTarget": "Inherent Target"
       },
       "references": []
     },
-    "3021022_Monster_W2_ArgentiTotem_01_IF_Ability01_Part01_Assist": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_01_IF_Ability01_Part01_Assist",
+    "3021022_Monster_W2_ArgentiTotem_01_AbilityP01_Insert": {
+      "fileName": "3021022_Monster_W2_ArgentiTotem_01_AbilityP01_Insert",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Stone of Plummeting Foundation"
+        },
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
         {
           "name": "Trigger Ability",
           "from": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_W2_ArgentiTotem_01_IF_Ability01_Part02_Assist",
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W2_ArgentiTotem_01_AbilityP01_Part01",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "targetObjectData": {
-        "primaryTarget": "All Enemy Team Members"
+        "primaryTarget": "Inherent Target"
       },
       "references": []
     },
@@ -553,1984 +722,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "3021022_Monster_W2_ArgentiTotem_01_IF_PassiveAbilityInitiate": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_01_IF_PassiveAbilityInitiate",
-      "skillTrigger": "SkillP01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1851629784\">Enemy_W2_ArgentiTotem_01_IF_Initiate</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1914692042\">Enemy_W2_Argenti_IF_Power_Mute</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1851629784\">Enemy_W2_ArgentiTotem_01_IF_Initiate</a>",
-          "modifierFlags": [
-            "Deathrattle",
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "Was Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Dispel Debuffs",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "silent": true
-                },
-                {
-                  "name": "Mark Entity For Immediate Death"
-                },
-                {
-                  "name": "Inject Ability Use",
-                  "checkOverride": {
-                    "name": "Condition Priority",
-                    "overridePriority": "MonsterForceKill",
-                    "condition": {
-                      "name": "Compare: Ability Value",
-                      "target": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{All Team Members}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Check Boolean Value",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "value": "PowerFlag"
-                            }
-                          }
-                        ]
-                      },
-                      "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                      "compareType": "<=",
-                      "value2": 0
-                    }
-                  },
-                  "abilityName": "Monster_W2_ArgentiTotem_01_IF_AbilityP01_Insert",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "priorityTag": "EnemyDeathEffect",
-                  "ownerState": "Mask_AliveOrLimbo",
-                  "targetState": "Mask_AliveOrLimbo",
-                  "canHitNonTargets": true,
-                  "showInActionOrder": true,
-                  "abortFlags": [
-                    "STAT_MonsterChangePhase"
-                  ],
-                  "allowAbilityTriggers": false
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "3021022_Monster_W2_ArgentiTotem_02_IF_AbilityP01_Part01": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_02_IF_AbilityP01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Level Entity}}"
-            },
-            "value1": "Monster_IF_InsertCameraFlag",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1173935247\">DeathCamera_First</a>"
-            }
-          ]
-        },
-        {
-          "name": "UI Display Event",
-          "popUpText": "Imitation of Alacritous Desire"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "PowerFlag",
-            "compareType": "=",
-            "value2": 1,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "PowerFlag"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1174449239\">W2_ArgentiTotem_02_BattleScore1</a>"
-                }
-              ]
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "variableName": "_MaxHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Shield",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifierNameArray": [
-                        "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
-                      ],
-                      "value": {
-                        "operator": "Variables[0] (Monster_IF_InsertCameraFlag) || Variables[1] (_MaxHP) || MUL || RETURN",
-                        "displayLines": "(Monster_IF_InsertCameraFlag * _MaxHP)",
-                        "constants": [],
-                        "variables": [
-                          "Monster_IF_InsertCameraFlag",
-                          "_MaxHP"
-                        ]
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
-                      "duration": 2,
-                      "valuePerStack": {
-                        "MDF_ShowValue": {
-                          "operator": "Variables[0] (Monster_IF_InsertCameraFlag) || Variables[1] (_MaxHP) || MUL || RETURN",
-                          "displayLines": "(Monster_IF_InsertCameraFlag * _MaxHP)",
-                          "constants": [],
-                          "variables": [
-                            "Monster_IF_InsertCameraFlag",
-                            "_MaxHP"
-                          ]
-                        }
-                      },
-                      "casterAssign": "TargetSelf"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "variableName": "_MaxHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
-                      "duration": 2,
-                      "valuePerStack": {
-                        "MDF_ShowValue": {
-                          "operator": "Variables[0] (Monster_IF_InsertCameraFlag) || Variables[1] (_MaxHP) || MUL || RETURN",
-                          "displayLines": "(Monster_IF_InsertCameraFlag * _MaxHP)",
-                          "constants": [],
-                          "variables": [
-                            "Monster_IF_InsertCameraFlag",
-                            "_MaxHP"
-                          ]
-                        }
-                      },
-                      "casterAssign": "TargetSelf"
-                    },
-                    {
-                      "name": "Adjust Shield",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifierNameArray": [
-                        "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
-                      ],
-                      "value": {
-                        "operator": "Variables[0] (Monster_IF_InsertCameraFlag) || Variables[1] (_MaxHP) || MUL || RETURN",
-                        "displayLines": "(Monster_IF_InsertCameraFlag * _MaxHP)",
-                        "constants": [],
-                        "variables": [
-                          "Monster_IF_InsertCameraFlag",
-                          "_MaxHP"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Adjust Shield",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifierNameArray": [
-                        "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]"
-                      ],
-                      "value": {
-                        "operator": "Variables[0] (Monster_IF_InsertCameraFlag) || Variables[1] (_MaxHP) || MUL || RETURN",
-                        "displayLines": "(Monster_IF_InsertCameraFlag * _MaxHP)",
-                        "constants": [],
-                        "variables": [
-                          "Monster_IF_InsertCameraFlag",
-                          "_MaxHP"
-                        ]
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
-                      "duration": 2,
-                      "valuePerStack": {
-                        "MDF_ShowValue": {
-                          "operator": "Variables[0] (Monster_IF_InsertCameraFlag) || Variables[1] (_MaxHP) || MUL || RETURN",
-                          "displayLines": "(Monster_IF_InsertCameraFlag * _MaxHP)",
-                          "constants": [],
-                          "variables": [
-                            "Monster_IF_InsertCameraFlag",
-                            "_MaxHP"
-                          ]
-                        }
-                      },
-                      "casterAssign": "TargetSelf"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Level Entity}}"
-            },
-            "value1": "Monster_IF_InsertCount",
-            "compareType": "=",
-            "value2": 0
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3021022_Monster_W2_ArgentiTotem_02_IF_AbilityP01_Insert": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_02_IF_AbilityP01_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "variableName": "Monster_IF_InsertCount",
-          "context": "TargetEntity",
-          "value": -1,
-          "max": 100
-        },
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W2_ArgentiTotem_02_IF_AbilityP01_Part01",
-          "isTrigger": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Level Entity}}"
-            },
-            "value1": "Monster_IF_InsertCameraFlag",
-            "compareType": "=",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "Monster_IF_InsertCameraFlag",
-              "value": 1
-            },
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "Monster_IF_InsertCameraFlag02",
-              "value": 0
-            },
-            "Deleted bullshit"
-          ],
-          "failed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1173935247\">DeathCamera_First</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3021022_Monster_W2_ArgentiTotem_02_Ability01_IF_Part02": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_02_Ability01_IF_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "_MaxHP",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
-              "duration": -1,
-              "valuePerStack": {
-                "MDF_ShowValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9) || Variables[1] (_MaxHP) || MUL || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_9 * _MaxHP)",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_9",
-                    "_MaxHP"
-                  ]
-                }
-              },
-              "casterAssign": "TargetSelf"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
-              "duration": -1,
-              "valuePerStack": {
-                "MDF_ShowValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10) || Variables[1] (_MaxHP) || MUL || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_10 * _MaxHP)",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_10",
-                    "_MaxHP"
-                  ]
-                }
-              },
-              "casterAssign": "TargetSelf"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "3021022_Monster_W2_ArgentiTotem_02_Ability01_IF_Part01": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_02_Ability01_IF_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_ArgentiTotem_02_Ability01_IF_Part02",
-          "isTrigger": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "PowerFlag"
-              },
-              "ifTargetFound": [
-                "Deleted bullshit"
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "PowerFlag"
-              },
-              "ifTargetFound": [
-                "Deleted bullshit"
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "3021022_Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part02": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1783897766\">Monster_W2_Argenti_IF_Summon01</a>"
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1008150215\">Standard_CTRL_Taunt_ArgentiTotem_02_IF</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
-                  "duration": -1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1767120147\">Monster_W2_Argenti_IF_Summon02</a>"
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1008150215\">Standard_CTRL_Taunt_ArgentiTotem_02_IF</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
-                  "duration": -1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1750342528\">Monster_W2_Argenti_IF_Summon03</a>"
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1008150215\">Standard_CTRL_Taunt_ArgentiTotem_02_IF</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
-                  "duration": -1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1867785861\">Monster_W2_Argenti_IF_Summon04</a>"
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1008150215\">Standard_CTRL_Taunt_ArgentiTotem_02_IF</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
-                  "duration": -1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "_MaxHP",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
-              "duration": -1,
-              "valuePerStack": {
-                "MDF_ShowValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9) || Variables[1] (_MaxHP) || MUL || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_9 * _MaxHP)",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_9",
-                    "_MaxHP"
-                  ]
-                }
-              },
-              "casterAssign": "TargetSelf"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
-              "duration": -1,
-              "valuePerStack": {
-                "MDF_ShowValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10) || Variables[1] (_MaxHP) || MUL || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_10 * _MaxHP)",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_10",
-                    "_MaxHP"
-                  ]
-                }
-              },
-              "casterAssign": "TargetSelf"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3021022_Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part01": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3021022_Monster_W2_ArgentiTotem_02_IF_PassiveAbilityInitiate": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_02_IF_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2041202953\">Enemy_W2_ArgentiTotem_02_IF_Initiate</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2041202953\">Enemy_W2_ArgentiTotem_02_IF_Initiate</a>",
-          "modifierFlags": [
-            "Deathrattle",
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "When Put in Deathstate Limbo",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "PowerFlag",
-                      "value": 1
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "PowerFlag",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Was Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Dispel Debuffs",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "silent": true
-                },
-                {
-                  "name": "Mark Entity For Immediate Death"
-                },
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Level Entity}}"
-                  },
-                  "variableName": "Monster_IF_InsertCount",
-                  "context": "TargetEntity",
-                  "value": 1,
-                  "max": 100
-                },
-                {
-                  "name": "Inject Ability Use",
-                  "checkOverride": {
-                    "name": "Condition Priority",
-                    "overridePriority": "MonsterForceKill",
-                    "condition": {
-                      "name": "Compare: Ability Value",
-                      "target": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{All Team Members}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Check Boolean Value",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "value": "PowerFlag"
-                            }
-                          }
-                        ]
-                      },
-                      "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                      "compareType": "<=",
-                      "value2": 0
-                    }
-                  },
-                  "abilityName": "Monster_W2_ArgentiTotem_02_IF_AbilityP01_Insert",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "priorityTag": "EnemyDeathEffect",
-                  "ownerState": "Mask_AliveOrLimbo",
-                  "targetState": "Mask_AliveOrLimbo",
-                  "canHitNonTargets": true,
-                  "showInActionOrder": true,
-                  "abortFlags": [
-                    "STAT_MonsterChangePhase"
-                  ],
-                  "allowAbilityTriggers": false
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "3021022_Monster_W2_ArgentiTotem_IF_AbilityP01_Part01": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_IF_AbilityP01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Amor of Destined Death"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "PowerFlag",
-            "compareType": "=",
-            "value2": 1,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "PowerFlag"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"64663457\">W2_ArgentiTotem_BattleScore1</a>"
-                }
-              ]
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_5) || Constants[0] (0.3) || MUL || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_5 * 0.3)",
-                  "constants": [
-                    0.3
-                  ],
-                  "variables": [
-                    "UnusedUnderThisBase_5"
-                  ]
-                },
-                "dmgFormula": "Max HP Scaling",
-                "Toughness": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_6) || Constants[0] (0.3) || MUL || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_6 * 0.3)",
-                  "constants": [
-                    0.3
-                  ],
-                  "variables": [
-                    "UnusedUnderThisBase_6"
-                  ]
-                },
-                "ToughnessDMGType": {
-                  "DamageType": "Physical"
-                },
-                "Tags": null,
-                "attackType": "Basic ATK"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_5) || Constants[0] (0.7) || MUL || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_5 * 0.7)",
-                  "constants": [
-                    0.7
-                  ],
-                  "variables": [
-                    "UnusedUnderThisBase_5"
-                  ]
-                },
-                "dmgFormula": "Max HP Scaling",
-                "Toughness": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_6) || Constants[0] (0.7) || MUL || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_6 * 0.7)",
-                  "constants": [
-                    0.7
-                  ],
-                  "variables": [
-                    "UnusedUnderThisBase_6"
-                  ]
-                },
-                "ToughnessDMGType": {
-                  "DamageType": "Physical"
-                },
-                "Tags": null,
-                "attackType": "Basic ATK"
-              }
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target Count",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{All Team Members(Exclude Self)}}"
-                },
-                "compareType": ">",
-                "value2": 0
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_7) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_7",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_7"
-                  ]
-                },
-                "dmgFormula": "Max HP Scaling",
-                "Toughness": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_8"
-                  ]
-                },
-                "ToughnessDMGType": {
-                  "DamageType": "Physical"
-                },
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Level Entity}}"
-            },
-            "value1": "Monster_IF_InsertCount",
-            "compareType": "=",
-            "value2": 0
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3021022_Monster_W2_ArgentiTotem_IF_AbilityP01_Insert": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_IF_AbilityP01_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "variableName": "Monster_IF_InsertCount",
-          "context": "TargetEntity",
-          "value": -1,
-          "max": 100
-        },
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_ArgentiTotem_IF_AbilityP01_Part01",
-          "isTrigger": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Level Entity}}"
-            },
-            "value1": "Monster_IF_InsertCameraFlag",
-            "compareType": "=",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "Monster_IF_InsertCameraFlag",
-              "value": 1
-            },
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "Monster_IF_InsertCameraFlag02",
-              "value": 0
-            },
-            "Deleted bullshit"
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3021022_Monster_W2_ArgentiTotem_IF_Ability01_Part02": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_IF_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>"
-        },
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "variableName": "_TargetNum"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Looped Event",
-              "maxLoops": {
-                "operator": "Variables[0] (_TargetNum) || RETURN",
-                "displayLines": "_TargetNum",
-                "constants": [],
-                "variables": [
-                  "_TargetNum"
-                ]
-              },
-              "Event": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>",
-                    "invertCondition": true
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>"
-                    },
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Physical",
-                        "Damage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_4) || Constants[0] (0.5) || MUL || RETURN",
-                          "displayLines": "(UnusedUnderThisBase_4 * 0.5)",
-                          "constants": [
-                            0.5
-                          ],
-                          "variables": [
-                            "UnusedUnderThisBase_4"
-                          ]
-                        },
-                        "Toughness": null,
-                        "ToughnessDMGType": {
-                          "DamageType": "Physical"
-                        },
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "50%"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_4) || Constants[0] (0.5) || MUL || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_4 * 0.5)",
-                  "constants": [
-                    0.5
-                  ],
-                  "variables": [
-                    "UnusedUnderThisBase_4"
-                  ]
-                },
-                "Toughness": null,
-                "ToughnessDMGType": {
-                  "DamageType": "Physical"
-                },
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Looped Event",
-              "maxLoops": {
-                "operator": "Variables[0] (_TargetNum) || RETURN",
-                "displayLines": "_TargetNum",
-                "constants": [],
-                "variables": [
-                  "_TargetNum"
-                ]
-              },
-              "Event": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>",
-                    "invertCondition": true
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>"
-                    },
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Physical",
-                        "Damage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_3) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_3",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_3"
-                          ]
-                        },
-                        "Toughness": null,
-                        "ToughnessDMGType": {
-                          "DamageType": "Physical"
-                        },
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1312814\">Monster_W2_ArgentiTotem_IF_Ability01_MarkModifier</a>",
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "3021022_Monster_W2_ArgentiTotem_IF_Ability01_Part01": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_IF_Ability01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_ArgentiTotem_IF_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "3021022_Monster_W2_ArgentiTotem_IF_ForceKill_Part02": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_IF_ForceKill_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Mark Entity For Immediate Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3021022_Monster_W2_ArgentiTotem_IF_ForceKill_Part01": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_IF_ForceKill_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_ArgentiTotem_IF_ForceKill_Part02",
-          "isTrigger": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3021022_Monster_W2_ArgentiTotem_IF_AssistAbility01_Part02": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_IF_AssistAbility01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "3021022_Monster_W2_ArgentiTotem_IF_AssistAbility01_Part01": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_IF_AssistAbility01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true,
-          "toRemove": [
-            "STAT_CTRL",
-            "DisableAction",
-            "Break"
-          ]
-        },
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_ArgentiTotem_IF_AssistAbility01_Part02",
-          "isTrigger": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "3021022_Monster_W2_ArgentiTotem_IF_PassiveAbilityInitiate": {
-      "fileName": "3021022_Monster_W2_ArgentiTotem_IF_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1639070947\">Enemy_W2_ArgentiTotem_IF_Initiate</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1639070947\">Enemy_W2_ArgentiTotem_IF_Initiate</a>",
-          "modifierFlags": [
-            "Deathrattle",
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "When Put in Deathstate Limbo",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "PowerFlag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Was Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Dispel Debuffs",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "silent": true
-                },
-                {
-                  "name": "Mark Entity For Immediate Death"
-                },
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Level Entity}}"
-                  },
-                  "variableName": "Monster_IF_InsertCount",
-                  "context": "TargetEntity",
-                  "value": 1,
-                  "max": 100
-                },
-                {
-                  "name": "Inject Ability Use",
-                  "checkOverride": {
-                    "name": "Condition Priority",
-                    "overridePriority": "MonsterForceKill",
-                    "condition": {
-                      "name": "Compare: Ability Value",
-                      "target": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{All Team Members}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Check Boolean Value",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "value": "PowerFlag"
-                            }
-                          }
-                        ]
-                      },
-                      "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                      "compareType": "<=",
-                      "value2": 0
-                    }
-                  },
-                  "abilityName": "Monster_W2_ArgentiTotem_IF_AbilityP01_Insert",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "priorityTag": "EnemyDeathEffect",
-                  "ownerState": "Mask_AliveOrLimbo",
-                  "targetState": "Mask_AliveOrLimbo",
-                  "canHitNonTargets": true,
-                  "showInActionOrder": true,
-                  "abortFlags": [
-                    "STAT_MonsterChangePhase"
-                  ],
-                  "allowAbilityTriggers": false
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "3021022_Modifiers": {
       "fileName": "3021022_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -2543,11 +734,62 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "stackType": "Replace",
+          "stackData": [
+            "MDF_ShowValue1"
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_ShowValue2",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_ShowValue2) || Variables[1] (MDF_ShowValue1) || MUL || RETURN",
+                    "displayLines": "(MDF_ShowValue2 * MDF_ShowValue1)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_ShowValue2",
+                      "MDF_ShowValue1"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "Shield"
           ],
+          "description": "Gains a Shield that can offset DMG.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Shield",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2600,15 +842,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Ability Use [Owner]: End"
             }
-          ],
-          "stackData": [
-            "MDF_ShowValue"
-          ],
-          "latentQueue": [],
-          "description": "Gains a Shield that can offset DMG.",
-          "type": "Buff",
-          "effectName": "Shield",
-          "statusName": "Shield"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3185,6 +1419,10 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "RemoveWhenCasterUnstage"
           ],
+          "description": "Can only select %CasterName as the target to attack.",
+          "type": "Debuff",
+          "effectName": "Taunt",
+          "statusName": "Taunt",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -3369,13 +1607,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Can only select %CasterName as the target to attack.",
-          "type": "Debuff",
-          "effectName": "Taunt",
-          "statusName": "Taunt"
+          ]
         }
       ],
       "references": []

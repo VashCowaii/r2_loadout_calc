@@ -57,6 +57,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1372338228\">LC_23021_Sub2</a>[<span class=\"descriptionNumberColor\">Radiant Flame</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Upon reaching <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> stacks, removes all the Radiant Flame stacks and gains Mask.",
+      "type": "Other",
+      "statusName": "Radiant Flame",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -121,15 +124,20 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Upon reaching <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> stacks, removes all the Radiant Flame stacks and gains Mask.",
-      "type": "Other",
-      "statusName": "Radiant Flame"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__918300854\">LC_23021_Sub</a>[<span class=\"descriptionNumberColor\">CRIT Rate and CRIT DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue",
+        "MDF_PropertyValue2"
+      ],
+      "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
+      "type": "Buff",
+      "effectName": "CRIT Rate and CRIT DMG Boost",
+      "statusName": "CRIT Rate and CRIT DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -171,16 +179,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_PropertyValue2"
-      ],
-      "latentQueue": [],
-      "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
-      "type": "Buff",
-      "effectName": "CRIT Rate and CRIT DMG Boost",
-      "statusName": "CRIT Rate and CRIT DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -309,9 +308,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

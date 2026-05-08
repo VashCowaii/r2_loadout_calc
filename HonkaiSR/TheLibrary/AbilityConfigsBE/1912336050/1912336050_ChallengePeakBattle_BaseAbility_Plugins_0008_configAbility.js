@@ -76,6 +76,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1560321548\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_04</a>",
+      "stackData": [
+        "ChallengePeakBattle_Plugins_0008_ADF_1",
+        "ChallengePeakBattle_Plugins_0008_ADF_2",
+        "ChallengePeakBattle_Plugins_0008_ADF_3"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -117,18 +122,21 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "ChallengePeakBattle_Plugins_0008_ADF_1",
-        "ChallengePeakBattle_Plugins_0008_ADF_2",
-        "ChallengePeakBattle_Plugins_0008_ADF_3"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1577099167\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_03</a>[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "ChallengePeakBattle_Plugins_0008_ADF_1",
+        "ChallengePeakBattle_Plugins_0008_ADF_2"
+      ],
+      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0008_ADF_2</span>.",
+      "type": "Other",
+      "effectName": "ATK Boost",
+      "statusName": "Impassioned Spirits",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -158,21 +166,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "ChallengePeakBattle_Plugins_0008_ADF_1",
-        "ChallengePeakBattle_Plugins_0008_ADF_2"
-      ],
-      "latentQueue": [],
-      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0008_ADF_2</span>.",
-      "type": "Other",
-      "effectName": "ATK Boost",
-      "statusName": "Impassioned Spirits",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1593876786\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0008_02</a>[<span class=\"descriptionNumberColor\">Impassioned Spirits</span>]",
+      "description": "Increases ATK by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0008_ADF_1</span>.",
+      "type": "Other",
+      "statusName": "Impassioned Spirits",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -195,10 +196,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases ATK by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0008_ADF_1</span>.",
-      "type": "Other",
-      "statusName": "Impassioned Spirits"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -349,9 +347,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

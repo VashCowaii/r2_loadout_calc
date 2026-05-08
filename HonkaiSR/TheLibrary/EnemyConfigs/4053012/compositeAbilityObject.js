@@ -3,12 +3,9 @@ const compositeAbilityObject = {
   "fullCharacterName": 4053012,
   "trimCharacterName": 4053012,
   "abilityList": [
-    "4053012_Monster_W4_Manta_Passive_Insert",
     "4053012_Monster_W4_Manta_PassiveAbilityInitiate",
     "4053012_Monster_W4_Manta_Ability05_Part02",
     "4053012_Monster_W4_Manta_Ability05_Part01",
-    "4053012_BattleEventAbility_Monster_W4_Manta_BattleEventFinish",
-    "4053012_BattleEventAbility_Monster_W4_Manta_BattleEvent",
     "4053012_Monster_W4_Manta_Ability04_Part02",
     "4053012_Monster_W4_Manta_Ability04_Part01",
     "4053012_Monster_W4_Manta_Ability03_Part02",
@@ -17,259 +14,10 @@ const compositeAbilityObject = {
     "4053012_Monster_W4_Manta_Ability02_Part01",
     "4053012_Monster_W4_Manta_Ability01_Part02",
     "4053012_Monster_W4_Manta_Ability01_Part01",
-    "4053012_Monster_W4_Manta_TimeSlow",
     "4053012_Modifiers",
     "4053012_BE_BattleEvents"
   ],
   "abilityObject": {
-    "4053012_Monster_W4_Manta_Passive_Insert": {
-      "fileName": "4053012_Monster_W4_Manta_Passive_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "Manta_Passive"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Copy",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
-              "variable": "MDF_Trigger",
-              "target2": null,
-              "variable2": "Manta_Passive"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "Manta_Passive",
-                "compareType": "=",
-                "value2": 1
-              },
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "BattleScore_Manta"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"233383223\">Enemy_W4_Manta_PassiveUp_Sub</a>[<span class=\"descriptionNumberColor\">Revel in Destruction</span>]"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1829701863\">W4_Manta_BattleScore1</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1079670411\">Enemy_W4_Manta_Passive_Insert_Mark</a>"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Monster Rank",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "compareType": "=",
-                    "value2": 3
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "RLElite"
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Current Turn Is",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Action Advance/Delay",
-                          "advanceType": "Set",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "set": 0
-                        },
-                        {
-                          "name": "Assign Advance/Delay to Current Ability Use",
-                          "adjustmentValue": 0,
-                          "adjustmentType": "="
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Action Advance/Delay",
-                          "advanceType": "Set",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "set": 0
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "SW_Minion01_03"
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "SW_Minion01_03"
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Current Turn Is",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Action Advance/Delay",
-                          "advanceType": "Set",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "set": 0
-                        },
-                        {
-                          "name": "Assign Advance/Delay to Current Ability Use",
-                          "adjustmentValue": 0,
-                          "adjustmentType": "="
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Action Advance/Delay",
-                          "advanceType": "Set",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "set": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1823230905\">Enemy_W4_Manta_Passive_Insert</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1500090502\">Enemy_W4_Unicorn_01_HitSummonMark1</a>"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4053012_Monster_W4_Manta_PassiveAbilityInitiate": {
       "fileName": "4053012_Monster_W4_Manta_PassiveAbilityInitiate",
       "skillTrigger": "PassiveSkill02",
@@ -394,9 +142,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -537,146 +283,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []
-    },
-    "4053012_BattleEventAbility_Monster_W4_Manta_BattleEventFinish": {
-      "fileName": "4053012_BattleEventAbility_Monster_W4_Manta_BattleEventFinish",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"233383223\">Enemy_W4_Manta_PassiveUp_Sub</a>[<span class=\"descriptionNumberColor\">Revel in Destruction</span>]"
-          }
-        },
-        {
-          "name": "Destroy Battle Entity",
-          "identifier": "Monster_W4_Manta_00_BE"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "4053012_BattleEventAbility_Monster_W4_Manta_BattleEvent": {
-      "fileName": "4053012_BattleEventAbility_Monster_W4_Manta_BattleEvent",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1051712844\">Enemy_W4_Manta_BEFinish</a>"
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "Monster_W4_Manta_00_BE",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "BattleEventAbility_Monster_W4_Manta_BattleEventFinish"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1051712844\">Enemy_W4_Manta_BEFinish</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "condition": {
-                    "name": "Insert Ability Condition",
-                    "type": "AbilityOwnerInsertUnusedCount",
-                    "typeValue": 1
-                  },
-                  "conditionActive": {
-                    "name": "Target Exists",
-                    "target": {
-                      "name": "Add Target by Unique Identifier",
-                      "identifier": "Monster_W4_Manta_00_BE"
-                    },
-                    "living": true
-                  },
-                  "abilityName": "BattleEventAbility_Monster_W4_Manta_BattleEventFinish",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Level Entity}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "priorityTag": "EnemyChangeState",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All(with Unselectable)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1741196770\">Enemy_W4_Manta_Charge</a>[<span class=\"descriptionNumberColor\">Yearning for a Shared Dance</span>]"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All(with Unselectable)}}"
-                  },
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]"
-                  },
-                  "noTargetFound": [
-                    {
-                      "name": "Force Entity Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
     },
     "4053012_Monster_W4_Manta_Ability04_Part02": {
       "fileName": "4053012_Monster_W4_Manta_Ability04_Part02",
@@ -1123,6 +729,14 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_DefenceDown"
           ],
+          "stackData": [
+            "MDF_PropertyValue",
+            "MDF_PropertyValue2"
+          ],
+          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
+          "type": "Debuff",
+          "effectName": "Inebriated Daze",
+          "statusName": "Inebriated Daze",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1161,16 +775,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_PropertyValue2"
-          ],
-          "latentQueue": [],
-          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
-          "type": "Debuff",
-          "effectName": "Inebriated Daze",
-          "statusName": "Inebriated Daze"
+          ]
         }
       ]
     },
@@ -1296,57 +901,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4053012_Monster_W4_Manta_TimeSlow": {
-      "fileName": "4053012_Monster_W4_Manta_TimeSlow",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1670308834\">Enemy_W4_Manta_TimeSlow</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2138152353\">Enemy_W4_Manta_TimeSlow_Remove</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2138152353\">Enemy_W4_Manta_TimeSlow_Remove</a>",
-          "execute": [
-            {
-              "eventTrigger": "Leave Battle"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1670308834\">Enemy_W4_Manta_TimeSlow</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "4053012_Modifiers": {
       "fileName": "4053012_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1409,10 +963,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Manta_Passive"
           ]
         },
         {
@@ -1424,6 +974,11 @@ const compositeAbilityObject = {
             "CanBeAddedToServant",
             "CanListenServantCallback"
           ],
+          "useEntitySnapshot": true,
+          "description": "<span class=\"descriptionNumberColor\">MDF_TotalDamageValue</span> DMG is taken in the form of DoT over a certain number of turns. Wind Shear, Burn, Shock, and Bleed DoTs are received at the start of every turn. Immediately dispelled for this unit when \"Revel in Destruction\" state ends, negating this DoT.",
+          "type": "Debuff",
+          "effectName": "Black Tide Fever",
+          "statusName": "Black Tide Fever",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2123,12 +1678,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "<span class=\"descriptionNumberColor\">MDF_TotalDamageValue</span> DMG is taken in the form of DoT over a certain number of turns. Wind Shear, Burn, Shock, and Bleed DoTs are received at the start of every turn. Immediately dispelled for this unit when \"Revel in Destruction\" state ends, negating this DoT.",
-          "type": "Debuff",
-          "effectName": "Black Tide Fever",
-          "statusName": "Black Tide Fever"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2139,6 +1689,11 @@ const compositeAbilityObject = {
             "CanBeAddedToServant",
             "CanListenServantCallback"
           ],
+          "useEntitySnapshot": true,
+          "description": "<span class=\"descriptionNumberColor\">MDF_TotalDamageValue</span> DMG is taken in the form of DoT over a certain number of turns. Wind Shear, Burn, Shock, and Bleed DoTs are received at the start of every turn. Immediately dispelled for this unit when HP is fully restored, negating this DoT.",
+          "type": "Debuff",
+          "effectName": "Black Tide Fever",
+          "statusName": "Black Tide Fever",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2989,12 +2544,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "<span class=\"descriptionNumberColor\">MDF_TotalDamageValue</span> DMG is taken in the form of DoT over a certain number of turns. Wind Shear, Burn, Shock, and Bleed DoTs are received at the start of every turn. Immediately dispelled for this unit when HP is fully restored, negating this DoT.",
-          "type": "Debuff",
-          "effectName": "Black Tide Fever",
-          "statusName": "Black Tide Fever"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3008,6 +2558,11 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1053900391\">Enemy_W4_Manta_Virus_Transfer</a>",
+          "stackData": [
+            "MDF_TransferRatio",
+            "MDF_LifeTime",
+            "MDF_TriggerRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -3337,17 +2892,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_TransferRatio",
-            "MDF_LifeTime",
-            "MDF_TriggerRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1741196770\">Enemy_W4_Manta_Charge</a>[<span class=\"descriptionNumberColor\">Yearning for a Shared Dance</span>]",
+          "description": "Uses \"Embrace From the Waves\" in every action. Dispelled when Weakness is broken.",
+          "type": "Other",
+          "effectName": "Yearning for a Shared Dance",
+          "statusName": "Yearning for a Shared Dance",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3399,17 +2952,15 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Uses \"Embrace From the Waves\" in every action. Dispelled when Weakness is broken.",
-          "type": "Other",
-          "effectName": "Yearning for a Shared Dance",
-          "statusName": "Yearning for a Shared Dance"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__233383223\">Enemy_W4_Manta_PassiveUp_Sub</a>[<span class=\"descriptionNumberColor\">Revel in Destruction</span>]",
+          "description": "Number of hits to advance action decreases. When taking DMG or using certain abilities to deal DMG, some DMG will be taken in the form of \"Black Tide Fever\" over a specific number of turns. When the \"Revel in Destruction\" countdown's turn begins, all enemy units will have their \"Revel in Destruction\" state dispelled.",
+          "type": "Other",
+          "effectName": "Revel in Destruction",
+          "statusName": "Revel in Destruction",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3509,11 +3060,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Number of hits to advance action decreases. When taking DMG or using certain abilities to deal DMG, some DMG will be taken in the form of \"Black Tide Fever\" over a specific number of turns. When the \"Revel in Destruction\" countdown's turn begins, all enemy units will have their \"Revel in Destruction\" state dispelled.",
-          "type": "Other",
-          "effectName": "Revel in Destruction",
-          "statusName": "Revel in Destruction"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3524,7 +3071,6 @@ const compositeAbilityObject = {
             "MDF_LifeTime",
             "MDF_TriggerRatio"
           ],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -3616,11 +3162,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1079670411\">Enemy_W4_Manta_Passive_Insert_Mark</a>",
-          "stackData": [],
-          "latentQueue": [
-            "Manta_Passive"
-          ]
+          "for": "<a class=\"gModGreen\" id=\"mod__1079670411\">Enemy_W4_Manta_Passive_Insert_Mark</a>"
         },
         {
           "name": "Modifier Construction",
@@ -3697,6 +3239,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_MaxLayer"
+          ],
+          "description": "Advances action after taking a certain number of attacks from Basic ATK, Skill, Ultimate, or Memosprite Skill.",
+          "type": "Other",
+          "statusName": "Respite By The Waters",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4394,15 +3943,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxLayer"
-          ],
-          "latentQueue": [],
-          "description": "Advances action after taking a certain number of attacks from Basic ATK, Skill, Ultimate, or Memosprite Skill.",
-          "type": "Other",
-          "statusName": "Respite By The Waters",
-          "addStacksPerTrigger": 1
+          ]
         }
       ],
       "references": []

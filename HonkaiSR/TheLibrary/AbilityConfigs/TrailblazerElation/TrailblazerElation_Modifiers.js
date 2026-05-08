@@ -10,11 +10,24 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-929199950\">ADV_StageAbility_Maze_Small_PlayerBoy_40</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__724493482\">ADV_StageAbility_Maze_PlayerBoy_40</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1187997183\">PlayerBoy_40_ElationEchoPointBonus</a>",
       "stackType": "Multiple",
       "modifierFlags": [
         "ElationEchoPoint"
       ],
+      "duration": 2,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -37,13 +50,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "duration": 2
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1521577078\">PlayerBoy_40_Maze_ElationRatio</a>[<span class=\"descriptionNumberColor\">We Are So Back!</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "We Are So Back!",
+      "statusName": "We Are So Back!",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -66,20 +82,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "We Are So Back!",
-      "statusName": "We Are So Back!"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-557103509\">Player_40_Eidolon1_InsertActionSave</a>",
       "stackType": "ReplaceByCaster",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -219,13 +228,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_Rank02",
-        "_Rank01"
-      ],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -247,11 +250,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_Rank01",
-        "_Rank02"
       ]
     },
     {
@@ -331,11 +329,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_Rank01",
-        "_Rank02"
       ]
     }
   ],

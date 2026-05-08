@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1631221662\">ADV_StageAbility_Maze_Guinaifen</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__573283172\">Guinaifen_Eidolon4</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
@@ -91,6 +97,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1962050217\">Guinaifen_Eidolon1_StatusResistance</a>[<span class=\"descriptionNumberColor\">Slurping Noodles During Handstand</span>]",
+      "description": "Effect RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Effect RES Reduction",
+      "statusName": "Slurping Noodles During Handstand",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -115,15 +125,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Effect RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Effect RES Reduction",
-      "statusName": "Slurping Noodles During Handstand"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -157,9 +159,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -191,14 +191,16 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__597170239\">Guinaifen_Oil_Sub</a>[<span class=\"descriptionNumberColor\">Firekiss</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Received DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Firekiss",
+      "statusName": "Firekiss",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -244,15 +246,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue2"
-      ],
-      "latentQueue": [],
-      "description": "Received DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Firekiss",
-      "statusName": "Firekiss"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -539,14 +533,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Chance",
-        "MDF_Damage",
-        "MDF_LifeTime",
-        "SpAdded2"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

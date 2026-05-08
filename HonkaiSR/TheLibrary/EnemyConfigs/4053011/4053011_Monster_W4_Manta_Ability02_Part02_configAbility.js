@@ -93,6 +93,14 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
+      "stackData": [
+        "MDF_PropertyValue",
+        "MDF_PropertyValue2"
+      ],
+      "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
+      "type": "Debuff",
+      "effectName": "Inebriated Daze",
+      "statusName": "Inebriated Daze",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -131,16 +139,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_PropertyValue2"
-      ],
-      "latentQueue": [],
-      "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
-      "type": "Debuff",
-      "effectName": "Inebriated Daze",
-      "statusName": "Inebriated Daze"
+      ]
     }
   ]
 }

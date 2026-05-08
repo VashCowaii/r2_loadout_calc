@@ -3,406 +3,15 @@ const compositeAbilityObject = {
   "fullCharacterName": "GlobalAbilities",
   "trimCharacterName": "GlobalAbilities",
   "abilityList": [
+    "GlobalAbilities_Modifiers",
     "GlobalAbilities_DanHengIL_SpecialPassive",
     "GlobalAbilities_Standard_TechniqueInLevel",
     "GlobalAbilities_Servant_Standard_PassiveAbility",
     "GlobalAbilities_Summoner_Standard_PassiveAbility",
     "GlobalAbilities_Standard_PassiveAbility",
-    "GlobalAbilities_Modifiers",
     "GlobalAbilities_Functions"
   ],
   "abilityObject": {
-    "GlobalAbilities_DanHengIL_SpecialPassive": {
-      "fileName": "GlobalAbilities_DanHengIL_SpecialPassive",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-138851216\">DanHengIL_SpecialPassiveModifier</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Disable Abilities",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "abilityTypes": [
-                    "Skill"
-                  ]
-                }
-              ]
-            }
-          ],
-          "duration": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-138851216\">DanHengIL_SpecialPassiveModifier</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "TurnCount",
-                  "value": {
-                    "operator": "Variables[0] (TurnCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(TurnCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "TurnCount"
-                    ]
-                  }
-                },
-                {
-                  "name": "Skill Points Modification",
-                  "adjustmentValue": 5,
-                  "adjustmentType": "+"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Disable Abilities",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "abilityTypes": [
-                    "Ultimate"
-                  ]
-                }
-              ]
-            }
-          ],
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "EXSkill01",
-              "from": "ContextOwner",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 1,
-                  "maxValue": 2,
-                  "whenEnteringRange": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "TurnCount",
-                        "compareType": "=",
-                        "value2": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
-                          "immediateEffect": true
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 2,
-                  "maxValue": 3,
-                  "whenEnteringRange": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "TurnCount",
-                        "compareType": "=",
-                        "value2": 2
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
-                          "immediateEffect": true
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 3,
-                  "maxValue": 4,
-                  "whenEnteringRange": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "TurnCount",
-                        "compareType": ">=",
-                        "value2": 3
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
-                          "immediateEffect": true
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "GlobalAbilities_Standard_TechniqueInLevel": {
-      "fileName": "GlobalAbilities_Standard_TechniqueInLevel",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "GlobalAbilities_Servant_Standard_PassiveAbility": {
-      "fileName": "GlobalAbilities_Servant_Standard_PassiveAbility",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1385373133\">Servant_Standard_PassiveModifier</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1385373133\">Servant_Standard_PassiveModifier</a>",
-          "modifierFlags": [
-            "KeepAllModifierOnDeathRattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Related Summoned Entity",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Force Entity Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "ignoreHPLossTriggers": true,
-                      "ignoreDeathTriggers": true,
-                      "abortInsertedAbilities": true
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "GlobalAbilities_Summoner_Standard_PassiveAbility": {
-      "fileName": "GlobalAbilities_Summoner_Standard_PassiveAbility",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1237494040\">Summoner_Standard_PassiveModifier</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1237494040\">Summoner_Standard_PassiveModifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Skill"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Target Exists",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}.[[getMemosprite]]"
-                        },
-                        "living": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Dispel Debuffs",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}.[[getMemosprite]]"
-                          },
-                          "toRemove": [
-                            "STAT_CTRL",
-                            "DisableAction"
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ultimate Prep-Phase [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Target Exists",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}.[[getMemosprite]]"
-                    },
-                    "living": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Dispel Debuffs",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}.[[getMemosprite]]"
-                      },
-                      "toRemove": [
-                        "STAT_CTRL",
-                        "DisableAction"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "GlobalAbilities_Standard_PassiveAbility": {
-      "fileName": "GlobalAbilities_Standard_PassiveAbility",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-205377483\">Local_SPAdd</a>",
-          "valuePerStack": {
-            "MDF_AddValue": 10
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2041921887\">TriggerStanceCountDown_Test</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1176583887\">Standard_TriggerDeparted</a>"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "GlobalAbilities_Modifiers": {
       "fileName": "GlobalAbilities_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -422,6 +31,14 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1136407126\">Standard_Departed_Sub</a>",
           "stackType": "ReplaceByCaster",
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
+            "casterFilter": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
+          },
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -449,15 +66,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
-            "casterFilter": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            }
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -465,6 +74,19 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "Stealth"
+          ],
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}.[[addBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>",
+              "aliveOnly": "False",
+              "haloStatus": true,
+              "includeBattleEvent": true
+            }
           ],
           "execute": [
             {
@@ -591,19 +213,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}.[[addBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>",
-              "aliveOnly": "False",
-              "haloStatus": true,
-              "includeBattleEvent": true
-            }
           ]
         },
         {
@@ -636,9 +245,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1327,9 +934,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1372,14 +977,395 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AddValue"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []
+    },
+    "GlobalAbilities_DanHengIL_SpecialPassive": {
+      "fileName": "GlobalAbilities_DanHengIL_SpecialPassive",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-138851216\">DanHengIL_SpecialPassiveModifier</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
+          "stackType": "ReplaceByCaster",
+          "duration": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Disable Abilities",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "abilityTypes": [
+                    "Skill"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-138851216\">DanHengIL_SpecialPassiveModifier</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "TurnCount",
+                  "value": {
+                    "operator": "Variables[0] (TurnCount) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(TurnCount + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "TurnCount"
+                    ]
+                  }
+                },
+                {
+                  "name": "Skill Points Modification",
+                  "adjustmentValue": 5,
+                  "adjustmentType": "+"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Disable Abilities",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "abilityTypes": [
+                    "Ultimate"
+                  ]
+                }
+              ]
+            }
+          ],
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "EXSkill01",
+              "from": "ContextOwner",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 1,
+                  "maxValue": 2,
+                  "whenEnteringRange": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "TurnCount",
+                        "compareType": "=",
+                        "value2": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
+                          "immediateEffect": true
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 2,
+                  "maxValue": 3,
+                  "whenEnteringRange": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "TurnCount",
+                        "compareType": "=",
+                        "value2": 2
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
+                          "immediateEffect": true
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 3,
+                  "maxValue": 4,
+                  "whenEnteringRange": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "TurnCount",
+                        "compareType": ">=",
+                        "value2": 3
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"954381819\">DanHengIL_SpecialModifier_DisableAbility</a>",
+                          "immediateEffect": true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "GlobalAbilities_Standard_TechniqueInLevel": {
+      "fileName": "GlobalAbilities_Standard_TechniqueInLevel",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "GlobalAbilities_Servant_Standard_PassiveAbility": {
+      "fileName": "GlobalAbilities_Servant_Standard_PassiveAbility",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1385373133\">Servant_Standard_PassiveModifier</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1385373133\">Servant_Standard_PassiveModifier</a>",
+          "modifierFlags": [
+            "KeepAllModifierOnDeathRattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Related Summoned Entity",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Force Entity Death",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "ignoreHPLossTriggers": true,
+                      "ignoreDeathTriggers": true,
+                      "abortInsertedAbilities": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "GlobalAbilities_Summoner_Standard_PassiveAbility": {
+      "fileName": "GlobalAbilities_Summoner_Standard_PassiveAbility",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1237494040\">Summoner_Standard_PassiveModifier</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1237494040\">Summoner_Standard_PassiveModifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Owner]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Skill"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Target Exists",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}.[[getMemosprite]]"
+                        },
+                        "living": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Dispel Debuffs",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}.[[getMemosprite]]"
+                          },
+                          "toRemove": [
+                            "STAT_CTRL",
+                            "DisableAction"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ultimate Prep-Phase [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Target Exists",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}.[[getMemosprite]]"
+                    },
+                    "living": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Dispel Debuffs",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}.[[getMemosprite]]"
+                      },
+                      "toRemove": [
+                        "STAT_CTRL",
+                        "DisableAction"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "GlobalAbilities_Standard_PassiveAbility": {
+      "fileName": "GlobalAbilities_Standard_PassiveAbility",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-205377483\">Local_SPAdd</a>",
+          "valuePerStack": {
+            "MDF_AddValue": 10
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2041921887\">TriggerStanceCountDown_Test</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1176583887\">Standard_TriggerDeparted</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "GlobalAbilities_Functions": {
       "fileName": "GlobalAbilities_Functions",

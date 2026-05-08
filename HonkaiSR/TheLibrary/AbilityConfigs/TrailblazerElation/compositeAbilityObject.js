@@ -3,8 +3,12 @@ const compositeAbilityObject = {
   "fullCharacterName": "Trailblazer - Elation",
   "trimCharacterName": "TrailblazerElation",
   "abilityList": [
-    "TrailblazerElation_PlayerBoy_40_TechniqueInLevel_Big",
+    "TrailblazerElation_Modifiers",
     "TrailblazerElation_PlayerBoy_40_TechniqueInLevel_Small",
+    "TrailblazerElation_PlayerBoy_40_TechniqueInLevel_Big",
+    "TrailblazerElation_LocalPlayer_StandardAbility_AttackBreak",
+    "TrailblazerElation_LocalPlayer_PlayerBoy_40_TechniqueUsage",
+    "TrailblazerElation_LocalPlayer_PlayerBoy_40_NormalAtk01",
     "TrailblazerElation_PlayerBoy_40_TechniqueInLevel",
     "TrailblazerElation_PlayerBoy_40_PassiveAbility01",
     "TrailblazerElation_PlayerBoy_40_ElationAbility_Part02",
@@ -15,72 +19,344 @@ const compositeAbilityObject = {
     "TrailblazerElation_PlayerBoy_40_Ability02_Part02",
     "TrailblazerElation_PlayerBoy_40_Ability02_Part01",
     "TrailblazerElation_PlayerBoy_40_Ability01_Part02",
-    "TrailblazerElation_PlayerBoy_40_Ability01_Part01",
-    "TrailblazerElation_Modifiers"
+    "TrailblazerElation_PlayerBoy_40_Ability01_Part01"
   ],
   "abilityObject": {
-    "TrailblazerElation_PlayerBoy_40_TechniqueInLevel_Big": {
-      "fileName": "TrailblazerElation_PlayerBoy_40_TechniqueInLevel_Big",
-      "abilityType": null,
+    "TrailblazerElation_Modifiers": {
+      "fileName": "TrailblazerElation_Modifiers",
+      "abilityType": "Char. Modifiers",
       "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"439295977\">StageAbility_Maze_PlayerBoy_40_Modifier_Big</a>"
-        }
+      "toughnessList": [
+        0,
+        0,
+        0
       ],
-      "references": [
+      "parse": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__439295977\">StageAbility_Maze_PlayerBoy_40_Modifier_Big</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-929199950\">ADV_StageAbility_Maze_Small_PlayerBoy_40</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__724493482\">ADV_StageAbility_Maze_PlayerBoy_40</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1187997183\">PlayerBoy_40_ElationEchoPointBonus</a>",
+          "stackType": "Multiple",
+          "modifierFlags": [
+            "ElationEchoPoint"
+          ],
+          "duration": 2,
           "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CertifiedBanger</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (ElationEchoPoint) || RETURN",
+                    "displayLines": "ElationEchoPoint",
+                    "constants": [],
+                    "variables": [
+                      "ElationEchoPoint"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1521577078\">PlayerBoy_40_Maze_ElationRatio</a>[<span class=\"descriptionNumberColor\">We Are So Back!</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "We Are So Back!",
+          "statusName": "We Are So Back!",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-557103509\">Player_40_Eidolon1_InsertActionSave</a>",
+          "stackType": "ReplaceByCaster",
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "Action Choice Window [Anyone]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            },
             {
               "eventTrigger": "Enter Battle",
               "execute": [
                 {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1521577078\">PlayerBoy_40_Maze_ElationRatio</a>[<span class=\"descriptionNumberColor\">We Are So Back!</span>]",
-                  "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
-                    }
-                  }
-                },
-                "Modifier Deletes Itself"
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1380527904\">Temp_PlayerBoy_40_InsertActionSave</a>"
+                }
               ],
-              "priorityLevel": -80
+              "priorityLevel": -55
+            },
+            {
+              "eventTrigger": "Custom Event",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1380527904\">Temp_PlayerBoy_40_InsertActionSave</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "New Enemy Wave",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1380527904\">Temp_PlayerBoy_40_InsertActionSave</a>"
+                }
+              ]
             }
           ],
-          "stackData": [],
-          "latentQueue": []
+          "modifierFunctions": [
+            {
+              "name": "CharacterFunctions",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-1380527904\">Temp_PlayerBoy_40_InsertActionSave</a>",
+              "parse": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1221062210\">Player_40_Eidolon1_InsertActionSaveMark</a>"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Enemies Still Alive",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1221062210\">Player_40_Eidolon1_InsertActionSaveMark</a>"
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-831933466\">Player_40_InsertElationAbilityShow</a>"
+                        },
+                        {
+                          "name": "Inject Elation Skill Extra-Turn (Default priority)",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "punchlineFixed": {
+                            "operator": "Variables[0] (20) || RETURN",
+                            "displayLines": "20",
+                            "constants": [],
+                            "variables": [
+                              20
+                            ]
+                          },
+                          "execute": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1221062210\">Player_40_Eidolon1_InsertActionSaveMark</a>"
+                            },
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-557103509\">Player_40_Eidolon1_InsertActionSave</a>"
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1221062210\">Player_40_Eidolon1_InsertActionSaveMark</a>"
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-557103509\">Player_40_Eidolon1_InsertActionSave</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1221062210\">Player_40_Eidolon1_InsertActionSaveMark</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Elation"
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-831933466\">Player_40_InsertElationAbilityShow</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                "Unknown EventType2 (Not always an error)[1 false][2 true][3_NAME Player]"
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "In Aha-Instant",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Elation"
+                      },
+                      {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "target": "Add Target by Current Extra-Turn Source",
+                        "mustBeAlive2": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    "Unknown EventType2 (Not always an error)[2 true][3_NAME Player]"
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "In Aha-Instant",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Elation"
+                      },
+                      {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "target": "Add Target by Current Extra-Turn Source",
+                        "mustBeAlive2": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
+      "references": []
     },
     "TrailblazerElation_PlayerBoy_40_TechniqueInLevel_Small": {
       "fileName": "TrailblazerElation_PlayerBoy_40_TechniqueInLevel_Small",
@@ -136,13 +412,520 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerElation_PlayerBoy_40_TechniqueInLevel_Big": {
+      "fileName": "TrailblazerElation_PlayerBoy_40_TechniqueInLevel_Big",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"439295977\">StageAbility_Maze_PlayerBoy_40_Modifier_Big</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__439295977\">StageAbility_Maze_PlayerBoy_40_Modifier_Big</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1521577078\">PlayerBoy_40_Maze_ElationRatio</a>[<span class=\"descriptionNumberColor\">We Are So Back!</span>]",
+                  "duration": {
+                    "operator": "Variables[0] (3) || RETURN",
+                    "displayLines": "3",
+                    "constants": [],
+                    "variables": [
+                      3
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (0.3) || RETURN",
+                      "displayLines": "0.3",
+                      "constants": [],
+                      "variables": [
+                        0.3
+                      ]
+                    }
+                  }
+                },
+                "Modifier Deletes Itself"
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerElation_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "TrailblazerElation_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerElation_LocalPlayer_PlayerBoy_40_TechniqueUsage": {
+      "fileName": "TrailblazerElation_LocalPlayer_PlayerBoy_40_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_no_ssr_times",
+            "compareType": ">=",
+            "value2": {
+              "operator": "Variables[0] (UNKNOWN_PITY_OBJECT) || Constants[0] (1) || SUB || RETURN",
+              "displayLines": "(UNKNOWN_PITY_OBJECT - 1)",
+              "constants": [
+                1
+              ],
+              "variables": [
+                "UNKNOWN_PITY_OBJECT"
+              ]
+            },
+            "contextScope": "ContextCaster"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "scope": "ContextAbility",
+              "variableName": "_random",
+              "value": 100
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Variable with Random Value",
+              "scope": "ContextAbility",
+              "integer": true,
+              "variableName": "_random",
+              "min": 0,
+              "max": 100
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_sum_probability",
+          "value": 1
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_random",
+            "compareType": ">=",
+            "value2": {
+              "operator": "Constants[0] (0.6) || Variables[0] (_sum_probability) || DIV || Constants[1] (100) || MUL || RETURN",
+              "displayLines": "((0.6 / _sum_probability) * 100)",
+              "constants": [
+                0.6,
+                100
+              ],
+              "variables": [
+                "_sum_probability"
+              ]
+            },
+            "contextScope": "ContextAbility"
+          },
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_result",
+              "value": 1
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_result",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_result",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "scope": "ContextCaster",
+              "variableName": "_no_ssr_times",
+              "value": 0
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "scope": "ContextCaster",
+              "variableName": "_no_ssr_times",
+              "value": {
+                "operator": "Variables[0] (_no_ssr_times) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(_no_ssr_times + 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "_no_ssr_times"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_result",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": null,
+              "ID": "800901(Avatar_PlayerBoy_40_SkillMazeInLevel_Big)",
+              "duration": -1
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": null,
+              "ID": "800902(Avatar_PlayerBoy_40_SkillMazeInLevel_Small)",
+              "duration": -1
+            }
+          ]
+        },
+        "Submit Technique Use",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_result",
+            "compareType": "=",
+            "value2": 1
+          }
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Define Custom Variable",
+          "scope": "ContextCaster",
+          "variableName": "_no_ssr_times",
+          "value": 0
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerElation_LocalPlayer_PlayerBoy_40_NormalAtk01": {
+      "fileName": "TrailblazerElation_LocalPlayer_PlayerBoy_40_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "failed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "TrailblazerElation_PlayerBoy_40_TechniqueInLevel": {
@@ -373,15 +1156,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1076174912\">PlayerBoy_40_Ability03_Preshow</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -495,9 +1274,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -592,14 +1369,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1930250757\">Player_40_Trace01_Bonus</a>[<span class=\"descriptionNumberColor\">On Cloud Nine</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Elation Boost",
+          "statusName": "On Cloud Nine",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -622,11 +1401,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Elation Boost",
-          "statusName": "On Cloud Nine"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -659,9 +1434,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -674,38 +1447,6 @@ const compositeAbilityObject = {
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-1475869784\">PlayerBoy_40_Trace01_Sub</a>"
-                }
-              ]
-            }
-          ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-1475869784\">PlayerBoy_40_Trace01_Sub</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-1475869784\">PlayerBoy_40_Trace01_Sub</a>"
-                    }
-                  ]
                 }
               ]
             }
@@ -834,8 +1575,38 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [],
-          "latentQueue": []
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1475869784\">PlayerBoy_40_Trace01_Sub</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1475869784\">PlayerBoy_40_Trace01_Sub</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "targetObjectData": {
@@ -1447,6 +2218,16 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1890166672\">Player_40_Eidolon2ElationRatio</a>[<span class=\"descriptionNumberColor\">History in the Making...</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "_Rank02"
+          ],
+          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Elation Boost",
+          "statusName": "History in the Making...",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1470,17 +2251,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "_Rank02"
-          ],
-          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Elation Boost",
-          "statusName": "History in the Making..."
+          ]
         }
       ],
       "targetObjectData": {
@@ -1721,6 +2492,15 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-138559016\">Player_40_Eidolon1_Count</a>[<span class=\"descriptionNumberColor\">Believe In the Light</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "_Rank01"
+          ],
+          "description": "Each stack increases the \"Certified Banger\" gained by ally targets when the next Ultimate is used by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+          "type": "Buff",
+          "statusName": "Believe In the Light",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1745,16 +2525,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "_Rank01"
-          ],
-          "description": "Each stack increases the \"Certified Banger\" gained by ally targets when the next Ultimate is used by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-          "type": "Buff",
-          "statusName": "Believe In the Light"
+          ]
         }
       ],
       "targetObjectData": {
@@ -1908,349 +2679,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "TrailblazerElation_Modifiers": {
-      "fileName": "TrailblazerElation_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1187997183\">PlayerBoy_40_ElationEchoPointBonus</a>",
-          "stackType": "Multiple",
-          "modifierFlags": [
-            "ElationEchoPoint"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CertifiedBanger</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (ElationEchoPoint) || RETURN",
-                    "displayLines": "ElationEchoPoint",
-                    "constants": [],
-                    "variables": [
-                      "ElationEchoPoint"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "duration": 2
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1521577078\">PlayerBoy_40_Maze_ElationRatio</a>[<span class=\"descriptionNumberColor\">We Are So Back!</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "We Are So Back!",
-          "statusName": "We Are So Back!"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-557103509\">Player_40_Eidolon1_InsertActionSave</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Action Choice Window [Anyone]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-1380527904\">Temp_PlayerBoy_40_InsertActionSave</a>"
-                }
-              ],
-              "priorityLevel": -55
-            },
-            {
-              "eventTrigger": "Custom Event",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-1380527904\">Temp_PlayerBoy_40_InsertActionSave</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-1380527904\">Temp_PlayerBoy_40_InsertActionSave</a>"
-                }
-              ]
-            }
-          ],
-          "modifierFunctions": [
-            {
-              "name": "CharacterFunctions",
-              "functionName": "<a class=\"gTempYellow\" id=\"fun__-1380527904\">Temp_PlayerBoy_40_InsertActionSave</a>",
-              "parse": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1221062210\">Player_40_Eidolon1_InsertActionSaveMark</a>"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Enemies Still Alive",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1221062210\">Player_40_Eidolon1_InsertActionSaveMark</a>"
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-831933466\">Player_40_InsertElationAbilityShow</a>"
-                        },
-                        {
-                          "name": "Inject Elation Skill Extra-Turn (Default priority)",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "punchlineFixed": {
-                            "operator": "Variables[0] (20) || RETURN",
-                            "displayLines": "20",
-                            "constants": [],
-                            "variables": [
-                              20
-                            ]
-                          },
-                          "execute": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1221062210\">Player_40_Eidolon1_InsertActionSaveMark</a>"
-                            },
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-557103509\">Player_40_Eidolon1_InsertActionSave</a>"
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1221062210\">Player_40_Eidolon1_InsertActionSaveMark</a>"
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-557103509\">Player_40_Eidolon1_InsertActionSave</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_Rank02",
-            "_Rank01"
-          ],
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1221062210\">Player_40_Eidolon1_InsertActionSaveMark</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Elation"
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_Rank01",
-            "_Rank02"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-831933466\">Player_40_InsertElationAbilityShow</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                "Unknown EventType2 (Not always an error)[1 false][2 true][3_NAME Player]"
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "In Aha-Instant",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Elation"
-                      },
-                      {
-                        "name": "Is Part Of",
-                        "of": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "target": "Add Target by Current Extra-Turn Source",
-                        "mustBeAlive2": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    "Unknown EventType2 (Not always an error)[2 true][3_NAME Player]"
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "In Aha-Instant",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Elation"
-                      },
-                      {
-                        "name": "Is Part Of",
-                        "of": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "target": "Add Target by Current Extra-Turn Source",
-                        "mustBeAlive2": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_Rank01",
-            "_Rank02"
-          ]
-        }
-      ],
-      "references": []
     }
   }
 }

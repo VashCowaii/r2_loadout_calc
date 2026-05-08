@@ -3,80 +3,915 @@ const compositeAbilityObject = {
   "fullCharacterName": 2004014,
   "trimCharacterName": 2004014,
   "abilityList": [
-    "2004014_BattleEventAbility_W2_Kafka_RL_Insert",
-    "2004014_BattleEventAbility_W2_Kafka_RL",
-    "2004014_Monster_W2_Kafka_RL_PassiveAbility_Insert2",
-    "2004014_Monster_W2_Kafka_RL_PassiveAbility_Insert",
-    "2004014_Monster_W2_Kafka_RL_Ability07_Part02",
-    "2004014_Monster_W2_Kafka_RL_Ability07_Part01",
-    "2004014_Monster_W2_Kafka_RL_Ability04_Part02",
-    "2004014_Monster_W2_Kafka_RL_Ability04_Part01",
-    "2004014_Monster_W2_Kafka_RL_Passive01",
-    "2004014_Monster_W3_Dinosaur_01_Ability04_Part02_Assist",
-    "2004014_Monster_W3_Dinosaur_01_Ability04_Part01_Assist",
-    "2004014_Monster_W3_Dinosaur_Ability06_Part02Crazy_Assist",
-    "2004014_Monster_W3_Dinosaur_Ability06_Part01_Assist",
-    "2004014_Monster_XP_Elite01_01_Ability02_Part02_Assist",
-    "2004014_Monster_XP_Elite01_01_Ability02_Part01_Assist",
-    "2004014_Monster_XP_Elite01_Ability03_Part02_Assist",
-    "2004014_Monster_XP_Elite01_Ability03_Part01_Assist",
-    "2004014_Monster_W2_Kafka_AbilityIF01_Part02",
-    "2004014_Monster_W2_Kafka_AbilityIF01_Part01",
-    "2004014_Monster_Boss_Kafka_IF_Summon_Death_NoInsert",
-    "2004014_Monster_Boss_Kafka_IF_Summon_Death_Insert",
-    "2004014_Monster_W2_Kafka_IF03_SummonMonster_Insert_Part01",
-    "2004014_Monster_W2_Kafka_Ability06_Part02_IF",
-    "2004014_Monster_W2_Kafka_Ability06_Part01_IF",
-    "2004014_Monster_W2_Kafka_IF03_Passive01",
     "2004014_Monster_W2_Kafka_IF_EX05_PassiveAbility",
     "2004014_Monster_W2_Kafka_IF_EX04_PassiveAbility",
     "2004014_Monster_W2_Kafka_IF_EX03_PassiveAbility",
     "2004014_Monster_W2_Kafka_IF_EX02_PassiveAbility",
     "2004014_Monster_W2_Kafka_IF_EX01_PassiveAbility",
     "2004014_Monster_W2_Kafka_IF_PassiveAbility01_Insert_Part01",
-    "2004014_BattleEventAbility_W2_Kafka_IF_Insert",
-    "2004014_BattleEventAbility_W2_Kafka_IF",
+    "2004014_BattleEventAbility_W2_Kafka_RL_Insert",
     "2004014_Monster_W2_Kafka_IF_PassiveAbility_Insert2",
     "2004014_Monster_W2_Kafka_IF_PassiveAbility_Insert",
-    "2004014_Monster_W2_Kafka_IF_Ability10_Part02",
-    "2004014_Monster_W2_Kafka_IF_Ability10_Part01",
-    "2004014_Monster_W2_Kafka_IF_Ability08_Part02",
-    "2004014_Monster_W2_Kafka_IF_Ability08_Part01",
-    "2004014_Monster_W2_Kafka_IF_Ability07_Insert_Part02",
-    "2004014_Monster_W2_Kafka_IF_Ability07_Insert_Part01",
-    "2004014_Monster_W2_Kafka_IF_Ability07_Part02",
-    "2004014_Monster_W2_Kafka_IF_Ability07_Part01",
+    "2004014_Monster_W2_Kafka_IF03_Passive01",
+    "2004014_Monster_W2_Kafka_AbilityIF01_Part02",
+    "2004014_Monster_W2_Kafka_AbilityIF01_Part01",
+    "2004014_Monster_W2_Kafka_RL_Ability07_Part02",
+    "2004014_Monster_W2_Kafka_RL_Ability07_Part01",
+    "2004014_Monster_W2_Kafka_Ability06_Part02_IF",
+    "2004014_Monster_W2_Kafka_Ability06_Part01_IF",
+    "2004014_Monster_W2_Kafka_Ability05_Part02",
+    "2004014_Monster_W2_Kafka_Ability05_Part01",
     "2004014_Monster_W2_Kafka_IF_Ability04_Part02",
     "2004014_Monster_W2_Kafka_IF_Ability04_Part01",
     "2004014_Monster_W2_Kafka_IF_Ability03_Insert_Part02",
     "2004014_Monster_W2_Kafka_IF_Ability03_Insert_Part01",
-    "2004014_Monster_W2_Kafka_IF_Passive02",
-    "2004014_Monster_W2_Kafka_IF_Passive01",
-    "2004014_Monster_W2_Kafka_IF02_Ability08_Part02",
-    "2004014_Monster_W2_Kafka_IF02_Ability08_Part01",
-    "2004014_Monster_W2_Kafka_IF02_Ability02_Part02",
-    "2004014_Monster_W2_Kafka_IF02_Ability02_Part01",
-    "2004014_Monster_W2_Kafka_IF02_Passive01",
-    "2004014_Monster_W2_Kafka_Ability07_Part02",
-    "2004014_Monster_W2_Kafka_Ability07_Part01",
-    "2004014_Monster_W2_Kafka_Ability06_Part02",
-    "2004014_Monster_W2_Kafka_Ability06_Part01",
-    "2004014_Monster_W2_Kafka_Ability05_Part02",
-    "2004014_Monster_W2_Kafka_Ability05_Part01",
-    "2004014_Monster_W2_Kafka_Ability04_Part02",
-    "2004014_Monster_W2_Kafka_Ability04_Part01",
     "2004014_Monster_W2_Kafka_Ability03_Part02",
     "2004014_Monster_W2_Kafka_Ability03_Part01",
-    "2004014_Monster_W2_Kafka_Ability02_Part02",
-    "2004014_Monster_W2_Kafka_Ability02_Part01",
+    "2004014_Monster_W2_Kafka_IF02_Ability02_Part02",
+    "2004014_Monster_W2_Kafka_IF02_Ability02_Part01",
     "2004014_Monster_W2_Kafka_Ability01_Part02",
     "2004014_Monster_W2_Kafka_Ability01_Part01",
-    "2004014_Monster_W2_Kafka_Passive01",
     "2004014_Monster_W2_Kafka_PassiveAbility_BGM",
     "2004014_Modifiers",
     "2004014_BE_BattleEvents"
   ],
   "abilityObject": {
+    "2004014_Monster_W2_Kafka_IF_EX05_PassiveAbility": {
+      "fileName": "2004014_Monster_W2_Kafka_IF_EX05_PassiveAbility",
+      "skillTrigger": "SkillEX05",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2004014_Monster_W2_Kafka_IF_EX04_PassiveAbility": {
+      "fileName": "2004014_Monster_W2_Kafka_IF_EX04_PassiveAbility",
+      "skillTrigger": "SkillEX04",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HardLevel",
+            "compareType": ">=",
+            "value2": 4
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1162350754\">Enemy_W2_Kafka_IF_EX04_Boss</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1162350754\">Enemy_W2_Kafka_IF_EX04_Boss</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        }
+      ]
+    },
+    "2004014_Monster_W2_Kafka_IF_EX03_PassiveAbility": {
+      "fileName": "2004014_Monster_W2_Kafka_IF_EX03_PassiveAbility",
+      "skillTrigger": "SkillEX03",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HardLevel",
+            "compareType": ">=",
+            "value2": 3
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1524558983\">Enemy_W2_Kafka_IF_EX03_Boss</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1727559793\">Enemy_W2_Kafka_IF_EnemyCount</a>",
+              "valuePerStack": {
+                "MDF_ShowValue1": {
+                  "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
+                  "displayLines": "{[SkillEX03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillEX03[0]]}"
+                  ]
+                },
+                "MDF_ShowValue2": {
+                  "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
+                  "displayLines": "{[SkillEX03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillEX03[0]]}"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1524558983\">Enemy_W2_Kafka_IF_EX03_Boss</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        }
+      ]
+    },
+    "2004014_Monster_W2_Kafka_IF_EX02_PassiveAbility": {
+      "fileName": "2004014_Monster_W2_Kafka_IF_EX02_PassiveAbility",
+      "skillTrigger": "SkillEX02",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HardLevel",
+            "compareType": ">=",
+            "value2": 2
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1808402848\">Enemy_W2_Kafka_IF_EX02_Boss</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1808402848\">Enemy_W2_Kafka_IF_EX02_Boss</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        }
+      ]
+    },
+    "2004014_Monster_W2_Kafka_IF_EX01_PassiveAbility": {
+      "fileName": "2004014_Monster_W2_Kafka_IF_EX01_PassiveAbility",
+      "skillTrigger": "SkillEX01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HardLevel",
+            "compareType": ">=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
+              "valuePerStack": {
+                "MDF_IF_BOSS_BreakDelay": {
+                  "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
+                  "displayLines": "{[SkillEX01[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillEX01[2]]}"
+                  ]
+                },
+                "MDF_IF_BOSS_WeaknessDMGUpRatio": {
+                  "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
+                  "displayLines": "{[SkillEX01[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillEX01[1]]}"
+                  ]
+                },
+                "MDF_IF_BOSS_Standard_Defence": {
+                  "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
+                  "displayLines": "{[SkillEX01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillEX01[0]]}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-243559524\">Enemy_W2_Kafka_IF_WeaknessSplit</a>",
+              "valuePerStack": {
+                "MDF_MaxSummonNum": 2,
+                "MDF_StanceWeaknessList": 1725,
+                "_CurrWeaknessList": 1725
+              }
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-916114620\">Enemy_W2_Kafka_IF_AssistController</a>",
+              "valuePerStack": {
+                "MDF_DotMaxCount": {
+                  "operator": "Variables[0] ({[SkillIF01[0]]}) || RETURN",
+                  "displayLines": "{[SkillIF01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillIF01[0]]}"
+                  ]
+                },
+                "MDF_DotConsume": {
+                  "operator": "Variables[0] ({[SkillIF01[1]]}) || RETURN",
+                  "displayLines": "{[SkillIF01[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillIF01[1]]}"
+                  ]
+                },
+                "MDF_DotCurCount": {
+                  "operator": "Variables[0] ({[SkillIF01[3]]}) || RETURN",
+                  "displayLines": "{[SkillIF01[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillIF01[3]]}"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-916114620\">Enemy_W2_Kafka_IF_AssistController</a>",
+          "stackData": [
+            "MDF_DotMaxCount",
+            "MDF_DotConsume",
+            "MDF_DotCurCount"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Current Turn Is",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Added Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "MDF_DotCurCount",
+                      "value": 1,
+                      "max": {
+                        "operator": "Variables[0] (MDF_DotMaxCount) || RETURN",
+                        "displayLines": "MDF_DotMaxCount",
+                        "constants": [],
+                        "variables": [
+                          "MDF_DotMaxCount"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Current Turn Is",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "MDF_DotCurCount",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_DotConsume) || RETURN",
+                          "displayLines": "MDF_DotConsume",
+                          "constants": [],
+                          "variables": [
+                            "MDF_DotConsume"
+                          ]
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "MDF_DotCurCount",
+                        "compareType": "<",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_DotMaxCount) || RETURN",
+                          "displayLines": "MDF_DotMaxCount",
+                          "constants": [],
+                          "variables": [
+                            "MDF_DotMaxCount"
+                          ]
+                        }
+                      },
+                      {
+                        "name": "Is Entity a Battle Event/Summon",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "flagName": "STAT_CTRL",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "flagName": "DisableAction",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "flagName": "Break",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-689878752\">Monster_W2_Kafka_IF03_SummonKillBonus01</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-639545895\">Monster_W2_Kafka_IF03_SummonKillBonus02</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-656323514\">Monster_W2_Kafka_IF03_SummonKillBonus03</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-605990657\">Monster_W2_Kafka_IF03_SummonKillBonus04</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "flagName": "STAT_CTRL",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "flagName": "DisableAction",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "flagName": "Break",
+                            "invertCondition": true
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Inject Ability Use",
+                          "abilityName": "Monster_W2_Kafka_AbilityIF01_Part01",
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "priorityTag": "EnemyAttackFromSelf",
+                          "canHitNonTargets": true,
+                          "showInActionOrder": true,
+                          "allowAbilityTriggers": false
+                        },
+                        {
+                          "name": "Define Custom Variable with Added Value",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "variableName": "MDF_DotCurCount",
+                          "value": {
+                            "operator": "Variables[0] (MDF_DotConsume) || INVERT || RETURN",
+                            "displayLines": "-MDF_DotConsume",
+                            "constants": [],
+                            "variables": [
+                              "MDF_DotConsume"
+                            ]
+                          },
+                          "max": {
+                            "operator": "Variables[0] (MDF_DotMaxCount) || RETURN",
+                            "displayLines": "MDF_DotMaxCount",
+                            "constants": [],
+                            "variables": [
+                              "MDF_DotMaxCount"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Current Turn Is",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "MDF_DotCurCount",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_DotConsume) || RETURN",
+                          "displayLines": "MDF_DotConsume",
+                          "constants": [],
+                          "variables": [
+                            "MDF_DotConsume"
+                          ]
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "MDF_DotCurCount",
+                        "compareType": "=",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_DotMaxCount) || RETURN",
+                          "displayLines": "MDF_DotMaxCount",
+                          "constants": [],
+                          "variables": [
+                            "MDF_DotMaxCount"
+                          ]
+                        }
+                      },
+                      {
+                        "name": "Is Entity a Battle Event/Summon",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "flagName": "STAT_CTRL",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "flagName": "DisableAction",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "flagName": "Break",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "flagName": "STAT_CTRL",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "flagName": "DisableAction",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "flagName": "Break",
+                            "invertCondition": true
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Inject Ability Use",
+                          "abilityName": "Monster_W2_Kafka_AbilityIF01_Part01",
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "priorityTag": "EnemyAttackFromSelf",
+                          "canHitNonTargets": true,
+                          "showInActionOrder": true,
+                          "allowAbilityTriggers": false
+                        },
+                        {
+                          "name": "Define Custom Variable with Added Value",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "variableName": "MDF_DotCurCount",
+                          "value": {
+                            "operator": "Variables[0] (MDF_DotConsume) || INVERT || RETURN",
+                            "displayLines": "-MDF_DotConsume",
+                            "constants": [],
+                            "variables": [
+                              "MDF_DotConsume"
+                            ]
+                          },
+                          "max": {
+                            "operator": "Variables[0] (MDF_DotMaxCount) || RETURN",
+                            "displayLines": "MDF_DotMaxCount",
+                            "constants": [],
+                            "variables": [
+                              "MDF_DotMaxCount"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1540227508\">Enemy_W2_Kafka_IF_AssistController_Save</a>[<span class=\"descriptionNumberColor\">Threads of the Puppet</span>]",
+          "description": "Consumes Threads of the Puppet to apply Madden to summons.",
+          "type": "Other",
+          "statusName": "Threads of the Puppet"
+        }
+      ]
+    },
+    "2004014_Monster_W2_Kafka_IF_PassiveAbility01_Insert_Part01": {
+      "fileName": "2004014_Monster_W2_Kafka_IF_PassiveAbility01_Insert_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "WAIT FOR",
+          "condition": {
+            "name": "Death Animation Completed",
+            "team": "Enemy Team",
+            "type": "Team Characters"
+          }
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Insert_Flag"
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": 4,
+          "Event": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "team": "Enemy Team",
+                "location": "Left"
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": 0.5,
+                  "refreshPositions": false,
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Constants[0] (8032010) || RETURN",
+                        "displayLines": "8032010",
+                        "constants": [
+                          8032010
+                        ],
+                        "variables": []
+                      },
+                      "locationType": "First"
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Recently Summoned Enemies}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": 0.5,
+                  "refreshPositions": false,
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Constants[0] (8032010) || RETURN",
+                        "displayLines": "8032010",
+                        "constants": [
+                          8032010
+                        ],
+                        "variables": []
+                      },
+                      "locationType": "Last"
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Recently Summoned Enemies}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "searchRandom": true,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"410285383\">Monster_W2_Kafka_IF_BeControled</a>"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__410285383\">Monster_W2_Kafka_IF_BeControled</a>",
+          "latentQueue": [
+            "Insert_Flag"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>",
+          "latentQueue": [
+            "Insert_Flag"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        }
+      ]
+    },
     "2004014_BattleEventAbility_W2_Kafka_RL_Insert": {
       "fileName": "2004014_BattleEventAbility_W2_Kafka_RL_Insert",
       "abilityType": null,
@@ -241,112 +1076,8 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2004014_BattleEventAbility_W2_Kafka_RL": {
-      "fileName": "2004014_BattleEventAbility_W2_Kafka_RL",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1014249439\">Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "advanceType": "Set",
-          "multiAdd": "MDF_W2_Kafka_00_RL_BattleEvent_ActionDelay"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1014249439\">Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed) || RETURN",
-                    "displayLines": "MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "BattleEventAbility_W2_Kafka_RL_Insert",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Battle Event's Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "priorityTag": "EnemyAttackFromSelf",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                },
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2004014_Monster_W2_Kafka_RL_PassiveAbility_Insert2": {
-      "fileName": "2004014_Monster_W2_Kafka_RL_PassiveAbility_Insert2",
+    "2004014_Monster_W2_Kafka_IF_PassiveAbility_Insert2": {
+      "fileName": "2004014_Monster_W2_Kafka_IF_PassiveAbility_Insert2",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -378,7 +1109,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"1988286038\">Monster_W2_Kafka_RL_Part03EnhanceEffect</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-682734007\">Monster_W2_Kafka_IF_Part03EnhanceEffect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -386,7 +1117,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-1510857703\">Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -394,7 +1125,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1880603044\">Monster_W2_Kafka_RL_Endurance</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"1613170749\">Monster_W2_Kafka_IF_Endurance</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -405,12 +1136,6 @@ const compositeAbilityObject = {
           "scope": "TargetEntity",
           "variableName": "AIFlag",
           "value": 1
-        },
-        {
-          "name": "Define Custom Variable",
-          "scope": "TargetEntity",
-          "variableName": "BattleEventFlag",
-          "value": 0
         },
         {
           "name": "Find New Target",
@@ -443,7 +1168,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1041839558\">Monster_W2_Kafka_RL_PartController</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-568638257\">Monster_W2_Kafka_IF_PartController</a>"
         }
       ],
       "targetObjectData": {
@@ -451,8 +1176,8 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2004014_Monster_W2_Kafka_RL_PassiveAbility_Insert": {
-      "fileName": "2004014_Monster_W2_Kafka_RL_PassiveAbility_Insert",
+    "2004014_Monster_W2_Kafka_IF_PassiveAbility_Insert": {
+      "fileName": "2004014_Monster_W2_Kafka_IF_PassiveAbility_Insert",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -484,7 +1209,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1880603044\">Monster_W2_Kafka_RL_Endurance</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"1613170749\">Monster_W2_Kafka_IF_Endurance</a>"
         },
         {
           "name": "Declare Custom Variable",
@@ -512,794 +1237,13 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2004014_Monster_W2_Kafka_RL_Ability07_Part02": {
-      "fileName": "2004014_Monster_W2_Kafka_RL_Ability07_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Define Custom Variable",
-          "scope": "TargetEntity",
-          "variableName": "BattleEventFlag",
-          "value": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "MindControlCount"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2054484016\">Monster_W2_Kafka_RL_MindControl_False</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ShowHint04"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Battle Event List}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Force Entity Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "searchRandom": true,
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "FinalPhase",
-                "compareType": "=",
-                "value2": 1,
-                "contextScope": "TargetEntity"
-              },
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MindControlCount",
-                    "compareType": "<",
-                    "value2": 4,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 3
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "MindControlCount",
-                        "compareType": "<",
-                        "value2": 3,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "MindControlCount",
-                        "compareType": "<",
-                        "value2": 2,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Define Custom Variable with Added Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variableName": "MindControlCount",
-              "context": "TargetEntity",
-              "value": 1,
-              "max": 4
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "BaseSpeed",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "FinalPhase",
-            "compareType": "=",
-            "value2": 1,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Add Battle Event",
-              "teamName": "Enemy Team",
-              "eventID": 20002,
-              "statSource": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variables": {
-                "MDF_W2_Kafka_RL_BattleEvent_ActionDelay": {
-                  "operator": "Variables[0] (FinalPhase) || RETURN",
-                  "displayLines": "FinalPhase",
-                  "constants": [],
-                  "variables": [
-                    "FinalPhase"
-                  ]
-                },
-                "MDF_W2_Kafka_RL_BattleEvent_BaseSpeed": {
-                  "operator": "Variables[0] (BaseSpeed) || RETURN",
-                  "displayLines": "BaseSpeed",
-                  "constants": [],
-                  "variables": [
-                    "BaseSpeed"
-                  ]
-                }
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Battle Event",
-              "teamName": "Enemy Team",
-              "eventID": 20002,
-              "statSource": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variables": {
-                "MDF_W2_Kafka_RL_BattleEvent_ActionDelay": {
-                  "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                  "displayLines": "{[Skill07[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill07[0]]}"
-                  ]
-                },
-                "MDF_W2_Kafka_RL_BattleEvent_BaseSpeed": {
-                  "operator": "Variables[0] (BaseSpeed) || RETURN",
-                  "displayLines": "BaseSpeed",
-                  "constants": [],
-                  "variables": [
-                    "BaseSpeed"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_RL_Ability07_Part01": {
-      "fileName": "2004014_Monster_W2_Kafka_RL_Ability07_Part01",
+    "2004014_Monster_W2_Kafka_IF03_Passive01": {
+      "fileName": "2004014_Monster_W2_Kafka_IF03_Passive01",
       "childAbilityList": [
-        "2004014_Monster_W2_Kafka_RL_Ability07_Part01",
-        "2004014_Monster_W2_Kafka_RL_Ability07_Part02",
-        "2004014_Monster_W2_Kafka_RL_Ability07_Camera"
+        "2004014_Monster_W2_Kafka_IF03_Passive01"
       ],
-      "skillTrigger": "Skill07",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Kafka_RL_Ability07_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}",
-        "targetIsVariable": true
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_RL_Ability04_Part02": {
-      "fileName": "2004014_Monster_W2_Kafka_RL_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemies by Aggro OR Random}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"488971952\">Monster_W2_Kafka_RL_Ability04_Target</a>"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
-                },
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
-                },
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
-                },
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
-                },
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
-                },
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
-                },
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
-                },
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
-                },
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
-                },
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
-                },
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
-              },
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "ElectricFlag",
-                  "value": 1
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
-              "duration": {
-                "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                "displayLines": "{[Skill01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[2]]}"
-                ]
-              },
-              "baseChance": {
-                "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                "displayLines": "{[Skill01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[1]]}"
-                ]
-              },
-              "immediateEffect": true,
-              "valuePerStack": {
-                "Modifier_Electric_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
-                }
-              },
-              "stackFlag": "CharacterSkill"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "ElectricFlag",
-                "compareType": "=",
-                "value2": 1,
-                "contextScope": "TargetEntity"
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
-                }
-              ]
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "ElectricFlag"
-            }
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Kafka Skill4 Other Targets}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-              "displayLines": "{[Skill04[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[1]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Kafka Skill4 Other Targets}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"488971952\">Monster_W2_Kafka_RL_Ability04_Target</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_RL_Ability04_Part01": {
-      "fileName": "2004014_Monster_W2_Kafka_RL_Ability04_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Kafka_RL_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_RL_Passive01": {
-      "fileName": "2004014_Monster_W2_Kafka_RL_Passive01",
-      "abilityType": null,
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -1326,23 +1270,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"108137779\">Monster_W2_Kafka_RL_Pursuit</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2066030702\">Monster_W2_Kafka_AIChange</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"1735231980\">Monster_W2_Kafka_IF02_Pursuit</a>"
         },
         {
           "name": "Boss Bar Display",
@@ -1358,7 +1286,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1041839558\">Monster_W2_Kafka_RL_PartController</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-1742511370\">Monster_W2_Kafka_IF03_PartController</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1366,14 +1294,54 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"688364152\">Monster_W2_Kafka_RL_Power</a>",
+          "modifier": "<a class=\"gModGreen\" id=\"-1977361532\">Monster_W2_Kafka_IF03_Summon</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-471232771\">Monster_W2_Kafka_IF03_MonsterAssistControl</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
           "valuePerStack": {
-            "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] (UnusedUnderThisBase_14) || RETURN",
-              "displayLines": "UnusedUnderThisBase_14",
+            "MDF_FrenzyStartDelay": {
+              "operator": "Variables[0] ({[SkillEX05[0]]}) || RETURN",
+              "displayLines": "{[SkillEX05[0]]}",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_14"
+                "{[SkillEX05[0]]}"
+              ]
+            },
+            "MDF_FrenzyIntervalDelay": {
+              "operator": "Variables[0] ({[SkillEX05[1]]}) || RETURN",
+              "displayLines": "{[SkillEX05[1]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX05[1]]}"
+              ]
+            },
+            "MDF_MaxFrenzyLayer": {
+              "operator": "Variables[0] ({[SkillEX05[2]]}) || RETURN",
+              "displayLines": "{[SkillEX05[2]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX05[2]]}"
+              ]
+            },
+            "MDF_TokenDMGAddRatioPerLayer": {
+              "operator": "Variables[0] ({[SkillEX05[3]]}) || RETURN",
+              "displayLines": "{[SkillEX05[3]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX05[3]]}"
               ]
             }
           }
@@ -1384,30 +1352,238 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1555277593\">Monster_W2_Kafka_RL_LowHP</a>",
+          "modifier": "<a class=\"gModGreen\" id=\"-1808450599\">Monster_W2_Kafka_IF03_SummonControl</a>",
           "valuePerStack": {
-            "MDF_LowHPRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_17) || RETURN",
-              "displayLines": "UnusedUnderThisBase_17",
+            "MDF_WeakDMGReduceRatio": {
+              "operator": "Variables[0] ({[SkillEX01[3]]}) || RETURN",
+              "displayLines": "{[SkillEX01[3]]}",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_17"
+                "{[SkillEX01[3]]}"
+              ]
+            },
+            "MDF_WeakStatusProbReduceRatio": {
+              "operator": "Variables[0] ({[SkillEX01[4]]}) || RETURN",
+              "displayLines": "{[SkillEX01[4]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX01[4]]}"
+              ]
+            },
+            "MDF_WeakStanceSliceRatio": {
+              "operator": "Variables[0] ({[SkillEX01[5]]}) || RETURN",
+              "displayLines": "{[SkillEX01[5]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX01[5]]}"
+              ]
+            },
+            "MDF_BreakDMGTokenAddRatio": {
+              "operator": "Variables[0] ({[SkillEX02[1]]}) || RETURN",
+              "displayLines": "{[SkillEX02[1]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX02[1]]}"
+              ]
+            },
+            "MDF_BreakDelayRatio": {
+              "operator": "Variables[0] ({[SkillEX02[2]]}) || RETURN",
+              "displayLines": "{[SkillEX02[2]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX02[2]]}"
+              ]
+            },
+            "MDF_FrenzyDMGTokenAddRatio": {
+              "operator": "Variables[0] ({[SkillEX02[3]]}) || RETURN",
+              "displayLines": "{[SkillEX02[3]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX02[3]]}"
+              ]
+            },
+            "MDF_FrenzySpeedAddRatio": {
+              "operator": "Variables[0] ({[SkillEX02[4]]}) || RETURN",
+              "displayLines": "{[SkillEX02[4]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX02[4]]}"
+              ]
+            },
+            "MDF_FrenzyStanceSliceRatio": {
+              "operator": "Variables[0] ({[SkillEX02[5]]}) || RETURN",
+              "displayLines": "{[SkillEX02[5]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX02[5]]}"
+              ]
+            },
+            "MDF_StanceDMGPerTeamMate": {
+              "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
+              "displayLines": "{[SkillEX02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX02[0]]}"
               ]
             }
           }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1421140468\">Monster_W2_Kafka_IF03_CancelMindControlBEOnBeingBreak</a>",
+          "casterAssign": "CasterSelf"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"635367509\">MModifier_Kafka_IF_BattleAlert</a>"
         }
       ],
       "whenAdded": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2066030702\">Monster_W2_Kafka_AIChange</a>",
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
+          "for": "<a class=\"gModGreen\" id=\"mod__-1004356166\">Monster_W2_Kafka_IF02_ListenMonsterActionModifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Force Entity Death",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_HasTarget",
+                  "value": 0
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "searchRandom": true,
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                      }
+                    ]
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_HasTarget",
+                      "value": 1
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_HasTarget",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "JustinBreak",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1155608240\">Monster_W2_Kafka_IF02_ContainJXDTag</a>"
+                        },
+                        {
+                          "name": "Declare Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "scope": "TargetEntity",
+                          "variableName": "AIFlag",
+                          "value": 3
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_HasTarget",
+                          "value": 0
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "JustinBreak",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -1476,474 +1652,186 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2004014_Monster_W3_Dinosaur_01_Ability04_Part02_Assist": {
-      "fileName": "2004014_Monster_W3_Dinosaur_01_Ability04_Part02_Assist",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W3_Dinosaur_01_Ability04_Part01_Assist": {
-      "fileName": "2004014_Monster_W3_Dinosaur_01_Ability04_Part01_Assist",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "AIFlag_IF",
-          "value": 2
+          ]
         },
         {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-130810153\">Monster_W3_Dinosaur_01_MonsterAssistBonus</a>[<span class=\"descriptionNumberColor\">Terrathorn</span>]",
-          "stackLimit": {
-            "operator": "Variables[0] (AIFlag_IF) || RETURN",
-            "displayLines": "AIFlag_IF",
-            "constants": [],
-            "variables": [
-              "AIFlag_IF"
-            ]
-          }
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-376688543\">Monster_W2_Kafka_IF02_BEFrozen</a>",
+          "modifierFlags": [
+            "MuteSpeed"
+          ]
         },
         {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1395319081\">Enemy_W3_Dinosaur_01_Standard_Growth</a>[<span class=\"descriptionNumberColor\">Obscure Blaze</span>]",
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1395319081\">Enemy_W3_Dinosaur_01_Standard_Growth</a>[<span class=\"descriptionNumberColor\">Obscure Blaze</span>]",
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1395319081\">Enemy_W3_Dinosaur_01_Standard_Growth</a>[<span class=\"descriptionNumberColor\">Obscure Blaze</span>]",
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "value1": "<a class=\"gModGreen\" id=\"-1395319081\">Enemy_W3_Dinosaur_01_Standard_Growth</a>[<span class=\"descriptionNumberColor\">Obscure Blaze</span>]",
-            "compareType": "<",
-            "value2": 5,
-            "valueType": "Layer"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W3_Dinosaur_Ability06_Part02Crazy_Assist": {
-      "fileName": "2004014_Monster_W3_Dinosaur_Ability06_Part02Crazy_Assist",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W3_Dinosaur_Ability06_Part01_Assist": {
-      "fileName": "2004014_Monster_W3_Dinosaur_Ability06_Part01_Assist",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"680214868\">Monster_W3_Dinosaur_MonsterAssistBonus</a>"
-        },
-        {
-          "name": "Remove Modifier Behavior Flag(s)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "flagNames": []
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Crazy_Flag",
-          "value": 1
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1287806639\">MModifier_Monster_W3_Dinosaur_Fury</a>[<span class=\"descriptionNumberColor\">Boil</span>]"
-          },
-          "passed": [
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1644855766\">Monster_W2_Kafka_IF02_BreakListen</a>",
+          "execute": [
             {
-              "name": "Define Custom Variable with Added Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variableName": "Vibrate_Count",
-              "context": "TargetEntity",
-              "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_19) || INVERT || RETURN",
-                "displayLines": "-UnusedUnderThisBase_19",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_19"
-                ]
-              },
-              "max": {
-                "operator": "Variables[0] (UnusedUnderThisBase_20) || RETURN",
-                "displayLines": "UnusedUnderThisBase_20",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_20"
-                ]
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
-              "valuePerStack": {
-                "MDF_MaxCount": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_20) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_20",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_20"
-                  ]
-                },
-                "MDF_PartFlag": 1
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "variableName": "Vibrate_Count",
-              "value": 0
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
-              "valuePerStack": {
-                "MDF_MaxCount": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_20) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_20",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_20"
-                  ]
-                },
-                "MDF_PartFlag": 1
-              }
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1583693402\">MModifier_Monster_W3_Dinosaur_Calm</a>[<span class=\"descriptionNumberColor\">Simmer</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1287806639\">MModifier_Monster_W3_Dinosaur_Fury</a>[<span class=\"descriptionNumberColor\">Boil</span>]"
-            },
-            {
-              "name": "Action Advance/Delay",
-              "advanceType": "Set",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "multiBase": {
-                "operator": "Variables[0] (UnusedUnderThisBase_21) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(UnusedUnderThisBase_21 - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "UnusedUnderThisBase_21"
-                ]
-              }
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "JustinBreak",
+                  "value": 1
+                }
+              ]
             }
           ]
         },
         {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 8
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_XP_Elite01_01_Ability02_Part02_Assist": {
-      "fileName": "2004014_Monster_XP_Elite01_01_Ability02_Part02_Assist",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_XP_Elite01_01_Ability02_Part01_Assist": {
-      "fileName": "2004014_Monster_XP_Elite01_01_Ability02_Part01_Assist",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-831587978\">Monster_XP_Elite01_01_MonsterAssistBonus</a>[<span class=\"descriptionNumberColor\">Crystallite</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-557071994\">XP_Ice_Elite_Powerful_Modifier</a>[<span class=\"descriptionNumberColor\">Freezing Point</span>]",
-          "valuePerStack": {
-            "Modifier_AllDamageTypeResistance": {
-              "operator": "Variables[0] (UnusedUnderThisBase_26) || RETURN",
-              "displayLines": "UnusedUnderThisBase_26",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_26"
-              ]
-            },
-            "Modifier_StanceWeakAddedRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_25) || RETURN",
-              "displayLines": "UnusedUnderThisBase_25",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_25"
-              ]
-            },
-            "Modifier_Stance": {
-              "operator": "Variables[0] (UnusedUnderThisBase_24) || RETURN",
-              "displayLines": "UnusedUnderThisBase_24",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_24"
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1421140468\">Monster_W2_Kafka_IF03_CancelMindControlBEOnBeingBreak</a>",
+          "latentQueue": [
+            "DisPelCount"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "HP_Bars_Remaining",
+                    "compareType": "=",
+                    "value2": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Battle-Events}}"
+                      },
+                      "searchRandom": true,
+                      "ifTargetFound": [
+                        {
+                          "name": "Force Entity Death",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster's Battle-Events}}"
+                          }
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"2054484016\">Monster_W2_Kafka_RL_MindControl_False</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "scope": "TargetEntity",
+                          "variableName": "BattleEventFlag",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             }
-          }
+          ]
         },
         {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "StanceBreak_Sign",
-          "value": 1
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_XP_Elite01_Ability03_Part02_Assist": {
-      "fileName": "2004014_Monster_XP_Elite01_Ability03_Part02_Assist",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_XP_Elite01_Ability03_Part01_Assist": {
-      "fileName": "2004014_Monster_XP_Elite01_Ability03_Part01_Assist",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1024613503\">Monster_XP_Elite01_MonsterAssistBonus</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1090456915\">XP_Fire_Elite_Burning_Modifier_2</a>[<span class=\"descriptionNumberColor\">Spontaneous Combustion</span>]",
-          "valuePerStack": {
-            "Modifier_StanceWeakAddedRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_22) || RETURN",
-              "displayLines": "UnusedUnderThisBase_22",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_22"
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__635367509\">MModifier_Kafka_IF_BattleAlert</a>",
+          "latentQueue": [
+            "DisPelCount"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      },
+                      {
+                        "name": "Compare: Monster Rank",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "compareType": "=",
+                        "value2": 3
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
+                      },
+                      "searchRandom": true,
+                      "maxTargets": 1,
+                      "noTargetFound": [
+                        {
+                          "name": "Update Enemy InfoPanel"
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             },
-            "Modifier_Stance": {
-              "operator": "Variables[0] (UnusedUnderThisBase_23) || RETURN",
-              "displayLines": "UnusedUnderThisBase_23",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_23"
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Enemy Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Enemy InfoPanel",
+                      "text": "Defeat summoned enemies to weaken the boss",
+                      "type": "Warning"
+                    }
+                  ]
+                }
               ]
             }
-          }
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "StanceBreak_Sign",
-          "value": 1
+          ]
         }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
+      ]
     },
     "2004014_Monster_W2_Kafka_AbilityIF01_Part02": {
       "fileName": "2004014_Monster_W2_Kafka_AbilityIF01_Part02",
@@ -2775,769 +2663,18 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2004014_Monster_Boss_Kafka_IF_Summon_Death_NoInsert": {
-      "fileName": "2004014_Monster_Boss_Kafka_IF_Summon_Death_NoInsert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_Boss_Kafka_IF_Summon_Death_Insert": {
-      "fileName": "2004014_Monster_Boss_Kafka_IF_Summon_Death_Insert",
+    "2004014_Monster_W2_Kafka_RL_Ability07_Part02": {
+      "fileName": "2004014_Monster_W2_Kafka_RL_Ability07_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Ability Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-            "compareType": ">",
-            "value2": 0
-          },
-          "passed": [
-            "Deleted bullshit",
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Compare: Target",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "target2": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Summoner}}"
-                      },
-                      "invertCondition": true
-                    }
-                  }
-                ]
-              },
-              "searchRandom": true,
-              "includeDyingTargets": true,
-              "conditions": {
-                "name": "Compare: Ability Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                "compareType": "<=",
-                "value2": 0
-              },
-              "ifTargetFound": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster's Summoner}}"
-                    },
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Animation Event",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "state": "Die",
-                      "passed": [
-                        {
-                          "name": "Animation Task"
-                        },
-                        {
-                          "name": "Animation Task"
-                        },
-                        {
-                          "name": "Animation Task",
-                          "passed": [
-                            {
-                              "name": "Find New Target",
-                              "from": {
-                                "name": "Target Sequence",
-                                "Sequence": [
-                                  {
-                                    "name": "Target Name",
-                                    "target": "{{Enemy Team All}}"
-                                  },
-                                  {
-                                    "name": "Target Filter",
-                                    "conditions": {
-                                      "name": "Compare: Target",
-                                      "target": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "target2": {
-                                        "name": "Target Name",
-                                        "target": "{{Caster's Summoner}}"
-                                      },
-                                      "invertCondition": true
-                                    }
-                                  }
-                                ]
-                              },
-                              "searchRandom": true,
-                              "ifTargetFound": [
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Has Modifier",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>",
-                                    "invertCondition": true
-                                  }
-                                },
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Has Modifier",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>",
-                                    "invertCondition": true
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "AND",
-                                "conditionList": [
-                                  {
-                                    "name": "Compare: Variable",
-                                    "target": {
-                                      "name": "Target Sequence",
-                                      "Sequence": [
-                                        {
-                                          "name": "Target Name",
-                                          "target": "{{Enemy Team All}}"
-                                        },
-                                        {
-                                          "name": "Target Filter",
-                                          "conditions": {
-                                            "name": "Compare: Target",
-                                            "target": {
-                                              "name": "Target Name",
-                                              "target": "{{Parameter Target}}"
-                                            },
-                                            "target2": {
-                                              "name": "Target Name",
-                                              "target": "{{Caster's Summoner}}"
-                                            },
-                                            "invertCondition": true
-                                          }
-                                        }
-                                      ]
-                                    },
-                                    "value1": "TeamCharacterCount",
-                                    "compareType": "=",
-                                    "value2": 0
-                                  }
-                                ]
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Animation Task",
-                          "passed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster's Summoner}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1225888494\">Enemy_W2_Cocolia_IF_SummonDie</a>"
-                            },
-                            {
-                              "name": "Find New Target",
-                              "from": {
-                                "name": "Target Sequence",
-                                "Sequence": [
-                                  {
-                                    "name": "Target Name",
-                                    "target": "{{Enemy Team All}}"
-                                  },
-                                  {
-                                    "name": "Target Filter",
-                                    "conditions": {
-                                      "name": "Compare: Target",
-                                      "target": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "target2": {
-                                        "name": "Target Name",
-                                        "target": "{{Caster's Summoner}}"
-                                      },
-                                      "invertCondition": true
-                                    }
-                                  }
-                                ]
-                              },
-                              "searchRandom": true,
-                              "ifTargetFound": [
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Has Modifier",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>",
-                                    "invertCondition": true
-                                  },
-                                  "passed": [
-                                    {
-                                      "name": "Add Events/Bonuses",
-                                      "to": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>"
-                                    },
-                                    {
-                                      "name": "Add Events/Bonuses",
-                                      "to": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "modifier": "<a class=\"gModGreen\" id=\"-1358847221\">Enemy_W2_Kafka_IF_Weakness_Wind</a>"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Has Modifier",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>",
-                                    "invertCondition": true
-                                  },
-                                  "passed": [
-                                    {
-                                      "name": "Add Events/Bonuses",
-                                      "to": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>"
-                                    },
-                                    {
-                                      "name": "Add Events/Bonuses",
-                                      "to": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "modifier": "<a class=\"gModGreen\" id=\"1168051970\">Enemy_W2_Kafka_IF_Weakness_Imaginary</a>"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "AND",
-                                "conditionList": [
-                                  {
-                                    "name": "Compare: Variable",
-                                    "target": {
-                                      "name": "Target Sequence",
-                                      "Sequence": [
-                                        {
-                                          "name": "Target Name",
-                                          "target": "{{Enemy Team All}}"
-                                        },
-                                        {
-                                          "name": "Target Filter",
-                                          "conditions": {
-                                            "name": "Compare: Target",
-                                            "target": {
-                                              "name": "Target Name",
-                                              "target": "{{Parameter Target}}"
-                                            },
-                                            "target2": {
-                                              "name": "Target Name",
-                                              "target": "{{Caster's Summoner}}"
-                                            },
-                                            "invertCondition": true
-                                          }
-                                        }
-                                      ]
-                                    },
-                                    "value1": "TeamCharacterCount",
-                                    "compareType": "=",
-                                    "value2": 0
-                                  }
-                                ]
-                              },
-                              "passed": [
-                                {
-                                  "name": "Add Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Caster's Summoner}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>"
-                                },
-                                {
-                                  "name": "Add Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Caster's Summoner}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>"
-                                },
-                                {
-                                  "name": "Add Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Caster's Summoner}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-1358847221\">Enemy_W2_Kafka_IF_Weakness_Wind</a>"
-                                },
-                                {
-                                  "name": "Add Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Caster's Summoner}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"1168051970\">Enemy_W2_Kafka_IF_Weakness_Imaginary</a>"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Animation Task"
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Animation Event",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "state": "Die",
-                      "passed": [
-                        {
-                          "name": "Animation Task"
-                        },
-                        {
-                          "name": "Animation Task"
-                        },
-                        {
-                          "name": "Animation Task",
-                          "passed": [
-                            {
-                              "name": "Find New Target",
-                              "from": {
-                                "name": "Target Sequence",
-                                "Sequence": [
-                                  {
-                                    "name": "Target Name",
-                                    "target": "{{Enemy Team All}}"
-                                  },
-                                  {
-                                    "name": "Target Filter",
-                                    "conditions": {
-                                      "name": "Compare: Target",
-                                      "target": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "target2": {
-                                        "name": "Target Name",
-                                        "target": "{{Caster's Summoner}}"
-                                      },
-                                      "invertCondition": true
-                                    }
-                                  }
-                                ]
-                              },
-                              "searchRandom": true,
-                              "ifTargetFound": [
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Has Modifier",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>",
-                                    "invertCondition": true
-                                  }
-                                },
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Has Modifier",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>",
-                                    "invertCondition": true
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "AND",
-                                "conditionList": [
-                                  {
-                                    "name": "Compare: Variable",
-                                    "target": {
-                                      "name": "Target Sequence",
-                                      "Sequence": [
-                                        {
-                                          "name": "Target Name",
-                                          "target": "{{Enemy Team All}}"
-                                        },
-                                        {
-                                          "name": "Target Filter",
-                                          "conditions": {
-                                            "name": "Compare: Target",
-                                            "target": {
-                                              "name": "Target Name",
-                                              "target": "{{Parameter Target}}"
-                                            },
-                                            "target2": {
-                                              "name": "Target Name",
-                                              "target": "{{Caster's Summoner}}"
-                                            },
-                                            "invertCondition": true
-                                          }
-                                        }
-                                      ]
-                                    },
-                                    "value1": "TeamCharacterCount",
-                                    "compareType": "=",
-                                    "value2": 0
-                                  }
-                                ]
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Animation Task",
-                          "passed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster's Summoner}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1225888494\">Enemy_W2_Cocolia_IF_SummonDie</a>"
-                            },
-                            {
-                              "name": "Find New Target",
-                              "from": {
-                                "name": "Target Sequence",
-                                "Sequence": [
-                                  {
-                                    "name": "Target Name",
-                                    "target": "{{Enemy Team All}}"
-                                  },
-                                  {
-                                    "name": "Target Filter",
-                                    "conditions": {
-                                      "name": "Compare: Target",
-                                      "target": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "target2": {
-                                        "name": "Target Name",
-                                        "target": "{{Caster's Summoner}}"
-                                      },
-                                      "invertCondition": true
-                                    }
-                                  }
-                                ]
-                              },
-                              "searchRandom": true,
-                              "ifTargetFound": [
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Has Modifier",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>",
-                                    "invertCondition": true
-                                  },
-                                  "passed": [
-                                    {
-                                      "name": "Add Events/Bonuses",
-                                      "to": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>"
-                                    },
-                                    {
-                                      "name": "Add Events/Bonuses",
-                                      "to": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "modifier": "<a class=\"gModGreen\" id=\"-1358847221\">Enemy_W2_Kafka_IF_Weakness_Wind</a>"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Has Modifier",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>",
-                                    "invertCondition": true
-                                  },
-                                  "passed": [
-                                    {
-                                      "name": "Add Events/Bonuses",
-                                      "to": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>"
-                                    },
-                                    {
-                                      "name": "Add Events/Bonuses",
-                                      "to": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "modifier": "<a class=\"gModGreen\" id=\"1168051970\">Enemy_W2_Kafka_IF_Weakness_Imaginary</a>"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "AND",
-                                "conditionList": [
-                                  {
-                                    "name": "Compare: Variable",
-                                    "target": {
-                                      "name": "Target Sequence",
-                                      "Sequence": [
-                                        {
-                                          "name": "Target Name",
-                                          "target": "{{Enemy Team All}}"
-                                        },
-                                        {
-                                          "name": "Target Filter",
-                                          "conditions": {
-                                            "name": "Compare: Target",
-                                            "target": {
-                                              "name": "Target Name",
-                                              "target": "{{Parameter Target}}"
-                                            },
-                                            "target2": {
-                                              "name": "Target Name",
-                                              "target": "{{Caster's Summoner}}"
-                                            },
-                                            "invertCondition": true
-                                          }
-                                        }
-                                      ]
-                                    },
-                                    "value1": "TeamCharacterCount",
-                                    "compareType": "=",
-                                    "value2": 0
-                                  }
-                                ]
-                              },
-                              "passed": [
-                                {
-                                  "name": "Add Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Caster's Summoner}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>"
-                                },
-                                {
-                                  "name": "Add Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Caster's Summoner}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>"
-                                },
-                                {
-                                  "name": "Add Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Caster's Summoner}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-1358847221\">Enemy_W2_Kafka_IF_Weakness_Wind</a>"
-                                },
-                                {
-                                  "name": "Add Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Caster's Summoner}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"1168051970\">Enemy_W2_Kafka_IF_Weakness_Imaginary</a>"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Animation Task"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Compare: Target",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "target2": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Summoner}}"
-                      },
-                      "invertCondition": true
-                    }
-                  }
-                ]
-              },
-              "searchRandom": true,
-              "includeDyingTargets": true,
-              "ifTargetFound": [
-                "Deleted bullshit"
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1358847221\">Enemy_W2_Kafka_IF_Weakness_Wind</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1168051970\">Enemy_W2_Kafka_IF_Weakness_Imaginary</a>"
-            }
-          ]
-        },
+        "Ability Start",
         {
           "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "variableName": "SummonDeathInsertCheck",
-          "value": 0
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_IF03_SummonMonster_Insert_Part01": {
-      "fileName": "2004014_Monster_W2_Kafka_IF03_SummonMonster_Insert_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Soulcaller"
+          "scope": "TargetEntity",
+          "variableName": "BattleEventFlag",
+          "value": 1
         },
         {
           "name": "Declare Custom Variable",
@@ -3546,396 +2683,321 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "scope": "TargetEntity",
-          "variableName": "InsertCheck",
-          "value": 1
+          "variableName": "MindControlCount"
         },
         {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 1
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
           },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[SkillIF01[4]]}) || RETURN",
-                "displayLines": "{[SkillIF01[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillIF01[4]]}"
-                ]
-              },
-              "enemyList": [
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "ENEMIES_OBJECT_UNUSED__19",
-                  "summonLocation": "BeforeCaster"
-                }
-              ]
+          "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2054484016\">Monster_W2_Kafka_RL_MindControl_False</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "ShowHint04"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Battle Event List}}"
+          },
+          "searchRandom": true,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
             },
+            "modifier": "<a class=\"gModGreen\" id=\"-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>"
+          },
+          "ifTargetFound": [
             {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[SkillIF01[5]]}) || RETURN",
-                "displayLines": "{[SkillIF01[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillIF01[5]]}"
-                ]
-              },
-              "enemyList": [
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "ENEMIES_OBJECT_UNUSED__21",
-                  "summonLocation": "AfterCaster"
-                }
-              ]
-            },
-            "Deleted bullshit"
-          ],
-          "failed": [
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[SkillEX04[1]]}) || RETURN",
-                "displayLines": "{[SkillEX04[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillEX04[1]]}"
-                ]
-              },
-              "enemyList": [
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "ENEMIES_OBJECT_UNUSED__20",
-                  "summonLocation": "BeforeCaster"
-                }
-              ]
-            },
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
-                "displayLines": "{[SkillEX04[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillEX04[0]]}"
-                ]
-              },
-              "enemyList": [
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "ENEMIES_OBJECT_UNUSED__22",
-                  "summonLocation": "AfterCaster"
-                }
-              ]
-            },
-            "Deleted bullshit"
+              "name": "Force Entity Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            }
           ]
         },
         {
           "name": "Find New Target",
           "from": {
             "name": "Target Name",
-            "target": "{{Caster's Minions}}"
+            "target": "{{Hostile Entities(AOE)}}"
           },
           "searchRandom": true,
           "ifTargetFound": [
             {
               "name": "IF",
               "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__19) || RETURN",
-                      "displayLines": "ENEMIES_OBJECT_UNUSED__19",
-                      "constants": [],
-                      "variables": [
-                        "ENEMIES_OBJECT_UNUSED__19"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__20) || RETURN",
-                      "displayLines": "ENEMIES_OBJECT_UNUSED__20",
-                      "constants": [],
-                      "variables": [
-                        "ENEMIES_OBJECT_UNUSED__20"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  }
-                ]
+                "name": "Compare: Variable",
+                "value1": "FinalPhase",
+                "compareType": "=",
+                "value2": 1,
+                "contextScope": "TargetEntity"
               },
               "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"267014068\">Enemy_W2_Kafka_IF_Weakness_Physical</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1168051970\">Enemy_W2_Kafka_IF_Weakness_Imaginary</a>"
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__21) || RETURN",
-                      "displayLines": "ENEMIES_OBJECT_UNUSED__21",
-                      "constants": [],
-                      "variables": [
-                        "ENEMIES_OBJECT_UNUSED__21"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__22) || RETURN",
-                      "displayLines": "ENEMIES_OBJECT_UNUSED__22",
-                      "constants": [],
-                      "variables": [
-                        "ENEMIES_OBJECT_UNUSED__22"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"849374917\">Enemy_W2_Kafka_IF_Weakness_Fire</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1358847221\">Enemy_W2_Kafka_IF_Weakness_Wind</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1171418484\">Monster_W2_Kafka_IF03_SummonHitDamageSplit</a>",
-          "casterAssign": "CasterSelf"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"206643728\">Enemy_W2_Kafka_IF_SummonDeathrattle</a>",
-          "valuePerStack": {
-            "MDF_KillBonus": {
-              "operator": "Variables[0] ({[SkillIF01[2]]}) || RETURN",
-              "displayLines": "{[SkillIF01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillIF01[2]]}"
-              ]
-            }
-          },
-          "casterAssign": "CasterSelf"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__206643728\">Enemy_W2_Kafka_IF_SummonDeathrattle</a>",
-          "modifierFlags": [
-            "KeepOnDeathrattle",
-            "Deathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Ability",
-                  "abilityName": "Monster_Boss_Kafka_IF_Summon_Death_Insert"
-                },
-                {
-                  "name": "Add Ability",
-                  "abilityName": "Monster_Boss_Kafka_IF_Summon_Death_NoInsert"
-                },
-                {
-                  "name": "Add Ability",
-                  "abilityName": "Monster_Boss_Kafka_IF_Summon_Death_Camera"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Was Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Dispel Debuffs",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "silent": true
-                },
-                {
-                  "name": "Mark Entity For Immediate Death"
-                },
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Summoner of Modifier Holder}}"
-                    },
-                    "value1": "SummonDeathInsertCheck",
-                    "compareType": "=",
-                    "value2": 0
+                    "value1": "MindControlCount",
+                    "compareType": "<",
+                    "value2": 4,
+                    "contextScope": "TargetEntity"
                   },
                   "passed": [
                     {
-                      "name": "Inject Ability Use",
-                      "checkOverride": {
-                        "name": "Condition Priority",
-                        "overridePriority": "MonsterForceKill",
-                        "condition": {
-                          "name": "Compare: Ability Value",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Summoner of Modifier Holder}}"
-                          },
-                          "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                          "compareType": "<=",
-                          "value2": 0
-                        }
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
                       },
-                      "abilityName": "Monster_Boss_Kafka_IF_Summon_Death_Insert",
-                      "priorityTag": "EnemyDeathEffect",
-                      "ownerState": "Mask_AliveOrLimbo",
-                      "targetState": "Mask_AliveOrLimbo",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
+                      "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
                     },
                     {
-                      "name": "Define Custom Variable",
-                      "target": {
+                      "name": "Add Events/Bonuses",
+                      "to": {
                         "name": "Target Name",
-                        "target": "{{Summoner of Modifier Holder}}"
+                        "target": "{{Parameter Target}}"
                       },
-                      "variableName": "SummonDeathInsertCheck",
-                      "value": 1
+                      "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "HP_Bars_Remaining",
+                    "compareType": "=",
+                    "value2": 3
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MindControlCount",
+                        "compareType": "<",
+                        "value2": 3,
+                        "contextScope": "TargetEntity"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
+                        }
+                      ]
                     }
                   ],
                   "failed": [
                     {
-                      "name": "Inject Ability Use",
-                      "checkOverride": {
-                        "name": "Condition Priority",
-                        "overridePriority": "MonsterForceKill",
-                        "condition": {
-                          "name": "Compare: Ability Value",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Summoner of Modifier Holder}}"
-                          },
-                          "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                          "compareType": "<=",
-                          "value2": 0
-                        }
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MindControlCount",
+                        "compareType": "<",
+                        "value2": 2,
+                        "contextScope": "TargetEntity"
                       },
-                      "abilityName": "Monster_Boss_Kafka_IF_Summon_Death_NoInsert",
-                      "priorityTag": "EnemyDeathEffect",
-                      "ownerState": "Mask_AliveOrLimbo",
-                      "targetState": "Mask_AliveOrLimbo",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
+                        }
+                      ]
                     }
                   ]
                 }
               ]
+            },
+            {
+              "name": "Define Custom Variable with Added Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "variableName": "MindControlCount",
+              "context": "TargetEntity",
+              "value": 1,
+              "max": 4
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "BaseSpeed",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "FinalPhase",
+            "compareType": "=",
+            "value2": 1,
+            "contextScope": "TargetEntity"
+          },
+          "passed": [
+            {
+              "name": "Add Battle Event",
+              "teamName": "Enemy Team",
+              "eventID": 20002,
+              "statSource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "variables": {
+                "MDF_W2_Kafka_RL_BattleEvent_ActionDelay": {
+                  "operator": "Variables[0] (UnusedUnderThisBase_11469) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11469",
+                  "constants": [],
+                  "variables": [
+                    "UnusedUnderThisBase_11469"
+                  ]
+                },
+                "MDF_W2_Kafka_RL_BattleEvent_BaseSpeed": {
+                  "operator": "Variables[0] (BaseSpeed) || RETURN",
+                  "displayLines": "BaseSpeed",
+                  "constants": [],
+                  "variables": [
+                    "BaseSpeed"
+                  ]
+                }
+              }
             }
           ],
-          "stackData": [
-            "MDF_KillBonus"
-          ],
-          "latentQueue": [
-            "InsertCheck"
+          "failed": [
+            {
+              "name": "Add Battle Event",
+              "teamName": "Enemy Team",
+              "eventID": 20002,
+              "statSource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "variables": {
+                "MDF_W2_Kafka_RL_BattleEvent_ActionDelay": {
+                  "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
+                  "displayLines": "{[Skill07[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill07[0]]}"
+                  ]
+                },
+                "MDF_W2_Kafka_RL_BattleEvent_BaseSpeed": {
+                  "operator": "Variables[0] (BaseSpeed) || RETURN",
+                  "displayLines": "BaseSpeed",
+                  "constants": [],
+                  "variables": [
+                    "BaseSpeed"
+                  ]
+                }
+              }
+            }
           ]
-        }
-      ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "2004014_Monster_W2_Kafka_RL_Ability07_Part01": {
+      "fileName": "2004014_Monster_W2_Kafka_RL_Ability07_Part01",
+      "childAbilityList": [
+        "2004014_Monster_W2_Kafka_RL_Ability07_Part01",
+        "2004014_Monster_W2_Kafka_RL_Ability07_Part02",
+        "2004014_Monster_W2_Kafka_RL_Ability07_Camera"
+      ],
+      "skillTrigger": "Skill07",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Kafka_RL_Ability07_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
+      "references": []
     },
     "2004014_Monster_W2_Kafka_Ability06_Part02_IF": {
       "fileName": "2004014_Monster_W2_Kafka_Ability06_Part02_IF",
@@ -4187,2948 +3249,114 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2004014_Monster_W2_Kafka_IF03_Passive01": {
-      "fileName": "2004014_Monster_W2_Kafka_IF03_Passive01",
-      "childAbilityList": [
-        "2004014_Monster_W2_Kafka_IF03_Passive01"
-      ],
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1961920728\">Monster_W2_Kafka_BattleScore1</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "DisPelCount"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1735231980\">Monster_W2_Kafka_IF02_Pursuit</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1742511370\">Monster_W2_Kafka_IF03_PartController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1977361532\">Monster_W2_Kafka_IF03_Summon</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-471232771\">Monster_W2_Kafka_IF03_MonsterAssistControl</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
-          "valuePerStack": {
-            "MDF_FrenzyStartDelay": {
-              "operator": "Variables[0] ({[SkillEX05[0]]}) || RETURN",
-              "displayLines": "{[SkillEX05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[0]]}"
-              ]
-            },
-            "MDF_FrenzyIntervalDelay": {
-              "operator": "Variables[0] ({[SkillEX05[1]]}) || RETURN",
-              "displayLines": "{[SkillEX05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[1]]}"
-              ]
-            },
-            "MDF_MaxFrenzyLayer": {
-              "operator": "Variables[0] ({[SkillEX05[2]]}) || RETURN",
-              "displayLines": "{[SkillEX05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[2]]}"
-              ]
-            },
-            "MDF_TokenDMGAddRatioPerLayer": {
-              "operator": "Variables[0] ({[SkillEX05[3]]}) || RETURN",
-              "displayLines": "{[SkillEX05[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX05[3]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1808450599\">Monster_W2_Kafka_IF03_SummonControl</a>",
-          "valuePerStack": {
-            "MDF_WeakDMGReduceRatio": {
-              "operator": "Variables[0] ({[SkillEX01[3]]}) || RETURN",
-              "displayLines": "{[SkillEX01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[3]]}"
-              ]
-            },
-            "MDF_WeakStatusProbReduceRatio": {
-              "operator": "Variables[0] ({[SkillEX01[4]]}) || RETURN",
-              "displayLines": "{[SkillEX01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[4]]}"
-              ]
-            },
-            "MDF_WeakStanceSliceRatio": {
-              "operator": "Variables[0] ({[SkillEX01[5]]}) || RETURN",
-              "displayLines": "{[SkillEX01[5]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[5]]}"
-              ]
-            },
-            "MDF_BreakDMGTokenAddRatio": {
-              "operator": "Variables[0] ({[SkillEX02[1]]}) || RETURN",
-              "displayLines": "{[SkillEX02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX02[1]]}"
-              ]
-            },
-            "MDF_BreakDelayRatio": {
-              "operator": "Variables[0] ({[SkillEX02[2]]}) || RETURN",
-              "displayLines": "{[SkillEX02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX02[2]]}"
-              ]
-            },
-            "MDF_FrenzyDMGTokenAddRatio": {
-              "operator": "Variables[0] ({[SkillEX02[3]]}) || RETURN",
-              "displayLines": "{[SkillEX02[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX02[3]]}"
-              ]
-            },
-            "MDF_FrenzySpeedAddRatio": {
-              "operator": "Variables[0] ({[SkillEX02[4]]}) || RETURN",
-              "displayLines": "{[SkillEX02[4]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX02[4]]}"
-              ]
-            },
-            "MDF_FrenzyStanceSliceRatio": {
-              "operator": "Variables[0] ({[SkillEX02[5]]}) || RETURN",
-              "displayLines": "{[SkillEX02[5]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX02[5]]}"
-              ]
-            },
-            "MDF_StanceDMGPerTeamMate": {
-              "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
-              "displayLines": "{[SkillEX02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX02[0]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1421140468\">Monster_W2_Kafka_IF03_CancelMindControlBEOnBeingBreak</a>",
-          "casterAssign": "CasterSelf"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"635367509\">MModifier_Kafka_IF_BattleAlert</a>"
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1004356166\">Monster_W2_Kafka_IF02_ListenMonsterActionModifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_HasTarget",
-                  "value": 0
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "searchRandom": true,
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-                      }
-                    ]
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_HasTarget",
-                      "value": 1
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_HasTarget",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "JustinBreak",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1155608240\">Monster_W2_Kafka_IF02_ContainJXDTag</a>"
-                        },
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 3
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "MDF_HasTarget",
-                          "value": 0
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "JustinBreak",
-                          "value": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1961920728\">Monster_W2_Kafka_BattleScore1</a>",
-          "execute": [
-            {
-              "eventTrigger": "Modifier Cleansed [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Was",
-                        "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]"
-                      },
-                      {
-                        "name": "Is Teammate",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "DisPelCount",
-                      "context": "TargetEntity",
-                      "value": 1,
-                      "max": 3
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "DisPelCount",
-                        "compareType": ">=",
-                        "value2": 3,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Achievement",
-                          "matchTags": true,
-                          "relatedAchievements": [
-                            {
-                              "title": "Will of Steel",
-                              "desc": "In a single battle against Boss Kafka, dispel Dominated 3 times",
-                              "rarity": "Low",
-                              "type": "Hidden until Completion"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-376688543\">Monster_W2_Kafka_IF02_BEFrozen</a>",
-          "modifierFlags": [
-            "MuteSpeed"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1644855766\">Monster_W2_Kafka_IF02_BreakListen</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "JustinBreak",
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1421140468\">Monster_W2_Kafka_IF03_CancelMindControlBEOnBeingBreak</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 2
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Battle-Events}}"
-                      },
-                      "searchRandom": true,
-                      "ifTargetFound": [
-                        {
-                          "name": "Force Entity Death",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster's Battle-Events}}"
-                          }
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Player Team All}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1862927139\">Monster_W2_Kafka_RL_MindControl_True</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Player Team All}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-2031893844\">Monster_W2_Kafka_RL_MindControl_TrueEffect</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion Revelation</span>]"
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Player Team All}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"2054484016\">Monster_W2_Kafka_RL_MindControl_False</a>[<span class=\"descriptionNumberColor\">Psychological Suggestion</span>]"
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "scope": "TargetEntity",
-                          "variableName": "BattleEventFlag",
-                          "value": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__635367509\">MModifier_Kafka_IF_BattleAlert</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team"
-                      },
-                      {
-                        "name": "Compare: Monster Rank",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "compareType": "=",
-                        "value2": 3
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "noTargetFound": [
-                        {
-                          "name": "Update Enemy InfoPanel"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Enemy InfoPanel",
-                      "text": "Defeat summoned enemies to weaken the boss",
-                      "type": "Warning"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
-          ]
-        }
-      ]
-    },
-    "2004014_Monster_W2_Kafka_IF_EX05_PassiveAbility": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_EX05_PassiveAbility",
-      "skillTrigger": "SkillEX05",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_IF_EX04_PassiveAbility": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_EX04_PassiveAbility",
-      "skillTrigger": "SkillEX04",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": ">=",
-            "value2": 4
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1162350754\">Enemy_W2_Kafka_IF_EX04_Boss</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1162350754\">Enemy_W2_Kafka_IF_EX04_Boss</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2004014_Monster_W2_Kafka_IF_EX03_PassiveAbility": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_EX03_PassiveAbility",
-      "skillTrigger": "SkillEX03",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": ">=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1524558983\">Enemy_W2_Kafka_IF_EX03_Boss</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1727559793\">Enemy_W2_Kafka_IF_EnemyCount</a>",
-              "valuePerStack": {
-                "MDF_ShowValue1": {
-                  "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                  "displayLines": "{[SkillEX03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX03[0]]}"
-                  ]
-                },
-                "MDF_ShowValue2": {
-                  "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                  "displayLines": "{[SkillEX03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX03[0]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1524558983\">Enemy_W2_Kafka_IF_EX03_Boss</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2004014_Monster_W2_Kafka_IF_EX02_PassiveAbility": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_EX02_PassiveAbility",
-      "skillTrigger": "SkillEX02",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": ">=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1808402848\">Enemy_W2_Kafka_IF_EX02_Boss</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1808402848\">Enemy_W2_Kafka_IF_EX02_Boss</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2004014_Monster_W2_Kafka_IF_EX01_PassiveAbility": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_EX01_PassiveAbility",
-      "skillTrigger": "SkillEX01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": ">=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
-              "valuePerStack": {
-                "MDF_IF_BOSS_BreakDelay": {
-                  "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
-                  "displayLines": "{[SkillEX01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX01[2]]}"
-                  ]
-                },
-                "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-                  "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-                  "displayLines": "{[SkillEX01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX01[1]]}"
-                  ]
-                },
-                "MDF_IF_BOSS_Standard_Defence": {
-                  "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-                  "displayLines": "{[SkillEX01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX01[0]]}"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-243559524\">Enemy_W2_Kafka_IF_WeaknessSplit</a>",
-              "valuePerStack": {
-                "MDF_MaxSummonNum": 2,
-                "MDF_StanceWeaknessList": 1725,
-                "_CurrWeaknessList": 1725
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-916114620\">Enemy_W2_Kafka_IF_AssistController</a>",
-              "valuePerStack": {
-                "MDF_DotMaxCount": {
-                  "operator": "Variables[0] ({[SkillIF01[0]]}) || RETURN",
-                  "displayLines": "{[SkillIF01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillIF01[0]]}"
-                  ]
-                },
-                "MDF_DotConsume": {
-                  "operator": "Variables[0] ({[SkillIF01[1]]}) || RETURN",
-                  "displayLines": "{[SkillIF01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillIF01[1]]}"
-                  ]
-                },
-                "MDF_DotCurCount": {
-                  "operator": "Variables[0] ({[SkillIF01[3]]}) || RETURN",
-                  "displayLines": "{[SkillIF01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillIF01[3]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-916114620\">Enemy_W2_Kafka_IF_AssistController</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Current Turn Is",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_DotCurCount",
-                      "value": 1,
-                      "max": {
-                        "operator": "Variables[0] (MDF_DotMaxCount) || RETURN",
-                        "displayLines": "MDF_DotMaxCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DotMaxCount"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Current Turn Is",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "MDF_DotCurCount",
-                        "compareType": ">=",
-                        "value2": {
-                          "operator": "Variables[0] (MDF_DotConsume) || RETURN",
-                          "displayLines": "MDF_DotConsume",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DotConsume"
-                          ]
-                        }
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "MDF_DotCurCount",
-                        "compareType": "<",
-                        "value2": {
-                          "operator": "Variables[0] (MDF_DotMaxCount) || RETURN",
-                          "displayLines": "MDF_DotMaxCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DotMaxCount"
-                          ]
-                        }
-                      },
-                      {
-                        "name": "Is Entity a Battle Event/Summon",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "STAT_CTRL",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "DisableAction",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "Break",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-689878752\">Monster_W2_Kafka_IF03_SummonKillBonus01</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-639545895\">Monster_W2_Kafka_IF03_SummonKillBonus02</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-656323514\">Monster_W2_Kafka_IF03_SummonKillBonus03</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-605990657\">Monster_W2_Kafka_IF03_SummonKillBonus04</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "flagName": "STAT_CTRL",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "flagName": "DisableAction",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "flagName": "Break",
-                            "invertCondition": true
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Inject Ability Use",
-                          "abilityName": "Monster_W2_Kafka_AbilityIF01_Part01",
-                          "abilityTarget": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "priorityTag": "EnemyAttackFromSelf",
-                          "canHitNonTargets": true,
-                          "showInActionOrder": true,
-                          "allowAbilityTriggers": false
-                        },
-                        {
-                          "name": "Define Custom Variable with Added Value",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "variableName": "MDF_DotCurCount",
-                          "value": {
-                            "operator": "Variables[0] (MDF_DotConsume) || INVERT || RETURN",
-                            "displayLines": "-MDF_DotConsume",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DotConsume"
-                            ]
-                          },
-                          "max": {
-                            "operator": "Variables[0] (MDF_DotMaxCount) || RETURN",
-                            "displayLines": "MDF_DotMaxCount",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DotMaxCount"
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Current Turn Is",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "MDF_DotCurCount",
-                        "compareType": ">=",
-                        "value2": {
-                          "operator": "Variables[0] (MDF_DotConsume) || RETURN",
-                          "displayLines": "MDF_DotConsume",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DotConsume"
-                          ]
-                        }
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "MDF_DotCurCount",
-                        "compareType": "=",
-                        "value2": {
-                          "operator": "Variables[0] (MDF_DotMaxCount) || RETURN",
-                          "displayLines": "MDF_DotMaxCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DotMaxCount"
-                          ]
-                        }
-                      },
-                      {
-                        "name": "Is Entity a Battle Event/Summon",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "STAT_CTRL",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "DisableAction",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "Break",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "flagName": "STAT_CTRL",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "flagName": "DisableAction",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "flagName": "Break",
-                            "invertCondition": true
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Inject Ability Use",
-                          "abilityName": "Monster_W2_Kafka_AbilityIF01_Part01",
-                          "abilityTarget": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "priorityTag": "EnemyAttackFromSelf",
-                          "canHitNonTargets": true,
-                          "showInActionOrder": true,
-                          "allowAbilityTriggers": false
-                        },
-                        {
-                          "name": "Define Custom Variable with Added Value",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "variableName": "MDF_DotCurCount",
-                          "value": {
-                            "operator": "Variables[0] (MDF_DotConsume) || INVERT || RETURN",
-                            "displayLines": "-MDF_DotConsume",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DotConsume"
-                            ]
-                          },
-                          "max": {
-                            "operator": "Variables[0] (MDF_DotMaxCount) || RETURN",
-                            "displayLines": "MDF_DotMaxCount",
-                            "constants": [],
-                            "variables": [
-                              "MDF_DotMaxCount"
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [
-            "MDF_DotMaxCount",
-            "MDF_DotConsume",
-            "MDF_DotCurCount"
-          ],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1540227508\">Enemy_W2_Kafka_IF_AssistController_Save</a>[<span class=\"descriptionNumberColor\">Threads of the Puppet</span>]",
-          "description": "Consumes Threads of the Puppet to apply Madden to summons.",
-          "type": "Other",
-          "statusName": "Threads of the Puppet"
-        }
-      ]
-    },
-    "2004014_Monster_W2_Kafka_IF_PassiveAbility01_Insert_Part01": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_PassiveAbility01_Insert_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "WAIT FOR",
-          "condition": {
-            "name": "Death Animation Completed",
-            "team": "Enemy Team",
-            "type": "Team Characters"
-          }
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Insert_Flag"
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": 4,
-          "Event": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "team": "Enemy Team",
-                "location": "Left"
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": 0.5,
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Constants[0] (8032010) || RETURN",
-                        "displayLines": "8032010",
-                        "constants": [
-                          8032010
-                        ],
-                        "variables": []
-                      },
-                      "locationType": "First"
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Recently Summoned Enemies}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>"
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": 0.5,
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Constants[0] (8032010) || RETURN",
-                        "displayLines": "8032010",
-                        "constants": [
-                          8032010
-                        ],
-                        "variables": []
-                      },
-                      "locationType": "Last"
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Recently Summoned Enemies}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"410285383\">Monster_W2_Kafka_IF_BeControled</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__410285383\">Monster_W2_Kafka_IF_BeControled</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Insert_Flag"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-673746798\">Monster_W2_Kafka_IF_SummonRotation_DarkTeamCenter</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Insert_Flag"
-          ]
-        }
-      ]
-    },
-    "2004014_BattleEventAbility_W2_Kafka_IF_Insert": {
-      "fileName": "2004014_BattleEventAbility_W2_Kafka_IF_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Revelation"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1707949525\">Monster_W2_Kafka_IF_MindControl_TrueEffect</a>"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1707949525\">Monster_W2_Kafka_IF_MindControl_TrueEffect</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
-              "duration": {
-                "operator": "Variables[0] ({[Skill07[1]]}) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "({[Skill07[1]]} + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "{[Skill07[1]]}"
-                ]
-              },
-              "baseChance": {
-                "operator": "Variables[0] ({[Skill07[2]]}) || RETURN",
-                "displayLines": "{[Skill07[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill07[2]]}"
-                ]
-              },
-              "valuePerStack": {
-                "MDF_MindControlDamagePercentage": {
-                  "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                  "displayLines": "{[Skill05[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[1]]}"
-                  ]
-                },
-                "MDF_MaxDamageRatio": {
-                  "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                  "displayLines": "{[Skill05[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[2]]}"
-                  ]
-                },
-                "MDF_MinDamageRatio": {
-                  "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                  "displayLines": "{[Skill05[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[3]]}"
-                  ]
-                }
-              },
-              "success": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "MindControlSuccess",
-                  "value": 1
-                }
-              ]
-            },
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "advanceType": "Advance",
-              "multiAdd": -1
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "MindControlSuccess",
-            "compareType": "=",
-            "value2": 1,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "scope": "TargetEntity",
-              "variableName": "MindControlSuccess",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1752429969\">Monster_W2_Kafka_IF_MindControl_False</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004014_BattleEventAbility_W2_Kafka_IF": {
-      "fileName": "2004014_BattleEventAbility_W2_Kafka_IF",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1014249439\">Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "advanceType": "Set",
-          "multiAdd": "MDF_W2_Kafka_00_RL_BattleEvent_ActionDelay"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1014249439\">Modifier_W2_Kafka_RL_BattleEvent_BaseSpeed</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed) || RETURN",
-                    "displayLines": "MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "MDF_W2_Kafka_00_RL_BattleEvent_BaseSpeed"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "BattleEventAbility_W2_Kafka_IF_Insert",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Battle Event's Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "priorityTag": "EnemyAttackFromSelf",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                },
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2004014_Monster_W2_Kafka_IF_PassiveAbility_Insert2": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_PassiveAbility_Insert2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 0
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-682734007\">Monster_W2_Kafka_IF_Part03EnhanceEffect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1510857703\">Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1613170749\">Monster_W2_Kafka_IF_Endurance</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Battle Event List}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1194666132\">Modifier_W2_Kafka_RL_BattleEvent</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Force Entity Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-568638257\">Monster_W2_Kafka_IF_PartController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_IF_PassiveAbility_Insert": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_PassiveAbility_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 0
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1613170749\">Monster_W2_Kafka_IF_Endurance</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "InsertCheck",
-          "value": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_IF_Ability10_Part02": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_Ability10_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Looped Event",
-          "maxLoops": 4,
-          "Event": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "team": "Enemy Team",
-                "location": "Left"
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": 0,
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Constants[0] (8032010) || RETURN",
-                        "displayLines": "8032010",
-                        "constants": [
-                          8032010
-                        ],
-                        "variables": []
-                      },
-                      "locationType": "First"
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Recently Summoned Enemies}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": 0,
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Constants[0] (8032010) || RETURN",
-                        "displayLines": "8032010",
-                        "constants": [
-                          8032010
-                        ],
-                        "variables": []
-                      },
-                      "locationType": "Last"
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Recently Summoned Enemies}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"410285383\">Monster_W2_Kafka_IF_BeControled</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1650363827\">Monster_W2_Kafka_IF_BPAdd</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-54791834\">Monster_W2_Kafka_IF_StartRotation</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1650363827\">Monster_W2_Kafka_IF_BPAdd</a>",
-          "modifierFlags": [
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Pre-Death [Owner]",
-              "execute": [
-                {
-                  "name": "Skill Points Modification",
-                  "adjustmentValue": {
-                    "operator": "Constants[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [
-                      1
-                    ],
-                    "variables": []
-                  },
-                  "adjustmentType": "+"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__410285383\">Monster_W2_Kafka_IF_BeControled</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-54791834\">Monster_W2_Kafka_IF_StartRotation</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2004014_Monster_W2_Kafka_IF_Ability10_Part01": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_Ability10_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Kafka_IF_Ability10_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_IF_Ability08_Part02": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_Ability08_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Is Part Of Team",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "team": "Enemy Team"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-            },
-            {
-              "name": "Define Custom Variable with Added Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variableName": "CoinCount",
-              "context": "TargetEntity",
-              "value": 1,
-              "max": 99
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "displayLines": 3
-                },
-                "dmgFormula": "Max HP Scaling",
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "displayLines": 3
-                },
-                "dmgFormula": "Max HP Scaling",
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "displayLines": 3
-                },
-                "dmgFormula": "Max HP Scaling",
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-            },
-            {
-              "name": "Define Custom Variable with Added Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variableName": "CoinCount",
-              "context": "TargetEntity",
-              "value": 1,
-              "max": 99
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "displayLines": 3
-                },
-                "dmgFormula": "Max HP Scaling",
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "displayLines": 3
-                },
-                "dmgFormula": "Max HP Scaling",
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "displayLines": 3
-                },
-                "dmgFormula": "Max HP Scaling",
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-            },
-            {
-              "name": "Define Custom Variable with Added Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variableName": "CoinCount",
-              "context": "TargetEntity",
-              "value": 1,
-              "max": 99
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "displayLines": 3
-                },
-                "dmgFormula": "Max HP Scaling",
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "displayLines": 3
-                },
-                "dmgFormula": "Max HP Scaling",
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-            },
-            {
-              "name": "Define Custom Variable with Added Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variableName": "CoinCount",
-              "context": "TargetEntity",
-              "value": 1,
-              "max": 99
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "displayLines": 3
-                },
-                "dmgFormula": "Max HP Scaling",
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "displayLines": 3
-                },
-                "dmgFormula": "Max HP Scaling",
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
-              },
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "ElectricFlag",
-                  "value": 1
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "ElectricFlag"
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Looped Event",
-          "maxLoops": {
-            "operator": "Variables[0] (ElectricFlag) || RETURN",
-            "displayLines": "ElectricFlag",
-            "constants": [],
-            "variables": [
-              "ElectricFlag"
-            ]
-          },
-          "Event": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "CoinCount"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_IF_Ability08_Part01": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_Ability08_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Kafka_IF_Ability08_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_IF_Ability07_Insert_Part02": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_Ability07_Insert_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable with HP%",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "_CasterHPRatio"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Target Has Lowest/Highest Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "partOf": {
-              "name": "Target Name",
-              "target": "{{All Team Members(Exclude Self)}}"
-            },
-            "compareValue": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;",
-            "minOrMax": "Max"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with HP%",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_TargetHPRatio"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "_TargetHPRatio",
-                "compareType": ">",
-                "value2": {
-                  "operator": "Variables[0] (_CasterHPRatio) || RETURN",
-                  "displayLines": "_CasterHPRatio",
-                  "constants": [],
-                  "variables": [
-                    "_CasterHPRatio"
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_IF_Ability07_Insert_Part01": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_Ability07_Insert_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Kafka_IF_Ability07_Insert_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_IF_Ability07_Part02": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_Ability07_Part02",
+    "2004014_Monster_W2_Kafka_Ability05_Part02": {
+      "fileName": "2004014_Monster_W2_Kafka_Ability05_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         "Ability Start",
         {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "MindControlCount"
+          "name": "UI Display Event",
+          "popUpText": "Spirit Whisper"
         },
         {
-          "name": "Remove Events/Bonuses",
+          "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
+            "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
+          "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[Skill05[0]]}) || Constants[0] (1) || ADD || RETURN",
+            "displayLines": "({[Skill05[0]]} + 1)",
+            "constants": [
+              1
+            ],
+            "variables": [
+              "{[Skill05[0]]}"
+            ]
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1707949525\">Monster_W2_Kafka_IF_MindControl_TrueEffect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
+          "baseChance": {
+            "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
+            "displayLines": "{[Skill05[4]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill05[4]]}"
+            ]
           },
-          "modifier": "<a class=\"gModGreen\" id=\"1752429969\">Monster_W2_Kafka_IF_MindControl_False</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ShowHint04"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "searchRandom": true,
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "FinalPhase",
-                "compareType": "=",
-                "value2": 1,
-                "contextScope": "TargetEntity"
-              },
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MindControlCount",
-                    "compareType": "<",
-                    "value2": 4,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 3
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "MindControlCount",
-                        "compareType": "<",
-                        "value2": 3,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "MindControlCount",
-                        "compareType": "<",
-                        "value2": 2,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"807751830\">Monster_W2_Kafka_IF_MindControl_True</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
+          "valuePerStack": {
+            "MDF_MindControlDamagePercentage": {
+              "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+              "displayLines": "{[Skill05[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[1]]}"
               ]
             },
-            {
-              "name": "Define Custom Variable with Added Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variableName": "MindControlCount",
-              "context": "TargetEntity",
-              "value": 1,
-              "max": 4
+            "MDF_MaxDamageRatio": {
+              "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
+              "displayLines": "{[Skill05[2]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[2]]}"
+              ]
+            },
+            "MDF_MinDamageRatio": {
+              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
+              "displayLines": "{[Skill05[3]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[3]]}"
+              ]
             }
-          ]
+          },
+          "success": []
         },
         {
-          "name": "Define Custom Variable with Stat",
+          "name": "Action Advance/Delay",
           "target": {
             "name": "Target Name",
-            "target": "{{Caster}}"
+            "target": "{{Ability Target(ST)}}"
           },
-          "variableName": "BaseSpeed",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "FinalPhase",
-            "compareType": "=",
-            "value2": 1,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Add Battle Event",
-              "teamName": "Enemy Team",
-              "eventID": 20002,
-              "statSource": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variables": {
-                "MDF_W2_Kafka_RL_BattleEvent_ActionDelay": {
-                  "operator": "Variables[0] (FinalPhase) || RETURN",
-                  "displayLines": "FinalPhase",
-                  "constants": [],
-                  "variables": [
-                    "FinalPhase"
-                  ]
-                },
-                "MDF_W2_Kafka_RL_BattleEvent_BaseSpeed": {
-                  "operator": "Variables[0] (BaseSpeed) || RETURN",
-                  "displayLines": "BaseSpeed",
-                  "constants": [],
-                  "variables": [
-                    "BaseSpeed"
-                  ]
-                }
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Battle Event",
-              "teamName": "Enemy Team",
-              "eventID": 20002,
-              "statSource": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variables": {
-                "MDF_W2_Kafka_RL_BattleEvent_ActionDelay": {
-                  "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-                  "displayLines": "{[Skill07[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill07[0]]}"
-                  ]
-                },
-                "MDF_W2_Kafka_RL_BattleEvent_BaseSpeed": {
-                  "operator": "Variables[0] (BaseSpeed) || RETURN",
-                  "displayLines": "BaseSpeed",
-                  "constants": [],
-                  "variables": [
-                    "BaseSpeed"
-                  ]
-                }
-              }
-            }
-          ]
+          "advanceType": "Advance",
+          "multiAdd": -1
         },
         "Trigger: Ability End"
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
+        "primaryTarget": "{{Ability Target List}}"
       },
       "references": []
     },
-    "2004014_Monster_W2_Kafka_IF_Ability07_Part01": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_Ability07_Part01",
-      "abilityType": null,
+    "2004014_Monster_W2_Kafka_Ability05_Part01": {
+      "fileName": "2004014_Monster_W2_Kafka_Ability05_Part01",
+      "childAbilityList": [
+        "2004014_Monster_W2_Kafka_Ability05_Part01",
+        "2004014_Monster_W2_Kafka_Ability05_Part02",
+        "2004014_Monster_W2_Kafka_Ability05_Camera"
+      ],
+      "skillTrigger": "Skill05",
+      "abilityType": "Basic ATK",
       "energy": null,
       "toughnessList": null,
       "parse": [
+        "Deleted bullshit",
         {
           "name": "Trigger Ability",
           "from": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_W2_Kafka_IF_Ability07_Part02",
+          "ability": "Monster_W2_Kafka_Ability05_Part02",
           "isTrigger": true
-        },
-        "Deleted bullshit"
+        }
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       },
       "references": []
     },
@@ -7675,294 +3903,42 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2004014_Monster_W2_Kafka_IF_Passive02": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_Passive02",
+    "2004014_Monster_W2_Kafka_Ability03_Part02": {
+      "fileName": "2004014_Monster_W2_Kafka_Ability03_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
+        "Ability Start",
         {
-          "name": "Add Events/Bonuses",
-          "to": {
+          "name": "ATK Scaling DMG",
+          "target": {
             "name": "Target Name",
-            "target": "{{Modifier Holder}}"
+            "target": "{{Hostile Entities(AOE)}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"2083537880\">Monster_W2_Kafka_IF_Suicide</a>"
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2083537880\">Monster_W2_Kafka_IF_Suicide</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": 9004074,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "characterName": null
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove from Team Target Grouping",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "stayInTeam": false
-                    },
-                    {
-                      "name": "Entity Exit Stage",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "reason": "Vanish",
-                      "living": false
-                    },
-                    {
-                      "name": "Destroy Battle Entity",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      }
-                    }
-                  ]
-                }
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+              "displayLines": "{[Skill03[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill03[0]]}"
               ]
             },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2004014_Monster_W2_Kafka_IF_Passive01": {
-      "fileName": "2004014_Monster_W2_Kafka_IF_Passive01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1961920728\">Monster_W2_Kafka_BattleScore1</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "DisPelCount"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"781148168\">Monster_W2_Kafka_IF_HPRatioTriggerAOE</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-857035022\">Monster_W2_Kafka_IF_Pursuit</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2066030702\">Monster_W2_Kafka_AIChange</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-568638257\">Monster_W2_Kafka_IF_PartController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1086358837\">Monster_W2_Kafka_IF_Power</a>",
-          "valuePerStack": {
-            "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] (UnusedUnderThisBase_14) || RETURN",
-              "displayLines": "UnusedUnderThisBase_14",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_14"
-              ]
-            }
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
           }
         },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"593237238\">Monster_W2_Kafka_IF_LowHP</a>",
-          "valuePerStack": {
-            "MDF_LowHPRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_17) || RETURN",
-              "displayLines": "UnusedUnderThisBase_17",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_17"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-196949568\">Monster_W2_Kafka_IF_SummonControl</a>"
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2066030702\">Monster_W2_Kafka_AIChange</a>",
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1961920728\">Monster_W2_Kafka_BattleScore1</a>",
-          "execute": [
-            {
-              "eventTrigger": "Modifier Cleansed [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Was",
-                        "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]"
-                      },
-                      {
-                        "name": "Is Teammate",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "DisPelCount",
-                      "context": "TargetEntity",
-                      "value": 1,
-                      "max": 3
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "DisPelCount",
-                        "compareType": ">=",
-                        "value2": 3,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Achievement",
-                          "matchTags": true,
-                          "relatedAchievements": [
-                            {
-                              "title": "Will of Steel",
-                              "desc": "In a single battle against Boss Kafka, dispel Dominated 3 times",
-                              "rarity": "Low",
-                              "type": "Hidden until Completion"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2004014_Monster_W2_Kafka_IF02_Ability08_Part02": {
-      "fileName": "2004014_Monster_W2_Kafka_IF02_Ability08_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
+        "Trigger: Attack End",
         {
           "name": "Find New Target",
           "from": {
             "name": "Target Name",
-            "target": "{{Enemy Team All}}"
+            "target": "{{Player Team All}}"
           },
           "searchRandom": true,
           "conditions": {
@@ -7971,8 +3947,9 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
+            "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
           },
+          "ignoreParallelWarning": true,
           "ifTargetFound": [
             {
               "name": "Add Events/Bonuses",
@@ -7980,250 +3957,29 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "MDF_StackCount",
-              "value": {
-                "operator": "Variables[0] (MDF_StackCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(MDF_StackCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "MDF_StackCount"
-                ]
-              }
+              "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
             }
           ]
         },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"452406781\">Monster_W2_Kafka_IF02_LeftMonsterTag</a>"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 2,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"452406781\">Monster_W2_Kafka_IF02_LeftMonsterTag</a>"
-              },
-              "passed": [
-                {
-                  "name": "Shot Fired"
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Shot Fired"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
-          "valuePerStack": {
-            "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] (UnusedUnderThisBase_28) || RETURN",
-              "displayLines": "UnusedUnderThisBase_28",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_28"
-              ]
-            },
-            "Shield_InitValue": 0
-          }
-        },
-        {
-          "name": "Define Modifier Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifierName": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
-          "value": {
-            "operator": "Variables[0] (MDF_StackCount) || RETURN",
-            "displayLines": "MDF_StackCount",
-            "constants": [],
-            "variables": [
-              "MDF_StackCount"
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1425462104\">Monster_W2_Kafka_IF02_P2ShieldBrokenTag</a>"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "AIFlag",
-              "value": 3
-            }
-          ],
-          "failed": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "AIFlag",
-              "value": 6
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "MDF_StackCount",
-            "compareType": "=",
-            "value2": 1
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1425663089\">Monster_W2_Kafka_IF_SummonRotation</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "MDF_StackCount",
-          "value": 0
-        }
+        "Trigger: Ability End"
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2147044601\">Monster_W2_Kafka_IF02_MonsterCoinTag</a>"
-        }
-      ]
+      "references": []
     },
-    "2004014_Monster_W2_Kafka_IF02_Ability08_Part01": {
-      "fileName": "2004014_Monster_W2_Kafka_IF02_Ability08_Part01",
-      "abilityType": null,
+    "2004014_Monster_W2_Kafka_Ability03_Part01": {
+      "fileName": "2004014_Monster_W2_Kafka_Ability03_Part01",
+      "childAbilityList": [
+        "2004014_Monster_W2_Kafka_Ability03_Part01",
+        "2004014_Monster_W2_Kafka_Ability03_Part02",
+        "2004014_Monster_W2_Kafka_Ability03_Camera",
+        "2004014_Monster_W2_Kafka_IF_Ability03_Insert_Part01",
+        "2004014_Monster_W2_Kafka_IF_Ability03_Insert_Part02",
+        "2004014_Monster_W2_Kafka_IF_Ability03_Camera"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -8233,13 +3989,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_W2_Kafka_IF02_Ability08_Part02",
+          "ability": "Monster_W2_Kafka_Ability03_Part02",
           "isTrigger": true
         },
         "Deleted bullshit"
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []
     },
@@ -8507,11 +4266,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_28) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_28",
+                      "operator": "Variables[0] (UnusedUnderThisBase_8759) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_8759",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_28"
+                        "UnusedUnderThisBase_8759"
                       ]
                     },
                     "Shield_InitValue": 0
@@ -8636,11 +4395,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_14) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_14",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8765) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8765",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_14"
+                    "UnusedUnderThisBase_8765"
                   ]
                 }
               }
@@ -8973,1408 +4732,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2004014_Monster_W2_Kafka_IF02_Passive01": {
-      "fileName": "2004014_Monster_W2_Kafka_IF02_Passive01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Preload Battle Event(s)",
-          "eventID": [
-            20005
-          ]
-        },
-        {
-          "name": "Add Battle Event",
-          "eventID": 20005,
-          "variables": null,
-          "whenCreated": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1519530085\">Monster_W2_Kafka_IF02_BattleEventSummon</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1004356166\">Monster_W2_Kafka_IF02_ListenMonsterActionModifier</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1644855766\">Monster_W2_Kafka_IF02_BreakListen</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1961920728\">Monster_W2_Kafka_BattleScore1</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "DisPelCount"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"781148168\">Monster_W2_Kafka_IF_HPRatioTriggerAOE</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-857035022\">Monster_W2_Kafka_IF_Pursuit</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1659045581\">Monster_W2_Kafka_IF02_PartController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1086358837\">Monster_W2_Kafka_IF_Power</a>",
-          "valuePerStack": {
-            "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] (UnusedUnderThisBase_14) || RETURN",
-              "displayLines": "UnusedUnderThisBase_14",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_14"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"593237238\">Monster_W2_Kafka_IF_LowHP</a>",
-          "valuePerStack": {
-            "MDF_LowHPRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_17) || RETURN",
-              "displayLines": "UnusedUnderThisBase_17",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_17"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"651865792\">Monster_IF_BOSS_Standard_BreakBonus</a>"
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1004356166\">Monster_W2_Kafka_IF02_ListenMonsterActionModifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_HasTarget",
-                  "value": 0
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "searchRandom": true,
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-                      }
-                    ]
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_HasTarget",
-                      "value": 1
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_HasTarget",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "JustinBreak",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1155608240\">Monster_W2_Kafka_IF02_ContainJXDTag</a>"
-                        },
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 3
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "MDF_HasTarget",
-                          "value": 0
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "JustinBreak",
-                          "value": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1961920728\">Monster_W2_Kafka_BattleScore1</a>",
-          "execute": [
-            {
-              "eventTrigger": "Modifier Cleansed [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Was",
-                        "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]"
-                      },
-                      {
-                        "name": "Is Teammate",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "DisPelCount",
-                      "context": "TargetEntity",
-                      "value": 1,
-                      "max": 3
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "DisPelCount",
-                        "compareType": ">=",
-                        "value2": 3,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Achievement",
-                          "matchTags": true,
-                          "relatedAchievements": [
-                            {
-                              "title": "Will of Steel",
-                              "desc": "In a single battle against Boss Kafka, dispel Dominated 3 times",
-                              "rarity": "Low",
-                              "type": "Hidden until Completion"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-376688543\">Monster_W2_Kafka_IF02_BEFrozen</a>",
-          "modifierFlags": [
-            "MuteSpeed"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-680193995\">Monster_W2_Kafka_IF02_BreakBebuff</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": 3
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1644855766\">Monster_W2_Kafka_IF02_BreakListen</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "JustinBreak",
-                  "value": 1
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2004014_Monster_W2_Kafka_Ability07_Part02": {
-      "fileName": "2004014_Monster_W2_Kafka_Ability07_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "PursuitCheck",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-879407781\">Monster_W2_Kafka_CharmTargetMark</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-954638742\">Monster_W2_Kafka_CharmMark</a>"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-              "displayLines": "{[Skill05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[1]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-954638742\">Monster_W2_Kafka_CharmMark</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-879407781\">Monster_W2_Kafka_CharmTargetMark</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "PursuitCheck"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_Ability07_Part01": {
-      "fileName": "2004014_Monster_W2_Kafka_Ability07_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W2_Kafka_Ability07_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_Ability06_Part02": {
-      "fileName": "2004014_Monster_W2_Kafka_Ability06_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"821900269\">Standard_MindControl_Target</a>"
-        },
-        "Reset Triggers: Attack",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "HitSplit": 0.15,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "HitSplit": 0.15,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "HitSplit": 0.15,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "HitSplit": 0.15,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "HitSplit": 0.15,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "HitSplit": 0.25,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "PursuitCheck"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_Ability06_Part01": {
-      "fileName": "2004014_Monster_W2_Kafka_Ability06_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W2_Kafka_Ability06_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_Ability05_Part02": {
-      "fileName": "2004014_Monster_W2_Kafka_Ability05_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "UI Display Event",
-          "popUpText": "Spirit Whisper"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[Skill05[0]]}) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "({[Skill05[0]]} + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "{[Skill05[0]]}"
-            ]
-          },
-          "baseChance": {
-            "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
-            "displayLines": "{[Skill05[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[4]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_MindControlDamagePercentage": {
-              "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-              "displayLines": "{[Skill05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[1]]}"
-              ]
-            },
-            "MDF_MaxDamageRatio": {
-              "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-              "displayLines": "{[Skill05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[2]]}"
-              ]
-            },
-            "MDF_MinDamageRatio": {
-              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-              "displayLines": "{[Skill05[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[3]]}"
-              ]
-            }
-          },
-          "success": []
-        },
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "advanceType": "Advance",
-          "multiAdd": -1
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_Ability05_Part01": {
-      "fileName": "2004014_Monster_W2_Kafka_Ability05_Part01",
-      "childAbilityList": [
-        "2004014_Monster_W2_Kafka_Ability05_Part01",
-        "2004014_Monster_W2_Kafka_Ability05_Part02",
-        "2004014_Monster_W2_Kafka_Ability05_Camera"
-      ],
-      "skillTrigger": "Skill05",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Kafka_Ability05_Part02",
-          "isTrigger": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_Ability04_Part02": {
-      "fileName": "2004014_Monster_W2_Kafka_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_Ability04_Part01": {
-      "fileName": "2004014_Monster_W2_Kafka_Ability04_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Kafka_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_Ability03_Part02": {
-      "fileName": "2004014_Monster_W2_Kafka_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
-          },
-          "ignoreParallelWarning": true,
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_Ability03_Part01": {
-      "fileName": "2004014_Monster_W2_Kafka_Ability03_Part01",
-      "childAbilityList": [
-        "2004014_Monster_W2_Kafka_Ability03_Part01",
-        "2004014_Monster_W2_Kafka_Ability03_Part02",
-        "2004014_Monster_W2_Kafka_Ability03_Camera",
-        "2004014_Monster_W2_Kafka_IF_Ability03_Insert_Part01",
-        "2004014_Monster_W2_Kafka_IF_Ability03_Insert_Part02",
-        "2004014_Monster_W2_Kafka_IF_Ability03_Camera"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Kafka_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_Ability02_Part02": {
-      "fileName": "2004014_Monster_W2_Kafka_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
-            }
-          ]
-        },
-        "Ability Start",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 2004011,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Stellaron Hunter: Kafka (Complete)",
-                "isBaseCompare": true
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 2004012,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Stellaron Hunter: Kafka (Complete)",
-                "isBaseCompare": true
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 2004013,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Stellaron Hunter: Kafka (Illusion)",
-                "isBaseCompare": true
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 2004015,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Stellaron Hunter: Kafka",
-                "isBaseCompare": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
-              "valuePerStack": {
-                "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_14) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_14",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_14"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1988286038\">Monster_W2_Kafka_RL_Part03EnhanceEffect</a>"
-            }
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "HitSplit": 0.2,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "HitSplit": 0.3,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "HitSplit": 0.5,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Targets Adjacent(Blast)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
-              "duration": {
-                "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                "displayLines": "{[Skill01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[2]]}"
-                ]
-              },
-              "baseChance": 1,
-              "immediateEffect": true,
-              "valuePerStack": {
-                "Modifier_Electric_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
-                }
-              },
-              "stackFlag": "CharacterSkill"
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>"
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1988286038\">Monster_W2_Kafka_RL_Part03EnhanceEffect</a>"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2004014_Monster_W2_Kafka_Ability02_Part01": {
-      "fileName": "2004014_Monster_W2_Kafka_Ability02_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Kafka_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
     "2004014_Monster_W2_Kafka_Ability01_Part02": {
       "fileName": "2004014_Monster_W2_Kafka_Ability01_Part02",
       "abilityType": null,
@@ -10439,11 +4796,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_14) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_14",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8765) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8765",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_14"
+                    "UnusedUnderThisBase_8765"
                   ]
                 }
               }
@@ -10635,238 +4992,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2004014_Monster_W2_Kafka_Passive01": {
-      "fileName": "2004014_Monster_W2_Kafka_Passive01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1961920728\">Monster_W2_Kafka_BattleScore1</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "DisPelCount"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1082518094\">Monster_W2_Kafka_Pursuit</a>",
-          "valuePerStack": {
-            "MDF_Count": {
-              "operator": "Variables[0] (UnusedUnderThisBase_16) || RETURN",
-              "displayLines": "UnusedUnderThisBase_16",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_16"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2066030702\">Monster_W2_Kafka_AIChange</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 200401010,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Stellaron Hunter: Kafka"
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Character ID",
-                    "ID": 1001,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": "March 7th"
-                  },
-                  {
-                    "name": "Character ID",
-                    "ID": 1101,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": "Bronya"
-                  },
-                  {
-                    "name": "Character ID",
-                    "ID": 1105,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": "Natasha"
-                  },
-                  {
-                    "name": "Character ID",
-                    "ID": 1203,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": "Luocha"
-                  }
-                ]
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1137001600\">Monster_W2_Kafka_TargetFilter</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1137001600\">Monster_W2_Kafka_TargetFilter</a>",
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2066030702\">Monster_W2_Kafka_AIChange</a>",
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1961920728\">Monster_W2_Kafka_BattleScore1</a>",
-          "execute": [
-            {
-              "eventTrigger": "Modifier Cleansed [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Was",
-                        "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]"
-                      },
-                      {
-                        "name": "Is Teammate",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "DisPelCount",
-                      "context": "TargetEntity",
-                      "value": 1,
-                      "max": 3
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "DisPelCount",
-                        "compareType": ">=",
-                        "value2": 3,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Achievement",
-                          "matchTags": true,
-                          "relatedAchievements": [
-                            {
-                              "title": "Will of Steel",
-                              "desc": "In a single battle against Boss Kafka, dispel Dominated 3 times",
-                              "rarity": "Low",
-                              "type": "Hidden until Completion"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "2004014_Monster_W2_Kafka_PassiveAbility_BGM": {
       "fileName": "2004014_Monster_W2_Kafka_PassiveAbility_BGM",
       "childAbilityList": [
@@ -10972,9 +5097,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -10991,24 +5114,28 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>",
+          "latentQueue": [
+            "MDF_Right",
+            "MDF_Left"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1988286038\">Monster_W2_Kafka_RL_Part03EnhanceEffect</a>",
+          "latentQueue": [
+            "MDF_Right",
+            "MDF_Left"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -11109,12 +5236,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_LowHPRatio"
-          ],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
@@ -11436,9 +5557,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -11457,6 +5576,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "DispelPriorityHigh"
           ],
+          "latentQueue": [
+            "ShowHint04"
+          ],
+          "description": "Cannot deal DMG to Kafka. Will become Dominated when the next \"Revelation\" occurs. Can be dispelled.",
+          "type": "Debuff",
+          "effectName": "Revelation",
+          "statusName": "Psychological Suggestion Revelation",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -11471,15 +5597,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "ShowHint04"
-          ],
-          "description": "Cannot deal DMG to Kafka. Will become Dominated when the next \"Revelation\" occurs. Can be dispelled.",
-          "type": "Debuff",
-          "effectName": "Revelation",
-          "statusName": "Psychological Suggestion Revelation"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -11488,12 +5606,6 @@ const compositeAbilityObject = {
             "DispelPriorityHigh",
             "RemoveWhenCasterDead"
           ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            }
-          ],
-          "stackData": [],
           "latentQueue": [
             "BattleEventFlag",
             "MindControlCount",
@@ -11503,12 +5615,22 @@ const compositeAbilityObject = {
           "description": "Triggered at the next Revelation. Can be removed before that action.",
           "type": "Debuff",
           "effectName": "Psychological Suggestion",
-          "statusName": "Psychological Suggestion"
+          "statusName": "Psychological Suggestion",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2053914629\">Monster_W2_Kafka_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "Replace",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -11538,16 +5660,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
+          "stackData": [
+            "MDF_DamageUpRatio_PerLayer"
+          ],
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -11597,12 +5718,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUpRatio_PerLayer"
-          ],
-          "latentQueue": [],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -11799,19 +5915,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUpRatio_PerLayer"
-          ],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__488971952\">Monster_W2_Kafka_RL_Ability04_Target</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__488971952\">Monster_W2_Kafka_RL_Ability04_Target</a>"
         },
         {
           "name": "Modifier Construction",
@@ -11953,10 +6061,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
@@ -12145,16 +6249,16 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-130810153\">Monster_W3_Dinosaur_01_MonsterAssistBonus</a>[<span class=\"descriptionNumberColor\">Terrathorn</span>]",
           "stackType": "Replace",
+          "description": "Each hit of Bonepiercing Odium deals an additional instance of DMG. Each stack increases this instance of additional DMG.",
+          "type": "Buff",
+          "statusName": "Terrathorn",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -12171,24 +6275,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Each hit of Bonepiercing Odium deals an additional instance of DMG. Each stack increases this instance of additional DMG.",
-          "type": "Buff",
-          "statusName": "Terrathorn",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__680214868\">Monster_W3_Dinosaur_MonsterAssistBonus</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__680214868\">Monster_W3_Dinosaur_MonsterAssistBonus</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-831587978\">Monster_XP_Elite01_01_MonsterAssistBonus</a>[<span class=\"descriptionNumberColor\">Crystallite</span>]",
           "stackType": "Replace",
+          "description": "Increases the action delay effect for Everwinter Rain. This effect is stackable.",
+          "type": "Buff",
+          "statusName": "Crystallite",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -12229,18 +6329,13 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Increases the action delay effect for Everwinter Rain. This effect is stackable.",
-          "type": "Buff",
-          "statusName": "Crystallite",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1024613503\">Monster_XP_Elite01_MonsterAssistBonus</a>",
           "stackType": "Replace",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -12269,11 +6364,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1077360781\">XP_Elite_Fire_Ability07_AttackUp_Modifier</a>[<span class=\"descriptionNumberColor\">Molten</span>]",
                   "valuePerStack": {
                     "Modifier_AttackAddedRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_27) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_27",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12685) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12685",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_27"
+                        "UnusedUnderThisBase_12685"
                       ]
                     }
                   }
@@ -12304,10 +6399,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -12439,6 +6531,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-471232771\">Monster_W2_Kafka_IF03_MonsterAssistControl</a>",
+          "latentQueue": [
+            "DisPelCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -12479,10 +6574,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
@@ -12513,6 +6604,9 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1742511370\">Monster_W2_Kafka_IF03_PartController</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "DisPelCount"
           ],
           "execute": [
             {
@@ -12825,15 +6919,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1977361532\">Monster_W2_Kafka_IF03_Summon</a>",
+          "latentQueue": [
+            "DisPelCount"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -13021,10 +7114,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
@@ -13084,6 +7173,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2069306256\">Enemy_Standard_IF_AllDamageTransfer_AlldamageReduce_Sub</a>[<span class=\"descriptionNumberColor\">DMG Reduction Distribution</span>]",
+          "description": "When not yet Weakness Broken, reduces DMG received by <span class=\"descriptionNumberColor\">MDF_AllDamageTransferRatio</span>. Upon taking action, this effect is equally distributed to other enemy units.",
+          "type": "Buff",
+          "statusName": "DMG Reduction Distribution",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -13171,14 +7263,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When not yet Weakness Broken, reduces DMG received by <span class=\"descriptionNumberColor\">MDF_AllDamageTransferRatio</span>. Upon taking action, this effect is equally distributed to other enemy units.",
-          "type": "Buff",
-          "statusName": "DMG Reduction Distribution"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-910894267\">Enemy_Standard_IF_AllDamageTransfer_AlldamageReduce_Sub_Real</a>",
+          "stackData": [
+            "MDF_AllDamageTransferRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -13201,11 +7293,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageTransferRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -13429,6 +7517,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__416102178\">Enemy_Standard_IF_AllDamageTransfer_AlldamageReduce_Real</a>",
+          "stackData": [
+            "MDF_AllDamageTransferRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -13451,11 +7542,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageTransferRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -13569,6 +7656,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__622236050\">Enemy_W2_Kafka_IF_EnemyCount_Sub</a>[<span class=\"descriptionNumberColor\">Stellar Aegis</span>]",
           "stackType": "Replace",
+          "description": "Decreases DMG received by <span class=\"descriptionNumberColor\">MDF_TokenDMGRduceRatio</span>. This effect is stackable.",
+          "type": "Buff",
+          "statusName": "Stellar Aegis",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -13598,17 +7690,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Decreases DMG received by <span class=\"descriptionNumberColor\">MDF_TokenDMGRduceRatio</span>. This effect is stackable.",
-          "type": "Buff",
-          "statusName": "Stellar Aegis",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1727559793\">Enemy_W2_Kafka_IF_EnemyCount</a>",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_ShowValue1",
+            "MDF_ShowValue2"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -13733,17 +7824,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ShowValue1",
-            "MDF_ShowValue2"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1220849826\">Monster_W2_Kafka_IF03_SummonKillBonus_Sub</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "Replace",
+          "description": "DMG increases by <span class=\"descriptionNumberColor\">MDF_KillBonus</span>. This effect can stack.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -13766,16 +7857,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG increases by <span class=\"descriptionNumberColor\">MDF_KillBonus</span>. This effect can stack.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-605990657\">Monster_W2_Kafka_IF03_SummonKillBonus04</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
+          "stackData": [
+            "MDF_KillBonus"
+          ],
+          "description": "Enhanced by Boss Mirage, enters Charging state, and is dispelled upon being Weakness Broken.",
+          "type": "Other",
+          "effectName": "Madden",
+          "statusName": "Madden",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -13789,19 +7882,18 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_KillBonus"
-          ],
-          "latentQueue": [],
-          "description": "Enhanced by Boss Mirage, enters Charging state, and is dispelled upon being Weakness Broken.",
-          "type": "Other",
-          "effectName": "Madden",
-          "statusName": "Madden"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-656323514\">Monster_W2_Kafka_IF03_SummonKillBonus03</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
+          "stackData": [
+            "MDF_KillBonus"
+          ],
+          "description": "Enhanced by Boss Mirage, enters Charging state, and is dispelled upon being Weakness Broken.",
+          "type": "Other",
+          "effectName": "Madden",
+          "statusName": "Madden",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -13830,19 +7922,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_KillBonus"
-          ],
-          "latentQueue": [],
-          "description": "Enhanced by Boss Mirage, enters Charging state, and is dispelled upon being Weakness Broken.",
-          "type": "Other",
-          "effectName": "Madden",
-          "statusName": "Madden"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-639545895\">Monster_W2_Kafka_IF03_SummonKillBonus02</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
+          "stackData": [
+            "MDF_KillBonus"
+          ],
+          "description": "Enhanced by Boss Mirage, enters Freezing Point state, and is dispelled upon being Weakness Broken.",
+          "type": "Other",
+          "effectName": "Madden",
+          "statusName": "Madden",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -13856,19 +7947,18 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_KillBonus"
-          ],
-          "latentQueue": [],
-          "description": "Enhanced by Boss Mirage, enters Freezing Point state, and is dispelled upon being Weakness Broken.",
-          "type": "Other",
-          "effectName": "Madden",
-          "statusName": "Madden"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-689878752\">Monster_W2_Kafka_IF03_SummonKillBonus01</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
+          "stackData": [
+            "MDF_KillBonus"
+          ],
+          "description": "Enhanced by Boss Mirage, enters Spontaneous Combustion state, and is dispelled upon being Weakness Broken.",
+          "type": "Other",
+          "effectName": "Madden",
+          "statusName": "Madden",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -13882,19 +7972,15 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_KillBonus"
-          ],
-          "latentQueue": [],
-          "description": "Enhanced by Boss Mirage, enters Spontaneous Combustion state, and is dispelled upon being Weakness Broken.",
-          "type": "Other",
-          "effectName": "Madden",
-          "statusName": "Madden"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__214079291\">Monster_W2_Kafka_IF03_SummonKillBonus</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
+          "description": "Enhanced by Boss Mirage, enters Special Attack mode, and is dispelled upon being Weakness Broken.",
+          "type": "Other",
+          "effectName": "Madden",
+          "statusName": "Madden",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -13905,11 +7991,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "description": "Enhanced by Boss Mirage, enters Special Attack mode, and is dispelled upon being Weakness Broken.",
-          "type": "Other",
-          "effectName": "Madden",
-          "statusName": "Madden"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -13960,15 +8042,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "InsertCheck"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1935976804\">Monster_W2_Kafka_IF03_SummonWeak</a>[<span class=\"descriptionNumberColor\">Rigidity</span>]",
+          "description": "Reduces DMG dealt by <span class=\"descriptionNumberColor\">MDF_WeakDMGReduceRatio</span> and decreases Effect Hit Rate by <span class=\"descriptionNumberColor\">MDF_WeakStatusProbReduceRatio</span>.",
+          "type": "Debuff",
+          "effectName": "Rigidity",
+          "statusName": "Rigidity",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -14054,11 +8136,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Reduces DMG dealt by <span class=\"descriptionNumberColor\">MDF_WeakDMGReduceRatio</span> and decreases Effect Hit Rate by <span class=\"descriptionNumberColor\">MDF_WeakStatusProbReduceRatio</span>.",
-          "type": "Debuff",
-          "effectName": "Rigidity",
-          "statusName": "Rigidity"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14066,6 +8144,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_FrenzyDMGTokenAddRatio</span> and increases SPD by <span class=\"descriptionNumberColor\">MDF_FrenzySpeedAddRatio</span>.",
+          "type": "Other",
+          "effectName": "Sanguine Gaze",
+          "statusName": "Sanguine Gaze",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -14104,11 +8186,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_FrenzyDMGTokenAddRatio</span> and increases SPD by <span class=\"descriptionNumberColor\">MDF_FrenzySpeedAddRatio</span>.",
-          "type": "Other",
-          "effectName": "Sanguine Gaze",
-          "statusName": "Sanguine Gaze"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14162,6 +8240,20 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1808450599\">Monster_W2_Kafka_IF03_SummonControl</a>",
+          "stackData": [
+            "MDF_WeakDMGReduceRatio",
+            "MDF_WeakStatusProbReduceRatio",
+            "MDF_WeakStanceSliceRatio",
+            "MDF_BreakDMGTokenAddRatio",
+            "MDF_BreakDelayRatio",
+            "MDF_FrenzyDMGTokenAddRatio",
+            "MDF_FrenzySpeedAddRatio",
+            "MDF_FrenzyStanceSliceRatio",
+            "MDF_StanceDMGPerTeamMate"
+          ],
+          "latentQueue": [
+            "DisPelCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -14388,20 +8480,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_WeakDMGReduceRatio",
-            "MDF_WeakStatusProbReduceRatio",
-            "MDF_WeakStanceSliceRatio",
-            "MDF_BreakDMGTokenAddRatio",
-            "MDF_BreakDelayRatio",
-            "MDF_FrenzyDMGTokenAddRatio",
-            "MDF_FrenzySpeedAddRatio",
-            "MDF_FrenzyStanceSliceRatio",
-            "MDF_StanceDMGPerTeamMate"
-          ],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
@@ -14594,6 +8672,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
+          "latentQueue": [
+            "DisPelCount"
+          ],
           "execute": [
             {
               "eventTrigger": "Dealt Damage while Crowd/Mind Controlled [Anyone]",
@@ -14728,22 +8809,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1510857703\">Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect</a>",
+          "latentQueue": [
+            "ElectricFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14752,9 +8830,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -14845,12 +8921,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_LowHPRatio"
-          ],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
@@ -15172,9 +9242,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -15188,6 +9256,9 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1707949525\">Monster_W2_Kafka_IF_MindControl_TrueEffect</a>",
           "modifierFlags": [
             "DispelPriorityHigh"
+          ],
+          "latentQueue": [
+            "ShowHint04"
           ],
           "execute": [
             {
@@ -15203,10 +9274,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "ShowHint04"
           ]
         },
         {
@@ -15219,18 +9286,13 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MindControlCount",
-            "ShowHint04",
-            "FinalPhase"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__472862856\">Monster_W2_Kafka_IF_DamageUp</a>",
           "stackType": "Replace",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -15260,12 +9322,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1236261740\">Monster_W2_Kafka_IF_MeleeAttack</a>",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -15315,8 +9377,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -15483,19 +9544,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUpRatio_PerLayer"
-          ],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1330368689\">Monster_W2_Kafka_IF_Ability04_Target</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1330368689\">Monster_W2_Kafka_IF_Ability04_Target</a>"
         },
         {
           "name": "Modifier Construction",
@@ -15637,10 +9690,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
@@ -15648,6 +9697,15 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1613170749\">Monster_W2_Kafka_IF_Endurance</a>",
           "modifierFlags": [
             "Endurance"
+          ],
+          "latentQueue": [
+            "DisPelCount",
+            "AIFlag",
+            "AI_SkillIF01",
+            "CD_SkillIF01",
+            "MDF_DotCurCount",
+            "MaxMinions_Right",
+            "InsertCheck"
           ],
           "execute": [
             {
@@ -15690,16 +9748,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount",
-            "AIFlag",
-            "AI_SkillIF01",
-            "CD_SkillIF01",
-            "MDF_DotCurCount",
-            "MaxMinions_Right",
-            "InsertCheck"
           ]
         },
         {
@@ -15839,10 +9887,6 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
@@ -15887,10 +9931,6 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "HP Change [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
@@ -15917,16 +9957,11 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Entity Death [Anyone]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1155608240\">Monster_W2_Kafka_IF02_ContainJXDTag</a>",
-          "stackData": [],
           "latentQueue": [
             "MDF_HasTarget",
             "JustinBreak"
@@ -15939,9 +9974,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -16259,16 +10292,11 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>",
-          "stackData": [],
           "latentQueue": [
             "MDF_HasTarget"
           ]
@@ -16276,7 +10304,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1769956032\">Monster_W2_Kafka_IF02_SecondMonsterTag</a>",
-          "stackData": [],
           "latentQueue": [
             "MDF_Right",
             "MDF_Left"
@@ -16538,9 +10565,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -16552,10 +10577,6 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "PursuitCheck"
           ]
         },
         {
@@ -16603,6 +10624,10 @@ const compositeAbilityObject = {
             "AvatarBreak",
             "RemoveWhenCasterDead"
           ],
+          "description": "Makes a single target unable to take action. Target will use Basic ATK to attack a random ally of theirs. If an ability is cast on the target to remove a debuff, the Dominated status will be removed first.",
+          "type": "Debuff",
+          "effectName": "Dominated",
+          "statusName": "Dominated",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -16747,11 +10772,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Makes a single target unable to take action. Target will use Basic ATK to attack a random ally of theirs. If an ability is cast on the target to remove a debuff, the Dominated status will be removed first.",
-          "type": "Debuff",
-          "effectName": "Dominated",
-          "statusName": "Dominated"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -16778,11 +10799,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_15) || Variables[1] (SkillMaxHit) || DIV || RETURN",
-                      "displayLines": "(UnusedUnderThisBase_15 / SkillMaxHit)",
+                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__252) || Variables[1] (SkillMaxHit) || DIV || RETURN",
+                      "displayLines": "(ENEMIES_OBJECT_UNUSED__252 / SkillMaxHit)",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_15",
+                        "ENEMIES_OBJECT_UNUSED__252",
                         "SkillMaxHit"
                       ]
                     },
@@ -16804,12 +10825,15 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "latentQueue": [
+            "MDF_Right",
+            "MDF_Left"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -16827,10 +10851,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -17146,12 +11167,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Count"
-          ],
-          "latentQueue": [
-            "DisPelCount"
           ]
         }
       ],
@@ -17194,21 +11209,6 @@ const compositeAbilityObject = {
               "value": 1
             }
           ]
-        },
-        {
-          "name": "Battle Event Construction",
-          "ID": 20005,
-          "team": "Neutral Team",
-          "eventType": "Assist",
-          "abilityList": null,
-          "overridesArray": [
-            {
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
-              "value": 100
-            }
-          ],
-          "eventSpeed": 100,
-          "hardLevelEvent": true
         }
       ],
       "references": []

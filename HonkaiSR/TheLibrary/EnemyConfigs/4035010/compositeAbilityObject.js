@@ -3,14 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": 4035010,
   "trimCharacterName": 4035010,
   "abilityList": [
-    "4035010_Monster_W4_IronTombCore_QATest_NoEnding",
-    "4035010_Monster_W4_IronTombCore_Appear",
-    "4035010_Monster_W4_IronTombCore_Beta",
-    "4035010_Monster_W4_IronTombCore_WorldErosion_Insert",
-    "4035010_Monster_W4_IronTombCore_TimeLock_Off",
     "4035010_Monster_W4_IronTombCore_PassiveAbility_Insert02",
-    "4035010_Monster_W4_IronTombCore_PassiveAbility_Insert",
+    "4035010_Monster_W4_IronTombCore_Appear",
+    "4035010_Monster_W4_IronTombCore_WorldErosion_Insert",
     "4035010_Monster_W4_IronTombCore_PassiveAbilityInitiate",
+    "4035010_Monster_W4_IronTombCore_PassiveAbility_Insert",
     "4035010_Monster_W4_IronTombCore_Ability09_Part01",
     "4035010_Monster_W4_IronTombCore_Ability082_Part01",
     "4035010_Monster_W4_IronTombCore_Ability08_Part02",
@@ -34,329 +31,6 @@ const compositeAbilityObject = {
     "4035010_BE_BattleEvents"
   ],
   "abilityObject": {
-    "4035010_Monster_W4_IronTombCore_QATest_NoEnding": {
-      "fileName": "4035010_Monster_W4_IronTombCore_QATest_NoEnding",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1441620046\">Monster_W4_IronTombCore_QATest_NoEnding</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1441620046\">Monster_W4_IronTombCore_QATest_NoEnding</a>",
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "4035010_Monster_W4_IronTombCore_Appear": {
-      "fileName": "4035010_Monster_W4_IronTombCore_Appear",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4035010_Monster_W4_IronTombCore_Beta": {
-      "fileName": "4035010_Monster_W4_IronTombCore_Beta",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"845647266\">Enemy_W4_IronTombCore_Beta</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__845647266\">Enemy_W4_IronTombCore_Beta</a>",
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "4035010_Monster_W4_IronTombCore_WorldErosion_Insert": {
-      "fileName": "4035010_Monster_W4_IronTombCore_WorldErosion_Insert",
-      "skillTrigger": "WorldErosion",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Irontomb: Phantom}}"
-            },
-            "value1": "_PhaseLock",
-            "compareType": "=",
-            "value2": 1
-          }
-        },
-        "Deleted bullshit",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 3
-              },
-              {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Irontomb: Phantom}}"
-                },
-                "value1": "_PhaseLock",
-                "compareType": "=",
-                "value2": 0
-              }
-            ]
-          }
-        },
-        {
-          "name": "UI Display Event (On Entity)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "popUpText": "Descent into Chaos"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "_WorldErosion",
-                "compareType": ">=",
-                "value2": {
-                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || Constants[0] (100) || MUL || RETURN",
-                  "displayLines": "({[PassiveSkill01[2]]} * 100)",
-                  "constants": [
-                    100
-                  ],
-                  "variables": [
-                    "{[PassiveSkill01[2]]}"
-                  ]
-                }
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "#PassiveSkill01_P3_Percentage",
-                "compareType": ">",
-                "value2": 0
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1914142012\">MModifier_W4_IronTombCore_BlackBP</a>",
-              "valuePerStack": {
-                "MDF_BPMaxCost": 4,
-                "MDF_DirtyHPRatio_PerLayer": {
-                  "operator": "Constants[0] (4) || Variables[0] ({[PassiveSkill01[4]]}) || MUL || RETURN",
-                  "displayLines": "(4 * {[PassiveSkill01[4]]})",
-                  "constants": [
-                    4
-                  ],
-                  "variables": [
-                    "{[PassiveSkill01[4]]}"
-                  ]
-                }
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "_WorldErosion",
-                    "compareType": ">=",
-                    "value2": {
-                      "operator": "Variables[0] ({[PassiveSkill01[1]]}) || Constants[0] (100) || MUL || RETURN",
-                      "displayLines": "({[PassiveSkill01[1]]} * 100)",
-                      "constants": [
-                        100
-                      ],
-                      "variables": [
-                        "{[PassiveSkill01[1]]}"
-                      ]
-                    }
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "#PassiveSkill01_P2_Percentage",
-                    "compareType": ">",
-                    "value2": 0
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1914142012\">MModifier_W4_IronTombCore_BlackBP</a>",
-                  "valuePerStack": {
-                    "MDF_BPMaxCost": 2,
-                    "MDF_DirtyHPRatio_PerLayer": {
-                      "operator": "Constants[0] (2) || Variables[0] ({[PassiveSkill01[4]]}) || MUL || RETURN",
-                      "displayLines": "(2 * {[PassiveSkill01[4]]})",
-                      "constants": [
-                        2
-                      ],
-                      "variables": [
-                        "{[PassiveSkill01[4]]}"
-                      ]
-                    }
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "_WorldErosion",
-                        "compareType": ">=",
-                        "value2": {
-                          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
-                          "displayLines": "({[PassiveSkill01[0]]} * 100)",
-                          "constants": [
-                            100
-                          ],
-                          "variables": [
-                            "{[PassiveSkill01[0]]}"
-                          ]
-                        }
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "#PassiveSkill01_P1_Percentage",
-                        "compareType": ">",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1914142012\">MModifier_W4_IronTombCore_BlackBP</a>",
-                      "valuePerStack": {
-                        "MDF_BPMaxCost": 1,
-                        "MDF_DirtyHPRatio_PerLayer": {
-                          "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[4]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[4]]}"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Irontomb: Phantom}}"
-            },
-            "value1": "_PhaseLock",
-            "compareType": "=",
-            "value2": 1
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4035010_Monster_W4_IronTombCore_TimeLock_Off": {
-      "fileName": "4035010_Monster_W4_IronTombCore_TimeLock_Off",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1372521903\">MModifier_W4_IronTombCore_TimeLock</a>[<span class=\"descriptionNumberColor\">Action Lock</span>]"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4035010_Monster_W4_IronTombCore_PassiveAbility_Insert02": {
       "fileName": "4035010_Monster_W4_IronTombCore_PassiveAbility_Insert02",
       "abilityType": null,
@@ -853,6 +527,14 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "DisableAction"
           ],
+          "latentQueue": [
+            "_IsWeek",
+            "_PhaseCheck",
+            "_Trigger1",
+            "_Trigger2",
+            "AIFlag",
+            "_WorldLevel"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -905,18 +587,526 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_IsWeek",
-            "_PhaseCheck",
-            "_Trigger1",
-            "_Trigger2",
-            "AIFlag",
-            "_WorldLevel"
           ]
         }
       ]
+    },
+    "4035010_Monster_W4_IronTombCore_Appear": {
+      "fileName": "4035010_Monster_W4_IronTombCore_Appear",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4035010_Monster_W4_IronTombCore_WorldErosion_Insert": {
+      "fileName": "4035010_Monster_W4_IronTombCore_WorldErosion_Insert",
+      "skillTrigger": "WorldErosion",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Irontomb: Phantom}}"
+            },
+            "value1": "_PhaseLock",
+            "compareType": "=",
+            "value2": 1
+          }
+        },
+        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 3
+              },
+              {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Irontomb: Phantom}}"
+                },
+                "value1": "_PhaseLock",
+                "compareType": "=",
+                "value2": 0
+              }
+            ]
+          }
+        },
+        {
+          "name": "UI Display Event (On Entity)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "popUpText": "Descent into Chaos"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Variable",
+                "value1": "_WorldErosion",
+                "compareType": ">=",
+                "value2": {
+                  "operator": "Variables[0] ({[PassiveSkill01[2]]}) || Constants[0] (100) || MUL || RETURN",
+                  "displayLines": "({[PassiveSkill01[2]]} * 100)",
+                  "constants": [
+                    100
+                  ],
+                  "variables": [
+                    "{[PassiveSkill01[2]]}"
+                  ]
+                }
+              },
+              {
+                "name": "Compare: Variable",
+                "value1": "#PassiveSkill01_P3_Percentage",
+                "compareType": ">",
+                "value2": 0
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1914142012\">MModifier_W4_IronTombCore_BlackBP</a>",
+              "valuePerStack": {
+                "MDF_BPMaxCost": 4,
+                "MDF_DirtyHPRatio_PerLayer": {
+                  "operator": "Constants[0] (4) || Variables[0] ({[PassiveSkill01[4]]}) || MUL || RETURN",
+                  "displayLines": "(4 * {[PassiveSkill01[4]]})",
+                  "constants": [
+                    4
+                  ],
+                  "variables": [
+                    "{[PassiveSkill01[4]]}"
+                  ]
+                }
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "_WorldErosion",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] ({[PassiveSkill01[1]]}) || Constants[0] (100) || MUL || RETURN",
+                      "displayLines": "({[PassiveSkill01[1]]} * 100)",
+                      "constants": [
+                        100
+                      ],
+                      "variables": [
+                        "{[PassiveSkill01[1]]}"
+                      ]
+                    }
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "#PassiveSkill01_P2_Percentage",
+                    "compareType": ">",
+                    "value2": 0
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1914142012\">MModifier_W4_IronTombCore_BlackBP</a>",
+                  "valuePerStack": {
+                    "MDF_BPMaxCost": 2,
+                    "MDF_DirtyHPRatio_PerLayer": {
+                      "operator": "Constants[0] (2) || Variables[0] ({[PassiveSkill01[4]]}) || MUL || RETURN",
+                      "displayLines": "(2 * {[PassiveSkill01[4]]})",
+                      "constants": [
+                        2
+                      ],
+                      "variables": [
+                        "{[PassiveSkill01[4]]}"
+                      ]
+                    }
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "_WorldErosion",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
+                          "displayLines": "({[PassiveSkill01[0]]} * 100)",
+                          "constants": [
+                            100
+                          ],
+                          "variables": [
+                            "{[PassiveSkill01[0]]}"
+                          ]
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "#PassiveSkill01_P1_Percentage",
+                        "compareType": ">",
+                        "value2": 0
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1914142012\">MModifier_W4_IronTombCore_BlackBP</a>",
+                      "valuePerStack": {
+                        "MDF_BPMaxCost": 1,
+                        "MDF_DirtyHPRatio_PerLayer": {
+                          "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
+                          "displayLines": "{[PassiveSkill01[4]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[PassiveSkill01[4]]}"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Irontomb: Phantom}}"
+            },
+            "value1": "_PhaseLock",
+            "compareType": "=",
+            "value2": 1
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4035010_Monster_W4_IronTombCore_PassiveAbilityInitiate": {
+      "fileName": "4035010_Monster_W4_IronTombCore_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-370444723\">W4_IronTombCore_BattleScore1</a>",
+          "casterAssign": "TargetSelf"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-420777580\">W4_IronTombCore_BattleScore2</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-403999961\">W4_IronTombCore_BattleScore3</a>"
+        },
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1258256002\">Enemy_W4_IronTombCore_Status</a>"
+        },
+        {
+          "name": "Change Character Transformation",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "phase": "Phase1"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 4035011,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Anti-Creator, Hatred Inundate",
+                "invertCondition": true
+              },
+              {
+                "name": "Stage ID",
+                "ID": 2294,
+                "compareType": "=",
+                "characterName": null,
+                "invertCondition": true
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Add Battle Event",
+              "eventID": 60030,
+              "assignOwner": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "variables": null
+            },
+            {
+              "name": "Add Battle Event",
+              "eventID": 60032,
+              "assignOwner": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "variables": null
+            }
+          ]
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 1
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Level Entity}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"463592931\">Enemy_W4_IronTombCore_Main_P3Level</a>",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Level Entity}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-2029484938\">WMonster_W4_TieMu_P3Test</a>",
+                "invertCondition": true
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Set Enemy Phase"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1187676843\">Enemy_W4_IronTombCore_PartController</a>"
+            }
+          ]
+        },
+        {
+          "name": "Create Enemies",
+          "refreshPositions": false,
+          "enemyList": [
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (SummonID01) || RETURN",
+                "displayLines": "SummonID01",
+                "constants": [],
+                "variables": [
+                  "SummonID01"
+                ]
+              },
+              "locationType": "BeforeCaster"
+            }
+          ]
+        },
+        {
+          "name": "Create Enemy as Body Part",
+          "partName": "TimePart",
+          "value": {
+            "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
+            "displayLines": "PartEntity1_MonsterID",
+            "constants": [],
+            "variables": [
+              "PartEntity1_MonsterID"
+            ]
+          },
+          "offset": -1
+        },
+        {
+          "name": "Create Enemy as Body Part",
+          "partName": "EnergyPart",
+          "value": {
+            "operator": "Variables[0] (PartEntity2_MonsterID) || RETURN",
+            "displayLines": "PartEntity2_MonsterID",
+            "constants": [],
+            "variables": [
+              "PartEntity2_MonsterID"
+            ]
+          },
+          "offset": 1,
+          "type": 2
+        },
+        {
+          "name": "Establish Group Relationship",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "subTarget": {
+            "name": "Target Name",
+            "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
+          },
+          "relatedGroup": "HPTransfer"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-453954106\">Enemy_W4_IronTombCorePart_DamageTransfer</a>[<span class=\"descriptionNumberColor\">Damage Resonance</span>]"
+        },
+        {
+          "name": "Advance/Delay up to Target",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Irontomb: Part 2}}"
+          },
+          "targetRef": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "refPoint": "After",
+          "isStartingAV": true
+        },
+        {
+          "name": "Advance/Delay up to Target",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Irontomb: Part 1}}"
+          },
+          "targetRef": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "refPoint": "After",
+          "isStartingAV": true
+        },
+        {
+          "name": "Create AV Link",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "to": {
+            "name": "Target Name",
+            "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
+          },
+          "linkOrder": 1,
+          "isStart": true,
+          "linkFollowerModifications": {
+            "OnBreak": "Bit_AutoForceSync"
+          },
+          "linkOwnerModifications": {
+            "OnBreak": "Bit_AutoForceSync"
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
     },
     "4035010_Monster_W4_IronTombCore_PassiveAbility_Insert": {
       "fileName": "4035010_Monster_W4_IronTombCore_PassiveAbility_Insert",
@@ -1290,6 +1480,11 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "DisableAction"
           ],
+          "latentQueue": [
+            "_PhaseCheck",
+            "InsertCheck",
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
@@ -1319,285 +1514,9 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_PhaseCheck",
-            "InsertCheck",
-            "AIFlag"
           ]
         }
       ]
-    },
-    "4035010_Monster_W4_IronTombCore_PassiveAbilityInitiate": {
-      "fileName": "4035010_Monster_W4_IronTombCore_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-370444723\">W4_IronTombCore_BattleScore1</a>",
-          "casterAssign": "TargetSelf"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-420777580\">W4_IronTombCore_BattleScore2</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-403999961\">W4_IronTombCore_BattleScore3</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1258256002\">Enemy_W4_IronTombCore_Status</a>"
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 4035011,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Anti-Creator, Hatred Inundate",
-                "invertCondition": true
-              },
-              {
-                "name": "Stage ID",
-                "ID": 2294,
-                "compareType": "=",
-                "characterName": null,
-                "invertCondition": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Battle Event",
-              "eventID": 60030,
-              "assignOwner": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "variables": null
-            },
-            {
-              "name": "Add Battle Event",
-              "eventID": 60032,
-              "assignOwner": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "variables": null
-            }
-          ]
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 1
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Level Entity}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"463592931\">Enemy_W4_IronTombCore_Main_P3Level</a>",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Level Entity}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-2029484938\">WMonster_W4_TieMu_P3Test</a>",
-                "invertCondition": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Set Enemy Phase"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1187676843\">Enemy_W4_IronTombCore_PartController</a>"
-            }
-          ]
-        },
-        {
-          "name": "Create Enemies",
-          "refreshPositions": false,
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonID01) || RETURN",
-                "displayLines": "SummonID01",
-                "constants": [],
-                "variables": [
-                  "SummonID01"
-                ]
-              },
-              "locationType": "BeforeCaster"
-            }
-          ]
-        },
-        {
-          "name": "Create Enemy as Body Part",
-          "partName": "TimePart",
-          "value": {
-            "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-            "displayLines": "PartEntity1_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity1_MonsterID"
-            ]
-          },
-          "offset": -1
-        },
-        {
-          "name": "Create Enemy as Body Part",
-          "partName": "EnergyPart",
-          "value": {
-            "operator": "Variables[0] (PartEntity2_MonsterID) || RETURN",
-            "displayLines": "PartEntity2_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity2_MonsterID"
-            ]
-          },
-          "offset": 1,
-          "type": 2
-        },
-        {
-          "name": "Establish Group Relationship",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "subTarget": {
-            "name": "Target Name",
-            "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
-          },
-          "relatedGroup": "HPTransfer"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-453954106\">Enemy_W4_IronTombCorePart_DamageTransfer</a>[<span class=\"descriptionNumberColor\">Damage Resonance</span>]"
-        },
-        {
-          "name": "Advance/Delay up to Target",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Irontomb: Part 2}}"
-          },
-          "targetRef": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "refPoint": "After",
-          "isStartingAV": true
-        },
-        {
-          "name": "Advance/Delay up to Target",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Irontomb: Part 1}}"
-          },
-          "targetRef": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "refPoint": "After",
-          "isStartingAV": true
-        },
-        {
-          "name": "Create AV Link",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "to": {
-            "name": "Target Name",
-            "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
-          },
-          "linkOrder": 1,
-          "isStart": true,
-          "linkFollowerModifications": {
-            "OnBreak": "Bit_AutoForceSync"
-          },
-          "linkOwnerModifications": {
-            "OnBreak": "Bit_AutoForceSync"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
     },
     "4035010_Monster_W4_IronTombCore_Ability09_Part01": {
       "fileName": "4035010_Monster_W4_IronTombCore_Ability09_Part01",
@@ -2439,9 +2358,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3581,15 +3498,14 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>",
+          "latentQueue": [
+            "_Main_Skill06",
+            "_AvatarCount"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_Main_Skill06",
-            "_AvatarCount"
           ]
         }
       ]
@@ -4152,14 +4068,13 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-567264058\">Monster_W4_IronTombCore_Ability05Mark</a>",
+          "latentQueue": [
+            "_Main_Skill05"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_Main_Skill05"
           ]
         }
       ]
@@ -4798,9 +4713,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4876,9 +4789,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5699,13 +5610,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1626881642\">Enemy_W4_IronTombCore_Main_P3_AvatarDamageAdded</a>[<span class=\"descriptionNumberColor\">Chronicled \"Love\"</span>]",
+          "description": "Cyrene's \"Love\" greatly increases DMG dealt by the target.",
+          "type": "Buff",
+          "statusName": "Chronicled \"Love\"",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5730,14 +5642,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Cyrene's \"Love\" greatly increases DMG dealt by the target.",
-          "type": "Buff",
-          "statusName": "Chronicled \"Love\""
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1529513281\">Enemy_W4_IronTombCore_Main_P3_AvatarDamageAdded_Listener</a>",
+          "latentQueue": [
+            "_IsWeek",
+            "_PhaseCheck",
+            "_Trigger1",
+            "_Trigger2"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5800,18 +5715,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_IsWeek",
-            "_PhaseCheck",
-            "_Trigger1",
-            "_Trigger2"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-470333037\">Enemy_W4_IronTombCore_Main_P3_HpRatioAdded</a>",
+          "latentQueue": [
+            "_IsWeek",
+            "_PhaseCheck",
+            "_Trigger1",
+            "_Trigger2",
+            "AIFlag",
+            "_WorldLevel"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5838,21 +5754,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_IsWeek",
-            "_PhaseCheck",
-            "_Trigger1",
-            "_Trigger2",
-            "AIFlag",
-            "_WorldLevel"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2081954099\">Enemy_W4_IronTombCore_BlackBlood</a>[<span class=\"descriptionNumberColor\">Descent into Chaos</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Maximum Restorable HP and Maximum Recoverable Skill Points are reduced. This effect can be weakened when \"Amphorean Hatred\" decreases.",
+          "type": "Debuff",
+          "statusName": "Descent into Chaos",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5875,16 +5785,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Maximum Restorable HP and Maximum Recoverable Skill Points are reduced. This effect can be weakened when \"Amphorean Hatred\" decreases.",
-          "type": "Debuff",
-          "statusName": "Descent into Chaos"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-453954106\">Enemy_W4_IronTombCorePart_DamageTransfer</a>[<span class=\"descriptionNumberColor\">Damage Resonance</span>]",
-          "stackData": [],
-          "latentQueue": [],
           "description": "When the target takes damage, \"Anti-Creator\" will also take the same damage.",
           "type": "Other",
           "statusName": "Damage Resonance"
@@ -5898,6 +5803,15 @@ const compositeAbilityObject = {
             "STAT_CTRL",
             "DisableAction"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_SPConvert",
+            "MDF_ActionDelayConvert"
+          ],
+          "description": "This target's action value will not change because of the end of any target's turn. This target can reduce the \"Unlock Value\" through action advance effects or Energy regeneration. When the \"Unlock Value\" is depleted, this state will be dispelled.",
+          "type": "Debuff",
+          "effectName": "Action Lock",
+          "statusName": "Action Lock",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -6267,17 +6181,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_SPConvert",
-            "MDF_ActionDelayConvert"
-          ],
-          "latentQueue": [],
-          "description": "This target's action value will not change because of the end of any target's turn. This target can reduce the \"Unlock Value\" through action advance effects or Energy regeneration. When the \"Unlock Value\" is depleted, this state will be dispelled.",
-          "type": "Debuff",
-          "effectName": "Action Lock",
-          "statusName": "Action Lock"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6293,15 +6197,11 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-827834429\">MModifier_W4_IronTombCore_TimeLock_UIEff</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-827834429\">MModifier_W4_IronTombCore_TimeLock_UIEff</a>"
         },
         {
           "name": "Modifier Construction",
@@ -6337,9 +6237,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6381,6 +6279,37 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1914142012\">MModifier_W4_IronTombCore_BlackBP</a>",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_BPMaxCost",
+            "MDF_DirtyHPRatio_PerLayer"
+          ],
+          "latentQueue": [
+            "_PhaseLock",
+            "#PassiveSkill01_P3_Percentage",
+            "#PassiveSkill01_P2_Percentage",
+            "#PassiveSkill01_P1_Percentage"
+          ],
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-2081954099\">Enemy_W4_IronTombCore_BlackBlood</a>[<span class=\"descriptionNumberColor\">Descent into Chaos</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_DirtyHPRatio": {
+                  "operator": "Variables[0] (MDF_DirtyHPRatio_PerLayer) || RETURN",
+                  "displayLines": "MDF_DirtyHPRatio_PerLayer",
+                  "constants": [],
+                  "variables": [
+                    "MDF_DirtyHPRatio_PerLayer"
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -6482,37 +6411,6 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
-            }
-          ],
-          "stackData": [
-            "MDF_BPMaxCost",
-            "MDF_DirtyHPRatio_PerLayer"
-          ],
-          "latentQueue": [
-            "_PhaseLock",
-            "#PassiveSkill01_P3_Percentage",
-            "#PassiveSkill01_P2_Percentage",
-            "#PassiveSkill01_P1_Percentage"
-          ],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2081954099\">Enemy_W4_IronTombCore_BlackBlood</a>[<span class=\"descriptionNumberColor\">Descent into Chaos</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_DirtyHPRatio": {
-                  "operator": "Variables[0] (MDF_DirtyHPRatio_PerLayer) || RETURN",
-                  "displayLines": "MDF_DirtyHPRatio_PerLayer",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DirtyHPRatio_PerLayer"
-                  ]
-                }
-              }
             }
           ]
         },
@@ -6728,18 +6626,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1381137894\">MModifier_W4_IronTombCore_Ability07_MuteBreak</a>",
           "modifierFlags": [
             "MuteBreak"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6772,9 +6666,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6782,6 +6674,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
+          "description": "\"Anti-Creator\" enters Charging state, and will use \"Immolate the Heavens, Abandon the World\" in the next action. Dispel the Charging state by dealing a killing blow to \"Mythos\" and \"Logos.\"",
+          "type": "Other",
+          "statusName": "Resist and Destroy",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -6979,12 +6874,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "\"Anti-Creator\" enters Charging state, and will use \"Immolate the Heavens, Abandon the World\" in the next action. Dispel the Charging state by dealing a killing blow to \"Mythos\" and \"Logos.\"",
-          "type": "Other",
-          "statusName": "Resist and Destroy"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6996,6 +6886,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2078801645\">Enemy_W4_IronTombCorePart_Break</a>[<span class=\"descriptionNumberColor\">Grave Wound</span>]",
+          "description": "Target cannot take action.",
+          "type": "Other",
+          "effectName": "Grave Wound",
+          "statusName": "Grave Wound",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -7099,11 +6993,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Target cannot take action.",
-          "type": "Other",
-          "effectName": "Grave Wound",
-          "statusName": "Grave Wound"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7609,6 +7499,11 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2029275245\">Enemy_W4_IronTombCore_P3_PartController</a>",
+          "latentQueue": [
+            "_PhaseCheck",
+            "InsertCheck",
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -7667,12 +7562,6 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_PhaseCheck",
-            "InsertCheck",
-            "AIFlag"
           ]
         },
         {
@@ -7736,9 +7625,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7799,11 +7686,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "_Skill08_DamagePercentage",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_30) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_30",
+                        "operator": "Variables[0] (UnusedUnderThisBase_11396) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_11396",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_30"
+                          "UnusedUnderThisBase_11396"
                         ]
                       }
                     }
@@ -8190,9 +8077,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8201,9 +8086,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Turn [Pre-action Phase]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

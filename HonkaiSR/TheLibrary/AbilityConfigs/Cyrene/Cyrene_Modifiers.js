@@ -10,6 +10,347 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__790390625\">ADV_StageAbility_Maze_Cyrene_Female</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1576003496\">ADV_StageAbility_Maze_Cyrene_Male</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__63083859\">ADV_StageAbility_Maze_Cyrene_Enemy</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "modifierFlags": [
+        "TimeLock"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1940492361\">Cyrene_Passive</a>",
+      "onStageEntry": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+        }
+      ],
+      "onForeGround": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+        }
+      ],
+      "onShiftFromFakeModel": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+        }
+      ],
+      "onBuffUpdateComplete": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__501195686\">Cyrene_StateRefreshImmediately</a>",
+      "stackType": "RetainGlobalLatest",
+      "onStack": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "#CL_SkipNextMazeBuffRefreshState",
+            "compareType": "=",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "_SpecifiedState",
+                "compareType": ">",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_TargetState",
+                  "value": {
+                    "operator": "Variables[0] (_SpecifiedState) || RETURN",
+                    "displayLines": "_SpecifiedState",
+                    "constants": [],
+                    "variables": [
+                      "_SpecifiedState"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_SpecifiedState",
+                  "value": 0
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier (OVERWORLD)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"434616416\">ADV_StageAbility_Maze_Cyrene</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_TargetState",
+                      "value": 2
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_TargetState",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "#CL_SkipNextMazeBuffRefreshState",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "SWITCH",
+          "switchValue": {
+            "operator": "Variables[0] (_TargetState) || RETURN",
+            "displayLines": "_TargetState",
+            "constants": [],
+            "variables": [
+              "_TargetState"
+            ]
+          },
+          "caseEvents": [
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 1,
+              "execute": [
+                {
+                  "name": "Set Mapping Point",
+                  "point": "CameraRoot",
+                  "reset": true
+                },
+                {
+                  "name": "Set Mapping Point",
+                  "point": "CameraRootSpine",
+                  "reset": true
+                }
+              ]
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 2,
+              "execute": [
+                {
+                  "name": "Set Mapping Point",
+                  "point": "CameraRoot",
+                  "mapTo": "CameraRoot1"
+                },
+                {
+                  "name": "Set Mapping Point",
+                  "point": "CameraRootSpine",
+                  "mapTo": "CameraRootSpine1"
+                }
+              ]
+            }
+          ],
+          "defaultEvents": []
+        },
+        "Modifier Deletes Itself"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__434616416\">ADV_StageAbility_Maze_Cyrene</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierTasks": [
+        {
+          "name": "Looped Event",
+          "maxLoops": 999,
+          "Event": []
+        }
+      ],
+      "onCreation": [
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 14151
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "summonID": 14151
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Variable",
+                "value1": "#CL_IsInLookAtPhone",
+                "compareType": "=",
+                "value2": 0
+              },
+              {
+                "name": "Compare: Target",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Adventure Player(Latest)}}"
+                }
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  "Check In Story Mode",
+                  "Check TimeScale(VFX)"
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"887707071\">ADV_StageAbility_MazeSpeed_Cyrene</a>"
+        }
+      ],
+      "onStack": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"887707071\">ADV_StageAbility_MazeSpeed_Cyrene</a>",
+          "valuePerStack": {
+            "MDF_MoveSpeedRatio": {
+              "operator": "Variables[0] (0.5) || RETURN",
+              "displayLines": "0.5",
+              "constants": [],
+              "variables": [
+                0.5
+              ]
+            }
+          }
+        }
+      ],
+      "onChangeTeamLead": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Player}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"887707071\">ADV_StageAbility_MazeSpeed_Cyrene</a>",
+          "valuePerStack": {
+            "MDF_MoveSpeedRatio": {
+              "operator": "Variables[0] (0.5) || RETURN",
+              "displayLines": "0.5",
+              "constants": [],
+              "variables": [
+                0.5
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__887707071\">ADV_StageAbility_MazeSpeed_Cyrene</a>",
+      "stackType": "Replace",
+      "stackData": [
+        "MDF_MoveSpeedRatio"
+      ],
+      "latentQueue": [
+        "#CL_IsInLookAtPhone"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1161189096\">Cyrene_Eidolon2_1</a>",
       "stackType": "Replace",
       "execute": [
@@ -98,6 +439,9 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
+      "type": "Buff",
+      "statusName": "Causality in Trichotomy",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -120,15 +464,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
-      "type": "Buff",
-      "statusName": "Causality in Trichotomy"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__810472054\">Cyrene_PointB3_Sub2</a>[<span class=\"descriptionNumberColor\">Causality in Trichotomy</span>]",
       "stackType": "Replace",
+      "description": "Ice RES PEN increases by <span class=\"descriptionNumberColor\">_AddValue</span>.",
+      "type": "Buff",
+      "statusName": "Causality in Trichotomy",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -165,10 +509,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Ice RES PEN increases by <span class=\"descriptionNumberColor\">_AddValue</span>.",
-      "type": "Buff",
-      "statusName": "Causality in Trichotomy"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -256,13 +597,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__619883840\">Cyrene_Passive_Sub</a>[<span class=\"descriptionNumberColor\">Hearts Gather as One</span>]",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
+      "type": "Buff",
+      "statusName": "Hearts Gather as One",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -285,14 +627,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageIncrease"
-      ],
-      "latentQueue": [],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
-      "type": "Buff",
-      "statusName": "Hearts Gather as One"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -326,6 +661,30 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1470142416\">Cyrene_Ability03</a>[<span class=\"descriptionNumberColor\">Ripples of Past Reverie</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [],
+      "description": "Basic ATK is replaced with Enhanced Basic ATK, and the Zone effect from the Skill has no duration limit. Increases this unit's and Demiurge's CRIT Rate by <span class=\"descriptionNumberColor\">#Skill03_P3_CritChance</span>.",
+      "type": "Buff",
+      "statusName": "Ripples of Past Reverie",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}+{{Caster's Memosprite}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1765178435\">Cyrene_Ability03_Sub</a>",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_CritChance": {
+              "operator": "Variables[0] (0.5) || RETURN",
+              "displayLines": "0.5",
+              "constants": [],
+              "variables": [
+                0.5
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -421,38 +780,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Basic ATK is replaced with Enhanced Basic ATK, and the Zone effect from the Skill has no duration limit. Increases this unit's and Demiurge's CRIT Rate by <span class=\"descriptionNumberColor\">#Skill03_P3_CritChance</span>.",
-      "type": "Buff",
-      "statusName": "Ripples of Past Reverie",
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}+{{Caster's Memosprite}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1765178435\">Cyrene_Ability03_Sub</a>",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_CritChance": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
-            }
-          }
-        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-556268195\">Cyrene_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_BasicDamagePercentage</span> of the original DMG.",
+      "type": "Buff",
+      "statusName": "Bloom, Elysium of Beyond",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any"
@@ -609,16 +945,41 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_BasicDamagePercentage</span> of the original DMG.",
-      "type": "Buff",
-      "statusName": "Bloom, Elysium of Beyond"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1356425425\">Cyrene_Ability02_Bonus_Main</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "stackData": [
+        "MDF_OriginDamagePercentage"
+      ],
+      "description": "For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_BasicDamagePercentage</span> of the original DMG.",
+      "type": "Buff",
+      "statusName": "Bloom, Elysium of Beyond",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]-{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-556268195\">Cyrene_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
+          "aliveOnly": "True",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_OriginDamagePercentage": {
+              "operator": "Variables[0] (0.24) || RETURN",
+              "displayLines": "0.24",
+              "constants": [],
+              "variables": [
+                0.24
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -786,35 +1147,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_OriginDamagePercentage"
-      ],
-      "latentQueue": [],
-      "description": "For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_BasicDamagePercentage</span> of the original DMG.",
-      "type": "Buff",
-      "statusName": "Bloom, Elysium of Beyond",
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]-{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-556268195\">Cyrene_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Bloom, Elysium of Beyond</span>]",
-          "aliveOnly": "True",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_OriginDamagePercentage": {
-              "operator": "Variables[0] (0.24) || RETURN",
-              "displayLines": "0.24",
-              "constants": [],
-              "variables": [
-                0.24
-              ]
-            }
-          }
-        }
       ]
     },
     {
@@ -916,6 +1248,9 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "When taking action, grants Cyrene \"Recollection.\"",
+      "type": "Other",
+      "statusName": "Future",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -1025,16 +1360,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SPAdd"
-      ],
-      "latentQueue": [
-        "MDF_FirstTimeMax"
-      ],
-      "description": "When taking action, grants Cyrene \"Recollection.\"",
-      "type": "Other",
-      "statusName": "Future"
+      ]
     }
   ],
   "references": []

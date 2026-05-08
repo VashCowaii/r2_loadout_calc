@@ -3,10 +3,14 @@ const compositeAbilityObject = {
   "fullCharacterName": 1004028,
   "trimCharacterName": 1004028,
   "abilityList": [
-    "1004028_Monster_W1_Gepard_RL_Ability14_Part02",
-    "1004028_Monster_W1_Gepard_RL_Ability14_Part01",
     "1004028_Monster_W1_Gepard_RL_PassiveAbility_Insert2",
     "1004028_Monster_W1_Gepard_RL_PassiveAbility_Insert",
+    "1004028_Monster_W1_Gepard_RL_PassiveAbilityInitiate",
+    "1004028_Monster_W1_Gepard_RL_AbilityP01_Insert2",
+    "1004028_Monster_W1_Gepard_RL_AbilityP01_Insert",
+    "1004028_Monster_W1_Gepard_RL_AbilityP01_EnterBattle",
+    "1004028_Monster_W1_Gepard_RL_Ability14_Part02",
+    "1004028_Monster_W1_Gepard_RL_Ability14_Part01",
     "1004028_Monster_W1_Gepard_RL_Ability08_Part02",
     "1004028_Monster_W1_Gepard_RL_Ability08_Part01",
     "1004028_Monster_W1_Gepard_RL_Ability07_Part02",
@@ -22,123 +26,9 @@ const compositeAbilityObject = {
     "1004028_Monster_W1_Gepard_RL_Ability02_Part01",
     "1004028_Monster_W1_Gepard_RL_Ability01_Part02",
     "1004028_Monster_W1_Gepard_RL_Ability01_Part01",
-    "1004028_Monster_W1_Gepard_RL_AbilityP01_Insert2",
-    "1004028_Monster_W1_Gepard_RL_AbilityP01_Insert",
-    "1004028_Monster_W1_Gepard_RL_AbilityP01_EnterBattle",
-    "1004028_Monster_W1_Gepard_RL_PassiveAbilityInitiate",
-    "1004028_Monster_W1_Gepard_SPRL_AbilityP02_EnterBattle",
-    "1004028_Monster_W1_Gepard_RL_AbilityP01_Initiate",
     "1004028_Modifiers"
   ],
   "abilityObject": {
-    "1004028_Monster_W1_Gepard_RL_Ability14_Part02": {
-      "fileName": "1004028_Monster_W1_Gepard_RL_Ability14_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Create Enemies",
-          "delayPercent": 0.5,
-          "refreshPositions": false,
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (Soldier01) || RETURN",
-                "displayLines": "Soldier01",
-                "constants": [],
-                "variables": [
-                  "Soldier01"
-                ]
-              },
-              "locationType": "First"
-            },
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (Soldier04) || RETURN",
-                "displayLines": "Soldier04",
-                "constants": [],
-                "variables": [
-                  "Soldier04"
-                ]
-              },
-              "locationType": "Last"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-        },
-        {
-          "name": "UI Display Event",
-          "popUpText": "Support"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "UsedEnterBattleFlag",
-          "value": 1
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004028_Monster_W1_Gepard_RL_Ability14_Part01": {
-      "fileName": "1004028_Monster_W1_Gepard_RL_Ability14_Part01",
-      "childAbilityList": [
-        "1004028_Monster_W1_Gepard_RL_Ability14_Part01",
-        "1004028_Monster_W1_Gepard_RL_Ability14_Part02"
-      ],
-      "skillTrigger": "Skill14",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W1_Gepard_RL_Ability14_Part02",
-          "isTrigger": true
-        },
-        {
-          "name": "Animation Event",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "state": "Skill12",
-          "passed": [
-            {
-              "name": "Animation Task"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "1004028_Monster_W1_Gepard_RL_PassiveAbility_Insert2": {
       "fileName": "1004028_Monster_W1_Gepard_RL_PassiveAbility_Insert2",
       "abilityType": null,
@@ -400,6 +290,517 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1004028_Monster_W1_Gepard_RL_PassiveAbilityInitiate": {
+      "fileName": "1004028_Monster_W1_Gepard_RL_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1058077488\">Gepard_BattleScore3</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1074855107\">Gepard_BattleScore2</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1091632726\">Gepard_BattleScore1</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
+        },
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1004028_Monster_W1_Gepard_RL_AbilityP01_Insert2": {
+      "fileName": "1004028_Monster_W1_Gepard_RL_AbilityP01_Insert2",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "UsedShieldFlag"
+        },
+        {
+          "name": "UI Display Event",
+          "popUpText": "Support"
+        },
+        {
+          "name": "Animation Event",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "state": "Skill12",
+          "passed": [
+            {
+              "name": "Animation Task"
+            },
+            {
+              "name": "Animation Task",
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": 0.5,
+                  "refreshPositions": false,
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (Soldier03) || RETURN",
+                        "displayLines": "Soldier03",
+                        "constants": [],
+                        "variables": [
+                          "Soldier03"
+                        ]
+                      },
+                      "locationType": "BeforeCaster"
+                    },
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (Soldier03) || RETURN",
+                        "displayLines": "Soldier03",
+                        "constants": [],
+                        "variables": [
+                          "Soldier03"
+                        ]
+                      },
+                      "locationType": "AfterCaster"
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Minions}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+                }
+              ]
+            },
+            {
+              "name": "Animation Task",
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-243818097\">SPRL_Flag</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Create Enemies",
+                      "refreshPositions": false,
+                      "enemyList": [
+                        {
+                          "name": "Enemy Entry",
+                          "enemyID": {
+                            "operator": "Variables[0] (Soldier03) || RETURN",
+                            "displayLines": "Soldier03",
+                            "constants": [],
+                            "variables": [
+                              "Soldier03"
+                            ]
+                          },
+                          "locationType": "First"
+                        },
+                        {
+                          "name": "Enemy Entry",
+                          "enemyID": {
+                            "operator": "Variables[0] (Soldier03) || RETURN",
+                            "displayLines": "Soldier03",
+                            "constants": [],
+                            "variables": [
+                              "Soldier03"
+                            ]
+                          },
+                          "locationType": "Last"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Minions}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1004028_Monster_W1_Gepard_RL_AbilityP01_Insert": {
+      "fileName": "1004028_Monster_W1_Gepard_RL_AbilityP01_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "UsedShieldFlag"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"802362263\">Monster_W1_Gepard_RL_AIWatcher</a>"
+        },
+        {
+          "name": "UI Display Event",
+          "popUpText": "Support"
+        },
+        {
+          "name": "Animation Event",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "state": "Skill12",
+          "passed": [
+            {
+              "name": "Animation Task"
+            },
+            {
+              "name": "Animation Task",
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": 0.5,
+                  "refreshPositions": false,
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (Soldier01) || RETURN",
+                        "displayLines": "Soldier01",
+                        "constants": [],
+                        "variables": [
+                          "Soldier01"
+                        ]
+                      },
+                      "locationType": "BeforeCaster"
+                    },
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (Soldier01) || RETURN",
+                        "displayLines": "Soldier01",
+                        "constants": [],
+                        "variables": [
+                          "Soldier01"
+                        ]
+                      },
+                      "locationType": "Last"
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Minions}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+                }
+              ]
+            },
+            {
+              "name": "Animation Task",
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"321901706\">Monster_W1_Gepard_RL_Revive</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1004028_Monster_W1_Gepard_RL_AbilityP01_EnterBattle": {
+      "fileName": "1004028_Monster_W1_Gepard_RL_AbilityP01_EnterBattle",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Animation Event",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "state": "Skill12",
+          "passed": [
+            {
+              "name": "Animation Task"
+            },
+            {
+              "name": "Animation Task",
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": 0.5,
+                  "refreshPositions": false,
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (Soldier01) || RETURN",
+                        "displayLines": "Soldier01",
+                        "constants": [],
+                        "variables": [
+                          "Soldier01"
+                        ]
+                      },
+                      "locationType": "First"
+                    },
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (Soldier04) || RETURN",
+                        "displayLines": "Soldier04",
+                        "constants": [],
+                        "variables": [
+                          "Soldier04"
+                        ]
+                      },
+                      "locationType": "Last"
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Minions}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+                }
+              ]
+            },
+            {
+              "name": "Animation Task",
+              "passed": [
+                {
+                  "name": "UI Display Event",
+                  "popUpText": "Support"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "UsedEnterBattleFlag",
+          "value": 1
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1004028_Monster_W1_Gepard_RL_Ability14_Part02": {
+      "fileName": "1004028_Monster_W1_Gepard_RL_Ability14_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Create Enemies",
+          "delayPercent": 0.5,
+          "refreshPositions": false,
+          "enemyList": [
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (Soldier01) || RETURN",
+                "displayLines": "Soldier01",
+                "constants": [],
+                "variables": [
+                  "Soldier01"
+                ]
+              },
+              "locationType": "First"
+            },
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (Soldier04) || RETURN",
+                "displayLines": "Soldier04",
+                "constants": [],
+                "variables": [
+                  "Soldier04"
+                ]
+              },
+              "locationType": "Last"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+        },
+        {
+          "name": "UI Display Event",
+          "popUpText": "Support"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "UsedEnterBattleFlag",
+          "value": 1
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1004028_Monster_W1_Gepard_RL_Ability14_Part01": {
+      "fileName": "1004028_Monster_W1_Gepard_RL_Ability14_Part01",
+      "childAbilityList": [
+        "1004028_Monster_W1_Gepard_RL_Ability14_Part01",
+        "1004028_Monster_W1_Gepard_RL_Ability14_Part02"
+      ],
+      "skillTrigger": "Skill14",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W1_Gepard_RL_Ability14_Part02",
+          "isTrigger": true
+        },
+        {
+          "name": "Animation Event",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "state": "Skill12",
+          "passed": [
+            {
+              "name": "Animation Task"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -1065,765 +1466,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "1004028_Monster_W1_Gepard_RL_AbilityP01_Insert2": {
-      "fileName": "1004028_Monster_W1_Gepard_RL_AbilityP01_Insert2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "UsedShieldFlag"
-        },
-        {
-          "name": "UI Display Event",
-          "popUpText": "Support"
-        },
-        {
-          "name": "Animation Event",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "state": "Skill12",
-          "passed": [
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": 0.5,
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (Soldier03) || RETURN",
-                        "displayLines": "Soldier03",
-                        "constants": [],
-                        "variables": [
-                          "Soldier03"
-                        ]
-                      },
-                      "locationType": "BeforeCaster"
-                    },
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (Soldier03) || RETURN",
-                        "displayLines": "Soldier03",
-                        "constants": [],
-                        "variables": [
-                          "Soldier03"
-                        ]
-                      },
-                      "locationType": "AfterCaster"
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-                }
-              ]
-            },
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-243818097\">SPRL_Flag</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Create Enemies",
-                      "refreshPositions": false,
-                      "enemyList": [
-                        {
-                          "name": "Enemy Entry",
-                          "enemyID": {
-                            "operator": "Variables[0] (Soldier03) || RETURN",
-                            "displayLines": "Soldier03",
-                            "constants": [],
-                            "variables": [
-                              "Soldier03"
-                            ]
-                          },
-                          "locationType": "First"
-                        },
-                        {
-                          "name": "Enemy Entry",
-                          "enemyID": {
-                            "operator": "Variables[0] (Soldier03) || RETURN",
-                            "displayLines": "Soldier03",
-                            "constants": [],
-                            "variables": [
-                              "Soldier03"
-                            ]
-                          },
-                          "locationType": "Last"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Minions}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004028_Monster_W1_Gepard_RL_AbilityP01_Insert": {
-      "fileName": "1004028_Monster_W1_Gepard_RL_AbilityP01_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "UsedShieldFlag"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"802362263\">Monster_W1_Gepard_RL_AIWatcher</a>"
-        },
-        {
-          "name": "UI Display Event",
-          "popUpText": "Support"
-        },
-        {
-          "name": "Animation Event",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "state": "Skill12",
-          "passed": [
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": 0.5,
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (Soldier01) || RETURN",
-                        "displayLines": "Soldier01",
-                        "constants": [],
-                        "variables": [
-                          "Soldier01"
-                        ]
-                      },
-                      "locationType": "BeforeCaster"
-                    },
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (Soldier01) || RETURN",
-                        "displayLines": "Soldier01",
-                        "constants": [],
-                        "variables": [
-                          "Soldier01"
-                        ]
-                      },
-                      "locationType": "Last"
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-                }
-              ]
-            },
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"321901706\">Monster_W1_Gepard_RL_Revive</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004028_Monster_W1_Gepard_RL_AbilityP01_EnterBattle": {
-      "fileName": "1004028_Monster_W1_Gepard_RL_AbilityP01_EnterBattle",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Animation Event",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "state": "Skill12",
-          "passed": [
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": 0.5,
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (Soldier01) || RETURN",
-                        "displayLines": "Soldier01",
-                        "constants": [],
-                        "variables": [
-                          "Soldier01"
-                        ]
-                      },
-                      "locationType": "First"
-                    },
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (Soldier04) || RETURN",
-                        "displayLines": "Soldier04",
-                        "constants": [],
-                        "variables": [
-                          "Soldier04"
-                        ]
-                      },
-                      "locationType": "Last"
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-                }
-              ]
-            },
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "UI Display Event",
-                  "popUpText": "Support"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "UsedEnterBattleFlag",
-          "value": 1
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004028_Monster_W1_Gepard_RL_PassiveAbilityInitiate": {
-      "fileName": "1004028_Monster_W1_Gepard_RL_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1058077488\">Gepard_BattleScore3</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1074855107\">Gepard_BattleScore2</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1091632726\">Gepard_BattleScore1</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004028_Monster_W1_Gepard_SPRL_AbilityP02_EnterBattle": {
-      "fileName": "1004028_Monster_W1_Gepard_SPRL_AbilityP02_EnterBattle",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "SPRLCount"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Strike_SPRLCount"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-243818097\">SPRL_Flag</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004028_Monster_W1_Gepard_RL_AbilityP01_Initiate": {
-      "fileName": "1004028_Monster_W1_Gepard_RL_AbilityP01_Initiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "UsedEnterBattleFlag"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1970380612\">Monster_W1_Gepard_RL_Initiate</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"321901706\">Monster_W1_Gepard_RL_Revive</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1151984120\">Enemy_W1_Gepard_Command</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1151984120\">Enemy_W1_Gepard_Command</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Team Action",
-                  "conditionsActor": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team"
-                      }
-                    ]
-                  },
-                  "conditionsTarget": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-2038076408\">Monster_Gepard_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Aggravate</span>]"
-                  },
-                  "abilityName": "GepardCommand"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1970380612\">Monster_W1_Gepard_RL_Initiate</a>",
-          "modifierFlags": [],
-          "execute": [
-            {
-              "eventTrigger": "Turn [Action-End Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "UsedEnterBattleFlag",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "HP_Bars_Remaining",
-                        "compareType": "=",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Monster_W1_Gepard_RL_AbilityP01_EnterBattle",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "priorityTag": "EnemyBattleCry",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "abortFlags": [
-                        "DisableAction",
-                        "STAT_CTRL",
-                        "Break"
-                      ],
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            },
-                            "value1": "TeamCharacterCount",
-                            "compareType": "=",
-                            "value2": 0
-                          },
-                          {
-                            "name": "Compare: Variable",
-                            "value1": "Die_Flag",
-                            "compareType": "=",
-                            "value2": 1,
-                            "contextScope": "TargetEntity"
-                          },
-                          {
-                            "name": "Compare: Variable",
-                            "value1": "Insert_Flag",
-                            "compareType": "=",
-                            "value2": 0,
-                            "contextScope": "TargetEntity"
-                          },
-                          {
-                            "name": "Compare: Variable",
-                            "value1": "DieInsert_Flag",
-                            "compareType": "=",
-                            "value2": 0,
-                            "contextScope": "TargetEntity"
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "DieInsert_Flag",
-                          "value": 1
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "value1": "HP_Bars_Remaining",
-                            "compareType": "=",
-                            "value2": 1
-                          },
-                          "passed": [
-                            {
-                              "name": "Set Enemy Phase",
-                              "mode": "Inc"
-                            },
-                            {
-                              "name": "Inject Ability Use",
-                              "abilityName": "Monster_W1_Gepard_RL_PassiveAbility_Insert",
-                              "priorityTag": "EnemyPhaseChange",
-                              "ownerState": "Mask_AliveOrLimbo",
-                              "targetState": "Mask_AliveOrLimbo",
-                              "canHitNonTargets": true,
-                              "showInActionOrder": true,
-                              "allowAbilityTriggers": false
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Variable",
-                                "value1": "HP_Bars_Remaining",
-                                "compareType": "=",
-                                "value2": 2
-                              },
-                              "passed": [
-                                {
-                                  "name": "Set Enemy Phase",
-                                  "mode": "Inc"
-                                },
-                                {
-                                  "name": "Inject Ability Use",
-                                  "abilityName": "Monster_W1_Gepard_RL_PassiveAbility_Insert2",
-                                  "priorityTag": "EnemyPhaseChange",
-                                  "ownerState": "Mask_AliveOrLimbo",
-                                  "targetState": "Mask_AliveOrLimbo",
-                                  "canHitNonTargets": true,
-                                  "showInActionOrder": true,
-                                  "allowAbilityTriggers": false
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "value": "UsedEnterBattleFlag",
-                    "invertCondition": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Monster_W1_Gepard_RL_AbilityP01_EnterBattle",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "priorityTag": "EnemyBattleCry",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "abortFlags": [
-                        "DisableAction",
-                        "STAT_CTRL",
-                        "Break"
-                      ],
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "UsedEnterBattleFlag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -45
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "1004028_Modifiers": {
       "fileName": "1004028_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1840,6 +1482,14 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "Shield"
+          ],
+          "stackData": [
+            "MDF_ShieldPercentage",
+            "MDF_MaxHPHitPercentage1",
+            "MDF_MaxHPHitPercentage2"
+          ],
+          "latentQueue": [
+            "UsedShieldFlag"
           ],
           "execute": [
             {
@@ -2063,15 +1713,15 @@ const compositeAbilityObject = {
                         "variables": []
                       },
                       "valuePercent": {
-                        "operator": "Variables[0] (MDF_ShieldPercentage) || Constants[0] (5) || DIV || Variables[1] (MDF_Count) || MUL || Variables[2] (UnusedUnderThisBase_148) || MUL || RETURN",
-                        "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_148)",
+                        "operator": "Variables[0] (MDF_ShieldPercentage) || Constants[0] (5) || DIV || Variables[1] (MDF_Count) || MUL || Variables[2] (UnusedUnderThisBase_7854) || MUL || RETURN",
+                        "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_7854)",
                         "constants": [
                           5
                         ],
                         "variables": [
                           "MDF_ShieldPercentage",
                           "MDF_Count",
-                          "UnusedUnderThisBase_148"
+                          "UnusedUnderThisBase_7854"
                         ]
                       },
                       "formula": "HP Scaling (Shield)"
@@ -2177,30 +1827,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ShieldPercentage",
-            "MDF_MaxHPHitPercentage1",
-            "MDF_MaxHPHitPercentage2"
-          ],
-          "latentQueue": [
-            "UsedShieldFlag"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-243818097\">SPRL_Flag</a>",
-          "stackData": [],
-          "latentQueue": [
-            "SPRLCount",
-            "Strike_SPRLCount"
-          ]
+          "for": "<a class=\"gModGreen\" id=\"mod__-243818097\">SPRL_Flag</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-508706525\">Gepard_RL_Break</a>",
           "modifierFlags": [
             "DisableAction"
+          ],
+          "latentQueue": [
+            "UsedShieldFlag"
           ],
           "execute": [
             {
@@ -2224,16 +1864,11 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "UsedShieldFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1185722758\">Gepard_RL_ShieldIcon2</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]",
-          "stackData": [],
           "latentQueue": [
             "UsedShieldFlag"
           ],
@@ -2245,7 +1880,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1788931056\">Gepard_RL_ShieldIcon</a>[<span class=\"descriptionNumberColor\">Collective Shield</span>]",
-          "stackData": [],
           "latentQueue": [
             "UsedShieldFlag"
           ],
@@ -2260,6 +1894,9 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "Shield"
+          ],
+          "latentQueue": [
+            "UsedShieldFlag"
           ],
           "execute": [
             {
@@ -2279,10 +1916,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "UsedShieldFlag"
           ]
         },
         {
@@ -2291,6 +1924,14 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "Shield"
+          ],
+          "stackData": [
+            "MDF_ShieldPercentage",
+            "MDF_MaxHPHitPercentage1",
+            "MDF_MaxHPHitPercentage2"
+          ],
+          "latentQueue": [
+            "UsedShieldFlag"
           ],
           "execute": [
             {
@@ -2593,14 +2234,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ShieldPercentage",
-            "MDF_MaxHPHitPercentage1",
-            "MDF_MaxHPHitPercentage2"
-          ],
-          "latentQueue": [
-            "UsedShieldFlag"
           ]
         },
         {
@@ -2609,6 +2242,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak"
           ],
+          "latentQueue": [
+            "UsedShieldFlag"
+          ],
+          "description": "Toughness cannot be reduced.",
+          "type": "Other",
+          "effectName": "Toughness Protection",
+          "statusName": "Toughness Protection",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2632,15 +2272,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "UsedShieldFlag"
-          ],
-          "description": "Toughness cannot be reduced.",
-          "type": "Other",
-          "effectName": "Toughness Protection",
-          "statusName": "Toughness Protection"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2669,6 +2301,14 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__352751855\">Monster_W1_Gepard_RL_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_DamageAddedRatio"
+          ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2702,16 +2342,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageAddedRatio"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2719,6 +2350,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteHitH"
           ],
+          "latentQueue": [
+            "ReturnAttackCounter"
+          ],
+          "description": "Uses a Powerful Counter on the attacker after being attacked.",
+          "type": "Buff",
+          "effectName": "Counter",
+          "statusName": "Counter",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2834,19 +2472,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "ReturnAttackCounter"
-          ],
-          "description": "Uses a Powerful Counter on the attacker after being attacked.",
-          "type": "Buff",
-          "effectName": "Counter",
-          "statusName": "Counter"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__321901706\">Monster_W1_Gepard_RL_Revive</a>",
+          "latentQueue": [
+            "UsedShieldFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -2992,13 +2625,14 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__802362263\">Monster_W1_Gepard_RL_AIWatcher</a>",
+          "latentQueue": [
+            "UsedShieldFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3013,10 +2647,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "UsedShieldFlag"
           ]
         },
         {
@@ -3025,6 +2655,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "DisableHealHP"
           ],
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3035,8 +2666,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "duration": 1
+          ]
         }
       ],
       "references": []

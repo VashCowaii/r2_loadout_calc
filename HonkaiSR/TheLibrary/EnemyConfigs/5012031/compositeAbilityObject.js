@@ -3,14 +3,82 @@ const compositeAbilityObject = {
   "fullCharacterName": 5012031,
   "trimCharacterName": 5012031,
   "abilityList": [
+    "5012031_Monster_W5_JK_01_AbilityP01",
     "5012031_Monster_W5_JK_Ability01_Part02",
     "5012031_Monster_W5_JK_Ability01_Part01",
-    "5012031_Monster_W5_JK_PowerOut",
-    "5012031_Monster_W5_JK_01_AbilityP01",
-    "5012031_Monster_W5_JK_AbilityP01",
     "5012031_Modifiers"
   ],
   "abilityObject": {
+    "5012031_Monster_W5_JK_01_AbilityP01": {
+      "fileName": "5012031_Monster_W5_JK_01_AbilityP01",
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"56977717\">Enemy_W5_JK_ElationPointListener</a>",
+          "valuePerStack": {
+            "MDF_ThresholdValue": {
+              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
+              "displayLines": "{[SkillP01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[2]]}"
+              ]
+            }
+          },
+          "casterAssign": "TargetSelf"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"256670650\">Enemy_W5_JK_Power</a>[<span class=\"descriptionNumberColor\">Book-Smart</span>]",
+          "valuePerStack": {
+            "MDF_AllDamageTypeAddedRatio": {
+              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+              "displayLines": "{[SkillP01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[0]]}"
+              ]
+            },
+            "MDF_AllDamageReduce": {
+              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+              "displayLines": "{[SkillP01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[1]]}"
+              ]
+            },
+            "MDF_ThresholdValue": {
+              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
+              "displayLines": "{[SkillP01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[2]]}"
+              ]
+            }
+          }
+        }
+      ],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "5012031_Monster_W5_JK_Ability01_Part02": {
       "fileName": "5012031_Monster_W5_JK_Ability01_Part02",
       "abilityType": null,
@@ -125,367 +193,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "5012031_Monster_W5_JK_PowerOut": {
-      "fileName": "5012031_Monster_W5_JK_PowerOut",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Aggressive Reading: PowerOut Target}}"
-          },
-          "variableName": "PowerOutTargetNumber",
-          "livingTargets": true,
-          "context": "ContextAbility"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1861405331\">Enemy_W5_JK_PowerOutReady</a>"
-          }
-        },
-        {
-          "name": "SWITCH",
-          "switchValue": {
-            "operator": "Variables[0] (PowerOutTargetNumber) || RETURN",
-            "displayLines": "PowerOutTargetNumber",
-            "constants": [],
-            "variables": [
-              "PowerOutTargetNumber"
-            ]
-          },
-          "caseEvents": [
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 1
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 2
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 3
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 4
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 5
-            }
-          ],
-          "defaultEvents": []
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "variableName": "InsertFlag_W5_JK_00",
-          "value": 0
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1861405331\">Enemy_W5_JK_PowerOutReady</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "flagName": "Break"
-                  },
-                  {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "flagName": "STAT_CTRL"
-                  },
-                  {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "flagName": "DisableAction"
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1199719779\">Enemy_W5_JK_PowerOut_EffectTimeline</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1861405331\">Enemy_W5_JK_PowerOutReady</a>"
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1861405331\">Enemy_W5_JK_PowerOutReady</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"256670650\">Enemy_W5_JK_Power</a>[<span class=\"descriptionNumberColor\">Book-Smart</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 501203,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null,
-            "isCompareUniqueID": true
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1199719779\">Enemy_W5_JK_PowerOut_EffectTimeline</a>"
-        }
-      ],
-      "onAbort": [
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "variableName": "InsertFlag_W5_JK_00",
-          "value": 0
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5012031_Monster_W5_JK_01_AbilityP01": {
-      "fileName": "5012031_Monster_W5_JK_01_AbilityP01",
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"56977717\">Enemy_W5_JK_ElationPointListener</a>",
-          "valuePerStack": {
-            "MDF_ThresholdValue": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
-            }
-          },
-          "casterAssign": "TargetSelf"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"256670650\">Enemy_W5_JK_Power</a>[<span class=\"descriptionNumberColor\">Book-Smart</span>]",
-          "valuePerStack": {
-            "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
-            },
-            "MDF_AllDamageReduce": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
-            },
-            "MDF_ThresholdValue": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5012031_Monster_W5_JK_AbilityP01": {
-      "fileName": "5012031_Monster_W5_JK_AbilityP01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"56977717\">Enemy_W5_JK_ElationPointListener</a>",
-          "valuePerStack": {
-            "MDF_ThresholdValue": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
-            }
-          },
-          "casterAssign": "TargetSelf"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"256670650\">Enemy_W5_JK_Power</a>[<span class=\"descriptionNumberColor\">Book-Smart</span>]",
-          "valuePerStack": {
-            "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
-            },
-            "MDF_AllDamageReduce": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
-            },
-            "MDF_ThresholdValue": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Random Event",
-          "odds": [
-            1,
-            1,
-            1
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "5012031_Modifiers": {
       "fileName": "5012031_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -503,15 +210,20 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "InsertFlag_W5_JK_00"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__256670650\">Enemy_W5_JK_Power</a>[<span class=\"descriptionNumberColor\">Book-Smart</span>]",
+          "stackData": [
+            "MDF_AllDamageTypeAddedRatio",
+            "MDF_AllDamageReduce",
+            "MDF_ThresholdValue"
+          ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span> and decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. After receiving Elation DMG or when the target team gains Punchline and reaches <span class=\"descriptionNumberColor\">MDF_ThresholdValue</span> points, the effect is dispelled.",
+          "type": "Buff",
+          "effectName": "Book-Smart",
+          "statusName": "Book-Smart",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -587,17 +299,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageTypeAddedRatio",
-            "MDF_AllDamageReduce",
-            "MDF_ThresholdValue"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span> and decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. After receiving Elation DMG or when the target team gains Punchline and reaches <span class=\"descriptionNumberColor\">MDF_ThresholdValue</span> points, the effect is dispelled.",
-          "type": "Buff",
-          "effectName": "Book-Smart",
-          "statusName": "Book-Smart"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -701,14 +403,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__56977717\">Enemy_W5_JK_ElationPointListener</a>",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_ThresholdValue"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -726,153 +429,6 @@ const compositeAbilityObject = {
                   },
                   "scope": "TargetEntity",
                   "variableName": "InsertFlag_W5_JK_00"
-                }
-              ]
-            }
-          ],
-          "elationValueChange": [
-            {
-              "name": "Variable Value Range Conditions",
-              "minValue": 0,
-              "maxValue": {
-                "operator": "Variables[0] (MDF_ThresholdValue) || RETURN",
-                "displayLines": "MDF_ThresholdValue",
-                "constants": [],
-                "variables": [
-                  "MDF_ThresholdValue"
-                ]
-              },
-              "whenLeavingRange": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All(with Unselectable)}}"
-                  },
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"256670650\">Enemy_W5_JK_Power</a>[<span class=\"descriptionNumberColor\">Book-Smart</span>]"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1861405331\">Enemy_W5_JK_PowerOutReady</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "InsertFlag_W5_JK_00",
-                    "compareType": "=",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "variableName": "InsertFlag_W5_JK_00",
-                      "value": 1
-                    },
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"229482597\">TaskList_Monster_W5_JK_PowerOut</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Variable Value Range Conditions",
-              "minValue": {
-                "operator": "Variables[0] (MDF_ThresholdValue) || RETURN",
-                "displayLines": "MDF_ThresholdValue",
-                "constants": [],
-                "variables": [
-                  "MDF_ThresholdValue"
-                ]
-              },
-              "maxValue": 9999,
-              "whenValueChanges": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All(with Unselectable)}}"
-                  },
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"256670650\">Enemy_W5_JK_Power</a>[<span class=\"descriptionNumberColor\">Book-Smart</span>]"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1861405331\">Enemy_W5_JK_PowerOutReady</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Change_In_Current_Value",
-                    "compareType": ">",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "InsertFlag_W5_JK_00",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Level Entity}}"
-                          },
-                          "variableName": "InsertFlag_W5_JK_00",
-                          "value": 1
-                        },
-                        {
-                          "name": "Use Custom Character Function",
-                          "functionName": "<a class=\"gTempYellow\" id=\"229482597\">TaskList_Monster_W5_JK_PowerOut</a>"
-                        }
-                      ]
-                    }
-                  ]
                 }
               ]
             }
@@ -1038,10 +594,153 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [
-            "MDF_ThresholdValue"
-          ],
-          "latentQueue": []
+          "elationValueChange": [
+            {
+              "name": "Variable Value Range Conditions",
+              "minValue": 0,
+              "maxValue": {
+                "operator": "Variables[0] (MDF_ThresholdValue) || RETURN",
+                "displayLines": "MDF_ThresholdValue",
+                "constants": [],
+                "variables": [
+                  "MDF_ThresholdValue"
+                ]
+              },
+              "whenLeavingRange": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"256670650\">Enemy_W5_JK_Power</a>[<span class=\"descriptionNumberColor\">Book-Smart</span>]"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1861405331\">Enemy_W5_JK_PowerOutReady</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "InsertFlag_W5_JK_00",
+                    "compareType": "=",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Level Entity}}"
+                      },
+                      "variableName": "InsertFlag_W5_JK_00",
+                      "value": 1
+                    },
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"229482597\">TaskList_Monster_W5_JK_PowerOut</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Variable Value Range Conditions",
+              "minValue": {
+                "operator": "Variables[0] (MDF_ThresholdValue) || RETURN",
+                "displayLines": "MDF_ThresholdValue",
+                "constants": [],
+                "variables": [
+                  "MDF_ThresholdValue"
+                ]
+              },
+              "maxValue": 9999,
+              "whenValueChanges": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"256670650\">Enemy_W5_JK_Power</a>[<span class=\"descriptionNumberColor\">Book-Smart</span>]"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1861405331\">Enemy_W5_JK_PowerOutReady</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Change_In_Current_Value",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "InsertFlag_W5_JK_00",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Level Entity}}"
+                          },
+                          "variableName": "InsertFlag_W5_JK_00",
+                          "value": 1
+                        },
+                        {
+                          "name": "Use Custom Character Function",
+                          "functionName": "<a class=\"gTempYellow\" id=\"229482597\">TaskList_Monster_W5_JK_PowerOut</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "references": []

@@ -251,9 +251,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -265,9 +263,7 @@ const configAbility = {
         {
           "eventTrigger": "Exit View-Mode [Anyone]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -729,9 +725,7 @@ const configAbility = {
         {
           "eventTrigger": "Weakness Break [Anyone]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

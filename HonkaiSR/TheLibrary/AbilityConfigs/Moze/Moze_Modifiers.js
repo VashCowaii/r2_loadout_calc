@@ -10,6 +10,57 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1998221839\">ADV_Modifier_MazeEffect_Moze</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "modifierFlags": [
+        "Stealth"
+      ],
+      "duration": 20,
+      "onCreation": [
+        {
+          "name": "Overworld Filter Enemies",
+          "execute": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Task Action Target}}"
+              },
+              "modifier": null,
+              "ID": "1000118(null)"
+            }
+          ]
+        }
+      ],
+      "onStageExit": [
+        "Modifier Deletes Itself"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1731516452\">ADV_Modifier_Maze_Moze</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "duration": 20,
+      "onStageExit": [
+        "Modifier Deletes Itself"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1159155887\">ADV_StageAbility_Maze_MozeOnHitTag</a>",
+      "counter": 1,
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1747433687\">ADV_StageAbility_Maze_Moze</a>",
+      "counter": 1,
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1726925121\">Moze_Ability02_InShadowModifier</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
@@ -109,15 +160,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-59329108\">Moze_InInsert_Tag</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-59329108\">Moze_InInsert_Tag</a>"
     },
     {
       "name": "Modifier Construction",
@@ -125,6 +172,10 @@ const configAbility = {
       "modifierFlags": [
         "BlockInfect"
       ],
+      "description": "Follow-Up ATK DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Follow-Up ATK DMG Vulnerability",
+      "statusName": "Vengewise",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -156,19 +207,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Follow-Up ATK DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Follow-Up ATK DMG Vulnerability",
-      "statusName": "Vengewise"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__707542368\">Moze_Point01_CD</a>[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [],
-      "latentQueue": [],
       "description": "The Trace \"Nightfeather\" effect's auto-trigger is still on cooldown.",
       "type": "Other",
       "statusName": "Nightfeather"
@@ -181,6 +226,10 @@ const configAbility = {
         "BlockInfect",
         "RemoveWhenOwnerUnstage"
       ],
+      "description": "This unit is marked as \"Prey.\" After every time it receives an attack, it will receive Lightning Additional DMG equal to <span class=\"descriptionNumberColor\">#SkillP01_P1_ExtraDamagePercentage</span> of Moze's ATK, and Moze will consume 1 point of Charge.",
+      "type": "Debuff",
+      "effectName": "Prey",
+      "statusName": "Prey",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -815,13 +864,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "This unit is marked as \"Prey.\" After every time it receives an attack, it will receive Lightning Additional DMG equal to <span class=\"descriptionNumberColor\">#SkillP01_P1_ExtraDamagePercentage</span> of Moze's ATK, and Moze will consume 1 point of Charge.",
-      "type": "Debuff",
-      "effectName": "Prey",
-      "statusName": "Prey"
+      ]
     },
     {
       "name": "Modifier Construction",

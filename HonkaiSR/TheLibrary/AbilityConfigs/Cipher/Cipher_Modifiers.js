@@ -10,6 +10,235 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1603714202\">ADV_StageAbility_Maze_Cipher_Mark_Stolen</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__223936728\">ADV_StageAbility_Maze_Cipher_Mark</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-627365117\">ADV_StageAbility_Maze_Cipher_Enemy</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "onCreation": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2037526883\">ADV_StageAbility_Maze_Cipher_Enemy_Shoot</a>"
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2037526883\">ADV_StageAbility_Maze_Cipher_Enemy_Shoot</a>"
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__2037526883\">ADV_StageAbility_Maze_Cipher_Enemy_Shoot</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1509949502\">ADV_StageAbility_Maze_Cipher_Enemy_ForShow</a>",
+      "onCreation": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1603714202\">ADV_StageAbility_Maze_Cipher_Mark_Stolen</a>"
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1603714202\">ADV_StageAbility_Maze_Cipher_Mark_Stolen</a>"
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1469325035\">ADV_StageAbility_Maze_Cipher_Collider</a>",
+      "modifierFlags": [
+        "Stealth"
+      ],
+      "onCreation": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1748356691\">ADV_StageAbility_Maze_Cipher_Collider_Effect</a>"
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1748356691\">ADV_StageAbility_Maze_Cipher_Collider_Effect</a>"
+        }
+      ],
+      "onStageExit": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1748356691\">ADV_StageAbility_Maze_Cipher_Collider_Effect</a>"
+        }
+      ],
+      "onStageEntry": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1748356691\">ADV_StageAbility_Maze_Cipher_Collider_Effect</a>"
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1748356691\">ADV_StageAbility_Maze_Cipher_Collider_Effect</a>",
+      "modifierTasks": [
+        {
+          "name": "Looped Event",
+          "maxLoops": 99999,
+          "Event": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__2114178382\">ADV_StageAbility_Maze_Cipher_Enemy_Added</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2107068353\">ADV_StageAbility_Maze_Cipher_Self</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierTasks": [
+        {
+          "name": "Looped Event",
+          "maxLoops": 99999,
+          "Event": []
+        }
+      ],
+      "onCreation": [
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 14061
+        },
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 14062
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1469325035\">ADV_StageAbility_Maze_Cipher_Collider</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1373730296\">ADV_StageAbility_Maze_Cipher_Speed</a>"
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Enemy NPCs}}"
+          },
+          "modifier": null,
+          "overworldID": 140603
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Team Members}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1469325035\">ADV_StageAbility_Maze_Cipher_Collider</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1373730296\">ADV_StageAbility_Maze_Cipher_Speed</a>"
+        },
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "summonID": 14061
+          }
+        },
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "summonID": 14062
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1588090863\">ADV_StageAbility_Maze_Cipher_Self_OnStage</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1373730296\">ADV_StageAbility_Maze_Cipher_Speed</a>",
+      "stackType": "Replace"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__825609644\">Cipher_SpecialMark01</a>",
       "stackType": "Replace",
       "modifierFlags": [
@@ -330,9 +559,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -510,13 +737,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__4491835\">Cipher_BpKuoSan_Insert_CD</a>[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]",
+      "description": "Talent's Follow-Up ATK cannot yet be triggered.",
+      "type": "Other",
+      "statusName": "The Hospitable Dolosian",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -529,12 +757,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Talent's Follow-Up ATK cannot yet be triggered.",
-      "type": "Other",
-      "statusName": "The Hospitable Dolosian"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -549,6 +772,10 @@ const configAbility = {
         "STAT_AITargetHigherPriority",
         "RemoveWhenCasterDead"
       ],
+      "description": "While the \"Patron\" state is active, a tally of the DMG dealt by ally targets will be kept by Cipher. And Cipher's Ultimate will deal True DMG based on this tally.",
+      "type": "Debuff",
+      "effectName": "Become a Patron",
+      "statusName": "Patron",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1241,13 +1468,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "While the \"Patron\" state is active, a tally of the DMG dealt by ally targets will be kept by Cipher. And Cipher's Ultimate will deal True DMG based on this tally.",
-      "type": "Debuff",
-      "effectName": "Become a Patron",
-      "statusName": "Patron"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1386,9 +1607,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__232969841\">Cipher_BpKuoSan_Insert_Hit</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__232969841\">Cipher_BpKuoSan_Insert_Hit</a>"
     },
     {
       "name": "Modifier Construction",
@@ -1431,6 +1650,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__116163492\">Cipher_BP_Bonus</a>[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Hey, Jackpot for the Taking",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1453,14 +1675,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Hey, Jackpot for the Taking"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1469,6 +1684,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_Fatigue"
       ],
+      "description": "DMG dealt to allies decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Weaken",
+      "statusName": "Hey, Jackpot for the Taking",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1491,19 +1710,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "DMG dealt to allies decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Weaken",
-      "statusName": "Hey, Jackpot for the Taking"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1113671218\">Cipher_PointB3_Debuff</a>[<span class=\"descriptionNumberColor\">Sleight of Sky</span>]",
+      "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Sleight of Sky",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1526,15 +1741,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Sleight of Sky"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1597,6 +1804,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1467539794\">Cipher_Eidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Read the Room, Seek the Glee</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Read the Room, Seek the Glee",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1619,20 +1830,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Read the Room, Seek the Glee"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-309291538\">Cipher_Eidolon2_Debuff</a>[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "In the Fray, Nab On a Spree",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1655,15 +1862,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "In the Fray, Nab On a Spree"
+      ]
     }
   ],
   "references": []

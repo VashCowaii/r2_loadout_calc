@@ -1119,7 +1119,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-231482417\">Enemy_W4_FireProwler_Ability06_Target</a>",
-      "stackData": [],
       "latentQueue": [
         "Skill01_AssistCount",
         "Skill02_AssistCount"

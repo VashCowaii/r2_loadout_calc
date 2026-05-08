@@ -10,7 +10,110 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__326484510\">ADV_StageAbility_Maze_Castorice_RadiusFlag</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "modifierFlags": [
+        "NoAlert",
+        "Stun"
+      ],
+      "onCreation": [
+        "Deleted bullshit"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1699701312\">ADV_StageAbility_Maze_Castorice_AttackRadius</a>",
+      "counter": 1,
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1885580718\">ADV_StageAbility_Maze_Castorice_Attack</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1034446396\">ADV_StageAbility_Maze_Castorice_Radius</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "onCreation": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Team Leader",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            }
+          },
+          "passed": [
+            {
+              "name": "Create Overworld Entity",
+              "summonID": 14071
+            }
+          ]
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "summonID": 14071
+          }
+        },
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Adventure Player}}"
+            },
+            "summonID": 14071
+          }
+        }
+      ],
+      "onStageExit": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "overworldID": 140704
+        },
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Adventure Player}}"
+            },
+            "summonID": 14071
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1273066371\">ADV_GlobalAbility_Maze_Castorice</a>",
+      "stackType": "Replace"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-459849199\">Castorice_Eidolon6_QuantumPenetrate</a>[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
+      "description": "When dealing DMG, increases Quantum RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Await for Years to Loom",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -27,20 +130,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "OverHeal"
-      ],
-      "description": "When dealing DMG, increases Quantum RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Await for Years to Loom"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1861384440\">Castorice_Eidolon4_HealTakenRatio</a>[<span class=\"descriptionNumberColor\">Rest in Songs of Gloom</span>]",
+      "description": "The HP restored when receiving healing increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "HP Restoration Boost",
+      "statusName": "Rest in Songs of Gloom",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -63,22 +161,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "OverHeal"
-      ],
-      "description": "The HP restored when receiving healing increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "HP Restoration Boost",
-      "statusName": "Rest in Songs of Gloom"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Can be used to offset the HP cost of Netherwing's Memosprite Skill, \"Breath Scorches the Shadow.\" A maximum of <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> \"Ardent Will\" can be possessed at any given time.",
+      "type": "Other",
+      "effectName": "Ardent Will",
+      "statusName": "Ardent Will",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -94,11 +186,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Can be used to offset the HP cost of Netherwing's Memosprite Skill, \"Breath Scorches the Shadow.\" A maximum of <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> \"Ardent Will\" can be possessed at any given time.",
-      "type": "Other",
-      "effectName": "Ardent Will",
-      "statusName": "Ardent Will"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -177,10 +265,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "OverHeal"
       ]
     },
     {
@@ -191,14 +275,16 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Where The West Wind Dwells</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Every stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, lasting until the end of this turn.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Where The West Wind Dwells",
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -238,11 +324,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Every stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, lasting until the end of this turn.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Where The West Wind Dwells"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -458,10 +540,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__950021136\">Castorice_PointB1_HealTaxes</a>",
-      "stackData": [],
-      "latentQueue": [
-        "OverHeal"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -499,6 +577,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "Inverted Torch",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -521,11 +603,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "Inverted Torch"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -668,19 +746,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "Castorice_PointB2_HPRatio",
-        "Castorice_PointB2_SpeedRatio"
-      ],
-      "latentQueue": [
-        "OverHeal"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -714,23 +789,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_MaxLayer"
-      ],
-      "latentQueue": [
-        "MDF_Castorice_AttackFlag"
-      ],
-      "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-658097441\">Castorice_Ability03_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, lasting until the Territory ends.",
+      "type": "Debuff",
+      "effectName": "All-Type RES Reduction",
+      "statusName": "All-Type RES Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -755,11 +823,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, lasting until the Territory ends.",
-      "type": "Debuff",
-      "effectName": "All-Type RES Reduction",
-      "statusName": "All-Type RES Reduction"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -767,6 +831,28 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "SpecialBattleArea"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-658097441\">Castorice_Ability03_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+          "aliveOnly": "False",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (0.2) || RETURN",
+              "displayLines": "0.2",
+              "constants": [],
+              "variables": [
+                0.2
+              ]
+            }
+          }
+        }
       ],
       "execute": [
         {
@@ -861,30 +947,6 @@ const configAbility = {
               "abilityName": "Skill"
             }
           ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-658097441\">Castorice_Ability03_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
-          "aliveOnly": "False",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
-            }
-          }
         }
       ]
     },
@@ -997,14 +1059,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PreShowMaxHP",
-        "MDF_PreShowCurrentHP",
-        "MDF_LoseHPRatio01",
-        "MDF_LoseHPRatio02"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

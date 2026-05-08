@@ -287,9 +287,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -842,17 +840,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1386884047\">Saber_Energy_Count</a>[<span class=\"descriptionNumberColor\">Core Resonance</span>]",
       "counter": 1,
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "description": "Currently possesses <span class=\"descriptionNumberColor\">MDF_Layer</span> point(s) of \"Core Resonance.\"",
       "type": "Other",
       "statusName": "Core Resonance"
@@ -860,6 +854,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1437622489\">Saber_Trace01_Bonus</a>[<span class=\"descriptionNumberColor\">Knight of the Dragon</span>]",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Knight of the Dragon",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -882,20 +882,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Knight of the Dragon"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
       "counter": 1,
       "stackType": "ReplaceByCaster",
+      "description": "<span class=\"descriptionNumberColor\">Saber_00_EntityStockSPForShow</span> overflow Energy accumulated.",
+      "type": "Other",
+      "statusName": "Blessing of the Lake",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -941,10 +937,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "<span class=\"descriptionNumberColor\">Saber_00_EntityStockSPForShow</span> overflow Energy accumulated.",
-      "type": "Other",
-      "statusName": "Blessing of the Lake"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1149,7 +1142,7 @@ const configAbility = {
                                   },
                                   "modifier": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                                   "valuePerStack": {
-                                    "value_0_Saber_EntityStockSPForShow": {
+                                    "Saber_EntityStockSPForShow": {
                                       "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
                                       "displayLines": "Saber_00_EntityStockSP",
                                       "constants": [],
@@ -1171,7 +1164,7 @@ const configAbility = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                               "valuePerStack": {
-                                "value_0_Saber_EntityStockSPForShow": {
+                                "Saber_EntityStockSPForShow": {
                                   "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
                                   "displayLines": "Saber_00_EntityStockSP",
                                   "constants": [],
@@ -1191,9 +1184,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1273,9 +1264,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1444,14 +1433,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-269544975\">Saber_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases Wind RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Increases Wind RES PEN.",
+      "statusName": "The Saga of Sixteen Winter Days",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1475,15 +1466,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases Wind RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Increases Wind RES PEN.",
-      "statusName": "The Saga of Sixteen Winter Days"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-914489393\">Saber_Eidolon4</a>[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]",
+      "description": "Wind RES PEN increases by <span class=\"descriptionNumberColor\">#SkillRank_Rank04_P1_Ratio</span>.",
+      "type": "Buff",
+      "statusName": "The Saga of Sixteen Winter Days",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1555,12 +1545,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Wind RES PEN increases by <span class=\"descriptionNumberColor\">#SkillRank_Rank04_P1_Ratio</span>.",
-      "type": "Buff",
-      "statusName": "The Saga of Sixteen Winter Days"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1606,14 +1591,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1658820893\">Saber_Eidolon6_Count</a>[<span class=\"descriptionNumberColor\">The Long Fated Night</span>]",
       "counter": 1,
+      "description": "After using Ultimate <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s), regenerates a fixed amount of <span class=\"descriptionNumberColor\">#SkillRank_Rank06_P3_Amount</span> Energy.",
+      "type": "Other",
+      "statusName": "The Long Fated Night",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -1679,12 +1665,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "After using Ultimate <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s), regenerates a fixed amount of <span class=\"descriptionNumberColor\">#SkillRank_Rank06_P3_Amount</span> Energy.",
-      "type": "Other",
-      "statusName": "The Long Fated Night"
+      ]
     }
   ],
   "targetObjectData": {

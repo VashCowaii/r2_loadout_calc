@@ -10,13 +10,15 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__976017528\">Monster_SW_Minion01_Split_Old</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__976017528\">Monster_SW_Minion01_Split_Old</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-157441217\">Monster_SW_Minion01_SplitEffect</a>[<span class=\"descriptionNumberColor\">Propagation</span>]",
+      "description": "Propagate in the next turn.",
+      "type": "Other",
+      "effectName": "Propagation",
+      "statusName": "Propagation",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -27,15 +29,15 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "description": "Propagate in the next turn.",
-      "type": "Other",
-      "effectName": "Propagation",
-      "statusName": "Propagation"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1780753426\">Monster_SW_Minion01_Split</a>[<span class=\"descriptionNumberColor\">Mitosis: Warning</span>]",
+      "description": "Propagate after <span class=\"descriptionNumberColor\">Modifier_TurnCount</span> turn(s). Cannot propagate during the turn in which this unit recovers from Weakness Break.",
+      "type": "Other",
+      "effectName": "Mitosis: Warning",
+      "statusName": "Mitosis: Warning",
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Owner]",
@@ -214,13 +216,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Propagate after <span class=\"descriptionNumberColor\">Modifier_TurnCount</span> turn(s). Cannot propagate during the turn in which this unit recovers from Weakness Break.",
-      "type": "Other",
-      "effectName": "Mitosis: Warning",
-      "statusName": "Mitosis: Warning"
+      ]
     }
   ],
   "references": []

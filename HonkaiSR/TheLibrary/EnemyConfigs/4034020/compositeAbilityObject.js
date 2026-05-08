@@ -3,9 +3,6 @@ const compositeAbilityObject = {
   "fullCharacterName": 4034020,
   "trimCharacterName": 4034020,
   "abilityList": [
-    "4034020_Monster_W4_FireProwler_01_Main_Ability01_Part02",
-    "4034020_Monster_W4_FireProwler_01_Main_Ability01_Part01",
-    "4034020_Monster_W4_FireProwler_01_Main_PassiveAbilityInitiate",
     "4034020_Monster_W4_Phainon_PassiveInsert02",
     "4034020_Monster_W4_Phainon_PassiveInsert01",
     "4034020_Monster_W4_Phainon_BattlePerform2",
@@ -14,132 +11,6 @@ const compositeAbilityObject = {
     "4034020_Modifiers"
   ],
   "abilityObject": {
-    "4034020_Monster_W4_FireProwler_01_Main_Ability01_Part02": {
-      "fileName": "4034020_Monster_W4_FireProwler_01_Main_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_3) || RETURN",
-              "displayLines": "UnusedUnderThisBase_3",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_3"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4034020_Monster_W4_FireProwler_01_Main_Ability01_Part01": {
-      "fileName": "4034020_Monster_W4_FireProwler_01_Main_Ability01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_FireProwler_01_Main_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4034020_Monster_W4_FireProwler_01_Main_PassiveAbilityInitiate": {
-      "fileName": "4034020_Monster_W4_FireProwler_01_Main_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2021392801\">Enemy_W4_FireProwler_01_Main_Status</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "target2": {
-              "name": "Target Name",
-              "target": "{{Enemy Phainon}}"
-            }
-          },
-          "passed": [
-            {
-              "name": "Consume",
-              "consumeFrom": "MaxHP",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "consumePercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_492) || RETURN",
-                "displayLines": "UnusedUnderThisBase_492",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_492"
-                ]
-              },
-              "consumeFloor": 1,
-              "attackType": "Unknown",
-              "DamageType": {
-                "name": "Damage Type Source",
-                "sourceType": "Physical"
-              }
-            }
-          ]
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4034020_Monster_W4_Phainon_PassiveInsert02": {
       "fileName": "4034020_Monster_W4_Phainon_PassiveInsert02",
       "abilityType": null,
@@ -829,9 +700,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -848,6 +717,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__527560256\">Enemy_W4_Phainon_Part3</a>[<span class=\"descriptionNumberColor\">May You Become The First Blazing Sun</span>]",
+          "description": "Khaslana awaits the break of dawn.",
+          "type": "Other",
+          "statusName": "May You Become The First Blazing Sun",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -909,14 +781,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Khaslana awaits the break of dawn.",
-          "type": "Other",
-          "statusName": "May You Become The First Blazing Sun"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__544337875\">Enemy_W4_Phainon_Part2</a>[<span class=\"descriptionNumberColor\">May You Dispel the Sky's Gloom</span>]",
+          "description": "Khaslana looks forward to saving the world with you.",
+          "type": "Other",
+          "statusName": "May You Dispel the Sky's Gloom",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -978,14 +850,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Khaslana looks forward to saving the world with you.",
-          "type": "Other",
-          "statusName": "May You Dispel the Sky's Gloom"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__561115494\">Enemy_W4_Phainon_Part1</a>[<span class=\"descriptionNumberColor\">May You End the Evernight</span>]",
+          "description": "Khaslana awaits your return.",
+          "type": "Other",
+          "statusName": "May You End the Evernight",
           "execute": [
             {
               "eventTrigger": "AV Forcibly Changed [Global]",
@@ -1025,12 +897,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Khaslana awaits your return.",
-          "type": "Other",
-          "statusName": "May You End the Evernight"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1067,9 +934,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1094,9 +959,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1162,9 +1025,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1238,13 +1099,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1700303456\">Enemy_W4_Phainon_ShowBattleCondition</a>",
+          "latentQueue": [
+            "_LockHp03",
+            "MDF_CurrentSP"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -1259,11 +1122,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_LockHp03",
-            "MDF_CurrentSP"
           ]
         }
       ],

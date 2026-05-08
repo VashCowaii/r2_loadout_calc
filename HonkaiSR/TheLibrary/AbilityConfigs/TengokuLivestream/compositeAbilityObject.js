@@ -26,6 +26,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__25554174\">Relic_324_Sub</a>[<span class=\"descriptionNumberColor\">Tengoku@Livestream</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">#SkillRelic_324_2_P3_CriticalDamage</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "Tengoku@Livestream",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -48,11 +52,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">#SkillRelic_324_2_P3_CriticalDamage</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "Tengoku@Livestream"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -169,9 +169,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

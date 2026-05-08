@@ -3,6 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": "Fugue",
   "trimCharacterName": "Fugue",
   "abilityList": [
+    "Fugue_Modifiers",
+    "Fugue_LocalPlayer_Fugue_BeforeBattleStunListener",
+    "Fugue_LocalPlayer_StandardAbility_AttackBreak",
+    "Fugue_LocalPlayer_Fugue_TechniqueUsage",
+    "Fugue_LocalPlayer_Fugue_NormalAtk01",
     "Fugue_Fugue_TechniqueInLevel",
     "Fugue_Fugue_PassiveAbility01",
     "Fugue_Fugue_Ability03_Part02",
@@ -13,10 +18,842 @@ const compositeAbilityObject = {
     "Fugue_Fugue_Ability11_Part02",
     "Fugue_Fugue_Ability11_Part01",
     "Fugue_Fugue_Ability01_Part02",
-    "Fugue_Fugue_Ability01_Part01",
-    "Fugue_Modifiers"
+    "Fugue_Fugue_Ability01_Part01"
   ],
   "abilityObject": {
+    "Fugue_Modifiers": {
+      "fileName": "Fugue_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1133976141\">ADV_StageAbility_Fugue_BeforeBattleStunListener</a>",
+          "onBattlePrep": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
+              },
+              "modifier": null,
+              "ID": "122501(SkillMaze)",
+              "counter": 1,
+              "duration": {
+                "operator": "Variables[0] (10) || RETURN",
+                "displayLines": "10",
+                "constants": [],
+                "variables": [
+                  10
+                ]
+              },
+              "conditions": {
+                "name": "Has Flag",
+                "flagName": "Stun"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2046983228\">ADV_StageAbility_Maze_Fugue</a>",
+          "counter": 1,
+          "stackType": "Replace",
+          "modifierFlags": [
+            "Stun"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-74108309\">Fugue_PassiveAbility_ElementDamage</a>",
+          "stackType": "Replace",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"2132906314\">DealSuperBreakDamage_DamagePerformance</a>",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Attack Targets of Modifier Holder}}"
+                  },
+                  "variables": {
+                    "DamagePercentage": {
+                      "operator": "Variables[0] (MDF_SuperBreakDamagePercentage) || RETURN",
+                      "displayLines": "MDF_SuperBreakDamagePercentage",
+                      "constants": [],
+                      "variables": [
+                        "MDF_SuperBreakDamagePercentage"
+                      ]
+                    }
+                  },
+                  "damageSequence": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
+                    },
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": {
+                          "name": "Damage Type Source",
+                          "sourceType": "ReadTargetType",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          }
+                        },
+                        "DamageBreak": {
+                          "operator": "Variables[0] (value_0_DamagePercentage) || RETURN",
+                          "displayLines": "value_0_DamagePercentage",
+                          "constants": [],
+                          "variables": [
+                            "value_0_DamagePercentage"
+                          ]
+                        },
+                        "dmgFormula": "Break DMG Scaling",
+                        "dmgFormulaFinal": "Pure (No DMG%)",
+                        "Toughness": null,
+                        "Tags": [
+                          "Super Break"
+                        ],
+                        "attackType": "Break DMG"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2001305717\">Fugue_PassiveAbility_ListenBreakDamage</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "RemoveWhenCasterDead",
+            "STAT_SuperBreakBuff"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-74108309\">Fugue_PassiveAbility_ElementDamage</a>",
+                  "valuePerStack": {
+                    "MDF_SuperBreakDamagePercentage": {
+                      "operator": "Variables[0] (MDF_PassiveDamage2) || RETURN",
+                      "displayLines": "MDF_PassiveDamage2",
+                      "constants": [],
+                      "variables": [
+                        "MDF_PassiveDamage2"
+                      ]
+                    }
+                  },
+                  "casterAssign": "TargetSelf"
+                }
+              ],
+              "priorityLevel": 100
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1376045581\">Fugue_Ability03_WeakType_BUFF</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "ForceStanceDamage"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (FUGUE_OBJECT_UNUSED_1) || RETURN",
+                    "displayLines": "FUGUE_OBJECT_UNUSED_1",
+                    "constants": [],
+                    "variables": [
+                      "FUGUE_OBJECT_UNUSED_1"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__873674204\">Fugue_StancePreview</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "skillType": "Ultimate",
+            "toughnessForcedReductionPreview": {
+              "operator": "Variables[0] (FUGUE_OBJECT_UNUSED_1) || RETURN",
+              "displayLines": "FUGUE_OBJECT_UNUSED_1",
+              "constants": [],
+              "variables": [
+                "FUGUE_OBJECT_UNUSED_1"
+              ]
+            },
+            "showAsForcedReduction": true
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-375769760\">Fugue_DefenceDown</a>[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_DefenceDown"
+          ],
+          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "Virtue Beckons Bliss",
+          "execute": [
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "Adjust Target Stats",
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "(0 - MDF_DefenceDownRatio)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__915939939\">Fugue_Eidolon2_PreShow</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+            },
+            "skillType": [
+              "Ultimate"
+            ],
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": {
+                "operator": "Variables[0] (0.24) || INVERT || RETURN",
+                "displayLines": "-0.24",
+                "constants": [],
+                "variables": [
+                  0.24
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__696396442\">Fugue_Eidolon6_Listen</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
+              "aliveOnly": "True",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_BreakDamageAdd": {
+                  "operator": "Variables[0] (0.3) || RETURN",
+                  "displayLines": "0.3",
+                  "constants": [],
+                  "variables": [
+                    0.3
+                  ]
+                },
+                "MDF_StanceBreakAddRatio": {
+                  "operator": "Variables[0] (0.5) || RETURN",
+                  "displayLines": "0.5",
+                  "constants": [],
+                  "variables": [
+                    0.5
+                  ]
+                },
+                "MDF_Chance": {
+                  "operator": "Variables[0] (1) || RETURN",
+                  "displayLines": "1",
+                  "constants": [],
+                  "variables": [
+                    1
+                  ]
+                },
+                "MDF_DefenceDownRatio": {
+                  "operator": "Variables[0] (0.18) || RETURN",
+                  "displayLines": "0.18",
+                  "constants": [],
+                  "variables": [
+                    0.18
+                  ]
+                },
+                "MDF_BreakDamageAddedRatio": {
+                  "operator": "Variables[0] (0.2) || RETURN",
+                  "displayLines": "0.2",
+                  "constants": [],
+                  "variables": [
+                    0.2
+                  ]
+                },
+                "MDF_LifeTime": {
+                  "operator": "Variables[0] (2) || RETURN",
+                  "displayLines": "2",
+                  "constants": [],
+                  "variables": [
+                    2
+                  ]
+                },
+                "MDF_PropertyRatio": {
+                  "operator": "Variables[0] (0.5) || RETURN",
+                  "displayLines": "0.5",
+                  "constants": [],
+                  "variables": [
+                    0.5
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1774454693\">Fugue_RedStance</a>[<span class=\"descriptionNumberColor\">Cloudflame Luster</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "description": "When initial Toughness is reduced to 0, \"Cloudflame Luster\" can continue to be reduced. When \"Cloudflame Luster\" is reduced to 0, the enemy will receive Weakness Break DMG again.",
+          "type": "Other",
+          "effectName": "Cloudflame Luster",
+          "statusName": "Cloudflame Luster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_CurMaxStance2",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
+                  "warningType": "MaxToughness"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_RedStance_First",
+                  "value": {
+                    "operator": "Variables[0] (MDF_CurMaxStance2) || Variables[1] (MDF_RedStanceRatio) || MUL || RETURN",
+                    "displayLines": "(MDF_CurMaxStance2 * MDF_RedStanceRatio)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_CurMaxStance2",
+                      "MDF_RedStanceRatio"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_RedStance_First",
+                    "compareType": "<=",
+                    "value2": 0
+                  },
+                  "failed": [
+                    {
+                      "name": "Stack Exo-Toughness",
+                      "exoPercent": {
+                        "operator": "Variables[0] (MDF_RedStanceRatio) || RETURN",
+                        "displayLines": "MDF_RedStanceRatio",
+                        "constants": [],
+                        "variables": [
+                          "MDF_RedStanceRatio"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Attacked Start [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1132900651\">Fugue_BPAbility_Eidolon1</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"647019371\">Fugue_BPAbility</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-375769760\">Fugue_DefenceDown</a>[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (2) || RETURN",
+                        "displayLines": "2",
+                        "constants": [],
+                        "variables": [
+                          2
+                        ]
+                      },
+                      "baseChance": {
+                        "operator": "Variables[0] (1) || RETURN",
+                        "displayLines": "1",
+                        "constants": [],
+                        "variables": [
+                          1
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_DefenceDownRatio": {
+                          "operator": "Variables[0] (0.18) || RETURN",
+                          "displayLines": "0.18",
+                          "constants": [],
+                          "variables": [
+                            0.18
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "Fugue_LocalPlayer_Fugue_BeforeBattleStunListener": {
+      "fileName": "Fugue_LocalPlayer_Fugue_BeforeBattleStunListener",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1133976141\">ADV_StageAbility_Fugue_BeforeBattleStunListener</a>",
+          "counter": -1
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Fugue_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Fugue_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Fugue_LocalPlayer_Fugue_TechniqueUsage": {
+      "fileName": "Fugue_LocalPlayer_Fugue_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Overworld Attack Instance",
+          "onAttack": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": null,
+              "ID": "122501(SkillMaze)",
+              "duration": {
+                "operator": "Variables[0] (10) || RETURN",
+                "displayLines": "10",
+                "constants": [],
+                "variables": [
+                  10
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Fugue_LocalPlayer_Fugue_NormalAtk01": {
+      "fileName": "Fugue_LocalPlayer_Fugue_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "from": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "to": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
+                "value1": "Distance_Between_Entities",
+                "compareType": "<=",
+                "value2": 5
+              },
+              "passed": [
+                {
+                  "name": "Shot Fired",
+                  "execute": [
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "projectileFinished": [
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Shot Fired",
+                  "execute": [
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "projectileFinished": [
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
     "Fugue_Fugue_TechniqueInLevel": {
       "fileName": "Fugue_Fugue_TechniqueInLevel",
       "childAbilityList": [
@@ -122,9 +959,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -308,6 +1143,13 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1045772852\">Fugue_Eidolon6</a>[<span class=\"descriptionNumberColor\">Clairvoyance of Boom and Doom</span>]",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Weakness Break Efficiency Boost",
+          "statusName": "Clairvoyance of Boom and Doom",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -330,15 +1172,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Weakness Break Efficiency Boost",
-          "statusName": "Clairvoyance of Boom and Doom"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -388,9 +1222,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -562,6 +1394,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__264764178\">Fugue_PointB3_Sub02</a>",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_PropertyRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -675,29 +1510,24 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__490649964\">Fugue_PointB3_Sub</a>[<span class=\"descriptionNumberColor\">Phecda Primordia</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_BreakDamageAdd"
+          ],
+          "description": "Each stack increases Break Effect by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. This effect can stack up to <span class=\"descriptionNumberColor\">#SkillTree_PointB3_P3_Layer</span> time(s).",
+          "type": "Buff",
+          "effectName": "Break Effect Boost",
+          "statusName": "Phecda Primordia",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [
-            "MDF_BreakDamageAdd"
-          ],
-          "latentQueue": [],
-          "description": "Each stack increases Break Effect by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. This effect can stack up to <span class=\"descriptionNumberColor\">#SkillTree_PointB3_P3_Layer</span> time(s).",
-          "type": "Buff",
-          "effectName": "Break Effect Boost",
-          "statusName": "Phecda Primordia"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -920,14 +1750,19 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1748420043\">Fugue_PointB2_Sub</a>[<span class=\"descriptionNumberColor\">Sylvan Enigma</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyRatio_BreakDamageSelf"
+          ],
+          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio_BreakDamageSelf</span>.",
+          "type": "Buff",
+          "effectName": "Break Effect Boost",
+          "statusName": "Sylvan Enigma",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -950,15 +1785,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio_BreakDamageSelf"
-          ],
-          "latentQueue": [],
-          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio_BreakDamageSelf</span>.",
-          "type": "Buff",
-          "effectName": "Break Effect Boost",
-          "statusName": "Sylvan Enigma"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -991,9 +1818,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1122,15 +1947,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-825933762\">Fugue_PassiveAbility_OnListenBreakModifier</a>",
-          "stackData": [],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -1763,6 +2584,19 @@ const compositeAbilityObject = {
             "ListenBattleEventSkill",
             "ForceStanceDamage"
           ],
+          "stackData": [
+            "MDF_BreakDamageAdd",
+            "MDF_StanceBreakAddRatio",
+            "MDF_Chance",
+            "MDF_DefenceDownRatio",
+            "MDF_BreakDamageAddedRatio",
+            "MDF_LifeTime",
+            "MDF_PropertyRatio"
+          ],
+          "description": "Break DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAddedRatio</span>, Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_StanceBreakAddRatio</span>, and Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
+          "type": "Buff",
+          "effectName": "Foxian Prayer",
+          "statusName": "Foxian Prayer",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1870,21 +2704,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_BreakDamageAdd",
-            "MDF_StanceBreakAddRatio",
-            "MDF_Chance",
-            "MDF_DefenceDownRatio",
-            "MDF_BreakDamageAddedRatio",
-            "MDF_LifeTime",
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [],
-          "description": "Break DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAddedRatio</span>, Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_StanceBreakAddRatio</span>, and Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
-          "type": "Buff",
-          "effectName": "Foxian Prayer",
-          "statusName": "Foxian Prayer"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1896,6 +2716,18 @@ const compositeAbilityObject = {
             "ListenBattleEventSkill",
             "ForceStanceDamage"
           ],
+          "stackData": [
+            "MDF_BreakDamageAdd",
+            "MDF_StanceBreakAddRatio",
+            "MDF_Chance",
+            "MDF_DefenceDownRatio",
+            "MDF_LifeTime",
+            "MDF_PropertyRatio"
+          ],
+          "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_StanceBreakAddRatio</span>. Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
+          "type": "Buff",
+          "effectName": "Foxian Prayer",
+          "statusName": "Foxian Prayer",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1963,20 +2795,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_BreakDamageAdd",
-            "MDF_StanceBreakAddRatio",
-            "MDF_Chance",
-            "MDF_DefenceDownRatio",
-            "MDF_LifeTime",
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [],
-          "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_StanceBreakAddRatio</span>. Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
-          "type": "Buff",
-          "effectName": "Foxian Prayer",
-          "statusName": "Foxian Prayer"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1988,6 +2807,17 @@ const compositeAbilityObject = {
             "ListenBattleEventSkill",
             "ForceStanceDamage"
           ],
+          "stackData": [
+            "MDF_BreakDamageAdd",
+            "MDF_Chance",
+            "MDF_DefenceDownRatio",
+            "MDF_LifeTime",
+            "MDF_PropertyRatio"
+          ],
+          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
+          "type": "Buff",
+          "effectName": "Foxian Prayer",
+          "statusName": "Foxian Prayer",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2039,24 +2869,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_BreakDamageAdd",
-            "MDF_Chance",
-            "MDF_DefenceDownRatio",
-            "MDF_LifeTime",
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [],
-          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
-          "type": "Buff",
-          "effectName": "Foxian Prayer",
-          "statusName": "Foxian Prayer"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "stackData": [
+            "MDF_Chance",
+            "MDF_DefenceDownRatio",
+            "MDF_LifeTime"
+          ],
+          "description": "The Basic ATK \"Radiant Streak\" is enhanced to \"Fiery Caress\" that can deal Blast DMG. Every time an ally target with \"Foxian Prayer\" attacks, Fugue has a <span class=\"descriptionNumberColor\">MDF_Chance</span> base chance to reduce the attacked enemy target's DEF by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>, lasting for <span class=\"descriptionNumberColor\">MDF_LifeTime</span> turn(s).",
+          "type": "Other",
+          "statusName": "Torrid Scorch",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2183,16 +3009,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Chance",
-            "MDF_DefenceDownRatio",
-            "MDF_LifeTime"
-          ],
-          "latentQueue": [],
-          "description": "The Basic ATK \"Radiant Streak\" is enhanced to \"Fiery Caress\" that can deal Blast DMG. Every time an ally target with \"Foxian Prayer\" attacks, Fugue has a <span class=\"descriptionNumberColor\">MDF_Chance</span> base chance to reduce the attacked enemy target's DEF by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>, lasting for <span class=\"descriptionNumberColor\">MDF_LifeTime</span> turn(s).",
-          "type": "Other",
-          "statusName": "Torrid Scorch"
+          ]
         }
       ],
       "targetObjectData": {
@@ -2435,472 +3252,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Fugue_Modifiers": {
-      "fileName": "Fugue_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-74108309\">Fugue_PassiveAbility_ElementDamage</a>",
-          "stackType": "Replace",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"2132906314\">DealSuperBreakDamage_DamagePerformance</a>",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Attack Targets of Modifier Holder}}"
-                  },
-                  "variables": {
-                    "DamagePercentage": {
-                      "operator": "Variables[0] (MDF_SuperBreakDamagePercentage) || RETURN",
-                      "displayLines": "MDF_SuperBreakDamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "MDF_SuperBreakDamagePercentage"
-                      ]
-                    }
-                  },
-                  "damageSequence": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      }
-                    },
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "ReadTargetType",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          }
-                        },
-                        "DamageBreak": {
-                          "operator": "Variables[0] (value_0_DamagePercentage) || RETURN",
-                          "displayLines": "value_0_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "value_0_DamagePercentage"
-                          ]
-                        },
-                        "dmgFormula": "Break DMG Scaling",
-                        "dmgFormulaFinal": "Pure (No DMG%)",
-                        "Toughness": null,
-                        "Tags": [
-                          "Super Break"
-                        ],
-                        "attackType": "Break DMG"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_SuperBreakDamagePercentage"
-          ],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2001305717\">Fugue_PassiveAbility_ListenBreakDamage</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "RemoveWhenCasterDead",
-            "STAT_SuperBreakBuff"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-74108309\">Fugue_PassiveAbility_ElementDamage</a>",
-                  "valuePerStack": {
-                    "MDF_SuperBreakDamagePercentage": {
-                      "operator": "Variables[0] (MDF_PassiveDamage2) || RETURN",
-                      "displayLines": "MDF_PassiveDamage2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PassiveDamage2"
-                      ]
-                    }
-                  },
-                  "casterAssign": "TargetSelf"
-                }
-              ],
-              "priorityLevel": 100
-            }
-          ],
-          "stackData": [
-            "MDF_PassiveDamage2"
-          ],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1376045581\">Fugue_Ability03_WeakType_BUFF</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "ForceStanceDamage"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (FUGUE_OBJECT_UNUSED_1) || RETURN",
-                    "displayLines": "FUGUE_OBJECT_UNUSED_1",
-                    "constants": [],
-                    "variables": [
-                      "FUGUE_OBJECT_UNUSED_1"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__873674204\">Fugue_StancePreview</a>",
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "skillType": "Ultimate",
-            "toughnessForcedReductionPreview": {
-              "operator": "Variables[0] (FUGUE_OBJECT_UNUSED_1) || RETURN",
-              "displayLines": "FUGUE_OBJECT_UNUSED_1",
-              "constants": [],
-              "variables": [
-                "FUGUE_OBJECT_UNUSED_1"
-              ]
-            },
-            "showAsForcedReduction": true
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-375769760\">Fugue_DefenceDown</a>[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_DefenceDown"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "Adjust Target Stats",
-                  "modifiedValuesArray": [
-                    {
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                      "value": "(0 - MDF_DefenceDownRatio)"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_DefenceDownRatio"
-          ],
-          "latentQueue": [],
-          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "Virtue Beckons Bliss"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__915939939\">Fugue_Eidolon2_PreShow</a>",
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-            },
-            "skillType": [
-              "Ultimate"
-            ],
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": {
-                "operator": "Variables[0] (0.24) || INVERT || RETURN",
-                "displayLines": "-0.24",
-                "constants": [],
-                "variables": [
-                  0.24
-                ]
-              }
-            }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__696396442\">Fugue_Eidolon6_Listen</a>",
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectables}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]",
-              "aliveOnly": "True",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_BreakDamageAdd": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
-                },
-                "MDF_StanceBreakAddRatio": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
-                },
-                "MDF_Chance": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
-                },
-                "MDF_DefenceDownRatio": {
-                  "operator": "Variables[0] (0.18) || RETURN",
-                  "displayLines": "0.18",
-                  "constants": [],
-                  "variables": [
-                    0.18
-                  ]
-                },
-                "MDF_BreakDamageAddedRatio": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
-                },
-                "MDF_LifeTime": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
-                },
-                "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1774454693\">Fugue_RedStance</a>[<span class=\"descriptionNumberColor\">Cloudflame Luster</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_CurMaxStance2",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                  "warningType": "MaxToughness"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_RedStance_First",
-                  "value": {
-                    "operator": "Variables[0] (MDF_CurMaxStance2) || Variables[1] (MDF_RedStanceRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_CurMaxStance2 * MDF_RedStanceRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurMaxStance2",
-                      "MDF_RedStanceRatio"
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_RedStance_First",
-                    "compareType": "<=",
-                    "value2": 0
-                  },
-                  "failed": [
-                    {
-                      "name": "Stack Exo-Toughness",
-                      "exoPercent": {
-                        "operator": "Variables[0] (MDF_RedStanceRatio) || RETURN",
-                        "displayLines": "MDF_RedStanceRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_RedStanceRatio"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Attacked Start [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1216788746\">Fugue_BPAbility_Eidolon4</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1132900651\">Fugue_BPAbility_Eidolon1</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"647019371\">Fugue_BPAbility</a>[<span class=\"descriptionNumberColor\">Foxian Prayer</span>]"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-375769760\">Fugue_DefenceDown</a>[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
-                      },
-                      "baseChance": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_DefenceDownRatio": {
-                          "operator": "Variables[0] (0.18) || RETURN",
-                          "displayLines": "0.18",
-                          "constants": [],
-                          "variables": [
-                            0.18
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PassiveDamage2",
-            "MDF_RedStanceRatio",
-            "MDF_MinStance"
-          ],
-          "latentQueue": [],
-          "description": "When initial Toughness is reduced to 0, \"Cloudflame Luster\" can continue to be reduced. When \"Cloudflame Luster\" is reduced to 0, the enemy will receive Weakness Break DMG again.",
-          "type": "Other",
-          "effectName": "Cloudflame Luster",
-          "statusName": "Cloudflame Luster"
-        }
-      ],
-      "references": []
     }
   }
 }

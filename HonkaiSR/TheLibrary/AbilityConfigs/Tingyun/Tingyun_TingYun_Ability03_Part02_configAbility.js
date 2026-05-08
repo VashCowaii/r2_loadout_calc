@@ -102,6 +102,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__132060184\">TingYun_Ability03DamageUp</a>[<span class=\"descriptionNumberColor\">Amidst the Rejoicing Clouds</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_DamageAddedRatio"
+      ],
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Amidst the Rejoicing Clouds",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -124,15 +131,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Amidst the Rejoicing Clouds"
+      ]
     }
   ],
   "targetObjectData": {

@@ -889,10 +889,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "modifierFunctions": [],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

@@ -49,9 +49,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -85,13 +83,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__209501789\">Monster_W5_Ripper_Main_HPTrigger2</a>",
+      "stackData": [
+        "MDF_HPTriggerRatio",
+        "MDF_HPTriggerCompareRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -158,16 +158,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_HPTriggerRatio",
-        "MDF_HPTriggerCompareRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__159168932\">Monster_W5_Ripper_Main_HPTrigger1</a>",
+      "stackData": [
+        "MDF_HPTriggerRatio",
+        "MDF_HPTriggerCompareRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -234,12 +233,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_HPTriggerRatio",
-        "MDF_HPTriggerCompareRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -258,9 +252,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1116201071\">Monster_W5_Ripper_MainPerform</a>",
       "modifierFlags": [
         "STAT_ForceActionable"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -316,6 +308,10 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
+      "description": "While \"Paramount Bliss Inverted: Illwish Lotus\" is in the Charging state, this unit's Toughness cannot be reduced.",
+      "type": "Other",
+      "effectName": "Weakness Protected",
+      "statusName": "Weakness Protected",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -339,11 +335,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "While \"Paramount Bliss Inverted: Illwish Lotus\" is in the Charging state, this unit's Toughness cannot be reduced.",
-      "type": "Other",
-      "effectName": "Weakness Protected",
-      "statusName": "Weakness Protected"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -752,35 +744,35 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"766895631\">Standard_Monster_Floating_DamageReduceController</a>",
                   "valuePerStack": {
                     "MDF_LockHpActionDecreaseRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_599) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_599",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12539) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12539",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_599"
+                        "UnusedUnderThisBase_12539"
                       ]
                     },
                     "MDF_LockHpUpLimitRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_598) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_598",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12507) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12507",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_598"
+                        "UnusedUnderThisBase_12507"
                       ]
                     },
                     "MDF_DamageReduceRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_597) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_597",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12510) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12510",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_597"
+                        "UnusedUnderThisBase_12510"
                       ]
                     },
                     "MDF_LastLockHpRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_596) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_596",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12506) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12506",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_596"
+                        "UnusedUnderThisBase_12506"
                       ]
                     }
                   }
@@ -1015,9 +1007,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1108,41 +1098,47 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1788107220\">Monster_W5_Ripper_Ability06_SpecialFlesh</a>",
-      "stackData": [],
       "latentQueue": [
         "MainCount"
       ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1415873063\">Monster_W5_Ripper_Ability03_Mark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1415873063\">Monster_W5_Ripper_Ability03_Mark</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1098328598\">Monster_W5_Ripper_Ability06_Mark</a>",
+      "latentQueue": [
+        "MainCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MainCount"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-98226572\">Monster_W5_Ripper_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Teasing</span>]",
       "stackType": "Replace",
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_DamageTakenUpRatio_PerLayer"
+      ],
+      "latentQueue": [
+        "MDF_InsertCheck"
+      ],
+      "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Teasing",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1172,19 +1168,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_DamageTakenUpRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "MDF_InsertCheck"
-      ],
-      "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Teasing",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1212,6 +1196,24 @@ const configAbility = {
         147,
         "AvatarBreak"
       ],
+      "stackData": [
+        "MDF_FleshElationPoint",
+        "MDF_FleshExtraChance",
+        "MDF_FleshExtraElationPoint",
+        "MDF_AttackEnemyChance",
+        "MDF_DamagePercentage",
+        "MDF_MaxDamageRatio",
+        "MDF_MinDamageRatio",
+        "MDF_ExtraDamageMultiple",
+        "MDF_EnemyExtraDamageMultiple"
+      ],
+      "latentQueue": [
+        "MainCount"
+      ],
+      "description": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline.",
+      "type": "Debuff",
+      "effectName": "Happiness Puppet",
+      "statusName": "Happiness Puppet",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1261,7 +1263,11 @@ const configAbility = {
             }
           ]
         }
-      ],
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__34096710\">Monster_W5_Ripper_FleshEffect</a>",
       "stackData": [
         "MDF_FleshElationPoint",
         "MDF_FleshExtraChance",
@@ -1276,14 +1282,6 @@ const configAbility = {
       "latentQueue": [
         "MainCount"
       ],
-      "description": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline.",
-      "type": "Debuff",
-      "effectName": "Happiness Puppet",
-      "statusName": "Happiness Puppet"
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__34096710\">Monster_W5_Ripper_FleshEffect</a>",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -1372,20 +1370,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_FleshElationPoint",
-        "MDF_FleshExtraChance",
-        "MDF_FleshExtraElationPoint",
-        "MDF_AttackEnemyChance",
-        "MDF_DamagePercentage",
-        "MDF_MaxDamageRatio",
-        "MDF_MinDamageRatio",
-        "MDF_ExtraDamageMultiple",
-        "MDF_EnemyExtraDamageMultiple"
-      ],
-      "latentQueue": [
-        "MainCount"
       ]
     },
     {
@@ -1620,9 +1604,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1670,6 +1652,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2110673178\">Monster_W5_Ripper_SummonMonster</a>",
       "stackType": "Replace",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1887,13 +1870,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-287768944\">Monster_W5_Ripper_Summon</a>",
       "stackType": "Replace",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase] [Anyone]",
@@ -1921,15 +1904,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2109211182\">Monster_W5_Ripper_Bonus</a>[<span class=\"descriptionNumberColor\">Inverted Severance</span>]",
       "stackType": "Replace",
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_CriticalDamageUpRatio</span> and becomes immune to the \"Happiness Puppet\" effect for the duration.",
+      "type": "Buff",
+      "effectName": "Inverted Severance",
+      "statusName": "Inverted Severance",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1952,11 +1936,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_CriticalDamageUpRatio</span> and becomes immune to the \"Happiness Puppet\" effect for the duration.",
-      "type": "Buff",
-      "effectName": "Inverted Severance",
-      "statusName": "Inverted Severance"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1965,6 +1945,20 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_MaxLayer",
+        "MDF_AddLayer",
+        "MDF_SummonCount"
+      ],
+      "latentQueue": [
+        "MainCount",
+        "ParasitismLayer"
+      ],
+      "description": "At the start of each turn, gains <span class=\"descriptionNumberColor\">MDF_AddLayer</span> stack(s). Loses 1 stack when an enemy summons \"Illwish Lotus\" or after attacking an enemy target, and loses an additional stack after eliminating an enemy target. At the end of the turn, if stacks are greater than or equal to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span>, the character will be converted into a \"Happiness Puppet.\" When stacks reach <span class=\"descriptionNumberColor\">MDF_RemoveLayer</span>, this state is dispelled and the \"Inverted Severance\" effect is inflicted.",
+      "type": "Other",
+      "effectName": "Happiness",
+      "statusName": "Happiness",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2608,21 +2602,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_MaxLayer",
-        "MDF_AddLayer",
-        "MDF_SummonCount"
-      ],
-      "latentQueue": [
-        "MainCount",
-        "ParasitismLayer"
-      ],
-      "description": "At the start of each turn, gains <span class=\"descriptionNumberColor\">MDF_AddLayer</span> stack(s). Loses 1 stack when an enemy summons \"Illwish Lotus\" or after attacking an enemy target, and loses an additional stack after eliminating an enemy target. At the end of the turn, if stacks are greater than or equal to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span>, the character will be converted into a \"Happiness Puppet.\" When stacks reach <span class=\"descriptionNumberColor\">MDF_RemoveLayer</span>, this state is dispelled and the \"Inverted Severance\" effect is inflicted.",
-      "type": "Other",
-      "effectName": "Happiness",
-      "statusName": "Happiness",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2630,7 +2610,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [],
       "latentQueue": [
         "MainCount"
       ]
@@ -2674,9 +2653,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2834,9 +2811,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3084,6 +3059,20 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1648139352\">Monster_W5_Ripper_MindControl</a>",
+      "stackData": [
+        "MDF_FleshElationPoint",
+        "MDF_FleshExtraChance",
+        "MDF_FleshExtraElationPoint",
+        "MDF_AttackEnemyChance",
+        "MDF_DamagePercentage",
+        "MDF_MaxDamageRatio",
+        "MDF_MinDamageRatio",
+        "MDF_ExtraDamageMultiple",
+        "MDF_EnemyExtraDamageMultiple"
+      ],
+      "latentQueue": [
+        "MainCount"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -3440,20 +3429,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [
-        "MDF_FleshElationPoint",
-        "MDF_FleshExtraChance",
-        "MDF_FleshExtraElationPoint",
-        "MDF_AttackEnemyChance",
-        "MDF_DamagePercentage",
-        "MDF_MaxDamageRatio",
-        "MDF_MinDamageRatio",
-        "MDF_ExtraDamageMultiple",
-        "MDF_EnemyExtraDamageMultiple"
-      ],
-      "latentQueue": [
-        "MainCount"
       ]
     },
     {
@@ -3482,9 +3457,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3496,6 +3469,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1728959136\">Monster_W5_Ripper_Passive</a>",
+      "stackData": [
+        "MDF_TriggerSummonCount"
+      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -3789,11 +3765,7 @@ const configAbility = {
         {
           "eventTrigger": "End Broken State [Owner]"
         }
-      ],
-      "stackData": [
-        "MDF_TriggerSummonCount"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

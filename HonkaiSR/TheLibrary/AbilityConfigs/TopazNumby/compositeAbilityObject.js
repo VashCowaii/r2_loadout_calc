@@ -3,21 +3,20 @@ const compositeAbilityObject = {
   "fullCharacterName": "Topaz & Numby",
   "trimCharacterName": "TopazNumby",
   "abilityList": [
-    "TopazNumby_Topaz_BE_CheckStun",
-    "TopazNumby_Topaz_BE_Hit",
-    "TopazNumby_Topaz_BE_Ability03Ready",
-    "TopazNumby_Topaz_BE_Ability01Ready",
-    "TopazNumby_Topaz_BE_Ability02Ready",
+    "TopazNumby_Modifiers",
+    "TopazNumby_LocalPlayer_Topaz_SummonUnit",
+    "TopazNumby_Player_Topaz_RemoveMazeEff",
+    "TopazNumby_LocalPlayer_StandardAbility_AttackBreak",
+    "TopazNumby_LocalPlayer_Topaz_RemoveEff",
+    "TopazNumby_LocalPlayer_Topaz_TechniqueUsage",
+    "TopazNumby_LocalPlayer_Topaz_NormalAtk01",
+    "TopazNumby_Topaz_TechniqueInLevel",
     "TopazNumby_Topaz_BE_UltraAttackDamage",
     "TopazNumby_Topaz_BE_NormalAttackDamage",
-    "TopazNumby_Topaz_BE_LaterAttack",
-    "TopazNumby_Topaz_BE_FirstAttack",
-    "TopazNumby_Topaz_BE_RefreshEnhance",
-    "TopazNumby_Topaz_BE_DelayLimbo",
-    "TopazNumby_Topaz_BE_DelayDeath",
-    "TopazNumby_Topaz_BE_PassiveAbility",
-    "TopazNumby_Topaz_TechniqueInLevel",
+    "TopazNumby_Topaz_Eidolon4_ReduceDelay",
     "TopazNumby_Topaz_PassiveAbility01",
+    "TopazNumby_Klara_Ability03_Part01",
+    "TopazNumby_Klara_Ability03_EnterReady",
     "TopazNumby_Topaz_Ability03_Part02",
     "TopazNumby_Topaz_Ability03_Part01",
     "TopazNumby_Topaz_Ability03_EnterReady",
@@ -25,69 +24,1507 @@ const compositeAbilityObject = {
     "TopazNumby_Topaz_Ability02_Part01",
     "TopazNumby_Topaz_Ability01_Part02",
     "TopazNumby_Topaz_Ability01_Part01",
-    "TopazNumby_Topaz_Eidolon4_ReduceDelay",
-    "TopazNumby_Modifiers",
     "TopazNumby_BE_BattleEvents"
   ],
   "abilityObject": {
-    "TopazNumby_Topaz_BE_CheckStun": {
-      "fileName": "TopazNumby_Topaz_BE_CheckStun",
-      "abilityType": null,
+    "TopazNumby_Modifiers": {
+      "fileName": "TopazNumby_Modifiers",
+      "abilityType": "Char. Modifiers",
       "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TopazNumby_Topaz_BE_Hit": {
-      "fileName": "TopazNumby_Topaz_BE_Hit",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
       "parse": [
         {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1899526189\">Topaz_BE_HitEffect</a>"
-          },
-          "passed": [
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1590724181\">ADV_Modifier_ZhangZhang_FindTreasure_VFX</a>",
+          "counter": 1,
+          "stackType": "Refresh"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1224676462\">ADV_Modifier_ZhangZhang_FindTreasure</a>",
+          "counter": 1,
+          "stackType": "Refresh"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1400869110\">ADV_Modifier_ZhangZhang_FindTrotter_VFX</a>",
+          "counter": 1,
+          "stackType": "Refresh"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1256063301\">ADV_Modifier_ZhangZhang_FindTrotter</a>",
+          "counter": 1,
+          "stackType": "Refresh"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1063652083\">ADV_Modifier_Maze_Topaz_SummonUnit</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "onCreation": [
             {
-              "name": "Define Custom Variable",
-              "variableName": "HasHitEffect",
-              "value": 1
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
+              "name": "IF",
+              "conditions": {
+                "name": "Is Team Leader",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-1899526189\">Topaz_BE_HitEffect</a>"
+              "passed": [
+                {
+                  "name": "Create Overworld Entity",
+                  "summonID": 11121
+                }
+              ]
             }
           ],
-          "failed": [
+          "onRemoval": [
             {
-              "name": "Define Custom Variable",
-              "variableName": "HasHitEffect",
-              "value": 0
+              "name": "Remove Overworld Entity",
+              "summon": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "summonID": 11121
+              }
+            }
+          ],
+          "onStageExit": [
+            {
+              "name": "Remove Overworld Entity",
+              "summon": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "summonID": 11121
+              }
+            }
+          ],
+          "onBattleEnd": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Is Team Leader",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "onStageEntry": [
+            {
+              "name": "Create Overworld Entity",
+              "summonID": 11121
             }
           ]
         },
         {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HasHitEffect",
-            "compareType": ">",
-            "value2": 0
-          }
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1886525404\">ADV_StageAbility_Maze_Topaz</a>",
+          "counter": 1,
+          "stackType": "Merge",
+          "onBattleEnd": [
+            {
+              "name": "IF",
+              "conditions": "Won last Battle"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1602537794\">Klara_Passive_ShowAmmo</a>",
+          "stackType": "ReplaceByCaster"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-796199138\">Klara_Passive_DamageReduce</a>[<span class=\"descriptionNumberColor\">Guardian</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Guardian",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__90816647\">Klara_BPAbility_Revenge</a>[<span class=\"descriptionNumberColor\">Mark of Counter</span>]",
+          "modifierFlags": [
+            "ListenBattleEventSkill",
+            "RemoveWhenCasterDead"
+          ],
+          "description": "The target is Marked by Svarog.",
+          "type": "Other",
+          "statusName": "Mark of Counter",
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Toggle Skill Mark"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Active Ability Chosen [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Toggle Skill Mark",
+                      "toggle": true,
+                      "skillTypesAllow": [
+                        "Skill"
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Toggle Skill Mark"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-459252663\">Klara_TechniqueUsage_AggroUP</a>[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Higher chance to be attacked.",
+          "type": "Buff",
+          "statusName": "A Small Price for Victory",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1426674462\">Klara_PassiveATK_Mark</a>",
+          "execute": [
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Klara_PassiveAbility01_InsertAbility",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "priorityTag": "CharacterAttackFromSelf",
+                  "showInActionOrder": true,
+                  "abortFlags": [
+                    "STAT_CTRL",
+                    "DisableAction"
+                  ],
+                  "allowAbilityTriggers": false
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1361568506\">Topaz_BE_UltraEnhance_ShowText</a>",
+          "stackType": "ReplaceByCaster"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1350976023\">Topaz_BETargetTagActive</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "ListenBattleEventSkill",
+            "RemoveWhenCasterDead"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "ShowSpecialMarkOnCreate",
+                        "compareType": ">=",
+                        "value2": 1,
+                        "contextScope": "ContextModifier"
+                      },
+                      {
+                        "name": "Compare: Target Count SUM",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
+                        "conditions": {
+                          "name": "Compare: Target",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
+                        }
+                      },
+                      {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Target",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Current Action Owner}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
+                          },
+                          {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Is Part Of Team",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Current Action Owner}}"
+                                },
+                                "team": "Player Team"
+                              },
+                              {
+                                "name": "Compare: Variable",
+                                "value1": "CurEnhance",
+                                "compareType": ">=",
+                                "value2": 1,
+                                "contextScope": "ContextCaster"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Toggle Skill Mark",
+                      "toggle": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Update Target Selected(UI) [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Target Count SUM",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
+                        "conditions": {
+                          "name": "Compare: Target",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Target",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Current Action Owner}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
+                          },
+                          "passed": [
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Basic ATK",
+                                "Ultimate"
+                              ]
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Toggle Skill Mark"
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Target Count SUM",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Player's Aim Target List}}"
+                            },
+                            "conditions": {
+                              "name": "Compare: Target",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "target2": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              }
+                            }
+                          },
+                          {
+                            "name": "Compare: Target",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Current Action Owner}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Trace Activated",
+                            "conditionList": "Overdraft"
+                          },
+                          "passed": [
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Basic ATK",
+                                "Ultimate"
+                              ]
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Toggle Skill Mark"
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Toggle Skill Mark"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1982768595\">Topaz_BE_FiretakenRatio</a>",
+          "stackType": "ReplaceByCaster",
+          "duration": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">FireVulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (TOPAZ_OBJECT_UNUSED_1) || RETURN",
+                    "displayLines": "TOPAZ_OBJECT_UNUSED_1",
+                    "constants": [],
+                    "variables": [
+                      "TOPAZ_OBJECT_UNUSED_1"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1899526189\">Topaz_BE_HitEffect</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1524167625\">Topaz_BE_UltraEnhance_Text</a>",
+          "stackType": "ReplaceByCaster",
+          "type": "Buff",
+          "effectName": "DMG multiplier, CRIT DMG Boost",
+          "duration": 1
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
+          "counter": 1,
+          "stackType": "ReplaceByCaster",
+          "description": "Numby's DMG multiplier increases by <span class=\"descriptionNumberColor\">Skill03_P1_BEDamageRatio</span>, CRIT DMG increases by <span class=\"descriptionNumberColor\">Skill03_P2_CriticalChance</span>. When enemies with Proof of Debt receive attacks from allies' Basic ATK, Skill, or Ultimate, Numby's action is Advanced Forward by <span class=\"descriptionNumberColor\">Skill03_P3_DelayRatio</span>.",
+          "type": "Buff",
+          "statusName": "Windfall Bonanza!",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Numby}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1182113181\">BE_ExtraSpeedModifier</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 6
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Modifier Description",
+                      "popUpText": "Numby's DMG multiplier increases by <span class=\"descriptionNumberColor\">Skill03_P1_BEDamageRatio</span>, CRIT DMG increases by <span class=\"descriptionNumberColor\">Skill03_P2_CriticalChance</span>, and Fire RES PEN increases by <span class=\"descriptionNumberColor\">Rank06_P2_PenRatio</span>. When enemies with Proof of Debt receive attacks from allies' Basic ATK, Skill, or Ultimate, Numby's action is Advanced Forward by <span class=\"descriptionNumberColor\">Skill03_P3_DelayRatio</span>."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1213282515\">Topaz_BE_CriticalChance</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (0.25) || RETURN",
+                    "displayLines": "0.25",
+                    "constants": [],
+                    "variables": [
+                      0.25
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 6
+                  },
+                  "passed": [
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFirePEN</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (0.1) || RETURN",
+                        "displayLines": "0.1",
+                        "constants": [],
+                        "variables": [
+                          0.1
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1322510639\">Topaz_BETargetTag_CriticalDamageUp</a>[<span class=\"descriptionNumberColor\">Debtor</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increases CRIT DMG received from Follow-Up ATKs by <span class=\"descriptionNumberColor\">MDF_PropertyValue1_InsertCriticalDamageAddRatio</span>, stacking up to <span class=\"descriptionNumberColor\">MDF_PropertyValue2_InsertCriticalDamageAddMaxLayer</span> time(s).",
+          "type": "Debuff",
+          "effectName": "Debtor",
+          "statusName": "Debtor",
+          "addStacksPerTrigger": 1
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-373546697\">Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn</a>",
+          "stackType": "Replace",
+          "duration": 1
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-93497222\">Topaz_BE_FindNoTargetFlag</a>",
+          "stackType": "Replace",
+          "duration": 1
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1346057059\">Topaz_BETargetTagInsertHitFlag</a>",
+          "stackType": "Replace",
+          "duration": 1
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1594870654\">Topaz_BETargetTagHitFlag</a>",
+          "stackType": "Replace",
+          "duration": 1
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
+          "modifierFlags": [
+            "RemoveWhenCasterDead",
+            "ListenBattleEventSkill"
+          ],
+          "description": "Increases Follow-Up ATK DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue1_DamageAdd</span>. Numby will target this unit as its attack target.",
+          "type": "Debuff",
+          "effectName": "Proof of Debt",
+          "statusName": "Proof of Debt",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
+                  "searchRandom": true,
+                  "includeDyingTargets": true,
+                  "maxTargets": 10,
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "invertCondition": true
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1350976023\">Topaz_BETargetTagActive</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
+                  "value": {
+                    "operator": "Constants[0] (0) || RETURN",
+                    "displayLines": "0",
+                    "constants": [
+                      0
+                    ],
+                    "variables": []
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1350976023\">Topaz_BETargetTagActive</a>",
+                  "valuePerStack": {
+                    "ShowSpecialMarkOnCreate": {
+                      "operator": "Variables[0] (ShowSpecialMarkOnCreate) || RETURN",
+                      "displayLines": "ShowSpecialMarkOnCreate",
+                      "constants": [],
+                      "variables": [
+                        "ShowSpecialMarkOnCreate"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "ShowSpecialMarkOnCreate",
+                        "compareType": ">=",
+                        "value2": 1,
+                        "contextScope": "ContextModifier"
+                      },
+                      {
+                        "name": "Compare: Target Count SUM",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
+                        "conditions": {
+                          "name": "Compare: Target",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
+                        },
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Target",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Current Action Owner}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
+                          },
+                          {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Is Part Of Team",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Current Action Owner}}"
+                                },
+                                "team": "Player Team"
+                              },
+                              {
+                                "name": "Compare: Variable",
+                                "value1": "CurEnhance",
+                                "compareType": ">=",
+                                "value2": 1,
+                                "contextScope": "ContextCaster"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "_isShowSpecialMark",
+                        "compareType": "<=",
+                        "value2": 0,
+                        "contextScope": "ContextModifier"
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "_isShowSpecialMark",
+                          "value": 1
+                        },
+                        {
+                          "name": "Toggle Skill Mark",
+                          "toggle": true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1322510639\">Topaz_BETargetTag_CriticalDamageUp</a>[<span class=\"descriptionNumberColor\">Debtor</span>]"
+                },
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Turn End [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "_isShowSpecialMark",
+                    "compareType": ">=",
+                    "value2": 1,
+                    "contextScope": "ContextModifier"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_isShowSpecialMark",
+                      "value": 0
+                    },
+                    {
+                      "name": "Toggle Skill Mark"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Follow-up"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                          "value": "MDF_PropertyValue1_DamageAdd"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Eidolon Activated",
+                        "eidolon": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "Adjust Target Stats",
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Attacker",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+                              "value": "(MDF_PropertyValue4_InsertCriticalDamageAddLayer * MDF_PropertyValue3_InsertCriticalDamageAddRatio)"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 1,
+                    "invertCondition": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
+                      "value": 0
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1322510639\">Topaz_BETargetTag_CriticalDamageUp</a>[<span class=\"descriptionNumberColor\">Debtor</span>]"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Attacked Start [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Attack Type",
+                        "attackTypes": [
+                          "Basic ATK",
+                          "Skill",
+                          "Ultimate"
+                        ],
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      },
+                      {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members}}.[[addBattleEvents]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "mustBeAlive2": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1594870654\">Topaz_BETargetTagHitFlag</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Follow-up"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "mustBeAlive2": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1346057059\">Topaz_BETargetTagInsertHitFlag</a>"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Eidolon Activated",
+                        "eidolon": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value1": "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
+                            "compareType": "<",
+                            "value2": {
+                              "operator": "Variables[0] (MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer) || RETURN",
+                              "displayLines": "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer",
+                              "constants": [],
+                              "variables": [
+                                "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer"
+                              ]
+                            },
+                            "contextScope": "ContextModifier"
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
+                              "value": {
+                                "operator": "Constants[0] (1) || Variables[0] (MDF_PropertyValue4_InsertCriticalDamageAddLayer) || ADD || RETURN",
+                                "displayLines": "(1 + MDF_PropertyValue4_InsertCriticalDamageAddLayer)",
+                                "constants": [
+                                  1
+                                ],
+                                "variables": [
+                                  "MDF_PropertyValue4_InsertCriticalDamageAddLayer"
+                                ]
+                              }
+                            },
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1322510639\">Topaz_BETargetTag_CriticalDamageUp</a>[<span class=\"descriptionNumberColor\">Debtor</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue1_InsertCriticalDamageAddRatio": {
+                                  "operator": "Variables[0] (MDF_PropertyValue3_InsertCriticalDamageAddRatio) || RETURN",
+                                  "displayLines": "MDF_PropertyValue3_InsertCriticalDamageAddRatio",
+                                  "constants": [],
+                                  "variables": [
+                                    "MDF_PropertyValue3_InsertCriticalDamageAddRatio"
+                                  ]
+                                },
+                                "MDF_PropertyValue2_InsertCriticalDamageAddMaxLayer": {
+                                  "operator": "Variables[0] (MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer) || RETURN",
+                                  "displayLines": "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer",
+                                  "constants": [],
+                                  "variables": [
+                                    "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer"
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "_isShowSpecialMark",
+                    "compareType": ">=",
+                    "value2": 1,
+                    "contextScope": "ContextModifier"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_isShowSpecialMark",
+                      "value": 0
+                    },
+                    {
+                      "name": "Toggle Skill Mark"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "_isShowSpecialMark",
+                    "compareType": ">=",
+                    "value2": 1,
+                    "contextScope": "ContextModifier"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_isShowSpecialMark",
+                      "value": 0
+                    },
+                    {
+                      "name": "Toggle Skill Mark"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Update Target Selected(UI) [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Target Count SUM",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
+                        "conditions": {
+                          "name": "Compare: Target",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Toggle Skill Mark"
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Target",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Current Action Owner}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
+                          },
+                          "passed": [
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Basic ATK",
+                                "Ultimate"
+                              ]
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Target Count SUM",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Player's Aim Target List}}"
+                            },
+                            "conditions": {
+                              "name": "Compare: Target",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "target2": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              }
+                            }
+                          },
+                          "passed": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Trace Activated",
+                                "conditionList": "Overdraft"
+                              },
+                              "passed": [
+                                {
+                                  "name": "Toggle Skill Mark"
+                                }
+                              ],
+                              "failed": [
+                                {
+                                  "name": "Toggle Skill Mark",
+                                  "toggle": true,
+                                  "skillTypesAllow": [
+                                    "Basic ATK"
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Basic ATK"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Toggle Skill Mark"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Active Ability Chosen [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
+                      },
+                      {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Is Part Of Team",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "team": "Player Team"
+                          },
+                          {
+                            "name": "Compare: Variable",
+                            "value1": "CurEnhance",
+                            "compareType": ">=",
+                            "value2": 1,
+                            "contextScope": "ContextCaster"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "_isShowSpecialMark",
+                        "compareType": "<=",
+                        "value2": 0,
+                        "contextScope": "ContextModifier"
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable (VFX)",
+                          "variableName": "_isShowSpecialMark",
+                          "value": 1
+                        },
+                        {
+                          "name": "Toggle Skill Mark",
+                          "toggle": true
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable (VFX)",
+                      "variableName": "_isShowSpecialMark",
+                      "value": 0
+                    },
+                    {
+                      "name": "Toggle Skill Mark"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "TopazNumby_LocalPlayer_Topaz_SummonUnit": {
+      "fileName": "TopazNumby_LocalPlayer_Topaz_SummonUnit",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1063652083\">ADV_Modifier_Maze_Topaz_SummonUnit</a>"
         }
       ],
       "references": [],
@@ -95,8 +1532,8 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "TopazNumby_Topaz_BE_Ability03Ready": {
-      "fileName": "TopazNumby_Topaz_BE_Ability03Ready",
+    "TopazNumby_Player_Topaz_RemoveMazeEff": {
+      "fileName": "TopazNumby_Player_Topaz_RemoveMazeEff",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -106,8 +1543,215 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "TopazNumby_Topaz_BE_Ability01Ready": {
-      "fileName": "TopazNumby_Topaz_BE_Ability01Ready",
+    "TopazNumby_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "TopazNumby_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TopazNumby_LocalPlayer_Topaz_RemoveEff": {
+      "fileName": "TopazNumby_LocalPlayer_Topaz_RemoveEff",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -117,15 +1761,151 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "TopazNumby_Topaz_BE_Ability02Ready": {
-      "fileName": "TopazNumby_Topaz_BE_Ability02Ready",
-      "abilityType": null,
-      "energy": null,
+    "TopazNumby_LocalPlayer_Topaz_TechniqueUsage": {
+      "fileName": "TopazNumby_LocalPlayer_Topaz_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
       "toughnessList": null,
-      "parse": [],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "111201(SkillMaze)",
+          "duration": -1
+        },
+        "Submit Technique Use"
+      ],
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TopazNumby_LocalPlayer_Topaz_NormalAtk01": {
+      "fileName": "TopazNumby_LocalPlayer_Topaz_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "TopazNumby_Topaz_TechniqueInLevel": {
+      "fileName": "TopazNumby_Topaz_TechniqueInLevel",
+      "childAbilityList": [
+        "TopazNumby_Topaz_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
+      "abilityType": "Technique",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"520958214\">Technique_Topaz_Modifier</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__285365186\">Topaz_Bonus</a>",
+          "stackType": "ReplaceByCaster"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__520958214\">Technique_Topaz_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Wave Count",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
     },
     "TopazNumby_Topaz_BE_UltraAttackDamage": {
@@ -573,504 +2353,25 @@ const compositeAbilityObject = {
         "primaryTarget": "Inherent Target"
       }
     },
-    "TopazNumby_Topaz_BE_LaterAttack": {
-      "fileName": "TopazNumby_Topaz_BE_LaterAttack",
+    "TopazNumby_Topaz_Eidolon4_ReduceDelay": {
+      "fileName": "TopazNumby_Topaz_Eidolon4_ReduceDelay",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Battle Event's Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
-          },
-          "passed": [
-            "Deleted bullshit"
-          ],
-          "failed": [
-            "Deleted bullshit"
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Battle Event's Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
-          },
-          "passed": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Battle Event's Caster}}"
-              },
-              "inherentTarget": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "ability": "Topaz_BE_UltraAttackDamage",
-              "isTrigger": true
-            }
-          ],
-          "failed": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Battle Event's Caster}}"
-              },
-              "inherentTarget": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "ability": "Topaz_BE_NormalAttackDamage",
-              "isTrigger": true
-            }
-          ]
-        }
-      ],
-      "onAbort": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Battle Event's Caster}}"
-                },
-                "flagName": "STAT_CTRL"
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Battle Event's Caster}}"
-                },
-                "flagName": "STAT_CTRL_Frozen"
-              }
-            ]
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "TopazNumby_Topaz_BE_FirstAttack": {
-      "fileName": "TopazNumby_Topaz_BE_FirstAttack",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Battle Event's Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
-          },
-          "passed": [
-            "Deleted bullshit",
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Battle Event's Caster}}"
-              },
-              "scope": "ContextCaster",
-              "variableName": "_damageStart",
-              "value": 1
-            }
-          ],
-          "failed": [
-            "Deleted bullshit",
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Battle Event's Caster}}"
-              },
-              "scope": "ContextCaster",
-              "variableName": "_damageStart",
-              "value": 1
-            }
-          ]
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "TopazNumby_Topaz_BE_RefreshEnhance": {
-      "fileName": "TopazNumby_Topaz_BE_RefreshEnhance",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TopazNumby_Topaz_BE_DelayLimbo": {
-      "fileName": "TopazNumby_Topaz_BE_DelayLimbo",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TopazNumby_Topaz_BE_DelayDeath": {
-      "fileName": "TopazNumby_Topaz_BE_DelayDeath",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Force Entity Death",
+          "name": "Action Advance/Delay",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ignoreHPLossTriggers": true,
-          "ignoreDeathTriggers": true
+          "advanceType": "Set",
+          "multiAdd": "(0 - 0.2)"
         }
       ],
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TopazNumby_Topaz_BE_PassiveAbility": {
-      "fileName": "TopazNumby_Topaz_BE_PassiveAbility",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1529971415\">Topaz_BETag</a>"
-        },
-        {
-          "name": "Set Action-State",
-          "on": null,
-          "stateName": "TopazBE",
-          "state": false
-        },
-        {
-          "name": "Set Action-State",
-          "on": null,
-          "stateName": "TopazBE"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1529971415\">Topaz_BETag</a>",
-          "modifierFlags": [
-            "BlockDamage",
-            "Stealth"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                "Mark Entity as Non-Target(Unselectable)"
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-182734853\">Topaz_BE_ReduceDelay</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Trigger Ability",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Battle Event's Caster}}"
-                      },
-                      "ability": "Topaz_Eidolon4_ReduceDelay"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target Count SUM",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Enemy Team All}}.[[living]]"
-                    },
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
-                    }
-                  },
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-93497222\">Topaz_BE_FindNoTargetFlag</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target Count SUM",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Enemy Team All}}.[[living]]"
-                    },
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Topaz_BE_LaterAttack",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}.[[living]]"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Has Modifier",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
-                            }
-                          }
-                        ]
-                      },
-                      "priorityTag": "STAGE_Character",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn End [Anyone]"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Put Into Limbo [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Owner]"
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Battle Event's Caster}}"
-                        },
-                        "flagName": "STAT_CTRL"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Battle Event's Caster}}"
-                        },
-                        "flagName": "STAT_CTRL_Frozen"
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Get Revived [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1965719686\">Topaz_Passive</a>"
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TopazNumby_Topaz_TechniqueInLevel": {
-      "fileName": "TopazNumby_Topaz_TechniqueInLevel",
-      "childAbilityList": [
-        "TopazNumby_Topaz_TechniqueInLevel"
-      ],
-      "skillTrigger": "SkillMaze",
-      "abilityType": "Technique",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"520958214\">Technique_Topaz_Modifier</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__285365186\">Topaz_Bonus</a>",
-          "stackType": "ReplaceByCaster"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__520958214\">Technique_Topaz_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Wave Count",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"285365186\">Topaz_Bonus</a>"
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
     },
     "TopazNumby_Topaz_PassiveAbility01": {
@@ -1460,9 +2761,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1780,9 +3079,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1816,15 +3113,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-182734853\">Topaz_BE_ReduceDelay</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-182734853\">Topaz_BE_ReduceDelay</a>"
         },
         {
           "name": "Modifier Construction",
@@ -1851,9 +3144,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1861,8 +3152,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1927,8 +3216,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1215069030\">Topaz_Ultimate_BPAbility_ModifyBEAction</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1976,8 +3263,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__633100540\">Topaz_Ultimate_Normal_ModifyBEAction</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -2033,8 +3318,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1586235241\">Topaz_BPAbility_ModifyBEAction</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -2069,8 +3352,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1158310225\">Topaz_Normal_ModifyBEAction</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -2121,6 +3402,39 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TopazNumby_Klara_Ability03_Part01": {
+      "fileName": "TopazNumby_Klara_Ability03_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Klara_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TopazNumby_Klara_Ability03_EnterReady": {
+      "fileName": "TopazNumby_Klara_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
       }
     },
     "TopazNumby_Topaz_Ability03_Part02": {
@@ -2926,7 +4240,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1891120358\">Topaz_Ability02_SpecialMarkAdder</a>",
-          "stackData": [],
           "latentQueue": [
             "_damageStart"
           ],
@@ -2946,6 +4259,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-934416652\">M_Topaz_BPAbility_AddRegardAsAttackType</a>",
+          "latentQueue": [
+            "_damageStart"
+          ],
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2988,12 +4305,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_damageStart"
-          ],
-          "duration": 1
+          ]
         }
       ],
       "targetObjectData": {
@@ -3110,6 +4422,7 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2051023932\">M_Topaz_Normal_AddRegardAsAttackType</a>",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3152,10 +4465,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "duration": 1
+          ]
         }
       ],
       "targetObjectData": {
@@ -3196,1268 +4506,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "TopazNumby_Topaz_Eidolon4_ReduceDelay": {
-      "fileName": "TopazNumby_Topaz_Eidolon4_ReduceDelay",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "advanceType": "Set",
-          "multiAdd": "(0 - 0.2)"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TopazNumby_Modifiers": {
-      "fileName": "TopazNumby_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1361568506\">Topaz_BE_UltraEnhance_ShowText</a>",
-          "stackType": "ReplaceByCaster",
-          "stackData": [
-            "ATKCount"
-          ],
-          "latentQueue": [
-            "_damageStart"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1350976023\">Topaz_BETargetTagActive</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "ListenBattleEventSkill",
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "ShowSpecialMarkOnCreate",
-                        "compareType": ">=",
-                        "value2": 1,
-                        "contextScope": "ContextModifier"
-                      },
-                      {
-                        "name": "Compare: Target Count SUM",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Player's Aim Target List}}"
-                        },
-                        "conditions": {
-                          "name": "Compare: Target",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "target2": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          }
-                        }
-                      },
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Compare: Target",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Current Action Owner}}"
-                            },
-                            "target2": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            }
-                          },
-                          {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Is Part Of Team",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Current Action Owner}}"
-                                },
-                                "team": "Player Team"
-                              },
-                              {
-                                "name": "Compare: Variable",
-                                "value1": "CurEnhance",
-                                "compareType": ">=",
-                                "value2": 1,
-                                "contextScope": "ContextCaster"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Toggle Skill Mark",
-                      "toggle": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "Toggle Skill Mark"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "Toggle Skill Mark"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Update Target Selected(UI) [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Target Count SUM",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Player's Aim Target List}}"
-                        },
-                        "conditions": {
-                          "name": "Compare: Target",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "target2": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          }
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Target",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Current Action Owner}}"
-                            },
-                            "target2": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            }
-                          },
-                          "passed": [
-                            {
-                              "name": "Toggle Skill Mark",
-                              "toggle": true,
-                              "skillTypesAllow": [
-                                "Basic ATK",
-                                "Ultimate"
-                              ]
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Toggle Skill Mark",
-                              "toggle": true
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Toggle Skill Mark"
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Compare: Target Count SUM",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Player's Aim Target List}}"
-                            },
-                            "conditions": {
-                              "name": "Compare: Target",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "target2": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              }
-                            }
-                          },
-                          {
-                            "name": "Compare: Target",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Current Action Owner}}"
-                            },
-                            "target2": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            }
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Trace Activated",
-                            "conditionList": "Overdraft"
-                          },
-                          "passed": [
-                            {
-                              "name": "Toggle Skill Mark",
-                              "toggle": true,
-                              "skillTypesAllow": [
-                                "Basic ATK",
-                                "Ultimate"
-                              ]
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Toggle Skill Mark"
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Toggle Skill Mark"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1982768595\">Topaz_BE_FiretakenRatio</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">FireVulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (TOPAZ_OBJECT_UNUSED_1) || RETURN",
-                    "displayLines": "TOPAZ_OBJECT_UNUSED_1",
-                    "constants": [],
-                    "variables": [
-                      "TOPAZ_OBJECT_UNUSED_1"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "duration": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1899526189\">Topaz_BE_HitEffect</a>",
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1524167625\">Topaz_BE_UltraEnhance_Text</a>",
-          "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
-          "type": "Buff",
-          "effectName": "DMG multiplier, CRIT DMG Boost",
-          "duration": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
-          "counter": 1,
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Numby}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1182113181\">BE_ExtraSpeedModifier</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 6
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Modifier Description",
-                      "popUpText": "Numby's DMG multiplier increases by <span class=\"descriptionNumberColor\">Skill03_P1_BEDamageRatio</span>, CRIT DMG increases by <span class=\"descriptionNumberColor\">Skill03_P2_CriticalChance</span>, and Fire RES PEN increases by <span class=\"descriptionNumberColor\">Rank06_P2_PenRatio</span>. When enemies with Proof of Debt receive attacks from allies' Basic ATK, Skill, or Ultimate, Numby's action is Advanced Forward by <span class=\"descriptionNumberColor\">Skill03_P3_DelayRatio</span>."
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "Skill03_P1_BEDamageRatio",
-            "Skill03_P2_CriticalChance",
-            "Skill03_P3_DelayRatio",
-            "Rank06_P2_PenRatio"
-          ],
-          "latentQueue": [],
-          "description": "Numby's DMG multiplier increases by <span class=\"descriptionNumberColor\">Skill03_P1_BEDamageRatio</span>, CRIT DMG increases by <span class=\"descriptionNumberColor\">Skill03_P2_CriticalChance</span>. When enemies with Proof of Debt receive attacks from allies' Basic ATK, Skill, or Ultimate, Numby's action is Advanced Forward by <span class=\"descriptionNumberColor\">Skill03_P3_DelayRatio</span>.",
-          "type": "Buff",
-          "statusName": "Windfall Bonanza!"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1213282515\">Topaz_BE_CriticalChance</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (0.25) || RETURN",
-                    "displayLines": "0.25",
-                    "constants": [],
-                    "variables": [
-                      0.25
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 6
-                  },
-                  "passed": [
-                    {
-                      "name": "Stack Target Stat Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFirePEN</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.1) || RETURN",
-                        "displayLines": "0.1",
-                        "constants": [],
-                        "variables": [
-                          0.1
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_damageStart"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1322510639\">Topaz_BETargetTag_CriticalDamageUp</a>[<span class=\"descriptionNumberColor\">Debtor</span>]",
-          "stackType": "ReplaceByCaster",
-          "description": "Increases CRIT DMG received from Follow-Up ATKs by <span class=\"descriptionNumberColor\">MDF_PropertyValue1_InsertCriticalDamageAddRatio</span>, stacking up to <span class=\"descriptionNumberColor\">MDF_PropertyValue2_InsertCriticalDamageAddMaxLayer</span> time(s).",
-          "type": "Debuff",
-          "effectName": "Debtor",
-          "statusName": "Debtor",
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-373546697\">Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn</a>",
-          "stackType": "Replace",
-          "stackData": [],
-          "latentQueue": [],
-          "duration": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-93497222\">Topaz_BE_FindNoTargetFlag</a>",
-          "stackType": "Replace",
-          "stackData": [],
-          "latentQueue": [],
-          "duration": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1346057059\">Topaz_BETargetTagInsertHitFlag</a>",
-          "stackType": "Replace",
-          "duration": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1594870654\">Topaz_BETargetTagHitFlag</a>",
-          "stackType": "Replace",
-          "duration": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
-          "modifierFlags": [
-            "RemoveWhenCasterDead",
-            "ListenBattleEventSkill"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All(with Unselectable)}}"
-                  },
-                  "searchRandom": true,
-                  "includeDyingTargets": true,
-                  "maxTargets": 10,
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "invertCondition": true
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1833842659\">Topaz_BETargetTag</a>[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1350976023\">Topaz_BETargetTagActive</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
-                  "value": {
-                    "operator": "Constants[0] (0) || RETURN",
-                    "displayLines": "0",
-                    "constants": [
-                      0
-                    ],
-                    "variables": []
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1350976023\">Topaz_BETargetTagActive</a>",
-                  "valuePerStack": {
-                    "ShowSpecialMarkOnCreate": {
-                      "operator": "Variables[0] (ShowSpecialMarkOnCreate) || RETURN",
-                      "displayLines": "ShowSpecialMarkOnCreate",
-                      "constants": [],
-                      "variables": [
-                        "ShowSpecialMarkOnCreate"
-                      ]
-                    }
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "ShowSpecialMarkOnCreate",
-                        "compareType": ">=",
-                        "value2": 1,
-                        "contextScope": "ContextModifier"
-                      },
-                      {
-                        "name": "Compare: Target Count SUM",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Player's Aim Target List}}"
-                        },
-                        "conditions": {
-                          "name": "Compare: Target",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "target2": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          }
-                        },
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Compare: Target",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Current Action Owner}}"
-                            },
-                            "target2": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            }
-                          },
-                          {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Is Part Of Team",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Current Action Owner}}"
-                                },
-                                "team": "Player Team"
-                              },
-                              {
-                                "name": "Compare: Variable",
-                                "value1": "CurEnhance",
-                                "compareType": ">=",
-                                "value2": 1,
-                                "contextScope": "ContextCaster"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "_isShowSpecialMark",
-                        "compareType": "<=",
-                        "value2": 0,
-                        "contextScope": "ContextModifier"
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "_isShowSpecialMark",
-                          "value": 1
-                        },
-                        {
-                          "name": "Toggle Skill Mark",
-                          "toggle": true
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1322510639\">Topaz_BETargetTag_CriticalDamageUp</a>[<span class=\"descriptionNumberColor\">Debtor</span>]"
-                },
-                {
-                  "name": "Toggle Skill Mark"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn End [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "_isShowSpecialMark",
-                    "compareType": ">=",
-                    "value2": 1,
-                    "contextScope": "ContextModifier"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_isShowSpecialMark",
-                      "value": 0
-                    },
-                    {
-                      "name": "Toggle Skill Mark"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Attack Type",
-                    "attackTypes": [
-                      "Follow-up"
-                    ],
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Defender",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                          "value": "MDF_PropertyValue1_DamageAdd"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Eidolon Activated",
-                        "eidolon": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Adjust Target Stats",
-                          "modifiedValuesArray": [
-                            {
-                              "on": "Attacker",
-                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                              "value": "(MDF_PropertyValue4_InsertCriticalDamageAddLayer * MDF_PropertyValue3_InsertCriticalDamageAddRatio)"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 1,
-                    "invertCondition": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
-                      "value": 0
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1322510639\">Topaz_BETargetTag_CriticalDamageUp</a>[<span class=\"descriptionNumberColor\">Debtor</span>]"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Attacked Start [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Attack Type",
-                        "attackTypes": [
-                          "Basic ATK",
-                          "Skill",
-                          "Ultimate"
-                        ],
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        }
-                      },
-                      {
-                        "name": "Is Part Of",
-                        "of": {
-                          "name": "Target Name",
-                          "target": "{{All Team Members}}.[[addBattleEvents]]"
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1594870654\">Topaz_BETargetTagHitFlag</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Attack Type",
-                    "attackTypes": [
-                      "Follow-up"
-                    ],
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Is Part Of",
-                        "of": {
-                          "name": "Target Name",
-                          "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1346057059\">Topaz_BETargetTagInsertHitFlag</a>"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Eidolon Activated",
-                        "eidolon": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
-                            "compareType": "<",
-                            "value2": {
-                              "operator": "Variables[0] (MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer) || RETURN",
-                              "displayLines": "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer"
-                              ]
-                            },
-                            "contextScope": "ContextModifier"
-                          },
-                          "passed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
-                              "value": {
-                                "operator": "Constants[0] (1) || Variables[0] (MDF_PropertyValue4_InsertCriticalDamageAddLayer) || ADD || RETURN",
-                                "displayLines": "(1 + MDF_PropertyValue4_InsertCriticalDamageAddLayer)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue4_InsertCriticalDamageAddLayer"
-                                ]
-                              }
-                            },
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1322510639\">Topaz_BETargetTag_CriticalDamageUp</a>[<span class=\"descriptionNumberColor\">Debtor</span>]",
-                              "valuePerStack": {
-                                "MDF_PropertyValue1_InsertCriticalDamageAddRatio": {
-                                  "operator": "Variables[0] (MDF_PropertyValue3_InsertCriticalDamageAddRatio) || RETURN",
-                                  "displayLines": "MDF_PropertyValue3_InsertCriticalDamageAddRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_PropertyValue3_InsertCriticalDamageAddRatio"
-                                  ]
-                                },
-                                "MDF_PropertyValue2_InsertCriticalDamageAddMaxLayer": {
-                                  "operator": "Variables[0] (MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer) || RETURN",
-                                  "displayLines": "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer"
-                                  ]
-                                }
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "_isShowSpecialMark",
-                    "compareType": ">=",
-                    "value2": 1,
-                    "contextScope": "ContextModifier"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_isShowSpecialMark",
-                      "value": 0
-                    },
-                    {
-                      "name": "Toggle Skill Mark"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "_isShowSpecialMark",
-                    "compareType": ">=",
-                    "value2": 1,
-                    "contextScope": "ContextModifier"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_isShowSpecialMark",
-                      "value": 0
-                    },
-                    {
-                      "name": "Toggle Skill Mark"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Update Target Selected(UI) [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Target Count SUM",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Player's Aim Target List}}"
-                        },
-                        "conditions": {
-                          "name": "Compare: Target",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "target2": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          }
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Toggle Skill Mark"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Target",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Current Action Owner}}"
-                            },
-                            "target2": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            }
-                          },
-                          "passed": [
-                            {
-                              "name": "Toggle Skill Mark",
-                              "toggle": true,
-                              "skillTypesAllow": [
-                                "Basic ATK",
-                                "Ultimate"
-                              ]
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Toggle Skill Mark",
-                              "toggle": true
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Current Action Owner}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Target Count SUM",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Player's Aim Target List}}"
-                            },
-                            "conditions": {
-                              "name": "Compare: Target",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "target2": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              }
-                            }
-                          },
-                          "passed": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Trace Activated",
-                                "conditionList": "Overdraft"
-                              },
-                              "passed": [
-                                {
-                                  "name": "Toggle Skill Mark"
-                                }
-                              ],
-                              "failed": [
-                                {
-                                  "name": "Toggle Skill Mark",
-                                  "toggle": true,
-                                  "skillTypesAllow": [
-                                    "Basic ATK"
-                                  ]
-                                }
-                              ]
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Toggle Skill Mark",
-                              "toggle": true,
-                              "skillTypesAllow": [
-                                "Basic ATK"
-                              ]
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Toggle Skill Mark"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Active Ability Chosen [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        }
-                      },
-                      {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Is Part Of Team",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "team": "Player Team"
-                          },
-                          {
-                            "name": "Compare: Variable",
-                            "value1": "CurEnhance",
-                            "compareType": ">=",
-                            "value2": 1,
-                            "contextScope": "ContextCaster"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "_isShowSpecialMark",
-                        "compareType": "<=",
-                        "value2": 0,
-                        "contextScope": "ContextModifier"
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable (VFX)",
-                          "variableName": "_isShowSpecialMark",
-                          "value": 1
-                        },
-                        {
-                          "name": "Toggle Skill Mark",
-                          "toggle": true
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable (VFX)",
-                      "variableName": "_isShowSpecialMark",
-                      "value": 0
-                    },
-                    {
-                      "name": "Toggle Skill Mark"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue1_DamageAdd",
-            "MDF_PropertyValue3_InsertCriticalDamageAddRatio",
-            "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
-            "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer"
-          ],
-          "latentQueue": [
-            "_damageStart"
-          ],
-          "description": "Increases Follow-Up ATK DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue1_DamageAdd</span>. Numby will target this unit as its attack target.",
-          "type": "Debuff",
-          "effectName": "Proof of Debt",
-          "statusName": "Proof of Debt"
-        }
-      ],
-      "references": []
     },
     "TopazNumby_BE_BattleEvents": {
       "fileName": "TopazNumby_BE_BattleEvents",

@@ -34,6 +34,11 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1313207201\">LC_23022_Sub</a>[<span class=\"descriptionNumberColor\">Prophet</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue1</span> and DoT dealt ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> of the target's DEF, stacking up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Prophet",
+      "stackLimit": 4,
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -89,12 +94,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue1</span> and DoT dealt ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> of the target's DEF, stacking up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Prophet",
-      "stackLimit": 4
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -461,9 +461,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

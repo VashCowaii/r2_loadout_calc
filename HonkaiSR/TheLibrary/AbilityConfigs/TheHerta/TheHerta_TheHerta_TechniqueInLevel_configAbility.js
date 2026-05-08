@@ -26,6 +26,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__127317606\">TheHerta_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Vibe Checker</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Vibe Checker",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -48,11 +52,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Vibe Checker"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -101,9 +101,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

@@ -12,6 +12,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1400833329\">BattleEventAbilityNewBoxingClub_HPExchangeDamage_DamageUpModifier</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>, up to 8 stacks.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "ATK Boost",
+      "duration": 2,
+      "stackLimit": 8,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -45,19 +52,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>, up to 8 stacks.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "ATK Boost",
-      "duration": 2,
-      "stackLimit": 8,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-6604732\">BattleEventAbilityNewBoxingClub_Sp_CritDamageUpModifier</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CritDamageUpRatio</span>, up to 10 stacks.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "CRIT DMG Boost",
+      "duration": 2,
+      "stackLimit": 10,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -91,19 +98,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CritDamageUpRatio</span>, up to 10 stacks.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "CRIT DMG Boost",
-      "duration": 2,
-      "stackLimit": 10,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1214810651\">BattleEventAbilityNewBoxingClub_Sp_CritUpModifier</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CritChanceUpRatio</span>, up to 10 stacks.",
+      "type": "Buff",
+      "effectName": "CRIT Rate Boost",
+      "statusName": "CRIT Rate Boost",
+      "duration": 2,
+      "stackLimit": 10,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -137,14 +144,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CritChanceUpRatio</span>, up to 10 stacks.",
-      "type": "Buff",
-      "effectName": "CRIT Rate Boost",
-      "statusName": "CRIT Rate Boost",
-      "duration": 2,
-      "stackLimit": 10,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -317,9 +317,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -533,9 +531,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1114,9 +1110,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1197,14 +1191,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1096271358\">BattleEventAbilityNewBoxingClub_ModifyBPCost_AddCritDamageModifier</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CritDamage</span>, up to 2 stacks.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "CRIT DMG Boost",
+      "stackLimit": 2,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1238,20 +1236,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CritDamage</span>, up to 2 stacks.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "CRIT DMG Boost",
-      "stackLimit": 2,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2035389673\">BattleEventAbilityNewBoxingClub_ModifyBPCost_AddCritModifier</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CritChance</span>, up to 2 stacks.",
+      "type": "Buff",
+      "effectName": "CRIT Rate Boost",
+      "statusName": "CRIT Rate Boost",
+      "stackLimit": 2,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1285,15 +1281,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Each stack increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CritChance</span>, up to 2 stacks.",
-      "type": "Buff",
-      "effectName": "CRIT Rate Boost",
-      "statusName": "CRIT Rate Boost",
-      "stackLimit": 2,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1318,14 +1306,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1115036386\">BattleEventAbilityNewBoxingClub_StanceBreakStateSP_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases DMG received by <span class=\"descriptionNumberColor\">DamageTakenUpValue</span>, up to 5 stacks.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Vulnerability",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1364,12 +1355,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases DMG received by <span class=\"descriptionNumberColor\">DamageTakenUpValue</span>, up to 5 stacks.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Vulnerability",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1412,9 +1398,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1506,14 +1490,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1894271172\">BattleEventAbilityNewBoxingClub_BPSpeedUp_UltraDamageUp</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Boost</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases DMG dealt by the next Ultimate by <span class=\"descriptionNumberColor\">UltraDamageUp</span>, up to 3 stacks.",
+      "type": "Buff",
+      "effectName": "Ultimate DMG Boost",
+      "statusName": "Ultimate DMG Boost",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1576,16 +1563,26 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases DMG dealt by the next Ultimate by <span class=\"descriptionNumberColor\">UltraDamageUp</span>, up to 3 stacks.",
-      "type": "Buff",
-      "effectName": "Ultimate DMG Boost",
-      "statusName": "Ultimate DMG Boost",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1016177797\">BattleEventAbilityNewBoxingClub_BPSpeedUp</a>",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
+        "skillType": [
+          "Skill"
+        ],
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": "0(Set AV)"
+        }
+      },
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -1624,29 +1621,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "target": {
-          "name": "Target Name",
-          "target": "{{Modifier Holder}}"
-        },
-        "skillType": [
-          "Skill"
-        ],
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": "0(Set AV)"
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1113757560\">BattleEventAbilityNewBoxingClub_AllStanceBreakState_DamageTakenUP</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases DMG received by <span class=\"descriptionNumberColor\">DamageTakenUpValue</span>, up to 12 stacks.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Vulnerability",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1685,12 +1670,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases DMG received by <span class=\"descriptionNumberColor\">DamageTakenUpValue</span>, up to 12 stacks.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Vulnerability",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2637,9 +2617,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2698,9 +2676,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2750,9 +2726,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

@@ -5,11 +5,18 @@ const compositeAbilityObject = {
   "summonName": "Mem",
   "trimSummonName": "Mem",
   "abilityList": [
+    "TrailblazerRemembrance_Modifiers",
+    "TrailblazerRemembrance_PlayerBoy_30_Trace01",
     "TrailblazerRemembrance_PlayerBoy_30_Eidolon4",
     "TrailblazerRemembrance_PlayerBoy_30_Eidolon2",
-    "TrailblazerRemembrance_PlayerBoy_30_Trace01",
+    "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_BeforeBattleDebuffListener",
+    "TrailblazerRemembrance_LocalPlayer_StandardAbility_AttackBreak",
+    "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_TechniqueUsage",
+    "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_NormalAtk01",
     "TrailblazerRemembrance_PlayerBoy_30_TechniqueInLevel",
     "TrailblazerRemembrance_PlayerBoy_30_PassiveAbility01",
+    "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02",
+    "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01",
     "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part02_Charge",
     "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part02",
     "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part01",
@@ -18,26 +25,587 @@ const compositeAbilityObject = {
     "TrailblazerRemembrance_PlayerBoy_30_Ability21_Part01",
     "TrailblazerRemembrance_PlayerBoy_30_Ability02_Part02",
     "TrailblazerRemembrance_PlayerBoy_30_Ability02_Part01",
-    "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02",
-    "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01",
     "TrailblazerRemembrance_PlayerBoy_30_Ability01_Part02",
     "TrailblazerRemembrance_PlayerBoy_30_Ability01_Part01",
-    "TrailblazerRemembrance_Modifiers",
     "TrailblazerRemembrance_Functions",
+    "Mem_Modifiers",
     "Mem_Servant_PlayerBoyServant_30_DeathRattle",
     "Mem_Servant_PlayerBoyServant_30_BattleCry",
-    "Mem_Servant_PlayerBoyServant_30_PassiveAbility01",
+    "Mem_Servant_PlayerBoyServant_30_Ability11_Together",
     "Mem_Servant_PlayerBoyServant_30_Ability03_Part02",
+    "Mem_Servant_PlayerBoyServant_30_PassiveAbility01",
     "Mem_Servant_PlayerBoyServant_30_Ability11_Part02",
     "Mem_Servant_PlayerBoyServant_30_Ability11_Part01",
     "Mem_Servant_PlayerBoyServant_30_Ability11_Entry",
-    "Mem_Servant_PlayerBoyServant_30_Ability11_Together",
     "Mem_Servant_PlayerBoyServant_30_Ability01_Part02",
     "Mem_Servant_PlayerBoyServant_30_Ability01_Part01",
-    "Mem_Modifiers",
     "Mem_Functions"
   ],
   "abilityObject": {
+    "TrailblazerRemembrance_Modifiers": {
+      "fileName": "TrailblazerRemembrance_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1221389813\">ADV_StageAbility_PlayerBoy_30_BeforeBattleDebuffListener</a>",
+          "onBattlePrep": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
+              },
+              "modifier": null,
+              "ID": "800701(SkillMaze)",
+              "counter": 1,
+              "duration": {
+                "operator": "Variables[0] (10) || RETURN",
+                "displayLines": "10",
+                "constants": [],
+                "variables": [
+                  10
+                ]
+              },
+              "conditions": {
+                "name": "Has Flag",
+                "flagName": "TimeLock"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1657383963\">ADV_StageAbility_Maze_PlayerBoy_30</a>",
+          "counter": 1,
+          "stackType": "Merge",
+          "modifierFlags": [
+            "TimeLock"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-915997562\">PlayerBoy_30_UltraState_Sub</a>",
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
+            "casterFilter": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
+          },
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "abilityName": "Skill01",
+                  "skillSlot": "Basic ATK"
+                },
+                {
+                  "name": "Update Ability Enhance Button",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "display": "Hide",
+                  "abilityName": "Basic ATK"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "abilityName": "Skill11",
+                  "skillSlot": "Basic ATK"
+                },
+                {
+                  "name": "Update Ability Enhance Button",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "display": "Show",
+                  "abilityName": "Basic ATK"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "When Mem is on the field, Basic ATK is enhanced to \"Together, We Script Tomorrow!\"",
+          "type": "Other",
+          "effectName": "Epic",
+          "statusName": "Epic",
+          "stackLimit": 2,
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": null,
+                    "compareType": "<=",
+                    "value2": 0,
+                    "valueType": "Layer"
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Target Count",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster's Memosprite}}"
+                        },
+                        "compareType": ">",
+                        "value2": 0,
+                        "livingTargets": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target Count",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Memosprite}}"
+                    },
+                    "compareType": ">",
+                    "value2": 0,
+                    "livingTargets": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target Count",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Memosprite}}"
+                    },
+                    "compareType": ">",
+                    "value2": 0,
+                    "livingTargets": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier is Added [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "flagName": "Charm"
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "flagName": "Charm",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Compare: Target Count",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster's Memosprite}}"
+                        },
+                        "compareType": ">",
+                        "value2": 0,
+                        "livingTargets": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__409195494\">M_PlayerBoy_30_CreateServantPreshow</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "entityType": "Servant",
+            "skillType": [
+              "Skill",
+              "Ultimate"
+            ],
+            "conditions": {
+              "name": "Compare: Target Count",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
+              "compareType": "<=",
+              "value2": 0,
+              "livingTargets": true
+            }
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1937701279\">PlayerBoy_30_Halo_ListenSPChange</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Energy Change",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Changes to Stats",
+                  "variableName": "_spDelta"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "_spDelta",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Target Count",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster's Memosprite}}"
+                        },
+                        "compareType": ">=",
+                        "value2": 1,
+                        "livingTargets": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "_tmpTeamAddSP",
+                          "value": {
+                            "operator": "Variables[0] (TeamAddSP) || RETURN",
+                            "displayLines": "TeamAddSP",
+                            "constants": [],
+                            "variables": [
+                              "TeamAddSP"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Define Custom Variable with Added Value",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "variableName": "_tmpTeamAddSP",
+                          "context": "ContextModifier",
+                          "value": {
+                            "operator": "Variables[0] (_spDelta) || RETURN",
+                            "displayLines": "_spDelta",
+                            "constants": [],
+                            "variables": [
+                              "_spDelta"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Define Custom Variable with Clamp Configuration",
+                          "context": "ContextModifier",
+                          "ignoreBelow": 0.00010000006,
+                          "variableName": "_tmpTeamAddSP"
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "TeamAddSP",
+                          "value": {
+                            "operator": "Variables[0] (_tmpTeamAddSP) || RETURN",
+                            "displayLines": "_tmpTeamAddSP",
+                            "constants": [],
+                            "variables": [
+                              "_tmpTeamAddSP"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "TrailblazerRemembrance_PlayerBoy_30_Trace01": {
+      "fileName": "TrailblazerRemembrance_PlayerBoy_30_Trace01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1430938835\">M_PlayerBoy_30_Trace01</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"894703898\">M_PlayerBoy_30_Trace01_ListenFirstSummon</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__894703898\">M_PlayerBoy_30_Trace01_ListenFirstSummon</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Character ID",
+                        "ID": "ServantID",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "characterName": null
+                      },
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}.[[getMemosprite]]"
+                        }
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Added Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}.[[getMemosprite]]"
+                      },
+                      "variableName": "CurEnergy",
+                      "context": "TargetEntity",
+                      "value": {
+                        "operator": "Variables[0] (0.4) || Constants[0] (100) || MUL || RETURN",
+                        "displayLines": "(0.4 * 100)",
+                        "constants": [
+                          100
+                        ],
+                        "variables": [
+                          0.4
+                        ]
+                      }
+                    },
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1430938835\">M_PlayerBoy_30_Trace01</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Wave Count",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Action Advance/Delay",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "advanceType": "Set",
+                      "multiAdd": "(0 - 0.3)"
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "TrailblazerRemembrance_PlayerBoy_30_Eidolon4": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Eidolon4",
       "abilityType": null,
@@ -127,9 +695,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -159,6 +725,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RetainCountZero"
           ],
+          "description": "When ally memosprites (aside from Mem) take action, Trailblazer regenerates <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> Energy. This effect can trigger <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s).",
+          "type": "Other",
+          "statusName": "Gleaner of the Past",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -207,10 +776,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When ally memosprites (aside from Mem) take action, Trailblazer regenerates <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> Energy. This effect can trigger <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s).",
-          "type": "Other",
-          "statusName": "Gleaner of the Past"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -409,19 +975,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "TrailblazerRemembrance_PlayerBoy_30_Trace01": {
-      "fileName": "TrailblazerRemembrance_PlayerBoy_30_Trace01",
-      "abilityType": null,
-      "energy": null,
+    "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_BeforeBattleDebuffListener": {
+      "fileName": "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_BeforeBattleDebuffListener",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
       "toughnessList": null,
       "parse": [
         {
@@ -430,7 +994,31 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1430938835\">M_PlayerBoy_30_Trace01</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"1221389813\">ADV_StageAbility_PlayerBoy_30_BeforeBattleDebuffListener</a>",
+          "counter": -1
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerRemembrance_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "TrailblazerRemembrance_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -438,110 +1026,241 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"894703898\">M_PlayerBoy_30_Trace01_ListenFirstSummon</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__894703898\">M_PlayerBoy_30_Trace01_ListenFirstSummon</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Character ID",
-                        "ID": "ServantID",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": null
-                      },
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}.[[getMemosprite]]"
-                        }
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}.[[getMemosprite]]"
-                      },
-                      "variableName": "CurEnergy",
-                      "context": "TargetEntity",
-                      "value": {
-                        "operator": "Variables[0] (0.4) || Constants[0] (100) || MUL || RETURN",
-                        "displayLines": "(0.4 * 100)",
-                        "constants": [
-                          100
-                        ],
-                        "variables": [
-                          0.4
-                        ]
-                      }
-                    },
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
         },
         {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1430938835\">M_PlayerBoy_30_Trace01</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Wave Count",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "advanceType": "Set",
-                      "multiAdd": "(0 - 0.3)"
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
         }
       ],
+      "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_TechniqueUsage": {
+      "fileName": "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 80071
+        },
+        "Deleted bullshit"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_NormalAtk01": {
+      "fileName": "TrailblazerRemembrance_LocalPlayer_PlayerBoy_30_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Shot Fired",
+          "execute": [
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ],
+          "projectileFinished": [
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "TrailblazerRemembrance_PlayerBoy_30_TechniqueInLevel": {
@@ -616,9 +1335,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -647,9 +1364,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -939,9 +1654,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -949,6 +1662,161 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02": {
+      "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
+          "addStacksPerTrigger": -1,
+          "silentAdd": true
+        },
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Memosprite}}"
+          },
+          "toRemove": [
+            "STAT_CTRL"
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] (1.2) || RETURN",
+              "displayLines": "1.2",
+              "constants": [],
+              "variables": [
+                1.2
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (2) || DIV || RETURN",
+              "displayLines": "(AOE Toughness Value / 2)",
+              "constants": [
+                2
+              ],
+              "variables": [
+                "AOE Toughness Value"
+              ]
+            },
+            "Tags": [
+              "Joint-Attack"
+            ],
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "Trigger: Attack End",
+          "skipDeathSettle": true
+        },
+        {
+          "name": "Define Custom Variable with Added Value",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}.[[getMemosprite]]"
+          },
+          "variableName": "CurEnergy",
+          "context": "TargetEntity",
+          "value": {
+            "operator": "Variables[0] (0.1) || Constants[0] (100) || MUL || RETURN",
+            "displayLines": "(0.1 * 100)",
+            "constants": [
+              100
+            ],
+            "variables": [
+              0.1
+            ]
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01": {
+      "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01",
+      "childAbilityList": [
+        "TrailblazerRemembrance_PlayerBoy_30_Ability11_Camera",
+        "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01",
+        "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02"
+      ],
+      "skillTrigger": "Skill11",
+      "abilityType": "Basic ATK",
+      "energy": 30,
+      "toughnessList": [
+        0,
+        10,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Define Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}.[[getMemosprite]]"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Skill11_Stance",
+          "value": {
+            "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (2) || DIV || RETURN",
+            "displayLines": "(AOE Toughness Value / 2)",
+            "constants": [
+              2
+            ],
+            "variables": [
+              "AOE Toughness Value"
+            ]
+          }
+        },
+        {
+          "name": "Trigger Joint-Attack Ability",
+          "abilityList": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "ability": "PlayerBoy_30_Ability11_Part02"
+            },
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
+              "ability": "Servant_PlayerBoyServant_30_Ability11_Together"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part02_Charge": {
@@ -1256,161 +2124,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02": {
-      "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
-          "addStacksPerTrigger": -1,
-          "silentAdd": true
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Memosprite}}"
-          },
-          "toRemove": [
-            "STAT_CTRL"
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (1.2) || RETURN",
-              "displayLines": "1.2",
-              "constants": [],
-              "variables": [
-                1.2
-              ]
-            },
-            "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (2) || DIV || RETURN",
-              "displayLines": "(AOE Toughness Value / 2)",
-              "constants": [
-                2
-              ],
-              "variables": [
-                "AOE Toughness Value"
-              ]
-            },
-            "Tags": [
-              "Joint-Attack"
-            ],
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Trigger: Attack End",
-          "skipDeathSettle": true
-        },
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}.[[getMemosprite]]"
-          },
-          "variableName": "CurEnergy",
-          "context": "TargetEntity",
-          "value": {
-            "operator": "Variables[0] (0.1) || Constants[0] (100) || MUL || RETURN",
-            "displayLines": "(0.1 * 100)",
-            "constants": [
-              100
-            ],
-            "variables": [
-              0.1
-            ]
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01": {
-      "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01",
-      "childAbilityList": [
-        "TrailblazerRemembrance_PlayerBoy_30_Ability11_Camera",
-        "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01",
-        "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02"
-      ],
-      "skillTrigger": "Skill11",
-      "abilityType": "Basic ATK",
-      "energy": 30,
-      "toughnessList": [
-        0,
-        10,
-        0
-      ],
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}.[[getMemosprite]]"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Skill11_Stance",
-          "value": {
-            "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (2) || DIV || RETURN",
-            "displayLines": "(AOE Toughness Value / 2)",
-            "constants": [
-              2
-            ],
-            "variables": [
-              "AOE Toughness Value"
-            ]
-          }
-        },
-        {
-          "name": "Trigger Joint-Attack Ability",
-          "abilityList": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "ability": "PlayerBoy_30_Ability11_Part02"
-            },
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster's Memosprite}}"
-              },
-              "ability": "Servant_PlayerBoyServant_30_Ability11_Together"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
     "TrailblazerRemembrance_PlayerBoy_30_Ability01_Part02": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability01_Part02",
       "abilityType": null,
@@ -1494,419 +2207,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       }
     },
-    "TrailblazerRemembrance_Modifiers": {
-      "fileName": "TrailblazerRemembrance_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-915997562\">PlayerBoy_30_UltraState_Sub</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "abilityName": "Skill01",
-                  "skillSlot": "Basic ATK"
-                },
-                {
-                  "name": "Update Ability Enhance Button",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "display": "Hide",
-                  "abilityName": "Basic ATK"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "abilityName": "Skill11",
-                  "skillSlot": "Basic ATK"
-                },
-                {
-                  "name": "Update Ability Enhance Button",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "display": "Show",
-                  "abilityName": "Basic ATK"
-                }
-              ]
-            }
-          ],
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
-            "casterFilter": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1976946957\">PlayerBoy_30_UltraState</a>[<span class=\"descriptionNumberColor\">Epic</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": null,
-                    "compareType": "<=",
-                    "value2": 0,
-                    "valueType": "Layer"
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Target Count",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster's Memosprite}}"
-                        },
-                        "compareType": ">",
-                        "value2": 0,
-                        "livingTargets": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target Count",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster's Memosprite}}"
-                    },
-                    "compareType": ">",
-                    "value2": 0,
-                    "livingTargets": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target Count",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster's Memosprite}}"
-                    },
-                    "compareType": ">",
-                    "value2": 0,
-                    "livingTargets": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "flagName": "Charm"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "Charm",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Compare: Target Count",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster's Memosprite}}"
-                        },
-                        "compareType": ">",
-                        "value2": 0,
-                        "livingTargets": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-915997562\">PlayerBoy_30_UltraState_Sub</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When Mem is on the field, Basic ATK is enhanced to \"Together, We Script Tomorrow!\"",
-          "type": "Other",
-          "effectName": "Epic",
-          "statusName": "Epic",
-          "stackLimit": 2,
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__409195494\">M_PlayerBoy_30_CreateServantPreshow</a>",
-          "stackData": [
-            "ServantID"
-          ],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "entityType": "Servant",
-            "skillType": [
-              "Skill",
-              "Ultimate"
-            ],
-            "conditions": {
-              "name": "Compare: Target Count",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Memosprite}}"
-              },
-              "compareType": "<=",
-              "value2": 0,
-              "livingTargets": true
-            }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1937701279\">PlayerBoy_30_Halo_ListenSPChange</a>",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Energy Change",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Changes to Stats",
-                  "variableName": "_spDelta"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "_spDelta",
-                    "compareType": ">",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Target Count",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster's Memosprite}}"
-                        },
-                        "compareType": ">=",
-                        "value2": 1,
-                        "livingTargets": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "_tmpTeamAddSP",
-                          "value": {
-                            "operator": "Variables[0] (TeamAddSP) || RETURN",
-                            "displayLines": "TeamAddSP",
-                            "constants": [],
-                            "variables": [
-                              "TeamAddSP"
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Define Custom Variable with Added Value",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "variableName": "_tmpTeamAddSP",
-                          "context": "ContextModifier",
-                          "value": {
-                            "operator": "Variables[0] (_spDelta) || RETURN",
-                            "displayLines": "_spDelta",
-                            "constants": [],
-                            "variables": [
-                              "_spDelta"
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Define Custom Variable with Clamp Configuration",
-                          "context": "ContextModifier",
-                          "ignoreBelow": 0.00010000006,
-                          "variableName": "_tmpTeamAddSP"
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "TeamAddSP",
-                          "value": {
-                            "operator": "Variables[0] (_tmpTeamAddSP) || RETURN",
-                            "displayLines": "_tmpTeamAddSP",
-                            "constants": [],
-                            "variables": [
-                              "_tmpTeamAddSP"
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "references": []
-    },
     "TrailblazerRemembrance_Functions": {
       "fileName": "TrailblazerRemembrance_Functions",
       "abilityType": "Char. Functions",
@@ -1988,1308 +2288,6 @@ const compositeAbilityObject = {
       ],
       "references": []
     },
-    "Mem_Servant_PlayerBoyServant_30_DeathRattle": {
-      "fileName": "Mem_Servant_PlayerBoyServant_30_DeathRattle",
-      "childAbilityList": [
-        "Mem_Servant_PlayerBoyServant_30_DeathRattle"
-      ],
-      "skillTrigger": "SkillP04",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1143439505\">Memosprite_PlayerBoyServant_30_DeathRattle</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1143439505\">Memosprite_PlayerBoyServant_30_DeathRattle</a>",
-          "modifierFlags": [
-            "Deathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Was Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Action Advance/Delay",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}.[[getSummoner]]"
-                  },
-                  "advanceType": "Set",
-                  "multiAdd": "(0 - 0.25)"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Mem_Servant_PlayerBoyServant_30_BattleCry": {
-      "fileName": "Mem_Servant_PlayerBoyServant_30_BattleCry",
-      "childAbilityList": [
-        "Mem_Servant_PlayerBoyServant_30_BattleCry"
-      ],
-      "skillTrigger": "SkillP03",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1428217171\">Memosprite_PlayerBoyServant_30_BattleCry</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1428217171\">Memosprite_PlayerBoyServant_30_BattleCry</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "CurEnergy",
-                  "value": {
-                    "operator": "Variables[0] (0.5) || Constants[0] (100) || MUL || RETURN",
-                    "displayLines": "(0.5 * 100)",
-                    "constants": [
-                      100
-                    ],
-                    "variables": [
-                      0.5
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Mem_Servant_PlayerBoyServant_30_PassiveAbility01": {
-      "fileName": "Mem_Servant_PlayerBoyServant_30_PassiveAbility01",
-      "childAbilityList": [
-        "Mem_Servant_PlayerBoyServant_30_PassiveAbility01",
-        "Mem_Servant_PlayerBoyServant_30_Ability03_Part02",
-        "Mem_Servant_PlayerBoyServant_30_Ability11_Together"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-4188752\">Memosprite_PlayerBoyServant_30_Passive</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1883418109\">Memosprite_PlayerBoyServant_30_Passive_Performance</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1274980234\">PlayerBoy_30_TeamSP</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
-          "counter": {
-            "operator": "Variables[0] (CurEnergy) || RETURN",
-            "displayLines": "CurEnergy",
-            "constants": [],
-            "variables": [
-              "CurEnergy"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_Max": 1
-          }
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": {
-            "operator": "Variables[0] (CurEnergy) || RETURN",
-            "displayLines": "CurEnergy",
-            "constants": [],
-            "variables": [
-              "CurEnergy"
-            ]
-          },
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}.[[getSummoner]]"
-          },
-          "maximum": {
-            "operator": "Variables[0] (MDF_Max) || RETURN",
-            "displayLines": "MDF_Max",
-            "constants": [],
-            "variables": [
-              "MDF_Max"
-            ]
-          },
-          "assignState": "True",
-          "bar#": "Progress"
-        },
-        {
-          "name": "Force Target-Lock on Target",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "enable": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"585085986\">Memosprite_PlayerBoyServant_30_Eidolon1</a>",
-              "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
-            }
-          ]
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__145969573\">M_PlayerBoyServant_30_BreakFlag</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn End [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "flagName": "Break",
-                    "invertCondition": true
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1883418109\">Memosprite_PlayerBoyServant_30_Passive_Performance</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "Action Phase Start [Anyone][?]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}.[[getSummoner]]"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Target Count SUM",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-                        },
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"145969573\">M_PlayerBoyServant_30_BreakFlag</a>"
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Leave Battle"
-            },
-            {
-              "eventTrigger": "Caused Weakness Break [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"145969573\">M_PlayerBoyServant_30_BreakFlag</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_CTRL"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "DisableAction"
-                      }
-                    ],
-                    "invertCondition": true
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking Modifier Instance [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_CTRL"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "DisableAction"
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-4188752\">Memosprite_PlayerBoyServant_30_Passive</a>",
-          "execute": [
-            {
-              "eventTrigger": "Pre-Death [Owner]",
-              "execute": [
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": 0,
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}.[[getSummoner]]"
-                  },
-                  "maximum": {
-                    "operator": "Variables[0] (MDF_Max) || RETURN",
-                    "displayLines": "MDF_Max",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Max"
-                    ]
-                  },
-                  "assignState": "False",
-                  "bar#": "Progress"
-                }
-              ]
-            }
-          ],
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "CurEnergy",
-              "from": "ContextOwner",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "CurEnergy",
-                        "compareType": ">",
-                        "value2": {
-                          "operator": "Variables[0] (MDF_Max) || RETURN",
-                          "displayLines": "MDF_Max",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Max"
-                          ]
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "CurEnergy",
-                          "value": {
-                            "operator": "Variables[0] (MDF_Max) || RETURN",
-                            "displayLines": "MDF_Max",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Max"
-                            ]
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "CurEnergy",
-                        "compareType": "=",
-                        "value2": {
-                          "operator": "Variables[0] (MDF_Max) || RETURN",
-                          "displayLines": "MDF_Max",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Max"
-                          ]
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Current Turn Is",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                }
-                              },
-                              {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"2058264520\">M_PlayerBoyServant_30_EnableAbility</a>",
-                                "invertCondition": true
-                              }
-                            ]
-                          },
-                          "passed": [
-                            {
-                              "name": "Assign Advance/Delay to Current Ability Use",
-                              "adjustmentValue": 0,
-                              "adjustmentType": "="
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Action Advance/Delay",
-                          "advanceType": "Set",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "set": 0
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"2058264520\">M_PlayerBoyServant_30_EnableAbility</a>"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Define Modifier Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifierName": "<a class=\"gModGreen\" id=\"-1274980234\">PlayerBoy_30_TeamSP</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
-                      "value": {
-                        "operator": "Variables[0] (CurEnergy) || RETURN",
-                        "displayLines": "CurEnergy",
-                        "constants": [],
-                        "variables": [
-                          "CurEnergy"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (CurEnergy) || RETURN",
-                        "displayLines": "CurEnergy",
-                        "constants": [],
-                        "variables": [
-                          "CurEnergy"
-                        ]
-                      },
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}.[[getSummoner]]"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members with Unselectables}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1895406948\">Memosprite_PlayerBoyServant_30_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
-                      "valuePerStack": {
-                        "MDF_PropertyConvert": {
-                          "operator": "Variables[0] (0.12) || RETURN",
-                          "displayLines": "0.12",
-                          "constants": [],
-                          "variables": [
-                            0.12
-                          ]
-                        },
-                        "MDF_PropertyBase": {
-                          "operator": "Variables[0] (0.24) || RETURN",
-                          "displayLines": "0.24",
-                          "constants": [],
-                          "variables": [
-                            0.24
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectables}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1895406948\">Memosprite_PlayerBoyServant_30_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_PropertyConvert": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
-                },
-                "MDF_PropertyBase": {
-                  "operator": "Variables[0] (0.24) || RETURN",
-                  "displayLines": "0.24",
-                  "constants": [],
-                  "variables": [
-                    0.24
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Mem_Servant_PlayerBoyServant_30_Ability03_Part02": {
-      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}.[[getSummoner]]"
-          },
-          "ability": "PlayerBoy_30_Ability03_Part02_Charge",
-          "isTrigger": true
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (Ability03_P1_DamagePercentage) || RETURN",
-              "displayLines": "Ability03_P1_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Ability03_P1_DamagePercentage"
-              ]
-            },
-            "Toughness": {
-              "operator": "Variables[0] (Ultra_Stance) || RETURN",
-              "displayLines": "Ultra_Stance",
-              "constants": [],
-              "variables": [
-                "Ultra_Stance"
-              ]
-            },
-            "ToughnessDMGType": {
-              "DamageType": "Ice"
-            },
-            "instanceTag": "PlayerBoy_30_Ultra",
-            "Tags": null,
-            "attackType": "Ultimate"
-          },
-          "attackType": "Ultimate"
-        },
-        "Trigger: Attack End",
-        "Trigger: Skip Death Handling"
-      ],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 6
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"164475936\">M_PlayerBoyServant_30_Eidolon6</a>"
-            }
-          ]
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__164475936\">M_PlayerBoyServant_30_Eidolon6</a>",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Attack Type",
-                        "attackTypes": [
-                          "Ultimate"
-                        ]
-                      },
-                      {
-                        "name": "Has DMG Instance Tag",
-                        "tag": "PlayerBoy_30_Ultra"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateFIXED</span>&nbsp;",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Mem_Servant_PlayerBoyServant_30_Ability11_Part02": {
-      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability11_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "CurEnergy",
-          "value": 0
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2058264520\">M_PlayerBoyServant_30_EnableAbility</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "target2": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "advanceType": "Set",
-              "multiAdd": "(0 - 1)"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
-          "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
-          },
-          "valuePerStack": {
-            "MDF_PropertyRatio": {
-              "operator": "Variables[0] (0.1) || RETURN",
-              "displayLines": "0.1",
-              "constants": [],
-              "variables": [
-                0.1
-              ]
-            },
-            "MDF_BasicDamagePercentage": {
-              "operator": "Variables[0] (0.28) || RETURN",
-              "displayLines": "0.28",
-              "constants": [],
-              "variables": [
-                0.28
-              ]
-            },
-            "MDF_PointB3_P1_Basic": {
-              "operator": "Variables[0] (100) || RETURN",
-              "displayLines": "100",
-              "constants": [],
-              "variables": [
-                100
-              ]
-            },
-            "MDF_PointB3_P2_Delta": {
-              "operator": "Variables[0] (10) || RETURN",
-              "displayLines": "10",
-              "constants": [],
-              "variables": [
-                10
-              ]
-            },
-            "MDF_PointB3_P3_Ratio": {
-              "operator": "Variables[0] (0.02) || RETURN",
-              "displayLines": "0.02",
-              "constants": [],
-              "variables": [
-                0.02
-              ]
-            },
-            "MDF_PointB3_P4_Max": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
-            },
-            "MDF_Eidolon4_P2_ExtraDamagePercentage": {
-              "operator": "Variables[0] (0.06) || RETURN",
-              "displayLines": "0.06",
-              "constants": [],
-              "variables": [
-                0.06
-              ]
-            }
-          }
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "valuePercent": 1,
-          "ofAbilitySplit": true,
-          "isFixed": "* ERR"
-        },
-        "Trigger: Ability End"
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2111079333\">M_PlayerBoy_30_BE_Ability02_Preshow</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2111079333\">M_PlayerBoy_30_BE_Ability02_Preshow</a>",
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Player's Aim Target List}}"
-            },
-            "skillType": [
-              "Memosprite"
-            ],
-            "conditions": {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"2058264520\">M_PlayerBoyServant_30_EnableAbility</a>"
-                },
-                {
-                  "name": "Is Part Of",
-                  "of": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "mustBeAlive2": true,
-                  "invertCondition": true
-                }
-              ]
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": {
-                "operator": "Constants[0] (0) || Variables[0] (1) || SUB || RETURN",
-                "displayLines": "(0 - 1)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  1
-                ]
-              }
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "Mem_Servant_PlayerBoyServant_30_Ability11_Part01": {
-      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability11_Part01",
-      "childAbilityList": [
-        "Mem_Servant_PlayerBoyServant_30_Ability11_Entry",
-        "Mem_Servant_PlayerBoyServant_30_Ability11_Entry_Camera",
-        "Mem_Servant_PlayerBoyServant_30_Ability11_Part01",
-        "Mem_Servant_PlayerBoyServant_30_Ability11_Part02",
-        "Mem_Servant_PlayerBoyServant_30_Ability11_Camera"
-      ],
-      "skillTrigger": "Skill11",
-      "abilityType": "Memosprite",
-      "energy": 30,
-      "toughnessList": [
-        0,
-        10,
-        0
-      ],
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "target2": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "invertCondition": true
-          }
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Servant_PlayerBoyServant_30_Ability11_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "target2": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            }
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Ally Target"
-      }
-    },
-    "Mem_Servant_PlayerBoyServant_30_Ability11_Entry": {
-      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability11_Entry",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "SWITCH",
-          "teamCountFrom": "Player Team",
-          "caseEvents": [
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 2
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 3
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 4
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 5
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 6
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 7
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 8
-            }
-          ]
-        },
-        "Deleted bullshit"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Mem_Servant_PlayerBoyServant_30_Ability11_Together": {
-      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability11_Together",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (Ability11_P2_DamagePercentage) || RETURN",
-              "displayLines": "Ability11_P2_DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Ability11_P2_DamagePercentage"
-              ]
-            },
-            "Toughness": {
-              "operator": "Variables[0] (Skill11_Stance) || RETURN",
-              "displayLines": "Skill11_Stance",
-              "constants": [],
-              "variables": [
-                "Skill11_Stance"
-              ]
-            },
-            "Tags": [
-              "Joint-Attack"
-            ],
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          },
-          "attackType": "Basic ATK"
-        },
-        "Trigger: Attack End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "Mem_Servant_PlayerBoyServant_30_Ability01_Part02": {
-      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Trace Activated",
-            "conditionList": "PointB2"
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable with Added Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variableName": "CurEnergy",
-              "value": {
-                "operator": "Variables[0] (0.05) || Constants[0] (100) || MUL || RETURN",
-                "displayLines": "(0.05 * 100)",
-                "constants": [
-                  100
-                ],
-                "variables": [
-                  0.05
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_index",
-          "value": 0
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": 4,
-          "Event": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_index",
-              "value": {
-                "operator": "Variables[0] (_index) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(_index + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "_index"
-                ]
-              }
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target Group}}"
-              },
-              "paramSequence": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "canPhase": true,
-                  "AttackScaling": {
-                    "DamageType": "Ice",
-                    "Damage": {
-                      "operator": "Variables[0] (0.36) || RETURN",
-                      "displayLines": "0.36",
-                      "constants": [],
-                      "variables": [
-                        0.36
-                      ]
-                    },
-                    "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
-                    },
-                    "Tags": null,
-                    "attackType": "Memosprite"
-                  },
-                  "attackType": "Memosprite"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target Group}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (0.9) || RETURN",
-              "displayLines": "0.9",
-              "constants": [],
-              "variables": [
-                0.9
-              ]
-            },
-            "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
-            },
-            "Tags": null,
-            "attackType": "Memosprite"
-          },
-          "attackType": "Memosprite"
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "Mem_Servant_PlayerBoyServant_30_Ability01_Part01": {
-      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability01_Part01",
-      "childAbilityList": [
-        "Mem_Servant_PlayerBoyServant_30_Ability01_Part01",
-        "Mem_Servant_PlayerBoyServant_30_Ability01_Part02",
-        "Mem_Servant_PlayerBoyServant_30_Ability01_Camera",
-        "Mem_Servant_PlayerBoyServant_30_Ability01_Camera_Charm"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Memosprite",
-      "energy": 20,
-      "toughnessList": [
-        10,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Servant_PlayerBoyServant_30_Ability01_Part02",
-          "isTrigger": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "flagName": "Charm"
-          },
-          "passed": [
-            "Deleted bullshit"
-          ],
-          "failed": [
-            "Deleted bullshit"
-          ]
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
     "Mem_Modifiers": {
       "fileName": "Mem_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -3304,6 +2302,135 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
           "stackType": "ReplaceByCaster",
+          "useEntitySnapshot": true,
+          "description": "For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_DamagePercentage</span> of the original DMG.",
+          "type": "Buff",
+          "effectName": "Mem's Support",
+          "statusName": "Mem's Support",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}.[[getMemosprite]] | {{Modifier Holder}}.[[getSummoner]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>",
+              "refModifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
+              "aliveOnly": "False",
+              "haloStatus": true,
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Eidolon Activated",
+                    "eidolon": 1
+                  },
+                  {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Target Exists",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}.[[getMemosprite]]"
+                        }
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}.[[getMemosprite]]"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
+                      }
+                    ],
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Target Exists",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}.[[getSummoner]]"
+                        }
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}.[[getSummoner]]"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
+                      }
+                    ],
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "duration": -1,
+              "valuePerStack": {
+                "MDF_PropertyRatio": {
+                  "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
+                  "displayLines": "MDF_PropertyRatio",
+                  "constants": [],
+                  "variables": [
+                    "MDF_PropertyRatio"
+                  ]
+                },
+                "MDF_BasicDamagePercentage": {
+                  "operator": "Variables[0] (MDF_BasicDamagePercentage) || RETURN",
+                  "displayLines": "MDF_BasicDamagePercentage",
+                  "constants": [],
+                  "variables": [
+                    "MDF_BasicDamagePercentage"
+                  ]
+                },
+                "MDF_PointB3_P1_Basic": {
+                  "operator": "Variables[0] (MDF_PointB3_P1_Basic) || RETURN",
+                  "displayLines": "MDF_PointB3_P1_Basic",
+                  "constants": [],
+                  "variables": [
+                    "MDF_PointB3_P1_Basic"
+                  ]
+                },
+                "MDF_PointB3_P2_Delta": {
+                  "operator": "Variables[0] (MDF_PointB3_P2_Delta) || RETURN",
+                  "displayLines": "MDF_PointB3_P2_Delta",
+                  "constants": [],
+                  "variables": [
+                    "MDF_PointB3_P2_Delta"
+                  ]
+                },
+                "MDF_PointB3_P3_Ratio": {
+                  "operator": "Variables[0] (MDF_PointB3_P3_Ratio) || RETURN",
+                  "displayLines": "MDF_PointB3_P3_Ratio",
+                  "constants": [],
+                  "variables": [
+                    "MDF_PointB3_P3_Ratio"
+                  ]
+                },
+                "MDF_PointB3_P4_Max": {
+                  "operator": "Variables[0] (MDF_PointB3_P4_Max) || RETURN",
+                  "displayLines": "MDF_PointB3_P4_Max",
+                  "constants": [],
+                  "variables": [
+                    "MDF_PointB3_P4_Max"
+                  ]
+                },
+                "MDF_Eidolon4_P2_ExtraDamagePercentage": {
+                  "operator": "Variables[0] (MDF_Eidolon4_P2_ExtraDamagePercentage) || RETURN",
+                  "displayLines": "MDF_Eidolon4_P2_ExtraDamagePercentage",
+                  "constants": [],
+                  "variables": [
+                    "MDF_Eidolon4_P2_ExtraDamagePercentage"
+                  ]
+                },
+                "Is_Copy": 1
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -3661,151 +2788,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_PropertyRatio",
-            "MDF_BasicDamagePercentage",
-            "MDF_PointB3_P1_Basic",
-            "MDF_PointB3_P2_Delta",
-            "MDF_PointB3_P3_Ratio",
-            "MDF_PointB3_P4_Max",
-            "MDF_Rank04_P2_ExtraDamagePercentage"
-          ],
-          "latentQueue": [],
-          "description": "For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_DamagePercentage</span> of the original DMG.",
-          "type": "Buff",
-          "effectName": "Mem's Support",
-          "statusName": "Mem's Support",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}.[[getMemosprite]] | {{Modifier Holder}}.[[getSummoner]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-246894785\">Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy</a>",
-              "refModifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
-              "aliveOnly": "False",
-              "haloStatus": true,
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Eidolon Activated",
-                    "eidolon": 1
-                  },
-                  {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Target Exists",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}.[[getMemosprite]]"
-                        }
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}.[[getMemosprite]]"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
-                      }
-                    ],
-                    "invertCondition": true
-                  },
-                  {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Target Exists",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}.[[getSummoner]]"
-                        }
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}.[[getSummoner]]"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
-                      }
-                    ],
-                    "invertCondition": true
-                  }
-                ]
-              },
-              "duration": -1,
-              "valuePerStack": {
-                "MDF_PropertyRatio": {
-                  "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                  "displayLines": "MDF_PropertyRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyRatio"
-                  ]
-                },
-                "MDF_BasicDamagePercentage": {
-                  "operator": "Variables[0] (MDF_BasicDamagePercentage) || RETURN",
-                  "displayLines": "MDF_BasicDamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "MDF_BasicDamagePercentage"
-                  ]
-                },
-                "MDF_PointB3_P1_Basic": {
-                  "operator": "Variables[0] (MDF_PointB3_P1_Basic) || RETURN",
-                  "displayLines": "MDF_PointB3_P1_Basic",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PointB3_P1_Basic"
-                  ]
-                },
-                "MDF_PointB3_P2_Delta": {
-                  "operator": "Variables[0] (MDF_PointB3_P2_Delta) || RETURN",
-                  "displayLines": "MDF_PointB3_P2_Delta",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PointB3_P2_Delta"
-                  ]
-                },
-                "MDF_PointB3_P3_Ratio": {
-                  "operator": "Variables[0] (MDF_PointB3_P3_Ratio) || RETURN",
-                  "displayLines": "MDF_PointB3_P3_Ratio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PointB3_P3_Ratio"
-                  ]
-                },
-                "MDF_PointB3_P4_Max": {
-                  "operator": "Variables[0] (MDF_PointB3_P4_Max) || RETURN",
-                  "displayLines": "MDF_PointB3_P4_Max",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PointB3_P4_Max"
-                  ]
-                },
-                "MDF_Eidolon4_P2_ExtraDamagePercentage": {
-                  "operator": "Variables[0] (MDF_Eidolon4_P2_ExtraDamagePercentage) || RETURN",
-                  "displayLines": "MDF_Eidolon4_P2_ExtraDamagePercentage",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Eidolon4_P2_ExtraDamagePercentage"
-                  ]
-                },
-                "Is_Copy": 1
-              }
-            }
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1895406948\">Memosprite_PlayerBoyServant_30_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "statusName": "Friends! Together!",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3851,15 +2842,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyConvert",
-            "MDF_PropertyBase"
-          ],
-          "latentQueue": [],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "statusName": "Friends! Together!"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3974,9 +2957,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Extra Action/Turn [Owner]: Start "
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3984,16 +2965,1302 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RetainCountZero"
           ],
-          "stackData": [
-            "MDF_Max"
-          ],
-          "latentQueue": [],
           "description": "When Charge reaches <span class=\"descriptionNumberColor\">MDF_Max</span>, Mem immediately takes action and can use \"Lemme! Help You!\".",
           "type": "Other",
           "statusName": "Charge"
         }
       ],
       "references": []
+    },
+    "Mem_Servant_PlayerBoyServant_30_DeathRattle": {
+      "fileName": "Mem_Servant_PlayerBoyServant_30_DeathRattle",
+      "childAbilityList": [
+        "Mem_Servant_PlayerBoyServant_30_DeathRattle"
+      ],
+      "skillTrigger": "SkillP04",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1143439505\">Memosprite_PlayerBoyServant_30_DeathRattle</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1143439505\">Memosprite_PlayerBoyServant_30_DeathRattle</a>",
+          "modifierFlags": [
+            "Deathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Was Killed (Queued) [Owner]",
+              "execute": [
+                {
+                  "name": "Action Advance/Delay",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}.[[getSummoner]]"
+                  },
+                  "advanceType": "Set",
+                  "multiAdd": "(0 - 0.25)"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Mem_Servant_PlayerBoyServant_30_BattleCry": {
+      "fileName": "Mem_Servant_PlayerBoyServant_30_BattleCry",
+      "childAbilityList": [
+        "Mem_Servant_PlayerBoyServant_30_BattleCry"
+      ],
+      "skillTrigger": "SkillP03",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1428217171\">Memosprite_PlayerBoyServant_30_BattleCry</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1428217171\">Memosprite_PlayerBoyServant_30_BattleCry</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Added Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "CurEnergy",
+                  "value": {
+                    "operator": "Variables[0] (0.5) || Constants[0] (100) || MUL || RETURN",
+                    "displayLines": "(0.5 * 100)",
+                    "constants": [
+                      100
+                    ],
+                    "variables": [
+                      0.5
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Mem_Servant_PlayerBoyServant_30_Ability11_Together": {
+      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability11_Together",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] (Ability11_P2_DamagePercentage) || RETURN",
+              "displayLines": "Ability11_P2_DamagePercentage",
+              "constants": [],
+              "variables": [
+                "Ability11_P2_DamagePercentage"
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (Skill11_Stance) || RETURN",
+              "displayLines": "Skill11_Stance",
+              "constants": [],
+              "variables": [
+                "Skill11_Stance"
+              ]
+            },
+            "Tags": [
+              "Joint-Attack"
+            ],
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          },
+          "attackType": "Basic ATK"
+        },
+        "Trigger: Attack End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "Mem_Servant_PlayerBoyServant_30_Ability03_Part02": {
+      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}.[[getSummoner]]"
+          },
+          "ability": "PlayerBoy_30_Ability03_Part02_Charge",
+          "isTrigger": true
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] (Ability03_P1_DamagePercentage) || RETURN",
+              "displayLines": "Ability03_P1_DamagePercentage",
+              "constants": [],
+              "variables": [
+                "Ability03_P1_DamagePercentage"
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (Ultra_Stance) || RETURN",
+              "displayLines": "Ultra_Stance",
+              "constants": [],
+              "variables": [
+                "Ultra_Stance"
+              ]
+            },
+            "ToughnessDMGType": {
+              "DamageType": "Ice"
+            },
+            "instanceTag": "PlayerBoy_30_Ultra",
+            "Tags": null,
+            "attackType": "Ultimate"
+          },
+          "attackType": "Ultimate"
+        },
+        "Trigger: Attack End",
+        "Trigger: Skip Death Handling"
+      ],
+      "whenAdded": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"164475936\">M_PlayerBoyServant_30_Eidolon6</a>"
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__164475936\">M_PlayerBoyServant_30_Eidolon6</a>",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Attack Type",
+                        "attackTypes": [
+                          "Ultimate"
+                        ]
+                      },
+                      {
+                        "name": "Has DMG Instance Tag",
+                        "tag": "PlayerBoy_30_Ultra"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateFIXED</span>&nbsp;",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "Mem_Servant_PlayerBoyServant_30_PassiveAbility01": {
+      "fileName": "Mem_Servant_PlayerBoyServant_30_PassiveAbility01",
+      "childAbilityList": [
+        "Mem_Servant_PlayerBoyServant_30_PassiveAbility01",
+        "Mem_Servant_PlayerBoyServant_30_Ability03_Part02",
+        "Mem_Servant_PlayerBoyServant_30_Ability11_Together"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-4188752\">Memosprite_PlayerBoyServant_30_Passive</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1883418109\">Memosprite_PlayerBoyServant_30_Passive_Performance</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1274980234\">PlayerBoy_30_TeamSP</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
+          "counter": {
+            "operator": "Variables[0] (CurEnergy) || RETURN",
+            "displayLines": "CurEnergy",
+            "constants": [],
+            "variables": [
+              "CurEnergy"
+            ]
+          },
+          "valuePerStack": {
+            "MDF_Max": 1
+          }
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": {
+            "operator": "Variables[0] (CurEnergy) || RETURN",
+            "displayLines": "CurEnergy",
+            "constants": [],
+            "variables": [
+              "CurEnergy"
+            ]
+          },
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}.[[getSummoner]]"
+          },
+          "maximum": {
+            "operator": "Variables[0] (MDF_Max) || RETURN",
+            "displayLines": "MDF_Max",
+            "constants": [],
+            "variables": [
+              "MDF_Max"
+            ]
+          },
+          "assignState": "True",
+          "bar#": "Progress"
+        },
+        {
+          "name": "Force Target-Lock on Target",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "enable": true
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"585085986\">Memosprite_PlayerBoyServant_30_Eidolon1</a>",
+              "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__145969573\">M_PlayerBoyServant_30_BreakFlag</a>",
+          "execute": [
+            {
+              "eventTrigger": "Turn End [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "Break",
+                    "invertCondition": true
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "End Broken State [Owner]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1883418109\">Memosprite_PlayerBoyServant_30_Passive_Performance</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "Action Phase Start [Anyone][?]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}.[[getSummoner]]"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Target Count SUM",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                        },
+                        "conditions": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"145969573\">M_PlayerBoyServant_30_BreakFlag</a>"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Leave Battle"
+            },
+            {
+              "eventTrigger": "Caused Weakness Break [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"145969573\">M_PlayerBoyServant_30_BreakFlag</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_CTRL"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "DisableAction"
+                      }
+                    ],
+                    "invertCondition": true
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking Modifier Instance [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_CTRL"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "DisableAction"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-4188752\">Memosprite_PlayerBoyServant_30_Passive</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1895406948\">Memosprite_PlayerBoyServant_30_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyConvert": {
+                  "operator": "Variables[0] (0.12) || RETURN",
+                  "displayLines": "0.12",
+                  "constants": [],
+                  "variables": [
+                    0.12
+                  ]
+                },
+                "MDF_PropertyBase": {
+                  "operator": "Variables[0] (0.24) || RETURN",
+                  "displayLines": "0.24",
+                  "constants": [],
+                  "variables": [
+                    0.24
+                  ]
+                }
+              }
+            }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Pre-Death [Owner]",
+              "execute": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": 0,
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}.[[getSummoner]]"
+                  },
+                  "maximum": {
+                    "operator": "Variables[0] (MDF_Max) || RETURN",
+                    "displayLines": "MDF_Max",
+                    "constants": [],
+                    "variables": [
+                      "MDF_Max"
+                    ]
+                  },
+                  "assignState": "False",
+                  "bar#": "Progress"
+                }
+              ]
+            }
+          ],
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "CurEnergy",
+              "from": "ContextOwner",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "CurEnergy",
+                        "compareType": ">",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_Max) || RETURN",
+                          "displayLines": "MDF_Max",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Max"
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "CurEnergy",
+                          "value": {
+                            "operator": "Variables[0] (MDF_Max) || RETURN",
+                            "displayLines": "MDF_Max",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Max"
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "CurEnergy",
+                        "compareType": "=",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_Max) || RETURN",
+                          "displayLines": "MDF_Max",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Max"
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Current Turn Is",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                }
+                              },
+                              {
+                                "name": "Has Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
+                                "modifier": "<a class=\"gModGreen\" id=\"2058264520\">M_PlayerBoyServant_30_EnableAbility</a>",
+                                "invertCondition": true
+                              }
+                            ]
+                          },
+                          "passed": [
+                            {
+                              "name": "Assign Advance/Delay to Current Ability Use",
+                              "adjustmentValue": 0,
+                              "adjustmentType": "="
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Action Advance/Delay",
+                          "advanceType": "Set",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "set": 0
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"2058264520\">M_PlayerBoyServant_30_EnableAbility</a>"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Modifier Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1274980234\">PlayerBoy_30_TeamSP</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
+                      "value": {
+                        "operator": "Variables[0] (CurEnergy) || RETURN",
+                        "displayLines": "CurEnergy",
+                        "constants": [],
+                        "variables": [
+                          "CurEnergy"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (CurEnergy) || RETURN",
+                        "displayLines": "CurEnergy",
+                        "constants": [],
+                        "variables": [
+                          "CurEnergy"
+                        ]
+                      },
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}.[[getSummoner]]"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectables}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1895406948\">Memosprite_PlayerBoyServant_30_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyConvert": {
+                          "operator": "Variables[0] (0.12) || RETURN",
+                          "displayLines": "0.12",
+                          "constants": [],
+                          "variables": [
+                            0.12
+                          ]
+                        },
+                        "MDF_PropertyBase": {
+                          "operator": "Variables[0] (0.24) || RETURN",
+                          "displayLines": "0.24",
+                          "constants": [],
+                          "variables": [
+                            0.24
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Mem_Servant_PlayerBoyServant_30_Ability11_Part02": {
+      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability11_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "CurEnergy",
+          "value": 0
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2058264520\">M_PlayerBoyServant_30_EnableAbility</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "invertCondition": true
+          },
+          "passed": [
+            {
+              "name": "Action Advance/Delay",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "advanceType": "Set",
+              "multiAdd": "(0 - 1)"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
+          "duration": {
+            "operator": "Variables[0] (3) || RETURN",
+            "displayLines": "3",
+            "constants": [],
+            "variables": [
+              3
+            ]
+          },
+          "valuePerStack": {
+            "MDF_PropertyRatio": {
+              "operator": "Variables[0] (0.1) || RETURN",
+              "displayLines": "0.1",
+              "constants": [],
+              "variables": [
+                0.1
+              ]
+            },
+            "MDF_BasicDamagePercentage": {
+              "operator": "Variables[0] (0.28) || RETURN",
+              "displayLines": "0.28",
+              "constants": [],
+              "variables": [
+                0.28
+              ]
+            },
+            "MDF_PointB3_P1_Basic": {
+              "operator": "Variables[0] (100) || RETURN",
+              "displayLines": "100",
+              "constants": [],
+              "variables": [
+                100
+              ]
+            },
+            "MDF_PointB3_P2_Delta": {
+              "operator": "Variables[0] (10) || RETURN",
+              "displayLines": "10",
+              "constants": [],
+              "variables": [
+                10
+              ]
+            },
+            "MDF_PointB3_P3_Ratio": {
+              "operator": "Variables[0] (0.02) || RETURN",
+              "displayLines": "0.02",
+              "constants": [],
+              "variables": [
+                0.02
+              ]
+            },
+            "MDF_PointB3_P4_Max": {
+              "operator": "Variables[0] (0.2) || RETURN",
+              "displayLines": "0.2",
+              "constants": [],
+              "variables": [
+                0.2
+              ]
+            },
+            "MDF_Eidolon4_P2_ExtraDamagePercentage": {
+              "operator": "Variables[0] (0.06) || RETURN",
+              "displayLines": "0.06",
+              "constants": [],
+              "variables": [
+                0.06
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "valuePercent": 1,
+          "ofAbilitySplit": true,
+          "isFixed": "* ERR"
+        },
+        "Trigger: Ability End"
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2111079333\">M_PlayerBoy_30_BE_Ability02_Preshow</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2111079333\">M_PlayerBoy_30_BE_Ability02_Preshow</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player's Aim Target List}}"
+            },
+            "skillType": [
+              "Memosprite"
+            ],
+            "conditions": {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2058264520\">M_PlayerBoyServant_30_EnableAbility</a>"
+                },
+                {
+                  "name": "Is Part Of",
+                  "of": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "mustBeAlive2": true,
+                  "invertCondition": true
+                }
+              ]
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": {
+                "operator": "Constants[0] (0) || Variables[0] (1) || SUB || RETURN",
+                "displayLines": "(0 - 1)",
+                "constants": [
+                  0
+                ],
+                "variables": [
+                  1
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "Mem_Servant_PlayerBoyServant_30_Ability11_Part01": {
+      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability11_Part01",
+      "childAbilityList": [
+        "Mem_Servant_PlayerBoyServant_30_Ability11_Entry",
+        "Mem_Servant_PlayerBoyServant_30_Ability11_Entry_Camera",
+        "Mem_Servant_PlayerBoyServant_30_Ability11_Part01",
+        "Mem_Servant_PlayerBoyServant_30_Ability11_Part02",
+        "Mem_Servant_PlayerBoyServant_30_Ability11_Camera"
+      ],
+      "skillTrigger": "Skill11",
+      "abilityType": "Memosprite",
+      "energy": 30,
+      "toughnessList": [
+        0,
+        10,
+        0
+      ],
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "invertCondition": true
+          }
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Servant_PlayerBoyServant_30_Ability11_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target"
+      }
+    },
+    "Mem_Servant_PlayerBoyServant_30_Ability11_Entry": {
+      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability11_Entry",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "SWITCH",
+          "teamCountFrom": "Player Team",
+          "caseEvents": [
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 2
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 3
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 4
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 5
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 6
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 7
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 8
+            }
+          ]
+        },
+        "Deleted bullshit"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Mem_Servant_PlayerBoyServant_30_Ability01_Part02": {
+      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "PointB2"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable with Added Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "variableName": "CurEnergy",
+              "value": {
+                "operator": "Variables[0] (0.05) || Constants[0] (100) || MUL || RETURN",
+                "displayLines": "(0.05 * 100)",
+                "constants": [
+                  100
+                ],
+                "variables": [
+                  0.05
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_index",
+          "value": 0
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": 4,
+          "Event": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_index",
+              "value": {
+                "operator": "Variables[0] (_index) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(_index + 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "_index"
+                ]
+              }
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target Group}}"
+              },
+              "paramSequence": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "canPhase": true,
+                  "AttackScaling": {
+                    "DamageType": "Ice",
+                    "Damage": {
+                      "operator": "Variables[0] (0.36) || RETURN",
+                      "displayLines": "0.36",
+                      "constants": [],
+                      "variables": [
+                        0.36
+                      ]
+                    },
+                    "Toughness": {
+                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
+                      "displayLines": "ST Toughness Value",
+                      "constants": [],
+                      "variables": [
+                        "ST Toughness Value"
+                      ]
+                    },
+                    "Tags": null,
+                    "attackType": "Memosprite"
+                  },
+                  "attackType": "Memosprite"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target Group}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] (0.9) || RETURN",
+              "displayLines": "0.9",
+              "constants": [],
+              "variables": [
+                0.9
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
+              "displayLines": "AOE Toughness Value",
+              "constants": [],
+              "variables": [
+                "AOE Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "attackType": "Memosprite"
+          },
+          "attackType": "Memosprite"
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "Mem_Servant_PlayerBoyServant_30_Ability01_Part01": {
+      "fileName": "Mem_Servant_PlayerBoyServant_30_Ability01_Part01",
+      "childAbilityList": [
+        "Mem_Servant_PlayerBoyServant_30_Ability01_Part01",
+        "Mem_Servant_PlayerBoyServant_30_Ability01_Part02",
+        "Mem_Servant_PlayerBoyServant_30_Ability01_Camera",
+        "Mem_Servant_PlayerBoyServant_30_Ability01_Camera_Charm"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Memosprite",
+      "energy": 20,
+      "toughnessList": [
+        10,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Servant_PlayerBoyServant_30_Ability01_Part02",
+          "isTrigger": true
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Flag",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "flagName": "Charm"
+          },
+          "passed": [
+            "Deleted bullshit"
+          ],
+          "failed": [
+            "Deleted bullshit"
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     },
     "Mem_Functions": {
       "fileName": "Mem_Functions",

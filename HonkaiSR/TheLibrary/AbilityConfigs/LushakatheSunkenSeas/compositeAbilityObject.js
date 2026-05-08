@@ -29,6 +29,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "ATK increases by <span class=\"descriptionNumberColor\">#SkillRelic_317_2_P2_AttackAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Lushaka, the Sunken Seas",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -51,11 +55,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "ATK increases by <span class=\"descriptionNumberColor\">#SkillRelic_317_2_P2_AttackAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Lushaka, the Sunken Seas"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -103,9 +103,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

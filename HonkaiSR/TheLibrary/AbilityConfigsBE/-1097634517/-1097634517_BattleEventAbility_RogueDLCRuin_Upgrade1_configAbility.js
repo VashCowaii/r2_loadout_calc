@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1071238655\">Modifier_RogueDLCRuin_Upgrade1_DefenceDown</a>[<span class=\"descriptionNumberColor\">Formation Extrapolation: Extreme Helium Flash</span>]",
       "stackType": "Replace",
+      "description": "Reduces DEF by <span class=\"descriptionNumberColor\">#ADF_1</span>.",
+      "type": "Debuff",
+      "effectName": "DEF Reduction",
+      "statusName": "Formation Extrapolation: Extreme Helium Flash",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -43,11 +47,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Reduces DEF by <span class=\"descriptionNumberColor\">#ADF_1</span>.",
-      "type": "Debuff",
-      "effectName": "DEF Reduction",
-      "statusName": "Formation Extrapolation: Extreme Helium Flash"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -112,9 +112,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

@@ -632,6 +632,15 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__985754575\">Modifier_BattleEventAbility_Challenge_Month_22</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "BattleEvent_P1_ADF",
+        "BattleEvent_P2_ADF",
+        "TempHP"
+      ],
+      "latentQueue": [
+        "DV_BattleEventAbility_Challenge_Month_22_plus1",
+        "DV_BattleEventAbility_Challenge_Month_22_plus2"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -724,15 +733,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "BattleEvent_P1_ADF",
-        "BattleEvent_P2_ADF",
-        "TempHP"
-      ],
-      "latentQueue": [
-        "DV_BattleEventAbility_Challenge_Month_22_plus1",
-        "DV_BattleEventAbility_Challenge_Month_22_plus2"
       ]
     }
   ]

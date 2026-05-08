@@ -12,6 +12,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1305390378\">Enemy_W2_Xuanlu_04_Charge</a>[<span class=\"descriptionNumberColor\">Lavish Fruit</span>]",
       "stackType": "Multiple",
+      "description": "When there are 2 Lavish Fruits on the field, the Abundant Ebon Deer will immediately use Flamboyant Gore.",
+      "type": "Other",
+      "effectName": "Bearing Fruit",
+      "statusName": "Lavish Fruit",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -51,13 +55,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "When there are 2 Lavish Fruits on the field, the Abundant Ebon Deer will immediately use Flamboyant Gore.",
-      "type": "Other",
-      "effectName": "Bearing Fruit",
-      "statusName": "Lavish Fruit"
+      ]
     }
   ],
   "references": []

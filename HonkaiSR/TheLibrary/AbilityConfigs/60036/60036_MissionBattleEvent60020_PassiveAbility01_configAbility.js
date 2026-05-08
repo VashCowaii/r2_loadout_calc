@@ -64,6 +64,12 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
+      "stackData": [
+        "MDF_SPValue"
+      ],
+      "latentQueue": [
+        "BattleEvent_BlackSwan"
+      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: Start",
@@ -138,12 +144,6 @@ const configAbility = {
         {
           "eventTrigger": "Injected Ability Use [Anyone]: End"
         }
-      ],
-      "stackData": [
-        "MDF_SPValue"
-      ],
-      "latentQueue": [
-        "BattleEvent_BlackSwan"
       ]
     },
     {
@@ -152,6 +152,9 @@ const configAbility = {
       "modifierFlags": [
         "BlockDamage",
         "Stealth"
+      ],
+      "latentQueue": [
+        "BattleEvent_BlackSwan"
       ],
       "execute": [
         {
@@ -191,15 +194,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "BattleEvent_BlackSwan"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__768878434\">Death_BattleEventAttackUPByMaxHP</a>",
+      "latentQueue": [
+        "BattleEvent_BlackSwan"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -241,15 +243,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "BattleEvent_BlackSwan"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2011183040\">MissionBattleEvent60020_AutoUseUltraAbility</a>",
+      "latentQueue": [
+        "BattleEvent_BlackSwan"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -263,10 +264,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "BattleEvent_BlackSwan"
       ]
     }
   ],

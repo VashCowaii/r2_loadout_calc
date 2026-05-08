@@ -830,9 +830,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -858,6 +856,17 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2061740004\">Cerydra_PassiveAbility</a>",
       "stackType": "ReplaceByCaster",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1635182298\">Cerydra_BonusTargetHandler</a>",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -1131,19 +1140,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1635182298\">Cerydra_BonusTargetHandler</a>",
-          "haloStatus": true
         }
       ]
     }

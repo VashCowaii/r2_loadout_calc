@@ -18,6 +18,21 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__789627689\">MFarmRelic_104308_Sub</a>",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Player Team All}}"
+        },
+        "skillType": [
+          "Ultimate"
+        ],
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": -0.15
+        }
+      },
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -68,22 +83,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "target": {
-          "name": "Target Name",
-          "target": "{{Player Team All}}"
-        },
-        "skillType": [
-          "Ultimate"
-        ],
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": -0.15
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -115,9 +115,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

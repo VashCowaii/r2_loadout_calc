@@ -284,6 +284,9 @@ const configAbility = {
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
+      "description": "<span class=\"descriptionNumberColor\">SkillP01_FinalDamage</span> DMG has been tallied.",
+      "type": "Other",
+      "statusName": "Patron",
       "execute": [
         {
           "eventTrigger": "Action Phase Start [Anyone][?]",
@@ -530,12 +533,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "<span class=\"descriptionNumberColor\">SkillP01_FinalDamage</span> DMG has been tallied.",
-      "type": "Other",
-      "statusName": "Patron"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -954,9 +952,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1069,13 +1065,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__374199979\">Cipher_Eidolon6</a>",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1103,15 +1100,32 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-362400486\">Cipher_PointB3_Aura</a>",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1113671218\">Cipher_PointB3_Debuff</a>[<span class=\"descriptionNumberColor\">Sleight of Sky</span>]",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (0.4) || RETURN",
+              "displayLines": "0.4",
+              "constants": [],
+              "variables": [
+                0.4
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1150,36 +1164,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1113671218\">Cipher_PointB3_Debuff</a>[<span class=\"descriptionNumberColor\">Sleight of Sky</span>]",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
-            }
-          }
-        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1663627639\">Cipher_Mark_Listen</a>",
-      "stackData": [],
-      "latentQueue": [],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -1402,14 +1391,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1951153647\">Cipher_PointB1_ListenSpeedChange_Bonus</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": [
+        "_CUR_SPEED"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1432,12 +1425,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "_CUR_SPEED"
       ]
     },
     {
@@ -1566,9 +1553,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

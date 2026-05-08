@@ -3,6 +3,8 @@ const compositeAbilityObject = {
   "fullCharacterName": 1004032,
   "trimCharacterName": 1004032,
   "abilityList": [
+    "1004032_Monster_W1_Bronya_IF_02_PassiveAbility_EnhanceSwitch",
+    "1004032_Monster_W1_Bronya_IF_02_PassiveAbility_Switch",
     "1004032_Monster_W1_Bronya_IF_02_AbilityP04",
     "1004032_Monster_W1_Bronya_IF_02_AbilityP03",
     "1004032_Monster_W1_Bronya_IF_02_AbilityP02",
@@ -10,22 +12,13 @@ const compositeAbilityObject = {
     "1004032_Monster_W1_Bronya_IF_02_PassiveAbilityInitiate",
     "1004032_Monster_W1_Bronya_IF_02_Ability05_Part02",
     "1004032_Monster_W1_Bronya_IF_02_Ability05_Part01",
+    "1004032_Monster_W1_Bronya_IF_02_PassiveAbility_Insert",
     "1004032_Monster_W1_Bronya_IF_02_Ability04_Insert_Part02",
     "1004032_Monster_W1_Bronya_IF_02_Ability04_Insert",
-    "1004032_Monster_W1_Bronya_IF_02_Ability03_Part02",
-    "1004032_Monster_W1_Bronya_IF_02_Ability03_Part01",
-    "1004032_Monster_W1_Bronya_IF_02_PassiveAbility_EnhanceSwitch",
-    "1004032_Monster_W1_Bronya_IF_02_PassiveAbility_Switch",
-    "1004032_Monster_W1_Bronya_IF_02_PassiveAbility_Insert",
-    "1004032_Monster_W1_Bronya_PassiveAbility_Formation2",
-    "1004032_Monster_W1_Bronya_PassiveAbility_NoLockStance",
-    "1004032_Monster_W1_Bronya_PassiveAbility_M1LockHP",
-    "1004032_Monster_W1_Bronya_PassiveAbilityInsert",
-    "1004032_Monster_W1_Bronya_PassiveAbilityInitiate",
     "1004032_Monster_W1_Bronya_Ability04_Part02",
     "1004032_Monster_W1_Bronya_Ability04_Part01",
-    "1004032_Monster_W1_Bronya_Ability03_Part02",
-    "1004032_Monster_W1_Bronya_Ability03_Part01",
+    "1004032_Monster_W1_Bronya_IF_02_Ability03_Part02",
+    "1004032_Monster_W1_Bronya_IF_02_Ability03_Part01",
     "1004032_Monster_W1_Bronya_Ability02_Part02",
     "1004032_Monster_W1_Bronya_Ability02_Part01",
     "1004032_Monster_W1_Bronya_Ability01_Part02",
@@ -33,787 +26,6 @@ const compositeAbilityObject = {
     "1004032_Modifiers"
   ],
   "abilityObject": {
-    "1004032_Monster_W1_Bronya_IF_02_AbilityP04": {
-      "fileName": "1004032_Monster_W1_Bronya_IF_02_AbilityP04",
-      "skillTrigger": "SkillP04",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004032_Monster_W1_Bronya_IF_02_AbilityP03": {
-      "fileName": "1004032_Monster_W1_Bronya_IF_02_AbilityP03",
-      "skillTrigger": "SkillP03",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"651865792\">Monster_IF_BOSS_Standard_BreakBonus</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004032_Monster_W1_Bronya_IF_02_AbilityP02": {
-      "fileName": "1004032_Monster_W1_Bronya_IF_02_AbilityP02",
-      "skillTrigger": "SkillP02",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1546214500\">Monster_W1_Bronya_IF_02_PartController</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Bronya_LimboFlag"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004032_Monster_W1_Bronya_IF_02_AbilityP01": {
-      "fileName": "1004032_Monster_W1_Bronya_IF_02_AbilityP01",
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004032_Monster_W1_Bronya_IF_02_PassiveAbilityInitiate": {
-      "fileName": "1004032_Monster_W1_Bronya_IF_02_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"236879313\">Bronya_BattleScore2</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"186546456\">Bronya_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "PhaseFlag",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"479955832\">Enemy_W1_Bronya_IF_02_WeaknessProtect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-302906078\">Enemy_W1_Bronya_IF_02_ListenSelfBreak</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
-          "valuePerStack": {
-            "MDF_SpeedDownRatio": {
-              "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
-              "displayLines": "{[SkillP03[4]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP03[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1849445154\">Enemy_W1_Bronya_IF_02_EnhancePerTurnInit</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-715823219\">Enemy_W1_Bronya_IF_02_Part2EnhanceInti</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1849445154\">Enemy_W1_Bronya_IF_02_EnhancePerTurnInit</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action End [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
-                  "valuePerStack": {
-                    "MDF_SpeedUpPerLayer": {
-                      "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-                      "displayLines": "{[SkillP04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[0]]}"
-                      ]
-                    },
-                    "MDF_AttackUpPerLayer": {
-                      "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
-                      "displayLines": "{[SkillP04[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP04[1]]}"
-                      ]
-                    }
-                  }
-                },
-                "Modifier Deletes Itself"
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag",
-            "PhaseFlag"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-302906078\">Enemy_W1_Bronya_IF_02_ListenSelfBreak</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Level Entity}}"
-                    },
-                    "value1": "Gepard_LimboFlag",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 12
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "AIFlag",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      "failed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 2
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"479955832\">Enemy_W1_Bronya_IF_02_WeaknessProtect</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag",
-            "PhaseFlag"
-          ]
-        }
-      ]
-    },
-    "1004032_Monster_W1_Bronya_IF_02_Ability05_Part02": {
-      "fileName": "1004032_Monster_W1_Bronya_IF_02_Ability05_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2036544920\">Standard_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-            "displayLines": "{[Skill05[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[1]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
-            }
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004032_Monster_W1_Bronya_IF_02_Ability05_Part01": {
-      "fileName": "1004032_Monster_W1_Bronya_IF_02_Ability05_Part01",
-      "childAbilityList": [
-        "1004032_Monster_W1_Bronya_IF_02_Ability05_Part01",
-        "1004032_Monster_W1_Bronya_IF_02_Ability05_Part02",
-        "1004032_Monster_W1_Bronya_IF_02_Ability05_Camera"
-      ],
-      "skillTrigger": "Skill05",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W1_Bronya_IF_02_Ability05_Part02",
-          "isTrigger": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{All Team Members}}"
-      },
-      "references": []
-    },
-    "1004032_Monster_W1_Bronya_IF_02_Ability04_Insert_Part02": {
-      "fileName": "1004032_Monster_W1_Bronya_IF_02_Ability04_Insert_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"479955832\">Enemy_W1_Bronya_IF_02_WeaknessProtect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
-          "valuePerStack": {
-            "MDF_SpeedUpPerLayer": {
-              "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
-              "displayLines": "{[SkillP04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP04[0]]}"
-              ]
-            },
-            "MDF_AttackUpPerLayer": {
-              "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
-              "displayLines": "{[SkillP04[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP04[1]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1332478484\">Monster_W1_Bronya_IF_02_Toast</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Level Entity}}"
-            },
-            "value1": "Gepard_LimboFlag",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1364188900\">Enemy_W1_Bronya_IF_02_Enhance</a>[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
-              "valuePerStack": {
-                "MDF_SpeedUp": {
-                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                  "displayLines": "{[SkillP01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[0]]}"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 12
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 2
-            }
-          ]
-        },
-        {
-          "name": "Shot Fired",
-          "execute": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "canPhase": true,
-              "AttackScaling": {
-                "DamageType": "Wind",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                  "displayLines": "{[Skill04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "advanceType": "Set",
-          "multiAdd": "{[Skill04[1]]}"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 0
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1332478484\">Monster_W1_Bronya_IF_02_Toast</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn End [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1364188900\">Enemy_W1_Bronya_IF_02_Enhance</a>[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
-                    "invertCondition": true
-                  }
-                },
-                "Modifier Deletes Itself"
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "1004032_Monster_W1_Bronya_IF_02_Ability04_Insert": {
-      "fileName": "1004032_Monster_W1_Bronya_IF_02_Ability04_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W1_Bronya_IF_02_Ability04_Insert_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "1004032_Monster_W1_Bronya_IF_02_Ability03_Part02": {
-      "fileName": "1004032_Monster_W1_Bronya_IF_02_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Is Part Of Team Location",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "team": "Enemy Team",
-            "location": "Left"
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "refreshPositions": false,
-              "enemyList": [
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "SummonID01",
-                  "summonLocation": "First"
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "Create Enemies",
-              "refreshPositions": false,
-              "enemyList": [
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "SummonID01",
-                  "summonLocation": "Last"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "AIFlag",
-                "compareType": ">=",
-                "value2": 10
-              },
-              {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{All Team Members(Exclude Self)}}"
-                },
-                "value1": "TeamCharacterCount",
-                "compareType": "<",
-                "value2": 4
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "team": "Enemy Team",
-                "location": "Left"
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "SummonID01",
-                      "summonLocation": "First"
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Create Enemies",
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "SummonID01",
-                      "summonLocation": "Last"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004032_Monster_W1_Bronya_IF_02_Ability03_Part01": {
-      "fileName": "1004032_Monster_W1_Bronya_IF_02_Ability03_Part01",
-      "childAbilityList": [
-        "1004032_Monster_W1_Bronya_IF_02_Ability03_Part01",
-        "1004032_Monster_W1_Bronya_IF_02_Ability03_Part02",
-        "1004032_Monster_W1_Bronya_IF_02_Ability03_Camera"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W1_Bronya_IF_02_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "1004032_Monster_W1_Bronya_IF_02_PassiveAbility_EnhanceSwitch": {
       "fileName": "1004032_Monster_W1_Bronya_IF_02_PassiveAbility_EnhanceSwitch",
       "abilityType": null,
@@ -1439,6 +651,411 @@ const compositeAbilityObject = {
       },
       "references": []
     },
+    "1004032_Monster_W1_Bronya_IF_02_AbilityP04": {
+      "fileName": "1004032_Monster_W1_Bronya_IF_02_AbilityP04",
+      "skillTrigger": "SkillP04",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1004032_Monster_W1_Bronya_IF_02_AbilityP03": {
+      "fileName": "1004032_Monster_W1_Bronya_IF_02_AbilityP03",
+      "skillTrigger": "SkillP03",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"651865792\">Monster_IF_BOSS_Standard_BreakBonus</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1004032_Monster_W1_Bronya_IF_02_AbilityP02": {
+      "fileName": "1004032_Monster_W1_Bronya_IF_02_AbilityP02",
+      "skillTrigger": "SkillP02",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1546214500\">Monster_W1_Bronya_IF_02_PartController</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Bronya_LimboFlag"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1004032_Monster_W1_Bronya_IF_02_AbilityP01": {
+      "fileName": "1004032_Monster_W1_Bronya_IF_02_AbilityP01",
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1004032_Monster_W1_Bronya_IF_02_PassiveAbilityInitiate": {
+      "fileName": "1004032_Monster_W1_Bronya_IF_02_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"236879313\">Bronya_BattleScore2</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"186546456\">Bronya_BattleScore1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "AIFlag"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "PhaseFlag",
+          "value": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"479955832\">Enemy_W1_Bronya_IF_02_WeaknessProtect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-302906078\">Enemy_W1_Bronya_IF_02_ListenSelfBreak</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
+          "valuePerStack": {
+            "MDF_SpeedDownRatio": {
+              "operator": "Variables[0] ({[SkillP03[4]]}) || RETURN",
+              "displayLines": "{[SkillP03[4]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP03[4]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1849445154\">Enemy_W1_Bronya_IF_02_EnhancePerTurnInit</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-715823219\">Enemy_W1_Bronya_IF_02_Part2EnhanceInti</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1849445154\">Enemy_W1_Bronya_IF_02_EnhancePerTurnInit</a>",
+          "latentQueue": [
+            "AIFlag",
+            "PhaseFlag"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Action End [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+                  "valuePerStack": {
+                    "MDF_SpeedUpPerLayer": {
+                      "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
+                      "displayLines": "{[SkillP04[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[SkillP04[0]]}"
+                      ]
+                    },
+                    "MDF_AttackUpPerLayer": {
+                      "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
+                      "displayLines": "{[SkillP04[1]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[SkillP04[1]]}"
+                      ]
+                    }
+                  }
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-302906078\">Enemy_W1_Bronya_IF_02_ListenSelfBreak</a>",
+          "latentQueue": [
+            "AIFlag",
+            "PhaseFlag"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Level Entity}}"
+                    },
+                    "value1": "Gepard_LimboFlag",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "AIFlag",
+                      "value": 12
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "AIFlag",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      "failed": [
+                        {
+                          "name": "Declare Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "scope": "TargetEntity",
+                          "variableName": "AIFlag",
+                          "value": 2
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "End Broken State [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"479955832\">Enemy_W1_Bronya_IF_02_WeaknessProtect</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "1004032_Monster_W1_Bronya_IF_02_Ability05_Part02": {
+      "fileName": "1004032_Monster_W1_Bronya_IF_02_Ability05_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2036544920\">Standard_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+            "displayLines": "{[Skill05[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill05[1]]}"
+            ]
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+              "displayLines": "{[Skill05[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[0]]}"
+              ]
+            }
+          }
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "1004032_Monster_W1_Bronya_IF_02_Ability05_Part01": {
+      "fileName": "1004032_Monster_W1_Bronya_IF_02_Ability05_Part01",
+      "childAbilityList": [
+        "1004032_Monster_W1_Bronya_IF_02_Ability05_Part01",
+        "1004032_Monster_W1_Bronya_IF_02_Ability05_Part02",
+        "1004032_Monster_W1_Bronya_IF_02_Ability05_Camera"
+      ],
+      "skillTrigger": "Skill05",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W1_Bronya_IF_02_Ability05_Part02",
+          "isTrigger": true
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "references": []
+    },
     "1004032_Monster_W1_Bronya_IF_02_PassiveAbility_Insert": {
       "fileName": "1004032_Monster_W1_Bronya_IF_02_PassiveAbility_Insert",
       "abilityType": null,
@@ -1782,50 +1399,8 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "1004032_Monster_W1_Bronya_PassiveAbility_Formation2": {
-      "fileName": "1004032_Monster_W1_Bronya_PassiveAbility_Formation2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-247015465\">Enemy_W1_Bronya_PassiveAbility_Formation2</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004032_Monster_W1_Bronya_PassiveAbility_NoLockStance": {
-      "fileName": "1004032_Monster_W1_Bronya_PassiveAbility_NoLockStance",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004032_Monster_W1_Bronya_PassiveAbility_M1LockHP": {
-      "fileName": "1004032_Monster_W1_Bronya_PassiveAbility_M1LockHP",
+    "1004032_Monster_W1_Bronya_IF_02_Ability04_Insert_Part02": {
+      "fileName": "1004032_Monster_W1_Bronya_IF_02_Ability04_Insert_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -1836,146 +1411,33 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-589353924\">Enemy_W1_Bronya_M1LockHP</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"479955832\">Enemy_W1_Bronya_IF_02_WeaknessProtect</a>"
         },
         {
-          "name": "Declare Custom Variable",
-          "target": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Bronya_M1LockHP_Trigger"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1556370949\">Enemy_W1_Bronya_Instance_DisableAction</a>",
-          "modifierFlags": [
-            "DisableAction"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-589353924\">Enemy_W1_Bronya_M1LockHP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.01
-                }
+          "modifier": "<a class=\"gModGreen\" id=\"1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+          "valuePerStack": {
+            "MDF_SpeedUpPerLayer": {
+              "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
+              "displayLines": "{[SkillP04[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP04[0]]}"
               ]
             },
-            {
-              "eventTrigger": "Locked HP Floor Reached [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "Bronya_M1LockHP_Trigger",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Dispel Debuffs",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "silent": true
-                    },
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "multiBase": 0
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1556370949\">Enemy_W1_Bronya_Instance_DisableAction</a>"
-                    },
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Bronya_M1LockHP_Trigger",
-                      "value": 1
-                    }
-                  ]
-                }
+            "MDF_AttackUpPerLayer": {
+              "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
+              "displayLines": "{[SkillP04[1]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP04[1]]}"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "1004032_Monster_W1_Bronya_PassiveAbilityInsert": {
-      "fileName": "1004032_Monster_W1_Bronya_PassiveAbilityInsert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1202181629\">Enemy_W1_Bronya_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W1_Bronya_00_InsertFlag"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1004032_Monster_W1_Bronya_PassiveAbilityInitiate": {
-      "fileName": "1004032_Monster_W1_Bronya_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"236879313\">Bronya_BattleScore2</a>"
+          }
         },
         {
           "name": "Add Events/Bonuses",
@@ -1983,359 +1445,177 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"186546456\">Bronya_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Bronya_SummonCounter"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Bronya_SummonMode"
+          "modifier": "<a class=\"gModGreen\" id=\"1332478484\">Monster_W1_Bronya_IF_02_Toast</a>"
         },
         {
           "name": "IF",
           "conditions": {
-            "name": "Has Modifier",
+            "name": "Compare: Variable",
             "target": {
               "name": "Target Name",
-              "target": "{{Caster}}"
+              "target": "{{Level Entity}}"
             },
-            "modifier": "<a class=\"gModGreen\" id=\"746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>",
-            "invertCondition": true
+            "value1": "Gepard_LimboFlag",
+            "compareType": "=",
+            "value2": 1
           },
           "passed": [
             {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Name",
-                "target": "{{Caster}}"
+                "target": "{{Modifier Holder}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"43109596\">Enemy_W1_Bronya_WeakPointProtectController</a>"
+              "modifier": "<a class=\"gModGreen\" id=\"1364188900\">Enemy_W1_Bronya_IF_02_Enhance</a>[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
+              "valuePerStack": {
+                "MDF_SpeedUp": {
+                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+                  "displayLines": "{[SkillP01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[0]]}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "AIFlag",
+              "value": 12
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-129923965\">MoreOneMorePerTurn</a>"
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "AIFlag",
+              "value": 2
             }
           ]
         },
         {
-          "name": "Add Events/Bonuses",
-          "to": {
+          "name": "Shot Fired",
+          "execute": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Wind",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+                  "displayLines": "{[Skill04[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill04[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Action Advance/Delay",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "advanceType": "Set",
+          "multiAdd": "{[Skill04[1]]}"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"2074412751\">Enemy_W1_Bronya_ListenSelfBreak</a>"
+          "multiBase": 0
         }
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
+        "primaryTarget": "Inherent Target"
       },
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2074412751\">Enemy_W1_Bronya_ListenSelfBreak</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__1332478484\">Monster_W1_Bronya_IF_02_Toast</a>",
           "execute": [
+            {
+              "eventTrigger": "Turn End [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1364188900\">Enemy_W1_Bronya_IF_02_Enhance</a>[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
+                    "invertCondition": true
+                  }
+                },
+                "Modifier Deletes Itself"
+              ]
+            },
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
               "execute": [
-                {
-                  "name": "Action Advance/Delay",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "advanceType": "Delay",
-                  "multiAdd": 0.5
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Bronya_SummonMode"
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Bronya_AICounter_Act2",
-                  "value": 2
-                }
+                "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Bronya_SummonCounter",
-            "Bronya_SummonMode"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1202181629\">Enemy_W1_Bronya_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]",
-          "modifierFlags": [
-            "MuteBreak"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Bronya_AICounter_Act2",
-                  "value": 1
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Protected",
-                  "valueList": [
-                    "Physical",
-                    "Fire",
-                    "Ice",
-                    "Thunder",
-                    "Wind",
-                    "Quantum",
-                    "Imaginary"
-                  ]
-                }
-              ]
-            }
-          ],
-          "description": "Bronya's Toughness cannot be reduced while there are enemies on the field.",
-          "type": "Buff",
-          "effectName": "Weakness Protected",
-          "statusName": "Weakness Protected"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__43109596\">Enemy_W1_Bronya_WeakPointProtectController</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "W1_Bronya_00_InsertFlag"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{All Team Members(Exclude Self)}}"
-                    },
-                    "value1": "TeamCharacterCount",
-                    "compareType": ">=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1202181629\">Enemy_W1_Bronya_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-968447814\">TaskList_W1_Bronya_WeakPointProtectController_OnDieOrEscape</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Left Battle [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-968447814\">TaskList_W1_Bronya_WeakPointProtectController_OnDieOrEscape</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{All Team Members(Exclude Self)}}"
-                    },
-                    "value1": "TeamCharacterCount",
-                    "compareType": ">=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1202181629\">Enemy_W1_Bronya_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "modifierFunctions": [
-            {
-              "name": "CharacterFunctions",
-              "functionName": "<a class=\"gTempYellow\" id=\"fun__-968447814\">TaskList_W1_Bronya_WeakPointProtectController_OnDieOrEscape</a>",
-              "parse": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "W1_Bronya_00_InsertFlag",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{All Team Members(Exclude Self)}}"
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1202181629\">Enemy_W1_Bronya_WeakPointProtected</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "W1_Bronya_00_InsertFlag",
-                      "value": 1
-                    },
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Monster_W1_Bronya_PassiveAbilityInsert",
-                      "priorityTag": "EnemyChangeState",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Bronya_SummonCounter",
-            "Bronya_SummonMode"
           ]
         }
       ]
+    },
+    "1004032_Monster_W1_Bronya_IF_02_Ability04_Insert": {
+      "fileName": "1004032_Monster_W1_Bronya_IF_02_Ability04_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W1_Bronya_IF_02_Ability04_Insert_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
     },
     "1004032_Monster_W1_Bronya_Ability04_Part02": {
       "fileName": "1004032_Monster_W1_Bronya_Ability04_Part02",
@@ -2423,8 +1703,8 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "1004032_Monster_W1_Bronya_Ability03_Part02": {
-      "fileName": "1004032_Monster_W1_Bronya_Ability03_Part02",
+    "1004032_Monster_W1_Bronya_IF_02_Ability03_Part02": {
+      "fileName": "1004032_Monster_W1_Bronya_IF_02_Ability03_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -2432,15 +1712,13 @@ const compositeAbilityObject = {
         {
           "name": "IF",
           "conditions": {
-            "name": "Compare: Variable",
+            "name": "Is Part Of Team Location",
             "target": {
               "name": "Target Name",
-              "target": "{{Modifier Holder}}"
+              "target": "{{Caster}}"
             },
-            "value1": "Bronya_SummonMode",
-            "compareType": "=",
-            "value2": 0,
-            "contextScope": "TargetEntity"
+            "team": "Enemy Team",
+            "location": "Left"
           },
           "passed": [
             {
@@ -2448,117 +1726,86 @@ const compositeAbilityObject = {
               "refreshPositions": false,
               "enemyList": [
                 {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Constants[0] (1002040) || RETURN",
-                    "displayLines": "1002040",
-                    "constants": [
-                      1002040
-                    ],
-                    "variables": []
-                  },
-                  "locationType": "First"
+                  "name": "Create Enemy from Custom",
+                  "value": "SummonID01",
+                  "summonLocation": "First"
                 }
               ]
-            },
+            }
+          ],
+          "failed": [
             {
               "name": "Create Enemies",
               "refreshPositions": false,
               "enemyList": [
                 {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Constants[0] (1002050) || RETURN",
-                    "displayLines": "1002050",
-                    "constants": [
-                      1002050
-                    ],
-                    "variables": []
-                  },
-                  "locationType": "Last"
+                  "name": "Create Enemy from Custom",
+                  "value": "SummonID01",
+                  "summonLocation": "Last"
                 }
               ]
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "Bronya_SummonMode",
-              "value": 1
             }
-          ],
-          "failed": [
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Variable",
+                "value1": "AIFlag",
+                "compareType": ">=",
+                "value2": 10
+              },
+              {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{All Team Members(Exclude Self)}}"
+                },
+                "value1": "TeamCharacterCount",
+                "compareType": "<",
+                "value2": 4
+              }
+            ]
+          },
+          "passed": [
             {
               "name": "IF",
               "conditions": {
-                "name": "Compare: Variable",
-                "value1": "Bronya_SummonCounter",
-                "compareType": "=",
-                "value2": 0,
-                "contextScope": "TargetEntity"
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "team": "Enemy Team",
+                "location": "Left"
               },
               "passed": [
                 {
                   "name": "Create Enemies",
-                  "delayPercent": 0,
                   "refreshPositions": false,
                   "enemyList": [
                     {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Constants[0] (1002040) || RETURN",
-                        "displayLines": "1002040",
-                        "constants": [
-                          1002040
-                        ],
-                        "variables": []
-                      },
-                      "locationType": "First"
+                      "name": "Create Enemy from Custom",
+                      "value": "SummonID01",
+                      "summonLocation": "First"
                     }
                   ]
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Bronya_SummonCounter",
-                  "value": 1
                 }
               ],
               "failed": [
                 {
                   "name": "Create Enemies",
-                  "delayPercent": 0,
                   "refreshPositions": false,
                   "enemyList": [
                     {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Constants[0] (1002050) || RETURN",
-                        "displayLines": "1002050",
-                        "constants": [
-                          1002050
-                        ],
-                        "variables": []
-                      },
-                      "locationType": "Last"
+                      "name": "Create Enemy from Custom",
+                      "value": "SummonID01",
+                      "summonLocation": "Last"
                     }
                   ]
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Bronya_SummonCounter"
                 }
               ]
             }
@@ -2579,9 +1826,15 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "1004032_Monster_W1_Bronya_Ability03_Part01": {
-      "fileName": "1004032_Monster_W1_Bronya_Ability03_Part01",
-      "abilityType": null,
+    "1004032_Monster_W1_Bronya_IF_02_Ability03_Part01": {
+      "fileName": "1004032_Monster_W1_Bronya_IF_02_Ability03_Part01",
+      "childAbilityList": [
+        "1004032_Monster_W1_Bronya_IF_02_Ability03_Part01",
+        "1004032_Monster_W1_Bronya_IF_02_Ability03_Part02",
+        "1004032_Monster_W1_Bronya_IF_02_Ability03_Camera"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -2591,12 +1844,15 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_W1_Bronya_Ability03_Part02",
+          "ability": "Monster_W1_Bronya_IF_02_Ability03_Part02",
           "isTrigger": true
         },
         "Deleted bullshit"
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -3113,14 +2369,16 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Pre-Death [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-715823219\">Enemy_W1_Bronya_IF_02_Part2EnhanceInti</a>",
           "stackType": "Refresh",
+          "latentQueue": [
+            "AIFlag",
+            "PhaseFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3169,16 +2427,24 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag",
-            "PhaseFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
+          "stackData": [
+            "MDF_SpeedDownRatio"
+          ],
+          "latentQueue": [
+            "Gepard_LimboFlag",
+            "Bronya_LimboFlag",
+            "isMainAttack",
+            "AIFlag",
+            "PhaseFlag"
+          ],
+          "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedDownRatio</span> when the character is in Support mode.",
+          "type": "Other",
+          "statusName": "Defense",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3203,20 +2469,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedDownRatio"
-          ],
-          "latentQueue": [
-            "Gepard_LimboFlag",
-            "Bronya_LimboFlag",
-            "isMainAttack",
-            "AIFlag",
-            "PhaseFlag"
-          ],
-          "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedDownRatio</span> when the character is in Support mode.",
-          "type": "Other",
-          "statusName": "Defense"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3241,14 +2494,23 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__946500704\">Enemy_W1_Bronya_IF_02_MainHaloEffect</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
           "stackType": "Replace",
+          "latentQueue": [
+            "Gepard_LimboFlag",
+            "Bronya_LimboFlag",
+            "isMainAttack",
+            "AIFlag",
+            "PhaseFlag"
+          ],
+          "description": "The character is currently in the Main attack state.",
+          "type": "Other",
+          "effectName": "Main Attack",
+          "statusName": "Charge",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -3265,24 +2527,25 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Gepard_LimboFlag",
-            "Bronya_LimboFlag",
-            "isMainAttack",
-            "AIFlag",
-            "PhaseFlag"
-          ],
-          "description": "The character is currently in the Main attack state.",
-          "type": "Other",
-          "effectName": "Main Attack",
-          "statusName": "Charge"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1421957792\">Enemy_W1_Bronya_IF_02_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_SpeedUpPerLayer",
+            "MDF_AttackUpPerLayer"
+          ],
+          "latentQueue": [
+            "PhaseFlag",
+            "AIFlag"
+          ],
+          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpPerLayer</span> and ATK by <span class=\"descriptionNumberColor\">MDF_AttackUpPerLayer</span>. All stacks are lost when Weakness is broken.",
+          "type": "Buff",
+          "effectName": "Enhance",
+          "statusName": "Carried By Inertia",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -3413,20 +2676,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedUpPerLayer",
-            "MDF_AttackUpPerLayer"
-          ],
-          "latentQueue": [
-            "PhaseFlag",
-            "AIFlag"
-          ],
-          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpPerLayer</span> and ATK by <span class=\"descriptionNumberColor\">MDF_AttackUpPerLayer</span>. All stacks are lost when Weakness is broken.",
-          "type": "Buff",
-          "effectName": "Enhance",
-          "statusName": "Carried By Inertia",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3434,6 +2684,17 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackData": [
+            "MDF_SpeedUp"
+          ],
+          "latentQueue": [
+            "Gepard_LimboFlag",
+            "AIFlag"
+          ],
+          "description": "Greatly enhances this unit, increasing SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>. When in this state, Bronya can summon even more Silvermane Cannoneers.",
+          "type": "Buff",
+          "effectName": "Enhance",
+          "statusName": "Shared Hatred",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3456,17 +2717,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedUp"
-          ],
-          "latentQueue": [
-            "PhaseFlag"
-          ],
-          "description": "Greatly enhances this unit, increasing SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>. When in this state, Bronya can summon even more Silvermane Cannoneers.",
-          "type": "Buff",
-          "effectName": "Enhance",
-          "statusName": "Shared Hatred"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3522,9 +2773,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3604,14 +2853,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1747978880\">Enemy_W1_Bronya_Ability02</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3634,11 +2885,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3725,15 +2972,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__746448896\">Enemy_W1_Bronya_PassiveAbility_NoLockStance</a>"
         }
       ],
       "references": []

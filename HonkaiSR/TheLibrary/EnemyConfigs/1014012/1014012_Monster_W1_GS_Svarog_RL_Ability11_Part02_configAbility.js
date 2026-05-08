@@ -129,9 +129,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1760667361\">Monster_W1_Svarog_RL_Mark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1760667361\">Monster_W1_Svarog_RL_Mark</a>"
     }
   ]
 }

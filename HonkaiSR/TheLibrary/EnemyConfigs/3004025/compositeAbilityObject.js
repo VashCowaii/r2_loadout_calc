@@ -3,315 +3,431 @@ const compositeAbilityObject = {
   "fullCharacterName": 3004025,
   "trimCharacterName": 3004025,
   "abilityList": [
-    "3004025_Monster_W3_Theater_BattleEvent",
-    "3004025_Monster_Monster_W3_Theater_Insert_RestartPhase2",
-    "3004025_BattleEventAbility_Monster_W3_Theater_PuzzleAbility",
+    "3004025_BattleEventAbility_Monster_W3_Theater_MainStory",
+    "3004025_Monster_W3_Theater_Ability04_Initiate",
+    "3004025_Monster_W3_Theater_Ability08_Initiate",
     "3004025_BattleEventAbility_Monster_W3_Theater_AllBreakInsert",
+    "3004025_BattleEventAbility_Monster_W3_Theater_PuzzleAbility",
     "3004025_Monster_W3_Theater_PassiveAbility01_Insert",
     "3004025_Monster_W3_Theater_PassiveAbility_Initiate",
-    "3004025_BattleEventAbility_Monster_W3_Theater_MainStory",
-    "3004025_Monster_W3_Theater_MainStoryInitiate03",
-    "3004025_Monster_W3_Theater_MainStoryInitiate02",
-    "3004025_Monster_W3_Theater_MainStoryInitiate01",
-    "3004025_Monster_W3_Theater_Ability08_Initiate",
-    "3004025_Monster_W3_Theater_Ability04_Initiate",
+    "3004025_Monster_Monster_W3_Theater_Insert_RestartPhase2",
     "3004025_Modifiers",
     "3004025_BE_BattleEvents"
   ],
   "abilityObject": {
-    "3004025_Monster_W3_Theater_BattleEvent": {
-      "fileName": "3004025_Monster_W3_Theater_BattleEvent",
+    "3004025_BattleEventAbility_Monster_W3_Theater_MainStory": {
+      "fileName": "3004025_BattleEventAbility_Monster_W3_Theater_MainStory",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "LoopCount",
+            "compareType": ">=",
+            "value2": 3
+          },
+          "passed": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "MonsterType_W3_Dinosaur_00"
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MainStoryDamage",
+                  "value": {
+                    "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+                    "displayLines": "{[Skill04[0]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill04[0]]}"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "LoopCount",
+            "compareType": ">=",
+            "value2": 4
+          },
+          "passed": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "MonsterType_W3_Dinosaur_00"
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MainStoryDamage",
+                  "value": {
+                    "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
+                    "displayLines": "{[Skill04[1]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill04[1]]}"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "LoopCount",
+            "compareType": ">=",
+            "value2": 7
+          },
+          "passed": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "MonsterType_W3_Dinosaur_00"
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MainStoryDamage",
+                  "value": {
+                    "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
+                    "displayLines": "{[Skill04[2]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill04[2]]}"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "searchRandom": true,
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "value": "ENEMIES_OBJECT_UNUSED__114"
+          },
+          "ifTargetFound": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "LoopCount",
+                "compareType": ">=",
+                "value2": 3
+              },
+              "passed": [
+                {
+                  "name": "Looped Event",
+                  "maxLoops": 3,
+                  "Event": [
+                    {
+                      "name": "Consume",
+                      "consumeFrom": "MaxHP",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target List}}"
+                      },
+                      "consumePercent": {
+                        "operator": "Variables[0] (MainStoryDamage) || Variables[1] (LoopCount) || DIV || RETURN",
+                        "displayLines": "(MainStoryDamage / LoopCount)",
+                        "constants": [],
+                        "variables": [
+                          "MainStoryDamage",
+                          "LoopCount"
+                        ]
+                      },
+                      "DamageType": {
+                        "name": "Damage Type Source",
+                        "sourceType": "Imaginary"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "LoopCount",
+                "compareType": ">=",
+                "value2": 4
+              },
+              "passed": [
+                {
+                  "name": "Looped Event",
+                  "maxLoops": 1,
+                  "Event": [
+                    {
+                      "name": "Consume",
+                      "consumeFrom": "MaxHP",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target List}}"
+                      },
+                      "consumePercent": {
+                        "operator": "Variables[0] (MainStoryDamage) || Variables[1] (LoopCount) || DIV || RETURN",
+                        "displayLines": "(MainStoryDamage / LoopCount)",
+                        "constants": [],
+                        "variables": [
+                          "MainStoryDamage",
+                          "LoopCount"
+                        ]
+                      },
+                      "DamageType": {
+                        "name": "Damage Type Source",
+                        "sourceType": "Imaginary"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "LoopCount",
+                "compareType": ">=",
+                "value2": 7
+              },
+              "passed": [
+                {
+                  "name": "Looped Event",
+                  "maxLoops": 2,
+                  "Event": [
+                    {
+                      "name": "Consume",
+                      "consumeFrom": "MaxHP",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target List}}"
+                      },
+                      "consumePercent": {
+                        "operator": "Variables[0] (MainStoryDamage) || Variables[1] (LoopCount) || DIV || RETURN",
+                        "displayLines": "(MainStoryDamage / LoopCount)",
+                        "constants": [],
+                        "variables": [
+                          "MainStoryDamage",
+                          "LoopCount"
+                        ]
+                      },
+                      "DamageType": {
+                        "name": "Damage Type Source",
+                        "sourceType": "Imaginary"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Consume",
+                  "consumeFrom": "MaxHP",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target List}}"
+                  },
+                  "consumePercent": {
+                    "operator": "Variables[0] (MainStoryDamage) || Variables[1] (LoopCount) || DIV || RETURN",
+                    "displayLines": "(MainStoryDamage / LoopCount)",
+                    "constants": [],
+                    "variables": [
+                      "MainStoryDamage",
+                      "LoopCount"
+                    ]
+                  },
+                  "DamageType": {
+                    "name": "Damage Type Source",
+                    "sourceType": "Imaginary"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "value": "ENEMIES_OBJECT_UNUSED__114"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "AIFlag",
+              "value": 0
+            },
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "FlopSide",
+              "value": 1
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"665202517\">MModifier_Monster_W3_TV_02_Side2</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "LoopCount",
+            "compareType": ">=",
+            "value2": 7
+          }
+        },
         {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-429378171\">Enemy_W3_Theater_BattleEvent</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"824631784\">Enemy_W3_Theater_MainStoryMark</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1381458312\">Enemy_W3_Theater_MainStoryUltraMark</a>"
         }
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
+        "primaryTarget": "Inherent Target"
       },
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-429378171\">Enemy_W3_Theater_BattleEvent</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Turn Start [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Ability Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
-                        "compareType": "<=",
-                        "value2": 4
-                      },
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Add Target by Unique Identifier",
-                          "identifier": "TheaterCore"
-                        },
-                        "value": "Theater_Rogue"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "searchRandom": true,
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "ENEMIES_OBJECT_UNUSED__114"
-                      },
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "Break"
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "STAT_CTRL"
-                          },
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "Monster_Monster_W3_Theater_Insert_RestartPhase2",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "priorityTag": "EnemyChangeState",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "noTargetFound": [
-                    {
-                      "name": "Trigger Ability",
-                      "from": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Check Boolean Value",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "value": "MonsterType_W3_Dinosaur_00"
-                            }
-                          }
-                        ]
-                      },
-                      "ability": "Monster_W3_Dinosaur_02_Ultimate_Part00",
-                      "isTrigger": true
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Add Target by Unique Identifier",
-                        "identifier": "TheaterCore"
-                      },
-                      "variableName": "W3_Theater_00_BattleScore1_Flag",
-                      "value": 1
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-618537723\">Enemy_Monster_W3_Theater_Part02Recover</a>"
-                    },
-                    "Wait for Pending Ability Completions",
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "MonsterType_W1_Mecha01_02"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedOverride</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (BE_P1_BESpeed) || RETURN",
-                    "displayLines": "BE_P1_BESpeed",
-                    "constants": [],
-                    "variables": [
-                      "BE_P1_BESpeed"
-                    ]
-                  }
-                },
-                {
-                  "name": "Action Advance/Delay",
-                  "advanceType": "Set",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "multiBase": {
-                    "operator": "Variables[0] (BE_P3_InitDelay) || RETURN",
-                    "displayLines": "BE_P3_InitDelay",
-                    "constants": [],
-                    "variables": [
-                      "BE_P3_InitDelay"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Weakness Break [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "ENEMIES_OBJECT_UNUSED__114"
-                  },
-                  "passed": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "advanceType": "Set",
-                      "multiAdd": "P2_BreakDelayRatioPerFigure"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Add Target by Unique Identifier",
-                          "identifier": "TheaterCore"
-                        },
-                        "value": "Theater_Rogue"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1381458312\">Enemy_W3_Theater_MainStoryUltraMark</a>",
+          "latentQueue": [
+            "AIFlag"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__824631784\">Enemy_W3_Theater_MainStoryMark</a>",
+          "latentQueue": [
+            "AIFlag"
+          ]
         }
       ]
     },
-    "3004025_Monster_Monster_W3_Theater_Insert_RestartPhase2": {
-      "fileName": "3004025_Monster_Monster_W3_Theater_Insert_RestartPhase2",
+    "3004025_Monster_W3_Theater_Ability04_Initiate": {
+      "fileName": "3004025_Monster_W3_Theater_Ability04_Initiate",
+      "skillTrigger": "Skill04",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3004025_Monster_W3_Theater_Ability08_Initiate": {
+      "fileName": "3004025_Monster_W3_Theater_Ability08_Initiate",
+      "skillTrigger": "Skill08",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3004025_BattleEventAbility_Monster_W3_Theater_AllBreakInsert": {
+      "fileName": "3004025_BattleEventAbility_Monster_W3_Theater_AllBreakInsert",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -322,273 +438,89 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
+          "searchRandom": true,
           "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "ENEMIES_OBJECT_UNUSED__114"
-                  }
-                ]
-              }
-            ]
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "value": "ENEMIES_OBJECT_UNUSED__114"
           },
           "ifTargetFound": [
             {
-              "name": "Find New Target",
-              "from": {
+              "name": "ATK Scaling DMG",
+              "target": {
                 "name": "Target Name",
-                "target": "{{Parameter Target List}}"
+                "target": "{{Parameter Target}}"
               },
-              "searchRandom": true,
-              "conditions": {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "flagName": "Break"
-              },
-              "ignoreParallelWarning": true,
-              "ifTargetFound": [
-                {
-                  "name": "Reset Toughness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-618537723\">Enemy_Monster_W3_Theater_Part02Recover</a>"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "MonsterType_W3_TV_00"
-                  },
-                  "passed": [
-                    {
-                      "name": "Exit Broken-State",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Exit Broken-State",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      }
-                    }
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                  "displayLines": "{[Skill01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill01[0]]}"
                   ]
-                }
-              ]
+                },
+                "notAHit": true,
+                "dmgFormula": "Max HP Scaling",
+                "Toughness": null,
+                "Tags": null,
+                "EnergyGainPercent": "100%"
+              }
             },
             {
-              "name": "Find New Target",
-              "from": {
+              "name": "Add Events/Bonuses",
+              "to": {
                 "name": "Target Name",
-                "target": "{{Parameter Target List}}"
+                "target": "{{Parameter Target}}"
               },
-              "searchRandom": true,
-              "conditions": {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "flagName": "STAT_CTRL"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Remove Modifier Behavior Flag(s)",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "flagNames": []
-                }
-              ]
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Parameter Target List}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 0
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "MonsterType_W3_Dinosaur_00"
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "FlopSide",
-                  "value": -1
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "Theater_Rogue"
-                  }
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"665202517\">MModifier_Monster_W3_TV_02_Side2</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "Theater_Rogue"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "MonsterType_W3_Dinosaur_00"
-                    }
-                  }
+              "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+              "duration": {
+                "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+                "displayLines": "{[Skill01[3]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill01[3]]}"
                 ]
               },
-              "ability": "Monster_W3_Dinosaur_02_Ultimate_Part00",
-              "isTrigger": true
-            },
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Add Target by Unique Identifier",
-                "identifier": "TheaterCore"
+              "baseChance": {
+                "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
+                "displayLines": "{[Skill01[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill01[2]]}"
+                ]
               },
-              "variableName": "W3_Theater_00_BattleScore1_Flag",
-              "value": 1
-            },
-            "Wait for Pending Ability Completions",
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "conditions": {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "MonsterType_W1_Mecha01_02"
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+                  "displayLines": "{[Skill01[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill01[1]]}"
+                  ]
+                }
               }
             },
             {
               "name": "Remove Events/Bonuses",
               "to": {
                 "name": "Target Name",
-                "target": "{{Enemy Team All}}"
+                "target": "{{Parameter Target}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-618537723\">Enemy_Monster_W3_Theater_Part02Recover</a>"
-            }
+              "modifier": "<a class=\"gModGreen\" id=\"-1906678885\">MModifier_Monster_W3_TV_02_RemoveMark</a>"
+            },
+            "Trigger: Attack End"
           ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
       },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-618537723\">Enemy_Monster_W3_Theater_Part02Recover</a>",
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
+      "references": []
     },
     "3004025_BattleEventAbility_Monster_W3_Theater_PuzzleAbility": {
       "fileName": "3004025_BattleEventAbility_Monster_W3_Theater_PuzzleAbility",
@@ -754,102 +686,6 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"579019848\">MModifier_Monster_W3_TV_02_FaceLock</a>[<span class=\"descriptionNumberColor\">Tutoring</span>]"
             }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3004025_BattleEventAbility_Monster_W3_Theater_AllBreakInsert": {
-      "fileName": "3004025_BattleEventAbility_Monster_W3_Theater_AllBreakInsert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "value": "ENEMIES_OBJECT_UNUSED__114"
-          },
-          "ifTargetFound": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
-                },
-                "notAHit": true,
-                "dmgFormula": "Max HP Scaling",
-                "Toughness": null,
-                "Tags": null,
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
-              "duration": {
-                "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                "displayLines": "{[Skill01[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[3]]}"
-                ]
-              },
-              "baseChance": {
-                "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                "displayLines": "{[Skill01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[2]]}"
-                ]
-              },
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                  "displayLines": "{[Skill01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[1]]}"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1906678885\">MModifier_Monster_W3_TV_02_RemoveMark</a>"
-            },
-            "Trigger: Attack End"
           ]
         }
       ],
@@ -1583,9 +1419,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1692,9 +1526,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1758,9 +1590,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Exit View-Mode [Anyone]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1782,9 +1612,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__704406634\">Enemy_W3_Theater_ImmuneDebuff</a>",
           "modifierFlags": [
             "ImmuneDebuff"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2343,371 +2171,276 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Weakness Break [Anyone]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
-    "3004025_BattleEventAbility_Monster_W3_Theater_MainStory": {
-      "fileName": "3004025_BattleEventAbility_Monster_W3_Theater_MainStory",
+    "3004025_Monster_Monster_W3_Theater_Insert_RestartPhase2": {
+      "fileName": "3004025_Monster_Monster_W3_Theater_Insert_RestartPhase2",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "LoopCount",
-            "compareType": ">=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "MonsterType_W3_Dinosaur_00"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MainStoryDamage",
-                  "value": {
-                    "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                    "displayLines": "{[Skill04[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04[0]]}"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "LoopCount",
-            "compareType": ">=",
-            "value2": 4
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "MonsterType_W3_Dinosaur_00"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MainStoryDamage",
-                  "value": {
-                    "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-                    "displayLines": "{[Skill04[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04[1]]}"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "LoopCount",
-            "compareType": ">=",
-            "value2": 7
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "MonsterType_W3_Dinosaur_00"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MainStoryDamage",
-                  "value": {
-                    "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                    "displayLines": "{[Skill04[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill04[2]]}"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "Find New Target",
           "from": {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "searchRandom": true,
           "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "value": "ENEMIES_OBJECT_UNUSED__114"
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "ENEMIES_OBJECT_UNUSED__114"
+                  }
+                ]
+              }
+            ]
           },
           "ifTargetFound": [
             {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "LoopCount",
-                "compareType": ">=",
-                "value2": 3
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
               },
-              "passed": [
-                {
-                  "name": "Looped Event",
-                  "maxLoops": 3,
-                  "Event": [
-                    {
-                      "name": "Consume",
-                      "consumeFrom": "MaxHP",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target List}}"
-                      },
-                      "consumePercent": {
-                        "operator": "Variables[0] (MainStoryDamage) || Variables[1] (LoopCount) || DIV || RETURN",
-                        "displayLines": "(MainStoryDamage / LoopCount)",
-                        "constants": [],
-                        "variables": [
-                          "MainStoryDamage",
-                          "LoopCount"
-                        ]
-                      },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Imaginary"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
+              "searchRandom": true,
               "conditions": {
-                "name": "Compare: Variable",
-                "value1": "LoopCount",
-                "compareType": ">=",
-                "value2": 4
-              },
-              "passed": [
-                {
-                  "name": "Looped Event",
-                  "maxLoops": 1,
-                  "Event": [
-                    {
-                      "name": "Consume",
-                      "consumeFrom": "MaxHP",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target List}}"
-                      },
-                      "consumePercent": {
-                        "operator": "Variables[0] (MainStoryDamage) || Variables[1] (LoopCount) || DIV || RETURN",
-                        "displayLines": "(MainStoryDamage / LoopCount)",
-                        "constants": [],
-                        "variables": [
-                          "MainStoryDamage",
-                          "LoopCount"
-                        ]
-                      },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Imaginary"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "LoopCount",
-                "compareType": ">=",
-                "value2": 7
-              },
-              "passed": [
-                {
-                  "name": "Looped Event",
-                  "maxLoops": 2,
-                  "Event": [
-                    {
-                      "name": "Consume",
-                      "consumeFrom": "MaxHP",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target List}}"
-                      },
-                      "consumePercent": {
-                        "operator": "Variables[0] (MainStoryDamage) || Variables[1] (LoopCount) || DIV || RETURN",
-                        "displayLines": "(MainStoryDamage / LoopCount)",
-                        "constants": [],
-                        "variables": [
-                          "MainStoryDamage",
-                          "LoopCount"
-                        ]
-                      },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Imaginary"
-                      }
-                    }
-                  ]
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
                 },
+                "flagName": "Break"
+              },
+              "ignoreParallelWarning": true,
+              "ifTargetFound": [
                 {
-                  "name": "Consume",
-                  "consumeFrom": "MaxHP",
+                  "name": "Reset Toughness",
                   "target": {
                     "name": "Target Name",
-                    "target": "{{Parameter Target List}}"
+                    "target": "{{Parameter Target}}"
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
                   },
-                  "consumePercent": {
-                    "operator": "Variables[0] (MainStoryDamage) || Variables[1] (LoopCount) || DIV || RETURN",
-                    "displayLines": "(MainStoryDamage / LoopCount)",
-                    "constants": [],
-                    "variables": [
-                      "MainStoryDamage",
-                      "LoopCount"
-                    ]
+                  "modifier": "<a class=\"gModGreen\" id=\"-618537723\">Enemy_Monster_W3_Theater_Part02Recover</a>"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "MonsterType_W3_TV_00"
                   },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Imaginary"
+                  "passed": [
+                    {
+                      "name": "Exit Broken-State",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Exit Broken-State",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
+              },
+              "searchRandom": true,
+              "conditions": {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "flagName": "STAT_CTRL"
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Remove Modifier Behavior Flag(s)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "flagNames": []
+                }
+              ]
+            },
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
+              },
+              "searchRandom": true,
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "AIFlag",
+                  "value": 0
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "MonsterType_W3_Dinosaur_00"
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "FlopSide",
+                  "value": -1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "Theater_Rogue"
+                  }
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"665202517\">MModifier_Monster_W3_TV_02_Side2</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "Theater_Rogue"
                   }
                 }
               ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__114"
-          },
-          "ifTargetFound": [
             {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Check Boolean Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "value": "MonsterType_W3_Dinosaur_00"
+                    }
+                  }
+                ]
               },
-              "scope": "TargetEntity",
-              "variableName": "AIFlag",
-              "value": 0
+              "ability": "Monster_W3_Dinosaur_02_Ultimate_Part00",
+              "isTrigger": true
             },
             {
               "name": "Define Custom Variable",
               "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
+                "name": "Add Target by Unique Identifier",
+                "identifier": "TheaterCore"
               },
-              "scope": "TargetEntity",
-              "variableName": "FlopSide",
+              "variableName": "W3_Theater_00_BattleScore1_Flag",
               "value": 1
+            },
+            "Wait for Pending Ability Completions",
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "MonsterType_W1_Mecha01_02"
+              }
             },
             {
               "name": "Remove Events/Bonuses",
               "to": {
                 "name": "Target Name",
-                "target": "{{Parameter Target}}"
+                "target": "{{Enemy Team All}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"665202517\">MModifier_Monster_W3_TV_02_Side2</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+              "modifier": "<a class=\"gModGreen\" id=\"-618537723\">Enemy_Monster_W3_Theater_Part02Recover</a>"
             }
           ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "LoopCount",
-            "compareType": ">=",
-            "value2": 7
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"824631784\">Enemy_W3_Theater_MainStoryMark</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1381458312\">Enemy_W3_Theater_MainStoryUltraMark</a>"
         }
       ],
       "targetObjectData": {
@@ -2716,216 +2449,9 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1381458312\">Enemy_W3_Theater_MainStoryUltraMark</a>",
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__824631784\">Enemy_W3_Theater_MainStoryMark</a>",
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
-          ]
+          "for": "<a class=\"gModGreen\" id=\"mod__-618537723\">Enemy_Monster_W3_Theater_Part02Recover</a>"
         }
       ]
-    },
-    "3004025_Monster_W3_Theater_MainStoryInitiate03": {
-      "fileName": "3004025_Monster_W3_Theater_MainStoryInitiate03",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "LoopCount",
-          "value": 7
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-768925934\">Enemy_W3_Theater_MainStoryEnterBattle03</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-768925934\">Enemy_W3_Theater_MainStoryEnterBattle03</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "BattleEventAbility_Monster_W3_Theater_MainStory",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "priorityTag": "EnemyChangeState",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "3004025_Monster_W3_Theater_MainStoryInitiate02": {
-      "fileName": "3004025_Monster_W3_Theater_MainStoryInitiate02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "LoopCount",
-          "value": 4
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-752148315\">Enemy_W3_Theater_MainStoryEnterBattle02</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-752148315\">Enemy_W3_Theater_MainStoryEnterBattle02</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "BattleEventAbility_Monster_W3_Theater_MainStory",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "priorityTag": "EnemyChangeState",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "3004025_Monster_W3_Theater_MainStoryInitiate01": {
-      "fileName": "3004025_Monster_W3_Theater_MainStoryInitiate01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "LoopCount",
-          "value": 3
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-802481172\">Enemy_W3_Theater_MainStoryEnterBattle01</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-802481172\">Enemy_W3_Theater_MainStoryEnterBattle01</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "BattleEventAbility_Monster_W3_Theater_MainStory",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "priorityTag": "EnemyChangeState",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "3004025_Monster_W3_Theater_Ability08_Initiate": {
-      "fileName": "3004025_Monster_W3_Theater_Ability08_Initiate",
-      "skillTrigger": "Skill08",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3004025_Monster_W3_Theater_Ability04_Initiate": {
-      "fileName": "3004025_Monster_W3_Theater_Ability04_Initiate",
-      "skillTrigger": "Skill04",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
     },
     "3004025_Modifiers": {
       "fileName": "3004025_Modifiers",
@@ -3000,9 +2526,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3053,25 +2577,22 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1072054994\">MModifier_Monster_W3_Theater_DamageSharePhase2</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
           "latentQueue": [
             "BreakEndFlag",
             "InsertCheck",
             "LockCount",
             "AI_HeiShengBei_SpecialAI",
             "AI_HeiShengBei_Need"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
           ]
         },
         {
@@ -3087,9 +2608,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3166,6 +2685,14 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__579019848\">MModifier_Monster_W3_TV_02_FaceLock</a>[<span class=\"descriptionNumberColor\">Tutoring</span>]",
+          "latentQueue": [
+            "AIFlag"
+          ],
+          "description": "In Tutoring mode, this unit will not change its channel when attacked.",
+          "type": "Other",
+          "effectName": "Being Tutored",
+          "statusName": "Tutoring",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3352,16 +2879,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
-          ],
-          "description": "In Tutoring mode, this unit will not change its channel when attacked.",
-          "type": "Other",
-          "effectName": "Being Tutored",
-          "statusName": "Tutoring",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3380,6 +2898,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__665202517\">MModifier_Monster_W3_TV_02_Side2</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]",
+          "latentQueue": [
+            "AIFlag"
+          ],
+          "description": "Banacademic Office members can use \"Classroom Channel\" abilities. After they are attacked, they switch to \"Off-Class Channel\" mode.",
+          "type": "Other",
+          "statusName": "Classroom Channel",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3412,22 +2936,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "BreakEndFlag",
-            "InsertCheck",
-            "LockCount",
-            "AI_HeiShengBei_SpecialAI",
-            "AI_HeiShengBei_Need"
-          ],
-          "description": "Banacademic Office members can use \"Classroom Channel\" abilities. After they are attacked, they switch to \"Off-Class Channel\" mode.",
-          "type": "Other",
-          "statusName": "Classroom Channel"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]",
+          "latentQueue": [
+            "AIFlag"
+          ],
+          "description": "Banacademic Office members can use \"Off-Class Channel\" abilities. After they are attacked, they will not switch channels.",
+          "type": "Other",
+          "statusName": "Off-Class Channel",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3606,14 +3125,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Being Attacked End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
-          ],
-          "description": "Banacademic Office members can use \"Off-Class Channel\" abilities. After they are attacked, they will not switch channels.",
-          "type": "Other",
-          "statusName": "Off-Class Channel"
+          ]
         },
         {
           "name": "Modifier Construction",

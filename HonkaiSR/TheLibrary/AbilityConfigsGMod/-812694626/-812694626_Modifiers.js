@@ -55,6 +55,8 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-258769132\">MLevel_RougeSpecialStage08</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -91,13 +93,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-409767703\">MLevel_RougeSpecialStage07</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -125,9 +127,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -138,6 +138,9 @@ const configAbility = {
         "BlockDamage",
         "MuteBreak"
       ],
+      "useEntitySnapshot": true,
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -181,14 +184,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-426545322\">MLevel_RougeSpecialStage06</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -216,15 +218,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1091695268\">MLevel_RougeSpecialStage05_1_Attack</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "Replace",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
+      "stackLimit": 10,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -254,15 +258,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff",
-      "stackLimit": 10,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-443322941\">MLevel_RougeSpecialStage05</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -295,13 +297,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1273587047\">MLevel_RougeSpecialStage04_1_Attack</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
+      "description": "Missing Description",
+      "type": "Buff",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -324,14 +327,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-460100560\">MLevel_RougeSpecialStage04</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -406,15 +408,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1642131353\">MLevel_RougeSpecialStage03_1_Speed</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
       "stackType": "Replace",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "Missing Description",
+      "type": "Buff",
+      "stackLimit": 10,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -450,15 +454,13 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff",
-      "stackLimit": 10,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-342657227\">MLevel_RougeSpecialStage03</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -504,13 +506,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1293097583\">MLevel_RougeSpecialStage02_1_Attack</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -533,13 +535,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-359434846\">MLevel_RougeSpecialStage02</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -587,13 +589,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1767296958\">MLevel_RougeSpecialStage01_UnWeakResistance</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -629,13 +631,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1532514750\">MLevel_Stage20132_NatashaMission_FrozenResistance</a>[<span class=\"descriptionNumberColor\">Blizzard Immunity</span>]",
+      "description": "Cannot be Frozen.",
+      "type": "Buff",
+      "statusName": "Blizzard Immunity",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -651,14 +654,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Cannot be Frozen.",
-      "type": "Buff",
-      "statusName": "Blizzard Immunity"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1551674831\">MLevel_Stage2013202</a>[<span class=\"descriptionNumberColor\">Fragmentum Energy Surge</span>]",
+      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span> and DEF +<span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>.",
+      "type": "Buff",
+      "statusName": "Fragmentum Energy Surge",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -700,14 +703,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span> and DEF +<span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>.",
-      "type": "Buff",
-      "statusName": "Fragmentum Energy Surge"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__344912821\">MLevel_Stage2013201_UnWeakResistance</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
+      "description": "Missing Description",
+      "type": "Buff",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -743,13 +745,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1105433913\">MLevel_Stage20123201_LevelAllDamageReduce</a>[<span class=\"descriptionNumberColor\">Wildfire Reinforcements</span>]",
+      "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Wildfire Reinforcements",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -772,10 +775,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Wildfire Reinforcements"
+      ]
     }
   ],
   "references": []

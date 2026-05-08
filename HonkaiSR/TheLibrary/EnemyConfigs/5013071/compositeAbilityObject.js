@@ -3,333 +3,20 @@ const compositeAbilityObject = {
   "fullCharacterName": 5013071,
   "trimCharacterName": 5013071,
   "abilityList": [
-    "5013071_Monster_W5_RangerGroup_PassiveAbility01_Insert",
-    "5013071_Monster_W5_RangerGroup_PassiveAbilityInitiate",
-    "5013071_Monster_W5_RangerGroup_SpecialWin",
-    "5013071_Monster_W5_RangerGroup_Revive",
     "5013071_Monster_W5_Ranger_Ability04_Camera_Main",
     "5013071_Monster_W5_Ranger_Ability04_Part02_Main",
     "5013071_Monster_W5_Ranger_Ability04_Part01_Main",
-    "5013071_Monster_W5_Ranger_01_Main_Ability03_Part02",
-    "5013071_Monster_W5_Ranger_01_Main_Ability03_Part01",
-    "5013071_Monster_W5_Ranger_Main_Ability03_Part02",
-    "5013071_Monster_W5_Ranger_Main_Ability03_Part01",
     "5013071_Monster_W5_Ranger_Main_PassiveAbility01",
-    "5013071_Monster_W5_Ranger_Ability05_Part02",
-    "5013071_Monster_W5_Ranger_Ability05_Part01",
     "5013071_Monster_W5_Ranger_Ability04_Part02",
     "5013071_Monster_W5_Ranger_Ability04_Part01",
-    "5013071_Monster_W5_Ranger_Ability03_Part02",
-    "5013071_Monster_W5_Ranger_Ability03_Part01",
     "5013071_Monster_W5_Ranger_Ability02_Part02",
     "5013071_Monster_W5_Ranger_Ability02_Part01",
     "5013071_Monster_W5_Ranger_Ability01_Part02",
     "5013071_Monster_W5_Ranger_Ability01_Part01",
-    "5013071_Monster_W5_Ranger_PassiveAbility01",
+    "5013071_Monster_W5_RangerGroup_Revive",
     "5013071_Modifiers"
   ],
   "abilityObject": {
-    "5013071_Monster_W5_RangerGroup_PassiveAbility01_Insert": {
-      "fileName": "5013071_Monster_W5_RangerGroup_PassiveAbility01_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Create Enemies",
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                "displayLines": "SummonList_ADF_2",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_2"
-                ]
-              },
-              "locationType": "BeforeCaster"
-            },
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_4) || RETURN",
-                "displayLines": "SummonList_ADF_4",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_4"
-                ]
-              },
-              "locationType": "AfterCaster"
-            }
-          ]
-        },
-        {
-          "name": "Set Enemy Phase",
-          "mode": "Inc"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Create Shared HP Group",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "subTarget": {
-            "name": "Target Name",
-            "target": "{{Recently Summoned Enemies}}"
-          },
-          "resolveToSubGroups": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Recently Summoned Enemies}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1502379157\">Enemy_W5_RangerGroup_SummonedLockHp</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2082758660\">Enemy_W5_RangerGroup_MainEnd</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "InsertCheck",
-          "value": 1
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1422594911\">Enemy_W5_RangerGroup_PartController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013071_Monster_W5_RangerGroup_PassiveAbilityInitiate": {
-      "fileName": "5013071_Monster_W5_RangerGroup_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Set Action-State",
-          "on": null,
-          "stateName": "PartControl",
-          "state": false
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": false
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2004703763\">Enemy_W5_RangerGroup_PassiveAbilityInitiate</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1422594911\">Enemy_W5_RangerGroup_PartController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013071_Monster_W5_RangerGroup_SpecialWin": {
-      "fileName": "5013071_Monster_W5_RangerGroup_SpecialWin",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013071_Monster_W5_RangerGroup_Revive": {
-      "fileName": "5013071_Monster_W5_RangerGroup_Revive",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1502379157\">Enemy_W5_RangerGroup_SummonedLockHp</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-488756959\">Enemy_W5_RangerGroup_SpecialWin</a>"
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "valuePercent": 1,
-          "isFixed": "(Fixed)"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "multiBase": 1
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "set": 0
-        },
-        {
-          "name": "Assign Advance/Delay to Current Ability Use",
-          "adjustmentValue": 0,
-          "adjustmentType": "="
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1761388509\">Enemy_W5_Ranger_Main_Ultra</a>[<span class=\"descriptionNumberColor\">Ultimate Daybreak</span>]"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1577274573\">Enemy_W5_Ranger_Main_UltraViewMode</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter View-Mode [Anyone]"
-            },
-            {
-              "eventTrigger": "Exit View-Mode [Anyone]"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1761388509\">Enemy_W5_Ranger_Main_Ultra</a>[<span class=\"descriptionNumberColor\">Ultimate Daybreak</span>]",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate",
-                    "invertCondition": true
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate",
-                    "invertCondition": true
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ultimate Prep-Phase [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1577274573\">Enemy_W5_Ranger_Main_UltraViewMode</a>"
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": 10
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Cannot be knocked down. Ultimate DMG greatly increases.",
-          "type": "Buff",
-          "effectName": "Ultimate Daybreak",
-          "statusName": "Ultimate Daybreak"
-        }
-      ]
-    },
     "5013071_Monster_W5_Ranger_Ability04_Camera_Main": {
       "fileName": "5013071_Monster_W5_Ranger_Ability04_Camera_Main",
       "abilityType": null,
@@ -640,9 +327,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -691,114 +376,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "5013071_Monster_W5_Ranger_01_Main_Ability03_Part02": {
-      "fileName": "5013071_Monster_W5_Ranger_01_Main_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1643569913\">Enemy_W5_Ranger_Main_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-          "valuePerStack": {
-            "MDF_DamageUp": {
-              "operator": "Variables[0] (UnusedUnderThisBase_592) || RETURN",
-              "displayLines": "UnusedUnderThisBase_592",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_592"
-              ]
-            }
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013071_Monster_W5_Ranger_01_Main_Ability03_Part01": {
-      "fileName": "5013071_Monster_W5_Ranger_01_Main_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Ranger_01_Main_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013071_Monster_W5_Ranger_Main_Ability03_Part02": {
-      "fileName": "5013071_Monster_W5_Ranger_Main_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-680453013\">Enemy_W5_Ranger_Main_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-          "valuePerStack": {
-            "MDF_SpeedUp": {
-              "operator": "Variables[0] (UnusedUnderThisBase_593) || RETURN",
-              "displayLines": "UnusedUnderThisBase_593",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_593"
-              ]
-            }
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013071_Monster_W5_Ranger_Main_Ability03_Part01": {
-      "fileName": "5013071_Monster_W5_Ranger_Main_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Ranger_Main_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "5013071_Monster_W5_Ranger_Main_PassiveAbility01": {
       "fileName": "5013071_Monster_W5_Ranger_Main_PassiveAbility01",
       "skillTrigger": "SkillP01",
@@ -827,96 +404,9 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1534116188\">Enemy_W5_Ranger_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
-    },
-    "5013071_Monster_W5_Ranger_Ability05_Part02": {
-      "fileName": "5013071_Monster_W5_Ranger_Ability05_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1927239462\">Enemy_W5_Ranger_Shield</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-258343603\">Enemy_W5_Ranger_Debuff</a>",
-          "duration": {
-            "operator": "Variables[0] (UnusedUnderThisBase_589) || RETURN",
-            "displayLines": "UnusedUnderThisBase_589",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_589"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_AllDamageTypeTakenRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_590) || RETURN",
-              "displayLines": "UnusedUnderThisBase_590",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_590"
-              ]
-            },
-            "MDF_ResistanceDelta": {
-              "operator": "Variables[0] (UnusedUnderThisBase_591) || RETURN",
-              "displayLines": "UnusedUnderThisBase_591",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_591"
-              ]
-            }
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013071_Monster_W5_Ranger_Ability05_Part01": {
-      "fileName": "5013071_Monster_W5_Ranger_Ability05_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Ranger_Ability05_Part02",
-          "isTrigger": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
     },
     "5013071_Monster_W5_Ranger_Ability04_Part02": {
       "fileName": "5013071_Monster_W5_Ranger_Ability04_Part02",
@@ -1325,84 +815,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "5013071_Monster_W5_Ranger_Ability03_Part02": {
-      "fileName": "5013071_Monster_W5_Ranger_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Charge"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1927239462\">Enemy_W5_Ranger_Shield</a>",
-          "valuePerStack": {
-            "MDF_MaxCharge": {
-              "operator": "Variables[0] (UnusedUnderThisBase_587) || RETURN",
-              "displayLines": "UnusedUnderThisBase_587",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_587"
-              ]
-            },
-            "MDF_HitCharge": {
-              "operator": "Variables[0] (UnusedUnderThisBase_588) || RETURN",
-              "displayLines": "UnusedUnderThisBase_588",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_588"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013071_Monster_W5_Ranger_Ability03_Part01": {
-      "fileName": "5013071_Monster_W5_Ranger_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Ranger_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },
@@ -2094,117 +1506,67 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "5013071_Monster_W5_Ranger_PassiveAbility01": {
-      "fileName": "5013071_Monster_W5_Ranger_PassiveAbility01",
+    "5013071_Monster_W5_RangerGroup_Revive": {
+      "fileName": "5013071_Monster_W5_RangerGroup_Revive",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Add Events/Bonuses",
+          "name": "Remove Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Caster}}"
+            "target": "{{Enemy Team All}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1534116188\">Enemy_W5_Ranger_MuteHitFly</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-1502379157\">Enemy_W5_RangerGroup_SummonedLockHp</a>"
         },
         {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-488756959\">Enemy_W5_RangerGroup_SpecialWin</a>"
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1610837626\">Enemy_W5_Ranger_BreakListener</a>"
+          "valuePercent": 1,
+          "isFixed": "(Fixed)"
         },
         {
-          "name": "Define Custom Variable",
-          "variableName": "MaxChargeValue",
-          "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_587) || RETURN",
-            "displayLines": "UnusedUnderThisBase_587",
-            "constants": [],
-            "variables": [
-              "UnusedUnderThisBase_587"
-            ]
-          }
-        },
-        {
-          "name": "SWITCH",
-          "switchValue": {
-            "operator": "Variables[0] (CurrentRanger) || RETURN",
-            "displayLines": "CurrentRanger",
-            "constants": [],
-            "variables": [
-              "CurrentRanger"
-            ]
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
           },
-          "caseEvents": [
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 0,
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-460724503\">Standard_Resistance_Quantum</a>"
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 1,
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"338359600\">Standard_Resistance_Fire</a>"
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 2,
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1406200933\">Standard_Resistance_Imaginary</a>"
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 3,
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-810912311\">Standard_Resistance_Physical</a>"
-                }
-              ]
-            }
-          ],
-          "defaultEvents": []
+          "multiBase": 1
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "set": 0
+        },
+        {
+          "name": "Assign Advance/Delay to Current Ability Use",
+          "adjustmentValue": 0,
+          "adjustmentType": "="
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1761388509\">Enemy_W5_Ranger_Main_Ultra</a>[<span class=\"descriptionNumberColor\">Ultimate Daybreak</span>]"
         }
       ],
       "targetObjectData": {
@@ -2213,438 +1575,76 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-810912311\">Standard_Resistance_Physical</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__1577274573\">Enemy_W5_Ranger_Main_UltraViewMode</a>",
           "execute": [
             {
-              "eventTrigger": "Action Choice Window [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Appear_Flag",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Trigger_Flag",
-                        "compareType": "=",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Trigger_Flag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
+              "eventTrigger": "Enter View-Mode [Anyone]"
             },
             {
-              "eventTrigger": "Take Damage End [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Damage Type/Element",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "list": [
-                      "Physical"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Appear_Flag",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Trigger_Flag",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Wave Count",
-                        "compareType": "=",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Trigger_Flag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
+              "eventTrigger": "Exit View-Mode [Anyone]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MaxChargeValue"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1406200933\">Standard_Resistance_Imaginary</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action Choice Window [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Appear_Flag",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Trigger_Flag",
-                        "compareType": "=",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Trigger_Flag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Take Damage End [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Damage Type/Element",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "list": [
-                      "Imaginary"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Appear_Flag",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Trigger_Flag",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Wave Count",
-                        "compareType": "=",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Trigger_Flag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MaxChargeValue"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__338359600\">Standard_Resistance_Fire</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action Choice Window [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Appear_Flag",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Trigger_Flag",
-                        "compareType": "=",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Trigger_Flag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Take Damage End [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Damage Type/Element",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "list": [
-                      "Fire"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Appear_Flag",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Trigger_Flag",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Wave Count",
-                        "compareType": "=",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Trigger_Flag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MaxChargeValue"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-460724503\">Standard_Resistance_Quantum</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action Choice Window [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Appear_Flag",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Trigger_Flag",
-                        "compareType": "=",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Trigger_Flag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Take Damage End [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Damage Type/Element",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "list": [
-                      "Quantum"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Appear_Flag",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Trigger_Flag",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Wave Count",
-                        "compareType": "=",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Trigger_Flag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MaxChargeValue"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1610837626\">Enemy_W5_Ranger_BreakListener</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1761388509\">Enemy_W5_Ranger_Main_Ultra</a>[<span class=\"descriptionNumberColor\">Ultimate Daybreak</span>]",
+          "description": "Cannot be knocked down. Ultimate DMG greatly increases.",
+          "type": "Buff",
+          "effectName": "Ultimate Daybreak",
+          "statusName": "Ultimate Daybreak",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             },
             {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "eventTrigger": "Ability Use [Owner]: Start",
               "execute": [
                 {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 1
-                },
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate",
+                    "invertCondition": true
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate",
+                    "invertCondition": true
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ultimate Prep-Phase [Owner]",
+              "execute": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+                  "modifier": "<a class=\"gModGreen\" id=\"1577274573\">Enemy_W5_Ranger_Main_UltraViewMode</a>"
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": 10
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1534116188\">Enemy_W5_Ranger_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2735,9 +1735,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2800,14 +1798,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1643569913\">Enemy_W5_Ranger_Main_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUp</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2830,21 +1831,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUp"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUp</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-680453013\">Enemy_W5_Ranger_Main_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2867,16 +1864,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedUp"
-          ],
-          "latentQueue": [],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2903,9 +1891,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3048,9 +2034,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3170,9 +2154,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3400,12 +2382,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageTypeTakenRatio",
-            "MDF_ResistanceDelta"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4510,12 +3487,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxCharge",
-            "MDF_HitCharge"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

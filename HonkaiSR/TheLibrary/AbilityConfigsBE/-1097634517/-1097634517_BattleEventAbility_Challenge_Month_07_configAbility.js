@@ -22,6 +22,12 @@ const configAbility = {
       "modifierFlags": [
         "STAT_Fatigue"
       ],
+      "description": "Each stack decreases DMG dealt by <span class=\"descriptionNumberColor\">ADF_1</span>, up to <span class=\"descriptionNumberColor\">ADF_2</span> stack(s).",
+      "type": "Debuff",
+      "effectName": "Memory Imprint",
+      "statusName": "Memory Imprint",
+      "stackLimit": 5,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -55,13 +61,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack decreases DMG dealt by <span class=\"descriptionNumberColor\">ADF_1</span>, up to <span class=\"descriptionNumberColor\">ADF_2</span> stack(s).",
-      "type": "Debuff",
-      "effectName": "Memory Imprint",
-      "statusName": "Memory Imprint",
-      "stackLimit": 5,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -169,9 +169,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

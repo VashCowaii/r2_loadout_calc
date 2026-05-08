@@ -3,89 +3,127 @@ const compositeAbilityObject = {
   "fullCharacterName": 60027,
   "trimCharacterName": 60027,
   "abilityList": [
-    "60027_Phainon_Ability31_Part2_MainStory",
+    "60027_MissionBattleEvent60027_Ability03_Part01",
     "60027_Phainon_Ability31_Part1_MainStory",
-    "60027_MissionBattleEvent60027_Ability03_Part01"
+    "60027_Phainon_Ability31_Part2_MainStory"
   ],
   "abilityObject": {
-    "60027_Phainon_Ability31_Part2_MainStory": {
-      "fileName": "60027_Phainon_Ability31_Part2_MainStory",
-      "abilityType": null,
+    "60027_MissionBattleEvent60027_Ability03_Part01": {
+      "fileName": "60027_MissionBattleEvent60027_Ability03_Part01",
+      "childAbilityList": [
+        "60027_MissionBattleEvent60027_Ability03_Part01"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Ultimate",
       "energy": null,
-      "toughnessList": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
       "parse": [
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}.[[living]]"
-          },
-          "variableName": "ADF_TargetCount",
-          "livingTargets": true,
-          "context": "ContextAbility"
-        },
+        "Show BattleEvent Button",
         {
           "name": "Find New Target",
           "from": {
             "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
+            "target": "{{Player Team All(with Unselectable)}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Character ID",
+            "ID": 1408,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "characterName": "Phainon"
           },
           "ifTargetFound": [
             {
-              "name": "Define Custom Variable with Stat",
-              "target": {
+              "name": "Trigger Ability",
+              "from": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "_CurrentHp",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "canPhase": true,
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "displayLines": 1
-                },
-                "DamageFlat": {
-                  "operator": "Variables[0] (_CurrentHp) || RETURN",
-                  "displayLines": "_CurrentHp",
-                  "constants": [],
-                  "variables": [
-                    "_CurrentHp"
-                  ]
-                },
-                "HitSplit": {
-                  "operator": "Constants[0] (1) || Variables[0] (ADF_TargetCount) || DIV || RETURN",
-                  "displayLines": "(1 / ADF_TargetCount)",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "ADF_TargetCount"
-                  ]
-                },
-                "Toughness": {
-                  "displayLines": 60
-                },
-                "Tags": null,
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Ultimate"
-              },
-              "attackType": "Ultimate"
+              "ability": "Phainon_Ability31_Part1_MainStory",
+              "isTrigger": true
             }
           ]
         },
-        "Trigger: Attack End"
+        "Trigger: Ability End"
       ],
-      "references": [],
+      "whenAdded": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Character ID",
+            "ID": 1408,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "characterName": "Phainon"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-2002345609\">MissionBattleEvent60027_AddAbility</a>"
+            }
+          ]
+        },
+        {
+          "name": "Automatically use Ultimate",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "value": 100,
+          "isFixed": "* ERR"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2002345609\">MissionBattleEvent60027_AddAbility</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Add Ability",
+                  "abilityName": "Phainon_Ability31_Part1_MainStory"
+                },
+                {
+                  "name": "Add Ability",
+                  "abilityName": "Phainon_Ability31_Part2_MainStory"
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "All Enemy Team"
       }
     },
     "60027_Phainon_Ability31_Part1_MainStory": {
@@ -209,124 +247,84 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
     },
-    "60027_MissionBattleEvent60027_Ability03_Part01": {
-      "fileName": "60027_MissionBattleEvent60027_Ability03_Part01",
-      "childAbilityList": [
-        "60027_MissionBattleEvent60027_Ability03_Part01"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Ultimate",
+    "60027_Phainon_Ability31_Part2_MainStory": {
+      "fileName": "60027_Phainon_Ability31_Part2_MainStory",
+      "abilityType": null,
       "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
+      "toughnessList": null,
       "parse": [
-        "Show BattleEvent Button",
         {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Character ID",
-            "ID": 1408,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": "Phainon"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "ability": "Phainon_Ability31_Part1_MainStory",
-              "isTrigger": true
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "whenAdded": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Character ID",
-            "ID": 1408,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": "Phainon"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2002345609\">MissionBattleEvent60027_AddAbility</a>"
-            }
-          ]
-        },
-        {
-          "name": "Automatically use Ultimate",
+          "name": "Define Custom Variable with Team Count",
           "target": {
             "name": "Target Name",
-            "target": "{{Caster}}"
-          }
+            "target": "{{Enemy Team All}}.[[living]]"
+          },
+          "variableName": "ADF_TargetCount",
+          "livingTargets": true,
+          "context": "ContextAbility"
         },
         {
-          "name": "Update Energy",
-          "on": {
+          "name": "Find New Target",
+          "from": {
             "name": "Target Name",
-            "target": "{{Caster}}"
+            "target": "{{Hostile Entities(AOE)}}"
           },
-          "value": 100,
-          "isFixed": "* ERR"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2002345609\">MissionBattleEvent60027_AddAbility</a>",
-          "execute": [
+          "ifTargetFound": [
             {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Add Ability",
-                  "abilityName": "Phainon_Ability31_Part1_MainStory"
+              "name": "Define Custom Variable with Stat",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "variableName": "_CurrentHp",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
+            },
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "displayLines": 1
                 },
-                {
-                  "name": "Add Ability",
-                  "abilityName": "Phainon_Ability31_Part2_MainStory"
-                }
-              ]
+                "DamageFlat": {
+                  "operator": "Variables[0] (_CurrentHp) || RETURN",
+                  "displayLines": "_CurrentHp",
+                  "constants": [],
+                  "variables": [
+                    "_CurrentHp"
+                  ]
+                },
+                "HitSplit": {
+                  "operator": "Constants[0] (1) || Variables[0] (ADF_TargetCount) || DIV || RETURN",
+                  "displayLines": "(1 / ADF_TargetCount)",
+                  "constants": [
+                    1
+                  ],
+                  "variables": [
+                    "ADF_TargetCount"
+                  ]
+                },
+                "Toughness": {
+                  "displayLines": 60
+                },
+                "Tags": null,
+                "behaviorTag": "DirectlyLoseHpHit",
+                "attackType": "Ultimate"
+              },
+              "attackType": "Ultimate"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
+          ]
+        },
+        "Trigger: Attack End"
       ],
+      "references": [],
       "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "All Enemy Team"
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
     }
   },

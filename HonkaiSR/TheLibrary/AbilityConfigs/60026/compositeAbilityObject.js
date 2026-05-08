@@ -3,11 +3,165 @@ const compositeAbilityObject = {
   "fullCharacterName": 60026,
   "trimCharacterName": 60026,
   "abilityList": [
-    "60026_Phainon_Ability22_v2_Part02_MainStory",
+    "60026_MissionBattleEvent60026_Ability03_Part01",
     "60026_Phainon_Ability22_v2_Part01_MainStory",
-    "60026_MissionBattleEvent60026_Ability03_Part01"
+    "60026_Phainon_Ability22_v2_Part02_MainStory"
   ],
   "abilityObject": {
+    "60026_MissionBattleEvent60026_Ability03_Part01": {
+      "fileName": "60026_MissionBattleEvent60026_Ability03_Part01",
+      "childAbilityList": [
+        "60026_MissionBattleEvent60026_Ability03_Part01"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Ultimate",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        "Show BattleEvent Button",
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Character ID",
+            "ID": 1408,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "characterName": "Phainon"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "ability": "Phainon_Ability22_v2_Part01_MainStory",
+              "isTrigger": true
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "whenAdded": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Character ID",
+            "ID": 1408,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "characterName": "Phainon"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"254185198\">MissionBattleEvent60026_AddAbility</a>"
+            }
+          ]
+        },
+        {
+          "name": "Automatically use Ultimate",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "value": 100,
+          "isFixed": "* ERR"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__254185198\">MissionBattleEvent60026_AddAbility</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Add Ability",
+                  "abilityName": "Phainon_Ability22_v2_Part01_MainStory"
+                },
+                {
+                  "name": "Add Ability",
+                  "abilityName": "Phainon_Ability22_v2_Part02_MainStory"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "All Enemy Team"
+      }
+    },
+    "60026_Phainon_Ability22_v2_Part01_MainStory": {
+      "fileName": "60026_Phainon_Ability22_v2_Part01_MainStory",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Phainon_Ability22_v2_Part02_MainStory",
+          "isTrigger": true
+        },
+        {
+          "name": "Clear DMG Numbers(UI)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          }
+        },
+        {
+          "name": "Clear DMG Numbers(UI)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
     "60026_Phainon_Ability22_v2_Part02_MainStory": {
       "fileName": "60026_Phainon_Ability22_v2_Part02_MainStory",
       "abilityType": null,
@@ -172,162 +326,6 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "60026_Phainon_Ability22_v2_Part01_MainStory": {
-      "fileName": "60026_Phainon_Ability22_v2_Part01_MainStory",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Phainon_Ability22_v2_Part02_MainStory",
-          "isTrigger": true
-        },
-        {
-          "name": "Clear DMG Numbers(UI)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          }
-        },
-        {
-          "name": "Clear DMG Numbers(UI)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "60026_MissionBattleEvent60026_Ability03_Part01": {
-      "fileName": "60026_MissionBattleEvent60026_Ability03_Part01",
-      "childAbilityList": [
-        "60026_MissionBattleEvent60026_Ability03_Part01"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Ultimate",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        "Show BattleEvent Button",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Character ID",
-            "ID": 1408,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": "Phainon"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "ability": "Phainon_Ability22_v2_Part01_MainStory",
-              "isTrigger": true
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "whenAdded": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Character ID",
-            "ID": 1408,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": "Phainon"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"254185198\">MissionBattleEvent60026_AddAbility</a>"
-            }
-          ]
-        },
-        {
-          "name": "Automatically use Ultimate",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "value": 100,
-          "isFixed": "* ERR"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__254185198\">MissionBattleEvent60026_AddAbility</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Add Ability",
-                  "abilityName": "Phainon_Ability22_v2_Part01_MainStory"
-                },
-                {
-                  "name": "Add Ability",
-                  "abilityName": "Phainon_Ability22_v2_Part02_MainStory"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "All Enemy Team"
       }
     }
   },

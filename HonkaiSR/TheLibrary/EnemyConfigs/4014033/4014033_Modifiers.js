@@ -11,6 +11,13 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1292838645\">Modifier_Monster_W4_Pollux_B_HardLockHp</a>",
+      "stackData": [
+        "MDF_LockHp"
+      ],
+      "latentQueue": [
+        "IsNeedFade",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -134,18 +141,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_LockHp"
-      ],
-      "latentQueue": [
-        "IsNeedFade",
-        "AIFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1324293112\">Modifier_Monster_W4_Pollux_B_HardLockHp_BFAbility05</a>",
+      "stackData": [
+        "MDF_LockHp"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -163,11 +166,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_LockHp"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -218,9 +217,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -284,9 +281,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -348,13 +343,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1061433740\">Monster_W4_Pollux_StoryMode_SpecailAbility05</a>",
+      "latentQueue": [
+        "AIFlag",
+        "StoryMode",
+        "_StorySkill05"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -390,12 +388,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag",
-        "StoryMode",
-        "_StorySkill05"
       ]
     },
     {
@@ -406,6 +398,17 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DOT"
       ],
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_DamagePercentage",
+        "MDF_DamageHpAddedRatio"
+      ],
+      "description": "Receives DMG at the start of the turn. The higher the target's current HP percentage, the more DMG they receive. This DMG is \"Non-fatal.\"",
+      "type": "Debuff",
+      "effectName": "DoT",
+      "statusName": "Hastened Death",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -507,19 +510,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_DamagePercentage",
-        "MDF_DamageHpAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "Receives DMG at the start of the turn. The higher the target's current HP percentage, the more DMG they receive. This DMG is \"Non-fatal.\"",
-      "type": "Debuff",
-      "effectName": "DoT",
-      "statusName": "Hastened Death",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -547,6 +538,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-289587260\">Monster_W4_Pollux_StoryMode_LockHP</a>",
+      "latentQueue": [
+        "_StorySimulationSpeed",
+        "AIFlag",
+        "StoryMode"
+      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -637,17 +633,14 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_StorySimulationSpeed",
-        "AIFlag",
-        "StoryMode"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-720682465\">Monster_W4_Pollux_PartController_LockHP</a>",
+      "latentQueue": [
+        "_WorldLevel"
+      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -711,10 +704,6 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_WorldLevel"
       ]
     },
     {
@@ -750,6 +739,14 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "RemoveWhenCasterUnstage"
       ],
+      "stackData": [
+        "_HpLimitRatio",
+        "_FatigueRatio"
+      ],
+      "description": "When this target deals DMG to enemy targets, decreases DMG received by enemy targets by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Restore HP to an ally target until it reaches <span class=\"descriptionNumberColor\">MDF_ShowValue2</span> to dispel this effect.",
+      "type": "Other",
+      "effectName": "DMG Reduction",
+      "statusName": "Indulging Slumber",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -982,19 +979,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "_HpLimitRatio",
-        "_FatigueRatio"
-      ],
-      "latentQueue": [
-        "AIFlag",
-        "_WorldLevel"
-      ],
-      "description": "When this target deals DMG to enemy targets, decreases DMG received by enemy targets by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Restore HP to an ally target until it reaches <span class=\"descriptionNumberColor\">MDF_ShowValue2</span> to dispel this effect.",
-      "type": "Other",
-      "effectName": "DMG Reduction",
-      "statusName": "Indulging Slumber"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1003,6 +988,10 @@ const configAbility = {
       "modifierFlags": [
         "Endurance"
       ],
+      "description": "\"The Living Shan't Flee\" enhances to \"The Dead Shan't Avoid.\"",
+      "type": "Other",
+      "effectName": "Enhance",
+      "statusName": "Overdue Obituary",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1166,22 +1155,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "\"The Living Shan't Flee\" enhances to \"The Dead Shan't Avoid.\"",
-      "type": "Other",
-      "effectName": "Enhance",
-      "statusName": "Overdue Obituary"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__276281376\">Monster_W4_Pollux_Main_DisableAction</a>",
       "modifierFlags": [
         "DisableAction"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1189,7 +1170,6 @@ const configAbility = {
       "modifierFlags": [
         "DisableAction"
       ],
-      "stackData": [],
       "latentQueue": [
         "_WorldLevel"
       ],
@@ -1198,6 +1178,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-888665654\">Monster_W4_Pollux_Strengthen_Break</a>",
+      "latentQueue": [
+        "_WorldLevel"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1260,10 +1243,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_WorldLevel"
       ]
     },
     {
@@ -2320,6 +2299,9 @@ const configAbility = {
         "MuteBreak",
         "Endurance"
       ],
+      "description": "Before \"Pollux\" takes their next action, their Toughness cannot be reduced and is immune to action delay effects inflicted by targets.",
+      "type": "Other",
+      "statusName": "Weakness Protected",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2378,10 +2360,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Before \"Pollux\" takes their next action, their Toughness cannot be reduced and is immune to action delay effects inflicted by targets.",
-      "type": "Other",
-      "statusName": "Weakness Protected"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2389,6 +2368,14 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
+      "stackData": [
+        "MDF_ShowValue1",
+        "MDF_SpeedUpRatio"
+      ],
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Attacks against \"Pollux\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
+      "type": "Other",
+      "effectName": "Enhance",
+      "statusName": "Fragrance of Death",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2446,19 +2433,19 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                   "valuePerStack": {
                     "MDF_ShieldPercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_71) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_71",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11925) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11925",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_71"
+                        "UnusedUnderThisBase_11925"
                       ]
                     },
                     "MDF_ShieldAttack_HealRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_69) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_69",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11953) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11953",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_69"
+                        "UnusedUnderThisBase_11953"
                       ]
                     }
                   }
@@ -2821,24 +2808,11 @@ const configAbility = {
         {
           "eventTrigger": "Pre-Death [Owner]"
         }
-      ],
-      "stackData": [
-        "MDF_ShowValue1",
-        "MDF_SpeedUpRatio"
-      ],
-      "latentQueue": [
-        "AIFlag",
-        "_WorldLevel"
-      ],
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Attacks against \"Pollux\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
-      "type": "Other",
-      "effectName": "Enhance",
-      "statusName": "Fragrance of Death"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2086497725\">Monster_W4_Pollux_EnergyBar</a>",
-      "stackData": [],
       "latentQueue": [
         "AIFlag",
         "StoryMode",
@@ -2848,7 +2822,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-977406110\">Monster_W4_Pollux_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]",
-      "stackData": [],
       "latentQueue": [
         "_WorldLevel",
         "AIFlag"
@@ -2859,13 +2832,15 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__599310144\">Monster_W4_Pollux_FX_Ground</a>",
+      "latentQueue": [
+        "IsNeedFade",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2895,14 +2870,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "StoryMode",
-        "_StorySetSpeed",
-        "_StorySimulationSpeed",
-        "IsNeedFade",
-        "AIFlag"
       ]
     }
   ],

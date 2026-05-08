@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 2023020,
   "trimCharacterName": 2023020,
   "abilityList": [
+    "2023020_Monster_W2_Beast02_AbilityP01_Initiate",
     "2023020_Monster_W2_Beast02_Ability05_Part02",
     "2023020_Monster_W2_Beast02_Ability05_Part01",
     "2023020_Monster_W2_Beast02_Ability04_Part02",
@@ -13,10 +14,90 @@ const compositeAbilityObject = {
     "2023020_Monster_W2_Beast02_Ability02_Part01",
     "2023020_Monster_W2_Beast02_Ability01_Part02",
     "2023020_Monster_W2_Beast02_Ability01_Part01",
-    "2023020_Monster_W2_Beast02_AbilityP01_Initiate",
     "2023020_Modifiers"
   ],
   "abilityObject": {
+    "2023020_Monster_W2_Beast02_AbilityP01_Initiate": {
+      "fileName": "2023020_Monster_W2_Beast02_AbilityP01_Initiate",
+      "childAbilityList": [
+        "2023020_Monster_W2_Beast02_AbilityP01_Initiate"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2027241011\">W2_Beast02_MuteHitFly</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Level Entity}}"
+            },
+            "value1": "Beast02_Num_Flag",
+            "compareType": "=",
+            "value2": 0,
+            "contextScope": "TargetEntity"
+          },
+          "passed": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "Beast02_Num_Flag"
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable with Added Value",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "variableName": "Beast02_Num_Flag",
+          "context": "TargetEntity",
+          "value": 1,
+          "max": 10
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2027241011\">W2_Beast02_MuteHitFly</a>",
+          "modifierFlags": [
+            "MuteHitFly"
+          ]
+        }
+      ]
+    },
     "2023020_Monster_W2_Beast02_Ability05_Part02": {
       "fileName": "2023020_Monster_W2_Beast02_Ability05_Part02",
       "abilityType": null,
@@ -480,89 +561,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2023020_Monster_W2_Beast02_AbilityP01_Initiate": {
-      "fileName": "2023020_Monster_W2_Beast02_AbilityP01_Initiate",
-      "childAbilityList": [
-        "2023020_Monster_W2_Beast02_AbilityP01_Initiate"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2027241011\">W2_Beast02_MuteHitFly</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Level Entity}}"
-            },
-            "value1": "Beast02_Num_Flag",
-            "compareType": "=",
-            "value2": 0,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "Beast02_Num_Flag"
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "variableName": "Beast02_Num_Flag",
-          "context": "TargetEntity",
-          "value": 1,
-          "max": 10
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2027241011\">W2_Beast02_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "2023020_Modifiers": {
       "fileName": "2023020_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -599,14 +597,16 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Extra Action/Turn [Owner]: Start "
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1532177993\">Monster_W2_Beast02_Weak</a>[<span class=\"descriptionNumberColor\">Exhaustion</span>]",
           "stackType": "Replace",
+          "description": "Malefic Ape's Gusto has been exhausted.",
+          "type": "Other",
+          "effectName": "Exhaustion",
+          "statusName": "Exhaustion",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -614,18 +614,16 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Attack DMG End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Malefic Ape's Gusto has been exhausted.",
-          "type": "Other",
-          "effectName": "Exhaustion",
-          "statusName": "Exhaustion"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__908537899\">Monster_W2_Beast02_Bullet</a>[<span class=\"descriptionNumberColor\">Gusto</span>]",
           "stackType": "Replace",
+          "description": "Malefic Ape's current Gusto amount.",
+          "type": "Other",
+          "effectName": "Regenerate Gusto",
+          "statusName": "Gusto",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -656,13 +654,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Attack DMG End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Malefic Ape's current Gusto amount.",
-          "type": "Other",
-          "effectName": "Regenerate Gusto",
-          "statusName": "Gusto"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -672,6 +664,10 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "RemoveWhenOwnerUnselectable"
           ],
+          "description": "Marked by %CasterName for Monitoring.",
+          "type": "Other",
+          "effectName": "Monitor",
+          "statusName": "Monitor",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -716,13 +712,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Marked by %CasterName for Monitoring.",
-          "type": "Other",
-          "effectName": "Monitor",
-          "statusName": "Monitor"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -733,6 +723,11 @@ const compositeAbilityObject = {
             "BlockDamageExcludeDot",
             "MuteBreak"
           ],
+          "useEntitySnapshot": true,
+          "description": "Nullifies all DMG received except DoTs. This status is dispelled after being attacked.",
+          "type": "Buff",
+          "effectName": "Barrier",
+          "statusName": "Barrier",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -776,17 +771,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "Nullifies all DMG received except DoTs. This status is dispelled after being attacked.",
-          "type": "Buff",
-          "effectName": "Barrier",
-          "statusName": "Barrier"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1692594642\">Monster_Standard_Layer_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_DamageAddedRatio",
+            "MDF_MaxLayer"
+          ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span> for up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stacks.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -820,17 +819,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageAddedRatio",
-            "MDF_MaxLayer"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span> for up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stacks.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1133,9 +1122,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

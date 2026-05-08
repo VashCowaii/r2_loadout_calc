@@ -29,6 +29,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_DefenceDown"
           ],
+          "description": "DEF -<span class=\"descriptionNumberColor\">#SkillEquip_P2_DefenceDown</span>.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "Ensnarement",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -51,11 +55,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DEF -<span class=\"descriptionNumberColor\">#SkillEquip_P2_DefenceDown</span>.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "Ensnarement"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -107,9 +107,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

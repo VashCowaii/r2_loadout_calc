@@ -3,12 +3,12 @@ const compositeAbilityObject = {
   "fullCharacterName": 8025010,
   "trimCharacterName": 8025010,
   "abilityList": [
-    "8025010_Monster_SW_Boss_01_PassiveAbilityMainBattle",
     "8025010_Monster_SW_Boss_01_PassiveAbility_Insert",
+    "8025010_Monster_SW_Boss_01_Passive01",
     "8025010_Monster_SW_Boss_01_AbilityP05_02",
-    "8025010_Monster_SW_Boss_01_AbilityP05",
     "8025010_Monster_SW_Boss_01_Ability06_Part02",
     "8025010_Monster_SW_Boss_01_Ability06_Part01",
+    "8025010_Monster_SW_Boss_01_AbilityP05",
     "8025010_Monster_SW_Boss_01_Ability05_Part02",
     "8025010_Monster_SW_Boss_01_Ability05_Part01",
     "8025010_Monster_SW_Boss_01_Ability04_Part02",
@@ -19,30 +19,9 @@ const compositeAbilityObject = {
     "8025010_Monster_SW_Boss_01_Ability02_Part01",
     "8025010_Monster_SW_Boss_01_Ability01_Part02",
     "8025010_Monster_SW_Boss_01_Ability01_Part01",
-    "8025010_Monster_SW_Boss_01_Passive01",
     "8025010_Modifiers"
   ],
   "abilityObject": {
-    "8025010_Monster_SW_Boss_01_PassiveAbilityMainBattle": {
-      "fileName": "8025010_Monster_SW_Boss_01_PassiveAbilityMainBattle",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-848257295\">Enemy_SW_Boss_01_PassiveAbilityMainBattle</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "8025010_Monster_SW_Boss_01_PassiveAbility_Insert": {
       "fileName": "8025010_Monster_SW_Boss_01_PassiveAbility_Insert",
       "abilityType": null,
@@ -197,6 +176,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__346528323\">Monster_SW_Boss_01_MainBattleLockHP</a>",
+          "latentQueue": [
+            "BreakEndFlag",
+            "InsertCheck",
+            "AIFlag",
+            "Phase2FirstTurn"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -220,13 +205,168 @@ const compositeAbilityObject = {
                 }
               ]
             }
+          ]
+        }
+      ]
+    },
+    "8025010_Monster_SW_Boss_01_Passive01": {
+      "fileName": "8025010_Monster_SW_Boss_01_Passive01",
+      "skillTrigger": "PassiveSkill02",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-794767767\">W2_SW_Boss_01_BattleScore1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1551418319\">Monster_SW_Boss_01_AIChange</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1095252278\">Monster_SW_Boss_01_WingsControl</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1783095716\">Monster_SW_Boss_01_MuteHitFly</a>"
+        },
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1293250966\">Monster_SW_Boss_01_PartController</a>"
+        },
+        {
+          "name": "Change Character Transformation",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "phase": "Phase1"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1982402150\">Enemy_SW_Boss_01_ScoringDetect0101</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1095252278\">Monster_SW_Boss_01_WingsControl</a>",
+          "modifierFlags": [
+            "KeepOnDeathrattle"
           ],
-          "stackData": [],
-          "latentQueue": [
-            "BreakEndFlag",
-            "InsertCheck",
-            "AIFlag",
-            "Phase2FirstTurn"
+          "execute": [
+            {
+              "eventTrigger": "When Put in Deathstate Limbo"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Pre-Death [Owner]"
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: Start"
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Skill Name",
+                        "skillName": "Skill05"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]"
+            },
+            {
+              "eventTrigger": "End Broken State [Owner]"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1551418319\">Monster_SW_Boss_01_AIChange</a>",
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "AIFlag",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1783095716\">Monster_SW_Boss_01_MuteHitFly</a>",
+          "modifierFlags": [
+            "MuteHitFly"
           ]
         }
       ]
@@ -652,6 +792,168 @@ const compositeAbilityObject = {
       },
       "references": []
     },
+    "8025010_Monster_SW_Boss_01_Ability06_Part02": {
+      "fileName": "8025010_Monster_SW_Boss_01_Ability06_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"259450291\">Monster_SW_Boss_01_Ability05Charge</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-850302516\">Monster_SW_Boss_01_DamageReduce</a>[<span class=\"descriptionNumberColor\">Multiply</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2142572207\">Monster_SW_Boss_01_Ability05_Passive</a>"
+        },
+        "Ability Start",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1256327347\">Monster_SW_Boss_01_Ability07_Ball</a>"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+              "displayLines": "{[Skill06[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill06[0]]}"
+              ]
+            },
+            "HitSplit": 0.1,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": 5,
+          "Event": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Quantum",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+                  "displayLines": "{[Skill06[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill06[0]]}"
+                  ]
+                },
+                "HitSplit": 0.05,
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": 10,
+          "Event": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Quantum",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+                  "displayLines": "{[Skill06[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill06[0]]}"
+                  ]
+                },
+                "HitSplit": 0.065,
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "8025010_Monster_SW_Boss_01_Ability06_Part01": {
+      "fileName": "8025010_Monster_SW_Boss_01_Ability06_Part01",
+      "childAbilityList": [
+        "8025010_Monster_SW_Boss_01_Ability06_Camera",
+        "8025010_Monster_SW_Boss_01_Ability06_Part01",
+        "8025010_Monster_SW_Boss_01_Ability06_Part02"
+      ],
+      "skillTrigger": "Skill06",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_SW_Boss_01_Ability06_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
     "8025010_Monster_SW_Boss_01_AbilityP05": {
       "fileName": "8025010_Monster_SW_Boss_01_AbilityP05",
       "abilityType": null,
@@ -993,168 +1295,6 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8025010_Monster_SW_Boss_01_Ability06_Part02": {
-      "fileName": "8025010_Monster_SW_Boss_01_Ability06_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"259450291\">Monster_SW_Boss_01_Ability05Charge</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-850302516\">Monster_SW_Boss_01_DamageReduce</a>[<span class=\"descriptionNumberColor\">Multiply</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2142572207\">Monster_SW_Boss_01_Ability05_Passive</a>"
-        },
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1256327347\">Monster_SW_Boss_01_Ability07_Ball</a>"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "HitSplit": 0.1,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": 5,
-          "Event": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "canPhase": true,
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                  "displayLines": "{[Skill06[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill06[0]]}"
-                  ]
-                },
-                "HitSplit": 0.05,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": 10,
-          "Event": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "canPhase": true,
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                  "displayLines": "{[Skill06[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill06[0]]}"
-                  ]
-                },
-                "HitSplit": 0.065,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8025010_Monster_SW_Boss_01_Ability06_Part01": {
-      "fileName": "8025010_Monster_SW_Boss_01_Ability06_Part01",
-      "childAbilityList": [
-        "8025010_Monster_SW_Boss_01_Ability06_Camera",
-        "8025010_Monster_SW_Boss_01_Ability06_Part01",
-        "8025010_Monster_SW_Boss_01_Ability06_Part02"
-      ],
-      "skillTrigger": "Skill06",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_SW_Boss_01_Ability06_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []
     },
@@ -1792,174 +1932,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8025010_Monster_SW_Boss_01_Passive01": {
-      "fileName": "8025010_Monster_SW_Boss_01_Passive01",
-      "skillTrigger": "PassiveSkill02",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-794767767\">W2_SW_Boss_01_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1551418319\">Monster_SW_Boss_01_AIChange</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1095252278\">Monster_SW_Boss_01_WingsControl</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1783095716\">Monster_SW_Boss_01_MuteHitFly</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1293250966\">Monster_SW_Boss_01_PartController</a>"
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1982402150\">Enemy_SW_Boss_01_ScoringDetect0101</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1095252278\">Monster_SW_Boss_01_WingsControl</a>",
-          "modifierFlags": [
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Put in Deathstate Limbo"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Pre-Death [Owner]"
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: Start"
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Skill Name",
-                        "skillName": "Skill05"
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]"
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1551418319\">Monster_SW_Boss_01_AIChange</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 1
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1783095716\">Monster_SW_Boss_01_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "8025010_Modifiers": {
       "fileName": "8025010_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -2000,13 +1972,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__259450291\">Monster_SW_Boss_01_Ability05Charge</a>",
+          "latentQueue": [
+            "Phase2FirstTurn"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -2020,15 +1993,14 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Phase2FirstTurn"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1256327347\">Monster_SW_Boss_01_Ability07_Ball</a>",
+          "latentQueue": [
+            "Phase2FirstTurn"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -2042,10 +2014,6 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Phase2FirstTurn"
           ]
         },
         {
@@ -2090,6 +2058,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2142572207\">Monster_SW_Boss_01_Ability05_Passive</a>",
+          "latentQueue": [
+            "Phase2FirstTurn"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2256,16 +2227,17 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Phase2FirstTurn"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-257262548\">Monster_SW_Boss_01_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "stackType": "Replace",
+          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2295,16 +2267,22 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-850302516\">Monster_SW_Boss_01_DamageReduce</a>[<span class=\"descriptionNumberColor\">Multiply</span>]",
+          "stackData": [
+            "MDF_DamageReduceRatio"
+          ],
+          "latentQueue": [
+            "Phase2FirstTurn"
+          ],
+          "description": "Reduces DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageReduceRatio</span>. Summons a regular Swarm every time this unit is attacked. When this unit's Weakness is Broken, deals Toughness Reduction equal to its own max Toughness to all friendly units and increases the DMG taken by all other friendly units besides the target themselves.",
+          "type": "Buff",
+          "effectName": "Multiply",
+          "statusName": "Multiply",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -2321,18 +2299,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageReduceRatio"
-          ],
-          "latentQueue": [
-            "Phase2FirstTurn"
-          ],
-          "description": "Reduces DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageReduceRatio</span>. Summons a regular Swarm every time this unit is attacked. When this unit's Weakness is Broken, deals Toughness Reduction equal to its own max Toughness to all friendly units and increases the DMG taken by all other friendly units besides the target themselves.",
-          "type": "Buff",
-          "effectName": "Multiply",
-          "statusName": "Multiply",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2413,9 +2380,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2424,9 +2389,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2523,9 +2486,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2619,6 +2580,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1730193233\">Enemy_SW_Boss_01_SummonMinion</a>",
           "stackType": "Multiple",
+          "stackData": [
+            "MDF_SummonID",
+            "MDF_SummonDelay"
+          ],
+          "latentQueue": [
+            "AbilityFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2841,13 +2809,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SummonID",
-            "MDF_SummonDelay"
-          ],
-          "latentQueue": [
-            "AbilityFlag"
           ]
         }
       ],

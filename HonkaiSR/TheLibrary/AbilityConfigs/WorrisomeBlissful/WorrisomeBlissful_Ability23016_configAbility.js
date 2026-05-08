@@ -18,6 +18,12 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2096438896\">LC_23016_Enhance</a>[<span class=\"descriptionNumberColor\">Tame</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack of Tame increases CRIT DMG dealt by allies to this unit by <span class=\"descriptionNumberColor\">#SkillEquip_P3_CriticalDamage</span>, up to <span class=\"descriptionNumberColor\">#SkillEquip_P4_MaxLayer</span> stack(s).",
+      "type": "Debuff",
+      "effectName": "The received CRIT DMG increases",
+      "statusName": "Tame",
+      "stackLimit": 3,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -62,13 +68,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack of Tame increases CRIT DMG dealt by allies to this unit by <span class=\"descriptionNumberColor\">#SkillEquip_P3_CriticalDamage</span>, up to <span class=\"descriptionNumberColor\">#SkillEquip_P4_MaxLayer</span> stack(s).",
-      "type": "Debuff",
-      "effectName": "The received CRIT DMG increases",
-      "statusName": "Tame",
-      "stackLimit": 3,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -152,9 +152,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

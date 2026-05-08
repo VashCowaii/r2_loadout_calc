@@ -10,8 +10,17 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1504323307\">ADV_StageAbility_Maze_Geppard</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1307422316\">Gepard_Eidolon4_AddStatusResistance</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Effect RES +<span class=\"descriptionNumberColor\">MDF_AddStatusResistance</span>.",
+      "type": "Buff",
+      "statusName": "Effect RES Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -34,14 +43,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AddStatusResistance"
-      ],
-      "latentQueue": [],
-      "description": "Effect RES +<span class=\"descriptionNumberColor\">MDF_AddStatusResistance</span>.",
-      "type": "Buff",
-      "statusName": "Effect RES Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -50,6 +52,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedDown"
       ],
+      "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyRaito</span>.",
+      "type": "Debuff",
+      "effectName": "Slow",
+      "statusName": "Slow",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -74,11 +80,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyRaito</span>.",
-      "type": "Debuff",
-      "effectName": "Slow",
-      "statusName": "Slow"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -142,12 +144,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SPD",
-        "MDF_Lifetime"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -175,11 +172,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -188,6 +181,10 @@ const configAbility = {
       "modifierFlags": [
         "Shield"
       ],
+      "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
+      "type": "Buff",
+      "effectName": "Shield",
+      "statusName": "Shield",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -233,15 +230,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ShowValue"
-      ],
-      "latentQueue": [],
-      "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
-      "type": "Buff",
-      "effectName": "Shield",
-      "statusName": "Shield"
+      ]
     }
   ],
   "references": []

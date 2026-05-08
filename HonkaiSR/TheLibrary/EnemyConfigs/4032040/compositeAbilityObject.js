@@ -3,16 +3,43 @@ const compositeAbilityObject = {
   "fullCharacterName": 4032040,
   "trimCharacterName": 4032040,
   "abilityList": [
+    "4032040_Monster_W4_Scholar_01_AbilityP01",
     "4032040_Monster_W4_Scholar_01_Ability03_Part02",
     "4032040_Monster_W4_Scholar_01_Ability03_Part01",
     "4032040_Monster_W4_Scholar_01_Ability02_Part02",
     "4032040_Monster_W4_Scholar_01_Ability02_Part01",
     "4032040_Monster_W4_Scholar_01_Ability01_Part02",
     "4032040_Monster_W4_Scholar_01_Ability01_Part01",
-    "4032040_Monster_W4_Scholar_01_AbilityP01",
     "4032040_Modifiers"
   ],
   "abilityObject": {
+    "4032040_Monster_W4_Scholar_01_AbilityP01": {
+      "fileName": "4032040_Monster_W4_Scholar_01_AbilityP01",
+      "childAbilityList": [
+        "4032040_Monster_W4_Scholar_01_AbilityP01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1296271884\">Enemy_W4_Scholar_01_ConfineHit_Controller</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "4032040_Monster_W4_Scholar_01_Ability03_Part02": {
       "fileName": "4032040_Monster_W4_Scholar_01_Ability03_Part02",
       "abilityType": null,
@@ -236,33 +263,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4032040_Monster_W4_Scholar_01_AbilityP01": {
-      "fileName": "4032040_Monster_W4_Scholar_01_AbilityP01",
-      "childAbilityList": [
-        "4032040_Monster_W4_Scholar_01_AbilityP01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1296271884\">Enemy_W4_Scholar_01_ConfineHit_Controller</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4032040_Modifiers": {
       "fileName": "4032040_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -280,6 +280,11 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ForceHitH"
           ],
+          "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Flawed",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -316,12 +321,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Flawed",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -338,6 +338,14 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Stealth"
           ],
+          "stackData": [
+            "MDF_StealthBreak_ActionDelayRatio",
+            "MDF_StealthBreak_AllDamageTypeTakenRatio"
+          ],
+          "description": "Cannot become the primary target for abilities that require active selection. DMG received increases by <span class=\"descriptionNumberColor\">MDF_StealthBreak_AllDamageTypeTakenRatio</span>. When Weakness is Broken or when all enemy units on the field aside from this unit are in \"Lurking\" state, dispels \"Lurking\" state for this unit. When there are no other enemy units on the battlefield, this unit dispels the \"Lurking\" state.",
+          "type": "Buff",
+          "effectName": "Lurking",
+          "statusName": "Lurking",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -564,16 +572,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_StealthBreak_ActionDelayRatio",
-            "MDF_StealthBreak_AllDamageTypeTakenRatio"
-          ],
-          "latentQueue": [],
-          "description": "Cannot become the primary target for abilities that require active selection. DMG received increases by <span class=\"descriptionNumberColor\">MDF_StealthBreak_AllDamageTypeTakenRatio</span>. When Weakness is Broken or when all enemy units on the field aside from this unit are in \"Lurking\" state, dispels \"Lurking\" state for this unit. When there are no other enemy units on the battlefield, this unit dispels the \"Lurking\" state.",
-          "type": "Buff",
-          "effectName": "Lurking",
-          "statusName": "Lurking"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -628,9 +627,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

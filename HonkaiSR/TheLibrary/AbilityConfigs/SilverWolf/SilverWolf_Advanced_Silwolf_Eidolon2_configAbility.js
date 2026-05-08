@@ -115,6 +115,17 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1800596972\">M_Silwolf_Eidolon2_Bonus</a>",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-153761563\">Advanced_Silwolf_Eidolon2</a>",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -147,19 +158,6 @@ const configAbility = {
             }
           ],
           "priorityLevel": -80
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-153761563\">Advanced_Silwolf_Eidolon2</a>",
-          "haloStatus": true
         }
       ]
     }

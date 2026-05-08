@@ -21,6 +21,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedDown"
       ],
+      "description": "Increase Break DMG dealt by the wearer by <span class=\"descriptionNumberColor\">#SkillEquip_P2_BreakDamageAddedRatio</span> and decrease SPD by <span class=\"descriptionNumberColor\">#SkillEquip_P3_SpeedDownRatio</span>.",
+      "type": "Debuff",
+      "effectName": "Routed",
+      "statusName": "Routed",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -43,11 +47,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increase Break DMG dealt by the wearer by <span class=\"descriptionNumberColor\">#SkillEquip_P2_BreakDamageAddedRatio</span> and decrease SPD by <span class=\"descriptionNumberColor\">#SkillEquip_P3_SpeedDownRatio</span>.",
-      "type": "Debuff",
-      "effectName": "Routed",
-      "statusName": "Routed"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -113,9 +113,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

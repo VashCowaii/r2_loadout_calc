@@ -104,6 +104,10 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__678689072\">RuanMei_Ability03_Area_Eidolon1_Caster</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">#Skill03_P1_PenetrateRatio</span>. When dealing DMG, ignores <span class=\"descriptionNumberColor\">#SkillRank_Rank01_P1_IgnoreDEFRatio</span> of the target's DEF.",
+      "type": "Buff",
+      "effectName": "All-Type RES PEN Boost",
+      "statusName": "Petals to Stream, Repose in Dream",
       "variableValueChange": [
         {
           "name": "Variable Value Changes",
@@ -144,17 +148,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">#Skill03_P1_PenetrateRatio</span>. When dealing DMG, ignores <span class=\"descriptionNumberColor\">#SkillRank_Rank01_P1_IgnoreDEFRatio</span> of the target's DEF.",
-      "type": "Buff",
-      "effectName": "All-Type RES PEN Boost",
-      "statusName": "Petals to Stream, Repose in Dream"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-995060554\">RuanMei_Ability03_Area_Caster</a>[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">#Skill03_P1_PenetrateRatio</span>.",
+      "type": "Buff",
+      "effectName": "All-Type RES PEN Boost",
+      "statusName": "Petals to Stream, Repose in Dream",
       "variableValueChange": [
         {
           "name": "Variable Value Changes",
@@ -195,11 +199,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">#Skill03_P1_PenetrateRatio</span>.",
-      "type": "Buff",
-      "effectName": "All-Type RES PEN Boost",
-      "statusName": "Petals to Stream, Repose in Dream"
+      ]
     }
   ],
   "targetObjectData": {

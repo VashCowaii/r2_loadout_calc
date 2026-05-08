@@ -3,8 +3,8 @@ const compositeAbilityObject = {
   "fullCharacterName": 4053020,
   "trimCharacterName": 4053020,
   "abilityList": [
-    "4053020_BattleEventAbility_Monster_W4_Unicorn_01_Summon",
     "4053020_BattleEventAbility_Monster_W4_Unicorn_01_SummonMonster",
+    "4053020_Monster_W4_Unicorn_01_PassiveAbilityInitiate",
     "4053020_Monster_W4_Unicorn_01_Ability05_Insert_Part02",
     "4053020_Monster_W4_Unicorn_01_Ability05_Insert_Part01",
     "4053020_Monster_W4_Unicorn_01_Ability05_Part02",
@@ -17,190 +17,11 @@ const compositeAbilityObject = {
     "4053020_Monster_W4_Unicorn_01_Ability02_Part01",
     "4053020_Monster_W4_Unicorn_01_Ability01_Part02",
     "4053020_Monster_W4_Unicorn_01_Ability01_Part01",
-    "4053020_Monster_W4_Unicorn_01_PassiveAbilityInitiate",
     "4053020_Modifiers",
     "4053020_Functions",
     "4053020_BE_BattleEvents"
   ],
   "abilityObject": {
-    "4053020_BattleEventAbility_Monster_W4_Unicorn_01_Summon": {
-      "fileName": "4053020_BattleEventAbility_Monster_W4_Unicorn_01_Summon",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-747106338\">Modifier_Monster_W4_Unicorn_01_Summon</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-682702222\">Modifier_Monster_W4_Unicorn_01_BattleEvent_Summon_BaseSpeed</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 1.5
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "Summon",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-747106338\">Modifier_Monster_W4_Unicorn_01_Summon</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster's Summoner}}"
-                    },
-                    "flagName": "STAT_CTRL"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Modifier Behavior Flag(s)",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Summoner}}"
-                      },
-                      "flagNames": []
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster's Summoner}}"
-                    },
-                    "flagName": "Break"
-                  },
-                  "passed": [
-                    {
-                      "name": "Exit Broken-State",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Summoner}}"
-                      }
-                    },
-                    {
-                      "name": "Reset Toughness",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Summoner}}"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "BattleEventAbility_Monster_W4_Unicorn_01_SummonMonster",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "priorityTag": "EnemyBuffOthers",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Caster's Summoner}}"
-                    }
-                  },
-                  "noTargetFound": [
-                    {
-                      "name": "Force Entity Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-682702222\">Modifier_Monster_W4_Unicorn_01_BattleEvent_Summon_BaseSpeed</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_W4_Unicorn_01_BattleEvent_Ultra_BaseSpeed) || RETURN",
-                    "displayLines": "MDF_W4_Unicorn_01_BattleEvent_Ultra_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "MDF_W4_Unicorn_01_BattleEvent_Ultra_BaseSpeed"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "4053020_BattleEventAbility_Monster_W4_Unicorn_01_SummonMonster": {
       "fileName": "4053020_BattleEventAbility_Monster_W4_Unicorn_01_SummonMonster",
       "abilityType": null,
@@ -822,6 +643,71 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4053020_Monster_W4_Unicorn_01_PassiveAbilityInitiate": {
+      "fileName": "4053020_Monster_W4_Unicorn_01_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Preload Battle Event(s)",
+          "eventID": [
+            20022
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
+          "stackLimit": {
+            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+            "displayLines": "{[PassiveSkill01[0]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill01[0]]}"
+            ]
+          },
+          "valuePerStack": {
+            "MDF_MaxLayer": {
+              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[0]]}"
+              ]
+            }
+          },
+          "addStacksPerTrigger": 0
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -2584,71 +2470,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4053020_Monster_W4_Unicorn_01_PassiveAbilityInitiate": {
-      "fileName": "4053020_Monster_W4_Unicorn_01_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Preload Battle Event(s)",
-          "eventID": [
-            20022
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
-          "stackLimit": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
-            }
-          },
-          "addStacksPerTrigger": 0
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4053020_Modifiers": {
       "fileName": "4053020_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -2678,15 +2499,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1300974870\">Enemy_W4_Unicorn_01_SummonMark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1300974870\">Enemy_W4_Unicorn_01_SummonMark</a>"
         },
         {
           "name": "Modifier Construction",
@@ -2733,9 +2550,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2744,6 +2559,13 @@ const compositeAbilityObject = {
             "MuteHitH",
             "STAT_SuperArmor"
           ],
+          "stackData": [
+            "MDF_AllDamageTypeResistance"
+          ],
+          "description": "In this state, DMG taken from attacks is reduced. When action advances, HP will be consumed. Summons \"Mirage Fizzle Kid\" and slightly delays \"Incubation\" action. When \"Incubation\" takes action, all remaining \"Mirage Fizzle Kid\" will be summoned.",
+          "type": "Other",
+          "effectName": "Incubation",
+          "statusName": "Breeding Frenzy",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2865,15 +2687,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageTypeResistance"
-          ],
-          "latentQueue": [],
-          "description": "In this state, DMG taken from attacks is reduced. When action advances, HP will be consumed. Summons \"Mirage Fizzle Kid\" and slightly delays \"Incubation\" action. When \"Incubation\" takes action, all remaining \"Mirage Fizzle Kid\" will be summoned.",
-          "type": "Other",
-          "effectName": "Incubation",
-          "statusName": "Breeding Frenzy"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2883,6 +2697,13 @@ const compositeAbilityObject = {
             "BlockDamageExcludeDot",
             "MuteBreak"
           ],
+          "latentQueue": [
+            "AIFlag"
+          ],
+          "description": "Immune to all DMG except DoTs. This status is dispelled after being attacked.",
+          "type": "Buff",
+          "effectName": "Barrier",
+          "statusName": "Maelstrom's Eye",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2926,19 +2747,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
-          ],
-          "description": "Immune to all DMG except DoTs. This status is dispelled after being attacked.",
-          "type": "Buff",
-          "effectName": "Barrier",
-          "statusName": "Maelstrom's Eye"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1300638915\">Enemy_W4_Unicorn_01_SummonMonsterWeak</a>[<span class=\"descriptionNumberColor\">Weakling</span>]",
+          "stackData": [
+            "MDF_InitHP",
+            "MDF_DefenceAddedRatio"
+          ],
+          "description": "Due to premature hatching, decreases DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>.",
+          "type": "Debuff",
+          "effectName": "Weakened",
+          "statusName": "Weakling",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2981,16 +2802,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_InitHP",
-            "MDF_DefenceAddedRatio"
-          ],
-          "latentQueue": [],
-          "description": "Due to premature hatching, decreases DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>.",
-          "type": "Debuff",
-          "effectName": "Weakened",
-          "statusName": "Weakling"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2998,6 +2810,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak"
           ],
+          "latentQueue": [
+            "AIFlag"
+          ],
+          "description": "In this state, \"Cyclonic Swarm Mother's\" Toughness cannot be reduced. \"Cyclonic Swarm Mother\" will use \"Rain Is Born to Fall\". Eliminate all \"Mirage Fizzle Kids\" to dispel this state.",
+          "type": "Other",
+          "effectName": "Enhance",
+          "statusName": "Fetal Movement of the Ocean",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3135,15 +2954,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
-          ],
-          "description": "In this state, \"Cyclonic Swarm Mother's\" Toughness cannot be reduced. \"Cyclonic Swarm Mother\" will use \"Rain Is Born to Fall\". Eliminate all \"Mirage Fizzle Kids\" to dispel this state.",
-          "type": "Other",
-          "effectName": "Enhance",
-          "statusName": "Fetal Movement of the Ocean"
+          ]
         }
       ],
       "references": []

@@ -5,21 +5,11 @@ const compositeAbilityObject = {
   "abilityList": [
     "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Insert_Part02",
     "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Insert_Part01",
+    "4012052_Monster_W4_Mascot_LocalLegend_PassiveAbilityInitiate",
+    "4012052_Monster_XP_Minion04_PassiveAbilityInitiate",
     "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part03",
     "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part02",
     "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part01",
-    "4012052_Monster_W4_Mascot_LocalLegend_PassiveAbilityInitiate",
-    "4012052_Monster_XP_Minion04_Ability03_Part02",
-    "4012052_Monster_XP_Minion04_Ability03_Part01",
-    "4012052_Monster_XP_Minion04_Ability02_Part02",
-    "4012052_Monster_XP_Minion04_Ability02_Part01",
-    "4012052_Monster_XP_Minion04_Ability01_Part02",
-    "4012052_Monster_XP_Minion04_Ability01_Part01",
-    "4012052_Monster_XP_Minion04_08_PassiveAbility_Tutorial",
-    "4012052_Monster_XP_Minion04_PassiveAbility_Tutorial",
-    "4012052_Monster_XP_Minion04_PassiveAbilityInitiate",
-    "4012052_Monster_W4_Mascot_Ability04_Insert_Part02",
-    "4012052_Monster_W4_Mascot_Ability04_Insert_Part01",
     "4012052_Monster_W4_Mascot_Ability03_Insert_Part02",
     "4012052_Monster_W4_Mascot_Ability03_Insert_Part01",
     "4012052_Monster_W4_Mascot_Ability03_Part02",
@@ -28,11 +18,6 @@ const compositeAbilityObject = {
     "4012052_Monster_W4_Mascot_Ability02_Insert_Part01",
     "4012052_Monster_W4_Mascot_Ability02_Part02",
     "4012052_Monster_W4_Mascot_Ability02_Part01",
-    "4012052_Monster_W4_Mascot_Ability01_Insert_Part02",
-    "4012052_Monster_W4_Mascot_Ability01_Insert_Part01",
-    "4012052_Monster_W4_Mascot_Ability01_Part02",
-    "4012052_Monster_W4_Mascot_Ability01_Part01",
-    "4012052_Monster_W4_Mascot_PassiveAbilityInitiate",
     "4012052_Modifiers"
   ],
   "abilityObject": {
@@ -277,149 +262,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part03": {
-      "fileName": "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part03",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1102283112\">Enemy_W4_Mascot_EscapingCharge00</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-71309847\">Enemy_W4_Mascot_LocalLegend_DeathRattle</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1085505493\">Enemy_W4_Mascot_EscapingCharge01</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1068727874\">Enemy_W4_Mascot_EscapingCharge02</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part02": {
-      "fileName": "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Looping Explanation"
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1102283112\">Enemy_W4_Mascot_EscapingCharge00</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-71309847\">Enemy_W4_Mascot_LocalLegend_DeathRattle</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1085505493\">Enemy_W4_Mascot_EscapingCharge01</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1068727874\">Enemy_W4_Mascot_EscapingCharge02</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
-        },
-        {
-          "name": "Mark Entity For Immediate Death"
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part01": {
-      "fileName": "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part01",
-      "childAbilityList": [
-        "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part01",
-        "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part02",
-        "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part03",
-        "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Camera"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Mascot_Ability04_LocalLegend_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4012052_Monster_W4_Mascot_LocalLegend_PassiveAbilityInitiate": {
       "fileName": "4012052_Monster_W4_Mascot_LocalLegend_PassiveAbilityInitiate",
       "skillTrigger": "SkillP01",
@@ -573,183 +415,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4012052_Monster_XP_Minion04_Ability03_Part02": {
-      "fileName": "4012052_Monster_XP_Minion04_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"222306094\">Enemy_XP_Minion04_EscapingCharge02</a>"
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Mark Entity For Immediate Death"
-        },
-        "Trigger: Ability End",
-        {
-          "name": "Entity Escape Battle",
-          "triggerEnemyEscape": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012052_Monster_XP_Minion04_Ability03_Part01": {
-      "fileName": "4012052_Monster_XP_Minion04_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Minion04_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012052_Monster_XP_Minion04_Ability02_Part02": {
-      "fileName": "4012052_Monster_XP_Minion04_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"205528475\">Enemy_XP_Minion04_EscapingCharge01</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"222306094\">Enemy_XP_Minion04_EscapingCharge02</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012052_Monster_XP_Minion04_Ability02_Part01": {
-      "fileName": "4012052_Monster_XP_Minion04_Ability02_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Minion04_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012052_Monster_XP_Minion04_Ability01_Part02": {
-      "fileName": "4012052_Monster_XP_Minion04_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"205528475\">Enemy_XP_Minion04_EscapingCharge01</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012052_Monster_XP_Minion04_Ability01_Part01": {
-      "fileName": "4012052_Monster_XP_Minion04_Ability01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Minion04_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012052_Monster_XP_Minion04_08_PassiveAbility_Tutorial": {
-      "fileName": "4012052_Monster_XP_Minion04_08_PassiveAbility_Tutorial",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012052_Monster_XP_Minion04_PassiveAbility_Tutorial": {
-      "fileName": "4012052_Monster_XP_Minion04_PassiveAbility_Tutorial",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4012052_Monster_XP_Minion04_PassiveAbilityInitiate": {
       "fileName": "4012052_Monster_XP_Minion04_PassiveAbilityInitiate",
       "skillTrigger": "PassiveSkillInitiate",
@@ -780,14 +445,56 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Take Damage Start [Owner]: Hit"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
-    "4012052_Monster_W4_Mascot_Ability04_Insert_Part02": {
-      "fileName": "4012052_Monster_W4_Mascot_Ability04_Insert_Part02",
+    "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part03": {
+      "fileName": "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part03",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1102283112\">Enemy_W4_Mascot_EscapingCharge00</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-71309847\">Enemy_W4_Mascot_LocalLegend_DeathRattle</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1085505493\">Enemy_W4_Mascot_EscapingCharge01</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1068727874\">Enemy_W4_Mascot_EscapingCharge02</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part02": {
+      "fileName": "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -797,12 +504,28 @@ const compositeAbilityObject = {
           "popUpText": "Looping Explanation"
         },
         {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        {
           "name": "Remove Events/Bonuses",
           "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1102283112\">Enemy_W4_Mascot_EscapingCharge00</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-71309847\">Enemy_W4_Mascot_LocalLegend_DeathRattle</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -821,40 +544,32 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1068727874\">Enemy_W4_Mascot_EscapingCharge02</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
         },
         {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1777684731\">Standard_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_239) || RETURN",
-              "displayLines": "UnusedUnderThisBase_239",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_239"
-              ]
-            }
-          }
+          "name": "Mark Entity For Immediate Death"
         },
         {
-          "name": "Dispel Debuffs",
+          "name": "Force Entity Death",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          },
-          "silent": true
-        }
+          }
+        },
+        "Trigger: Ability End"
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
     },
-    "4012052_Monster_W4_Mascot_Ability04_Insert_Part01": {
-      "fileName": "4012052_Monster_W4_Mascot_Ability04_Insert_Part01",
-      "abilityType": null,
+    "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part01": {
+      "fileName": "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part01",
+      "childAbilityList": [
+        "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part01",
+        "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part02",
+        "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Part03",
+        "4012052_Monster_W4_Mascot_Ability04_LocalLegend_Camera"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Skill",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -864,12 +579,15 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_W4_Mascot_Ability04_Insert_Part02",
+          "ability": "Monster_W4_Mascot_Ability04_LocalLegend_Part02",
           "isTrigger": true
         },
         "Deleted bullshit"
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -1218,241 +936,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4012052_Monster_W4_Mascot_Ability01_Insert_Part02": {
-      "fileName": "4012052_Monster_W4_Mascot_Ability01_Insert_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1102283112\">Enemy_W4_Mascot_EscapingCharge00</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1085505493\">Enemy_W4_Mascot_EscapingCharge01</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1068727874\">Enemy_W4_Mascot_EscapingCharge02</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1102283112\">Enemy_W4_Mascot_EscapingCharge00</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1866632092\">Enemy_W4_Mascot_BlockDamage</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 1
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "InsertFlag",
-          "value": 0
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012052_Monster_W4_Mascot_Ability01_Insert_Part01": {
-      "fileName": "4012052_Monster_W4_Mascot_Ability01_Insert_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Mascot_Ability01_Insert_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012052_Monster_W4_Mascot_Ability01_Part02": {
-      "fileName": "4012052_Monster_W4_Mascot_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1102283112\">Enemy_W4_Mascot_EscapingCharge00</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1085505493\">Enemy_W4_Mascot_EscapingCharge01</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1068727874\">Enemy_W4_Mascot_EscapingCharge02</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1102283112\">Enemy_W4_Mascot_EscapingCharge00</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012052_Monster_W4_Mascot_Ability01_Part01": {
-      "fileName": "4012052_Monster_W4_Mascot_Ability01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Mascot_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012052_Monster_W4_Mascot_PassiveAbilityInitiate": {
-      "fileName": "4012052_Monster_W4_Mascot_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"407991733\">Enemy_W4_Mascot_ListenCorrectInteract</a>",
-          "valuePerStack": {
-            "MDF_SuccessDamageRatio": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1842024628\">Enemy_W4_Mascot_EnterBattle</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1549112384\">Enemy_W4_Mascot_DeathRattle</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-348410444\">Enemy_W4_Mascot_MuteBreak</a>",
-          "valuePerStack": {
-            "MDF_AllDamageReduce": {
-              "operator": "Variables[0] (UnusedUnderThisBase_238) || RETURN",
-              "displayLines": "UnusedUnderThisBase_238",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_238"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4012052_Modifiers": {
       "fileName": "4012052_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1465,9 +948,99 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__222306094\">Enemy_XP_Minion04_EscapingCharge02</a>",
+          "modifierFlags": [
+            "MuteHitFly",
+            "Endurance",
+            "MuteBreak"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "phase": "Charge02"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Protected",
+                  "valueList": [
+                    "Physical",
+                    "Fire",
+                    "Ice",
+                    "Thunder",
+                    "Wind",
+                    "Quantum",
+                    "Imaginary"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__205528475\">Enemy_XP_Minion04_EscapingCharge01</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "phase": "Charge01"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "phase": "Normal"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1781853909\">Enemy_W4_Mascot_LocalLegend_MuteBreak</a>",
           "modifierFlags": [
             "MuteBreak"
+          ],
+          "latentQueue": [
+            "AISequence"
           ],
           "execute": [
             {
@@ -1574,10 +1147,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AISequence"
           ]
         },
         {
@@ -1586,6 +1155,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Deathrattle",
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "AISequence"
           ],
           "execute": [
             {
@@ -1612,15 +1184,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AISequence"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1597331632\">Enemy_W4_Mascot_LocalLegend_ListenCorrectInteract</a>",
+          "stackData": [
+            "MDF_SuccessDamageRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1844,102 +1415,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SuccessDamageRatio"
-          ],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__222306094\">Enemy_XP_Minion04_EscapingCharge02</a>",
-          "modifierFlags": [
-            "MuteHitFly",
-            "Endurance",
-            "MuteBreak"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "phase": "Charge02"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Protected",
-                  "valueList": [
-                    "Physical",
-                    "Fire",
-                    "Ice",
-                    "Thunder",
-                    "Wind",
-                    "Quantum",
-                    "Imaginary"
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__205528475\">Enemy_XP_Minion04_EscapingCharge01</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "phase": "Charge01"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "phase": "Normal"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1969,18 +1445,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageReduce"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1866632092\">Enemy_W4_Mascot_BlockDamage</a>",
-          "modifierFlags": [],
-          "stackData": [],
-          "latentQueue": []
+          "modifierFlags": []
         },
         {
           "name": "Modifier Construction",
@@ -2006,9 +1476,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2127,9 +1595,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2788,11 +2254,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SuccessDamageRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2824,6 +2286,9 @@ const compositeAbilityObject = {
             "MuteHitFly",
             "MuteBreak"
           ],
+          "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
+          "type": "Other",
+          "statusName": "Brainteaser",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2941,12 +2406,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
-          "type": "Other",
-          "statusName": "Brainteaser"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2978,6 +2438,9 @@ const compositeAbilityObject = {
             "MuteHitFly",
             "MuteBreak"
           ],
+          "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
+          "type": "Other",
+          "statusName": "Brainteaser",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3101,12 +2564,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
-          "type": "Other",
-          "statusName": "Brainteaser"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3138,6 +2596,9 @@ const compositeAbilityObject = {
             "MuteHitFly",
             "MuteBreak"
           ],
+          "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
+          "type": "Other",
+          "statusName": "Brainteaser",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3261,12 +2722,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "\"Bartholos\" presents a brainteaser, entering the \"Brainteaser\" state. Allies can respond with \"Basic ATK,\" \"Skill,\" or \"Ultimate.\" Each brainteaser requires the correct type of attack to solve. Upon successfully solving the brainteaser, \"Bartholos\" will immediately change the brainteaser and take Physical DMG based on a percentage of its Max HP.",
-          "type": "Other",
-          "statusName": "Brainteaser"
+          ]
         }
       ],
       "references": []

@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 8032030,
   "trimCharacterName": 8032030,
   "abilityList": [
+    "8032030_Monster_W3_AventurinePart_Passive01",
     "8032030_Monster_W3_AventurinePart_Ability04_Part02",
     "8032030_Monster_W3_AventurinePart_Ability04_Part01",
     "8032030_Monster_W3_AventurinePart_Ability03_Part02",
@@ -11,10 +12,42 @@ const compositeAbilityObject = {
     "8032030_Monster_W3_AventurinePart_Ability02_Part01",
     "8032030_Monster_W3_AventurinePart_Ability01_Part02",
     "8032030_Monster_W3_AventurinePart_Ability01_Part01",
-    "8032030_Monster_W3_AventurinePart_Passive01",
     "8032030_Modifiers"
   ],
   "abilityObject": {
+    "8032030_Monster_W3_AventurinePart_Passive01": {
+      "fileName": "8032030_Monster_W3_AventurinePart_Passive01",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"126188110\">Monster_W3_AventurinePart_SpeedZero</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "8032030_Monster_W3_AventurinePart_Ability04_Part02": {
       "fileName": "8032030_Monster_W3_AventurinePart_Ability04_Part02",
       "abilityType": null,
@@ -902,39 +935,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8032030_Monster_W3_AventurinePart_Passive01": {
-      "fileName": "8032030_Monster_W3_AventurinePart_Passive01",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"126188110\">Monster_W3_AventurinePart_SpeedZero</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "8032030_Modifiers": {
       "fileName": "8032030_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -953,6 +953,8 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-699513905\">Monster_W3_AventurinePart_ResultCount</a>",
           "stackType": "Replace",
+          "stackLimit": 999,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Owner]",
@@ -2493,13 +2495,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 999,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-34127136\">Monster_W3_AventurinePart_Result</a>",
+          "latentQueue": [
+            "DiceGamblingInsertCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3728,10 +3731,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DiceGamblingInsertCheck"
           ]
         },
         {
@@ -3775,7 +3774,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1604729097\">Monster_W3_AventurinePart_ResultTarget</a>",
-          "stackData": [],
           "latentQueue": [
             "DiceGamblingInsertCheck"
           ]
@@ -3786,6 +3784,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteSpeed"
           ],
+          "description": "Immune to DMG. When this unit is attacked by a target that has entered the Gamble, apply 1 random number (between 1 and 6) to the target.",
+          "type": "Other",
+          "statusName": "Fickle Fortune",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3817,12 +3818,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Immune to DMG. When this unit is attacked by a target that has entered the Gamble, apply 1 random number (between 1 and 6) to the target.",
-          "type": "Other",
-          "statusName": "Fickle Fortune"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3992,21 +3988,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__718327308\">Monster_W3_AventurinePart_Speed</a>",
+          "latentQueue": [
+            "DiceGamblingInsertCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DiceGamblingInsertCheck"
           ]
         }
       ],

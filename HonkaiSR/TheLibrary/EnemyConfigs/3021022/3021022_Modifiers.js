@@ -10,11 +10,62 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "stackType": "Replace",
+      "stackData": [
+        "MDF_ShowValue1"
+      ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
+      "addStacksPerTrigger": 1,
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Define Custom Variable with Modifier Values",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "valueType": "Layer",
+              "variableName": "MDF_ShowValue2",
+              "multiplier": 1
+            },
+            {
+              "name": "Stack Target Stat Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (MDF_ShowValue2) || Variables[1] (MDF_ShowValue1) || MUL || RETURN",
+                "displayLines": "(MDF_ShowValue2 * MDF_ShowValue1)",
+                "constants": [],
+                "variables": [
+                  "MDF_ShowValue2",
+                  "MDF_ShowValue1"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1104059334\">Monster_W2_ArgentiTotem_02_IF_Shield_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "Shield"
       ],
+      "description": "Gains a Shield that can offset DMG.",
+      "type": "Buff",
+      "effectName": "Shield",
+      "statusName": "Shield",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -67,15 +118,7 @@ const configAbility = {
         {
           "eventTrigger": "Ability Use [Owner]: End"
         }
-      ],
-      "stackData": [
-        "MDF_ShowValue"
-      ],
-      "latentQueue": [],
-      "description": "Gains a Shield that can offset DMG.",
-      "type": "Buff",
-      "effectName": "Shield",
-      "statusName": "Shield"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -652,6 +695,10 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "RemoveWhenCasterUnstage"
       ],
+      "description": "Can only select %CasterName as the target to attack.",
+      "type": "Debuff",
+      "effectName": "Taunt",
+      "statusName": "Taunt",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -836,13 +883,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Can only select %CasterName as the target to attack.",
-      "type": "Debuff",
-      "effectName": "Taunt",
-      "statusName": "Taunt"
+      ]
     }
   ],
   "references": []

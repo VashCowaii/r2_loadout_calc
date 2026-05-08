@@ -81,9 +81,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -690,6 +688,14 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1258915271\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood_LockHP</a>",
+      "latentQueue": [
+        "MDF_LevelMaxNegativeHP",
+        "_BattleTarget_LocalLegend_S3_2_Check",
+        "_BattleTarget_LocalLegend_S3_3_Check",
+        "_BattleTarget_LocalLegend_S3_6_Check",
+        "_BattleTarget_LocalLegend_S3_1_ProgressInfo",
+        "_BattleTarget_LocalLegend_S3_5_ProgressInfo"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -718,21 +724,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_LevelMaxNegativeHP",
-        "_BattleTarget_LocalLegend_S3_2_Check",
-        "_BattleTarget_LocalLegend_S3_3_Check",
-        "_BattleTarget_LocalLegend_S3_6_Check",
-        "_BattleTarget_LocalLegend_S3_1_ProgressInfo",
-        "_BattleTarget_LocalLegend_S3_5_ProgressInfo"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1972420771\">Enemy_XP_Elite01_02_LocalLegend_Ability03_Mark</a>[<span class=\"descriptionNumberColor\">Overloadable</span>]",
-      "stackData": [],
       "latentQueue": [
         "_BattleTarget_LocalLegend_S3_5_ProgressInfo",
         "_BattleTarget_LocalLegend_S3_1_ProgressInfo",
@@ -809,9 +805,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -902,9 +896,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1070,9 +1062,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

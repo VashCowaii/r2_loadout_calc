@@ -573,6 +573,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__404471449\">Modifier_BattleEventAbility_RogueDLCSandworm_DamageUp</a>",
       "stackType": "ReplaceByCaster",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -606,16 +607,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-713594228\">Modifier_BattleEventAbility_Flag</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-713594228\">Modifier_BattleEventAbility_Flag</a>"
     }
   ],
   "targetObjectData": {

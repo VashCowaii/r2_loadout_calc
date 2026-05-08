@@ -99,6 +99,65 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__935274623\">Modifier_BattleEventAbility_Challenge_Month_31</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "BattleEvent_P1_ADF",
+        "BattleEvent_P2_ADF",
+        "BattleEvent_P3_ADF",
+        "BattleEvent_P4_ADF",
+        "BattleEvent_P5_ADF",
+        "BattleEvent_P6_ADF",
+        "BattleEvent_P7_ADF",
+        "BattleEvent_P8_ADF",
+        "BattleEvent_P9_ADF"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"389361840\">Modifier_BattleEventAbility_Challenge_Month_31_Sub2</a>",
+          "haloStatus": true,
+          "valuePerStack": {
+            "ActionDelayRatio": {
+              "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
+              "displayLines": "BattleEvent_P2_ADF",
+              "constants": [],
+              "variables": [
+                "BattleEvent_P2_ADF"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1231239842\">Modifier_BattleEventAbility_Challenge_Month_31_Sub</a>[<span class=\"descriptionNumberColor\">Exo-Toughness</span>]",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_RedStanceRatio": {
+              "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
+              "displayLines": "BattleEvent_P3_ADF",
+              "constants": [],
+              "variables": [
+                "BattleEvent_P3_ADF"
+              ]
+            },
+            "MDF_MinStance": {
+              "operator": "Variables[0] (BattleEvent_P4_ADF) || RETURN",
+              "displayLines": "BattleEvent_P4_ADF",
+              "constants": [],
+              "variables": [
+                "BattleEvent_P4_ADF"
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -538,66 +597,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [
-        "BattleEvent_P1_ADF",
-        "BattleEvent_P2_ADF",
-        "BattleEvent_P3_ADF",
-        "BattleEvent_P4_ADF",
-        "BattleEvent_P5_ADF",
-        "BattleEvent_P6_ADF",
-        "BattleEvent_P7_ADF",
-        "BattleEvent_P8_ADF",
-        "BattleEvent_P9_ADF"
-      ],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"389361840\">Modifier_BattleEventAbility_Challenge_Month_31_Sub2</a>",
-          "haloStatus": true,
-          "valuePerStack": {
-            "ActionDelayRatio": {
-              "operator": "Variables[0] (BattleEvent_P2_ADF) || RETURN",
-              "displayLines": "BattleEvent_P2_ADF",
-              "constants": [],
-              "variables": [
-                "BattleEvent_P2_ADF"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1231239842\">Modifier_BattleEventAbility_Challenge_Month_31_Sub</a>[<span class=\"descriptionNumberColor\">Exo-Toughness</span>]",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_RedStanceRatio": {
-              "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
-              "displayLines": "BattleEvent_P3_ADF",
-              "constants": [],
-              "variables": [
-                "BattleEvent_P3_ADF"
-              ]
-            },
-            "MDF_MinStance": {
-              "operator": "Variables[0] (BattleEvent_P4_ADF) || RETURN",
-              "displayLines": "BattleEvent_P4_ADF",
-              "constants": [],
-              "variables": [
-                "BattleEvent_P4_ADF"
-              ]
-            }
-          }
         }
       ]
     }

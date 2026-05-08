@@ -200,6 +200,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1981362800\">Enemy_W1_CocoliaP2_FinalPhase_SpeedUp</a>",
+      "stackData": [
+        "MDF_SpeedDelta"
+      ],
+      "latentQueue": [
+        "Cocolia_AICounter"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -222,12 +228,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SpeedDelta"
-      ],
-      "latentQueue": [
-        "Cocolia_AICounter"
       ]
     },
     {
@@ -237,9 +237,7 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

@@ -133,6 +133,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. Can use Lupitoxin Synthesis and Slaughter Algorithm. This is dispelled when Weakness is broken.",
+      "type": "Buff",
+      "effectName": "Moon Rage",
+      "statusName": "Moon Rage",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -292,16 +296,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. Can use Lupitoxin Synthesis and Slaughter Algorithm. This is dispelled when Weakness is broken.",
-      "type": "Buff",
-      "effectName": "Moon Rage",
-      "statusName": "Moon Rage"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__824686737\">Enemy_W2_LycanMecha_RageListener</a>",
       "stackType": "Replace",
+      "latentQueue": [
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier is Added [Owner]",
@@ -357,10 +360,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
       ]
     }
   ]

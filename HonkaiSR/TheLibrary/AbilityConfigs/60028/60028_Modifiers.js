@@ -36,10 +36,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Tutorial"
       ]
     },
     {
@@ -64,15 +60,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Tutorial"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1300476012\">Modifier_StageSpecialAbility_10441217_Sub</a>[<span class=\"descriptionNumberColor\">Command Spell</span>]",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>.",
+      "type": "Buff",
+      "effectName": "Command Spell",
+      "statusName": "Command Spell",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -107,15 +103,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_Trigger"
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>.",
-      "type": "Buff",
-      "effectName": "Command Spell",
-      "statusName": "Command Spell"
+      ]
     }
   ],
   "references": []

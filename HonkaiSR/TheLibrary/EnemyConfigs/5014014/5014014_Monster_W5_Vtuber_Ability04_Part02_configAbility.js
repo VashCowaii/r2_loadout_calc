@@ -67,6 +67,12 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1255636057\">Enemy_W5_Vtuber_Ability04_Bonus</a>[<span class=\"descriptionNumberColor\">Flooding Viewers</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "Increases action advances and CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Flooding Viewers",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -89,14 +95,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Increases action advances and CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Flooding Viewers"
+      ]
     }
   ]
 }

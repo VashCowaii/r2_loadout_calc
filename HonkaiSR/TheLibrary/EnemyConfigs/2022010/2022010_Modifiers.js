@@ -11,6 +11,17 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__345912758\">Monster_W2_Abomi01_Accelerate</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+      "stackData": [
+        "MDF_SpeedRatio"
+      ],
+      "latentQueue": [
+        "Monster_W2_Abomi01_00_HitFlyFlag",
+        "Monster_W2_Abomi01_00_ReviveEff"
+      ],
+      "description": "SPD Increased.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "SPD Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -33,18 +44,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SpeedRatio"
-      ],
-      "latentQueue": [
-        "Monster_W2_Abomi01_00_HitFlyFlag",
-        "Monster_W2_Abomi01_00_ReviveEff"
-      ],
-      "description": "SPD Increased.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "SPD Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -67,6 +67,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]",
+      "description": "Upon receiving a killing blow, restores a certain amount of HP.",
+      "type": "Buff",
+      "effectName": "Rebirth",
+      "statusName": "Rebirth",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -284,24 +288,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Upon receiving a killing blow, restores a certain amount of HP.",
-      "type": "Buff",
-      "effectName": "Rebirth",
-      "statusName": "Rebirth"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1865884989\">Monster_W2_Abomi01_DanHeng_Hide</a>",
-      "useEntitySnapshot": true,
-      "stackData": [],
-      "latentQueue": []
+      "useEntitySnapshot": true
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1907438637\">Monster_W2_Abomi01_BeingHit</a>",
+      "useEntitySnapshot": true,
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -309,10 +306,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

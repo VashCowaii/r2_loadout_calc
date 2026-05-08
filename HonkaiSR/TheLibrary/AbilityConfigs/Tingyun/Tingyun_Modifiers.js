@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-653175824\">ADV_StageAbility_Maze_TingYun</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2044109918\">Tingyun_Eidolon2_CD</a>"
     },
     {
@@ -20,6 +26,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "SPD +<span class=\"descriptionNumberColor\">Tingyun_SpeedUP_Ratio</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "Nourished Joviality",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -42,15 +52,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "Tingyun_SpeedUP_Ratio"
-      ],
-      "latentQueue": [],
-      "description": "SPD +<span class=\"descriptionNumberColor\">Tingyun_SpeedUP_Ratio</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "Nourished Joviality"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -60,6 +62,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "SPD +<span class=\"descriptionNumberColor\">MDF_Rank01_SpeedUp_01</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "SPD Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -82,11 +88,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD +<span class=\"descriptionNumberColor\">MDF_Rank01_SpeedUp_01</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "SPD Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -429,9 +431,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -692,16 +692,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Passive_DamagePercentage",
-        "MDF_Passive_DamagePercentageSelf",
-        "MDF_Rank01_SpeedUp",
-        "MDF_Rank02_SPAdd",
-        "MDF_Rank04_DamagePercentage",
-        "MDF_AttackDelta"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -961,15 +952,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Passive_DamagePercentage",
-        "MDF_Passive_DamagePercentageSelf",
-        "MDF_Rank01_SpeedUp",
-        "MDF_Rank02_SPAdd",
-        "MDF_AttackDelta"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1174,14 +1157,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Passive_DamagePercentage",
-        "MDF_Passive_DamagePercentageSelf",
-        "MDF_Rank01_SpeedUp",
-        "MDF_AttackDelta"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1353,13 +1329,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Passive_DamagePercentage",
-        "MDF_Passive_DamagePercentageSelf",
-        "MDF_AttackDelta"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1394,6 +1364,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
+      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackDelta</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Benediction",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1519,17 +1493,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AttackDelta",
-        "MDF_Rank01_SpeedUp",
-        "MDF_Rank01_Count"
-      ],
-      "latentQueue": [],
-      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackDelta</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Benediction"
+      ]
     }
   ],
   "references": []

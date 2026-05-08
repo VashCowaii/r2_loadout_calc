@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1559482419\">MLevel_BattleEventAbility_Challenge_10</a>[<span class=\"descriptionNumberColor\">Physical Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Physical DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
+      "type": "Debuff",
+      "effectName": "Physical Vulnerability",
+      "statusName": "Physical Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -41,11 +45,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Physical DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
-      "type": "Debuff",
-      "effectName": "Physical Vulnerability",
-      "statusName": "Physical Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -96,9 +96,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

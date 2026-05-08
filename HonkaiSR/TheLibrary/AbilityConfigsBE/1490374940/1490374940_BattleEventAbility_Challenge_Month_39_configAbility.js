@@ -60,6 +60,13 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1069495575\">Modifier_BattleEventAbility_Challenge_Month_39</a>",
+      "stackData": [
+        "DV_Count",
+        "DV_CountMax",
+        "BattleEvent_P3_ADF",
+        "BattleEvent_P4_ADF",
+        "BattleEvent_P5_ADF"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -367,15 +374,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "DV_Count",
-        "DV_CountMax",
-        "BattleEvent_P3_ADF",
-        "BattleEvent_P4_ADF",
-        "BattleEvent_P5_ADF"
-      ],
-      "latentQueue": []
+      ]
     }
   ]
 }

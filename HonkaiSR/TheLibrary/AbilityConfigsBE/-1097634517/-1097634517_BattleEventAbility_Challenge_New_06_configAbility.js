@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1602534417\">MLevel_BattleEventAbility_Challenge_New_06</a>[<span class=\"descriptionNumberColor\">CRIT Rate and CRIT DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">ADF_1</span> and CRIT DMG by <span class=\"descriptionNumberColor\">ADF_2</span>.",
+      "type": "Buff",
+      "effectName": "CRIT Rate and CRIT DMG Boost",
+      "statusName": "CRIT Rate and CRIT DMG Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -57,11 +61,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">ADF_1</span> and CRIT DMG by <span class=\"descriptionNumberColor\">ADF_2</span>.",
-      "type": "Buff",
-      "effectName": "CRIT Rate and CRIT DMG Boost",
-      "statusName": "CRIT Rate and CRIT DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -146,9 +146,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

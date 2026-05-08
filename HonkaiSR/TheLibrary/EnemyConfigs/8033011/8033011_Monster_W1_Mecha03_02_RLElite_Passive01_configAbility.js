@@ -127,7 +127,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteHitFly"
       ],
-      "stackData": [],
       "latentQueue": [
         "SoldierCount01",
         "SoldierCount02"
@@ -136,6 +135,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-738247645\">Monster_W1_Mecha03_02_RLElite_ResetAI</a>",
+      "latentQueue": [
+        "SoldierCount01",
+        "SoldierCount02"
+      ],
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -180,11 +183,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "SoldierCount01",
-        "SoldierCount02"
       ]
     }
   ]

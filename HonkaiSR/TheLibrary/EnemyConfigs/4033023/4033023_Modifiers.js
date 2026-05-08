@@ -41,14 +41,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2009401658\">Enemy_W4_Claymore_01_Ability02_DeadLock_Win</a>[<span class=\"descriptionNumberColor\">Honor</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Honor",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -71,22 +73,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AllDamageTypeAddedRatio"
-      ],
-      "latentQueue": [
-        "AIFlag"
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Honor"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1754815848\">Enemy_W4_Claymore_01_Ability02_DeadLock_PowerUp</a>[<span class=\"descriptionNumberColor\">Morale</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases the DMG dealt by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Morale",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -120,11 +116,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases the DMG dealt by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Morale"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -156,9 +148,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -181,6 +171,9 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "AttackSign"
       ],
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio</span>. When receiving DMG from targets outside the Duel state, reduces DMG by <span class=\"descriptionNumberColor\">MDF_DamageReduce</span>. Obtains 1 stack of \"Morale\" after each attack.",
+      "type": "Other",
+      "statusName": "Duel",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -271,10 +264,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio</span>. When receiving DMG from targets outside the Duel state, reduces DMG by <span class=\"descriptionNumberColor\">MDF_DamageReduce</span>. Obtains 1 stack of \"Morale\" after each attack.",
-      "type": "Other",
-      "statusName": "Duel"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -289,6 +279,10 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "AttackSign"
       ],
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio</span>. When receiving DMG from targets outside the Duel state, reduces DMG by <span class=\"descriptionNumberColor\">MDF_DamageReduce</span>. Obtains 1 stack of \"Morale\" after each attack.",
+      "type": "Other",
+      "effectName": "Duel",
+      "statusName": "Duel",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -478,17 +472,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageReduce",
-        "MDF_SpeedAddedRatio",
-        "MDF_PowerUp_AllDamageTypeAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio</span>. When receiving DMG from targets outside the Duel state, reduces DMG by <span class=\"descriptionNumberColor\">MDF_DamageReduce</span>. Obtains 1 stack of \"Morale\" after each attack.",
-      "type": "Other",
-      "effectName": "Duel",
-      "statusName": "Duel"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -501,6 +485,10 @@ const configAbility = {
       "modifierFlags": [
         "Taunt"
       ],
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio</span> and when receiving DMG from targets outside the Showdown state, reduces DMG by <span class=\"descriptionNumberColor\">MDF_DamageReduce</span>. Obtains 1 stack of \"Morale\" after each attack. DMG taken from Duel target will reduce the Duel's progress bar based on the DMG. When the Duel's progress bar is at 0, the Duel is lost and the Duel state is dispelled. Still requires <span class=\"descriptionNumberColor\">DeadLock_HP_CurrentValue</span> DMG to dispel Duel state.",
+      "type": "Other",
+      "effectName": "Duel",
+      "statusName": "Duel",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1881,18 +1869,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DeadLock_HPRatio",
-        "MDF_DamageReduce",
-        "MDF_SpeedAddedRatio",
-        "MDF_PowerUp_AllDamageTypeAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio</span> and when receiving DMG from targets outside the Showdown state, reduces DMG by <span class=\"descriptionNumberColor\">MDF_DamageReduce</span>. Obtains 1 stack of \"Morale\" after each attack. DMG taken from Duel target will reduce the Duel's progress bar based on the DMG. When the Duel's progress bar is at 0, the Duel is lost and the Duel state is dispelled. Still requires <span class=\"descriptionNumberColor\">DeadLock_HP_CurrentValue</span> DMG to dispel Duel state.",
-      "type": "Other",
-      "effectName": "Duel",
-      "statusName": "Duel"
+      ]
     }
   ],
   "references": []

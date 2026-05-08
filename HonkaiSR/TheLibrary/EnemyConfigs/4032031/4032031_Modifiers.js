@@ -10,18 +10,102 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1771764709\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood</a>[<span class=\"descriptionNumberColor\">HP Overload</span>]",
+      "modifierFlags": [
+        "MuteBreak"
+      ],
+      "description": "Target has accumulated \"HP Overload,\" healing <span class=\"descriptionNumberColor\">MDF_NegativeBlood</span> HP will remove this state. When the \"Overload Settlement\" turn begins, the target will receive fatal damage.",
+      "type": "Other",
+      "statusName": "HP Overload",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Define Custom Variable with Stat",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "variableName": "MDF_NegativeBlood_Temp",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;"
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_NegativeBlood",
+              "value": {
+                "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
+                "constants": [],
+                "variables": [
+                  "CEIL",
+                  "MDF_NegativeBlood_Temp"
+                ]
+              }
+            },
+            {
+              "name": "Modify Weaknesses",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "action": "Protected",
+              "valueList": [
+                "Physical",
+                "Fire",
+                "Ice",
+                "Thunder",
+                "Wind",
+                "Quantum",
+                "Imaginary"
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "HP Change [Owner]",
+          "execute": [
+            {
+              "name": "Define Custom Variable with Stat",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "variableName": "MDF_NegativeBlood_Temp",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;"
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_NegativeBlood",
+              "value": {
+                "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
+                "constants": [],
+                "variables": [
+                  "CEIL",
+                  "MDF_NegativeBlood_Temp"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-855496844\">Enemy_W2_Valkyrie01_02_EffectController</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1227649077\">Enemy_W2_Valkyrie01_02_AbilityP01</a>[<span class=\"descriptionNumberColor\">Bitter Fracture</span>]",
+      "description": "When other friendly units are defeated, this unit immediately takes action and uses \"Fire of Vengeance\" once. When there are multiple \"Black Tide's Corroded Axe\" on the battlefield, only 1 \"Black Tide's Corroded Axe\"'s \"Bitter Fracture\" Talent can be triggered.",
+      "type": "Other",
+      "statusName": "Bitter Fracture",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -487,12 +571,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "When other friendly units are defeated, this unit immediately takes action and uses \"Fire of Vengeance\" once. When there are multiple \"Black Tide's Corroded Axe\" on the battlefield, only 1 \"Black Tide's Corroded Axe\"'s \"Bitter Fracture\" Talent can be triggered.",
-      "type": "Other",
-      "statusName": "Bitter Fracture"
+      ]
     }
   ],
   "references": []

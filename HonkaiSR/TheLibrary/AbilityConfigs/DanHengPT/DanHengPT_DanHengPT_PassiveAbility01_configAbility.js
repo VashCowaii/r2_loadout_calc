@@ -292,6 +292,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__98427049\">DanHengPT_ExtraDamageCount</a>",
       "stackType": "ReplaceByCaster",
+      "removalDependencies": {
+        "name": "Removal Dependency",
+        "dependancyName": "<a class=\"gModGreen\" id=\"-1655562855\">Memosprite_CyreneServant_AmazingBonus_DanHengPT</a>[<span class=\"descriptionNumberColor\">Ode to Earth</span>]"
+      },
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -362,15 +366,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "removalDependencies": {
-        "name": "Removal Dependency",
-        "dependancyName": "<a class=\"gModGreen\" id=\"-1655562855\">Memosprite_CyreneServant_AmazingBonus_DanHengPT</a>[<span class=\"descriptionNumberColor\">Ode to Earth</span>]"
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1781840956\">DanHengPT_ExtraListen</a>",
+      "latentQueue": [
+        "DanHengPT_IsFreeAction"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking Modifier Instance [Owner]",
@@ -428,17 +431,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DanHengPT_IsFreeAction"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__3985826\">DanHengPT_Olisten_BE_Create</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -458,6 +455,24 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-853961878\">DanHengPT_Eidolon2_Onlisten</a>",
+      "latentQueue": [
+        "DanHengPT_IsFreeAction"
+      ],
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Souldragon}}"
+        },
+        "skillType": [
+          "Ultimate"
+        ],
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": -1
+        }
+      },
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -484,30 +499,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DanHengPT_IsFreeAction"
-      ],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "target": {
-          "name": "Target Name",
-          "target": "{{Souldragon}}"
-        },
-        "skillType": [
-          "Ultimate"
-        ],
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": -1
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__933382237\">DanHengPT_Eidolon1_Onlisten</a>",
+      "latentQueue": [
+        "DanHengPT_IsFreeAction"
+      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -561,10 +560,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DanHengPT_IsFreeAction"
       ]
     },
     {
@@ -812,9 +807,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

@@ -15,13 +15,15 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1846949450\">Enemy_W4_Turkey_Ability02_Power</a>[<span class=\"descriptionNumberColor\">Hemotort Resonance</span>]",
+      "description": "After other \"Ichor Memosprites: Pheasant\" in the \"Hemotort Resonance\" state attack, this unit will attack together with them. Dispels when Weakness is broken.",
+      "type": "Other",
+      "effectName": "Hemotort Resonance",
+      "statusName": "Hemotort Resonance",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -42,13 +44,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "After other \"Ichor Memosprites: Pheasant\" in the \"Hemotort Resonance\" state attack, this unit will attack together with them. Dispels when Weakness is broken.",
-      "type": "Other",
-      "effectName": "Hemotort Resonance",
-      "statusName": "Hemotort Resonance"
+      ]
     }
   ],
   "references": []

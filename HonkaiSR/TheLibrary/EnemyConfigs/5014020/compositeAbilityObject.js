@@ -3,20 +3,12 @@ const compositeAbilityObject = {
   "fullCharacterName": 5014020,
   "trimCharacterName": 5014020,
   "abilityList": [
-    "5014020_BattleEventAbility_W5_Pam_SummonMonster",
-    "5014020_BattleEventAbility_W5_Pam_Summon",
-    "5014020_Monster_W5_Pam_DeathRattle_Insert",
     "5014020_Monster_W5_Pam_PassiveAbility_BGM",
+    "5014020_Monster_W5_Pam_DeathRattle_Insert",
     "5014020_Monster_W5_Pam_PassiveAbility_PartChange_Insert",
     "5014020_Monster_W5_Pam_PassiveAbility02_Part01",
+    "5014020_BattleEventAbility_W5_Pam_SummonMonster",
     "5014020_Monster_W5_Pam_PassiveAbility01_Part01",
-    "5014020_BattleEvent_W5_Pam_Part01",
-    "5014020_Monster_W5_Pam_Ability10_Part02",
-    "5014020_Monster_W5_Pam_Ability10_Part01",
-    "5014020_Monster_W5_Pam_Ability09_Part02",
-    "5014020_Monster_W5_Pam_Ability09_Part01",
-    "5014020_Monster_W5_Pam_Ability08_Part02",
-    "5014020_Monster_W5_Pam_Ability08_Part01",
     "5014020_Monster_W5_Pam_Ability06_Part02",
     "5014020_Monster_W5_Pam_Ability06_Part01",
     "5014020_Monster_W5_Pam_Ability05_Part02",
@@ -33,643 +25,6 @@ const compositeAbilityObject = {
     "5014020_BE_BattleEvents"
   ],
   "abilityObject": {
-    "5014020_BattleEventAbility_W5_Pam_SummonMonster": {
-      "fileName": "5014020_BattleEventAbility_W5_Pam_SummonMonster",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "MDF_BEAlive",
-                "compareType": "=",
-                "value2": 0
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Enemy Team All}}"
-                    },
-                    "value1": "TeamCharacterCount",
-                    "compareType": "<",
-                    "value2": 4
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": 0.25,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "SummonList_ADF_1",
-                      "summonLocation": "KeepOnEdge"
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Recently Summoned Enemies}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"223685370\">Monster_W5_Pam_SummonedMinions_Appear</a>"
-                },
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": 0.75,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "SummonList_ADF_1",
-                      "summonLocation": "KeepOnEdge"
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Recently Summoned Enemies}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"223685370\">Monster_W5_Pam_SummonedMinions_Appear</a>"
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Enemy Team All}}"
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": "=",
-                        "value2": 4
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Create Enemies",
-                      "delayPercent": 0.25,
-                      "enemyList": [
-                        {
-                          "name": "Create Enemy from Custom",
-                          "value": "SummonList_ADF_1",
-                          "summonLocation": "KeepOnEdge"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Minions}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Recently Summoned Enemies}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"223685370\">Monster_W5_Pam_SummonedMinions_Appear</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "value": "GridFightBoss"
-              },
-              "passed": [
-                {
-                  "name": "Add Battle Event",
-                  "teamName": "Player Team",
-                  "eventID": 20032,
-                  "assignOwner": {
-                    "name": "Target Name",
-                    "target": "{{Level Entity}}"
-                  },
-                  "variables": {
-                    "PassiveAbility01_P6_SpeedRatio": {
-                      "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[5]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[5]]}"
-                      ]
-                    }
-                  },
-                  "whenCreated": [
-                    {
-                      "name": "Assign Unique Name",
-                      "uniqueName": "Pamu_Robot",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      }
-                    },
-                    {
-                      "name": "Remove from Team Target Grouping",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "stayInTeam": false
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Add Battle Event",
-                  "teamName": "Player Team",
-                  "eventID": 20032,
-                  "assignOwner": {
-                    "name": "Target Name",
-                    "target": "{{Level Entity}}"
-                  },
-                  "variables": null,
-                  "whenCreated": [
-                    {
-                      "name": "Assign Unique Name",
-                      "uniqueName": "Pamu_Robot",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      }
-                    },
-                    {
-                      "name": "Remove from Team Target Grouping",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "stayInTeam": false
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "MDF_BEAlive",
-              "value": 1
-            }
-          ],
-          "failed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Battle Event List}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Battle Event ID",
-                "ID": 20032,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                }
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Remove from Team Target Grouping",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "stayInTeam": false
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Enemy Team All}}"
-                    },
-                    "value1": "TeamCharacterCount",
-                    "compareType": "<",
-                    "value2": 4
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": 0.25,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "SummonList_ADF_1",
-                      "summonLocation": "KeepOnEdge"
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Recently Summoned Enemies}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"223685370\">Monster_W5_Pam_SummonedMinions_Appear</a>"
-                },
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": 0.75,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "SummonList_ADF_1",
-                      "summonLocation": "KeepOnEdge"
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Recently Summoned Enemies}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"223685370\">Monster_W5_Pam_SummonedMinions_Appear</a>"
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Enemy Team All}}"
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": "=",
-                        "value2": 4
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Create Enemies",
-                      "delayPercent": 0.25,
-                      "enemyList": [
-                        {
-                          "name": "Create Enemy from Custom",
-                          "value": "SummonList_ADF_1",
-                          "summonLocation": "KeepOnEdge"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Minions}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Recently Summoned Enemies}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"223685370\">Monster_W5_Pam_SummonedMinions_Appear</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        "Deleted bullshit",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Battle Event List}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Battle Event ID",
-            "ID": 20032,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            }
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove from Team Target Grouping",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "stayInTeam": false
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "5014020_BattleEventAbility_W5_Pam_Summon": {
-      "fileName": "5014020_BattleEventAbility_W5_Pam_Summon",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "BattleEventAbility_W5_Pam_SummonMonster",
-          "parameters": {}
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W5_Pam_PassiveAbility01_Camera_2",
-          "parameters": {}
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W5_Pam_PassiveAbility01_Camera_3",
-          "parameters": {}
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": {
-            "operator": "Variables[0] (PassiveAbility01_P2_DelayPercentage) || RETURN",
-            "displayLines": "PassiveAbility01_P2_DelayPercentage",
-            "constants": [],
-            "variables": [
-              "PassiveAbility01_P2_DelayPercentage"
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "value": "GridFightBoss"
-          },
-          "passed": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "CurrentSpeed"
-            },
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "variableName": "CurrentSpeed",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1803941679\">Modifier_W5_Pam_BattleEvent_BaseSpeed</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"746359205\">Modifier_BattleEventAbility_SummonMonster</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1216093576\">Modifier_W5_Pam_BattleEvent_ForceKill</a>"
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "PamuSummon",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1803941679\">Modifier_W5_Pam_BattleEvent_BaseSpeed</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedOverride</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (CurrentSpeed) || Variables[1] (PassiveSkill01_P6_SpeedRatio) || MUL || RETURN",
-                    "displayLines": "(CurrentSpeed * PassiveSkill01_P6_SpeedRatio)",
-                    "constants": [],
-                    "variables": [
-                      "CurrentSpeed",
-                      "PassiveSkill01_P6_SpeedRatio"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__746359205\">Modifier_BattleEventAbility_SummonMonster</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "Pam_MainBoss"
-                      }
-                    ]
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "BattleEventAbility_W5_Pam_SummonMonster",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "priorityTag": "EnemyChangeState",
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "5014020_Monster_W5_Pam_DeathRattle_Insert": {
-      "fileName": "5014020_Monster_W5_Pam_DeathRattle_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          }
-        },
-        {
-          "name": "Mark Entity For Immediate Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-94545998\">Monster_W5_Pam_MainStory_ActionImmediately</a>"
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "5014020_Monster_W5_Pam_PassiveAbility_BGM": {
       "fileName": "5014020_Monster_W5_Pam_PassiveAbility_BGM",
       "childAbilityList": [
@@ -774,11 +129,58 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
+    },
+    "5014020_Monster_W5_Pam_DeathRattle_Insert": {
+      "fileName": "5014020_Monster_W5_Pam_DeathRattle_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Force Entity Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          }
+        },
+        {
+          "name": "Mark Entity For Immediate Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-94545998\">Monster_W5_Pam_MainStory_ActionImmediately</a>"
+        },
+        {
+          "name": "Change Character Transformation",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "phase": "Phase1"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
     },
     "5014020_Monster_W5_Pam_PassiveAbility_PartChange_Insert": {
       "fileName": "5014020_Monster_W5_Pam_PassiveAbility_PartChange_Insert",
@@ -1369,9 +771,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1385,6 +785,404 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__2015018608\">Monster_W5_Pam_Insert_Mark</a>"
         }
       ]
+    },
+    "5014020_BattleEventAbility_W5_Pam_SummonMonster": {
+      "fileName": "5014020_BattleEventAbility_W5_Pam_SummonMonster",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Variable",
+                "value1": "MDF_BEAlive",
+                "compareType": "=",
+                "value2": 0
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All}}"
+                    },
+                    "value1": "TeamCharacterCount",
+                    "compareType": "<",
+                    "value2": 4
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": 0.25,
+                  "enemyList": [
+                    {
+                      "name": "Create Enemy from Custom",
+                      "value": "SummonList_ADF_1",
+                      "summonLocation": "KeepOnEdge"
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Recently Summoned Enemies}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"223685370\">Monster_W5_Pam_SummonedMinions_Appear</a>"
+                },
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": 0.75,
+                  "enemyList": [
+                    {
+                      "name": "Create Enemy from Custom",
+                      "value": "SummonList_ADF_1",
+                      "summonLocation": "KeepOnEdge"
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Minions}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Recently Summoned Enemies}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"223685370\">Monster_W5_Pam_SummonedMinions_Appear</a>"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Enemy Team All}}"
+                        },
+                        "value1": "TeamCharacterCount",
+                        "compareType": "=",
+                        "value2": 4
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Create Enemies",
+                      "delayPercent": 0.25,
+                      "enemyList": [
+                        {
+                          "name": "Create Enemy from Custom",
+                          "value": "SummonList_ADF_1",
+                          "summonLocation": "KeepOnEdge"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Minions}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Recently Summoned Enemies}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"223685370\">Monster_W5_Pam_SummonedMinions_Appear</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "value": "GridFightBoss"
+              },
+              "passed": [
+                {
+                  "name": "Add Battle Event",
+                  "teamName": "Player Team",
+                  "eventID": 20032,
+                  "assignOwner": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "variables": {
+                    "PassiveAbility01_P6_SpeedRatio": {
+                      "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
+                      "displayLines": "{[PassiveSkill01[5]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[PassiveSkill01[5]]}"
+                      ]
+                    }
+                  },
+                  "whenCreated": [
+                    {
+                      "name": "Assign Unique Name",
+                      "uniqueName": "Pamu_Robot",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
+                    },
+                    {
+                      "name": "Remove from Team Target Grouping",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "stayInTeam": false
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Add Battle Event",
+                  "teamName": "Player Team",
+                  "eventID": 20032,
+                  "assignOwner": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "variables": null,
+                  "whenCreated": [
+                    {
+                      "name": "Assign Unique Name",
+                      "uniqueName": "Pamu_Robot",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
+                    },
+                    {
+                      "name": "Remove from Team Target Grouping",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "stayInTeam": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_BEAlive",
+              "value": 1
+            }
+          ],
+          "failed": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Battle Event List}}"
+              },
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Battle Event ID",
+                "ID": 20032,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Remove from Team Target Grouping",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "stayInTeam": false
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All}}"
+                    },
+                    "value1": "TeamCharacterCount",
+                    "compareType": "<",
+                    "value2": 4
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": 0.25,
+                  "enemyList": [
+                    {
+                      "name": "Create Enemy from Custom",
+                      "value": "SummonList_ADF_1",
+                      "summonLocation": "KeepOnEdge"
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Recently Summoned Enemies}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"223685370\">Monster_W5_Pam_SummonedMinions_Appear</a>"
+                },
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": 0.75,
+                  "enemyList": [
+                    {
+                      "name": "Create Enemy from Custom",
+                      "value": "SummonList_ADF_1",
+                      "summonLocation": "KeepOnEdge"
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Minions}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Recently Summoned Enemies}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"223685370\">Monster_W5_Pam_SummonedMinions_Appear</a>"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Enemy Team All}}"
+                        },
+                        "value1": "TeamCharacterCount",
+                        "compareType": "=",
+                        "value2": 4
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Create Enemies",
+                      "delayPercent": 0.25,
+                      "enemyList": [
+                        {
+                          "name": "Create Enemy from Custom",
+                          "value": "SummonList_ADF_1",
+                          "summonLocation": "KeepOnEdge"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Minions}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Recently Summoned Enemies}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"223685370\">Monster_W5_Pam_SummonedMinions_Appear</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "Deleted bullshit",
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Battle Event List}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Battle Event ID",
+            "ID": 20032,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            }
+          },
+          "ifTargetFound": [
+            {
+              "name": "Remove from Team Target Grouping",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "stayInTeam": false
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
     },
     "5014020_Monster_W5_Pam_PassiveAbility01_Part01": {
       "fileName": "5014020_Monster_W5_Pam_PassiveAbility01_Part01",
@@ -1503,9 +1301,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1528,9 +1324,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1570,434 +1364,9 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
-    },
-    "5014020_BattleEvent_W5_Pam_Part01": {
-      "fileName": "5014020_BattleEvent_W5_Pam_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "value": "Pam_MainBoss"
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"833181750\">Enemy_W2_LycanKing_IF_MuteUltra</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "value": "Pam_MainBoss"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "inherentTarget": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "ability": "Monster_W5_Pam_Ability05_Part01",
-              "isTrigger": true
-            }
-          ]
-        },
-        "Wait for Pending Ability Completions",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "5014020_Monster_W5_Pam_Ability10_Part02": {
-      "fileName": "5014020_Monster_W5_Pam_Ability10_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Target Count",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Enemy Team All}}"
-                },
-                "compareType": "<=",
-                "value2": 3,
-                "livingTargets": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__206) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__206",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__206"
-                ]
-              },
-              "enemyList": [
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "SummonList_ADF_1",
-                  "summonLocation": "AroundCasterOnEdge"
-                }
-              ]
-            },
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__207) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__207",
-                "constants": [],
-                "variables": [
-                  "ENEMIES_OBJECT_UNUSED__207"
-                ]
-              },
-              "enemyList": [
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "SummonList_ADF_1",
-                  "summonLocation": "AroundCasterOnEdge"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target Count",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Enemy Team All}}"
-                },
-                "compareType": "=",
-                "value2": 4,
-                "livingTargets": true
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__207) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__207",
-                    "constants": [],
-                    "variables": [
-                      "ENEMIES_OBJECT_UNUSED__207"
-                    ]
-                  },
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "SummonList_ADF_1",
-                      "summonLocation": "AroundCasterOnEdge"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "MDF_BEAlive",
-            "compareType": "=",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "Add Battle Event",
-              "teamName": "Player Team",
-              "eventID": 20032,
-              "assignOwner": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "variables": null,
-              "whenCreated": [
-                {
-                  "name": "Assign Unique Name",
-                  "uniqueName": "Pamu_Robot",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "MDF_BEAlive",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5014020_Monster_W5_Pam_Ability10_Part01": {
-      "fileName": "5014020_Monster_W5_Pam_Ability10_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Pam_Ability10_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5014020_Monster_W5_Pam_Ability09_Part02": {
-      "fileName": "5014020_Monster_W5_Pam_Ability09_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1808092737\">Monster_W5_Pam_SummonedMinions_die_count</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1250511369\">Monster_W5_Pam_SummonedMinions_monitor</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "MDF_dirty_part_num",
-          "value": 0
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-3818542\">Monster_W5_Pam_Protect_Weakness</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5014020_Monster_W5_Pam_Ability09_Part01": {
-      "fileName": "5014020_Monster_W5_Pam_Ability09_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Pam_Ability09_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5014020_Monster_W5_Pam_Ability08_Part02": {
-      "fileName": "5014020_Monster_W5_Pam_Ability08_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_31) || RETURN",
-              "displayLines": "UnusedUnderThisBase_31",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_31"
-              ]
-            },
-            "HitSplit": 0.6,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_31) || RETURN",
-              "displayLines": "UnusedUnderThisBase_31",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_31"
-              ]
-            },
-            "HitSplit": 0.4,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Adjust Team Punchline Value",
-          "value": {
-            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__208) || RETURN",
-            "displayLines": "ENEMIES_OBJECT_UNUSED__208",
-            "constants": [],
-            "variables": [
-              "ENEMIES_OBJECT_UNUSED__208"
-            ]
-          },
-          "adjustment": "Add"
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1364752860\">W1_Mecha02_AttackBonus_Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "5014020_Monster_W5_Pam_Ability08_Part01": {
-      "fileName": "5014020_Monster_W5_Pam_Ability08_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Pam_Ability08_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
     },
     "5014020_Monster_W5_Pam_Ability06_Part02": {
       "fileName": "5014020_Monster_W5_Pam_Ability06_Part02",
@@ -2504,7 +1873,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1493708935\">Modifier_Monster_W5_Pam_Charge</a>[<span class=\"descriptionNumberColor\">Raring to Go</span>]",
           "stackType": "Replace",
-          "stackData": [],
           "latentQueue": [
             "MDF_FirstUltraSkill"
           ],
@@ -3231,14 +2599,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__223685370\">Monster_W5_Pam_SummonedMinions_Appear</a>",
           "stackType": "Replace",
+          "latentQueue": [
+            "MDF_BEAlive"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_BEAlive"
           ]
         },
         {
@@ -3272,9 +2639,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3403,9 +2768,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3443,14 +2806,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-299555653\">Monster_W5_Pam_SummonedMinions_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "Replace",
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MDF_BuffMaxLayer</span> stack(s).",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3480,12 +2846,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>, up to <span class=\"descriptionNumberColor\">MDF_BuffMaxLayer</span> stack(s).",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3615,13 +2976,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-94545998\">Monster_W5_Pam_MainStory_ActionImmediately</a>",
+          "stackData": [
+            "MDF_Lock_Radio"
+          ],
+          "latentQueue": [
+            "MDF_FirstUltraSkill"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3802,12 +3167,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Lock_Radio"
-          ],
-          "latentQueue": [
-            "MDF_FirstUltraSkill"
           ]
         },
         {
@@ -4211,6 +3570,16 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "RemoveWhenCasterUnstage"
           ],
+          "stackData": [
+            "MDF_PropertyValue01",
+            "MDF_PropertyValue02",
+            "MDF_PropertyValue03",
+            "MDF_PropertyValue04"
+          ],
+          "description": "After using Basic ATK, triggers the \"Shiny\" effect, additionally deals True DMG equal to <span class=\"descriptionNumberColor\">MDF_PropertyValue02</span> of the target's Max HP, and gains <span class=\"descriptionNumberColor\">MDF_PropertyValue03</span> Punchline(s). After using Skill, triggers the \"Pristine\" effect and recovers <span class=\"descriptionNumberColor\">MDF_PropertyValue04</span> Skill Point(s). This effect can trigger a max of 1 time while the \"Work Is Bliss!\" effect is active.",
+          "type": "Other",
+          "effectName": "Deep Clean",
+          "statusName": "Work Is Bliss!",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4369,18 +3738,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue01",
-            "MDF_PropertyValue02",
-            "MDF_PropertyValue03",
-            "MDF_PropertyValue04"
-          ],
-          "latentQueue": [],
-          "description": "After using Basic ATK, triggers the \"Shiny\" effect, additionally deals True DMG equal to <span class=\"descriptionNumberColor\">MDF_PropertyValue02</span> of the target's Max HP, and gains <span class=\"descriptionNumberColor\">MDF_PropertyValue03</span> Punchline(s). After using Skill, triggers the \"Pristine\" effect and recovers <span class=\"descriptionNumberColor\">MDF_PropertyValue04</span> Skill Point(s). This effect can trigger a max of 1 time while the \"Work Is Bliss!\" effect is active.",
-          "type": "Other",
-          "effectName": "Deep Clean",
-          "statusName": "Work Is Bliss!"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4391,6 +3749,16 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1556520356\">Modifier_Monster_W5_Pam_Rage</a>[<span class=\"descriptionNumberColor\">Steam Wash</span>]",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "MDF_IsAngry"
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Steam Wash",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4413,22 +3781,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "MDF_IsAngry"
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Steam Wash"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2053579476\">Modifier_Monster_W5_Pam_DamageDown</a>",
           "stackType": "Replace",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4459,9 +3819,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4677,9 +4035,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4755,6 +4111,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1808092737\">Monster_W5_Pam_SummonedMinions_die_count</a>",
           "stackType": "Replace",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4802,8 +4159,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4831,6 +4187,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-458099336\">Monster_W5_Pam_zangshui_layer_display_02</a>",
           "stackType": "Replace",
+          "latentQueue": [
+            "MDF_IsAngry"
+          ],
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5209,17 +4569,13 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_IsAngry"
-          ],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__989212197\">Monster_W5_Pam_zangshui_layer_display</a>",
           "stackType": "Replace",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5381,8 +4737,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5390,6 +4745,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak"
           ],
+          "latentQueue": [
+            "MDF_FirstUltraSkill"
+          ],
+          "description": "When \"Alloy Mechatron: King Pom-Pom\" is in the \"Raring to Go\" state, this unit's Toughness cannot be reduced.",
+          "type": "Other",
+          "effectName": "Weakness Protected",
+          "statusName": "Weakness Protected",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5413,21 +4775,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_FirstUltraSkill"
-          ],
-          "description": "When \"Alloy Mechatron: King Pom-Pom\" is in the \"Raring to Go\" state, this unit's Toughness cannot be reduced.",
-          "type": "Other",
-          "effectName": "Weakness Protected",
-          "statusName": "Weakness Protected"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1583873554\">Modifier_Monster_W5_Pam_Endurance</a>",
           "modifierFlags": [
             "MuteHitH"
+          ],
+          "latentQueue": [
+            "_Is_BOSS"
           ],
           "execute": [
             {
@@ -5448,16 +4805,23 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_Is_BOSS"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-983171602\">Modifier_Monster_W5_Pam_DefenceUp</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "MDF_IsAngry"
+          ],
+          "description": "Each stack decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. When all stacks are removed, exits the \"Steam Wash\" state and takes massive DMG.",
+          "type": "Buff",
+          "effectName": "DMG Received Reduction",
+          "statusName": "Lasting Antibac",
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5877,18 +5241,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "MDF_IsAngry"
-          ],
-          "description": "Each stack decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. When all stacks are removed, exits the \"Steam Wash\" state and takes massive DMG.",
-          "type": "Buff",
-          "effectName": "DMG Received Reduction",
-          "statusName": "Lasting Antibac",
-          "addStacksPerTrigger": -1
+          ]
         }
       ],
       "references": []
@@ -5903,29 +5256,6 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
-        {
-          "name": "Battle Event Construction",
-          "ID": 20032,
-          "team": "Neutral Team",
-          "eventType": "Summon",
-          "abilityList": null,
-          "overridesArray": [
-            {
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
-              "value": 90
-            },
-            {
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
-              "value": 100
-            },
-            {
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-              "value": 110
-            }
-          ],
-          "hardLevelEvent": true,
-          "actionDescription": "Ally's \"Alloy Pommy.\"\\nEach time allies gain 1 Punchline, accumulates 1 point of Charge. When the Charge reaches <unbreak>#1[i]</unbreak> points, immediately gains 1 extra turn and enhances Basic ATK.\\nBasic ATK deals Quantum DMG to one designated enemy target and gains Punchlines.\\nEnhanced Basic ATK consumes <unbreak>#1[i]</unbreak> points of Charge, dealing Quantum DMG to one designated enemy target and True DMG equal to a certain percentage of the target's Max HP, and removes 1 stack of the \"Lasting Antibac\" effect from the target."
-        },
         {
           "name": "Battle Event Construction",
           "ID": 20033,
@@ -5950,6 +5280,29 @@ const compositeAbilityObject = {
           ],
           "hardLevelEvent": true,
           "actionDescription": "When taking action, summons an \"Alloy Pommy\" for both ally and enemy teams.\\nAllies can only have 1 \"Alloy Pommy,\" and it cannot be targeted by abilities from either team."
+        },
+        {
+          "name": "Battle Event Construction",
+          "ID": 20032,
+          "team": "Neutral Team",
+          "eventType": "Summon",
+          "abilityList": null,
+          "overridesArray": [
+            {
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+              "value": 90
+            },
+            {
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+              "value": 100
+            },
+            {
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+              "value": 110
+            }
+          ],
+          "hardLevelEvent": true,
+          "actionDescription": "Ally's \"Alloy Pommy.\"\\nEach time allies gain 1 Punchline, accumulates 1 point of Charge. When the Charge reaches <unbreak>#1[i]</unbreak> points, immediately gains 1 extra turn and enhances Basic ATK.\\nBasic ATK deals Quantum DMG to one designated enemy target and gains Punchlines.\\nEnhanced Basic ATK consumes <unbreak>#1[i]</unbreak> points of Charge, dealing Quantum DMG to one designated enemy target and True DMG equal to a certain percentage of the target's Max HP, and removes 1 stack of the \"Lasting Antibac\" effect from the target."
         }
       ],
       "references": []

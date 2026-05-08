@@ -6,25 +6,22 @@ const compositeAbilityObject = {
     "3003042_Monster_W3_Figure_RLElite_AssistAbility01_Effect",
     "3003042_Monster_W3_Figure_RLElite_AssistAbility01_Perform",
     "3003042_Monster_W3_Figure_RLElite_AssistAbility01_Logic",
+    "3003042_Monster_W3_Figure_RLElite_PassiveAbility_Initiate",
+    "3003042_Monster_W3_Figure_RLElite_PassiveAbility_02",
     "3003042_Monster_W3_Figure_RLElite_Ability07_Part02",
     "3003042_Monster_W3_Figure_RLElite_Ability07_Part01",
     "3003042_Monster_W3_Figure_RLElite_Ability06_Part02",
     "3003042_Monster_W3_Figure_RLElite_Ability06_Part01",
     "3003042_Monster_W3_Figure_RLElite_Ability05_Part02",
-    "3003042_Monster_W3_Figure_RLElite_Ability05_Logic",
     "3003042_Monster_W3_Figure_RLElite_Ability05_Part01",
     "3003042_Monster_W3_Figure_RLElite_Ability04_Part02",
     "3003042_Monster_W3_Figure_RLElite_Ability04_Part01",
-    "3003042_Monster_W3_Figure_RLElite_AssistAbility02_Part02",
-    "3003042_Monster_W3_Figure_RLElite_AssistAbility02_Part01",
     "3003042_Monster_W3_Figure_RLElite_Ability03_Part02",
     "3003042_Monster_W3_Figure_RLElite_Ability03_Part01",
     "3003042_Monster_W3_Figure_RLElite_Ability02_Part02",
     "3003042_Monster_W3_Figure_RLElite_Ability02_Part01",
     "3003042_Monster_W3_Figure_RLElite_Ability01_Part02",
     "3003042_Monster_W3_Figure_RLElite_Ability01_Part01",
-    "3003042_Monster_W3_Figure_RLElite_PassiveAbility_02",
-    "3003042_Monster_W3_Figure_RLElite_PassiveAbility_Initiate",
     "3003042_Modifiers"
   ],
   "abilityObject": {
@@ -60,6 +57,139 @@ const compositeAbilityObject = {
         "primaryTarget": "Inherent Target"
       },
       "tag": "DOT_Burn",
+      "references": []
+    },
+    "3003042_Monster_W3_Figure_RLElite_PassiveAbility_Initiate": {
+      "fileName": "3003042_Monster_W3_Figure_RLElite_PassiveAbility_Initiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Add Target by Unique Identifier",
+            "identifier": "DollBoss"
+          },
+          "searchRandom": true,
+          "maxTargets": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"410552905\">Enemy_W3_Figure_RLElite_BreakController</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1533608275\">W3_Figure_BattleScore1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"848128551\">Enemy_W3_Figure_RLElite_AudioControllerForChosenOne</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__848128551\">Enemy_W3_Figure_RLElite_AudioControllerForChosenOne</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier is Added [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__410552905\">Enemy_W3_Figure_RLElite_BreakController</a>",
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "AIFlag",
+                  "value": 7
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "3003042_Monster_W3_Figure_RLElite_PassiveAbility_02": {
+      "fileName": "3003042_Monster_W3_Figure_RLElite_PassiveAbility_02",
+      "childAbilityList": [
+        "3003042_Monster_W3_Figure_RLElite_PassiveAbility_02"
+      ],
+      "skillTrigger": "PassiveSkill02",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1110187412\">Enemy_W3_Figure_RLElite_SuccessSleep</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "3003042_Monster_W3_Figure_RLElite_Ability07_Part02": {
@@ -446,61 +576,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "3003042_Monster_W3_Figure_RLElite_Ability05_Logic": {
-      "fileName": "3003042_Monster_W3_Figure_RLElite_Ability05_Logic",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2144716663\">Standard_CTRL_Sleep</a>[<span class=\"descriptionNumberColor\">Alien Dream</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-            "displayLines": "{[Skill05[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[2]]}"
-            ]
-          },
-          "baseChance": {
-            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-            "displayLines": "{[Skill05[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[1]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_AllDamageAddedRatio": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
-            },
-            "MDF_HealPercentage": {
-              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-              "displayLines": "{[Skill02[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[3]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "tag": "DOT",
-      "references": []
-    },
     "3003042_Monster_W3_Figure_RLElite_Ability05_Part01": {
       "fileName": "3003042_Monster_W3_Figure_RLElite_Ability05_Part01",
       "childAbilityList": [
@@ -582,28 +657,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3003042_Monster_W3_Figure_RLElite_AssistAbility02_Part02": {
-      "fileName": "3003042_Monster_W3_Figure_RLElite_AssistAbility02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3003042_Monster_W3_Figure_RLElite_AssistAbility02_Part01": {
-      "fileName": "3003042_Monster_W3_Figure_RLElite_AssistAbility02_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       },
       "references": []
     },
@@ -837,143 +890,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "3003042_Monster_W3_Figure_RLElite_PassiveAbility_02": {
-      "fileName": "3003042_Monster_W3_Figure_RLElite_PassiveAbility_02",
-      "childAbilityList": [
-        "3003042_Monster_W3_Figure_RLElite_PassiveAbility_02"
-      ],
-      "skillTrigger": "PassiveSkill02",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1110187412\">Enemy_W3_Figure_RLElite_SuccessSleep</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3003042_Monster_W3_Figure_RLElite_PassiveAbility_Initiate": {
-      "fileName": "3003042_Monster_W3_Figure_RLElite_PassiveAbility_Initiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Add Target by Unique Identifier",
-            "identifier": "DollBoss"
-          },
-          "searchRandom": true,
-          "maxTargets": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"410552905\">Enemy_W3_Figure_RLElite_BreakController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1533608275\">W3_Figure_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"848128551\">Enemy_W3_Figure_RLElite_AudioControllerForChosenOne</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__848128551\">Enemy_W3_Figure_RLElite_AudioControllerForChosenOne</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier is Added [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"941590351\">Monster_W3_FigureBoss_Standard_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__410552905\">Enemy_W3_Figure_RLElite_BreakController</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 7
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "3003042_Modifiers": {
       "fileName": "3003042_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -988,6 +904,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1025576815\">Enemy_W3_Figure_RLElite_AttackUP</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "Replace",
+          "description": "For every target with Alien Dream, increase this unit's ATK by <span class=\"descriptionNumberColor\">MDF_AttackUPRatio</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "ATK Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1017,11 +937,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "For every target with Alien Dream, increase this unit's ATK by <span class=\"descriptionNumberColor\">MDF_AttackUPRatio</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "ATK Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1225,13 +1141,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-316988116\">Monster_W3_Figure_RLElite_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Holy Night</span>]",
+          "description": "About to use \"Sleep In Heavenly Peace.\"",
+          "type": "Other",
+          "effectName": "Charging",
+          "statusName": "Holy Night",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1242,13 +1160,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "About to use \"Sleep In Heavenly Peace.\"",
-          "type": "Other",
-          "effectName": "Charging",
-          "statusName": "Holy Night"
+          ]
         }
       ],
       "references": []

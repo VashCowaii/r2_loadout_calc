@@ -10,6 +10,33 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1461700286\">ADV_Modifier_Maze_Yukong</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "onCreation": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Animator Variable",
+            "paramType": "Int",
+            "paramName": "MotionFlag",
+            "compareType": "=",
+            "compareValue": 3
+          }
+        }
+      ],
+      "onStageExit": [
+        "Modifier Deletes Itself"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__203914091\">ADV_StageAbility_Maze_Yukong</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__64466487\">Yukong_FlowerListen</a>",
       "execute": [
         {
@@ -25,13 +52,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__781697929\">Yukong_Eidolon4_Flower_Bonus</a>[<span class=\"descriptionNumberColor\">Zephyrean Echoes</span>]",
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_AddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Zephyrean Echoes",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -54,11 +83,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_AddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Zephyrean Echoes"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -108,16 +133,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AddDamagePercentage",
-        "MDF_StanceBreakAddedRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2029608096\">Yukong_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]",
+      "stackData": [
+        "MDF_AddDamagePercentage",
+        "MDF_StanceBreakAddedRatio"
+      ],
+      "description": "Basic ATK deals additional Imaginary DMG equal to <span class=\"descriptionNumberColor\">MDF_AddDamagePercentage</span> of Yukong's ATK, and increases Toughness Reduction by <span class=\"descriptionNumberColor\">MDF_StanceBreakAddedRatio</span>.",
+      "type": "Buff",
+      "statusName": "Seven Layers, One Arrow",
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -132,15 +159,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AddDamagePercentage",
-        "MDF_StanceBreakAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "Basic ATK deals additional Imaginary DMG equal to <span class=\"descriptionNumberColor\">MDF_AddDamagePercentage</span> of Yukong's ATK, and increases Toughness Reduction by <span class=\"descriptionNumberColor\">MDF_StanceBreakAddedRatio</span>.",
-      "type": "Buff",
-      "statusName": "Seven Layers, One Arrow"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -150,6 +169,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1097783562\">Yukong_Flower_ATK_Crit</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_RealAttack</span>, CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CritChanceUp</span>, and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CritDamageUpRatio</span>.",
+      "type": "Buff",
+      "effectName": "ATK, CRIT Rate, and CRIT DMG Boost",
+      "statusName": "Roaring Bowstrings",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -212,22 +235,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_RealAttack",
-        "MDF_CritChanceUp",
-        "MDF_CritDamageUpRatio"
-      ],
-      "latentQueue": [],
-      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_RealAttack</span>, CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CritChanceUp</span>, and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CritDamageUpRatio</span>.",
-      "type": "Buff",
-      "effectName": "ATK, CRIT Rate, and CRIT DMG Boost",
-      "statusName": "Roaring Bowstrings"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__432670237\">Yukong_Flower_ATK</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_RealAttack</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Roaring Bowstrings",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -250,11 +267,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_RealAttack</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Roaring Bowstrings"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -542,14 +555,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AttackAddedRatio",
-        "MDF_Rank04AddedRatio",
-        "MDF_PointB3Amount",
-        "MDF_FromUltraMark"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

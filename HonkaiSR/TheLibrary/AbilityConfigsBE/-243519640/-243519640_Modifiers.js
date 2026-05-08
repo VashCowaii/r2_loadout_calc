@@ -11,11 +11,7 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1195474502\">MStrongChallengeEX_StageAbility_EX_BeingBreakDMGShow</a>",
-      "stackType": "Replace",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      "stackType": "Replace"
     },
     {
       "name": "Modifier Construction",
@@ -134,13 +130,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_LifeTime",
-        "MDF_MaxLayer"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

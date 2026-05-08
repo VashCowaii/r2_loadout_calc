@@ -3,11 +3,14 @@ const compositeAbilityObject = {
   "fullCharacterName": "Jing Yuan",
   "trimCharacterName": "JingYuan",
   "abilityList": [
+    "JingYuan_Modifiers",
+    "JingYuan_LocalPlayer_StandardAbility_AttackBreak",
+    "JingYuan_LocalPlayer_JingYuan_TechniqueUsage",
+    "JingYuan_LocalPlayer_JingYuan_NormalAtk01",
     "JingYuan_BattleEventAbility_JingYuan_Passive_Insert",
+    "JingYuan_JingYuan_TechniqueInLevel",
     "JingYuan_JingYuan_Passive_Insert_Ability",
     "JingYuan_JingYuan_Passive_Insert",
-    "JingYuan_BattleEventAbility_JingYuan_Passive",
-    "JingYuan_JingYuan_TechniqueInLevel",
     "JingYuan_JingYuan_PassiveAbility01",
     "JingYuan_JingYuan_Ability03_Part02",
     "JingYuan_JingYuan_Ability03_Part01",
@@ -16,10 +19,563 @@ const compositeAbilityObject = {
     "JingYuan_JingYuan_Ability02_Part01",
     "JingYuan_JingYuan_Ability01_Part02",
     "JingYuan_JingYuan_Ability01_Part01",
-    "JingYuan_Modifiers",
     "JingYuan_BE_BattleEvents"
   ],
   "abilityObject": {
+    "JingYuan_Modifiers": {
+      "fileName": "JingYuan_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1740358875\">ADV_StageAbility_Maze_JingYuan</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-110303717\">JingYuan_Tree03_CriticalChanceUp</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT Rate Boost",
+          "statusName": "CRIT Rate Boost",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1778616310\">JingYuan_CriticalDamageUp</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__767237660\">JingYuan_Eidolon6_AllDamageTypeTakenRatio</a>",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "modifierName": "<a class=\"gModGreen\" id=\"767237660\">JingYuan_Eidolon6_AllDamageTypeTakenRatio</a>",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue",
+                      "MDF_Layer"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1088669628\">JingYuan_Eidolon2_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">Dharma Corpora</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Jing Yuan's Basic ATK, Skill, and Ultimate deal <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span> increased DMG.",
+          "type": "Buff",
+          "statusName": "Dharma Corpora",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Hit",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Basic ATK",
+                      "Skill",
+                      "Ultimate"
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "MDF_DamageAddedRatio"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_SpeedUp"
+          ],
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue",
+                      "MDF_Layer"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1222558059\">JingYuan_BattleEvent</a>",
+          "stackType": "Prolong",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "JingYuan_Passive_Insert",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Battle Event's Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "priorityTag": "CharacterAttackFromSelf",
+                  "canHitNonTargets": true,
+                  "abortFlags": [
+                    "STAT_CTRL",
+                    "DisableAction"
+                  ],
+                  "allowAbilityTriggers": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1804861609\">JingYuan_BattleEvent_UltraATKCount</a>[<span class=\"descriptionNumberColor\">Lightbringer</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Lightning-Lord's Enhanced ATK count.",
+          "type": "Other",
+          "statusName": "Lightbringer",
+          "addStacksPerTrigger": 1
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Lightning-Lord's Hits Per Action.",
+          "type": "Other",
+          "statusName": "Prana Extirpated",
+          "addStacksPerTrigger": 1
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
+          "stackType": "ReplaceByCaster"
+        }
+      ],
+      "references": []
+    },
+    "JingYuan_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "JingYuan_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "JingYuan_LocalPlayer_JingYuan_TechniqueUsage": {
+      "fileName": "JingYuan_LocalPlayer_JingYuan_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "120401(SkillMaze)",
+          "duration": -1
+        },
+        "Submit Technique Use"
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "JingYuan_LocalPlayer_JingYuan_NormalAtk01": {
+      "fileName": "JingYuan_LocalPlayer_JingYuan_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "failed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
     "JingYuan_BattleEventAbility_JingYuan_Passive_Insert": {
       "fileName": "JingYuan_BattleEventAbility_JingYuan_Passive_Insert",
       "abilityType": null,
@@ -38,6 +594,210 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
+      }
+    },
+    "JingYuan_JingYuan_TechniqueInLevel": {
+      "fileName": "JingYuan_JingYuan_TechniqueInLevel",
+      "childAbilityList": [
+        "JingYuan_JingYuan_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
+      "abilityType": "Technique",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1753288775\">StageAbility_Maze_JingYuan_Modifier</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1753288775\">StageAbility_Maze_JingYuan_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Technique Modifies Current Wave"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Wave Count",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+                      "stackLimit": {
+                        "operator": "Variables[0] (10) || RETURN",
+                        "displayLines": "10",
+                        "constants": [],
+                        "variables": [
+                          10
+                        ]
+                      },
+                      "addStacksPerTrigger": {
+                        "operator": "Variables[0] (3) || RETURN",
+                        "displayLines": "3",
+                        "constants": [],
+                        "variables": [
+                          3
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable with Modifier Values",
+                      "valueType": "Layer",
+                      "variableName": "EnergyBar_ATKCount",
+                      "modifierName": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
+                      "multiplier": 1
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "EnergyBar_ATKCountSum",
+                      "value": {
+                        "operator": "Variables[0] (EnergyBar_ATKCount) || Variables[1] (EnergyBar_UltraATKCount) || ADD || RETURN",
+                        "displayLines": "(EnergyBar_ATKCount + EnergyBar_UltraATKCount)",
+                        "constants": [],
+                        "variables": [
+                          "EnergyBar_ATKCount",
+                          "EnergyBar_UltraATKCount"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (EnergyBar_ATKCountSum) || RETURN",
+                        "displayLines": "EnergyBar_ATKCountSum",
+                        "constants": [],
+                        "variables": [
+                          "EnergyBar_ATKCountSum"
+                        ]
+                      },
+                      "maximum": {
+                        "operator": "Variables[0] (10) || RETURN",
+                        "displayLines": "10",
+                        "constants": [],
+                        "variables": [
+                          10
+                        ]
+                      },
+                      "assignState": "True",
+                      "priorState": "Normal",
+                      "bar#": 4,
+                      "cooldown": 0
+                    },
+                    {
+                      "name": "Show Attack Time",
+                      "time": {
+                        "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
+                        "displayLines": "EnergyBar_ATKCount",
+                        "constants": [],
+                        "variables": [
+                          "EnergyBar_ATKCount"
+                        ]
+                      },
+                      "enhanced": {
+                        "operator": "Variables[0] (EnergyBar_UltraATKCount) || RETURN",
+                        "displayLines": "EnergyBar_UltraATKCount",
+                        "constants": [],
+                        "variables": [
+                          "EnergyBar_UltraATKCount"
+                        ]
+                      },
+                      "on": null,
+                      "show": true
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Self-Made Battle-Events}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
+                      "valuePerStack": {
+                        "ATKCount": {
+                          "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
+                          "displayLines": "EnergyBar_ATKCount",
+                          "constants": [],
+                          "variables": [
+                            "EnergyBar_ATKCount"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Self-Made Battle-Events}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
+                      "stackLimit": {
+                        "operator": "Variables[0] (10) || Variables[1] (3) || SUB || RETURN",
+                        "displayLines": "(10 - 3)",
+                        "constants": [],
+                        "variables": [
+                          10,
+                          3
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (10) || RETURN",
+                          "displayLines": "10",
+                          "constants": [],
+                          "variables": [
+                            10
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": {
+                        "operator": "Variables[0] (3) || RETURN",
+                        "displayLines": "3",
+                        "constants": [],
+                        "variables": [
+                          3
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
     },
     "JingYuan_JingYuan_Passive_Insert_Ability": {
@@ -737,319 +1497,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Inherent Target"
       }
     },
-    "JingYuan_BattleEventAbility_JingYuan_Passive": {
-      "fileName": "JingYuan_BattleEventAbility_JingYuan_Passive",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1222558059\">JingYuan_BattleEvent</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1172851188\">JingYuan_BattleEvent_BaseSpeed</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"845727839\">JingYuan_BattleEvent_ForceKill</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__845727839\">JingYuan_BattleEvent_ForceKill</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-2008282890\">JingYuan_ListenFlag</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Force Entity Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "ignoreHPLossTriggers": true,
-                      "ignoreDeathTriggers": true
-                    },
-                    {
-                      "name": "Show Attack Time",
-                      "on": null,
-                      "show": false
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1172851188\">JingYuan_BattleEvent_BaseSpeed</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (BattleEvent_JingYuan_00_BaseSpeed) || RETURN",
-                    "displayLines": "BattleEvent_JingYuan_00_BaseSpeed",
-                    "constants": [],
-                    "variables": [
-                      "BattleEvent_JingYuan_00_BaseSpeed"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "JingYuan_JingYuan_TechniqueInLevel": {
-      "fileName": "JingYuan_JingYuan_TechniqueInLevel",
-      "childAbilityList": [
-        "JingYuan_JingYuan_TechniqueInLevel"
-      ],
-      "skillTrigger": "SkillMaze",
-      "abilityType": "Technique",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1753288775\">StageAbility_Maze_JingYuan_Modifier</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1753288775\">StageAbility_Maze_JingYuan_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Technique Modifies Current Wave"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Wave Count",
-                        "compareType": "=",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
-                      "stackLimit": {
-                        "operator": "Variables[0] (10) || RETURN",
-                        "displayLines": "10",
-                        "constants": [],
-                        "variables": [
-                          10
-                        ]
-                      },
-                      "addStacksPerTrigger": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Define Custom Variable with Modifier Values",
-                      "valueType": "Layer",
-                      "variableName": "EnergyBar_ATKCount",
-                      "modifierName": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
-                      "multiplier": 1
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "EnergyBar_ATKCountSum",
-                      "value": {
-                        "operator": "Variables[0] (EnergyBar_ATKCount) || Variables[1] (EnergyBar_UltraATKCount) || ADD || RETURN",
-                        "displayLines": "(EnergyBar_ATKCount + EnergyBar_UltraATKCount)",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_ATKCount",
-                          "EnergyBar_UltraATKCount"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (EnergyBar_ATKCountSum) || RETURN",
-                        "displayLines": "EnergyBar_ATKCountSum",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_ATKCountSum"
-                        ]
-                      },
-                      "maximum": {
-                        "operator": "Variables[0] (10) || RETURN",
-                        "displayLines": "10",
-                        "constants": [],
-                        "variables": [
-                          10
-                        ]
-                      },
-                      "assignState": "True",
-                      "priorState": "Normal",
-                      "bar#": 4,
-                      "cooldown": 0
-                    },
-                    {
-                      "name": "Show Attack Time",
-                      "time": {
-                        "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-                        "displayLines": "EnergyBar_ATKCount",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_ATKCount"
-                        ]
-                      },
-                      "enhanced": {
-                        "operator": "Variables[0] (EnergyBar_UltraATKCount) || RETURN",
-                        "displayLines": "EnergyBar_UltraATKCount",
-                        "constants": [],
-                        "variables": [
-                          "EnergyBar_UltraATKCount"
-                        ]
-                      },
-                      "on": null,
-                      "show": true
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Self-Made Battle-Events}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
-                      "valuePerStack": {
-                        "ATKCount": {
-                          "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
-                          "displayLines": "EnergyBar_ATKCount",
-                          "constants": [],
-                          "variables": [
-                            "EnergyBar_ATKCount"
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Self-Made Battle-Events}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
-                      "stackLimit": {
-                        "operator": "Variables[0] (10) || Variables[1] (3) || SUB || RETURN",
-                        "displayLines": "(10 - 3)",
-                        "constants": [],
-                        "variables": [
-                          10,
-                          3
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (10) || RETURN",
-                          "displayLines": "10",
-                          "constants": [],
-                          "variables": [
-                            10
-                          ]
-                        }
-                      },
-                      "addStacksPerTrigger": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
     "JingYuan_JingYuan_PassiveAbility01": {
       "fileName": "JingYuan_JingYuan_PassiveAbility01",
       "childAbilityList": [
@@ -1210,6 +1657,27 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__664482430\">JingYuan_Ability03_PreShow</a>",
           "stackType": "ReplaceByCaster",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Self-Made Battle-Events}}"
+            },
+            "skillType": [
+              "Ultimate"
+            ],
+            "conditions": {
+              "name": "Compare: Variable",
+              "value1": "_AddLayer",
+              "compareType": ">",
+              "value2": 0
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": "(10 * _AddLayer)(SPD Change)"
+            }
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1322,9 +1790,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1804998877\">JingYuan_Ability02_PreShow</a>",
+          "stackType": "ReplaceByCaster",
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1333,7 +1804,7 @@ const compositeAbilityObject = {
               "target": "{{Caster's Self-Made Battle-Events}}"
             },
             "skillType": [
-              "Ultimate"
+              "Skill"
             ],
             "conditions": {
               "name": "Compare: Variable",
@@ -1345,12 +1816,7 @@ const compositeAbilityObject = {
               "name": "Delay/Advance Preview",
               "previewValue": "(10 * _AddLayer)(SPD Change)"
             }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1804998877\">JingYuan_Ability02_PreShow</a>",
-          "stackType": "ReplaceByCaster",
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1463,30 +1929,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Self-Made Battle-Events}}"
-            },
-            "skillType": [
-              "Skill"
-            ],
-            "conditions": {
-              "name": "Compare: Variable",
-              "value1": "_AddLayer",
-              "compareType": ">",
-              "value2": 0
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": "(10 * _AddLayer)(SPD Change)"
-            }
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1534,15 +1977,11 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2008282890\">JingYuan_ListenFlag</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-2008282890\">JingYuan_ListenFlag</a>"
         }
       ],
       "targetObjectData": {
@@ -2393,292 +2832,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "JingYuan_Modifiers": {
-      "fileName": "JingYuan_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-110303717\">JingYuan_Tree03_CriticalChanceUp</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT Rate Boost",
-          "statusName": "CRIT Rate Boost"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1778616310\">JingYuan_CriticalDamageUp</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "ATKCountSum"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__767237660\">JingYuan_Eidolon6_AllDamageTypeTakenRatio</a>",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "MDF_Layer",
-                  "modifierName": "<a class=\"gModGreen\" id=\"767237660\">JingYuan_Eidolon6_AllDamageTypeTakenRatio</a>",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "ATKCountSum"
-          ],
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1088669628\">JingYuan_Eidolon2_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">Dharma Corpora</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Attack Type",
-                    "attackTypes": [
-                      "Basic ATK",
-                      "Skill",
-                      "Ultimate"
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                          "value": "MDF_DamageAddedRatio"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_DamageAddedRatio"
-          ],
-          "latentQueue": [
-            "ATKCountSum"
-          ],
-          "description": "Jing Yuan's Basic ATK, Skill, and Ultimate deal <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span> increased DMG.",
-          "type": "Buff",
-          "statusName": "Dharma Corpora"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_SpeedUp"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "MDF_Layer",
-                  "modifierName": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1222558059\">JingYuan_BattleEvent</a>",
-          "stackType": "Prolong",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "JingYuan_Passive_Insert",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Battle Event's Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "priorityTag": "CharacterAttackFromSelf",
-                  "canHitNonTargets": true,
-                  "abortFlags": [
-                    "STAT_CTRL",
-                    "DisableAction"
-                  ],
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1804861609\">JingYuan_BattleEvent_UltraATKCount</a>[<span class=\"descriptionNumberColor\">Lightbringer</span>]",
-          "stackType": "ReplaceByCaster",
-          "description": "Lightning-Lord's Enhanced ATK count.",
-          "type": "Other",
-          "statusName": "Lightbringer",
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
-          "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Lightning-Lord's Hits Per Action.",
-          "type": "Other",
-          "statusName": "Prana Extirpated",
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
-          "stackType": "ReplaceByCaster",
-          "stackData": [
-            "ATKCount"
-          ],
-          "latentQueue": []
-        }
-      ],
-      "references": []
     },
     "JingYuan_BE_BattleEvents": {
       "fileName": "JingYuan_BE_BattleEvents",

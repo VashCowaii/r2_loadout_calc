@@ -455,7 +455,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1171334947\">Enemy_W4_IronTombCorePart_Ability02_SkillMark</a>",
-      "stackData": [],
       "latentQueue": [
         "MDF_CharacterCount"
       ]

@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 8003040,
   "trimCharacterName": 8003040,
   "abilityList": [
+    "8003040_Monster_XP_Elite02_01_Passive01",
     "8003040_Monster_XP_Elite02_01_Ability06_Part02",
     "8003040_Monster_XP_Elite02_01_Ability06_Part01",
     "8003040_Monster_XP_Elite02_01_Ability05_Part02",
@@ -18,10 +19,372 @@ const compositeAbilityObject = {
     "8003040_Monster_XP_Elite02_01_AbilityP01_Part01",
     "8003040_Monster_XP_Elite02_01_Ability01_Part02",
     "8003040_Monster_XP_Elite02_01_Ability01_Part01",
-    "8003040_Monster_XP_Elite02_01_Passive01",
     "8003040_Modifiers"
   ],
   "abilityObject": {
+    "8003040_Monster_XP_Elite02_01_Passive01": {
+      "fileName": "8003040_Monster_XP_Elite02_01_Passive01",
+      "childAbilityList": [
+        "8003040_Monster_XP_Elite02_01_Passive01"
+      ],
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"697975031\">XP_Elite02_01_BattleScore1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"386859221\">Monster_XP_Elite02_01_AIChange</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1542768305\">Monster_XP_Elite02_01_Energy</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1764090904\">Monster_XP_Elite02_01_DamageReduce</a>",
+          "valuePerStack": {
+            "MDF_DamageReduceRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[0]]}"
+              ]
+            },
+            "MDF_ConfineChance": {
+              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[1]]}"
+              ]
+            }
+          }
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-279040373\">Monster_XP_Elite02_01_EffectControl</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__386859221\">Monster_XP_Elite02_01_AIChange</a>",
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "Action Advance/Delay",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "advanceType": "Delay",
+                  "multiAdd": 0.25
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1400625126\">Monster_XP_Elite02_01_Effect</a>"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Monster_XP_Elite02_01_AIFlag",
+                    "compareType": "=",
+                    "value2": 5,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "ChargeFlag",
+                      "value": 1
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "Monster_XP_Elite02_01_AIFlag",
+                    "compareType": "<=",
+                    "value2": 5,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "Monster_XP_Elite02_01_AIFlag",
+                        "compareType": "<=",
+                        "value2": 1,
+                        "contextScope": "TargetEntity"
+                      },
+                      "passed": [
+                        {
+                          "name": "Declare Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "scope": "TargetEntity",
+                          "variableName": "Monster_XP_Elite02_01_AIFlag",
+                          "value": 1
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Declare Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "scope": "TargetEntity",
+                          "variableName": "Monster_XP_Elite02_01_AIFlag",
+                          "value": 4
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Monster_XP_Elite02_01_AIFlag",
+                      "value": 1
+                    }
+                  ]
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "Monster_XP_Elite02_01_AIFlag_02"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-412122860\">Monster_XP_Elite02_01_Battle_02</a>"
+                },
+                {
+                  "name": "Looped Event",
+                  "maxLoops": {
+                    "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(EnergyLayer + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "EnergyLayer"
+                    ]
+                  },
+                  "Event": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "EnergyLayer",
+                        "compareType": "<",
+                        "value2": 0
+                      },
+                      "failed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "EnergyLayer",
+                          "value": {
+                            "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
+                            "displayLines": "(EnergyLayer - 1)",
+                            "constants": [
+                              1
+                            ],
+                            "variables": [
+                              "EnergyLayer"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "ChargeFlag",
+                    "compareType": "=",
+                    "value2": 1,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "ChargeFlag"
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"615554356\">Monster_XP_Elite02_01_RemoveEnergyLayer</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "End Broken State [Owner]"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1403193826\">EnterBattleRage</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_XP_Elite02_01_AbilityP01_Part01",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "priorityTag": "EnemyBattleCry",
+                  "canHitNonTargets": true,
+                  "abortFlags": [
+                    "DisableAction",
+                    "STAT_CTRL"
+                  ],
+                  "allowAbilityTriggers": false
+                }
+              ],
+              "priorityLevel": -55
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]"
+            },
+            {
+              "eventTrigger": "Action Choice Window [Owner]"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-279040373\">Monster_XP_Elite02_01_EffectControl</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Put in Deathstate Limbo",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "EnergyLayerLast",
+                  "value": {
+                    "operator": "Variables[0] (EnergyLayer) || RETURN",
+                    "displayLines": "EnergyLayer",
+                    "constants": [],
+                    "variables": [
+                      "EnergyLayer"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "EnergyLayer",
+                  "value": -2
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        }
+      ]
+    },
     "8003040_Monster_XP_Elite02_01_Ability06_Part02": {
       "fileName": "8003040_Monster_XP_Elite02_01_Ability06_Part02",
       "abilityType": null,
@@ -3243,373 +3606,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8003040_Monster_XP_Elite02_01_Passive01": {
-      "fileName": "8003040_Monster_XP_Elite02_01_Passive01",
-      "childAbilityList": [
-        "8003040_Monster_XP_Elite02_01_Passive01"
-      ],
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"697975031\">XP_Elite02_01_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"386859221\">Monster_XP_Elite02_01_AIChange</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1542768305\">Monster_XP_Elite02_01_Energy</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1764090904\">Monster_XP_Elite02_01_DamageReduce</a>",
-          "valuePerStack": {
-            "MDF_DamageReduceRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
-            },
-            "MDF_ConfineChance": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-279040373\">Monster_XP_Elite02_01_EffectControl</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__386859221\">Monster_XP_Elite02_01_AIChange</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Action Advance/Delay",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "advanceType": "Delay",
-                  "multiAdd": 0.25
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1400625126\">Monster_XP_Elite02_01_Effect</a>"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Monster_XP_Elite02_01_AIFlag",
-                    "compareType": "=",
-                    "value2": 5,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "ChargeFlag",
-                      "value": 1
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "Monster_XP_Elite02_01_AIFlag",
-                    "compareType": "<=",
-                    "value2": 5,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "Monster_XP_Elite02_01_AIFlag",
-                        "compareType": "<=",
-                        "value2": 1,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "Monster_XP_Elite02_01_AIFlag",
-                          "value": 1
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "Monster_XP_Elite02_01_AIFlag",
-                          "value": 4
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_XP_Elite02_01_AIFlag",
-                      "value": 1
-                    }
-                  ]
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_XP_Elite02_01_AIFlag_02"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-412122860\">Monster_XP_Elite02_01_Battle_02</a>"
-                },
-                {
-                  "name": "Looped Event",
-                  "maxLoops": {
-                    "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(EnergyLayer + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "EnergyLayer"
-                    ]
-                  },
-                  "Event": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "EnergyLayer",
-                        "compareType": "<",
-                        "value2": 0
-                      },
-                      "failed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "EnergyLayer",
-                          "value": {
-                            "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(EnergyLayer - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "EnergyLayer"
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "ChargeFlag",
-                    "compareType": "=",
-                    "value2": 1,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "ChargeFlag"
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"615554356\">Monster_XP_Elite02_01_RemoveEnergyLayer</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1403193826\">EnterBattleRage</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_XP_Elite02_01_AbilityP01_Part01",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "priorityTag": "EnemyBattleCry",
-                  "canHitNonTargets": true,
-                  "abortFlags": [
-                    "DisableAction",
-                    "STAT_CTRL"
-                  ],
-                  "allowAbilityTriggers": false
-                }
-              ],
-              "priorityLevel": -55
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]"
-            },
-            {
-              "eventTrigger": "Action Choice Window [Owner]"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-279040373\">Monster_XP_Elite02_01_EffectControl</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Put in Deathstate Limbo",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "EnergyLayerLast",
-                  "value": {
-                    "operator": "Variables[0] (EnergyLayer) || RETURN",
-                    "displayLines": "EnergyLayer",
-                    "constants": [],
-                    "variables": [
-                      "EnergyLayer"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "EnergyLayer",
-                  "value": -2
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "8003040_Modifiers": {
       "fileName": "8003040_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -3666,9 +3662,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3678,6 +3672,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1764090904\">Monster_XP_Elite02_01_DamageReduce</a>",
+          "stackData": [
+            "MDF_DamageReduceRatio",
+            "MDF_ConfineChance"
+          ],
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -3714,12 +3712,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageReduceRatio",
-            "MDF_ConfineChance"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3731,9 +3724,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3758,7 +3749,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-412122860\">Monster_XP_Elite02_01_Battle_02</a>",
-          "stackData": [],
           "latentQueue": [
             "Monster_XP_Elite02_01_AIFlag"
           ]
@@ -3775,6 +3765,8 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteHitH"
           ],
+          "description": "Missing Description",
+          "type": "Debuff",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3841,9 +3833,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Missing Description",
-          "type": "Debuff"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3851,6 +3841,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "DisableAction"
           ],
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -3858,10 +3849,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4698,14 +4686,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1432699776\">Monster_XP_Elite02_01_EnergyLayer</a>[<span class=\"descriptionNumberColor\">Gauge Recollection</span>]",
           "stackType": "Replace",
+          "description": "Current stacks of Gauge Recollection: <span class=\"descriptionNumberColor\">ModifierLayers</span>. Loses 1 stack of Gauge Recollection after being hit.",
+          "type": "Other",
+          "statusName": "Gauge Recollection",
+          "stackLimit": 9,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4718,17 +4708,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Current stacks of Gauge Recollection: <span class=\"descriptionNumberColor\">ModifierLayers</span>. Loses 1 stack of Gauge Recollection after being hit.",
-          "type": "Other",
-          "statusName": "Gauge Recollection",
-          "stackLimit": 9
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__615554356\">Monster_XP_Elite02_01_RemoveEnergyLayer</a>",
+          "latentQueue": [
+            "Monster_XP_Elite02_01_AIFlag",
+            "ChargeFlag",
+            "Monster_XP_Elite02_01_AIFlag_02"
+          ],
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4749,19 +4739,23 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Monster_XP_Elite02_01_AIFlag",
-            "ChargeFlag",
-            "Monster_XP_Elite02_01_AIFlag_02"
-          ],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-799757302\">Monster_XP_Elite02_01_Accelerate</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "Replace",
+          "description": "Missing Description",
+          "type": "Buff",
+          "stackLimit": 10,
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+            "displayLines": "ModifierStackLayer",
+            "constants": [],
+            "variables": [
+              "ModifierStackLayer"
+            ]
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4791,18 +4785,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Missing Description",
-          "type": "Buff",
-          "stackLimit": 10,
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
-          }
+          ]
         }
       ],
       "references": []

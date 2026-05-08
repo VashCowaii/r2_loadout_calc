@@ -4,9 +4,9 @@ const compositeAbilityObject = {
   "trimCharacterName": 4014018,
   "abilityList": [
     "4014018_Monster_W4_Nikadory_SpecialWin_Insert",
-    "4014018_Monster_W4_Nikadory_PassiveAbility_RLBoss_Insert",
     "4014018_Monster_W4_Nikadory_PassiveAbilityWithHearse_Insert",
     "4014018_Monster_W4_Nikadory_PassiveAbility_Insert",
+    "4014018_Monster_W4_Nikadory_Passive01",
     "4014018_Monster_W4_Nikadory_Ability14_Part02",
     "4014018_Monster_W4_Nikadory_Ability14_Part01",
     "4014018_Monster_W4_Nikadory_Ability13_Part02",
@@ -31,7 +31,6 @@ const compositeAbilityObject = {
     "4014018_Monster_W4_Nikadory_Ability02_Part01",
     "4014018_Monster_W4_Nikadory_Ability01_Part02",
     "4014018_Monster_W4_Nikadory_Ability01_Part01",
-    "4014018_Monster_W4_Nikadory_Passive01",
     "4014018_Monster_W4_Nikadory_PassiveAbility_BGM",
     "4014018_Modifiers"
   ],
@@ -42,206 +41,6 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014018_Monster_W4_Nikadory_PassiveAbility_RLBoss_Insert": {
-      "fileName": "4014018_Monster_W4_Nikadory_PassiveAbility_RLBoss_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1471859507\">Monster_W4_Nikadory_Charge</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1307575812\">Monster_W4_Nikadory_ChargeEffect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1849683412\">Monster_W4_Nikadory_WeaponEffect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"261985089\">Monster_W4_Nikadory_Energy</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Currency Wars Full OffFieldList}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2087329841\">Monster_W4_Nikadory_Charge_UnselectableCheck</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1011587031\">Monster_W4_Nikadory_Ability05Split</a>[<span class=\"descriptionNumberColor\">Forthcoming Strife</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1664389231\">Monster_W4_Nikadory_BattleScore1Count</a>"
-        },
-        "Deleted bullshit",
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Create Enemies",
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                "displayLines": "SummonList_ADF_1",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_1"
-                ]
-              },
-              "locationType": "BeforeCaster"
-            }
-          ]
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 0
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 401401000,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": null
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"203278408\">Monster_W4_Nikadory_Main2_LockHP</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"810487295\">Monster_W4_Nikadory_Part2Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-208688438\">Monster_W4_Nikadory_Endurance</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"810487295\">Monster_W4_Nikadory_Part2Effect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"191148502\">Monster_W4_Hearse_LockHPNikadory</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1258691339\">Monster_W4_Nikadory_WithHearse</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "InsertCheck",
-          "value": 1
-        }
-      ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
@@ -655,6 +454,460 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014018_Monster_W4_Nikadory_Passive01": {
+      "fileName": "4014018_Monster_W4_Nikadory_Passive01",
+      "skillTrigger": "Passive01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1727885089\">W4_Nikadory_BattleScore1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1711107470\">W4_Nikadory_BattleScore2</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Enemy Team All(with Unselectable)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": ">=",
+            "value2": 1,
+            "conditions": {
+              "name": "Enemy ID",
+              "ID": 401402,
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "characterName": null,
+              "isCompareUniqueID": true
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"810487295\">Monster_W4_Nikadory_Part2Effect</a>"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 4014016,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Victor, Acropolis, and Lord of Strife",
+                "invertCondition": true
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"191148502\">Monster_W4_Hearse_LockHPNikadory</a>"
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1258691339\">Monster_W4_Nikadory_WithHearse</a>"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 401402020,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Nikador - The Giver: Self}}"
+                },
+                "characterName": null
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"857944661\">Monster_W4_Nikadory_Main3</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Nikador - The Giver: Self}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1296909781\">Monster_W4_Hearse_Effect</a>"
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "Boss Bar Display",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "display": true
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 4014011,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Savage God, Mad King, Incarnation of Strife",
+                "isBaseCompare": true
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": 401401100,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": null,
+                    "invertCondition": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1803940540\">Monster_W4_Nikadory_Main</a>"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": 4014014,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": "Savage God, Mad King, Incarnation of Strife",
+                    "isBaseCompare": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"810487295\">Monster_W4_Nikadory_Part2Effect</a>"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Enemy ID",
+                        "ID": 4014015,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "characterName": "Savage God, Mad King, Incarnation of Strife (Complete)",
+                        "isBaseCompare": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"2056345398\">Monster_W4_Nikadory_PartController_RLBoss</a>"
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-994497740\">Monster_W4_Nikadory_RLBoss_Passive</a>",
+                          "valuePerStack": {
+                            "MDF_DamageUpRatio_PerLayer": {
+                              "operator": "Variables[0] (UnusedUnderThisBase_12652) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_12652",
+                              "constants": [],
+                              "variables": [
+                                "UnusedUnderThisBase_12652"
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-849627116\">Monster_W4_Nikadory_PartController</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 401401000,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": null
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"841167042\">Monster_W4_Nikadory_Main2</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"965106610\">Monster_W4_Nikadory_Passive</a>",
+          "valuePerStack": {
+            "MDF_DamageResistance_PerLayer": {
+              "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[4]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[4]]}"
+              ]
+            },
+            "MDF_ActionDelayRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[1]]}"
+              ]
+            },
+            "MDF_CrackedDamage": {
+              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[2]]}"
+              ]
+            },
+            "MDF_CrackedDamageAfter": {
+              "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[5]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[5]]}"
+              ]
+            },
+            "MDF_SPAddedRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[3]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[3]]}"
+              ]
+            },
+            "MDF_EnhanceSPAddedRatio": {
+              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
+              "displayLines": "{[Skill05[3]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[3]]}"
+              ]
+            },
+            "MDF_MaxLayer": {
+              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[0]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>",
+          "valuePerStack": {
+            "MDF_MaxLayer": {
+              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[0]]}"
+              ]
+            },
+            "MDF_CrackedEffect": {
+              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[1]]}"
+              ]
+            },
+            "MDF_CrackedDamage": {
+              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[2]]}"
+              ]
+            },
+            "MDF_DamageResistance": {
+              "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[4]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[4]]}"
+              ]
+            },
+            "MDF_CrackedDamageAfter": {
+              "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[5]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[5]]}"
+              ]
+            },
+            "MDF_ModifySP": {
+              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[3]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[3]]}"
+              ]
+            }
+          }
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 4014014,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Savage God, Mad King, Incarnation of Strife",
+                "isBaseCompare": true
+              },
+              {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Enemy Team All(with Unselectable)}}"
+                },
+                "value1": "TeamCharacterCount",
+                "compareType": ">=",
+                "value2": 1,
+                "conditions": {
+                  "name": "Enemy ID",
+                  "ID": 401402,
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "characterName": null,
+                  "isCompareUniqueID": true
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -4441,460 +4694,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4014018_Monster_W4_Nikadory_Passive01": {
-      "fileName": "4014018_Monster_W4_Nikadory_Passive01",
-      "skillTrigger": "Passive01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1727885089\">W4_Nikadory_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1711107470\">W4_Nikadory_BattleScore2</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Enemy Team All(with Unselectable)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">=",
-            "value2": 1,
-            "conditions": {
-              "name": "Enemy ID",
-              "ID": 401402,
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "characterName": null,
-              "isCompareUniqueID": true
-            }
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"810487295\">Monster_W4_Nikadory_Part2Effect</a>"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": 4014016,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Victor, Acropolis, and Lord of Strife",
-                "invertCondition": true
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"191148502\">Monster_W4_Hearse_LockHPNikadory</a>"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1258691339\">Monster_W4_Nikadory_WithHearse</a>"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": 401402020,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Nikador - The Giver: Self}}"
-                },
-                "characterName": null
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"857944661\">Monster_W4_Nikadory_Main3</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Nikador - The Giver: Self}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1296909781\">Monster_W4_Hearse_Effect</a>"
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "Boss Bar Display",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "display": true
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": 4014011,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Savage God, Mad King, Incarnation of Strife",
-                "isBaseCompare": true
-              },
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": 401401100,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": null,
-                    "invertCondition": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1803940540\">Monster_W4_Nikadory_Main</a>"
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": 4014014,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Savage God, Mad King, Incarnation of Strife",
-                    "isBaseCompare": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"810487295\">Monster_W4_Nikadory_Part2Effect</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": 4014015,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "characterName": "Savage God, Mad King, Incarnation of Strife (Complete)",
-                        "isBaseCompare": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"2056345398\">Monster_W4_Nikadory_PartController_RLBoss</a>"
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-994497740\">Monster_W4_Nikadory_RLBoss_Passive</a>",
-                          "valuePerStack": {
-                            "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_307) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_307",
-                              "constants": [],
-                              "variables": [
-                                "UnusedUnderThisBase_307"
-                              ]
-                            }
-                          }
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-849627116\">Monster_W4_Nikadory_PartController</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": 401401000,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": null
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"841167042\">Monster_W4_Nikadory_Main2</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"965106610\">Monster_W4_Nikadory_Passive</a>",
-          "valuePerStack": {
-            "MDF_DamageResistance_PerLayer": {
-              "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[4]]}"
-              ]
-            },
-            "MDF_ActionDelayRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
-            },
-            "MDF_CrackedDamage": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
-            },
-            "MDF_CrackedDamageAfter": {
-              "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[5]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[5]]}"
-              ]
-            },
-            "MDF_SPAddedRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[3]]}"
-              ]
-            },
-            "MDF_EnhanceSPAddedRatio": {
-              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-              "displayLines": "{[Skill05[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[3]]}"
-              ]
-            },
-            "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>",
-          "valuePerStack": {
-            "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
-            },
-            "MDF_CrackedEffect": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
-            },
-            "MDF_CrackedDamage": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
-            },
-            "MDF_DamageResistance": {
-              "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[4]]}"
-              ]
-            },
-            "MDF_CrackedDamageAfter": {
-              "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[5]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[5]]}"
-              ]
-            },
-            "MDF_ModifySP": {
-              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[3]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 4014014,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Savage God, Mad King, Incarnation of Strife",
-                "isBaseCompare": true
-              },
-              {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Enemy Team All(with Unselectable)}}"
-                },
-                "value1": "TeamCharacterCount",
-                "compareType": ">=",
-                "value2": 1,
-                "conditions": {
-                  "name": "Enemy ID",
-                  "ID": 401402,
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "characterName": null,
-                  "isCompareUniqueID": true
-                }
-              }
-            ]
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4014018_Monster_W4_Nikadory_PassiveAbility_BGM": {
       "fileName": "4014018_Monster_W4_Nikadory_PassiveAbility_BGM",
       "childAbilityList": [
@@ -5064,9 +4863,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5167,9 +4964,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5232,20 +5027,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1563295566\">Monster_W4_Nikadory_SpecialAICheck</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1563295566\">Monster_W4_Nikadory_SpecialAICheck</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "Replace",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5275,16 +5071,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-994497740\">Monster_W4_Nikadory_RLBoss_Passive</a>",
+          "stackData": [
+            "MDF_DamageUpRatio_PerLayer"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier is Added [Anyone]",
@@ -5331,11 +5125,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUpRatio_PerLayer"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5403,7 +5193,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1717699504\">Monster_W4_Nikadory_UltraPrepare</a>",
-          "stackData": [],
           "latentQueue": [
             "Tutorial_Flag"
           ]
@@ -5414,7 +5203,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "DisableAction"
           ],
-          "stackData": [],
           "latentQueue": [
             "Tutorial_Flag"
           ]
@@ -5849,6 +5637,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1631457444\">MModifier_Monster_AML_Minion03_01_StoneShieldEnhance_Nikadory</a>[<span class=\"descriptionNumberColor\">Indomitable</span>]",
+          "description": "Increases max \"War Armor\" and \"Titanic Corpus\" stacks. Dispelled when %CasterName's \"War Armor\" is broken.",
+          "type": "Buff",
+          "effectName": "Max \"War Armor\" Boost",
+          "statusName": "Indomitable",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -5967,11 +5759,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases max \"War Armor\" and \"Titanic Corpus\" stacks. Dispelled when %CasterName's \"War Armor\" is broken.",
-          "type": "Buff",
-          "effectName": "Max \"War Armor\" Boost",
-          "statusName": "Indomitable"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5994,6 +5782,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "latentQueue": [
+            "Tutorial_Flag"
+          ],
+          "description": "Distribute the \"All Realms Leveled, All Legions to Dust\" attack unleashed by \"Savage God, Mad King, Incarnation of Strife.\"",
+          "type": "Other",
+          "effectName": "Distributed Attack",
+          "statusName": "Forthcoming Strife",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6019,15 +5814,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Tutorial_Flag"
-          ],
-          "description": "Distribute the \"All Realms Leveled, All Legions to Dust\" attack unleashed by \"Savage God, Mad King, Incarnation of Strife.\"",
-          "type": "Other",
-          "effectName": "Distributed Attack",
-          "statusName": "Forthcoming Strife"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6035,9 +5822,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-945349590\">Monster_W4_Nikadory_FullPhase1</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
         },
         {
           "name": "Modifier Construction",
@@ -6329,15 +6114,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1873725361\">Monster_W4_Nikadory_InTurn</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1873725361\">Monster_W4_Nikadory_InTurn</a>"
         },
         {
           "name": "Modifier Construction",
@@ -6376,13 +6157,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__261985089\">Monster_W4_Nikadory_Energy</a>",
+          "stackData": [
+            "MDF_SPAddedRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -6423,15 +6205,15 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SPAddedRatio"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__729203631\">Monster_W4_Nikadory_Brave_Immune</a>[<span class=\"descriptionNumberColor\">Immune to Crowd Control</span>]",
+          "description": "Immune to Crowd Control debuffs.",
+          "type": "Buff",
+          "effectName": "Immune to Crowd Control",
+          "statusName": "Immune to Crowd Control",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6447,15 +6229,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Immune to Crowd Control debuffs.",
-          "type": "Buff",
-          "effectName": "Immune to Crowd Control",
-          "statusName": "Immune to Crowd Control"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1462384175\">Monster_W4_Nikadory_Brave_Judge</a>",
+          "latentQueue": [
+            "Tutorial_Flag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking Modifier Instance [Owner]",
@@ -6524,10 +6305,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Tutorial_Flag"
           ]
         },
         {
@@ -6542,6 +6319,19 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AllowAddToGridFightBackend"
           ],
+          "stackData": [
+            "MDF_DamageUpRatio_PerLayer",
+            "MDF_EnergyAddRatio",
+            "MDF_MaxLayer"
+          ],
+          "latentQueue": [
+            "Tutorial_Flag"
+          ],
+          "description": "Each stack of \"Glory\" increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span> and Energy Regeneration Rate by <span class=\"descriptionNumberColor\">MDF_EnergyAddRatio</span>. When launching Skill or Ultimate, adds 1 stack of \"Glory,\" up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s). Attacking can dispel a certain stack of \"Titanic Corpus\" corresponding to the number of \"Glory\" stacks.",
+          "type": "Other",
+          "effectName": "Glory",
+          "statusName": "Glory",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -6934,25 +6724,17 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Extra Action/Turn [Owner]: Start "
             }
-          ],
-          "stackData": [
-            "MDF_DamageUpRatio_PerLayer",
-            "MDF_EnergyAddRatio",
-            "MDF_MaxLayer"
-          ],
-          "latentQueue": [
-            "Tutorial_Flag"
-          ],
-          "description": "Each stack of \"Glory\" increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span> and Energy Regeneration Rate by <span class=\"descriptionNumberColor\">MDF_EnergyAddRatio</span>. When launching Skill or Ultimate, adds 1 stack of \"Glory,\" up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s). Attacking can dispel a certain stack of \"Titanic Corpus\" corresponding to the number of \"Glory\" stacks.",
-          "type": "Other",
-          "effectName": "Glory",
-          "statusName": "Glory",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1511774920\">Monster_W4_Nikadory_EnhanceShield</a>[<span class=\"descriptionNumberColor\">Titanic Corpus</span>]",
           "stackType": "Replace",
+          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_DamageResistance_PerLayer</span>. When stacks reach 0, action is delayed and this unit immediately loses a certain amount of HP, regenerates Energy for all targets, and dispels \"Titanic Corpus.\" When attacked by targets with \"Glory,\" \"Titanic Corpus\" stacks corresponding to the target's \"Glory\" stacks will be reduced. While this unit has \"Titanic Corpus,\" increases the DMG dealt by the next attack by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span> and causes the attacked target to become Imprisoned.",
+          "type": "Other",
+          "effectName": "Titanic Corpus",
+          "statusName": "Titanic Corpus",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -7058,19 +6840,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_DamageResistance_PerLayer</span>. When stacks reach 0, action is delayed and this unit immediately loses a certain amount of HP, regenerates Energy for all targets, and dispels \"Titanic Corpus.\" When attacked by targets with \"Glory,\" \"Titanic Corpus\" stacks corresponding to the target's \"Glory\" stacks will be reduced. While this unit has \"Titanic Corpus,\" increases the DMG dealt by the next attack by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span> and causes the attacked target to become Imprisoned.",
-          "type": "Other",
-          "effectName": "Titanic Corpus",
-          "statusName": "Titanic Corpus",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__318155284\">Monster_W4_Nikadory_Shield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
           "stackType": "Replace",
+          "description": "Decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageResistance_PerLayer</span>. Loses 1 stack of \"War Armor\" after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit and delaying their action. The ally unit that destroyed the \"War Armor\" will regenerate Energy. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
+          "type": "Other",
+          "statusName": "War Armor",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -7289,11 +7068,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageResistance_PerLayer</span>. Loses 1 stack of \"War Armor\" after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit and delaying their action. The ally unit that destroyed the \"War Armor\" will regenerate Energy. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
-          "type": "Other",
-          "statusName": "War Armor",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7302,6 +7077,15 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__965106610\">Monster_W4_Nikadory_Passive</a>",
+          "stackData": [
+            "MDF_DamageResistance_PerLayer",
+            "MDF_ActionDelayRatio",
+            "MDF_CrackedDamage",
+            "MDF_CrackedDamageAfter",
+            "MDF_SPAddedRatio",
+            "MDF_EnhanceSPAddedRatio",
+            "MDF_MaxLayer"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -7623,21 +7407,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageResistance_PerLayer",
-            "MDF_ActionDelayRatio",
-            "MDF_CrackedDamage",
-            "MDF_CrackedDamageAfter",
-            "MDF_SPAddedRatio",
-            "MDF_EnhanceSPAddedRatio",
-            "MDF_MaxLayer"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-762548766\">Monster_W4_Nikadory_ShieldReduce</a>",
+          "latentQueue": [
+            "MDF_ReduceLayer"
+          ],
           "execute": [
             {
               "eventTrigger": "Ability Use [Anyone]: End",
@@ -7656,10 +7433,6 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_ReduceLayer"
           ]
         },
         {
@@ -7729,6 +7502,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1471859507\">Monster_W4_Nikadory_Charge</a>",
+          "stackData": [
+            "MDF_DamageUpRatio"
+          ],
+          "latentQueue": [
+            "Tutorial_Flag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -8016,12 +7795,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUpRatio"
-          ],
-          "latentQueue": [
-            "Tutorial_Flag"
           ]
         },
         {
@@ -8300,6 +8073,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2087329841\">Monster_W4_Nikadory_Charge_UnselectableCheck</a>",
+          "latentQueue": [
+            "Tutorial_Flag"
+          ],
           "execute": [
             {
               "eventTrigger": "Unselectable Adjustment [Owner]: Start",
@@ -8354,10 +8130,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Tutorial_Flag"
           ]
         },
         {
@@ -8572,9 +8344,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8592,9 +8362,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Locked HP Floor Reached [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8668,9 +8436,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8749,15 +8515,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1781350564\">Monster_W4_Nikadory_Ability11Already</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1781350564\">Monster_W4_Nikadory_Ability11Already</a>"
         },
         {
           "name": "Modifier Construction",
@@ -8775,26 +8537,26 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1849683412\">Monster_W4_Nikadory_WeaponEffect</a>",
+          "latentQueue": [
+            "Tutorial_Flag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Tutorial_Flag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1307575812\">Monster_W4_Nikadory_ChargeEffect</a>",
+          "latentQueue": [
+            "Tutorial_Flag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -8812,10 +8574,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Tutorial_Flag"
           ]
         },
         {
@@ -8825,9 +8583,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9107,9 +8863,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9411,9 +9165,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

@@ -14,13 +14,14 @@ const configAbility = {
       "stackType": "Replace",
       "modifierFlags": [
         "ServantInherit_ModifierContinuation"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2026163190\">Memosprite_HyacineServant_Eidolon6_PenetrateRatio</a>[<span class=\"descriptionNumberColor\">O Sky, Heed My Plea</span>]",
+      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PenetrateRatio</span>.",
+      "type": "Buff",
+      "statusName": "O Sky, Heed My Plea",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -43,18 +44,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PenetrateRatio</span>.",
-      "type": "Buff",
-      "statusName": "O Sky, Heed My Plea"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__3098173\">Memosprite_HyacineServant_Eidolon6_PenetrateRatio_Halo</a>",
-      "stackData": [
-        "MDF_PenetrateRatio"
-      ],
-      "latentQueue": [],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -84,6 +78,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "Come Sit in My Courtyard",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -106,11 +104,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "Come Sit in My Courtyard"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -139,9 +133,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -180,6 +172,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__492819159\">Memosprite_HyacineServant_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]",
       "stackType": "Replace",
+      "description": "The tally of healing: <span class=\"descriptionNumberColor\">MDF_HealValueTotal</span>",
+      "type": "Other",
+      "statusName": "Rainclouds, Time to Go!",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -203,12 +198,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "The tally of healing: <span class=\"descriptionNumberColor\">MDF_HealValueTotal</span>",
-      "type": "Other",
-      "statusName": "Rainclouds, Time to Go!"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -988,9 +978,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

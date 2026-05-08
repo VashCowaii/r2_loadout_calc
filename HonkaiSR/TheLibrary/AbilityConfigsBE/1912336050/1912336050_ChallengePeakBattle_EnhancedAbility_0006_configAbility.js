@@ -19,6 +19,11 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-342039619\">Modifier_ChallengePeakBattle_EnhancedAbility_0006_03</a>[<span class=\"descriptionNumberColor\">Anguish+</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0006_ADF_2</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Anguish+",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -48,12 +53,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases DMG taken by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0006_ADF_2</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Anguish+",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -186,9 +186,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

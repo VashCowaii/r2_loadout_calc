@@ -3,16 +3,64 @@ const compositeAbilityObject = {
   "fullCharacterName": 4012080,
   "trimCharacterName": 4012080,
   "abilityList": [
+    "4012080_Monster_W4_DawnsEyePart_AbilityP01",
     "4012080_Monster_W4_DawnsEyePart_Ability02P2_Part02",
     "4012080_Monster_W4_DawnsEyePart_Ability02P2_Part01",
     "4012080_Monster_W4_DawnsEyePart_Ability02_Part02",
     "4012080_Monster_W4_DawnsEyePart_Ability02_Part01",
     "4012080_Monster_W4_DawnsEyePart_Ability01_Part02",
     "4012080_Monster_W4_DawnsEyePart_Ability01_Part01",
-    "4012080_Monster_W4_DawnsEyePart_AbilityP01",
     "4012080_Modifiers"
   ],
   "abilityObject": {
+    "4012080_Monster_W4_DawnsEyePart_AbilityP01": {
+      "fileName": "4012080_Monster_W4_DawnsEyePart_AbilityP01",
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1513761820\">Monster_W4_DawnsEyePart_BreakController</a>"
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1513761820\">Monster_W4_DawnsEyePart_BreakController</a>",
+          "modifierFlags": [
+            "MuteHitFly"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "revertDefault": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "4012080_Monster_W4_DawnsEyePart_Ability02P2_Part02": {
       "fileName": "4012080_Monster_W4_DawnsEyePart_Ability02P2_Part02",
       "abilityType": null,
@@ -305,56 +353,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4012080_Monster_W4_DawnsEyePart_AbilityP01": {
-      "fileName": "4012080_Monster_W4_DawnsEyePart_AbilityP01",
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1513761820\">Monster_W4_DawnsEyePart_BreakController</a>"
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1513761820\">Monster_W4_DawnsEyePart_BreakController</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "revertDefault": true
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "4012080_Modifiers": {
       "fileName": "4012080_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -390,9 +388,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -407,9 +403,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -417,6 +411,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteSpeed"
           ],
+          "stackData": [
+            "MDF_Weather"
+          ],
+          "description": "\"Daythunder Raven\" enters Enhanced state. Dispelled upon being Weakness Broken.",
+          "type": "Other",
+          "effectName": "Enhance",
+          "statusName": "Wingbeats",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -694,15 +695,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Weather"
-          ],
-          "latentQueue": [],
-          "description": "\"Daythunder Raven\" enters Enhanced state. Dispelled upon being Weakness Broken.",
-          "type": "Other",
-          "effectName": "Enhance",
-          "statusName": "Wingbeats"
+          ]
         }
       ],
       "references": []

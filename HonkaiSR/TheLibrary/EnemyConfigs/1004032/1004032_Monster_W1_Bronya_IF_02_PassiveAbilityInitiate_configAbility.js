@@ -117,6 +117,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1849445154\">Enemy_W1_Bronya_IF_02_EnhancePerTurnInit</a>",
+      "latentQueue": [
+        "AIFlag",
+        "PhaseFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Action End [Owner]",
@@ -150,16 +154,15 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag",
-        "PhaseFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-302906078\">Enemy_W1_Bronya_IF_02_ListenSelfBreak</a>",
+      "latentQueue": [
+        "AIFlag",
+        "PhaseFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -239,11 +242,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag",
-        "PhaseFlag"
       ]
     }
   ]

@@ -128,9 +128,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -244,9 +242,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -346,9 +342,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__847148558\">Monster_W2_Feixiao_BattleEventAlreadyMove</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__847148558\">Monster_W2_Feixiao_BattleEventAlreadyMove</a>"
     },
     {
       "name": "Modifier Construction",
@@ -435,9 +429,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -452,9 +444,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -479,6 +469,14 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-664793449\">Monster_W2_Feixiao_AlreadyConnectRemove</a>",
+      "stackData": [
+        "MDF_StanceBreakTakenRatio"
+      ],
+      "latentQueue": [
+        "SpecialTalkHead",
+        "SpecialTalkFinish",
+        "MissionTalkStart"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -559,20 +557,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_StanceBreakTakenRatio"
-      ],
-      "latentQueue": [
-        "SpecialTalkHead",
-        "SpecialTalkFinish",
-        "MissionTalkStart"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-39431749\">Monster_W2_Feixiao_EnhanceAbilityMark</a>",
-      "stackData": [],
       "latentQueue": [
         "SpecialTalkHead",
         "SpecialTalkFinish",
@@ -582,6 +571,14 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1817449894\">Monster_W2_Feixiao_MainTutorial</a>",
+      "latentQueue": [
+        "MainTrigger2",
+        "EnhanceFlag",
+        "CurrentStance",
+        "BattleEventPartFlag",
+        "MainDelay",
+        "MainBeforeHead"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
@@ -618,15 +615,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MainTrigger2",
-        "EnhanceFlag",
-        "CurrentStance",
-        "BattleEventPartFlag",
-        "MainDelay",
-        "MainBeforeHead"
       ]
     },
     {
@@ -699,6 +687,12 @@ const configAbility = {
       "modifierFlags": [
         "FloatingAnimPerform"
       ],
+      "latentQueue": [
+        "SpecialTalkCharge",
+        "EnhanceHead_Flag",
+        "EnhanceLimb_Flag",
+        "EnhanceTail_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -728,18 +722,17 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "SpecialTalkCharge",
-        "EnhanceHead_Flag",
-        "EnhanceLimb_Flag",
-        "EnhanceTail_Flag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__284964038\">Monster_W2_Feixiao_Unselectable</a>",
+      "latentQueue": [
+        "SpecialTalkCharge",
+        "EnhanceHead_Flag",
+        "EnhanceLimb_Flag",
+        "EnhanceTail_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -772,13 +765,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "SpecialTalkCharge",
-        "EnhanceHead_Flag",
-        "EnhanceLimb_Flag",
-        "EnhanceTail_Flag"
       ]
     },
     {
@@ -917,9 +903,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1115,9 +1099,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1179,9 +1161,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1317,23 +1297,15 @@ const configAbility = {
         {
           "eventTrigger": "End Broken State [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__734224904\">Monster_W2_Feixiao_CurrentConnect</a>",
-      "stackData": [],
-      "latentQueue": []
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1847577011\">Monster_W2_Feixiao_AfterConnect</a>",
-      "stackData": [],
-      "latentQueue": [
-        "BattleEventPartFlag"
       ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__734224904\">Monster_W2_Feixiao_CurrentConnect</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1847577011\">Monster_W2_Feixiao_AfterConnect</a>"
     },
     {
       "name": "Modifier Construction",
@@ -1342,6 +1314,16 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__881636857\">Monster_W2_Feixiao_UltraConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]",
+      "stackData": [
+        "MDF_StanceBreakTakenRatio"
+      ],
+      "latentQueue": [
+        "SpecialTalkCharge"
+      ],
+      "description": "While in the Resonance state, this unit is immune to changes in the order of the action bar (except changes made by itself). At the same time, any Toughness reduction this unit receives will increase by <span class=\"descriptionNumberColor\">MDF_StanceBreakTakenRatio</span>. When this unit is Weakness Broken, all targets' actions are Advanced Forward.",
+      "type": "Other",
+      "effectName": "Resonate",
+      "statusName": "Resonate",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1569,17 +1551,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_StanceBreakTakenRatio"
-      ],
-      "latentQueue": [
-        "SpecialTalkCharge"
-      ],
-      "description": "While in the Resonance state, this unit is immune to changes in the order of the action bar (except changes made by itself). At the same time, any Toughness reduction this unit receives will increase by <span class=\"descriptionNumberColor\">MDF_StanceBreakTakenRatio</span>. When this unit is Weakness Broken, all targets' actions are Advanced Forward.",
-      "type": "Other",
-      "effectName": "Resonate",
-      "statusName": "Resonate"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1587,6 +1559,19 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AITargetHigherPriority"
       ],
+      "stackData": [
+        "MDF_StanceBreakTakenRatio"
+      ],
+      "latentQueue": [
+        "MissionTalkStart",
+        "SpecialTalkFinish",
+        "SpecialTalkHead",
+        "MDF_AlreadyConnect"
+      ],
+      "description": "While in the Resonance state, this unit is immune to changes in the order of the action bar (except changes made by itself). At the same time, any Toughness reduction this unit receives will increase by <span class=\"descriptionNumberColor\">MDF_StanceBreakTakenRatio</span>. When this unit is Weakness Broken, all targets' actions are Advanced Forward.",
+      "type": "Other",
+      "effectName": "Resonate",
+      "statusName": "Resonate",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1798,41 +1783,26 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_StanceBreakTakenRatio"
-      ],
-      "latentQueue": [
-        "MissionTalkStart",
-        "SpecialTalkFinish",
-        "SpecialTalkHead",
-        "MDF_AlreadyConnect"
-      ],
-      "description": "While in the Resonance state, this unit is immune to changes in the order of the action bar (except changes made by itself). At the same time, any Toughness reduction this unit receives will increase by <span class=\"descriptionNumberColor\">MDF_StanceBreakTakenRatio</span>. When this unit is Weakness Broken, all targets' actions are Advanced Forward.",
-      "type": "Other",
-      "effectName": "Resonate",
-      "statusName": "Resonate"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1886819039\">Monster_W2_Feixiao_Ability08Mark</a>",
-      "execute": [
-        {
-          "eventTrigger": "When Modifier Destroyed/Removed"
-        }
-      ],
-      "stackData": [],
       "latentQueue": [
         "SpecialTalkUltraSkill",
         "EnhanceHead_Flag",
         "EnhanceTail_Flag",
         "EnhanceLimb_Flag"
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed"
+        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1683392657\">Monster_W2_Feixiao_Ability05_Target</a>",
-      "stackData": [],
       "latentQueue": [
         "SpecialTalkLimb",
         "SpecialTalkFinish",
@@ -1846,9 +1816,7 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1857,9 +1825,7 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1868,9 +1834,7 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1994,9 +1958,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2525,9 +2487,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2791,6 +2751,14 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-914591810\">Monster_W2_Feixiao_Main2</a>",
+      "latentQueue": [
+        "MDF_Step",
+        "MissionTalkStart",
+        "MDF_Weapon",
+        "SpecialTalkFinish",
+        "MDF_Step2",
+        "MDF_Step3"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2814,15 +2782,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_Step",
-        "MissionTalkStart",
-        "MDF_Weapon",
-        "SpecialTalkFinish",
-        "MDF_Step2",
-        "MDF_Step3"
       ]
     },
     {
@@ -3017,9 +2976,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

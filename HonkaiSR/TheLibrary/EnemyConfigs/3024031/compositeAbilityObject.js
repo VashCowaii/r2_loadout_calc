@@ -3,16 +3,15 @@ const compositeAbilityObject = {
   "fullCharacterName": 3024031,
   "trimCharacterName": 3024031,
   "abilityList": [
-    "3024031_Monster_W3_Sam_01_Ability06_Part02",
-    "3024031_Monster_W3_Sam_01_Ability06_Part01",
+    "3024031_Monster_W3_Sam_01_Passive01",
     "3024031_Monster_W3_Sam_01_Ability07_Part02",
     "3024031_Monster_W3_Sam_01_Ability07_Part01",
+    "3024031_Monster_W3_Sam_01_Ability06_Part02",
+    "3024031_Monster_W3_Sam_01_Ability06_Part01",
     "3024031_Monster_W3_Sam_01_Ability05_Part02",
     "3024031_Monster_W3_Sam_01_Ability05_Part01",
     "3024031_Monster_W3_Sam_01_Ability04_End_Part02",
     "3024031_Monster_W3_Sam_01_Ability04_End_Part01",
-    "3024031_BattleEvent_BattleEvent20029_Part01",
-    "3024031_BattleEvent_BattleEvent20029_EnterReady",
     "3024031_Monster_W3_Sam_01_Ability04_Part02",
     "3024031_Monster_W3_Sam_01_Ability04_Part01",
     "3024031_Monster_W3_Sam_01_Ability03_Part02",
@@ -23,112 +22,125 @@ const compositeAbilityObject = {
     "3024031_Monster_W3_Sam_01_Ability01Pre_Part01",
     "3024031_Monster_W3_Sam_01_Ability01_Part02",
     "3024031_Monster_W3_Sam_01_Ability01_Part01",
-    "3024031_Monster_W3_Sam_01_Passive01",
     "3024031_Monster_W3_Sam_01_PassiveAbility_BGM",
     "3024031_Modifiers",
     "3024031_BE_BattleEvents"
   ],
   "abilityObject": {
-    "3024031_Monster_W3_Sam_01_Ability06_Part02": {
-      "fileName": "3024031_Monster_W3_Sam_01_Ability06_Part02",
-      "abilityType": null,
+    "3024031_Monster_W3_Sam_01_Passive01": {
+      "fileName": "3024031_Monster_W3_Sam_01_Passive01",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Remove Events/Bonuses",
+          "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-810385516\">Enemy_W3_Sam_01_EnhanceEffectPart</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-430835905\">Enemy_W3_Sam_01_Passive</a>"
         },
-        "Ability Start",
         {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-16655209\">Enemy_W3_Sam_01_Shield</a>[<span class=\"descriptionNumberColor\">Whirling Carapace</span>]",
+          "valuePerStack": {
+            "MDF_ShieldThreshold": {
+              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[0]]}"
+              ]
             },
-            "modifier": "<a class=\"gModGreen\" id=\"-1922120036\">Enemy_W3_Sam_01_Enhance</a>[<span class=\"descriptionNumberColor\">Gene Duplication</span>]"
+            "MDF_HealPercentage": {
+              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[1]]}"
+              ]
+            },
+            "MDF_MaxRallyHPRatio": {
+              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[2]]}"
+              ]
+            }
           }
         },
         {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"2036544920\">Standard_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-              "duration": {
-                "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                "displayLines": "{[Skill06[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill06[1]]}"
-                ]
-              },
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_522) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_522",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_522"
-                  ]
-                }
-              }
+          "name": "Preload Battle Event(s)",
+          "eventID": [
+            20029
+          ]
+        },
+        {
+          "name": "Add Battle Event",
+          "teamName": "Neutral Team",
+          "eventID": 20029,
+          "variables": {
+            "Ability03_BreakDamageAddedRatioBase": {
+              "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
+              "displayLines": "{[Skill04[3]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[3]]}"
+              ]
             }
-          ],
-          "failed": [
+          },
+          "whenCreated": [
+            {
+              "name": "Assign Unique Name",
+              "uniqueName": "SelectTarget",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            },
             {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Name",
-                "target": "{{Caster's Minions}}"
+                "target": "{{Parameter Target}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"2036544920\">Standard_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-              "duration": {
-                "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                "displayLines": "{[Skill06[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill06[1]]}"
-                ]
-              },
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                  "displayLines": "{[Skill06[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill06[0]]}"
-                  ]
-                }
-              }
+              "modifier": "<a class=\"gModGreen\" id=\"-1888375507\">Enemy_W3_Sam_01_PickUpMessage</a>"
             }
           ]
         },
         {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
           "name": "IF",
           "conditions": {
-            "name": "Has Modifier",
+            "name": "Enemy ID",
+            "ID": 302403000,
             "target": {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "<a class=\"gModGreen\" id=\"-1922120036\">Enemy_W3_Sam_01_Enhance</a>[<span class=\"descriptionNumberColor\">Gene Duplication</span>]"
+            "characterName": null
           },
           "passed": [
             {
@@ -137,47 +149,240 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-810385516\">Enemy_W3_Sam_01_EnhanceEffectPart</a>"
+              "modifier": "<a class=\"gModGreen\" id=\"-363687624\">Enemy_W3_Sam_01_MainStory</a>"
             }
           ]
         },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{All Team Members}}"
-      },
-      "references": []
-    },
-    "3024031_Monster_W3_Sam_01_Ability06_Part01": {
-      "fileName": "3024031_Monster_W3_Sam_01_Ability06_Part01",
-      "childAbilityList": [
-        "3024031_Monster_W3_Sam_01_Ability06_Camera",
-        "3024031_Monster_W3_Sam_01_Ability06_Part01",
-        "3024031_Monster_W3_Sam_01_Ability06_Part02"
-      ],
-      "skillTrigger": "Skill06",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
         {
-          "name": "Trigger Ability",
-          "from": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_W3_Sam_01_Ability06_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
+          "modifier": "<a class=\"gModGreen\" id=\"1278888154\">W3_Sam_01_BattleScore2</a>"
+        }
       ],
       "targetObjectData": {
-        "primaryTarget": "{{All Team Members}}"
+        "primaryTarget": "{{Caster}}"
       },
       "realTargetData": {
-        "primaryTarget": "{{All Team Members}}"
+        "primaryTarget": "{{Caster}}"
       },
-      "references": []
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-363687624\">Enemy_W3_Sam_01_MainStory</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Lock HP",
+                  "threshold": 0.01
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Locked HP Floor Reached [Owner]",
+              "execute": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "phase": "Phase1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-430835905\">Enemy_W3_Sam_01_Passive</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Put Into Limbo [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Related Summoned Entity",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}"
+                      },
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-781925470\">Enemy_W3_Sam_01_Ability04Target</a>[<span class=\"descriptionNumberColor\">Nemesis</span>]"
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "Find New Target",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Enemy Team All}}"
+                          },
+                          "maxTargets": 1,
+                          "conditions": {
+                            "name": "Is Related Summoned Entity",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1922120036\">Enemy_W3_Sam_01_Enhance</a>[<span class=\"descriptionNumberColor\">Gene Duplication</span>]"
+                      },
+                      {
+                        "name": "Compare: Target Count",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster's Minions}}"
+                        },
+                        "compareType": "<=",
+                        "value2": 0,
+                        "livingTargets": true
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-557060605\">Monster_W3_Sam_Endurance</a>",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Inject Ability Use",
+                      "condition": {
+                        "name": "Insert Ability Condition",
+                        "type": "AbilityOwnerInsertUnusedCount",
+                        "typeValue": 1
+                      },
+                      "abilityName": "Monster_W3_Sam_01_Ability07_Part01",
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "priorityTag": "EnemyPhaseChange",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "maxTargets": 1,
+                  "conditions": {
+                    "name": "Is Related Summoned Entity",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "AIFlag",
+                      "value": 3
+                    }
+                  ],
+                  "noTargetFound": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "AIFlag",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "End Broken State [Owner]",
+              "execute": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "revertDefault": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1888375507\">Enemy_W3_Sam_01_PickUpMessage</a>",
+          "execute": [
+            {
+              "eventTrigger": "Ultimate Prep-Phase [Owner]"
+            }
+          ]
+        }
+      ]
     },
     "3024031_Monster_W3_Sam_01_Ability07_Part02": {
       "fileName": "3024031_Monster_W3_Sam_01_Ability07_Part02",
@@ -334,6 +539,156 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3024031_Monster_W3_Sam_01_Ability06_Part02": {
+      "fileName": "3024031_Monster_W3_Sam_01_Ability06_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-810385516\">Enemy_W3_Sam_01_EnhanceEffectPart</a>"
+        },
+        "Ability Start",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1922120036\">Enemy_W3_Sam_01_Enhance</a>[<span class=\"descriptionNumberColor\">Gene Duplication</span>]"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 3
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Minions}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"2036544920\">Standard_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+              "duration": {
+                "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
+                "displayLines": "{[Skill06[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill06[1]]}"
+                ]
+              },
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (UnusedUnderThisBase_9989) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9989",
+                  "constants": [],
+                  "variables": [
+                    "UnusedUnderThisBase_9989"
+                  ]
+                }
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Minions}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"2036544920\">Standard_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+              "duration": {
+                "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
+                "displayLines": "{[Skill06[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill06[1]]}"
+                ]
+              },
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+                  "displayLines": "{[Skill06[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill06[0]]}"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1922120036\">Enemy_W3_Sam_01_Enhance</a>[<span class=\"descriptionNumberColor\">Gene Duplication</span>]"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-810385516\">Enemy_W3_Sam_01_EnhanceEffectPart</a>"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "references": []
+    },
+    "3024031_Monster_W3_Sam_01_Ability06_Part01": {
+      "fileName": "3024031_Monster_W3_Sam_01_Ability06_Part01",
+      "childAbilityList": [
+        "3024031_Monster_W3_Sam_01_Ability06_Camera",
+        "3024031_Monster_W3_Sam_01_Ability06_Part01",
+        "3024031_Monster_W3_Sam_01_Ability06_Part02"
+      ],
+      "skillTrigger": "Skill06",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_Sam_01_Ability06_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
       },
       "references": []
     },
@@ -635,177 +990,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "3024031_BattleEvent_BattleEvent20029_Part01": {
-      "fileName": "3024031_BattleEvent_BattleEvent20029_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "value": "MonsterType_W3_Sam_01"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-781925470\">Enemy_W3_Sam_01_Ability04Target</a>[<span class=\"descriptionNumberColor\">Nemesis</span>]",
-          "valuePerStack": {
-            "MDF_BreakDamageAddedRatioBase": {
-              "operator": "Variables[0] (Ability03_BreakDamageAddedRatioBase) || RETURN",
-              "displayLines": "Ability03_BreakDamageAddedRatioBase",
-              "constants": [],
-              "variables": [
-                "Ability03_BreakDamageAddedRatioBase"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "set": 0
-        },
-        {
-          "name": "Advance/Delay up to Target",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}.[[getAttachedSummon]] - {{Ability Target(ST)}}.[[getAttachedSummon]].[[removeBattleEventsFromOthers]]"
-          },
-          "targetRef": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "refPoint": "After",
-          "isStartingAV": true
-        },
-        {
-          "name": "Advance/Delay up to Target",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}.[[getMemosprite]]"
-          },
-          "targetRef": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "refPoint": "After",
-          "isStartingAV": true
-        },
-        {
-          "name": "Advance/Delay up to Target",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}.[[getAttachedSummon]].[[removeBattleEventsFromOthers]]"
-          },
-          "targetRef": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "refPoint": "After",
-          "isStartingAV": true
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1466483299\">Enemy_W3_Sam_01_MuteUltra</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1435923301\">Enemy_W3_Sam_01_Locking</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "value": "MonsterType_W3_Sam_01"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "inherentTarget": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "ability": "Monster_W3_Sam_01_Ability04_End_Part01",
-              "isTrigger": true
-            }
-          ]
-        },
-        "Wait for Pending Ability Completions",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "3024031_BattleEvent_BattleEvent20029_EnterReady": {
-      "fileName": "3024031_BattleEvent_BattleEvent20029_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "value": "MonsterType_W3_Sam_01"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []
     },
@@ -1122,9 +1306,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Update Target Selected(UI) [Anyone]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1145,9 +1327,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2011,369 +2191,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "3024031_Monster_W3_Sam_01_Passive01": {
-      "fileName": "3024031_Monster_W3_Sam_01_Passive01",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-430835905\">Enemy_W3_Sam_01_Passive</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-16655209\">Enemy_W3_Sam_01_Shield</a>[<span class=\"descriptionNumberColor\">Whirling Carapace</span>]",
-          "valuePerStack": {
-            "MDF_ShieldThreshold": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
-            },
-            "MDF_HealPercentage": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
-            },
-            "MDF_MaxRallyHPRatio": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Preload Battle Event(s)",
-          "eventID": [
-            20029
-          ]
-        },
-        {
-          "name": "Add Battle Event",
-          "teamName": "Neutral Team",
-          "eventID": 20029,
-          "variables": {
-            "Ability03_BreakDamageAddedRatioBase": {
-              "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-              "displayLines": "{[Skill04[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[3]]}"
-              ]
-            }
-          },
-          "whenCreated": [
-            {
-              "name": "Assign Unique Name",
-              "uniqueName": "SelectTarget",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1888375507\">Enemy_W3_Sam_01_PickUpMessage</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 302403000,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": null
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-363687624\">Enemy_W3_Sam_01_MainStory</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1278888154\">W3_Sam_01_BattleScore2</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-363687624\">Enemy_W3_Sam_01_MainStory</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.01
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Locked HP Floor Reached [Owner]",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "phase": "Phase1"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-430835905\">Enemy_W3_Sam_01_Passive</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Put Into Limbo [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Related Summoned Entity",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All(with Unselectable)V2}}"
-                      },
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-781925470\">Enemy_W3_Sam_01_Ability04Target</a>[<span class=\"descriptionNumberColor\">Nemesis</span>]"
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Find New Target",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          "maxTargets": 1,
-                          "conditions": {
-                            "name": "Is Related Summoned Entity",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "target2": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1922120036\">Enemy_W3_Sam_01_Enhance</a>[<span class=\"descriptionNumberColor\">Gene Duplication</span>]"
-                      },
-                      {
-                        "name": "Compare: Target Count",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster's Minions}}"
-                        },
-                        "compareType": "<=",
-                        "value2": 0,
-                        "livingTargets": true
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-557060605\">Monster_W3_Sam_Endurance</a>",
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "Monster_W3_Sam_01_Ability07_Part01",
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "priorityTag": "EnemyPhaseChange",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Is Related Summoned Entity",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 3
-                    }
-                  ],
-                  "noTargetFound": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "revertDefault": true
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1888375507\">Enemy_W3_Sam_01_PickUpMessage</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ultimate Prep-Phase [Owner]"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "3024031_Monster_W3_Sam_01_PassiveAbility_BGM": {
       "fileName": "3024031_Monster_W3_Sam_01_PassiveAbility_BGM",
       "childAbilityList": [
@@ -2478,9 +2295,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2535,9 +2350,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2559,9 +2372,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2569,6 +2380,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_BreakDamageAddedRatioBase</span>. When attacking enemy targets in the \"Rapid Evolution\" state, ignores the \"Rapid Evolution\" effect that prevents attackers from dealing CRIT Hits.",
+          "type": "Other",
+          "effectName": "Nemesis",
+          "statusName": "Nemesis",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2591,11 +2406,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_BreakDamageAddedRatioBase</span>. When attacking enemy targets in the \"Rapid Evolution\" state, ignores the \"Rapid Evolution\" effect that prevents attackers from dealing CRIT Hits.",
-          "type": "Other",
-          "effectName": "Nemesis",
-          "statusName": "Nemesis"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2603,6 +2414,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_BreakDamageAddedRatioBase</span>. When attacking an enemy target in the \"Rapid Evolution\" state, ignores the \"Rapid Evolution\" effect that prevents attackers from dealing CRIT Hits. \"Juvenile Sting\" will prioritize attacking ally characters in the \"Nemesis\" state.",
+          "type": "Other",
+          "effectName": "Nemesis",
+          "statusName": "Nemesis",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2716,15 +2531,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_BreakDamageAddedRatioBase"
-          ],
-          "latentQueue": [],
-          "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_BreakDamageAddedRatioBase</span>. When attacking an enemy target in the \"Rapid Evolution\" state, ignores the \"Rapid Evolution\" effect that prevents attackers from dealing CRIT Hits. \"Juvenile Sting\" will prioritize attacking ally characters in the \"Nemesis\" state.",
-          "type": "Other",
-          "effectName": "Nemesis",
-          "statusName": "Nemesis"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2764,9 +2571,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2774,6 +2579,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "When attacked by ally targets not in the \"Nemesis\" state, cannot receive CRIT Hits.",
+          "type": "Other",
+          "effectName": "Rapid Evolution",
+          "statusName": "Rapid Evolution",
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -2884,13 +2693,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Weakness Break [Anyone]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When attacked by ally targets not in the \"Nemesis\" state, cannot receive CRIT Hits.",
-          "type": "Other",
-          "effectName": "Rapid Evolution",
-          "statusName": "Rapid Evolution"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2963,13 +2766,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1121915816\">Enemy_W3_Sam_01_TakenDamage</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "stackData": [
+            "MDF_DamageTakenUpRatio_PerLayer"
+          ],
+          "latentQueue": [
+            "AIFlag"
+          ],
+          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is dispelled when this unit recovers from Weakness Break state.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2998,17 +2809,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageTakenUpRatio_PerLayer"
-          ],
-          "latentQueue": [
-            "AIFlag"
-          ],
-          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is dispelled when this unit recovers from Weakness Break state.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3017,9 +2818,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3457,11 +3256,11 @@ const compositeAbilityObject = {
                       "scope": "TargetEntity",
                       "variableName": "PassiveSkill03_MaxCharge",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_521) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_521",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9971) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_9971",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_521"
+                          "UnusedUnderThisBase_9971"
                         ]
                       }
                     }
@@ -3570,6 +3369,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_AITargetLowerPriority"
           ],
+          "stackData": [
+            "MDF_SpeedUpRatio"
+          ],
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>.",
+          "type": "Buff",
+          "effectName": "Enhance",
+          "statusName": "Gene Duplication",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3756,11 +3562,11 @@ const compositeAbilityObject = {
                           "scope": "TargetEntity",
                           "variableName": "PassiveSkill03_MaxCharge",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_521) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_521",
+                            "operator": "Variables[0] (UnusedUnderThisBase_9971) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_9971",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_521"
+                              "UnusedUnderThisBase_9971"
                             ]
                           }
                         }
@@ -3805,11 +3611,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_582) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_582",
+                              "operator": "Variables[0] (UnusedUnderThisBase_9973) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_9973",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_582"
+                                "UnusedUnderThisBase_9973"
                               ]
                             }
                           }
@@ -3924,26 +3730,24 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedUpRatio"
-          ],
-          "latentQueue": [],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>.",
-          "type": "Buff",
-          "effectName": "Enhance",
-          "statusName": "Gene Duplication"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__599604616\">Enemy_W3_Sam_01_ShieldRecoverMark</a>",
-          "stackType": "Replace",
-          "stackData": [],
-          "latentQueue": []
+          "stackType": "Replace"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-16655209\">Enemy_W3_Sam_01_Shield</a>[<span class=\"descriptionNumberColor\">Whirling Carapace</span>]",
+          "stackData": [
+            "MDF_ShieldThreshold",
+            "MDF_HealPercentage",
+            "MDF_MaxRallyHPRatio"
+          ],
+          "description": "After \"Harbinger of Death: Swarm Nightmare\" is attacked, a portion of the reduced HP is converted into \"Corrosion.\" When \"Harbinger of Death: Swarm Nightmare\" uses \"Primordial Tide, Swarm of Death,\" this unit will restore HP equal to the amount of Corrosion.",
+          "type": "Buff",
+          "statusName": "Whirling Carapace",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4424,16 +4228,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ShieldThreshold",
-            "MDF_HealPercentage",
-            "MDF_MaxRallyHPRatio"
-          ],
-          "latentQueue": [],
-          "description": "After \"Harbinger of Death: Swarm Nightmare\" is attacked, a portion of the reduced HP is converted into \"Corrosion.\" When \"Harbinger of Death: Swarm Nightmare\" uses \"Primordial Tide, Swarm of Death,\" this unit will restore HP equal to the amount of Corrosion.",
-          "type": "Buff",
-          "statusName": "Whirling Carapace"
+          ]
         }
       ],
       "references": []

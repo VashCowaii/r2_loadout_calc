@@ -24,9 +24,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-887060833\">Standard_BOSSInfoBar_Active</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-887060833\">Standard_BOSSInfoBar_Active</a>"
     }
   ],
   "targetObjectData": {

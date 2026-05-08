@@ -45,6 +45,15 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1466426252\">Monster_W3_Clock_03_Charge</a>[<span class=\"descriptionNumberColor\">Strength Boost!</span>]",
+      "latentQueue": [
+        "Is_Charge",
+        "Is_BeingAttacked",
+        "Passive_AttackTime"
+      ],
+      "description": "Uses \"Windmill Defacer\" in the next action.",
+      "type": "Other",
+      "effectName": "Charging",
+      "statusName": "Strength Boost!",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -262,17 +271,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Is_Charge",
-        "Is_BeingAttacked",
-        "Passive_AttackTime"
-      ],
-      "description": "Uses \"Windmill Defacer\" in the next action.",
-      "type": "Other",
-      "effectName": "Charging",
-      "statusName": "Strength Boost!"
+      ]
     }
   ]
 }

@@ -96,6 +96,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2074412751\">Enemy_W1_Bronya_ListenSelfBreak</a>",
+      "latentQueue": [
+        "Bronya_SummonCounter",
+        "Bronya_SummonMode"
+      ],
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -130,11 +134,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Bronya_SummonCounter",
-        "Bronya_SummonMode"
       ]
     },
     {
@@ -143,6 +142,10 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
+      "description": "Bronya's Toughness cannot be reduced while there are enemies on the field.",
+      "type": "Buff",
+      "effectName": "Weakness Protected",
+      "statusName": "Weakness Protected",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -184,15 +187,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Bronya's Toughness cannot be reduced while there are enemies on the field.",
-      "type": "Buff",
-      "effectName": "Weakness Protected",
-      "statusName": "Weakness Protected"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__43109596\">Enemy_W1_Bronya_WeakPointProtectController</a>",
+      "latentQueue": [
+        "Bronya_SummonCounter",
+        "Bronya_SummonMode"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -367,11 +370,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Bronya_SummonCounter",
-        "Bronya_SummonMode"
       ]
     }
   ]

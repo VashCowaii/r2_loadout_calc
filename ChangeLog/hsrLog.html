@@ -1,10 +1,46 @@
 <!-- template -->
 <!-- <div>
-    <h1>March X, 2026</h1>
+    <h1>May X, 2026</h1>
     <ul>
         <li>asdf</li>
     </ul>
 </div> -->
+<div>
+    <h1>May 8th, 2026</h1>
+    <ul>
+        <h3>Library</h3>
+        <li>Added Participant ID's to elation skill display data</li>
+        <li>Added the ability to see Overworld related abilities that pertain to techniques that have data handled outside of the battle, like EMC or Aventurine.</li>
+        <li>Added handling to hook-in abilities that are added to entities in the middle of their eventreaders. This adds new abilities to quite a few enemies, as well as battle events.</li>
+        <li>Added eventreaders to all currently relevant battle events, which involves a few things:
+            <ul>
+                <li>This means battle events are now isolated on their own page</li>
+                <li>Characters or Enemies that use battle event abilities, will have those abilities moved to the respective battle event pages.</li>
+                <li>No data is being lost here, only organized appropriately.</li>
+                <li>Entities that use battle events always have a "battleevents" option in their reader dropdown, which will link to the respective associated battle event that would hold their abilities.</li>
+                <li>As a final example, this means that Robin's ult countdown battle event, has moved to its own page, but you can reach the link to it from Robin's eventreader.</li>
+            </ul>
+        </li>
+        <li>HUGE CLEANING CHANGE: Added handling to isolate abilities relevant to the current entity page.
+            <ul>
+                <li>This may not sound very interesting, but it allowed me to remove around 3.5 thousand instances of ability files that weren't relevant to the entity that held them.</li>
+                <li>As an example, True Stings have TONS of abilities, but the ability list always included the abilities of their own minions as well, meaning True Strings could have upwards of 40 abilities.</li>
+                <li>Now, however, if it's not a story boss then story-specific abilities won't show up anymore just bc it's on the same enemy type. The aforementioned True Sting enemies will still have a lot of abilities, but the ability lists have often been cut in half especially on the minions that shared ability lists with the summoners.</li>
+            </ul>
+        </li>
+        <!-- <li>Added eventreaders for the following new characters:
+            <ul>
+                <li>Welt (Novaflare)</li>
+                <li>Trailblazer - Elation</li>
+            </ul>
+        </li> -->
+
+        <!-- <h4>Fixes</h4>
+        <li>asdf</li> -->
+        
+    </ul>
+</div>
+
 <div>
     <h1>April 29th, 2026</h1>
     <ul>

@@ -2,8 +2,22 @@ const entityPageType = "misc"
 const compositeAbilityObject = {
   "fullCharacterName": 60002,
   "trimCharacterName": 60002,
-  "abilityList": [],
-  "abilityObject": {},
+  "abilityList": [
+    "60002_BattleEventAbility_620101_Camera"
+  ],
+  "abilityObject": {
+    "60002_BattleEventAbility_620101_Camera": {
+      "fileName": "60002_BattleEventAbility_620101_Camera",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    }
+  },
   "enemyData": {
     "Skill03": {
       "skillID": 908003,
@@ -60,6 +74,5 @@ const compositeAbilityObject = {
       "hitSplits": []
     }
   },
-  "isBattleEvent": true,
-  "noReader": true
+  "isBattleEvent": true
 }

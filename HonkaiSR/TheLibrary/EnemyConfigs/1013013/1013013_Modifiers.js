@@ -11,6 +11,7 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1648872677\">Monster_W1_Mecha03_RL_AfterCharge</a>",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -45,8 +46,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -106,13 +106,14 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1629066392\">Monster_W1_Mecha03_RL_Part03Effect</a>",
+      "latentQueue": [
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -121,13 +122,15 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1139046842\">Monster_W1_Mecha03_RL_Explode</a>",
+      "latentQueue": [
+        "SummonSequence",
+        "TeammateSurvive"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -145,11 +148,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "SummonSequence",
-        "TeammateSurvive"
       ]
     },
     {
@@ -203,14 +201,20 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__118150896\">Monster_W1_Mecha03_RL_Ability03_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_DamageUpRatio_PerLayer"
+      ],
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -240,20 +244,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
-      "latentQueue": [],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-735432971\">Monster_W1_Mecha03_RL_Revenge</a>[<span class=\"descriptionNumberColor\">Obliteration Order</span>]",
+      "stackData": [
+        "MDF_DamageUpRatio"
+      ],
+      "description": "Increases DMG by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>. Every time this unit enters the Charging state, DMG is increased further.",
+      "type": "Buff",
+      "effectName": "Obliteration Order",
+      "statusName": "Obliteration Order",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -276,15 +278,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio"
-      ],
-      "latentQueue": [],
-      "description": "Increases DMG by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>. Every time this unit enters the Charging state, DMG is increased further.",
-      "type": "Buff",
-      "effectName": "Obliteration Order",
-      "statusName": "Obliteration Order"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -431,6 +425,10 @@ const configAbility = {
       "modifierFlags": [
         "DisableHealHP"
       ],
+      "description": "Currently cannot take action.",
+      "type": "Other",
+      "statusName": "Firepower Recovery",
+      "duration": 2,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -567,11 +565,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Currently cannot take action.",
-      "type": "Other",
-      "statusName": "Firepower Recovery",
-      "duration": 2
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -837,11 +831,11 @@ const configAbility = {
                                       },
                                       "variableName": "Mecha03_00_DamageUpBasePercentage",
                                       "value": {
-                                        "operator": "Variables[0] (UnusedUnderThisBase_48) || RETURN",
-                                        "displayLines": "UnusedUnderThisBase_48",
+                                        "operator": "Variables[0] (UnusedUnderThisBase_7939) || RETURN",
+                                        "displayLines": "UnusedUnderThisBase_7939",
                                         "constants": [],
                                         "variables": [
-                                          "UnusedUnderThisBase_48"
+                                          "UnusedUnderThisBase_7939"
                                         ]
                                       }
                                     }
@@ -959,7 +953,7 @@ const configAbility = {
                                             "target": "{{Modifier Holder}}"
                                           },
                                           "advanceType": "Set",
-                                          "multiAdd": "UnusedUnderThisBase_53"
+                                          "multiAdd": "UnusedUnderThisBase_7953"
                                         },
                                         {
                                           "name": "Add Events/Bonuses",
@@ -969,11 +963,11 @@ const configAbility = {
                                           },
                                           "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                           "duration": {
-                                            "operator": "Variables[0] (UnusedUnderThisBase_52) || RETURN",
-                                            "displayLines": "UnusedUnderThisBase_52",
+                                            "operator": "Variables[0] (UnusedUnderThisBase_7950) || RETURN",
+                                            "displayLines": "UnusedUnderThisBase_7950",
                                             "constants": [],
                                             "variables": [
-                                              "UnusedUnderThisBase_52"
+                                              "UnusedUnderThisBase_7950"
                                             ]
                                           }
                                         }
@@ -986,7 +980,7 @@ const configAbility = {
                                             "target": "{{Modifier Holder}}"
                                           },
                                           "advanceType": "Set",
-                                          "multiAdd": "UnusedUnderThisBase_51"
+                                          "multiAdd": "UnusedUnderThisBase_7938"
                                         },
                                         {
                                           "name": "Add Events/Bonuses",
@@ -996,11 +990,11 @@ const configAbility = {
                                           },
                                           "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                           "duration": {
-                                            "operator": "Variables[0] (UnusedUnderThisBase_50) || RETURN",
-                                            "displayLines": "UnusedUnderThisBase_50",
+                                            "operator": "Variables[0] (UnusedUnderThisBase_7951) || RETURN",
+                                            "displayLines": "UnusedUnderThisBase_7951",
                                             "constants": [],
                                             "variables": [
-                                              "UnusedUnderThisBase_50"
+                                              "UnusedUnderThisBase_7951"
                                             ]
                                           }
                                         }
@@ -1068,11 +1062,11 @@ const configAbility = {
                                       },
                                       "variableName": "Mecha03_00_DamageUpBasePercentage",
                                       "value": {
-                                        "operator": "Variables[0] (UnusedUnderThisBase_48) || RETURN",
-                                        "displayLines": "UnusedUnderThisBase_48",
+                                        "operator": "Variables[0] (UnusedUnderThisBase_7939) || RETURN",
+                                        "displayLines": "UnusedUnderThisBase_7939",
                                         "constants": [],
                                         "variables": [
-                                          "UnusedUnderThisBase_48"
+                                          "UnusedUnderThisBase_7939"
                                         ]
                                       }
                                     }
@@ -1504,11 +1498,11 @@ const configAbility = {
                                                       },
                                                       "variableName": "Mecha03_00_DamageUpBasePercentage",
                                                       "value": {
-                                                        "operator": "Variables[0] (UnusedUnderThisBase_48) || RETURN",
-                                                        "displayLines": "UnusedUnderThisBase_48",
+                                                        "operator": "Variables[0] (UnusedUnderThisBase_7939) || RETURN",
+                                                        "displayLines": "UnusedUnderThisBase_7939",
                                                         "constants": [],
                                                         "variables": [
-                                                          "UnusedUnderThisBase_48"
+                                                          "UnusedUnderThisBase_7939"
                                                         ]
                                                       }
                                                     }
@@ -1628,7 +1622,7 @@ const configAbility = {
                                                         "target": "{{Modifier Holder}}"
                                                       },
                                                       "advanceType": "Set",
-                                                      "multiAdd": "UnusedUnderThisBase_53"
+                                                      "multiAdd": "UnusedUnderThisBase_7953"
                                                     },
                                                     {
                                                       "name": "Add Events/Bonuses",
@@ -1638,11 +1632,11 @@ const configAbility = {
                                                       },
                                                       "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                                       "duration": {
-                                                        "operator": "Variables[0] (UnusedUnderThisBase_52) || RETURN",
-                                                        "displayLines": "UnusedUnderThisBase_52",
+                                                        "operator": "Variables[0] (UnusedUnderThisBase_7950) || RETURN",
+                                                        "displayLines": "UnusedUnderThisBase_7950",
                                                         "constants": [],
                                                         "variables": [
-                                                          "UnusedUnderThisBase_52"
+                                                          "UnusedUnderThisBase_7950"
                                                         ]
                                                       }
                                                     }
@@ -1655,7 +1649,7 @@ const configAbility = {
                                                         "target": "{{Modifier Holder}}"
                                                       },
                                                       "advanceType": "Set",
-                                                      "multiAdd": "UnusedUnderThisBase_51"
+                                                      "multiAdd": "UnusedUnderThisBase_7938"
                                                     },
                                                     {
                                                       "name": "Add Events/Bonuses",
@@ -1665,11 +1659,11 @@ const configAbility = {
                                                       },
                                                       "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                                       "duration": {
-                                                        "operator": "Variables[0] (UnusedUnderThisBase_50) || RETURN",
-                                                        "displayLines": "UnusedUnderThisBase_50",
+                                                        "operator": "Variables[0] (UnusedUnderThisBase_7951) || RETURN",
+                                                        "displayLines": "UnusedUnderThisBase_7951",
                                                         "constants": [],
                                                         "variables": [
-                                                          "UnusedUnderThisBase_50"
+                                                          "UnusedUnderThisBase_7951"
                                                         ]
                                                       }
                                                     }
@@ -1753,11 +1747,11 @@ const configAbility = {
                                                   },
                                                   "variableName": "Mecha03_00_DamageUpBasePercentage",
                                                   "value": {
-                                                    "operator": "Variables[0] (UnusedUnderThisBase_48) || RETURN",
-                                                    "displayLines": "UnusedUnderThisBase_48",
+                                                    "operator": "Variables[0] (UnusedUnderThisBase_7939) || RETURN",
+                                                    "displayLines": "UnusedUnderThisBase_7939",
                                                     "constants": [],
                                                     "variables": [
-                                                      "UnusedUnderThisBase_48"
+                                                      "UnusedUnderThisBase_7939"
                                                     ]
                                                   }
                                                 }
@@ -1847,9 +1841,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1936,9 +1928,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

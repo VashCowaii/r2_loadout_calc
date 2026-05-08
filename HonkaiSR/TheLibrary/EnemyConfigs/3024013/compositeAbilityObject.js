@@ -8,23 +8,19 @@ const compositeAbilityObject = {
     "3024013_Monster_W2_Argenti_IF_EX03_PassiveAbility",
     "3024013_Monster_W2_Argenti_IF_EX02_PassiveAbility",
     "3024013_Monster_W2_Argenti_IF_EX01_PassiveAbility",
-    "3024013_Monster_W2_Argenti_IF_EX_Basic_PassiveAbility",
     "3024013_Monster_W2_Argenti_IF_TransferEnhance",
-    "3024013_Monster_W2_Argenti_Ability24_IF_Part02",
-    "3024013_Monster_W2_Argenti_Ability23_IF_Part02",
-    "3024013_Monster_W2_Argenti_Ability22_IF_Part02",
-    "3024013_Monster_W2_Argenti_Ability21_IF_Part02",
-    "3024013_Monster_W2_Argenti_IF_Ability05_Part02",
-    "3024013_Monster_W2_Argenti_Ability10_IF_Part01",
+    "3024013_Monster_W2_Argenti_IF_Passive02",
+    "3024013_Monster_W2_Argenti_IF_Passive01",
+    "3024013_Monster_W2_Argenti_PartChange2T3_Insert",
+    "3024013_Monster_W2_Argenti_PartChange_Insert",
+    "3024013_Monster_W2_Argenti_IF_EX_Basic_PassiveAbility",
+    "3024013_Monster_W2_Argenti_PassiveAbilityInitiate",
     "3024013_Monster_W2_Argenti_Ability17_IF_Part02",
     "3024013_Monster_W2_Argenti_Ability17_IF_Part01",
     "3024013_Monster_W2_Argenti_Ability16_IF_Part02_Insert",
     "3024013_Monster_W2_Argenti_Ability16_IF_Part01_Insert",
     "3024013_Monster_W2_Argenti_Ability16_IF_Part02",
     "3024013_Monster_W2_Argenti_Ability16_IF_Part01",
-    "3024013_Monster_W2_Argenti_Ability09_IF_Insert",
-    "3024013_Monster_W2_Argenti_Ability09_IF_Part02",
-    "3024013_Monster_W2_Argenti_Ability09_IF_Part01",
     "3024013_Monster_W2_Argenti_Ability15_IF_Part02",
     "3024013_Monster_W2_Argenti_Ability15_IF_Part01",
     "3024013_Monster_W2_Argenti_Ability14_IF_Part02",
@@ -35,15 +31,21 @@ const compositeAbilityObject = {
     "3024013_Monster_W2_Argenti_Ability12_IF_Part01",
     "3024013_Monster_W2_Argenti_Ability11_IF_Part02",
     "3024013_Monster_W2_Argenti_Ability11_IF_Part01",
-    "3024013_Monster_W2_Argenti_IF_Passive02",
-    "3024013_Monster_W2_Argenti_IF_Passive01",
-    "3024013_Monster_W2_Argenti_PartChange2T3_Insert",
+    "3024013_Monster_W2_Argenti_IF_Ability05_Part02",
+    "3024013_Monster_W2_Argenti_Ability24_IF_Part02",
+    "3024013_Monster_W2_Argenti_Ability23_IF_Part02",
+    "3024013_Monster_W2_Argenti_Ability22_IF_Part02",
+    "3024013_Monster_W2_Argenti_Ability21_IF_Part02",
+    "3024013_Monster_W2_Argenti_Ability10_IF_Part01",
+    "3024013_Monster_W2_Argenti_Ability09_IF_Insert",
+    "3024013_Monster_W2_Argenti_Ability09_IF_Part02",
+    "3024013_Monster_W2_Argenti_Ability09_IF_Part01",
     "3024013_Monster_W2_Argenti_Ability08_Part02",
     "3024013_Monster_W2_Argenti_Ability08_Part01",
-    "3024013_Monster_W2_Argenti_Ability06_Part02",
-    "3024013_Monster_W2_Argenti_Ability06_Part01",
     "3024013_Monster_W2_Argenti_Ability07_Part02",
     "3024013_Monster_W2_Argenti_Ability07_Part01",
+    "3024013_Monster_W2_Argenti_Ability06_Part02",
+    "3024013_Monster_W2_Argenti_Ability06_Part01",
     "3024013_Monster_W2_Argenti_Ability05_Part02",
     "3024013_Monster_W2_Argenti_Ability05_Part01",
     "3024013_Monster_W2_Argenti_Ability04_Part02",
@@ -54,12 +56,6 @@ const compositeAbilityObject = {
     "3024013_Monster_W2_Argenti_Ability02_Part01",
     "3024013_Monster_W2_Argenti_Ability01_Part02",
     "3024013_Monster_W2_Argenti_Ability01_Part01",
-    "3024013_BattleEventAbility_Monster_W2_Argenti_MainStory202",
-    "3024013_Monster_W2_Argenti_PassiveAbility202",
-    "3024013_Monster_W2_Argenti_PartChange_Insert",
-    "3024013_Monster_W2_Argenti_PassiveAbilityInitiate",
-    "3024013_Monster_W2_Argenti_Passive02",
-    "3024013_Monster_W2_Argenti_Passive01",
     "3024013_Monster_W2_Argenti_PassiveAbility_BGM",
     "3024013_Modifiers",
     "3024013_Functions"
@@ -229,6 +225,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1777994335\">Enemy_W2_Argenti_IF_EX02_UltraState</a>[<span class=\"descriptionNumberColor\">Medal of Elegance</span>]",
+          "description": "Cannot be selected before the next action or before all summons have been defeated. Use Undeniable Fate the next time this unit takes action.",
+          "type": "Buff",
+          "effectName": "Medal of Elegance",
+          "statusName": "Medal of Elegance",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -325,11 +325,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Cannot be selected before the next action or before all summons have been defeated. Use Undeniable Fate the next time this unit takes action.",
-          "type": "Buff",
-          "effectName": "Medal of Elegance",
-          "statusName": "Medal of Elegance"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -337,6 +333,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span> and increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue2</span>.",
+          "type": "Buff",
+          "effectName": "Golden Harvest",
+          "statusName": "Golden Harvest",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -492,15 +492,15 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span> and increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue2</span>.",
-          "type": "Buff",
-          "effectName": "Golden Harvest",
-          "statusName": "Golden Harvest"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__529665307\">Enemy_W2_Argenti_IF_EX02_DefendState</a>[<span class=\"descriptionNumberColor\">Chivalric Wrath</span>]",
+          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+          "type": "Buff",
+          "effectName": "Chivalric Wrath",
+          "statusName": "Chivalric Wrath",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -628,11 +628,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
-          "type": "Buff",
-          "effectName": "Chivalric Wrath",
-          "statusName": "Chivalric Wrath"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -817,9 +813,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1003,26 +997,9 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
-    },
-    "3024013_Monster_W2_Argenti_IF_EX_Basic_PassiveAbility": {
-      "fileName": "3024013_Monster_W2_Argenti_IF_EX_Basic_PassiveAbility",
-      "skillTrigger": "SkillEXPassiveSkill",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
     },
     "3024013_Monster_W2_Argenti_IF_TransferEnhance": {
       "fileName": "3024013_Monster_W2_Argenti_IF_TransferEnhance",
@@ -1089,6 +1066,2658 @@ const compositeAbilityObject = {
             }
           ]
         }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "3024013_Monster_W2_Argenti_IF_Passive02": {
+      "fileName": "3024013_Monster_W2_Argenti_IF_Passive02",
+      "skillTrigger": "SkillP03",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1341379409\">Monster_W2_Argenti_IF_Initiate</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1341379409\">Monster_W2_Argenti_IF_Initiate</a>",
+          "modifierFlags": [
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Waiting for Healing in Limbo",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1817558624\">Argenti_KillAllMonsters</a>"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Die_Flag",
+                    "compareType": "=",
+                    "value2": 0,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Dispel Debuffs",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "silent": true
+                    },
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Die_Flag",
+                      "value": 1
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
+                    },
+                    {
+                      "name": "Define Custom Variable with Varying Data",
+                      "target": null,
+                      "variableName": "MaxPhase",
+                      "value": "MaxMonsterPhase"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "HP_Bars_Remaining",
+                        "compareType": "=",
+                        "value2": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "Set Enemy Phase",
+                          "mode": "Inc"
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                        },
+                        {
+                          "name": "Inject Ability Use",
+                          "abilityName": "Monster_W2_Argenti_PartChange_Insert",
+                          "priorityTag": "EnemyPhaseChange",
+                          "ownerState": "Mask_AliveOrLimbo",
+                          "targetState": "Mask_AliveOrLimbo",
+                          "canHitNonTargets": true,
+                          "showInActionOrder": true,
+                          "allowAbilityTriggers": false
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "AIFlag",
+                          "value": 1
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "SAIFlag",
+                          "value": 3
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -90
+            },
+            {
+              "eventTrigger": "Pre-Death [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Minions}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1982647452\">Enemy_W2_Yanqing_01_ChangePhaseDestroy</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1982647452\">Enemy_W2_Yanqing_01_ChangePhaseDestroy</a>"
+                },
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1817558624\">Argenti_KillAllMonsters</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "3024013_Monster_W2_Argenti_IF_Passive01": {
+      "fileName": "3024013_Monster_W2_Argenti_IF_Passive01",
+      "skillTrigger": "SkillP02",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Monster_IF_InsertCount"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Monster_IF_InsertCameraFlag"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Monster_IF_InsertCount02"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Monster_IF_InsertCameraFlag02"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1028252906\">W2_Argenti_BattleScore1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1011475287\">W2_Argenti_BattleScore2</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1334735657\">Enemy_W2_Argenti_IF_Boss_Enhance</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2120668767\">Enemy_W2_Argenti_IF_AIController</a>"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "multiBase": {
+            "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
+            "displayLines": "{[SkillP02[0]]}",
+            "constants": [],
+            "variables": [
+              "{[SkillP02[0]]}"
+            ]
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1109870649\">Enemy_W2_Argenti_IF_PowerCollecterController</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"278285473\">Enemy_W2_Argenti_IF_EnterCombatAlert</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__278285473\">Enemy_W2_Argenti_IF_EnterCombatAlert</a>",
+          "latentQueue": [
+            "Monster_IF_InsertCount",
+            "Monster_IF_InsertCameraFlag",
+            "Monster_IF_InsertCount02",
+            "Monster_IF_InsertCameraFlag02"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Action Choice Window [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1109870649\">Enemy_W2_Argenti_IF_PowerCollecterController</a>",
+          "latentQueue": [
+            "Monster_IF_InsertCount",
+            "Monster_IF_InsertCameraFlag",
+            "Monster_IF_InsertCount02",
+            "Monster_IF_InsertCameraFlag02"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "SAIFlag",
+                        "compareType": "=",
+                        "value2": 1
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "AIFlag",
+                        "compareType": "=",
+                        "value2": 31,
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
+                      "maxTargets": 1,
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "Inject Ability Use",
+                          "abilityName": "Monster_W2_Argenti_Ability16_IF_Part01_Insert",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "priorityTag": "EnemyBattleCry",
+                          "ownerState": "Anyone",
+                          "canHitNonTargets": true,
+                          "allowAbilityTriggers": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2120668767\">Enemy_W2_Argenti_IF_AIController</a>",
+          "latentQueue": [
+            "Monster_IF_InsertCount",
+            "Monster_IF_InsertCameraFlag",
+            "Monster_IF_InsertCount02",
+            "Monster_IF_InsertCameraFlag02"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "AIFlag",
+                  "value": 1
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "SAIFlag",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Level Entity}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Monster_IF_InsertCount",
+                      "value": 0
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Level Entity}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Monster_IF_InsertCameraFlag",
+                      "value": 0
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Level Entity}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Monster_IF_InsertCount02",
+                      "value": 0
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Level Entity}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Monster_IF_InsertCameraFlag02",
+                      "value": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "phase": "Phase1"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "AIFlag",
+                  "value": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "SAIFlag",
+                    "compareType": ">=",
+                    "value2": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "SAIFlag",
+                      "value": 1
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "SAIFlag",
+                      "value": 2
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "3024013_Monster_W2_Argenti_PartChange2T3_Insert": {
+      "fileName": "3024013_Monster_W2_Argenti_PartChange2T3_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "multiBase": 0
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Phase_Flag",
+          "value": 3
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 1
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3024013_Monster_W2_Argenti_PartChange_Insert": {
+      "fileName": "3024013_Monster_W2_Argenti_PartChange_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "MaxPhase",
+            "compareType": "=",
+            "value2": 3,
+            "contextScope": "TargetEntity"
+          },
+          "passed": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "Die_Flag"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 302401000,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": null
+          }
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "multiBase": 0
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Phase_Flag",
+          "value": 2
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 1
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 302401000,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": null
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-912738192\">Enemy_W2_Argenti_LockHP</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Lock HP",
+                  "threshold": 0.01
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "3024013_Monster_W2_Argenti_IF_EX_Basic_PassiveAbility": {
+      "fileName": "3024013_Monster_W2_Argenti_IF_EX_Basic_PassiveAbility",
+      "skillTrigger": "SkillEXPassiveSkill",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3024013_Monster_W2_Argenti_PassiveAbilityInitiate": {
+      "fileName": "3024013_Monster_W2_Argenti_PassiveAbilityInitiate",
+      "skillTrigger": "SkillP01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 1
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Phase_Flag",
+          "value": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
+        },
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 302401000,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": null
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-2064984483\">Monster_W2_GS_Argenti_SpecialVictory_LockHP</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2064984483\">Monster_W2_GS_Argenti_SpecialVictory_LockHP</a>",
+          "latentQueue": [
+            "AIFlag",
+            "Phase_Flag"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Lock HP",
+                  "threshold": 0.5
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Locked HP Floor Reached [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "Argenti_SpecialVictory_Flag",
+                    "compareType": "=",
+                    "value2": 0,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Dispel Debuffs",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "silent": true
+                    },
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "AIFlag",
+                      "value": 13
+                    },
+                    {
+                      "name": "Action Advance/Delay",
+                      "advanceType": "Set",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "multiBase": 0
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"740710426\">Monster_Standard_DisableAction</a>"
+                    },
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Argenti_SpecialVictory_Flag",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "3024013_Monster_W2_Argenti_Ability17_IF_Part02": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability17_IF_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Looped Event",
+          "maxLoops": 2,
+          "Event": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 1,
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                      }
+                    ],
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "Sword_FirstFlag"
+                  }
+                ]
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "3024013_Monster_W2_Argenti_Ability17_IF_Part01": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability17_IF_Part01",
+      "childAbilityList": [
+        "3024013_Monster_W2_Argenti_Ability17_IF_Part01",
+        "3024013_Monster_W2_Argenti_Ability17_IF_Part02"
+      ],
+      "skillTrigger": "Skill17",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Argenti_Ability17_IF_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3024013_Monster_W2_Argenti_Ability16_IF_Part02_Insert": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability16_IF_Part02_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"1718469723\">Collect_Power</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-708808137\">Monster_W2_Argenti_Ability16_IF_MarkModifier</a>"
+        }
+      ]
+    },
+    "3024013_Monster_W2_Argenti_Ability16_IF_Part01_Insert": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability16_IF_Part01_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Argenti_Ability16_IF_Part02_Insert",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "3024013_Monster_W2_Argenti_Ability16_IF_Part02": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability16_IF_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1639070947\">Enemy_W2_ArgentiTotem_IF_Initiate</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1851629784\">Enemy_W2_ArgentiTotem_01_IF_Initiate</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2041202953\">Enemy_W2_ArgentiTotem_02_IF_Initiate</a>"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"1718469723\">Collect_Power</a>"
+        },
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "silent": true
+        },
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "typeOverride": "Buff",
+          "silent": true
+        },
+        {
+          "name": "Force Entity Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          }
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-708808137\">Monster_W2_Argenti_Ability16_IF_MarkModifier</a>"
+        }
+      ]
+    },
+    "3024013_Monster_W2_Argenti_Ability16_IF_Part01": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability16_IF_Part01",
+      "childAbilityList": [
+        "3024013_Monster_W2_Argenti_Ability16_IF_Part01",
+        "3024013_Monster_W2_Argenti_Ability16_IF_Part02",
+        "3024013_Monster_W2_Argenti_Ability16_IF_Part01_Insert",
+        "3024013_Monster_W2_Argenti_Ability16_IF_Part02_Insert"
+      ],
+      "skillTrigger": "Skill16",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Argenti_Ability16_IF_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3024013_Monster_W2_Argenti_Ability15_IF_Part02": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability15_IF_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team(Exclude Memosprites)}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Is Part Of Team Location",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "team": "Player Team"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>"
+            }
+          ],
+          "noTargetFound": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team(Exclude Memosprites)}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 1,
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team(Exclude Memosprites)}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Is Part Of Team Location",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "team": "Player Team",
+            "location": "Pos2"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>"
+            }
+          ],
+          "noTargetFound": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team(Exclude Memosprites)}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 1,
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team(Exclude Memosprites)}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Is Part Of Team Location",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "team": "Player Team",
+            "location": "Pos3"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>"
+            }
+          ],
+          "noTargetFound": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team(Exclude Memosprites)}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 1,
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team(Exclude Memosprites)}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Is Part Of Team Location",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "team": "Player Team",
+            "location": "Max"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>"
+            }
+          ],
+          "noTargetFound": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team(Exclude Memosprites)}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 1,
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1783897766\">Monster_W2_Argenti_IF_Summon01</a>"
+                }
+              }
+            ]
+          },
+          "maxTargets": 1,
+          "ifTargetFound": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team(Exclude Memosprites)}}"
+              },
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "team": "Player Team"
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1783897766\">Monster_W2_Argenti_IF_Summon01</a>"
+                }
+              }
+            ]
+          },
+          "ability": "Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part01",
+          "isTrigger": true
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1767120147\">Monster_W2_Argenti_IF_Summon02</a>"
+                }
+              }
+            ]
+          },
+          "maxTargets": 1,
+          "ifTargetFound": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team(Exclude Memosprites)}}"
+              },
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "team": "Player Team",
+                "location": "Pos2"
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1767120147\">Monster_W2_Argenti_IF_Summon02</a>"
+                }
+              }
+            ]
+          },
+          "ability": "Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part01",
+          "isTrigger": true
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1750342528\">Monster_W2_Argenti_IF_Summon03</a>"
+                }
+              }
+            ]
+          },
+          "maxTargets": 1,
+          "ifTargetFound": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team(Exclude Memosprites)}}"
+              },
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "team": "Player Team",
+                "location": "Pos3"
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1750342528\">Monster_W2_Argenti_IF_Summon03</a>"
+                }
+              }
+            ]
+          },
+          "ability": "Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part01",
+          "isTrigger": true
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1783897766\">Monster_W2_Argenti_IF_Summon01</a>"
+                }
+              }
+            ]
+          },
+          "ability": "Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part02",
+          "isTrigger": true
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1867785861\">Monster_W2_Argenti_IF_Summon04</a>"
+                }
+              }
+            ]
+          },
+          "maxTargets": 1,
+          "ifTargetFound": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team(Exclude Memosprites)}}"
+              },
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "team": "Player Team",
+                "location": "Max"
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1867785861\">Monster_W2_Argenti_IF_Summon04</a>"
+                }
+              }
+            ]
+          },
+          "ability": "Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part01",
+          "isTrigger": true
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1767120147\">Monster_W2_Argenti_IF_Summon02</a>"
+                }
+              }
+            ]
+          },
+          "ability": "Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part02",
+          "isTrigger": true
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1750342528\">Monster_W2_Argenti_IF_Summon03</a>"
+                }
+              }
+            ]
+          },
+          "ability": "Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part02",
+          "isTrigger": true
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1867785861\">Monster_W2_Argenti_IF_Summon04</a>"
+                }
+              }
+            ]
+          },
+          "ability": "Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part02",
+          "isTrigger": true
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"561789538\">Monster_W2_Argenti_Ability15_IF_MarkModifier</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__561789538\">Monster_W2_Argenti_Ability15_IF_MarkModifier</a>"
+        }
+      ]
+    },
+    "3024013_Monster_W2_Argenti_Ability15_IF_Part01": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability15_IF_Part01",
+      "childAbilityList": [
+        "3024013_Monster_W2_Argenti_Ability15_IF_Part01",
+        "3024013_Monster_W2_Argenti_Ability15_IF_Part02",
+        "3024013_Monster_W2_Argenti_Ability15_IF_Camera"
+      ],
+      "skillTrigger": "Skill15",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Argenti_Ability15_IF_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
+      "references": []
+    },
+    "3024013_Monster_W2_Argenti_Ability14_IF_Part02": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability14_IF_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Sword_FirstFlag",
+            "compareType": "=",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-169910900\">Enemy_W2_Argenti_IF_EX_PowerAdd</a>"
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Sword_FirstFlag",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": 4,
+          "Event": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  {
+                    "name": "Sort by Physical Positioning",
+                    "byHighest": true
+                  }
+                ]
+              },
+              "includeDyingTargets": true,
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>",
+                "invertCondition": true
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>"
+                },
+                {
+                  "name": "Trigger Ability",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "ability": "Monster_W2_ArgentiTotem_IF_AssistAbility01_Part01",
+                  "isTrigger": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable with Team Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "variableName": "_TargetNum"
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": 4,
+          "Event": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>"
+            },
+            {
+              "name": "Looped Event",
+              "maxLoops": {
+                "operator": "Variables[0] (_TargetNum) || RETURN",
+                "displayLines": "_TargetNum",
+                "constants": [],
+                "variables": [
+                  "_TargetNum"
+                ]
+              },
+              "Event": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>",
+                    "invertCondition": true
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>"
+                    },
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "AttackScaling": {
+                        "DamageType": "Physical",
+                        "Damage": {
+                          "operator": "Variables[0] ({[Skill14[0]]}) || Constants[0] (16) || DIV || RETURN",
+                          "displayLines": "({[Skill14[0]]} / 16)",
+                          "constants": [
+                            16
+                          ],
+                          "variables": [
+                            "{[Skill14[0]]}"
+                          ]
+                        },
+                        "Toughness": null,
+                        "ToughnessDMGType": {
+                          "DamageType": "Physical"
+                        },
+                        "Tags": null,
+                        "attackType": "Basic ATK",
+                        "EnergyGainPercent": "6.25%"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>"
+        }
+      ]
+    },
+    "3024013_Monster_W2_Argenti_Ability14_IF_Part01": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability14_IF_Part01",
+      "childAbilityList": [
+        "3024013_Monster_W2_Argenti_Ability14_IF_Part01",
+        "3024013_Monster_W2_Argenti_Ability14_IF_Part02",
+        "3024013_Monster_W2_Argenti_Ability14_IF_Camera"
+      ],
+      "skillTrigger": "Skill14",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Argenti_Ability14_IF_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "3024013_Monster_W2_Argenti_Ability13_IF_Part02": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability13_IF_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Sword_FirstFlag",
+          "value": 1
+        },
+        {
+          "name": "Random Event",
+          "odds": [
+            0.5,
+            0.5
+          ],
+          "execute": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1462831775\">Argenti_SummonAllMonsters</a>",
+              "variables": {
+                "SummonMonsterID": {
+                  "operator": "Variables[0] (SummonID01) || RETURN",
+                  "displayLines": "SummonID01",
+                  "constants": [],
+                  "variables": [
+                    "SummonID01"
+                  ]
+                },
+                "DelayRatio04": {
+                  "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
+                  "displayLines": "{[Skill13[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill13[0]]}"
+                  ]
+                },
+                "DelayRatio02": {
+                  "operator": "Variables[0] ({[Skill13[3]]}) || RETURN",
+                  "displayLines": "{[Skill13[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill13[3]]}"
+                  ]
+                },
+                "DelayRatio01": {
+                  "operator": "Variables[0] ({[Skill13[2]]}) || RETURN",
+                  "displayLines": "{[Skill13[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill13[2]]}"
+                  ]
+                },
+                "DelayRatio03": {
+                  "operator": "Variables[0] ({[Skill13[1]]}) || RETURN",
+                  "displayLines": "{[Skill13[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill13[1]]}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1462831775\">Argenti_SummonAllMonsters</a>",
+              "variables": {
+                "SummonMonsterID": {
+                  "operator": "Variables[0] (SummonID01) || RETURN",
+                  "displayLines": "SummonID01",
+                  "constants": [],
+                  "variables": [
+                    "SummonID01"
+                  ]
+                },
+                "DelayRatio04": {
+                  "operator": "Variables[0] ({[Skill13[1]]}) || RETURN",
+                  "displayLines": "{[Skill13[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill13[1]]}"
+                  ]
+                },
+                "DelayRatio02": {
+                  "operator": "Variables[0] ({[Skill13[2]]}) || RETURN",
+                  "displayLines": "{[Skill13[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill13[2]]}"
+                  ]
+                },
+                "DelayRatio01": {
+                  "operator": "Variables[0] ({[Skill13[3]]}) || RETURN",
+                  "displayLines": "{[Skill13[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill13[3]]}"
+                  ]
+                },
+                "DelayRatio03": {
+                  "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
+                  "displayLines": "{[Skill13[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill13[0]]}"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1119292672\">Argenti_AddWeaknessToAllSummons</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1645398218\">Enemy_W2_Argenti_IF_EX_PowerAddMax</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3024013_Monster_W2_Argenti_Ability13_IF_Part01": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability13_IF_Part01",
+      "childAbilityList": [
+        "3024013_Monster_W2_Argenti_Ability13_IF_Part01",
+        "3024013_Monster_W2_Argenti_Ability13_IF_Part02"
+      ],
+      "skillTrigger": "Skill13",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Argenti_Ability13_IF_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3024013_Monster_W2_Argenti_Ability12_IF_Part02": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability12_IF_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Sword_FirstFlag",
+          "value": 1
+        },
+        {
+          "name": "Random Event",
+          "odds": [
+            0.5,
+            0.5
+          ],
+          "execute": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1462831775\">Argenti_SummonAllMonsters</a>",
+              "variables": {
+                "SummonMonsterID": {
+                  "operator": "Variables[0] (SummonID03) || RETURN",
+                  "displayLines": "SummonID03",
+                  "constants": [],
+                  "variables": [
+                    "SummonID03"
+                  ]
+                },
+                "DelayRatio04": {
+                  "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
+                  "displayLines": "{[Skill12[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill12[0]]}"
+                  ]
+                },
+                "DelayRatio02": {
+                  "operator": "Variables[0] ({[Skill12[3]]}) || RETURN",
+                  "displayLines": "{[Skill12[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill12[3]]}"
+                  ]
+                },
+                "DelayRatio01": {
+                  "operator": "Variables[0] ({[Skill12[2]]}) || RETURN",
+                  "displayLines": "{[Skill12[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill12[2]]}"
+                  ]
+                },
+                "DelayRatio03": {
+                  "operator": "Variables[0] ({[Skill12[1]]}) || RETURN",
+                  "displayLines": "{[Skill12[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill12[1]]}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1462831775\">Argenti_SummonAllMonsters</a>",
+              "variables": {
+                "SummonMonsterID": {
+                  "operator": "Variables[0] (SummonID03) || RETURN",
+                  "displayLines": "SummonID03",
+                  "constants": [],
+                  "variables": [
+                    "SummonID03"
+                  ]
+                },
+                "DelayRatio04": {
+                  "operator": "Variables[0] ({[Skill12[1]]}) || RETURN",
+                  "displayLines": "{[Skill12[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill12[1]]}"
+                  ]
+                },
+                "DelayRatio02": {
+                  "operator": "Variables[0] ({[Skill12[2]]}) || RETURN",
+                  "displayLines": "{[Skill12[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill12[2]]}"
+                  ]
+                },
+                "DelayRatio01": {
+                  "operator": "Variables[0] ({[Skill12[3]]}) || RETURN",
+                  "displayLines": "{[Skill12[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill12[3]]}"
+                  ]
+                },
+                "DelayRatio03": {
+                  "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
+                  "displayLines": "{[Skill12[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill12[0]]}"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-169910900\">Enemy_W2_Argenti_IF_EX_PowerAdd</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3024013_Monster_W2_Argenti_Ability12_IF_Part01": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability12_IF_Part01",
+      "childAbilityList": [
+        "3024013_Monster_W2_Argenti_Ability12_IF_Part01",
+        "3024013_Monster_W2_Argenti_Ability12_IF_Part02"
+      ],
+      "skillTrigger": "Skill12",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Argenti_Ability12_IF_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3024013_Monster_W2_Argenti_Ability11_IF_Part02": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability11_IF_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Random Event",
+          "odds": [
+            0.5,
+            0.5
+          ],
+          "execute": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1462831775\">Argenti_SummonAllMonsters</a>",
+              "variables": {
+                "SummonMonsterID": {
+                  "operator": "Variables[0] (SummonID02) || RETURN",
+                  "displayLines": "SummonID02",
+                  "constants": [],
+                  "variables": [
+                    "SummonID02"
+                  ]
+                },
+                "DelayRatio04": {
+                  "operator": "Variables[0] ({[Skill11[0]]}) || RETURN",
+                  "displayLines": "{[Skill11[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill11[0]]}"
+                  ]
+                },
+                "DelayRatio02": {
+                  "operator": "Variables[0] ({[Skill11[3]]}) || RETURN",
+                  "displayLines": "{[Skill11[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill11[3]]}"
+                  ]
+                },
+                "DelayRatio01": {
+                  "operator": "Variables[0] ({[Skill11[2]]}) || RETURN",
+                  "displayLines": "{[Skill11[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill11[2]]}"
+                  ]
+                },
+                "DelayRatio03": {
+                  "operator": "Variables[0] ({[Skill11[1]]}) || RETURN",
+                  "displayLines": "{[Skill11[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill11[1]]}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1462831775\">Argenti_SummonAllMonsters</a>",
+              "variables": {
+                "SummonMonsterID": {
+                  "operator": "Variables[0] (SummonID02) || RETURN",
+                  "displayLines": "SummonID02",
+                  "constants": [],
+                  "variables": [
+                    "SummonID02"
+                  ]
+                },
+                "DelayRatio04": {
+                  "operator": "Variables[0] ({[Skill11[1]]}) || RETURN",
+                  "displayLines": "{[Skill11[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill11[1]]}"
+                  ]
+                },
+                "DelayRatio02": {
+                  "operator": "Variables[0] ({[Skill11[2]]}) || RETURN",
+                  "displayLines": "{[Skill11[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill11[2]]}"
+                  ]
+                },
+                "DelayRatio01": {
+                  "operator": "Variables[0] ({[Skill11[3]]}) || RETURN",
+                  "displayLines": "{[Skill11[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill11[3]]}"
+                  ]
+                },
+                "DelayRatio03": {
+                  "operator": "Variables[0] ({[Skill11[0]]}) || RETURN",
+                  "displayLines": "{[Skill11[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill11[0]]}"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1119292672\">Argenti_AddWeaknessToAllSummons</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-309668248\">Enemy_W2_Argenti_IF_Protect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-169910900\">Enemy_W2_Argenti_IF_EX_PowerAdd</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3024013_Monster_W2_Argenti_Ability11_IF_Part01": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability11_IF_Part01",
+      "childAbilityList": [
+        "3024013_Monster_W2_Argenti_Ability11_IF_Part01",
+        "3024013_Monster_W2_Argenti_Ability11_IF_Part02"
+      ],
+      "skillTrigger": "Skill11",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Argenti_Ability11_IF_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3024013_Monster_W2_Argenti_IF_Ability05_Part02": {
+      "fileName": "3024013_Monster_W2_Argenti_IF_Ability05_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill10[0]]}) || Constants[0] (0.2) || MUL || RETURN",
+              "displayLines": "({[Skill10[0]]} * 0.2)",
+              "constants": [
+                0.2
+              ],
+              "variables": [
+                "{[Skill10[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "20%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill10[0]]}) || Constants[0] (0.8) || MUL || RETURN",
+              "displayLines": "({[Skill10[0]]} * 0.8)",
+              "constants": [
+                0.8
+              ],
+              "variables": [
+                "{[Skill10[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "80%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
       ],
       "targetObjectData": {
         "primaryTarget": "{{Ability Target List}}"
@@ -1986,69 +4615,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "3024013_Monster_W2_Argenti_IF_Ability05_Part02": {
-      "fileName": "3024013_Monster_W2_Argenti_IF_Ability05_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill10[0]]}) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "({[Skill10[0]]} * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "{[Skill10[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "20%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill10[0]]}) || Constants[0] (0.8) || MUL || RETURN",
-              "displayLines": "({[Skill10[0]]} * 0.8)",
-              "constants": [
-                0.8
-              ],
-              "variables": [
-                "{[Skill10[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "80%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
     "3024013_Monster_W2_Argenti_Ability10_IF_Part01": {
       "fileName": "3024013_Monster_W2_Argenti_Ability10_IF_Part01",
       "childAbilityList": [
@@ -2208,248 +4774,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "3024013_Monster_W2_Argenti_Ability17_IF_Part02": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability17_IF_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Looped Event",
-          "maxLoops": 2,
-          "Event": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
-                      }
-                    ],
-                    "invertCondition": true
-                  },
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "Sword_FirstFlag"
-                  }
-                ]
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "3024013_Monster_W2_Argenti_Ability17_IF_Part01": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability17_IF_Part01",
-      "childAbilityList": [
-        "3024013_Monster_W2_Argenti_Ability17_IF_Part01",
-        "3024013_Monster_W2_Argenti_Ability17_IF_Part02"
-      ],
-      "skillTrigger": "Skill17",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Argenti_Ability17_IF_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3024013_Monster_W2_Argenti_Ability16_IF_Part02_Insert": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability16_IF_Part02_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"1718469723\">Collect_Power</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-708808137\">Monster_W2_Argenti_Ability16_IF_MarkModifier</a>"
-        }
-      ]
-    },
-    "3024013_Monster_W2_Argenti_Ability16_IF_Part01_Insert": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability16_IF_Part01_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Argenti_Ability16_IF_Part02_Insert",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "3024013_Monster_W2_Argenti_Ability16_IF_Part02": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability16_IF_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1639070947\">Enemy_W2_ArgentiTotem_IF_Initiate</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1851629784\">Enemy_W2_ArgentiTotem_01_IF_Initiate</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2041202953\">Enemy_W2_ArgentiTotem_02_IF_Initiate</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"1718469723\">Collect_Power</a>"
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "typeOverride": "Buff",
-          "silent": true
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-708808137\">Monster_W2_Argenti_Ability16_IF_MarkModifier</a>"
-        }
-      ]
-    },
-    "3024013_Monster_W2_Argenti_Ability16_IF_Part01": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability16_IF_Part01",
-      "childAbilityList": [
-        "3024013_Monster_W2_Argenti_Ability16_IF_Part01",
-        "3024013_Monster_W2_Argenti_Ability16_IF_Part02",
-        "3024013_Monster_W2_Argenti_Ability16_IF_Part01_Insert",
-        "3024013_Monster_W2_Argenti_Ability16_IF_Part02_Insert"
-      ],
-      "skillTrigger": "Skill16",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Argenti_Ability16_IF_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "3024013_Monster_W2_Argenti_Ability09_IF_Insert": {
       "fileName": "3024013_Monster_W2_Argenti_Ability09_IF_Insert",
       "abilityType": null,
@@ -2529,9 +4853,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2546,9 +4868,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2611,9 +4931,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -2653,2063 +4971,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Ability Target List}}"
       },
       "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3024013_Monster_W2_Argenti_Ability15_IF_Part02": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability15_IF_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team(Exclude Memosprites)}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Is Part Of Team Location",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "team": "Player Team"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>"
-            }
-          ],
-          "noTargetFound": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team(Exclude Memosprites)}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team(Exclude Memosprites)}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Is Part Of Team Location",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "team": "Player Team",
-            "location": "Pos2"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>"
-            }
-          ],
-          "noTargetFound": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team(Exclude Memosprites)}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team(Exclude Memosprites)}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Is Part Of Team Location",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "team": "Player Team",
-            "location": "Pos3"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>"
-            }
-          ],
-          "noTargetFound": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team(Exclude Memosprites)}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team(Exclude Memosprites)}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Is Part Of Team Location",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "team": "Player Team",
-            "location": "Max"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>"
-            }
-          ],
-          "noTargetFound": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team(Exclude Memosprites)}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1783897766\">Monster_W2_Argenti_IF_Summon01</a>"
-                }
-              }
-            ]
-          },
-          "maxTargets": 1,
-          "ifTargetFound": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team(Exclude Memosprites)}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "team": "Player Team"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1783897766\">Monster_W2_Argenti_IF_Summon01</a>"
-                }
-              }
-            ]
-          },
-          "ability": "Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part01",
-          "isTrigger": true
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1767120147\">Monster_W2_Argenti_IF_Summon02</a>"
-                }
-              }
-            ]
-          },
-          "maxTargets": 1,
-          "ifTargetFound": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team(Exclude Memosprites)}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "team": "Player Team",
-                "location": "Pos2"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1767120147\">Monster_W2_Argenti_IF_Summon02</a>"
-                }
-              }
-            ]
-          },
-          "ability": "Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part01",
-          "isTrigger": true
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1750342528\">Monster_W2_Argenti_IF_Summon03</a>"
-                }
-              }
-            ]
-          },
-          "maxTargets": 1,
-          "ifTargetFound": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team(Exclude Memosprites)}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "team": "Player Team",
-                "location": "Pos3"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1750342528\">Monster_W2_Argenti_IF_Summon03</a>"
-                }
-              }
-            ]
-          },
-          "ability": "Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part01",
-          "isTrigger": true
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1783897766\">Monster_W2_Argenti_IF_Summon01</a>"
-                }
-              }
-            ]
-          },
-          "ability": "Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part02",
-          "isTrigger": true
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1867785861\">Monster_W2_Argenti_IF_Summon04</a>"
-                }
-              }
-            ]
-          },
-          "maxTargets": 1,
-          "ifTargetFound": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team(Exclude Memosprites)}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "team": "Player Team",
-                "location": "Max"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"985995630\">Standard_AbilityTarget</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1867785861\">Monster_W2_Argenti_IF_Summon04</a>"
-                }
-              }
-            ]
-          },
-          "ability": "Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part01",
-          "isTrigger": true
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1767120147\">Monster_W2_Argenti_IF_Summon02</a>"
-                }
-              }
-            ]
-          },
-          "ability": "Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part02",
-          "isTrigger": true
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1750342528\">Monster_W2_Argenti_IF_Summon03</a>"
-                }
-              }
-            ]
-          },
-          "ability": "Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part02",
-          "isTrigger": true
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1867785861\">Monster_W2_Argenti_IF_Summon04</a>"
-                }
-              }
-            ]
-          },
-          "ability": "Monster_W2_ArgentiTotem_02_IF_AssistAbility01_Part02",
-          "isTrigger": true
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"561789538\">Monster_W2_Argenti_Ability15_IF_MarkModifier</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1407152047\">Monster_W2_Argenti_Ability15_IF_Taunt04_MarkModifier</a>",
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-518883080\">Monster_W2_Argenti_Ability15_IF_Taunt03_MarkModifier</a>",
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1084859487\">Monster_W2_Argenti_Ability15_IF_Taunt02_MarkModifier</a>",
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1502513574\">Monster_W2_Argenti_Ability15_IF_Taunt01_MarkModifier</a>",
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__561789538\">Monster_W2_Argenti_Ability15_IF_MarkModifier</a>"
-        }
-      ]
-    },
-    "3024013_Monster_W2_Argenti_Ability15_IF_Part01": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability15_IF_Part01",
-      "childAbilityList": [
-        "3024013_Monster_W2_Argenti_Ability15_IF_Part01",
-        "3024013_Monster_W2_Argenti_Ability15_IF_Part02",
-        "3024013_Monster_W2_Argenti_Ability15_IF_Camera"
-      ],
-      "skillTrigger": "Skill15",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Argenti_Ability15_IF_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}",
-        "targetIsVariable": true
-      },
-      "references": []
-    },
-    "3024013_Monster_W2_Argenti_Ability14_IF_Part02": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability14_IF_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "Sword_FirstFlag",
-            "compareType": "=",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-169910900\">Enemy_W2_Argenti_IF_EX_PowerAdd</a>"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Sword_FirstFlag",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": 4,
-          "Event": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  },
-                  {
-                    "name": "Sort by Physical Positioning",
-                    "byHighest": true
-                  }
-                ]
-              },
-              "includeDyingTargets": true,
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>",
-                "invertCondition": true
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>"
-                },
-                {
-                  "name": "Trigger Ability",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "ability": "Monster_W2_ArgentiTotem_IF_AssistAbility01_Part01",
-                  "isTrigger": true
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "variableName": "_TargetNum"
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": 4,
-          "Event": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>"
-            },
-            {
-              "name": "Looped Event",
-              "maxLoops": {
-                "operator": "Variables[0] (_TargetNum) || RETURN",
-                "displayLines": "_TargetNum",
-                "constants": [],
-                "variables": [
-                  "_TargetNum"
-                ]
-              },
-              "Event": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>",
-                    "invertCondition": true
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>"
-                    },
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Physical",
-                        "Damage": {
-                          "operator": "Variables[0] ({[Skill14[0]]}) || Constants[0] (16) || DIV || RETURN",
-                          "displayLines": "({[Skill14[0]]} / 16)",
-                          "constants": [
-                            16
-                          ],
-                          "variables": [
-                            "{[Skill14[0]]}"
-                          ]
-                        },
-                        "Toughness": null,
-                        "ToughnessDMGType": {
-                          "DamageType": "Physical"
-                        },
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "6.25%"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1818644627\">Monster_W2_Argenti_Ability14_IF_MarkModifier</a>",
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "3024013_Monster_W2_Argenti_Ability14_IF_Part01": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability14_IF_Part01",
-      "childAbilityList": [
-        "3024013_Monster_W2_Argenti_Ability14_IF_Part01",
-        "3024013_Monster_W2_Argenti_Ability14_IF_Part02",
-        "3024013_Monster_W2_Argenti_Ability14_IF_Camera"
-      ],
-      "skillTrigger": "Skill14",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Argenti_Ability14_IF_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "3024013_Monster_W2_Argenti_Ability13_IF_Part02": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability13_IF_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Sword_FirstFlag",
-          "value": 1
-        },
-        {
-          "name": "Random Event",
-          "odds": [
-            0.5,
-            0.5
-          ],
-          "execute": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1462831775\">Argenti_SummonAllMonsters</a>",
-              "variables": {
-                "SummonMonsterID": {
-                  "operator": "Variables[0] (SummonID01) || RETURN",
-                  "displayLines": "SummonID01",
-                  "constants": [],
-                  "variables": [
-                    "SummonID01"
-                  ]
-                },
-                "DelayRatio04": {
-                  "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
-                  "displayLines": "{[Skill13[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill13[0]]}"
-                  ]
-                },
-                "DelayRatio02": {
-                  "operator": "Variables[0] ({[Skill13[3]]}) || RETURN",
-                  "displayLines": "{[Skill13[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill13[3]]}"
-                  ]
-                },
-                "DelayRatio01": {
-                  "operator": "Variables[0] ({[Skill13[2]]}) || RETURN",
-                  "displayLines": "{[Skill13[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill13[2]]}"
-                  ]
-                },
-                "DelayRatio03": {
-                  "operator": "Variables[0] ({[Skill13[1]]}) || RETURN",
-                  "displayLines": "{[Skill13[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill13[1]]}"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1462831775\">Argenti_SummonAllMonsters</a>",
-              "variables": {
-                "SummonMonsterID": {
-                  "operator": "Variables[0] (SummonID01) || RETURN",
-                  "displayLines": "SummonID01",
-                  "constants": [],
-                  "variables": [
-                    "SummonID01"
-                  ]
-                },
-                "DelayRatio04": {
-                  "operator": "Variables[0] ({[Skill13[1]]}) || RETURN",
-                  "displayLines": "{[Skill13[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill13[1]]}"
-                  ]
-                },
-                "DelayRatio02": {
-                  "operator": "Variables[0] ({[Skill13[2]]}) || RETURN",
-                  "displayLines": "{[Skill13[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill13[2]]}"
-                  ]
-                },
-                "DelayRatio01": {
-                  "operator": "Variables[0] ({[Skill13[3]]}) || RETURN",
-                  "displayLines": "{[Skill13[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill13[3]]}"
-                  ]
-                },
-                "DelayRatio03": {
-                  "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
-                  "displayLines": "{[Skill13[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill13[0]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-1119292672\">Argenti_AddWeaknessToAllSummons</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1645398218\">Enemy_W2_Argenti_IF_EX_PowerAddMax</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3024013_Monster_W2_Argenti_Ability13_IF_Part01": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability13_IF_Part01",
-      "childAbilityList": [
-        "3024013_Monster_W2_Argenti_Ability13_IF_Part01",
-        "3024013_Monster_W2_Argenti_Ability13_IF_Part02"
-      ],
-      "skillTrigger": "Skill13",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Argenti_Ability13_IF_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3024013_Monster_W2_Argenti_Ability12_IF_Part02": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability12_IF_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Sword_FirstFlag",
-          "value": 1
-        },
-        {
-          "name": "Random Event",
-          "odds": [
-            0.5,
-            0.5
-          ],
-          "execute": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1462831775\">Argenti_SummonAllMonsters</a>",
-              "variables": {
-                "SummonMonsterID": {
-                  "operator": "Variables[0] (SummonID03) || RETURN",
-                  "displayLines": "SummonID03",
-                  "constants": [],
-                  "variables": [
-                    "SummonID03"
-                  ]
-                },
-                "DelayRatio04": {
-                  "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
-                  "displayLines": "{[Skill12[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill12[0]]}"
-                  ]
-                },
-                "DelayRatio02": {
-                  "operator": "Variables[0] ({[Skill12[3]]}) || RETURN",
-                  "displayLines": "{[Skill12[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill12[3]]}"
-                  ]
-                },
-                "DelayRatio01": {
-                  "operator": "Variables[0] ({[Skill12[2]]}) || RETURN",
-                  "displayLines": "{[Skill12[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill12[2]]}"
-                  ]
-                },
-                "DelayRatio03": {
-                  "operator": "Variables[0] ({[Skill12[1]]}) || RETURN",
-                  "displayLines": "{[Skill12[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill12[1]]}"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1462831775\">Argenti_SummonAllMonsters</a>",
-              "variables": {
-                "SummonMonsterID": {
-                  "operator": "Variables[0] (SummonID03) || RETURN",
-                  "displayLines": "SummonID03",
-                  "constants": [],
-                  "variables": [
-                    "SummonID03"
-                  ]
-                },
-                "DelayRatio04": {
-                  "operator": "Variables[0] ({[Skill12[1]]}) || RETURN",
-                  "displayLines": "{[Skill12[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill12[1]]}"
-                  ]
-                },
-                "DelayRatio02": {
-                  "operator": "Variables[0] ({[Skill12[2]]}) || RETURN",
-                  "displayLines": "{[Skill12[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill12[2]]}"
-                  ]
-                },
-                "DelayRatio01": {
-                  "operator": "Variables[0] ({[Skill12[3]]}) || RETURN",
-                  "displayLines": "{[Skill12[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill12[3]]}"
-                  ]
-                },
-                "DelayRatio03": {
-                  "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
-                  "displayLines": "{[Skill12[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill12[0]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-169910900\">Enemy_W2_Argenti_IF_EX_PowerAdd</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3024013_Monster_W2_Argenti_Ability12_IF_Part01": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability12_IF_Part01",
-      "childAbilityList": [
-        "3024013_Monster_W2_Argenti_Ability12_IF_Part01",
-        "3024013_Monster_W2_Argenti_Ability12_IF_Part02"
-      ],
-      "skillTrigger": "Skill12",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Argenti_Ability12_IF_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3024013_Monster_W2_Argenti_Ability11_IF_Part02": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability11_IF_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Random Event",
-          "odds": [
-            0.5,
-            0.5
-          ],
-          "execute": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1462831775\">Argenti_SummonAllMonsters</a>",
-              "variables": {
-                "SummonMonsterID": {
-                  "operator": "Variables[0] (SummonID02) || RETURN",
-                  "displayLines": "SummonID02",
-                  "constants": [],
-                  "variables": [
-                    "SummonID02"
-                  ]
-                },
-                "DelayRatio04": {
-                  "operator": "Variables[0] ({[Skill11[0]]}) || RETURN",
-                  "displayLines": "{[Skill11[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill11[0]]}"
-                  ]
-                },
-                "DelayRatio02": {
-                  "operator": "Variables[0] ({[Skill11[3]]}) || RETURN",
-                  "displayLines": "{[Skill11[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill11[3]]}"
-                  ]
-                },
-                "DelayRatio01": {
-                  "operator": "Variables[0] ({[Skill11[2]]}) || RETURN",
-                  "displayLines": "{[Skill11[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill11[2]]}"
-                  ]
-                },
-                "DelayRatio03": {
-                  "operator": "Variables[0] ({[Skill11[1]]}) || RETURN",
-                  "displayLines": "{[Skill11[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill11[1]]}"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1462831775\">Argenti_SummonAllMonsters</a>",
-              "variables": {
-                "SummonMonsterID": {
-                  "operator": "Variables[0] (SummonID02) || RETURN",
-                  "displayLines": "SummonID02",
-                  "constants": [],
-                  "variables": [
-                    "SummonID02"
-                  ]
-                },
-                "DelayRatio04": {
-                  "operator": "Variables[0] ({[Skill11[1]]}) || RETURN",
-                  "displayLines": "{[Skill11[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill11[1]]}"
-                  ]
-                },
-                "DelayRatio02": {
-                  "operator": "Variables[0] ({[Skill11[2]]}) || RETURN",
-                  "displayLines": "{[Skill11[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill11[2]]}"
-                  ]
-                },
-                "DelayRatio01": {
-                  "operator": "Variables[0] ({[Skill11[3]]}) || RETURN",
-                  "displayLines": "{[Skill11[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill11[3]]}"
-                  ]
-                },
-                "DelayRatio03": {
-                  "operator": "Variables[0] ({[Skill11[0]]}) || RETURN",
-                  "displayLines": "{[Skill11[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill11[0]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-1119292672\">Argenti_AddWeaknessToAllSummons</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-309668248\">Enemy_W2_Argenti_IF_Protect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-169910900\">Enemy_W2_Argenti_IF_EX_PowerAdd</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3024013_Monster_W2_Argenti_Ability11_IF_Part01": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability11_IF_Part01",
-      "childAbilityList": [
-        "3024013_Monster_W2_Argenti_Ability11_IF_Part01",
-        "3024013_Monster_W2_Argenti_Ability11_IF_Part02"
-      ],
-      "skillTrigger": "Skill11",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Argenti_Ability11_IF_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3024013_Monster_W2_Argenti_IF_Passive02": {
-      "fileName": "3024013_Monster_W2_Argenti_IF_Passive02",
-      "skillTrigger": "SkillP03",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1341379409\">Monster_W2_Argenti_IF_Initiate</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1341379409\">Monster_W2_Argenti_IF_Initiate</a>",
-          "modifierFlags": [
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Waiting for Healing in Limbo",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"1817558624\">Argenti_KillAllMonsters</a>"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Die_Flag",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Dispel Debuffs",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "silent": true
-                    },
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Die_Flag",
-                      "value": 1
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
-                    },
-                    {
-                      "name": "Define Custom Variable with Varying Data",
-                      "target": null,
-                      "variableName": "MaxPhase",
-                      "value": "MaxMonsterPhase"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "HP_Bars_Remaining",
-                        "compareType": "=",
-                        "value2": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Set Enemy Phase",
-                          "mode": "Inc"
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
-                        },
-                        {
-                          "name": "Inject Ability Use",
-                          "abilityName": "Monster_W2_Argenti_PartChange_Insert",
-                          "priorityTag": "EnemyPhaseChange",
-                          "ownerState": "Mask_AliveOrLimbo",
-                          "targetState": "Mask_AliveOrLimbo",
-                          "canHitNonTargets": true,
-                          "showInActionOrder": true,
-                          "allowAbilityTriggers": false
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "AIFlag",
-                          "value": 1
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "SAIFlag",
-                          "value": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -90
-            },
-            {
-              "eventTrigger": "Pre-Death [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1982647452\">Enemy_W2_Yanqing_01_ChangePhaseDestroy</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1982647452\">Enemy_W2_Yanqing_01_ChangePhaseDestroy</a>"
-                },
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"1817558624\">Argenti_KillAllMonsters</a>"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "3024013_Monster_W2_Argenti_IF_Passive01": {
-      "fileName": "3024013_Monster_W2_Argenti_IF_Passive01",
-      "skillTrigger": "SkillP02",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Monster_IF_InsertCount"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Monster_IF_InsertCameraFlag"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Monster_IF_InsertCount02"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Monster_IF_InsertCameraFlag02"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1028252906\">W2_Argenti_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1011475287\">W2_Argenti_BattleScore2</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1334735657\">Enemy_W2_Argenti_IF_Boss_Enhance</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2120668767\">Enemy_W2_Argenti_IF_AIController</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": {
-            "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-            "displayLines": "{[SkillP02[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP02[0]]}"
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1109870649\">Enemy_W2_Argenti_IF_PowerCollecterController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"278285473\">Enemy_W2_Argenti_IF_EnterCombatAlert</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__278285473\">Enemy_W2_Argenti_IF_EnterCombatAlert</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action Choice Window [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Player Team"
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Monster_IF_InsertCount",
-            "Monster_IF_InsertCameraFlag",
-            "Monster_IF_InsertCount02",
-            "Monster_IF_InsertCameraFlag02"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1109870649\">Enemy_W2_Argenti_IF_PowerCollecterController</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "SAIFlag",
-                        "compareType": "=",
-                        "value2": 1
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "AIFlag",
-                        "compareType": "=",
-                        "value2": 31,
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1288212710\">Enemy_W2_Argenti_IF_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Inject Ability Use",
-                          "abilityName": "Monster_W2_Argenti_Ability16_IF_Part01_Insert",
-                          "abilitySource": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "abilityTarget": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "priorityTag": "EnemyBattleCry",
-                          "ownerState": "Anyone",
-                          "canHitNonTargets": true,
-                          "allowAbilityTriggers": false
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Monster_IF_InsertCount",
-            "Monster_IF_InsertCameraFlag",
-            "Monster_IF_InsertCount02",
-            "Monster_IF_InsertCameraFlag02"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2120668767\">Enemy_W2_Argenti_IF_AIController</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "SAIFlag",
-                  "value": 1
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      },
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        }
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_IF_InsertCount",
-                      "value": 0
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_IF_InsertCameraFlag",
-                      "value": 0
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_IF_InsertCount02",
-                      "value": 0
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_IF_InsertCameraFlag02",
-                      "value": 0
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "phase": "Phase1"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "SAIFlag",
-                    "compareType": ">=",
-                    "value2": 2
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "SAIFlag",
-                      "value": 1
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "SAIFlag",
-                      "value": 2
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Monster_IF_InsertCount",
-            "Monster_IF_InsertCameraFlag",
-            "Monster_IF_InsertCount02",
-            "Monster_IF_InsertCameraFlag02"
-          ]
-        }
-      ]
-    },
-    "3024013_Monster_W2_Argenti_PartChange2T3_Insert": {
-      "fileName": "3024013_Monster_W2_Argenti_PartChange2T3_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 0
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Phase_Flag",
-          "value": 3
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        }
-      ],
-      "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -5041,121 +5302,6 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3024013_Monster_W2_Argenti_Ability06_Part02": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability06_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        "Ability Start",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 3024011,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Argenti (Complete)"
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 302401100,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": null
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]",
-              "duration": {
-                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                "displayLines": "{[Skill04[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[0]]}"
-                ]
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]",
-              "duration": {
-                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                "displayLines": "{[Skill04[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[0]]}"
-                ]
-              }
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "3024013_Monster_W2_Argenti_Ability06_Part01": {
-      "fileName": "3024013_Monster_W2_Argenti_Ability06_Part01",
-      "childAbilityList": [
-        "3024013_Monster_W2_Argenti_Ability06_Camera",
-        "3024013_Monster_W2_Argenti_Ability06_Part01",
-        "3024013_Monster_W2_Argenti_Ability06_Part02"
-      ],
-      "skillTrigger": "Skill06",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Argenti_Ability06_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
@@ -5538,6 +5684,121 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3024013_Monster_W2_Argenti_Ability06_Part02": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability06_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        "Ability Start",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 3024011,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Argenti (Complete)"
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 302401100,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": null
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]",
+              "duration": {
+                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+                "displayLines": "{[Skill04[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill04[0]]}"
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]",
+              "duration": {
+                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+                "displayLines": "{[Skill04[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill04[0]]}"
+                ]
+              }
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "3024013_Monster_W2_Argenti_Ability06_Part01": {
+      "fileName": "3024013_Monster_W2_Argenti_Ability06_Part01",
+      "childAbilityList": [
+        "3024013_Monster_W2_Argenti_Ability06_Camera",
+        "3024013_Monster_W2_Argenti_Ability06_Part01",
+        "3024013_Monster_W2_Argenti_Ability06_Part02"
+      ],
+      "skillTrigger": "Skill06",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Argenti_Ability06_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
@@ -6606,668 +6867,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "3024013_BattleEventAbility_Monster_W2_Argenti_MainStory202": {
-      "fileName": "3024013_BattleEventAbility_Monster_W2_Argenti_MainStory202",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1276714002\">Monster_Monster_W2_Argenti_BattlePerform_LockHP</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1276714002\">Monster_Monster_W2_Argenti_BattlePerform_LockHP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.0009999999
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Attacked End [Owner]"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "3024013_Monster_W2_Argenti_PassiveAbility202": {
-      "fileName": "3024013_Monster_W2_Argenti_PassiveAbility202",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"603894457\">Enemy_W2_Argenti_TalkListener</a>"
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "BattleEventAbility_Monster_W2_Argenti_MainStory202",
-          "parameters": {}
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__603894457\">Enemy_W2_Argenti_TalkListener</a>",
-          "execute": [
-            {
-              "eventTrigger": "Waiting for Healing in Limbo",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "MDF_InsertCheck",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "HP_Bars_Remaining",
-                        "compareType": ">=",
-                        "value2": 2
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_InsertCheck",
-                      "value": 1
-                    },
-                    {
-                      "name": "Set HP Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "setValue": 0.01
-                    },
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "BattleEventAbility_Monster_W2_Argenti_MainStory202",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "priorityTag": "EnemyPhaseChange",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "3024013_Monster_W2_Argenti_PartChange_Insert": {
-      "fileName": "3024013_Monster_W2_Argenti_PartChange_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "MaxPhase",
-            "compareType": "=",
-            "value2": 3,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "Die_Flag"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 302401000,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": null
-          }
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 0
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Phase_Flag",
-          "value": 2
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 302401000,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": null
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-912738192\">Enemy_W2_Argenti_LockHP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.01
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "3024013_Monster_W2_Argenti_PassiveAbilityInitiate": {
-      "fileName": "3024013_Monster_W2_Argenti_PassiveAbilityInitiate",
-      "skillTrigger": "SkillP01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Phase_Flag",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 302401000,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": null
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2064984483\">Monster_W2_GS_Argenti_SpecialVictory_LockHP</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2064984483\">Monster_W2_GS_Argenti_SpecialVictory_LockHP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.5
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Locked HP Floor Reached [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "Argenti_SpecialVictory_Flag",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Dispel Debuffs",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "silent": true
-                    },
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 13
-                    },
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "multiBase": 0
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"740710426\">Monster_Standard_DisableAction</a>"
-                    },
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Argenti_SpecialVictory_Flag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag",
-            "Phase_Flag"
-          ]
-        }
-      ]
-    },
-    "3024013_Monster_W2_Argenti_Passive02": {
-      "fileName": "3024013_Monster_W2_Argenti_Passive02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1028252906\">W2_Argenti_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1011475287\">W2_Argenti_BattleScore2</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3024013_Monster_W2_Argenti_Passive01": {
-      "fileName": "3024013_Monster_W2_Argenti_Passive01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"269709165\">Monster_W2_Argenti_Initiate</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__269709165\">Monster_W2_Argenti_Initiate</a>",
-          "execute": [
-            {
-              "eventTrigger": "Waiting for Healing in Limbo",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1996205483\">Enemy_W2_ArgentiTotem_Initiate</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-463337026\">Enemy_W2_ArgentiTotem_01_Initiate</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"803386037\">Enemy_W2_ArgentiTotem_02_Initiate</a>"
-                },
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Die_Flag",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Dispel Debuffs",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "silent": true
-                    },
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Die_Flag",
-                      "value": 1
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
-                    },
-                    {
-                      "name": "Define Custom Variable with Varying Data",
-                      "target": null,
-                      "variableName": "MaxPhase",
-                      "value": "MaxMonsterPhase"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "HP_Bars_Remaining",
-                        "compareType": "=",
-                        "value2": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Set Enemy Phase",
-                          "mode": "Inc"
-                        },
-                        {
-                          "name": "Inject Ability Use",
-                          "abilityName": "Monster_W2_Argenti_PartChange_Insert",
-                          "priorityTag": "EnemyPhaseChange",
-                          "ownerState": "Mask_AliveOrLimbo",
-                          "targetState": "Mask_AliveOrLimbo",
-                          "canHitNonTargets": true,
-                          "showInActionOrder": true,
-                          "allowAbilityTriggers": false
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Compare: Variable",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Modifier Holder}}"
-                                },
-                                "value1": "HP_Bars_Remaining",
-                                "compareType": "NOT=",
-                                "value2": {
-                                  "operator": "Variables[0] (MaxPhase) || RETURN",
-                                  "displayLines": "MaxPhase",
-                                  "constants": [],
-                                  "variables": [
-                                    "MaxPhase"
-                                  ]
-                                }
-                              },
-                              {
-                                "name": "Compare: Variable",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Modifier Holder}}"
-                                },
-                                "value1": "MaxPhase",
-                                "compareType": "=",
-                                "value2": 3
-                              }
-                            ]
-                          },
-                          "passed": [
-                            {
-                              "name": "Set Enemy Phase",
-                              "mode": "Inc"
-                            },
-                            {
-                              "name": "Inject Ability Use",
-                              "abilityName": "Monster_W2_Argenti_PartChange2T3_Insert",
-                              "priorityTag": "EnemyPhaseChange",
-                              "ownerState": "Mask_AliveOrLimbo",
-                              "targetState": "Mask_AliveOrLimbo",
-                              "canHitNonTargets": true,
-                              "showInActionOrder": true,
-                              "allowAbilityTriggers": false
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -90
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "3024013_Monster_W2_Argenti_PassiveAbility_BGM": {
       "fileName": "3024013_Monster_W2_Argenti_PassiveAbility_BGM",
       "childAbilityList": [
@@ -7372,9 +6971,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7612,14 +7209,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1784319990\">Enemy_W2_Argenti_IF_EX_EnemyCount_Sub</a>[<span class=\"descriptionNumberColor\">Stellar Aegis</span>]",
           "stackType": "Replace",
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddRatio</span> and reduces DMG received by <span class=\"descriptionNumberColor\">MDF_TokenDMGRduceRatio</span>.",
+          "type": "Buff",
+          "statusName": "Stellar Aegis",
+          "stackLimit": 5,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7666,17 +7266,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddRatio</span> and reduces DMG received by <span class=\"descriptionNumberColor\">MDF_TokenDMGRduceRatio</span>.",
-          "type": "Buff",
-          "statusName": "Stellar Aegis",
-          "stackLimit": 5,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1397396521\">Enemy_W2_Argenti_IF_EX_EnemyCount</a>",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_ShowValue1",
+            "MDF_ShowValue2"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7801,18 +7400,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ShowValue1",
-            "MDF_ShowValue2"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__806413908\">Enemy_W2_Argenti_IF_EX_ExtraEnhanceController</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__806413908\">Enemy_W2_Argenti_IF_EX_ExtraEnhanceController</a>"
         },
         {
           "name": "Modifier Construction",
@@ -8182,9 +7774,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8193,6 +7783,11 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Soul Enhancement",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -8234,17 +7829,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Soul Enhancement",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1768656268\">Enemy_W2_Argenti_IF_EX_PowerUpDark</a>[<span class=\"descriptionNumberColor\">Regain Enhancement</span>]",
           "stackType": "Replace",
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Regain Enhancement",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -8292,24 +7887,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Regain Enhancement",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1645398218\">Enemy_W2_Argenti_IF_EX_PowerAddMax</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1645398218\">Enemy_W2_Argenti_IF_EX_PowerAddMax</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-169910900\">Enemy_W2_Argenti_IF_EX_PowerAdd</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-169910900\">Enemy_W2_Argenti_IF_EX_PowerAdd</a>"
         },
         {
           "name": "Modifier Construction",
@@ -8321,6 +7907,20 @@ const compositeAbilityObject = {
             "KeepOnDeathrattle",
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_LightPowerUp",
+            "MDF_DamageAddedRatio"
+          ],
+          "latentQueue": [
+            "MDF_IF_BOSS_PowerFlag01",
+            "MDF_IF_BOSS_PowerFlag02",
+            "MDF_IF_BOSS_PowerFlag03",
+            "MDF_IF_BOSS_PowerFlag04"
+          ],
+          "description": "The knight's prayers bid the liberation of souls. Abilities have been enhanced.",
+          "type": "Buff",
+          "effectName": "Soulfreed",
+          "statusName": "Soulfreed",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -8496,21 +8096,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_LightPowerUp",
-            "MDF_DamageAddedRatio"
-          ],
-          "latentQueue": [
-            "MDF_IF_BOSS_PowerFlag01",
-            "MDF_IF_BOSS_PowerFlag02",
-            "MDF_IF_BOSS_PowerFlag03",
-            "MDF_IF_BOSS_PowerFlag04"
-          ],
-          "description": "The knight's prayers bid the liberation of souls. Abilities have been enhanced.",
-          "type": "Buff",
-          "effectName": "Soulfreed",
-          "statusName": "Soulfreed"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8528,15 +8114,19 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-274903726\">Monster_W2_Argenti_IF_AccumulatePower</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-274903726\">Monster_W2_Argenti_IF_AccumulatePower</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1011475287\">W2_Argenti_BattleScore2</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "Monster_IF_InsertCount",
+            "Monster_IF_InsertCameraFlag",
+            "Monster_IF_InsertCount02",
+            "Monster_IF_InsertCameraFlag02"
           ],
           "execute": [
             {
@@ -8619,9 +8209,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8638,6 +8226,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1028252906\">W2_Argenti_BattleScore1</a>",
+          "latentQueue": [
+            "Monster_IF_InsertCount",
+            "Monster_IF_InsertCameraFlag",
+            "Monster_IF_InsertCount02",
+            "Monster_IF_InsertCameraFlag02"
+          ],
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -8690,9 +8284,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8918,9 +8510,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9341,14 +8931,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1546767870\">Monster_W2_Argenti_IF_FlowerPower</a>[<span class=\"descriptionNumberColor\">Wreath</span>]",
           "stackType": "Replace",
+          "description": "Every stack additionally adds one instance of DMG dealt for Undeniable Fate.",
+          "type": "Buff",
+          "effectName": "Wreath",
+          "statusName": "Wreath",
+          "stackLimit": 4,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -9388,13 +8982,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Every stack additionally adds one instance of DMG dealt for Undeniable Fate.",
-          "type": "Buff",
-          "effectName": "Wreath",
-          "statusName": "Wreath",
-          "stackLimit": 4,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -9433,6 +9021,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1334735657\">Enemy_W2_Argenti_IF_Boss_Enhance</a>",
+          "latentQueue": [
+            "Monster_IF_InsertCount",
+            "Monster_IF_InsertCameraFlag",
+            "Monster_IF_InsertCount02",
+            "Monster_IF_InsertCameraFlag02"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -9492,13 +9086,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Monster_IF_InsertCount",
-            "Monster_IF_InsertCameraFlag",
-            "Monster_IF_InsertCount02",
-            "Monster_IF_InsertCameraFlag02"
           ]
         },
         {
@@ -9855,6 +9442,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]",
           "stackType": "Refresh",
+          "description": "The knight's prayers completely ascended the soul. This is regarded as equal to \"Soulfreed.\"",
+          "type": "Buff",
+          "effectName": "Soul Ascension",
+          "statusName": "Soul Ascension",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -9862,18 +9453,16 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The knight's prayers completely ascended the soul. This is regarded as equal to \"Soulfreed.\"",
-          "type": "Buff",
-          "effectName": "Soul Ascension",
-          "statusName": "Soul Ascension"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]",
           "stackType": "Refresh",
+          "description": "The knight's prayers bid the liberation of souls. Abilities have been enhanced.",
+          "type": "Buff",
+          "effectName": "Soulfreed",
+          "statusName": "Soulfreed",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -9881,13 +9470,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The knight's prayers bid the liberation of souls. Abilities have been enhanced.",
-          "type": "Buff",
-          "effectName": "Soulfreed",
-          "statusName": "Soulfreed"
+          ]
         }
       ],
       "references": []

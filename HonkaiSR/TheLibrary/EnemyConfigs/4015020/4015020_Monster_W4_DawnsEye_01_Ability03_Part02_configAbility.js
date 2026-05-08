@@ -213,23 +213,19 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-439718905\">Enemy_W4_DawnsEye_01_Ability03_Charge</a>[<span class=\"descriptionNumberColor\">The Dark Tides Cometh</span>]",
+      "description": "The next attack will inflict \"Unmaking Ashes: Godsfall\" on all allies.",
+      "type": "Other",
+      "statusName": "The Dark Tides Cometh",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "The next attack will inflict \"Unmaking Ashes: Godsfall\" on all allies.",
-      "type": "Other",
-      "statusName": "The Dark Tides Cometh"
+      ]
     }
   ]
 }

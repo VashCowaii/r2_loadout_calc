@@ -103,6 +103,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1530520902\">LC_23054_Sub_ToTeamMembers</a>[<span class=\"descriptionNumberColor\">Great Fortune</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
+          "type": "Buff",
+          "effectName": "Great Fortune",
+          "statusName": "Great Fortune",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -141,16 +145,46 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
-          "type": "Buff",
-          "effectName": "Great Fortune",
-          "statusName": "Great Fortune"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1143895626\">LC_23054_Sub</a>[<span class=\"descriptionNumberColor\">Great Fortune</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">#SkillEquip_P2_Value</span>, CRIT DMG by <span class=\"descriptionNumberColor\">#SkillEquip_P3_Value</span>, and Energy Regeneration Rate by <span class=\"descriptionNumberColor\">#SkillEquip_P5_AddSPRatio</span>.",
+          "type": "Buff",
+          "effectName": "Great Fortune",
+          "statusName": "Great Fortune",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] -{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1530520902\">LC_23054_Sub_ToTeamMembers</a>[<span class=\"descriptionNumberColor\">Great Fortune</span>]",
+              "aliveOnly": "True",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.1) || RETURN",
+                  "displayLines": "0.1",
+                  "constants": [],
+                  "variables": [
+                    0.1
+                  ]
+                },
+                "MDF_PropertyValue2": {
+                  "operator": "Variables[0] (0.3) || RETURN",
+                  "displayLines": "0.3",
+                  "constants": [],
+                  "variables": [
+                    0.3
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -204,40 +238,6 @@ const compositeAbilityObject = {
                   }
                 }
               ]
-            }
-          ],
-          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">#SkillEquip_P2_Value</span>, CRIT DMG by <span class=\"descriptionNumberColor\">#SkillEquip_P3_Value</span>, and Energy Regeneration Rate by <span class=\"descriptionNumberColor\">#SkillEquip_P5_AddSPRatio</span>.",
-          "type": "Buff",
-          "effectName": "Great Fortune",
-          "statusName": "Great Fortune",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] -{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1530520902\">LC_23054_Sub_ToTeamMembers</a>[<span class=\"descriptionNumberColor\">Great Fortune</span>]",
-              "aliveOnly": "True",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
-                  "constants": [],
-                  "variables": [
-                    0.1
-                  ]
-                },
-                "MDF_PropertyValue2": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
-                }
-              }
             }
           ]
         },
@@ -333,9 +333,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

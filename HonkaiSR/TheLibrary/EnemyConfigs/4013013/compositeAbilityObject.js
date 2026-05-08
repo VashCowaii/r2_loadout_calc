@@ -3,7 +3,6 @@ const compositeAbilityObject = {
   "fullCharacterName": 4013013,
   "trimCharacterName": 4013013,
   "abilityList": [
-    "4013013_Monster_W4_Claymore_PassiveAbilityInitiate_FantasticStory",
     "4013013_Monster_W4_Claymore_PassiveAbilityInitiate",
     "4013013_Monster_W4_Claymore_Ability05_Part02",
     "4013013_Monster_W4_Claymore_Ability05_Part01",
@@ -15,300 +14,9 @@ const compositeAbilityObject = {
     "4013013_Monster_W4_Claymore_Ability02_Part01",
     "4013013_Monster_W4_Claymore_Ability01_Part02",
     "4013013_Monster_W4_Claymore_Ability01_Part01",
-    "4013013_Monster_W4_Claymore_314070",
     "4013013_Modifiers"
   ],
   "abilityObject": {
-    "4013013_Monster_W4_Claymore_PassiveAbilityInitiate_FantasticStory": {
-      "fileName": "4013013_Monster_W4_Claymore_PassiveAbilityInitiate_FantasticStory",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-551387398\">W4_Claymore_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-568165017\">W4_Claymore_BattleScore2</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-133295283\">Enemy_W4_Claymore_FantasticStory</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>",
-          "valuePerStack": {
-            "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[0]]}"
-              ]
-            },
-            "MDF_CrackedEffect": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[1]]}"
-              ]
-            },
-            "MDF_CrackedDamage": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[5]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[5]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[5]]}"
-              ]
-            },
-            "MDF_DamageResistance": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[2]]}"
-              ]
-            },
-            "MDF_CrackedDamageAfter": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[3]]}"
-              ]
-            },
-            "MDF_ModifySP": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[4]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"446213578\">Enemy_Heaven_ModelController_Claymore_FantasticStory</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__446213578\">Enemy_Heaven_ModelController_Claymore_FantasticStory</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Was",
-                        "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Living State",
-                        "state": "Mask_AliveOnly",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking Modifier Instance [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Was",
-                        "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-                        "compareType": "=",
-                        "value2": 0,
-                        "valueType": "Layer"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Living State",
-                            "state": "Mask_AliveOnly",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            }
-                          },
-                          {
-                            "name": "Has Turn-State",
-                            "invertCondition": true,
-                            "states": [
-                              "InsertAbilityActionPhase"
-                            ]
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "MaxLayer",
-                  "variableName": "MDF_MaxLayer",
-                  "modifierName": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-                  "multiplier": 1
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Was",
-                        "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-                        "compareType": "=",
-                        "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
-                        },
-                        "valueType": "Layer"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "MDF_LastLayer",
-                        "compareType": "=",
-                        "value2": 0
-                      }
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "MDF_LastLayer",
-                  "modifierName": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-                  "multiplier": 1
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "4013013_Monster_W4_Claymore_PassiveAbilityInitiate": {
       "fileName": "4013013_Monster_W4_Claymore_PassiveAbilityInitiate",
       "skillTrigger": "PassiveSkillInitiate",
@@ -589,9 +297,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1123,9 +829,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__328409415\">MModifier_Monster_W4_Claymore_Ability03_Summon</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__328409415\">MModifier_Monster_W4_Claymore_Ability03_Summon</a>"
         }
       ]
     },
@@ -1515,26 +1219,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target",
         "targetIsVariable": true
-      },
-      "references": []
-    },
-    "4013013_Monster_W4_Claymore_314070": {
-      "fileName": "4013013_Monster_W4_Claymore_314070",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"870917356\">Enemy_W4_Claymore_314070</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },
@@ -2005,9 +1689,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2117,9 +1799,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2344,14 +2024,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1809875879\">Enemy_W4_Claymore_314070_Sub</a>",
           "modifierFlags": [],
+          "latentQueue": [
+            "MDF_Key"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2500,16 +2181,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_Key"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
           "stackType": "Replace",
+          "description": "Decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageResistance</span>. Loses 1 stack of \"War Armor\" after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit and delaying their action. The ally unit that destroyed the \"War Armor\" will regenerate Energy. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
+          "type": "Other",
+          "statusName": "War Armor",
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2674,17 +2355,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageResistance</span>. Loses 1 stack of \"War Armor\" after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit and delaying their action. The ally unit that destroyed the \"War Armor\" will regenerate Energy. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
-          "type": "Other",
-          "statusName": "War Armor",
-          "addStacksPerTrigger": -1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1282910303\">Enemy_Heaven_StoneShieldController</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "stackData": [
+            "MDF_MaxLayer",
+            "MDF_CrackedEffect",
+            "MDF_CrackedDamage",
+            "MDF_DamageResistance",
+            "MDF_CrackedDamageAfter",
+            "MDF_ModifySP"
           ],
           "execute": [
             {
@@ -4008,21 +3693,20 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxLayer",
-            "MDF_CrackedEffect",
-            "MDF_CrackedDamage",
-            "MDF_DamageResistance",
-            "MDF_CrackedDamageAfter",
-            "MDF_ModifySP"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-351944820\">MModifier_Monster_W4_Claymore_Ability04_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
           "stackType": "Replace",
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_DamageTakenUpRatio"
+          ],
+          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4045,16 +3729,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_DamageTakenUpRatio"
-          ],
-          "latentQueue": [],
-          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4332,6 +4007,22 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__622644189\">MModifier_Monster_W4_Claymore_Ability03_Aim</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
+          "description": "Charging. Dispelled upon Weakness Break.",
+          "type": "Other",
+          "effectName": "Charging",
+          "statusName": "Charging",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1690906483\">MModifier_Monster_W4_Claymore_Ability03_Target</a>",
+              "aliveOnly": "True",
+              "haloStatus": true
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4403,24 +4094,6 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Charging. Dispelled upon Weakness Break.",
-          "type": "Other",
-          "effectName": "Charging",
-          "statusName": "Charging",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1690906483\">MModifier_Monster_W4_Claymore_Ability03_Target</a>",
-              "aliveOnly": "True",
-              "haloStatus": true
-            }
           ]
         },
         {
@@ -4430,15 +4103,11 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-133295283\">Enemy_W4_Claymore_FantasticStory</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-133295283\">Enemy_W4_Claymore_FantasticStory</a>"
         }
       ],
       "references": []

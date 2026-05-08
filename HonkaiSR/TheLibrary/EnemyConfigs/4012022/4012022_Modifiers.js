@@ -14,6 +14,13 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "stackData": [
+        "MDF_SpeedUpRatio"
+      ],
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>.",
+      "type": "Buff",
+      "effectName": "Gleaned Instruction",
+      "statusName": "Gleaned Instruction",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -100,19 +107,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SpeedUpRatio"
-      ],
-      "latentQueue": [],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>.",
-      "type": "Buff",
-      "effectName": "Gleaned Instruction",
-      "statusName": "Gleaned Instruction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1087631853\">MModifier_Monster_W4_Scholar_LocalLegend_BookController</a>[<span class=\"descriptionNumberColor\">Proselytize</span>]",
+      "description": "Causes %DynamicTargetName to enter the \"Gleaned Instruction\" state.",
+      "type": "Other",
+      "effectName": "Proselytize",
+      "statusName": "Proselytize",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -123,13 +126,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Causes %DynamicTargetName to enter the \"Gleaned Instruction\" state.",
-      "type": "Other",
-      "effectName": "Proselytize",
-      "statusName": "Proselytize"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -267,14 +264,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__487625140\">MModifier_Monster_W4_Scholar_LocalLegend_BookKiller</a>[<span class=\"descriptionNumberColor\">Ignited Flame</span>]",
       "stackType": "Replace",
+      "useEntitySnapshot": true,
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>.",
+      "type": "Buff",
+      "effectName": "Ignited Flame",
+      "statusName": "Ignited Flame",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -297,18 +297,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>.",
-      "type": "Buff",
-      "effectName": "Ignited Flame",
-      "statusName": "Ignited Flame"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1076100196\">MModifier_Monster_W4_Scholar_LocalLegend_BookKillerListener</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
+      ],
+      "stackData": [
+        "MDF_SpeedUpRatio",
+        "MDF_LifeTime"
       ],
       "execute": [
         {
@@ -355,18 +354,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SpeedUpRatio",
-        "MDF_LifeTime"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__831434835\">MModifier_Monster_W4_Scholar_LocalLegend_Selected</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__831434835\">MModifier_Monster_W4_Scholar_LocalLegend_Selected</a>"
     },
     {
       "name": "Modifier Construction",
@@ -421,14 +413,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1075754631\">MModifier_Monster_W4_Scholar_BookKiller</a>[<span class=\"descriptionNumberColor\">Ignited Flame</span>]",
       "stackType": "Replace",
+      "useEntitySnapshot": true,
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>, and DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>.",
+      "type": "Buff",
+      "effectName": "Ignited Flame",
+      "statusName": "Ignited Flame",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -467,12 +462,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>, and DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>.",
-      "type": "Buff",
-      "effectName": "Ignited Flame",
-      "statusName": "Ignited Flame"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -533,13 +523,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SpeedUpRatio",
-        "MDF_DamageUpRatio",
-        "MDF_LifeTime"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -547,6 +531,10 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span> and DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>. Dispelled when %CasterName's \"War Armor\" is destroyed.",
+      "type": "Buff",
+      "effectName": "Gleaned Instruction",
+      "statusName": "Gleaned Instruction",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -660,20 +648,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SpeedUpRatio",
-        "MDF_DamageUpRatio"
-      ],
-      "latentQueue": [],
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span> and DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>. Dispelled when %CasterName's \"War Armor\" is destroyed.",
-      "type": "Buff",
-      "effectName": "Gleaned Instruction",
-      "statusName": "Gleaned Instruction"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1513370696\">MModifier_Monster_W4_Scholar_BookController</a>[<span class=\"descriptionNumberColor\">Proselytize</span>]",
+      "description": "Causes %DynamicTargetName to enter the \"Gleaned Instruction\" state. Dispelled when this unit's \"War Armor\" is destroyed.",
+      "type": "Other",
+      "effectName": "Proselytize",
+      "statusName": "Proselytize",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -778,13 +761,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Causes %DynamicTargetName to enter the \"Gleaned Instruction\" state. Dispelled when this unit's \"War Armor\" is destroyed.",
-      "type": "Other",
-      "effectName": "Proselytize",
-      "statusName": "Proselytize"
+      ]
     }
   ],
   "references": []

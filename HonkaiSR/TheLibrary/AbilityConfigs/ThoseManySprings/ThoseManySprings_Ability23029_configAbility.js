@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-326179996\">LC_23029_Sub2</a>[<span class=\"descriptionNumberColor\">Cornered</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">RatioPlus</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Cornered",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -49,16 +53,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">RatioPlus</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Cornered"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1943682494\">LC_23029_Sub</a>[<span class=\"descriptionNumberColor\">Unarmored</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases DMG received by <span class=\"descriptionNumberColor\">#SkillEquip_P3_Ratio</span>. While under a DoT state applied from the wearer and after receiving an attack from the wearer's Basic ATK, Skill, or Ultimate, there is a <span class=\"descriptionNumberColor\">#SkillEquip_P5_Chance</span> base chance of having this state upgraded to Cornered, which additionally increases DMG received by <span class=\"descriptionNumberColor\">#SkillEquip_P6_Ratio</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Unarmored",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -81,11 +85,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG received by <span class=\"descriptionNumberColor\">#SkillEquip_P3_Ratio</span>. While under a DoT state applied from the wearer and after receiving an attack from the wearer's Basic ATK, Skill, or Ultimate, there is a <span class=\"descriptionNumberColor\">#SkillEquip_P5_Chance</span> base chance of having this state upgraded to Cornered, which additionally increases DMG received by <span class=\"descriptionNumberColor\">#SkillEquip_P6_Ratio</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Unarmored"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -258,9 +258,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

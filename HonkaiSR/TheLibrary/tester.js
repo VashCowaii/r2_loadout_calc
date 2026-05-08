@@ -3907,6 +3907,11 @@ const userTriggers = {
                     <div class="${levelIsBlue ? "traceSkillLevelBlue" : "traceSkillLevel"}">${skillPath[skillKeys[0]].variant1.name === currentSkill.name ? `Lv.  ${baseLevel}` : ""}</div>
                 </div>
 
+                ${!currentSkill.participantID ? "" : `<div class="traceToughnessBox">
+                    <div class="traceToughnessTitleBox">Participant ID</div>
+                    <div class="traceToughnessValueBox">${currentSkill.participantID}</div>
+                </div>`}
+
                 ${!currentSkill.skillPointCost && !currentSkill.skillPointGain ? "" : `<div class="traceToughnessBox">
                     <div class="traceToughnessTitleBox">Skill Points</div>
                     <div class="traceToughnessValueBox">${currentSkill.skillPointCost ? `-${currentSkill.skillPointCost}` : ""}${currentSkill.skillPointGain ? `+${currentSkill.skillPointGain}` : ""}</div>
@@ -3921,6 +3926,8 @@ const userTriggers = {
                     <div class="traceToughnessTitleBox">Energy Cost</div>
                     <div class="traceToughnessValueBox">${currentSkill.energyCost}</div>
                 </div>`}
+
+                
 
                 ${!currentSkill.energyRegen ? "" : `<div class="traceToughnessBox">
                     <div class="traceToughnessTitleBox">Energy</div>
@@ -4439,7 +4446,10 @@ const userTriggers = {
 
                                     <div class="overviewSkillDataBox">
                                         
-                                    
+                                        ${currentInnerSkillVariant.participantID ? `<div class="traceToughnessBoxOverviewSkill">
+                                            <div class="traceToughnessTitleBox">Participant ID</div>
+                                            <div class="traceToughnessValueBox">${currentInnerSkillVariant.participantID}</div>
+                                        </div>` : ""}
                                         ${(currentInnerSkillVariant.skillPointCost || currentInnerSkillVariant.skillPointGain) ? `<div class="traceToughnessBoxOverviewSkill">
                                             <div class="traceToughnessTitleBox">Skill Points</div>
                                             <div class="traceToughnessValueBox">${currentInnerSkillVariant.skillPointGain ? "+" : "-"}${currentInnerSkillVariant.skillPointCost || currentInnerSkillVariant.skillPointGain}</div>

@@ -72,6 +72,9 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">#SkillP01_P1_SpeedUpRatio</span>.",
+      "type": "Buff",
+      "statusName": "Somatotypical Helix",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -94,10 +97,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">#SkillP01_P1_SpeedUpRatio</span>.",
-      "type": "Buff",
-      "statusName": "Somatotypical Helix"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -660,9 +660,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

@@ -18,6 +18,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-920276419\">Modifier_ChallengePeakBattle_BaseAbility_0017_02</a>[<span class=\"descriptionNumberColor\">Stability</span>]",
+      "description": "DMG dealt decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0017_ADF_1</span> and DMG received decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0017_ADF_2</span>.",
+      "type": "Other",
+      "statusName": "Stability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -56,10 +59,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0017_ADF_1</span> and DMG received decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0017_ADF_2</span>.",
-      "type": "Other",
-      "statusName": "Stability"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -114,9 +114,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

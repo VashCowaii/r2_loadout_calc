@@ -3,20 +3,1150 @@ const compositeAbilityObject = {
   "fullCharacterName": "Luka",
   "trimCharacterName": "Luka",
   "abilityList": [
+    "Luka_Modifiers",
+    "Luka_LocalPlayer_StandardAbility_AttackBreak",
+    "Luka_LocalPlayer_Luka_TechniqueUsage",
+    "Luka_LocalPlayer_Luka_NormalAtk01",
     "Luka_Luka_TechniqueInLevel",
     "Luka_Luka_PassiveAbility01",
+    "Luka_Luka_Ability03_EnterReady",
     "Luka_Luka_Ability03_Part02",
     "Luka_Luka_Ability03_Part01",
-    "Luka_Luka_Ability03_EnterReady",
     "Luka_Luka_Ability02_Part02",
     "Luka_Luka_Ability02_Part01",
     "Luka_Luka_Ability11_Part02",
     "Luka_Luka_Ability11_Part01",
     "Luka_Luka_Ability01_Part02",
-    "Luka_Luka_Ability01_Part01",
-    "Luka_Modifiers"
+    "Luka_Luka_Ability01_Part01"
   ],
   "abilityObject": {
+    "Luka_Modifiers": {
+      "fileName": "Luka_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__7293019\">ADV_StageAbility_Maze_Luka</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1202378594\">Luka_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "modifierFlags": [
+            "STAT_DOT",
+            "STAT_DOT_Bleed"
+          ],
+          "useEntitySnapshot": true,
+          "description": "Takes Physical DMG at the start of each turn for a certain number of turns.",
+          "type": "Debuff",
+          "effectName": "Bleed",
+          "statusName": "Bleed",
+          "stackLimit": 1,
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_TargetMaxHP",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Snapshot Stat Source}}"
+                  },
+                  "variableName": "MDF_CasterAttack",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_TargetMaxHP",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || Variables[2] (Modifier_Tear_DamageRatio) || DIV || RETURN",
+                      "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)",
+                      "constants": [],
+                      "variables": [
+                        "MDF_CasterAttack",
+                        "Modifier_Tear_MaxPercentage",
+                        "Modifier_Tear_DamageRatio"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_DamageValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
+                        "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_CasterAttack",
+                          "Modifier_Tear_MaxPercentage"
+                        ]
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_DamageValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
+                        "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_TargetMaxHP",
+                          "Modifier_Tear_DamageRatio"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_TargetMaxHP",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Snapshot Stat Source}}"
+                  },
+                  "variableName": "MDF_CasterAttack",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_TargetMaxHP",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || Variables[2] (Modifier_Tear_DamageRatio) || DIV || RETURN",
+                      "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)",
+                      "constants": [],
+                      "variables": [
+                        "MDF_CasterAttack",
+                        "Modifier_Tear_MaxPercentage",
+                        "Modifier_Tear_DamageRatio"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_DamageValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
+                        "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_CasterAttack",
+                          "Modifier_Tear_MaxPercentage"
+                        ]
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_DamageValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
+                        "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_TargetMaxHP",
+                          "Modifier_Tear_DamageRatio"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Physical",
+                    "DamageFlat": {
+                      "operator": "Variables[0] (MDF_DamageValue) || RETURN",
+                      "displayLines": "MDF_DamageValue",
+                      "constants": [],
+                      "variables": [
+                        "MDF_DamageValue"
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "DOT"
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Custom Event",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_TargetMaxHP",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Snapshot Stat Source}}"
+                  },
+                  "variableName": "MDF_CasterAttack",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_TargetMaxHP",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || Variables[2] (Modifier_Tear_DamageRatio) || DIV || RETURN",
+                      "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)",
+                      "constants": [],
+                      "variables": [
+                        "MDF_CasterAttack",
+                        "Modifier_Tear_MaxPercentage",
+                        "Modifier_Tear_DamageRatio"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_DamageValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
+                        "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_CasterAttack",
+                          "Modifier_Tear_MaxPercentage"
+                        ]
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_DamageValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
+                        "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_TargetMaxHP",
+                          "Modifier_Tear_DamageRatio"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Physical",
+                    "DamageFlat": {
+                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_DamageValue) || MUL || RETURN",
+                      "displayLines": "(DOT_TriggerRatio * MDF_DamageValue)",
+                      "constants": [],
+                      "variables": [
+                        "DOT_TriggerRatio",
+                        "MDF_DamageValue"
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "DOT"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-752941063\">Luka_MazeBullet</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Adjust Variable Value",
+                  "adjustmentType": "Overwrite Value",
+                  "variableName": "BulletCount",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "value": 2
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (BulletCount) || RETURN",
+                    "displayLines": "BulletCount",
+                    "constants": [],
+                    "variables": [
+                      "BulletCount"
+                    ]
+                  },
+                  "maximum": {
+                    "operator": "Constants[0] (4) || RETURN",
+                    "displayLines": "4",
+                    "constants": [
+                      4
+                    ],
+                    "variables": []
+                  },
+                  "assignState": "True",
+                  "priorState": "Normal",
+                  "bar#": 3,
+                  "cooldown": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-811741616\">Luka_Eidolon4</a>[<span class=\"descriptionNumberColor\">Never Turning Back</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAdded</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Never Turning Back",
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_AttackAdded",
+                  "value": {
+                    "operator": "Variables[0] (0.05) || Variables[1] (MDF_Layer) || MUL || RETURN",
+                    "displayLines": "(0.05 * MDF_Layer)",
+                    "constants": [],
+                    "variables": [
+                      0.05,
+                      "MDF_Layer"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AttackAdded) || RETURN",
+                    "displayLines": "MDF_AttackAdded",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AttackAdded"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-711075902\">Luka_Eidolon2</a>",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Hit",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Weakness",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "DamageType": "Physical"
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Skill"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1275149529\">Luka_ReloadBullet</a>",
+                      "valuePerStack": {
+                        "MDF_AddValue": {
+                          "operator": "Variables[0] (1) || RETURN",
+                          "displayLines": "1",
+                          "constants": [],
+                          "variables": [
+                            1
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-632542414\">Luka_Eidolon1_Sub</a>[<span class=\"descriptionNumberColor\">Fighting Endlessly</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Fighting Endlessly",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1275149529\">Luka_ReloadBullet</a>",
+          "stackData": [
+            "MDF_AddValue"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "BulletCount",
+                    "compareType": ">=",
+                    "value2": 3
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_AddValue",
+                      "value": {
+                        "operator": "Constants[0] (4) || Variables[0] (BulletCount) || SUB || RETURN",
+                        "displayLines": "(4 - BulletCount)",
+                        "constants": [
+                          4
+                        ],
+                        "variables": [
+                          "BulletCount"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Looped Event",
+                  "maxLoops": {
+                    "operator": "Variables[0] (MDF_AddValue) || RETURN",
+                    "displayLines": "MDF_AddValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AddValue"
+                    ]
+                  },
+                  "Event": [
+                    {
+                      "name": "Adjust Variable Value",
+                      "adjustmentType": "Add to Value (Default)",
+                      "variableName": "BulletCount",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "value": 1
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Eidolon Activated",
+                        "eidolon": 4
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-811741616\">Luka_Eidolon4</a>[<span class=\"descriptionNumberColor\">Never Turning Back</span>]",
+                          "stackLimit": {
+                            "operator": "Variables[0] (4) || RETURN",
+                            "displayLines": "4",
+                            "constants": [],
+                            "variables": [
+                              4
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_PropertyValue2": {
+                              "operator": "Variables[0] (0.05) || RETURN",
+                              "displayLines": "0.05",
+                              "constants": [],
+                              "variables": [
+                                0.05
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Trace Activated",
+                    "conditionList": "Cycle Braking"
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Energy",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "value": {
+                        "operator": "Variables[0] (3) || Variables[1] (MDF_AddValue) || MUL || RETURN",
+                        "displayLines": "(3 * MDF_AddValue)",
+                        "constants": [],
+                        "variables": [
+                          3,
+                          "MDF_AddValue"
+                        ]
+                      },
+                      "isFixed": "* ERR"
+                    }
+                  ]
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (BulletCount) || RETURN",
+                    "displayLines": "BulletCount",
+                    "constants": [],
+                    "variables": [
+                      "BulletCount"
+                    ]
+                  },
+                  "maximum": {
+                    "operator": "Constants[0] (4) || RETURN",
+                    "displayLines": "4",
+                    "constants": [
+                      4
+                    ],
+                    "variables": []
+                  },
+                  "assignState": "True",
+                  "priorState": "Normal",
+                  "bar#": 3,
+                  "cooldown": 0
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "BulletCount",
+                    "compareType": "<",
+                    "value2": 2
+                  },
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1816734330\">Luka_ChangeAttack</a>"
+                    },
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (BulletCount) || RETURN",
+                        "displayLines": "BulletCount",
+                        "constants": [],
+                        "variables": [
+                          "BulletCount"
+                        ]
+                      },
+                      "maximum": {
+                        "operator": "Constants[0] (4) || RETURN",
+                        "displayLines": "4",
+                        "constants": [
+                          4
+                        ],
+                        "variables": []
+                      },
+                      "assignState": "True",
+                      "priorState": "Active",
+                      "bar#": 3,
+                      "cooldown": 0
+                    }
+                  ]
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1778825870\">Luka_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1816734330\">Luka_ChangeAttack</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityName": "Skill01",
+                  "skillSlot": "Basic ATK"
+                },
+                {
+                  "name": "Update Ability Enhance Button",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "display": "Hide",
+                  "abilityName": "Basic ATK"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityName": "Skill11",
+                  "skillSlot": "Basic ATK"
+                },
+                {
+                  "name": "Update Ability Enhance Button",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "display": "Show",
+                  "abilityName": "Basic ATK"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1297657953\">Luka_Passive</a>",
+          "execute": [
+            {
+              "eventTrigger": "Action Choice Window [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "BulletCount",
+                    "compareType": "<",
+                    "value2": 2
+                  },
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1816734330\">Luka_ChangeAttack</a>"
+                    },
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (BulletCount) || RETURN",
+                        "displayLines": "BulletCount",
+                        "constants": [],
+                        "variables": [
+                          "BulletCount"
+                        ]
+                      },
+                      "maximum": {
+                        "operator": "Constants[0] (4) || RETURN",
+                        "displayLines": "4",
+                        "constants": [
+                          4
+                        ],
+                        "variables": []
+                      },
+                      "assignState": "True",
+                      "priorState": "Active",
+                      "bar#": 3,
+                      "cooldown": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "Luka_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Luka_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Luka_LocalPlayer_Luka_TechniqueUsage": {
+      "fileName": "Luka_LocalPlayer_Luka_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance",
+              "onBattle": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": null,
+                  "ID": "111101(SkillMaze)"
+                }
+              ]
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance",
+              "onBattle": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": null,
+                  "ID": "111101(SkillMaze)"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Luka_LocalPlayer_Luka_NormalAtk01": {
+      "fileName": "Luka_LocalPlayer_Luka_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "failed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
     "Luka_Luka_TechniqueInLevel": {
       "fileName": "Luka_Luka_TechniqueInLevel",
       "childAbilityList": [
@@ -158,9 +1288,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -299,6 +1427,17 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Luka_Luka_Ability03_EnterReady": {
+      "fileName": "Luka_Luka_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
       }
     },
     "Luka_Luka_Ability03_Part02": {
@@ -503,17 +1642,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
-      }
-    },
-    "Luka_Luka_Ability03_EnterReady": {
-      "fileName": "Luka_Luka_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Luka_Luka_Ability02_Part02": {
@@ -1586,824 +2714,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Luka_Modifiers": {
-      "fileName": "Luka_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1202378594\">Luka_DOT_Tear</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "modifierFlags": [
-            "STAT_DOT",
-            "STAT_DOT_Bleed"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_TargetMaxHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                },
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Snapshot Stat Source}}"
-                  },
-                  "variableName": "MDF_CasterAttack",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_TargetMaxHP",
-                    "compareType": ">=",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || Variables[2] (Modifier_Tear_DamageRatio) || DIV || RETURN",
-                      "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CasterAttack",
-                        "Modifier_Tear_MaxPercentage",
-                        "Modifier_Tear_DamageRatio"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
-                      "value": {
-                        "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
-                        "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CasterAttack",
-                          "Modifier_Tear_MaxPercentage"
-                        ]
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
-                      "value": {
-                        "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
-                        "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TargetMaxHP",
-                          "Modifier_Tear_DamageRatio"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_TargetMaxHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                },
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Snapshot Stat Source}}"
-                  },
-                  "variableName": "MDF_CasterAttack",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_TargetMaxHP",
-                    "compareType": ">=",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || Variables[2] (Modifier_Tear_DamageRatio) || DIV || RETURN",
-                      "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CasterAttack",
-                        "Modifier_Tear_MaxPercentage",
-                        "Modifier_Tear_DamageRatio"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
-                      "value": {
-                        "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
-                        "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CasterAttack",
-                          "Modifier_Tear_MaxPercentage"
-                        ]
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
-                      "value": {
-                        "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
-                        "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TargetMaxHP",
-                          "Modifier_Tear_DamageRatio"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Physical",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (MDF_DamageValue) || RETURN",
-                      "displayLines": "MDF_DamageValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageValue"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "DOT"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Custom Event",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_TargetMaxHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                },
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Snapshot Stat Source}}"
-                  },
-                  "variableName": "MDF_CasterAttack",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_TargetMaxHP",
-                    "compareType": ">=",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || Variables[2] (Modifier_Tear_DamageRatio) || DIV || RETURN",
-                      "displayLines": "((MDF_CasterAttack * Modifier_Tear_MaxPercentage) / Modifier_Tear_DamageRatio)",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CasterAttack",
-                        "Modifier_Tear_MaxPercentage",
-                        "Modifier_Tear_DamageRatio"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
-                      "value": {
-                        "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
-                        "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CasterAttack",
-                          "Modifier_Tear_MaxPercentage"
-                        ]
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
-                      "value": {
-                        "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
-                        "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TargetMaxHP",
-                          "Modifier_Tear_DamageRatio"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Physical",
-                    "DamageFlat": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_DamageValue) || MUL || RETURN",
-                      "displayLines": "(DOT_TriggerRatio * MDF_DamageValue)",
-                      "constants": [],
-                      "variables": [
-                        "DOT_TriggerRatio",
-                        "MDF_DamageValue"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "DOT"
-                  }
-                }
-              ]
-            }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "Modifier_Tear_DamageRatio",
-            "Modifier_Tear_MaxPercentage"
-          ],
-          "latentQueue": [],
-          "description": "Takes Physical DMG at the start of each turn for a certain number of turns.",
-          "type": "Debuff",
-          "effectName": "Bleed",
-          "statusName": "Bleed",
-          "stackLimit": 1,
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-752941063\">Luka_MazeBullet</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Adjust Variable Value",
-                  "adjustmentType": "Overwrite Value",
-                  "variableName": "BulletCount",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "value": 2
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (BulletCount) || RETURN",
-                    "displayLines": "BulletCount",
-                    "constants": [],
-                    "variables": [
-                      "BulletCount"
-                    ]
-                  },
-                  "maximum": {
-                    "operator": "Constants[0] (4) || RETURN",
-                    "displayLines": "4",
-                    "constants": [
-                      4
-                    ],
-                    "variables": []
-                  },
-                  "assignState": "True",
-                  "priorState": "Normal",
-                  "bar#": 3,
-                  "cooldown": 0
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-811741616\">Luka_Eidolon4</a>[<span class=\"descriptionNumberColor\">Never Turning Back</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "MDF_Layer",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_AttackAdded",
-                  "value": {
-                    "operator": "Variables[0] (0.05) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(0.05 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      0.05,
-                      "MDF_Layer"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AttackAdded) || RETURN",
-                    "displayLines": "MDF_AttackAdded",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAdded"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAdded</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Never Turning Back",
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-711075902\">Luka_Eidolon2</a>",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Weakness",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "DamageType": "Physical"
-                      },
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Skill"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1275149529\">Luka_ReloadBullet</a>",
-                      "valuePerStack": {
-                        "MDF_AddValue": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-632542414\">Luka_Eidolon1_Sub</a>[<span class=\"descriptionNumberColor\">Fighting Endlessly</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Fighting Endlessly"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1275149529\">Luka_ReloadBullet</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "BulletCount",
-                    "compareType": ">=",
-                    "value2": 3
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_AddValue",
-                      "value": {
-                        "operator": "Constants[0] (4) || Variables[0] (BulletCount) || SUB || RETURN",
-                        "displayLines": "(4 - BulletCount)",
-                        "constants": [
-                          4
-                        ],
-                        "variables": [
-                          "BulletCount"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Looped Event",
-                  "maxLoops": {
-                    "operator": "Variables[0] (MDF_AddValue) || RETURN",
-                    "displayLines": "MDF_AddValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AddValue"
-                    ]
-                  },
-                  "Event": [
-                    {
-                      "name": "Adjust Variable Value",
-                      "adjustmentType": "Add to Value (Default)",
-                      "variableName": "BulletCount",
-                      "on": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "value": 1
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Eidolon Activated",
-                        "eidolon": 4
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-811741616\">Luka_Eidolon4</a>[<span class=\"descriptionNumberColor\">Never Turning Back</span>]",
-                          "stackLimit": {
-                            "operator": "Variables[0] (4) || RETURN",
-                            "displayLines": "4",
-                            "constants": [],
-                            "variables": [
-                              4
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_PropertyValue2": {
-                              "operator": "Variables[0] (0.05) || RETURN",
-                              "displayLines": "0.05",
-                              "constants": [],
-                              "variables": [
-                                0.05
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Trace Activated",
-                    "conditionList": "Cycle Braking"
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Energy",
-                      "on": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "value": {
-                        "operator": "Variables[0] (3) || Variables[1] (MDF_AddValue) || MUL || RETURN",
-                        "displayLines": "(3 * MDF_AddValue)",
-                        "constants": [],
-                        "variables": [
-                          3,
-                          "MDF_AddValue"
-                        ]
-                      },
-                      "isFixed": "* ERR"
-                    }
-                  ]
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (BulletCount) || RETURN",
-                    "displayLines": "BulletCount",
-                    "constants": [],
-                    "variables": [
-                      "BulletCount"
-                    ]
-                  },
-                  "maximum": {
-                    "operator": "Constants[0] (4) || RETURN",
-                    "displayLines": "4",
-                    "constants": [
-                      4
-                    ],
-                    "variables": []
-                  },
-                  "assignState": "True",
-                  "priorState": "Normal",
-                  "bar#": 3,
-                  "cooldown": 0
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "BulletCount",
-                    "compareType": "<",
-                    "value2": 2
-                  },
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1816734330\">Luka_ChangeAttack</a>"
-                    },
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (BulletCount) || RETURN",
-                        "displayLines": "BulletCount",
-                        "constants": [],
-                        "variables": [
-                          "BulletCount"
-                        ]
-                      },
-                      "maximum": {
-                        "operator": "Constants[0] (4) || RETURN",
-                        "displayLines": "4",
-                        "constants": [
-                          4
-                        ],
-                        "variables": []
-                      },
-                      "assignState": "True",
-                      "priorState": "Active",
-                      "bar#": 3,
-                      "cooldown": 0
-                    }
-                  ]
-                },
-                "Modifier Deletes Itself"
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_AddValue"
-          ],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1778825870\">Luka_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1816734330\">Luka_ChangeAttack</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityName": "Skill01",
-                  "skillSlot": "Basic ATK"
-                },
-                {
-                  "name": "Update Ability Enhance Button",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "display": "Hide",
-                  "abilityName": "Basic ATK"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityName": "Skill11",
-                  "skillSlot": "Basic ATK"
-                },
-                {
-                  "name": "Update Ability Enhance Button",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "display": "Show",
-                  "abilityName": "Basic ATK"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1297657953\">Luka_Passive</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action Choice Window [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "BulletCount",
-                    "compareType": "<",
-                    "value2": 2
-                  },
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1816734330\">Luka_ChangeAttack</a>"
-                    },
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (BulletCount) || RETURN",
-                        "displayLines": "BulletCount",
-                        "constants": [],
-                        "variables": [
-                          "BulletCount"
-                        ]
-                      },
-                      "maximum": {
-                        "operator": "Constants[0] (4) || RETURN",
-                        "displayLines": "4",
-                        "constants": [
-                          4
-                        ],
-                        "variables": []
-                      },
-                      "assignState": "True",
-                      "priorState": "Active",
-                      "bar#": 3,
-                      "cooldown": 0
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "references": []
     }
   }
 }

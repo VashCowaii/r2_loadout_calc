@@ -3,9 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": "Dan Heng",
   "trimCharacterName": "DanHeng",
   "abilityList": [
-    "DanHeng_DanHeng_Eidolon1",
+    "DanHeng_Modifiers",
     "DanHeng_DanHeng_Trace02",
     "DanHeng_DanHeng_Trace01",
+    "DanHeng_DanHeng_Eidolon1",
+    "DanHeng_LocalPlayer_StandardAbility_AttackBreak",
+    "DanHeng_LocalPlayer_DanHeng_TechniqueUsage",
+    "DanHeng_LocalPlayer_DanHeng_NormalAtk01",
     "DanHeng_DanHeng_TechniqueInLevel",
     "DanHeng_DanHeng_PassiveAbility01_Enhance_Part02",
     "DanHeng_DanHeng_PassiveAbility01_Enhance_Part01",
@@ -16,29 +20,32 @@ const compositeAbilityObject = {
     "DanHeng_DanHeng_Ability02_Part02",
     "DanHeng_DanHeng_Ability02_Part01",
     "DanHeng_DanHeng_Ability01_Part02",
-    "DanHeng_DanHeng_Ability01_Part01",
-    "DanHeng_Modifiers"
+    "DanHeng_DanHeng_Ability01_Part01"
   ],
   "abilityObject": {
-    "DanHeng_DanHeng_Eidolon1": {
-      "fileName": "DanHeng_DanHeng_Eidolon1",
-      "abilityType": null,
+    "DanHeng_Modifiers": {
+      "fileName": "DanHeng_Modifiers",
+      "abilityType": "Char. Modifiers",
       "energy": null,
-      "toughnessList": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
       "parse": [
         {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1099783557\">DanHeng_Eidolon1</a>"
-        }
-      ],
-      "references": [
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1679198139\">ADV_StageAbility_Maze_DanHeng</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1099783557\">DanHeng_Eidolon1</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+          "description": "Wind RES PEN +<span class=\"descriptionNumberColor\">DanHeng_PassivePene</span>.",
+          "type": "Buff",
+          "effectName": "Wind RES PEN",
+          "statusName": "Superiority of Reach",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -46,21 +53,21 @@ const compositeAbilityObject = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Ability Target TAKING DMG}}"
-                    },
-                    "value1": "CurrentHP%",
-                    "compareType": ">=",
-                    "value2": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
-                    }
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Basic ATK"
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Skill"
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Ultimate"
+                      }
+                    ]
                   },
                   "passed": [
                     {
@@ -68,23 +75,303 @@ const compositeAbilityObject = {
                       "modifiedValuesArray": [
                         {
                           "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
-                          "value": "0.12"
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
+                          "value": "DanHeng_PassivePene"
                         }
                       ]
                     }
                   ]
                 }
               ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Ultimate"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Eidolon Activated",
+                        "eidolon": 2
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
+                            "displayLines": "(2 - 1)",
+                            "constants": [
+                              1
+                            ],
+                            "variables": [
+                              2
+                            ]
+                          },
+                          "immediateEffect": true
+                        },
+                        {
+                          "name": "Update Displayed Energy Bar",
+                          "assignState": "True",
+                          "priorState": "CoolDown",
+                          "bar#": 1,
+                          "cooldown": {
+                            "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
+                            "displayLines": "(2 - 1)",
+                            "constants": [
+                              1
+                            ],
+                            "variables": [
+                              2
+                            ]
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (2) || RETURN",
+                            "displayLines": "2",
+                            "constants": [],
+                            "variables": [
+                              2
+                            ]
+                          },
+                          "immediateEffect": true
+                        },
+                        {
+                          "name": "Update Displayed Energy Bar",
+                          "assignState": "True",
+                          "priorState": "CoolDown",
+                          "bar#": 1,
+                          "cooldown": {
+                            "operator": "Variables[0] (2) || RETURN",
+                            "displayLines": "2",
+                            "constants": [],
+                            "variables": [
+                              2
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Basic ATK"
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Skill"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Eidolon Activated",
+                        "eidolon": 2
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
+                            "displayLines": "(2 - 1)",
+                            "constants": [
+                              1
+                            ],
+                            "variables": [
+                              2
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Update Displayed Energy Bar",
+                          "assignState": "True",
+                          "priorState": "CoolDown",
+                          "bar#": 1,
+                          "cooldown": {
+                            "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
+                            "displayLines": "(2 - 1)",
+                            "constants": [
+                              1
+                            ],
+                            "variables": [
+                              2
+                            ]
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (2) || RETURN",
+                            "displayLines": "2",
+                            "constants": [],
+                            "variables": [
+                              2
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Update Displayed Energy Bar",
+                          "assignState": "True",
+                          "priorState": "CoolDown",
+                          "bar#": 1,
+                          "cooldown": {
+                            "operator": "Variables[0] (2) || RETURN",
+                            "displayLines": "2",
+                            "constants": [],
+                            "variables": [
+                              2
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                    }
+                  ]
+                }
+              ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "The effect of Talent \"Superiority of Reach\" cannot be triggered.",
+          "type": "Other",
+          "statusName": "Superiority of Reach",
+          "duration": 2,
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-997779121\">DanHeng_Passive_BeginTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "assignState": "True",
+                  "priorState": "Normal",
+                  "bar#": 1,
+                  "cooldown": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Turn End [Anyone]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "valueType": "LifeTime",
+                  "variableName": "DanHeng_00_Passive_BeginTargetEnhance_CD",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+                  "multiplier": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "DanHeng_00_Passive_BeginTargetEnhance_CD",
+                    "compareType": ">=",
+                    "value2": 0.5
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "assignState": "True",
+                      "priorState": "CoolDown",
+                      "bar#": 1,
+                      "cooldown": {
+                        "operator": "Variables[0] (DanHeng_00_Passive_BeginTargetEnhance_CD) || RETURN",
+                        "displayLines": "DanHeng_00_Passive_BeginTargetEnhance_CD",
+                        "constants": [],
+                        "variables": [
+                          "DanHeng_00_Passive_BeginTargetEnhance_CD"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-997779121\">DanHeng_Passive_BeginTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "The effect of Talent \"Superiority of Reach\" can now be triggered.",
+          "type": "Other",
+          "statusName": "Superiority of Reach"
         }
       ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
+      "references": []
     },
     "DanHeng_DanHeng_Trace02": {
       "fileName": "DanHeng_DanHeng_Trace02",
@@ -109,6 +396,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -131,11 +422,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -188,9 +475,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -236,6 +521,10 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1338494483\">DanHeng_Trace_AggroDown</a>[<span class=\"descriptionNumberColor\">Hidden Dragon</span>]",
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Lowers the chances of being attacked by enemies.",
+          "type": "Buff",
+          "effectName": "Aggro Chance Reduction",
+          "statusName": "Hidden Dragon",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -260,16 +549,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Lowers the chances of being attacked by enemies.",
-          "type": "Buff",
-          "effectName": "Aggro Chance Reduction",
-          "statusName": "Hidden Dragon"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1715636734\">DanHeng_LowHP_AggroDown</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_HPRatio",
+            "MDF_AggroDown"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -372,16 +661,371 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_HPRatio",
-            "MDF_AggroDown"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "DanHeng_DanHeng_Eidolon1": {
+      "fileName": "DanHeng_DanHeng_Eidolon1",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1099783557\">DanHeng_Eidolon1</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1099783557\">DanHeng_Eidolon1</a>",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target TAKING DMG}}"
+                    },
+                    "value1": "CurrentHP%",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (0.5) || RETURN",
+                      "displayLines": "0.5",
+                      "constants": [],
+                      "variables": [
+                        0.5
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
+                          "value": "0.12"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "DanHeng_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "DanHeng_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "DanHeng_LocalPlayer_DanHeng_TechniqueUsage": {
+      "fileName": "DanHeng_LocalPlayer_DanHeng_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "100201(SkillMaze)",
+          "duration": -1
+        },
+        "Submit Technique Use"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "DanHeng_LocalPlayer_DanHeng_NormalAtk01": {
+      "fileName": "DanHeng_LocalPlayer_DanHeng_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "failed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "DanHeng_DanHeng_TechniqueInLevel": {
@@ -412,6 +1056,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1978717144\">DanHeng_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Splitting Spearhead</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Splitting Spearhead",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -434,11 +1082,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Splitting Spearhead"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -487,9 +1131,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -988,15 +1630,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-993379801\">AbilityPreShowModifier2</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1023,8 +1661,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1621594543\">AbilityPreShowModifier</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1208,9 +1844,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1457,6 +2091,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedDown"
           ],
+          "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Slow",
+          "statusName": "Slow",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1481,15 +2119,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Slow",
-          "statusName": "Slow"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2025698986\">DanHeng_Ability02_CheckCritical_Modifier</a>",
+          "stackData": [
+            "MDF_Chance"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -1539,11 +2176,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Chance"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1720,9 +2353,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1764,358 +2395,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "DanHeng_Modifiers": {
-      "fileName": "DanHeng_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Basic ATK"
-                      },
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Skill"
-                      },
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Ultimate"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
-                          "value": "DanHeng_PassivePene"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Ultimate"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Eidolon Activated",
-                        "eidolon": 2
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
-                          "duration": {
-                            "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(2 - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              2
-                            ]
-                          },
-                          "immediateEffect": true
-                        },
-                        {
-                          "name": "Update Displayed Energy Bar",
-                          "assignState": "True",
-                          "priorState": "CoolDown",
-                          "bar#": 1,
-                          "cooldown": {
-                            "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(2 - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              2
-                            ]
-                          }
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
-                          "duration": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
-                          },
-                          "immediateEffect": true
-                        },
-                        {
-                          "name": "Update Displayed Energy Bar",
-                          "assignState": "True",
-                          "priorState": "CoolDown",
-                          "bar#": 1,
-                          "cooldown": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Basic ATK"
-                      },
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Skill"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Eidolon Activated",
-                        "eidolon": 2
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
-                          "duration": {
-                            "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(2 - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              2
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Update Displayed Energy Bar",
-                          "assignState": "True",
-                          "priorState": "CoolDown",
-                          "bar#": 1,
-                          "cooldown": {
-                            "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(2 - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              2
-                            ]
-                          }
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
-                          "duration": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Update Displayed Energy Bar",
-                          "assignState": "True",
-                          "priorState": "CoolDown",
-                          "bar#": 1,
-                          "cooldown": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "DanHeng_PassivePene"
-          ],
-          "latentQueue": [],
-          "description": "Wind RES PEN +<span class=\"descriptionNumberColor\">DanHeng_PassivePene</span>.",
-          "type": "Buff",
-          "effectName": "Wind RES PEN",
-          "statusName": "Superiority of Reach"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-997779121\">DanHeng_Passive_BeginTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "assignState": "True",
-                  "priorState": "Normal",
-                  "bar#": 1,
-                  "cooldown": 0
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn End [Anyone]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "valueType": "LifeTime",
-                  "variableName": "DanHeng_00_Passive_BeginTargetEnhance_CD",
-                  "modifierName": "<a class=\"gModGreen\" id=\"-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
-                  "multiplier": 1
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "DanHeng_00_Passive_BeginTargetEnhance_CD",
-                    "compareType": ">=",
-                    "value2": 0.5
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "assignState": "True",
-                      "priorState": "CoolDown",
-                      "bar#": 1,
-                      "cooldown": {
-                        "operator": "Variables[0] (DanHeng_00_Passive_BeginTargetEnhance_CD) || RETURN",
-                        "displayLines": "DanHeng_00_Passive_BeginTargetEnhance_CD",
-                        "constants": [],
-                        "variables": [
-                          "DanHeng_00_Passive_BeginTargetEnhance_CD"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The effect of Talent \"Superiority of Reach\" cannot be triggered.",
-          "type": "Other",
-          "statusName": "Superiority of Reach",
-          "duration": 2
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-997779121\">DanHeng_Passive_BeginTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
-          "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The effect of Talent \"Superiority of Reach\" can now be triggered.",
-          "type": "Other",
-          "statusName": "Superiority of Reach"
-        }
-      ],
-      "references": []
     }
   }
 }

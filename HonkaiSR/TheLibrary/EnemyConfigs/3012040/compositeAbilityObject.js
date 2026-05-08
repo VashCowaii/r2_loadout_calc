@@ -4,12 +4,12 @@ const compositeAbilityObject = {
   "trimCharacterName": 3012040,
   "abilityList": [
     "3012040_Monster_W3_Ghost_AbilityP01_ForceKill",
+    "3012040_Monster_W3_Ghost_AbilityP01",
     "3012040_Monster_W3_Ghost_Ability02_Part02",
     "3012040_Monster_W3_Ghost_Ability02_Part01",
     "3012040_Monster_W3_Ghost_Ability01_InsertAbility",
     "3012040_Monster_W3_Ghost_Ability01_Part02",
     "3012040_Monster_W3_Ghost_Ability01_Part01",
-    "3012040_Monster_W3_Ghost_AbilityP01",
     "3012040_Modifiers"
   ],
   "abilityObject": {
@@ -29,6 +29,52 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3012040_Monster_W3_Ghost_AbilityP01": {
+      "fileName": "3012040_Monster_W3_Ghost_AbilityP01",
+      "childAbilityList": [
+        "3012040_Monster_W3_Ghost_AbilityP01",
+        "3012040_Monster_W3_Ghost_AbilityP01_ForceKill"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-262946192\">Enemy_W3_Ghost_SelfDestory_Controller</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1834399911\">Enemy_W3_Ghost_ConfineHit_Controller</a>"
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"780210766\">Enemy_W3_Ghost_EffectController</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -267,52 +313,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "3012040_Monster_W3_Ghost_AbilityP01": {
-      "fileName": "3012040_Monster_W3_Ghost_AbilityP01",
-      "childAbilityList": [
-        "3012040_Monster_W3_Ghost_AbilityP01",
-        "3012040_Monster_W3_Ghost_AbilityP01_ForceKill"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-262946192\">Enemy_W3_Ghost_SelfDestory_Controller</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1834399911\">Enemy_W3_Ghost_ConfineHit_Controller</a>"
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"780210766\">Enemy_W3_Ghost_EffectController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "3012040_Modifiers": {
       "fileName": "3012040_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -325,9 +325,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1556449697\">Enemy_W3_Ghost_DebuffDispeled</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1556449697\">Enemy_W3_Ghost_DebuffDispeled</a>"
         },
         {
           "name": "Modifier Construction",
@@ -346,9 +344,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -416,9 +412,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -526,9 +520,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -615,6 +607,15 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-892811864\">Enemy_W3_Ghost_Ability01_Parasitize_Target</a>[<span class=\"descriptionNumberColor\">Deception's Crown</span>]",
           "modifierFlags": [],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_HealPercentage_BeAttacked",
+            "MDF_ElementDamageTakenUp"
+          ],
+          "description": "Restores HP after being attacked but additionally gains Physical and Fire-Type Weaknesses and takes increased Break DMG. This state will be dispelled after being Weakness Broken.",
+          "type": "Other",
+          "effectName": "Deception's Crown",
+          "statusName": "Deception's Crown",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -935,17 +936,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_HealPercentage_BeAttacked",
-            "MDF_ElementDamageTakenUp"
-          ],
-          "latentQueue": [],
-          "description": "Restores HP after being attacked but additionally gains Physical and Fire-Type Weaknesses and takes increased Break DMG. This state will be dispelled after being Weakness Broken.",
-          "type": "Other",
-          "effectName": "Deception's Crown",
-          "statusName": "Deception's Crown"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -957,9 +948,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

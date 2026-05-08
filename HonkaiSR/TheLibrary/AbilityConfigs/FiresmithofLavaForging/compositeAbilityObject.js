@@ -25,6 +25,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2026250788\">Relic_107_FireDamageAddRatio</a>[<span class=\"descriptionNumberColor\">Firesmith of Lava-Forging</span>]",
+          "description": "The next attack's Fire DMG increases by <span class=\"descriptionNumberColor\">#SkillRelic_107_4_P2_DamageAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "Fire DMG Boost",
+          "statusName": "Firesmith of Lava-Forging",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -53,11 +57,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "description": "The next attack's Fire DMG increases by <span class=\"descriptionNumberColor\">#SkillRelic_107_4_P2_DamageAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "Fire DMG Boost",
-          "statusName": "Firesmith of Lava-Forging"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -111,9 +111,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

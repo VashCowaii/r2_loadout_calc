@@ -19,6 +19,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1130750663\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0010_02</a>[<span class=\"descriptionNumberColor\">Elation Instant</span>]",
       "stackType": "Replace",
+      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Other",
+      "statusName": "Elation Instant",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -148,10 +151,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Other",
-      "statusName": "Elation Instant"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -246,9 +246,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

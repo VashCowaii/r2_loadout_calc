@@ -25,6 +25,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__704251526\">Yanqing_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">The One True Sword</span>]",
+      "description": "Increases DMG dealt to enemies whose current HP percentage is higher than or equal to <span class=\"descriptionNumberColor\">MDF_HPRatio</span> by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "The One True Sword",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -63,11 +67,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG dealt to enemies whose current HP percentage is higher than or equal to <span class=\"descriptionNumberColor\">MDF_HPRatio</span> by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "The One True Sword"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -124,9 +124,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

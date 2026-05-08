@@ -658,9 +658,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -701,6 +699,27 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-249880334\">Tribbie_PointB3_AddSpModifier</a>",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]  - {{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-421970928\">Tribbie_PointB3_AddSpAura</a>",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (1.5) || RETURN",
+              "displayLines": "1.5",
+              "constants": [],
+              "variables": [
+                1.5
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -734,29 +753,6 @@ const configAbility = {
             }
           ],
           "priorityLevel": -80
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]  - {{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-421970928\">Tribbie_PointB3_AddSpAura</a>",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (1.5) || RETURN",
-              "displayLines": "1.5",
-              "constants": [],
-              "variables": [
-                1.5
-              ]
-            }
-          }
         }
       ]
     }

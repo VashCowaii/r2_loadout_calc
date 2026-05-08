@@ -308,6 +308,33 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1560366857\">Modifier_FantasticStory_BaseAbility_2060_sub</a>",
       "stackType": "ReplaceByCaster",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1645086487\">Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub_PLY</a>[<span class=\"descriptionNumberColor\">Paradox</span>]",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "DV_FantasticStory_PlusAbility_2065",
+            "compareType": "=",
+            "value2": 1
+          },
+          "valuePerStack": {
+            "DV_FantasticStory_PlusAbility_2065_ADF_1": {
+              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2065_ADF_1) || RETURN",
+              "displayLines": "DV_FantasticStory_PlusAbility_2065_ADF_1",
+              "constants": [],
+              "variables": [
+                "DV_FantasticStory_PlusAbility_2065_ADF_1"
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -707,39 +734,24 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1645086487\">Modifier_FantasticStory_BaseAbility_2060_Plus5_Sub_PLY</a>[<span class=\"descriptionNumberColor\">Paradox</span>]",
-          "haloStatus": true,
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "DV_FantasticStory_PlusAbility_2065",
-            "compareType": "=",
-            "value2": 1
-          },
-          "valuePerStack": {
-            "DV_FantasticStory_PlusAbility_2065_ADF_1": {
-              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2065_ADF_1) || RETURN",
-              "displayLines": "DV_FantasticStory_PlusAbility_2065_ADF_1",
-              "constants": [],
-              "variables": [
-                "DV_FantasticStory_PlusAbility_2065_ADF_1"
-              ]
-            }
-          }
-        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__962180542\">Modifier_FantasticStory_BaseAbility_2060</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_2061",
+        "DV_FantasticStory_PlusAbility_2062",
+        "DV_FantasticStory_PlusAbility_2064",
+        "DV_FantasticStory_PlusAbility_2065",
+        "DV_FantasticStory_PlusAbility_2066",
+        "DV_FantasticStory_PlusAbility_2067",
+        "DV_FantasticStory_PlusAbility_2068",
+        "DV_FantasticStory_PlusAbility_2069",
+        "DV_FantasticStory_PlusAbility_2070",
+        "DV_FantasticStory_BaseAbility_TriggerFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -1272,19 +1284,6 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2061",
-        "DV_FantasticStory_PlusAbility_2062",
-        "DV_FantasticStory_PlusAbility_2064",
-        "DV_FantasticStory_PlusAbility_2065",
-        "DV_FantasticStory_PlusAbility_2066",
-        "DV_FantasticStory_PlusAbility_2067",
-        "DV_FantasticStory_PlusAbility_2068",
-        "DV_FantasticStory_PlusAbility_2069",
-        "DV_FantasticStory_PlusAbility_2070",
-        "DV_FantasticStory_BaseAbility_TriggerFlag"
       ]
     },
     {
@@ -1300,6 +1299,22 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-149468610\">Modifier_FantasticStory_HPParentChild</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "DV_FantasticStory_BaseAbility_TriggerFlag",
+        "DV_FantasticStory_PlusAbility_2070",
+        "DV_FantasticStory_PlusAbility_2069",
+        "DV_FantasticStory_PlusAbility_2068",
+        "DV_FantasticStory_PlusAbility_2067",
+        "DV_FantasticStory_PlusAbility_2066",
+        "DV_FantasticStory_PlusAbility_2065",
+        "DV_FantasticStory_PlusAbility_2064",
+        "DV_FantasticStory_PlusAbility_2062",
+        "DV_FantasticStory_PlusAbility_2061"
+      ],
+      "description": "After non-Elite enemy targets are defeated, receive DMG based on a certain percentage of this unit's Max HP.",
+      "type": "Buff",
+      "effectName": "Binding Obligation",
+      "statusName": "Binding Obligation",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1347,24 +1362,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_TriggerFlag",
-        "DV_FantasticStory_PlusAbility_2070",
-        "DV_FantasticStory_PlusAbility_2069",
-        "DV_FantasticStory_PlusAbility_2068",
-        "DV_FantasticStory_PlusAbility_2067",
-        "DV_FantasticStory_PlusAbility_2066",
-        "DV_FantasticStory_PlusAbility_2065",
-        "DV_FantasticStory_PlusAbility_2064",
-        "DV_FantasticStory_PlusAbility_2062",
-        "DV_FantasticStory_PlusAbility_2061"
-      ],
-      "description": "After non-Elite enemy targets are defeated, receive DMG based on a certain percentage of this unit's Max HP.",
-      "type": "Buff",
-      "effectName": "Binding Obligation",
-      "statusName": "Binding Obligation"
+      ]
     }
   ]
 }

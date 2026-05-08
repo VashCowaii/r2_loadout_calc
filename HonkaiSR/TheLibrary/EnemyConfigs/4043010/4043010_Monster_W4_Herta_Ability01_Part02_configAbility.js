@@ -202,6 +202,7 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1515699713\">Monster_W4_Herta_SummonMonsterKillTogether</a>",
+      "useEntitySnapshot": true,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -233,10 +234,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -284,9 +282,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

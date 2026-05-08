@@ -38,6 +38,29 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1590210347\">Modifier_FantasticStory_BaseAbility_2210_BaseAddOn</a>",
       "stackType": "ReplaceByCaster",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1871573228\">Modifier_FantasticStory_BaseAbility_2210_BaseAddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
+          "haloStatus": true,
+          "valuePerStack": {
+            "DV_Ratio": {
+              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio) || Constants[0] (100) || MUL || RETURN",
+              "displayLines": "(DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio * 100)",
+              "constants": [
+                100
+              ],
+              "variables": [
+                "DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio"
+              ]
+            }
+          }
+        }
+      ],
       "elationValueChange": [
         {
           "name": "Variable Value Range Conditions",
@@ -143,31 +166,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1871573228\">Modifier_FantasticStory_BaseAbility_2210_BaseAddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
-          "haloStatus": true,
-          "valuePerStack": {
-            "DV_Ratio": {
-              "operator": "Variables[0] (DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio) || Constants[0] (100) || MUL || RETURN",
-              "displayLines": "(DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio * 100)",
-              "constants": [
-                100
-              ],
-              "variables": [
-                "DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio"
-              ]
-            }
-          }
         }
       ]
     }

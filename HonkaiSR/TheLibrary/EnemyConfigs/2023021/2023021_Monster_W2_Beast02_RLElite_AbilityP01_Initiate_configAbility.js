@@ -93,6 +93,9 @@ const configAbility = {
         "ListenBattleEventSkill",
         "KeepOnDeathrattle"
       ],
+      "latentQueue": [
+        "Beast02RL_Num_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -320,10 +323,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Beast02RL_Num_Flag"
       ]
     }
   ]

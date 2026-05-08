@@ -10,9 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1307561457\">BattleEvent60032_1415</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1307561457\">BattleEvent60032_1415</a>"
     },
     {
       "name": "Modifier Construction",
@@ -49,9 +47,7 @@ const configAbility = {
         {
           "eventTrigger": "Update Target Selected(UI) [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -60,9 +56,7 @@ const configAbility = {
         {
           "eventTrigger": "Update Target Selected(UI) [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -94,9 +88,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

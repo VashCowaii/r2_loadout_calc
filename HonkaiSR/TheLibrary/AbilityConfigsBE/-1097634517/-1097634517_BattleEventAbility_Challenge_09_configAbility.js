@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-269425147\">MLevel_BattleEventAbility_Challenge_09</a>[<span class=\"descriptionNumberColor\">Wind Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Wind DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
+      "type": "Debuff",
+      "effectName": "Wind Vulnerability",
+      "statusName": "Wind Vulnerability",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -41,11 +45,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Wind DMG taken +<span class=\"descriptionNumberColor\">#BattleEvent_P2_ADF</span>.",
-      "type": "Debuff",
-      "effectName": "Wind Vulnerability",
-      "statusName": "Wind Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -96,9 +96,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

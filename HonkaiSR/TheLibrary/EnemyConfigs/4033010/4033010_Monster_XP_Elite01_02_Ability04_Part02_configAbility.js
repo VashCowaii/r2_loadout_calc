@@ -30,6 +30,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2071311511\">Enemy_XP_Elite01_02_Charge_Enhance</a>[<span class=\"descriptionNumberColor\">Ominous Degeneration</span>]",
+      "description": "Uses \"Torrential Surge\" in the next action.",
+      "type": "Other",
+      "statusName": "Ominous Degeneration",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -40,12 +43,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Uses \"Torrential Surge\" in the next action.",
-      "type": "Other",
-      "statusName": "Ominous Degeneration"
+      ]
     }
   ]
 }

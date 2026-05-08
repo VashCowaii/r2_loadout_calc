@@ -10,7 +10,17 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1616123582\">ADV_StageAbility_Maze_Lingsha</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1203114075\">Lingsha_Eidolon6_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Arcadia Under Deep Seclusion</span>]",
+      "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "All-Type RES Reduction",
+      "statusName": "Arcadia Under Deep Seclusion",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -35,17 +45,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "All-Type RES Reduction",
-      "statusName": "Arcadia Under Deep Seclusion"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1458980452\">Lingsha_Eidolon6_Listen</a>",
-      "stackData": [],
-      "latentQueue": [],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -73,6 +77,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-962483629\">Lingsha_Eidolon2_BreakDamageAttackRatio</a>[<span class=\"descriptionNumberColor\">Leisure in Carmine Smokeveil</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Break Effect Boost",
+      "statusName": "Leisure in Carmine Smokeveil",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -95,19 +103,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Break Effect Boost",
-      "statusName": "Leisure in Carmine Smokeveil"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-127930650\">Lingsha_Eidolon1_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">Bloom on Vileward Bouquet</span>]",
+      "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "DEF Reduction",
+      "statusName": "Bloom on Vileward Bouquet",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -125,11 +129,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "DEF Reduction",
-      "statusName": "Bloom on Vileward Bouquet"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -162,9 +162,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -214,11 +212,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "Rank01_MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -245,20 +239,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__551246003\">Lingsha_PointB3_CD</a>[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [],
-      "latentQueue": [
-        "BattleEvent_Lingsha_00_PointB3"
-      ],
       "description": "The Trace \"Ember's Echo\" effect's auto-trigger is still on cooldown.",
       "type": "Other",
       "statusName": "Ember's Echo",
@@ -599,12 +585,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_HPRatio",
-        "MDF_LifeTime"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -746,16 +727,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "_AttackTime"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-637709984\">Lingsha_BreakDamageUp</a>[<span class=\"descriptionNumberColor\">Befog</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Break DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "Befog",
+      "statusName": "Befog",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -787,15 +768,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Break DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "Befog",
-      "statusName": "Befog"
+      ]
     }
   ],
   "references": []

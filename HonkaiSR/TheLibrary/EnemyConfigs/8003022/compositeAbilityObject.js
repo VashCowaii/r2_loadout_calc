@@ -3,595 +3,25 @@ const compositeAbilityObject = {
   "fullCharacterName": 8003022,
   "trimCharacterName": 8003022,
   "abilityList": [
-    "8003022_Monster_XP_Elite01_Ability09_Camera_IF",
-    "8003022_Monster_XP_Elite01_Ability08_Camera_IF",
-    "8003022_Monster_XP_Elite01_Ability05_Camera_IF",
-    "8003022_Monster_XP_Elite01_Ability09_Part01_IF",
-    "8003022_Monster_XP_Elite01_Ability08_Part01_IF",
-    "8003022_Monster_XP_Elite01_Ability05_Part02_IF",
-    "8003022_Monster_XP_Elite01_Ability05_Part01_IF",
     "8003022_Monster_XP_Elite01_PassiveAbility01_IF",
     "8003022_Monster_XP_Elite01_Ability09_Part02",
-    "8003022_Monster_XP_Elite01_Ability09_Part01",
+    "8003022_Monster_XP_Elite01_Ability09_Part01_IF",
+    "8003022_Monster_XP_Elite01_Ability09_Camera_IF",
     "8003022_Monster_XP_Elite01_Ability08_Part02",
-    "8003022_Monster_XP_Elite01_Ability08_Part01",
+    "8003022_Monster_XP_Elite01_Ability08_Part01_IF",
+    "8003022_Monster_XP_Elite01_Ability08_Camera_IF",
     "8003022_Monster_XP_Elite01_Ability07_Part02",
     "8003022_Monster_XP_Elite01_Ability07_Part01",
-    "8003022_Monster_XP_Elite01_Ability05_Part02",
-    "8003022_Monster_XP_Elite01_Ability05_Part01",
+    "8003022_Monster_XP_Elite01_Ability05_Part02_IF",
+    "8003022_Monster_XP_Elite01_Ability05_Part01_IF",
+    "8003022_Monster_XP_Elite01_Ability05_Camera_IF",
     "8003022_Monster_XP_Elite01_Ability03_Part02",
     "8003022_Monster_XP_Elite01_Ability03_Part01",
     "8003022_Monster_XP_Elite01_Ability01_Part02",
     "8003022_Monster_XP_Elite01_Ability01_Part01",
-    "8003022_Monster_XP_Elite01_PassiveAbility01",
     "8003022_Modifiers"
   ],
   "abilityObject": {
-    "8003022_Monster_XP_Elite01_Ability09_Camera_IF": {
-      "fileName": "8003022_Monster_XP_Elite01_Ability09_Camera_IF",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8003022_Monster_XP_Elite01_Ability08_Camera_IF": {
-      "fileName": "8003022_Monster_XP_Elite01_Ability08_Camera_IF",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8003022_Monster_XP_Elite01_Ability05_Camera_IF": {
-      "fileName": "8003022_Monster_XP_Elite01_Ability05_Camera_IF",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8003022_Monster_XP_Elite01_Ability09_Part01_IF": {
-      "fileName": "8003022_Monster_XP_Elite01_Ability09_Part01_IF",
-      "childAbilityList": [
-        "8003022_Monster_XP_Elite01_Ability09_Camera_IF",
-        "8003022_Monster_XP_Elite01_Ability09_Part01_IF",
-        "8003022_Monster_XP_Elite01_Ability09_Part02"
-      ],
-      "skillTrigger": "Skill09",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Elite01_Ability09_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8003022_Monster_XP_Elite01_Ability08_Part01_IF": {
-      "fileName": "8003022_Monster_XP_Elite01_Ability08_Part01_IF",
-      "childAbilityList": [
-        "8003022_Monster_XP_Elite01_Ability08_Camera_IF",
-        "8003022_Monster_XP_Elite01_Ability08_Part01_IF",
-        "8003022_Monster_XP_Elite01_Ability08_Part02"
-      ],
-      "skillTrigger": "Skill08",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Elite01_Ability08_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}",
-        "targetIsVariable": true
-      },
-      "references": []
-    },
-    "8003022_Monster_XP_Elite01_Ability05_Part02_IF": {
-      "fileName": "8003022_Monster_XP_Elite01_Ability05_Part02_IF",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Set Target Parameter",
-          "readTarget": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "paramTarget": {
-            "name": "Target Name",
-            "target": "{{Enemies by Aggro OR Random}}"
-          },
-          "variableName": "ProjectileFirstTarget"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "isParallel": true,
-          "sequenceList": [
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "Shot Fired",
-                  "execute": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Projectile's Target}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "ATK Scaling DMG",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Projectile's Target}}"
-                          },
-                          "AttackScaling": {
-                            "DamageType": "Fire",
-                            "Damage": {
-                              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                              "displayLines": "{[Skill05[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[0]]}"
-                              ]
-                            },
-                            "Toughness": null,
-                            "Tags": null,
-                            "EnergyGainPercent": "100%"
-                          }
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Projectile's Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
-                          "duration": {
-                            "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                            "displayLines": "{[Skill05[2]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[2]]}"
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_DamagePercentage_Layer": {
-                              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                              "displayLines": "{[Skill05[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[3]]}"
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "Shot Fired",
-                  "execute": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Projectile's Target}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "ATK Scaling DMG",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Projectile's Target}}"
-                          },
-                          "AttackScaling": {
-                            "DamageType": "Fire",
-                            "Damage": {
-                              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                              "displayLines": "{[Skill05[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[0]]}"
-                              ]
-                            },
-                            "Toughness": null,
-                            "Tags": null,
-                            "EnergyGainPercent": "100%"
-                          }
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Projectile's Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
-                          "duration": {
-                            "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                            "displayLines": "{[Skill05[2]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[2]]}"
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_DamagePercentage_Layer": {
-                              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                              "displayLines": "{[Skill05[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[3]]}"
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "Shot Fired",
-                  "execute": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Projectile's Target}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "ATK Scaling DMG",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Projectile's Target}}"
-                          },
-                          "AttackScaling": {
-                            "DamageType": "Fire",
-                            "Damage": {
-                              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                              "displayLines": "{[Skill05[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[0]]}"
-                              ]
-                            },
-                            "Toughness": null,
-                            "Tags": null,
-                            "EnergyGainPercent": "100%"
-                          }
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Projectile's Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
-                          "duration": {
-                            "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                            "displayLines": "{[Skill05[2]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[2]]}"
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_DamagePercentage_Layer": {
-                              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                              "displayLines": "{[Skill05[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[3]]}"
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "Shot Fired",
-                  "execute": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Projectile's Target}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "ATK Scaling DMG",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Projectile's Target}}"
-                          },
-                          "AttackScaling": {
-                            "DamageType": "Fire",
-                            "Damage": {
-                              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                              "displayLines": "{[Skill05[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[0]]}"
-                              ]
-                            },
-                            "Toughness": null,
-                            "Tags": null,
-                            "EnergyGainPercent": "100%"
-                          }
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Projectile's Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
-                          "duration": {
-                            "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                            "displayLines": "{[Skill05[2]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[2]]}"
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_DamagePercentage_Layer": {
-                              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                              "displayLines": "{[Skill05[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[3]]}"
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "Shot Fired",
-                  "execute": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Projectile's Target}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "ATK Scaling DMG",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Projectile's Target}}"
-                          },
-                          "AttackScaling": {
-                            "DamageType": "Fire",
-                            "Damage": {
-                              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                              "displayLines": "{[Skill05[0]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[0]]}"
-                              ]
-                            },
-                            "Toughness": null,
-                            "Tags": null,
-                            "EnergyGainPercent": "100%"
-                          }
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Projectile's Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
-                          "duration": {
-                            "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                            "displayLines": "{[Skill05[2]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[2]]}"
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                            "displayLines": "{[Skill05[1]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[Skill05[1]]}"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_DamagePercentage_Layer": {
-                              "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                              "displayLines": "{[Skill05[3]]}",
-                              "constants": [],
-                              "variables": [
-                                "{[Skill05[3]]}"
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8003022_Monster_XP_Elite01_Ability05_Part01_IF": {
-      "fileName": "8003022_Monster_XP_Elite01_Ability05_Part01_IF",
-      "childAbilityList": [
-        "8003022_Monster_XP_Elite01_Ability05_Camera_IF",
-        "8003022_Monster_XP_Elite01_Ability05_Part01_IF",
-        "8003022_Monster_XP_Elite01_Ability05_Part02_IF"
-      ],
-      "skillTrigger": "Skill05",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Elite01_Ability05_Part02_IF",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}",
-        "targetIsVariable": true
-      },
-      "references": []
-    },
     "8003022_Monster_XP_Elite01_PassiveAbility01_IF": {
       "fileName": "8003022_Monster_XP_Elite01_PassiveAbility01_IF",
       "skillTrigger": "PassiveSkill01",
@@ -729,9 +159,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -839,9 +267,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__2044612477\">Enemy_XP_Elite01_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -850,9 +276,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Choice Window [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -883,13 +307,13 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] ({[Skill09[0]]}) || Variables[1] ({[Skill09[1]]}) || Variables[2] (UnusedUnderThisBase_159) || MUL || ADD || RETURN",
-                  "displayLines": "({[Skill09[0]]} + ({[Skill09[1]]} * UnusedUnderThisBase_159))",
+                  "operator": "Variables[0] ({[Skill09[0]]}) || Variables[1] ({[Skill09[1]]}) || Variables[2] (ENEMIES_OBJECT_UNUSED__253) || MUL || ADD || RETURN",
+                  "displayLines": "({[Skill09[0]]} + ({[Skill09[1]]} * ENEMIES_OBJECT_UNUSED__253))",
                   "constants": [],
                   "variables": [
                     "{[Skill09[0]]}",
                     "{[Skill09[1]]}",
-                    "UnusedUnderThisBase_159"
+                    "ENEMIES_OBJECT_UNUSED__253"
                   ]
                 },
                 "Toughness": null,
@@ -935,9 +359,15 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8003022_Monster_XP_Elite01_Ability09_Part01": {
-      "fileName": "8003022_Monster_XP_Elite01_Ability09_Part01",
-      "abilityType": null,
+    "8003022_Monster_XP_Elite01_Ability09_Part01_IF": {
+      "fileName": "8003022_Monster_XP_Elite01_Ability09_Part01_IF",
+      "childAbilityList": [
+        "8003022_Monster_XP_Elite01_Ability09_Camera_IF",
+        "8003022_Monster_XP_Elite01_Ability09_Part01_IF",
+        "8003022_Monster_XP_Elite01_Ability09_Part02"
+      ],
+      "skillTrigger": "Skill09",
+      "abilityType": "Skill",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -952,6 +382,20 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "8003022_Monster_XP_Elite01_Ability09_Camera_IF": {
+      "fileName": "8003022_Monster_XP_Elite01_Ability09_Camera_IF",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
@@ -1647,11 +1091,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "BurningCount",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_159) || Variables[1] (BurningLayer) || ADD || RETURN",
-                "displayLines": "(UnusedUnderThisBase_159 + BurningLayer)",
+                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__253) || Variables[1] (BurningLayer) || ADD || RETURN",
+                "displayLines": "(ENEMIES_OBJECT_UNUSED__253 + BurningLayer)",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_159",
+                  "ENEMIES_OBJECT_UNUSED__253",
                   "BurningLayer"
                 ]
               }
@@ -1678,9 +1122,15 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8003022_Monster_XP_Elite01_Ability08_Part01": {
-      "fileName": "8003022_Monster_XP_Elite01_Ability08_Part01",
-      "abilityType": null,
+    "8003022_Monster_XP_Elite01_Ability08_Part01_IF": {
+      "fileName": "8003022_Monster_XP_Elite01_Ability08_Part01_IF",
+      "childAbilityList": [
+        "8003022_Monster_XP_Elite01_Ability08_Camera_IF",
+        "8003022_Monster_XP_Elite01_Ability08_Part01_IF",
+        "8003022_Monster_XP_Elite01_Ability08_Part02"
+      ],
+      "skillTrigger": "Skill08",
+      "abilityType": "Skill",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -1697,6 +1147,21 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
+      "references": []
+    },
+    "8003022_Monster_XP_Elite01_Ability08_Camera_IF": {
+      "fileName": "8003022_Monster_XP_Elite01_Ability08_Camera_IF",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },
@@ -1796,8 +1261,8 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8003022_Monster_XP_Elite01_Ability05_Part02": {
-      "fileName": "8003022_Monster_XP_Elite01_Ability05_Part02",
+    "8003022_Monster_XP_Elite01_Ability05_Part02_IF": {
+      "fileName": "8003022_Monster_XP_Elite01_Ability05_Part02_IF",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -2233,9 +1698,15 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8003022_Monster_XP_Elite01_Ability05_Part01": {
-      "fileName": "8003022_Monster_XP_Elite01_Ability05_Part01",
-      "abilityType": null,
+    "8003022_Monster_XP_Elite01_Ability05_Part01_IF": {
+      "fileName": "8003022_Monster_XP_Elite01_Ability05_Part01_IF",
+      "childAbilityList": [
+        "8003022_Monster_XP_Elite01_Ability05_Camera_IF",
+        "8003022_Monster_XP_Elite01_Ability05_Part01_IF",
+        "8003022_Monster_XP_Elite01_Ability05_Part02_IF"
+      ],
+      "skillTrigger": "Skill05",
+      "abilityType": "Skill",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -2245,11 +1716,26 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_XP_Elite01_Ability05_Part02",
+          "ability": "Monster_XP_Elite01_Ability05_Part02_IF",
           "isTrigger": true
         },
         "Deleted bullshit"
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
+      "references": []
+    },
+    "8003022_Monster_XP_Elite01_Ability05_Camera_IF": {
+      "fileName": "8003022_Monster_XP_Elite01_Ability05_Camera_IF",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
       "targetObjectData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
@@ -2443,274 +1929,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8003022_Monster_XP_Elite01_PassiveAbility01": {
-      "fileName": "8003022_Monster_XP_Elite01_PassiveAbility01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2044612477\">Enemy_XP_Elite01_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1742468401\">Enemy_XP_Elite01_ListenStanceBreakModifier</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-561802374\">NoWeakAndResistance</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1742468401\">Enemy_XP_Elite01_ListenStanceBreakModifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "StanceBreak_Sign",
-                    "compareType": "=",
-                    "value2": 1,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1090456915\">XP_Fire_Elite_Burning_Modifier_2</a>[<span class=\"descriptionNumberColor\">Spontaneous Combustion</span>]"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": 8003021,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "characterName": "Blaze Out of Space (Bug)"
-                      },
-                      "failed": [
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1077360781\">XP_Elite_Fire_Ability07_AttackUp_Modifier</a>[<span class=\"descriptionNumberColor\">Molten</span>]"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Skill07_Added_AttackRatio",
-                      "value": 0
-                    },
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "StanceBreak_Sign"
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-561802374\">NoWeakAndResistance</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-561802374\">NoWeakAndResistance</a>"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__76652957\">Enemy_XP_Elite01_AIControl</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Phase_Flag",
-                    "compareType": "=",
-                    "value2": 1,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1,
-                      "min": 1,
-                      "max": 4
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "AIFlag",
-                        "compareType": ">",
-                        "value2": 3,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1,
-                      "min": 1,
-                      "max": 3
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "AIFlag",
-                        "compareType": ">",
-                        "value2": 2,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2044612477\">Enemy_XP_Elite01_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action Choice Window [Owner]"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "8003022_Modifiers": {
       "fileName": "8003022_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -2730,6 +1948,22 @@ const compositeAbilityObject = {
             "STAT_DOT",
             "STAT_DOT_Burn"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_DamagePercentage_Layer"
+          ],
+          "description": "Takes Fire DMG at the beginning of each turn for a certain number of turns.",
+          "type": "Debuff",
+          "effectName": "Enkindle",
+          "statusName": "Enkindle",
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+            "displayLines": "ModifierStackLayer",
+            "constants": [],
+            "variables": [
+              "ModifierStackLayer"
+            ]
+          },
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2845,29 +2079,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_DamagePercentage_Layer"
-          ],
-          "latentQueue": [],
-          "description": "Takes Fire DMG at the beginning of each turn for a certain number of turns.",
-          "type": "Debuff",
-          "effectName": "Enkindle",
-          "statusName": "Enkindle",
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1077360781\">XP_Elite_Fire_Ability07_AttackUp_Modifier</a>[<span class=\"descriptionNumberColor\">Molten</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "Modifier_AttackAddedRatio"
+          ],
+          "description": "Increases ATK by <span class=\"descriptionNumberColor\">Modifier_AttackAddedRatio</span>. This effect can stack.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Molten",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2901,22 +2127,22 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "Modifier_AttackAddedRatio"
-          ],
-          "latentQueue": [],
-          "description": "Increases ATK by <span class=\"descriptionNumberColor\">Modifier_AttackAddedRatio</span>. This effect can stack.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Molten",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1090456915\">XP_Fire_Elite_Burning_Modifier_2</a>[<span class=\"descriptionNumberColor\">Spontaneous Combustion</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "Modifier_StanceWeakAddedRatio",
+            "Modifier_Stance"
+          ],
+          "description": "Blaze Out of Space's attack mode is enhanced.",
+          "type": "Other",
+          "effectName": "Spontaneous Combustion",
+          "statusName": "Spontaneous Combustion",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2964,18 +2190,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "Modifier_StanceWeakAddedRatio",
-            "Modifier_Stance"
-          ],
-          "latentQueue": [],
-          "description": "Blaze Out of Space's attack mode is enhanced.",
-          "type": "Other",
-          "effectName": "Spontaneous Combustion",
-          "statusName": "Spontaneous Combustion",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2984,6 +2199,8 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3097,9 +2314,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3137,9 +2352,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3158,9 +2371,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

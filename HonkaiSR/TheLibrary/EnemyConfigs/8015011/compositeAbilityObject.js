@@ -3,41 +3,150 @@ const compositeAbilityObject = {
   "fullCharacterName": 8015011,
   "trimCharacterName": 8015011,
   "abilityList": [
+    "8015011_Monster_AML_Boss_Part2_DieChangePhase_Insert",
+    "8015011_Monster_AML_Boss_Die_Camera",
+    "8015011_Monster_AML_Boss_Passive02",
     "8015011_Monster_AML_Boss_Insert02_Part02",
     "8015011_Monster_AML_Boss_Insert02_Part01",
     "8015011_Monster_AML_Boss_Insert_Part02",
     "8015011_Monster_AML_Boss_Insert_Part01",
-    "8015011_Monster_AML_Boss_Passive03",
-    "8015011_Monster_AML_Boss_Passive02",
     "8015011_Monster_AML_Boss_Passive01",
-    "8015011_Monster_AML_Boss_Ability12_Part02",
-    "8015011_Monster_AML_Boss_Ability12_Part01",
-    "8015011_Monster_AML_Boss_Ability11_Part02",
-    "8015011_Monster_AML_Boss_Ability11_Part01",
-    "8015011_Monster_AML_Boss_Ability10_Part02",
-    "8015011_Monster_AML_Boss_Ability10_Part01",
-    "8015011_Monster_AML_Boss_Ability09_Part02",
-    "8015011_Monster_AML_Boss_Ability09_Part01",
-    "8015011_Monster_AML_Boss_Ability08_Part02",
-    "8015011_Monster_AML_Boss_Ability08_Part01",
-    "8015011_Monster_AML_Boss_Ability07_Part02",
-    "8015011_Monster_AML_Boss_Ability07_Part01",
-    "8015011_Monster_AML_Boss_Ability06_Part02",
-    "8015011_Monster_AML_Boss_Ability06_Part01",
-    "8015011_Monster_AML_Boss_Ability05_Part02",
-    "8015011_Monster_AML_Boss_Ability05_Part01",
-    "8015011_Monster_AML_Boss_Ability04_Part02",
-    "8015011_Monster_AML_Boss_Ability04_Part01",
-    "8015011_Monster_AML_Boss_Ability03_Part02",
-    "8015011_Monster_AML_Boss_Ability03_Part01",
-    "8015011_Monster_AML_Boss_Ability02_Part02",
-    "8015011_Monster_AML_Boss_Ability02_Part01",
-    "8015011_Monster_AML_Boss_Ability01_Part02",
-    "8015011_Monster_AML_Boss_Ability01_Part01",
-    "8015011_Monster_AML_Boss_Die_Camera",
     "8015011_Modifiers"
   ],
   "abilityObject": {
+    "8015011_Monster_AML_Boss_Part2_DieChangePhase_Insert": {
+      "fileName": "8015011_Monster_AML_Boss_Part2_DieChangePhase_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8015011_Monster_AML_Boss_Die_Camera": {
+      "fileName": "8015011_Monster_AML_Boss_Die_Camera",
+      "skillTrigger": "PassiveSkill05",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"524667231\">Enemy_AML_Boss_Die_Camera</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__524667231\">Enemy_AML_Boss_Die_Camera</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"524667231\">Enemy_AML_Boss_Die_Camera</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "8015011_Monster_AML_Boss_Passive02": {
+      "fileName": "8015011_Monster_AML_Boss_Passive02",
+      "childAbilityList": [
+        "8015011_Monster_AML_Boss_Passive02"
+      ],
+      "skillTrigger": "PassiveSkill02",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1691894969\">Enemy_WMonster_W0_Boss_Unselectable</a>[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
+        },
+        {
+          "name": "Assign Unique Name",
+          "uniqueName": "AML_Boss_00",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_IsWeeklyBoss",
+            "compareType": "=",
+            "value2": 1,
+            "contextScope": "TargetEntity"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1741877307\">Enemy_WMonster_W0_Boss_LockHP_1</a>"
+            }
+          ],
+          "failed": [
+            {
+              "name": "Change Character Transformation",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "phase": "Phase_SpecialDieEffect"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"489144285\">Enemy_WMonster_W0_Boss_ListenAllPartDie</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "8015011_Monster_AML_Boss_Insert02_Part02": {
       "fileName": "8015011_Monster_AML_Boss_Insert02_Part02",
       "abilityType": null,
@@ -530,90 +639,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8015011_Monster_AML_Boss_Passive03": {
-      "fileName": "8015011_Monster_AML_Boss_Passive03",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Passive02": {
-      "fileName": "8015011_Monster_AML_Boss_Passive02",
-      "childAbilityList": [
-        "8015011_Monster_AML_Boss_Passive02"
-      ],
-      "skillTrigger": "PassiveSkill02",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1691894969\">Enemy_WMonster_W0_Boss_Unselectable</a>[<span class=\"descriptionNumberColor\">Vestige Valor</span>]"
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "AML_Boss_00",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_IsWeeklyBoss",
-            "compareType": "=",
-            "value2": 1,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1741877307\">Enemy_WMonster_W0_Boss_LockHP_1</a>"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Change Character Transformation",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "phase": "Phase_SpecialDieEffect"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"489144285\">Enemy_WMonster_W0_Boss_ListenAllPartDie</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "8015011_Monster_AML_Boss_Passive01": {
       "fileName": "8015011_Monster_AML_Boss_Passive01",
       "childAbilityList": [
@@ -743,9 +768,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -768,819 +791,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "8015011_Monster_AML_Boss_Ability12_Part02": {
-      "fileName": "8015011_Monster_AML_Boss_Ability12_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Looped Event",
-          "maxLoops": 4,
-          "Event": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "Damage": {
-                  "operator": "Constants[0] (1) || Constants[1] (0.125) || MUL || RETURN",
-                  "displayLines": "(1 * 0.125)",
-                  "constants": [
-                    1,
-                    0.125
-                  ],
-                  "variables": []
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "12.5%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Imaginary",
-                "Damage": {
-                  "operator": "Constants[0] (1) || Constants[1] (0.125) || MUL || RETURN",
-                  "displayLines": "(1 * 0.125)",
-                  "constants": [
-                    1,
-                    0.125
-                  ],
-                  "variables": []
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "12.5%"
-              }
-            }
           ]
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase0"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"596990185\">Enemy_W0_Boss_Part2_Ability11_Modifier</a>"
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability12_Part01": {
-      "fileName": "8015011_Monster_AML_Boss_Ability12_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Boss_Ability12_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability11_Part02": {
-      "fileName": "8015011_Monster_AML_Boss_Ability11_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"596990185\">Enemy_W0_Boss_Part2_Ability11_Modifier</a>",
-          "valuePerStack": {
-            "MDF_AttackAddedRatio": 1
-          }
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Target Part 3}}"
-          },
-          "phase": "Phase1"
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability11_Part01": {
-      "fileName": "8015011_Monster_AML_Boss_Ability11_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Boss_Ability11_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability10_Part02": {
-      "fileName": "8015011_Monster_AML_Boss_Ability10_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Looped Event",
-          "maxLoops": 2,
-          "Event": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "Damage": {
-                  "operator": "Constants[0] (1) || Constants[1] (0.25) || MUL || RETURN",
-                  "displayLines": "(1 * 0.25)",
-                  "constants": [
-                    1,
-                    0.25
-                  ],
-                  "variables": []
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "25%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Imaginary",
-                "Damage": {
-                  "operator": "Constants[0] (1) || Constants[1] (0.25) || MUL || RETURN",
-                  "displayLines": "(1 * 0.25)",
-                  "constants": [
-                    1,
-                    0.25
-                  ],
-                  "variables": []
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "25%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability10_Part01": {
-      "fileName": "8015011_Monster_AML_Boss_Ability10_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Boss_Ability10_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability09_Part02": {
-      "fileName": "8015011_Monster_AML_Boss_Ability09_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Target Part 1}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
-          "duration": 1,
-          "valuePerStack": {
-            "MDF_AttackAddedRatio": 1
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Target Part 3}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
-          "duration": 1,
-          "valuePerStack": {
-            "MDF_AttackAddedRatio": 1
-          }
-        },
-        "Ability Start",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability09_Part01": {
-      "fileName": "8015011_Monster_AML_Boss_Ability09_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Boss_Ability09_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability08_Part02": {
-      "fileName": "8015011_Monster_AML_Boss_Ability08_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability08_Part01": {
-      "fileName": "8015011_Monster_AML_Boss_Ability08_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Boss_Ability08_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability07_Part02": {
-      "fileName": "8015011_Monster_AML_Boss_Ability07_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability07_Part01": {
-      "fileName": "8015011_Monster_AML_Boss_Ability07_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Boss_Ability07_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability06_Part02": {
-      "fileName": "8015011_Monster_AML_Boss_Ability06_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Constants[0] (1) || Constants[1] (0.5) || MUL || RETURN",
-              "displayLines": "(1 * 0.5)",
-              "constants": [
-                1,
-                0.5
-              ],
-              "variables": []
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "50%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Constants[0] (1) || Constants[1] (0.5) || MUL || RETURN",
-              "displayLines": "(1 * 0.5)",
-              "constants": [
-                1,
-                0.5
-              ],
-              "variables": []
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "50%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability06_Part01": {
-      "fileName": "8015011_Monster_AML_Boss_Ability06_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Boss_Ability06_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability05_Part02": {
-      "fileName": "8015011_Monster_AML_Boss_Ability05_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "displayLines": 1
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability05_Part01": {
-      "fileName": "8015011_Monster_AML_Boss_Ability05_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Boss_Ability05_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability04_Part02": {
-      "fileName": "8015011_Monster_AML_Boss_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "displayLines": 1
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability04_Part01": {
-      "fileName": "8015011_Monster_AML_Boss_Ability04_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Boss_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability03_Part02": {
-      "fileName": "8015011_Monster_AML_Boss_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Constants[0] (1) || Constants[1] (0.5) || MUL || RETURN",
-              "displayLines": "(1 * 0.5)",
-              "constants": [
-                1,
-                0.5
-              ],
-              "variables": []
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "50%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Constants[0] (1) || Constants[1] (0.5) || MUL || RETURN",
-              "displayLines": "(1 * 0.5)",
-              "constants": [
-                1,
-                0.5
-              ],
-              "variables": []
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "50%"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
-          "duration": 1,
-          "baseChance": 1,
-          "immediateEffect": true,
-          "valuePerStack": {
-            "MDF_SpeedDownRatio": 1,
-            "MDF_ActionDelayRatio": 1
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability03_Part01": {
-      "fileName": "8015011_Monster_AML_Boss_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Boss_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability02_Part02": {
-      "fileName": "8015011_Monster_AML_Boss_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability02_Part01": {
-      "fileName": "8015011_Monster_AML_Boss_Ability02_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Boss_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability01_Part02": {
-      "fileName": "8015011_Monster_AML_Boss_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Ability01_Part01": {
-      "fileName": "8015011_Monster_AML_Boss_Ability01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Boss_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase2"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8015011_Monster_AML_Boss_Die_Camera": {
-      "fileName": "8015011_Monster_AML_Boss_Die_Camera",
-      "skillTrigger": "PassiveSkill05",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"524667231\">Enemy_AML_Boss_Die_Camera</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__524667231\">Enemy_AML_Boss_Die_Camera</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"524667231\">Enemy_AML_Boss_Die_Camera</a>"
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
         }
       ]
     },
@@ -1596,7 +807,770 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2028329566\">AML_Boss_BattleScore1</a>",
+          "modifierFlags": [
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Pre-Death [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members(Exclude Self)}}"
+                    },
+                    "value1": "TeamCharacterCount",
+                    "compareType": "=",
+                    "value2": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "Achievement",
+                      "matchTags": true,
+                      "relatedAchievements": [
+                        {
+                          "title": "Hit It Where It Hurts Most",
+                          "desc": "Defeat the Antimatter Engine without defeating either of the Doomsday Beast's hands in Echo of War",
+                          "rarity": "Low"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Part 0}}"
+                        },
+                        "value1": "HP_Bars_Remaining",
+                        "compareType": "=",
+                        "value2": 2
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "AML_Boss_00_BattleScore2_Flag",
+                        "compareType": "=",
+                        "value2": 1,
+                        "contextScope": "TargetEntity"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Achievement",
+                      "matchTags": true,
+                      "relatedAchievements": [
+                        {
+                          "title": "Cataclysm Disruptor",
+                          "desc": "Prevent the Doomsday Beast from using Impending Doom in Echo of War",
+                          "rarity": "Low"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__596990185\">Enemy_W0_Boss_Part2_Ability11_Modifier</a>",
+          "useEntitySnapshot": true,
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Target Part 0}}"
+                    },
+                    "value1": "_Part1_Alive",
+                    "compareType": "=",
+                    "value2": 1,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Target Part 1}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1202607969\">Enemy_W0_Boss_Charge_DisableAction</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Target Part 0}}"
+                    },
+                    "value1": "_Part3_Alive",
+                    "compareType": "=",
+                    "value2": 1,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Target Part 3}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1202607969\">Enemy_W0_Boss_Charge_DisableAction</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
+                    "displayLines": "MDF_AttackAddedRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AttackAddedRatio"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Target Part 0}}"
+                    },
+                    "value1": "_Part1_Alive",
+                    "compareType": "=",
+                    "value2": 1,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Target Part 1}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1202607969\">Enemy_W0_Boss_Charge_DisableAction</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Target Part 0}}"
+                    },
+                    "value1": "_Part3_Alive",
+                    "compareType": "=",
+                    "value2": 1,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Target Part 3}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1202607969\">Enemy_W0_Boss_Charge_DisableAction</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "phase": "Phase2"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"596990185\">Enemy_W0_Boss_Part2_Ability11_Modifier</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1202607969\">Enemy_W0_Boss_Charge_DisableAction</a>",
+          "modifierFlags": [
+            "DisableAction"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-859851761\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Frensnel</a>",
+          "useEntitySnapshot": true,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-846464827\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Effect</a>",
+          "modifierFlags": [
+            "ListenBattleEventSkill"
+          ],
+          "useEntitySnapshot": true,
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Name",
+                    "skillName": "Skill10"
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Name",
+                    "skillName": "Skill10"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-354136848\">Enemy_W0_Boss_Part2_AttackUp_Ability07_Frensnel</a>",
+          "useEntitySnapshot": true,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1761279918\">Enemy_W0_Boss_Part2_AttackUp_Ability07_Effect</a>",
+          "modifierFlags": [
+            "ListenBattleEventSkill"
+          ],
+          "useEntitySnapshot": true,
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Name",
+                    "skillName": "Skill10"
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Name",
+                    "skillName": "Skill10"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
+          "useEntitySnapshot": true,
+          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>. Abilities are enhanced.",
+          "type": "Buff",
+          "effectName": "Amplification",
+          "statusName": "Amplification",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1761279918\">Enemy_W0_Boss_Part2_AttackUp_Ability07_Effect</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-354136848\">Enemy_W0_Boss_Part2_AttackUp_Ability07_Frensnel</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-846464827\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Effect</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-859851761\">Enemy_W0_Boss_Part2_AttackUp_Ability08_Frensnel</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
+                    "displayLines": "MDF_AttackAddedRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AttackAddedRatio"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-632703033\">Enemy_WMonster_W0_Boss_Part_Passive_WeakPhysical</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueList": [
+                    "Physical"
+                  ]
+                },
+                {
+                  "name": "Stack Element Resistance",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "resistArray": [
+                    {
+                      "element": "Physical",
+                      "value": 0
+                    },
+                    {
+                      "element": "Fire",
+                      "value": 0
+                    },
+                    {
+                      "element": "Ice",
+                      "value": 0
+                    },
+                    {
+                      "element": "Thunder",
+                      "value": 0
+                    },
+                    {
+                      "element": "Wind",
+                      "value": 0
+                    },
+                    {
+                      "element": "Quantum",
+                      "value": 0
+                    },
+                    {
+                      "element": "Imaginary",
+                      "value": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-42840376\">Enemy_WMonster_W0_Boss_Part_Passive_WeakWind</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueList": [
+                    "Wind"
+                  ]
+                },
+                {
+                  "name": "Stack Element Resistance",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "resistArray": [
+                    {
+                      "element": "Physical",
+                      "value": 0
+                    },
+                    {
+                      "element": "Fire",
+                      "value": 0
+                    },
+                    {
+                      "element": "Ice",
+                      "value": 0
+                    },
+                    {
+                      "element": "Thunder",
+                      "value": 0
+                    },
+                    {
+                      "element": "Wind",
+                      "value": 0
+                    },
+                    {
+                      "element": "Quantum",
+                      "value": 0
+                    },
+                    {
+                      "element": "Imaginary",
+                      "value": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1832434558\">Enemy_WMonster_W0_Boss_Part_Passive_WeakFire</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueList": [
+                    "Fire"
+                  ]
+                },
+                {
+                  "name": "Stack Element Resistance",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "resistArray": [
+                    {
+                      "element": "Physical",
+                      "value": 0
+                    },
+                    {
+                      "element": "Fire",
+                      "value": 0
+                    },
+                    {
+                      "element": "Ice",
+                      "value": 0
+                    },
+                    {
+                      "element": "Thunder",
+                      "value": 0
+                    },
+                    {
+                      "element": "Wind",
+                      "value": 0
+                    },
+                    {
+                      "element": "Quantum",
+                      "value": 0
+                    },
+                    {
+                      "element": "Imaginary",
+                      "value": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-748933759\">Enemy_WMonster_W0_Boss_Part_Passive_WeakIce</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueList": [
+                    "Ice"
+                  ]
+                },
+                {
+                  "name": "Stack Element Resistance",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "resistArray": [
+                    {
+                      "element": "Physical",
+                      "value": 0
+                    },
+                    {
+                      "element": "Fire",
+                      "value": 0
+                    },
+                    {
+                      "element": "Ice",
+                      "value": 0
+                    },
+                    {
+                      "element": "Thunder",
+                      "value": 0
+                    },
+                    {
+                      "element": "Wind",
+                      "value": 0
+                    },
+                    {
+                      "element": "Quantum",
+                      "value": 0
+                    },
+                    {
+                      "element": "Imaginary",
+                      "value": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-141890754\">Enemy_Monster_AML_Boss_Part2_Ability07</a>",
+          "stackType": "ReplaceByCaster",
+          "useEntitySnapshot": true,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Exit Broken-State",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1383210331\">Enemy_W0_Boss_Part2_OnPhase3SpeedUp</a>[<span class=\"descriptionNumberColor\">Burst</span>]",
+          "description": "Speed increased.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "Burst",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_SpeedAddedRatio) || RETURN",
+                    "displayLines": "MDF_SpeedAddedRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_SpeedAddedRatio"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-842741041\">Enemy_AML_Boss_Part2_Ability11_ListenSelfDieModifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "When Put in Deathstate Limbo",
+              "execute": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Target Part 0}}"
+                  },
+                  "phase": "Phase0"
+                },
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Target Part 1}}"
+                  },
+                  "phase": "Phase0"
+                },
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Target Part 3}}"
+                  },
+                  "phase": "Phase0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1881731748\">Enemy_AML_Boss_DamageTakenUp</a>",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "_IsWeeklyBoss"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1619,12 +1593,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "_IsWeeklyBoss"
           ]
         },
         {
@@ -1661,9 +1629,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1699,9 +1665,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1737,9 +1701,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1976,6 +1938,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__489144285\">Enemy_WMonster_W0_Boss_ListenAllPartDie</a>",
+          "latentQueue": [
+            "_IsWeeklyBoss"
+          ],
           "execute": [
             {
               "eventTrigger": "Entity Death [Anyone]",
@@ -2047,15 +2012,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_IsWeeklyBoss"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1741877307\">Enemy_WMonster_W0_Boss_LockHP_1</a>",
+          "latentQueue": [
+            "_IsWeeklyBoss"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2117,10 +2081,6 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_IsWeeklyBoss"
           ]
         },
         {
@@ -2131,6 +2091,10 @@ const compositeAbilityObject = {
             "BlockDamage",
             "Endurance"
           ],
+          "useEntitySnapshot": true,
+          "description": "Cannot be targeted until Disaster's Right Hand, Dawn's Left Hand, and Antimatter Engine have all been destroyed.",
+          "type": "Buff",
+          "statusName": "Vestige Valor",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2138,25 +2102,18 @@ const compositeAbilityObject = {
                 "Mark Entity as Non-Target(Unselectable)"
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Cannot be targeted until Disaster's Right Hand, Dawn's Left Hand, and Antimatter Engine have all been destroyed.",
-          "type": "Buff",
-          "statusName": "Vestige Valor"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1605741417\">Enemy_AML_Boss_HitEffect</a>",
+          "latentQueue": [
+            "ListenAllDieController"
+          ],
           "execute": [
             {
               "eventTrigger": "Take Damage End [Owner]: Hit"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "ListenAllDieController"
           ]
         }
       ],

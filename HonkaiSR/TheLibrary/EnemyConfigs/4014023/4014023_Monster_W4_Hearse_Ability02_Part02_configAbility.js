@@ -48,11 +48,11 @@ const configAbility = {
               ]
             },
             "MDF_ConfineChance": {
-              "operator": "Variables[0] (UnusedUnderThisBase_317) || RETURN",
-              "displayLines": "UnusedUnderThisBase_317",
+              "operator": "Variables[0] (UnusedUnderThisBase_11330) || RETURN",
+              "displayLines": "UnusedUnderThisBase_11330",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_317"
+                "UnusedUnderThisBase_11330"
               ]
             }
           }

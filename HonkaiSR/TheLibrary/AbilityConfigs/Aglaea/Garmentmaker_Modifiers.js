@@ -100,15 +100,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1495039477\">Memosprite_AglaeaServant_Interwine_AdjoinMark</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1495039477\">Memosprite_AglaeaServant_Interwine_AdjoinMark</a>"
     },
     {
       "name": "Modifier Construction",
@@ -337,6 +333,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "SPD increases by <span class=\"descriptionNumberColor\">SpeedAddTotal</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "A Body Brewed by Tears",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -442,13 +442,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "SPD increases by <span class=\"descriptionNumberColor\">SpeedAddTotal</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "A Body Brewed by Tears"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -508,11 +502,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__783183170\">Memosprite_AglaeaServant_SummonerKeepSpeed</a>",
-      "stackData": [],
-      "latentQueue": [
-        "BattleEventCount"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__783183170\">Memosprite_AglaeaServant_SummonerKeepSpeed</a>"
     }
   ],
   "references": []

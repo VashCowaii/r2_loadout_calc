@@ -3,10 +3,14 @@ const compositeAbilityObject = {
   "fullCharacterName": "Bailu",
   "trimCharacterName": "Bailu",
   "abilityList": [
+    "Bailu_Modifiers",
     "Bailu_Bailu_Trace02",
     "Bailu_Bailu_Trace01",
-    "Bailu_Bailu_TechniqueInLevel",
+    "Bailu_LocalPlayer_StandardAbility_AttackBreak",
+    "Bailu_LocalPlayer_Bailu_TechniqueUsage",
+    "Bailu_LocalPlayer_Bailu_NormalAtk01",
     "Bailu_Bailu_InsertAbility_Revive",
+    "Bailu_Bailu_TechniqueInLevel",
     "Bailu_Bailu_PassiveAbility01",
     "Bailu_Bailu_Ability03_Part02",
     "Bailu_Bailu_Ability03_Part01",
@@ -14,10 +18,726 @@ const compositeAbilityObject = {
     "Bailu_Bailu_Ability02_Part02",
     "Bailu_Bailu_Ability02_Part01",
     "Bailu_Bailu_Ability01_Part02",
-    "Bailu_Bailu_Ability01_Part01",
-    "Bailu_Modifiers"
+    "Bailu_Bailu_Ability01_Part01"
   ],
   "abilityObject": {
+    "Bailu_Modifiers": {
+      "fileName": "Bailu_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1591380745\">ADV_StageAbility_Maze_Bailu</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1496935031\">Bailu_Revive_Mark</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Waiting for Healing in Limbo",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "flagName": "STAT_CTRL"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "flagName": "DisableAction"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "CurrentHP",
+                        "compareType": "<=",
+                        "value2": 0
+                      }
+                    },
+                    {
+                      "name": "Inject Ability Use",
+                      "condition": {
+                        "name": "Insert Ability Condition",
+                        "type": "AbilityOwnerInsertUnusedCount",
+                        "typeValue": {
+                          "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
+                          "displayLines": "MDF_ReviveTime2",
+                          "constants": [],
+                          "variables": [
+                            "MDF_ReviveTime2"
+                          ]
+                        }
+                      },
+                      "abilityName": "Bailu_InsertAbility_Revive",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "priorityTag": "CharacterReviveOthers",
+                      "targetState": "Mask_AliveOrLimbo",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "abortFlags": [
+                        "DisableAction",
+                        "STAT_CTRL"
+                      ],
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -70
+            },
+            {
+              "eventTrigger": "Being Attacked End [Owner]"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2145916157\">Bailu_Eidolon4_AttackUp</a>[<span class=\"descriptionNumberColor\">Evil Excision</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_AttackUpRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Evil Excision",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_AttackUpRatio",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AttackUpRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
+                    "displayLines": "(MDF_AttackUpRatio * MDF_Layer)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AttackUpRatio",
+                      "MDF_Layer"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AttackUpRatio) || RETURN",
+                    "displayLines": "MDF_AttackUpRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AttackUpRatio"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1229024343\">Bailu_Eidolon4</a>",
+          "execute": [
+            {
+              "eventTrigger": "Heal Target End [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2145916157\">Bailu_Eidolon4_AttackUp</a>[<span class=\"descriptionNumberColor\">Evil Excision</span>]",
+                  "duration": {
+                    "operator": "Variables[0] (2) || RETURN",
+                    "displayLines": "2",
+                    "constants": [],
+                    "variables": [
+                      2
+                    ]
+                  },
+                  "stackLimit": {
+                    "operator": "Variables[0] (3) || RETURN",
+                    "displayLines": "3",
+                    "constants": [],
+                    "variables": [
+                      3
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_AttackUpRatio": {
+                      "operator": "Variables[0] (0.1) || RETURN",
+                      "displayLines": "0.1",
+                      "constants": [],
+                      "variables": [
+                        0.1
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1195469105\">Bailu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Sylphic Slumber</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increases Outgoing Healing by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Outgoing Healing Boost",
+          "statusName": "Sylphic Slumber",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoing</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__249464740\">Bailu_PointB3</a>[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
+          "description": "Reduces DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageResistance</span>.",
+          "type": "Buff",
+          "effectName": "DMG Mitigation",
+          "statusName": "Aquatic Benediction",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_DamageResistance) || RETURN",
+                    "displayLines": "MDF_DamageResistance",
+                    "constants": [],
+                    "variables": [
+                      "MDF_DamageResistance"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-469925889\">Bailu_PointB1_HPIncrease</a>[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Max HP +<span class=\"descriptionNumberColor\">MDF_HPIncrease</span>.",
+          "type": "Buff",
+          "effectName": "Max HP Boost",
+          "statusName": "Qihuang Analects",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_HPIncrease) || RETURN",
+                    "displayLines": "MDF_HPIncrease",
+                    "constants": [],
+                    "variables": [
+                      "MDF_HPIncrease"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__996331331\">Bailu_PointB1_Sub</a>",
+          "execute": [
+            {
+              "eventTrigger": "Heal Target End [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Healing",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "Overflowheal",
+                  "healProperty": "Result_OverflowHealAmount"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Overflowheal",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-469925889\">Bailu_PointB1_HPIncrease</a>[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (MDF_LifeTime) || RETURN",
+                        "displayLines": "MDF_LifeTime",
+                        "constants": [],
+                        "variables": [
+                          "MDF_LifeTime"
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_HPIncrease": {
+                          "operator": "Variables[0] (MDF_HPIncrease2) || RETURN",
+                          "displayLines": "MDF_HPIncrease2",
+                          "constants": [],
+                          "variables": [
+                            "MDF_HPIncrease2"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__283019978\">Bailu_PointB1</a>",
+          "modifierFlags": [
+            "MuteDotCasterCallBack"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Heal Target End [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Healing",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "Overflowheal",
+                  "healProperty": "Result_OverflowHealAmount"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Overflowheal",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-469925889\">Bailu_PointB1_HPIncrease</a>[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (2) || RETURN",
+                        "displayLines": "2",
+                        "constants": [],
+                        "variables": [
+                          2
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_HPIncrease": {
+                          "operator": "Variables[0] (0.1) || RETURN",
+                          "displayLines": "0.1",
+                          "constants": [],
+                          "variables": [
+                            0.1
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Snapshot(Calculation Instance Completed)",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"996331331\">Bailu_PointB1_Sub</a>",
+                  "valuePerStack": {
+                    "MDF_LifeTime": {
+                      "operator": "Variables[0] (2) || RETURN",
+                      "displayLines": "2",
+                      "constants": [],
+                      "variables": [
+                        2
+                      ]
+                    },
+                    "MDF_HPIncrease2": {
+                      "operator": "Variables[0] (0.1) || RETURN",
+                      "displayLines": "0.1",
+                      "constants": [],
+                      "variables": [
+                        0.1
+                      ]
+                    }
+                  },
+                  "casterAssign": "TargetSelf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
+          "counter": 1,
+          "stackType": "ReplaceByCaster",
+          "useEntitySnapshot": true,
+          "description": "Restores HP when attacked.",
+          "type": "Buff",
+          "effectName": "Invigoration",
+          "statusName": "Invigoration",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "CurrentHP%",
+                        "compareType": "=",
+                        "value2": 1
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "MDF_AddSP",
+                        "compareType": ">",
+                        "value2": 0,
+                        "contextScope": "ContextModifier"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Energy",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "value": {
+                        "operator": "Variables[0] (MDF_AddSP) || RETURN",
+                        "displayLines": "MDF_AddSP",
+                        "constants": [],
+                        "variables": [
+                          "MDF_AddSP"
+                        ]
+                      },
+                      "isFixed": "(Fixed)"
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"249464740\">Bailu_PointB3</a>[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Modifier Variable",
+                  "modifierName": "<a class=\"gModGreen\" id=\"36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
+                  "value": {
+                    "operator": "Variables[0] (MDF_HealCount) || Variables[1] (MDF_HealCountExtra) || ADD || RETURN",
+                    "displayLines": "(MDF_HealCount + MDF_HealCountExtra)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_HealCount",
+                      "MDF_HealCountExtra"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Attacked End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "CurrentHP",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Heal",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "healPercent": {
+                        "operator": "Variables[0] (MDF__HealPercentage2) || RETURN",
+                        "displayLines": "MDF__HealPercentage2",
+                        "constants": [],
+                        "variables": [
+                          "MDF__HealPercentage2"
+                        ]
+                      },
+                      "healFlat": {
+                        "operator": "Variables[0] (MDF__HealValue2) || RETURN",
+                        "displayLines": "MDF__HealValue2",
+                        "constants": [],
+                        "variables": [
+                          "MDF__HealValue2"
+                        ]
+                      },
+                      "formula": "Heal from Healer's MaxHP"
+                    },
+                    {
+                      "name": "Define Modifier Variable",
+                      "modifierName": "<a class=\"gModGreen\" id=\"36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
+                      "function": "Add"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__835934303\">Bailu_Revive_Ready</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any"
+            },
+            {
+              "eventTrigger": "When Put in Deathstate Limbo",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
+                        "compareType": ">",
+                        "value2": 0
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "CurrentHP",
+                        "compareType": "<=",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Is Part Of",
+                                "of": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
+                                "mustBeAlive2": true
+                              }
+                            ]
+                          },
+                          "failed": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Compare: Variable",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
+                                "value1": "CurrentHP",
+                                "compareType": "<=",
+                                "value2": 0
+                              },
+                              "failed": [
+                                {
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "OR",
+                                    "conditionList": [
+                                      {
+                                        "name": "Has Flag",
+                                        "target": {
+                                          "name": "Target Name",
+                                          "target": "{{Caster}}"
+                                        },
+                                        "flagName": "STAT_CTRL"
+                                      },
+                                      {
+                                        "name": "Has Flag",
+                                        "target": {
+                                          "name": "Target Name",
+                                          "target": "{{Caster}}"
+                                        },
+                                        "flagName": "DisableAction"
+                                      }
+                                    ]
+                                  },
+                                  "failed": [
+                                    {
+                                      "name": "Add Events/Bonuses",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Modifier Holder}}"
+                                      },
+                                      "modifier": "<a class=\"gModGreen\" id=\"-1496935031\">Bailu_Revive_Mark</a>"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Attacked End [Owner]"
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "Bailu_Bailu_Trace02": {
       "fileName": "Bailu_Bailu_Trace02",
       "abilityType": null,
@@ -47,6 +767,467 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Bailu_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Bailu_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Bailu_LocalPlayer_Bailu_TechniqueUsage": {
+      "fileName": "Bailu_LocalPlayer_Bailu_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "121101(SkillMaze)",
+          "duration": -1
+        },
+        "Submit Technique Use"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Bailu_LocalPlayer_Bailu_NormalAtk01": {
+      "fileName": "Bailu_LocalPlayer_Bailu_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "failed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Bailu_Bailu_InsertAbility_Revive": {
+      "fileName": "Bailu_Bailu_InsertAbility_Revive",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "value1": "CurrentHP",
+            "compareType": "<=",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "name": "Define Modifier Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifierName": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
+              "function": "Add"
+            },
+            "Deleted bullshit",
+            {
+              "name": "UI Display Event",
+              "popUpText": "Gourdful of Elixir"
+            },
+            {
+              "name": "Dispel Debuffs",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "silent": true
+            },
+            {
+              "name": "Heal",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "healPercent": {
+                "operator": "Variables[0] (0.18) || RETURN",
+                "displayLines": "0.18",
+                "constants": [],
+                "variables": [
+                  0.18
+                ]
+              },
+              "healFlat": {
+                "operator": "Variables[0] (480) || RETURN",
+                "displayLines": "480",
+                "constants": [],
+                "variables": [
+                  480
+                ]
+              },
+              "formula": "Heal from Healer's MaxHP"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>"
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "variableName": "MDF_ReviveTime2",
+                  "modifierName": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
+                  "multiplier": {
+                    "operator": "Constants[0] (1) || RETURN",
+                    "displayLines": "1",
+                    "constants": [
+                      1
+                    ],
+                    "variables": []
+                  }
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
+                    "displayLines": "MDF_ReviveTime2",
+                    "constants": [],
+                    "variables": [
+                      "MDF_ReviveTime2"
+                    ]
+                  },
+                  "maximum": {
+                    "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
+                    "displayLines": "MDF_ReviveTime",
+                    "constants": [],
+                    "variables": [
+                      "MDF_ReviveTime"
+                    ]
+                  },
+                  "assignState": "True",
+                  "priorState": "Active",
+                  "bar#": 3
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_ReviveTime2",
+                  "value": {
+                    "operator": "Constants[0] (0) || RETURN",
+                    "displayLines": "0",
+                    "constants": [
+                      0
+                    ],
+                    "variables": []
+                  }
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
+                    "displayLines": "MDF_ReviveTime2",
+                    "constants": [],
+                    "variables": [
+                      "MDF_ReviveTime2"
+                    ]
+                  },
+                  "maximum": {
+                    "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
+                    "displayLines": "MDF_ReviveTime",
+                    "constants": [],
+                    "variables": [
+                      "MDF_ReviveTime"
+                    ]
+                  },
+                  "assignState": "True",
+                  "priorState": "Disable",
+                  "bar#": 3
+                }
+              ]
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1496935031\">Bailu_Revive_Mark</a>"
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
       }
     },
     "Bailu_Bailu_TechniqueInLevel": {
@@ -265,9 +1446,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -275,171 +1454,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{All Team Members}}"
-      }
-    },
-    "Bailu_Bailu_InsertAbility_Revive": {
-      "fileName": "Bailu_Bailu_InsertAbility_Revive",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "value1": "CurrentHP",
-            "compareType": "<=",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "Define Modifier Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifierName": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
-              "function": "Add"
-            },
-            "Deleted bullshit",
-            {
-              "name": "UI Display Event",
-              "popUpText": "Gourdful of Elixir"
-            },
-            {
-              "name": "Dispel Debuffs",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "silent": true
-            },
-            {
-              "name": "Heal",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "healPercent": {
-                "operator": "Variables[0] (0.18) || RETURN",
-                "displayLines": "0.18",
-                "constants": [],
-                "variables": [
-                  0.18
-                ]
-              },
-              "healFlat": {
-                "operator": "Variables[0] (480) || RETURN",
-                "displayLines": "480",
-                "constants": [],
-                "variables": [
-                  480
-                ]
-              },
-              "formula": "Heal from Healer's MaxHP"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>"
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "variableName": "MDF_ReviveTime2",
-                  "modifierName": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
-                  "multiplier": {
-                    "operator": "Constants[0] (1) || RETURN",
-                    "displayLines": "1",
-                    "constants": [
-                      1
-                    ],
-                    "variables": []
-                  }
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
-                    "displayLines": "MDF_ReviveTime2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ReviveTime2"
-                    ]
-                  },
-                  "maximum": {
-                    "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
-                    "displayLines": "MDF_ReviveTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ReviveTime"
-                    ]
-                  },
-                  "assignState": "True",
-                  "priorState": "Active",
-                  "bar#": 3
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_ReviveTime2",
-                  "value": {
-                    "operator": "Constants[0] (0) || RETURN",
-                    "displayLines": "0",
-                    "constants": [
-                      0
-                    ],
-                    "variables": []
-                  }
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
-                    "displayLines": "MDF_ReviveTime2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ReviveTime2"
-                    ]
-                  },
-                  "maximum": {
-                    "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
-                    "displayLines": "MDF_ReviveTime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ReviveTime"
-                    ]
-                  },
-                  "assignState": "True",
-                  "priorState": "Disable",
-                  "bar#": 3
-                }
-              ]
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1496935031\">Bailu_Revive_Mark</a>"
-            }
-          ]
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Bailu_Bailu_PassiveAbility01": {
@@ -527,9 +1541,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__339980930\">Bailu_ReviveEvent</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__339980930\">Bailu_ReviveEvent</a>"
         },
         {
           "name": "Modifier Construction",
@@ -671,9 +1683,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1469,739 +2479,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Bailu_Modifiers": {
-      "fileName": "Bailu_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1496935031\">Bailu_Revive_Mark</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Waiting for Healing in Limbo",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "STAT_CTRL"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "DisableAction"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": "<=",
-                        "value2": 0
-                      }
-                    },
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": {
-                          "operator": "Variables[0] (MDF_ReviveTime2) || RETURN",
-                          "displayLines": "MDF_ReviveTime2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_ReviveTime2"
-                          ]
-                        }
-                      },
-                      "abilityName": "Bailu_InsertAbility_Revive",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "priorityTag": "CharacterReviveOthers",
-                      "targetState": "Mask_AliveOrLimbo",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "abortFlags": [
-                        "DisableAction",
-                        "STAT_CTRL"
-                      ],
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -70
-            },
-            {
-              "eventTrigger": "Being Attacked End [Owner]"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2145916157\">Bailu_Eidolon4_AttackUp</a>[<span class=\"descriptionNumberColor\">Evil Excision</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "MDF_Layer",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_AttackUpRatio",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AttackUpRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_AttackUpRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackUpRatio",
-                      "MDF_Layer"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AttackUpRatio) || RETURN",
-                    "displayLines": "MDF_AttackUpRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackUpRatio"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_AttackUpRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Evil Excision"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1229024343\">Bailu_Eidolon4</a>",
-          "execute": [
-            {
-              "eventTrigger": "Heal Target End [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2145916157\">Bailu_Eidolon4_AttackUp</a>[<span class=\"descriptionNumberColor\">Evil Excision</span>]",
-                  "duration": {
-                    "operator": "Variables[0] (2) || RETURN",
-                    "displayLines": "2",
-                    "constants": [],
-                    "variables": [
-                      2
-                    ]
-                  },
-                  "stackLimit": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_AttackUpRatio": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
-                    }
-                  },
-                  "addStacksPerTrigger": 1
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1195469105\">Bailu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Sylphic Slumber</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoing</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Increases Outgoing Healing by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Outgoing Healing Boost",
-          "statusName": "Sylphic Slumber"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__249464740\">Bailu_PointB3</a>[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_DamageResistance) || RETURN",
-                    "displayLines": "MDF_DamageResistance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageResistance"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_DamageResistance"
-          ],
-          "latentQueue": [],
-          "description": "Reduces DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageResistance</span>.",
-          "type": "Buff",
-          "effectName": "DMG Mitigation",
-          "statusName": "Aquatic Benediction"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-469925889\">Bailu_PointB1_HPIncrease</a>[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_HPIncrease) || RETURN",
-                    "displayLines": "MDF_HPIncrease",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HPIncrease"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "description": "Max HP +<span class=\"descriptionNumberColor\">MDF_HPIncrease</span>.",
-          "type": "Buff",
-          "effectName": "Max HP Boost",
-          "statusName": "Qihuang Analects"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__996331331\">Bailu_PointB1_Sub</a>",
-          "execute": [
-            {
-              "eventTrigger": "Heal Target End [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Healing",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "Overflowheal",
-                  "healProperty": "Result_OverflowHealAmount"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Overflowheal",
-                    "compareType": ">",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-469925889\">Bailu_PointB1_HPIncrease</a>[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (MDF_LifeTime) || RETURN",
-                        "displayLines": "MDF_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LifeTime"
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_HPIncrease": {
-                          "operator": "Variables[0] (MDF_HPIncrease2) || RETURN",
-                          "displayLines": "MDF_HPIncrease2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_HPIncrease2"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__283019978\">Bailu_PointB1</a>",
-          "modifierFlags": [
-            "MuteDotCasterCallBack"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Heal Target End [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Healing",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "Overflowheal",
-                  "healProperty": "Result_OverflowHealAmount"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Overflowheal",
-                    "compareType": ">",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-469925889\">Bailu_PointB1_HPIncrease</a>[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_HPIncrease": {
-                          "operator": "Variables[0] (0.1) || RETURN",
-                          "displayLines": "0.1",
-                          "constants": [],
-                          "variables": [
-                            0.1
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Snapshot(Calculation Instance Completed)",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"996331331\">Bailu_PointB1_Sub</a>",
-                  "valuePerStack": {
-                    "MDF_LifeTime": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
-                    },
-                    "MDF_HPIncrease2": {
-                      "operator": "Variables[0] (0.1) || RETURN",
-                      "displayLines": "0.1",
-                      "constants": [],
-                      "variables": [
-                        0.1
-                      ]
-                    }
-                  },
-                  "casterAssign": "TargetSelf"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
-          "counter": 1,
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": "=",
-                        "value2": 1
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "MDF_AddSP",
-                        "compareType": ">",
-                        "value2": 0,
-                        "contextScope": "ContextModifier"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Energy",
-                      "on": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "value": {
-                        "operator": "Variables[0] (MDF_AddSP) || RETURN",
-                        "displayLines": "MDF_AddSP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_AddSP"
-                        ]
-                      },
-                      "isFixed": "(Fixed)"
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"249464740\">Bailu_PointB3</a>[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Modifier Variable",
-                  "modifierName": "<a class=\"gModGreen\" id=\"36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
-                  "value": {
-                    "operator": "Variables[0] (MDF_HealCount) || Variables[1] (MDF_HealCountExtra) || ADD || RETURN",
-                    "displayLines": "(MDF_HealCount + MDF_HealCountExtra)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HealCount",
-                      "MDF_HealCountExtra"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Attacked End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "CurrentHP",
-                    "compareType": ">",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "Heal",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "healPercent": {
-                        "operator": "Variables[0] (MDF__HealPercentage2) || RETURN",
-                        "displayLines": "MDF__HealPercentage2",
-                        "constants": [],
-                        "variables": [
-                          "MDF__HealPercentage2"
-                        ]
-                      },
-                      "healFlat": {
-                        "operator": "Variables[0] (MDF__HealValue2) || RETURN",
-                        "displayLines": "MDF__HealValue2",
-                        "constants": [],
-                        "variables": [
-                          "MDF__HealValue2"
-                        ]
-                      },
-                      "formula": "Heal from Healer's MaxHP"
-                    },
-                    {
-                      "name": "Define Modifier Variable",
-                      "modifierName": "<a class=\"gModGreen\" id=\"36808524\">Bailu_Heal_Mark</a>[<span class=\"descriptionNumberColor\">Invigoration</span>]",
-                      "function": "Add"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF__HealPercentage2",
-            "MDF__HealValue2",
-            "MDF_AddSP",
-            "MDF_HealCount",
-            "MDF_HealCountExtra"
-          ],
-          "latentQueue": [],
-          "description": "Restores HP when attacked.",
-          "type": "Buff",
-          "effectName": "Invigoration",
-          "statusName": "Invigoration"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__835934303\">Bailu_Revive_Ready</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any"
-            },
-            {
-              "eventTrigger": "When Put in Deathstate Limbo",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "<a class=\"gModGreen\" id=\"339980930\">Bailu_ReviveEvent</a>",
-                        "compareType": ">",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": "<=",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Is Part Of",
-                                "of": {
-                                  "name": "Target Name",
-                                  "target": "{{Modifier Holder}}"
-                                },
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                },
-                                "mustBeAlive2": true
-                              }
-                            ]
-                          },
-                          "failed": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Variable",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                },
-                                "value1": "CurrentHP",
-                                "compareType": "<=",
-                                "value2": 0
-                              },
-                              "failed": [
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "OR",
-                                    "conditionList": [
-                                      {
-                                        "name": "Has Flag",
-                                        "target": {
-                                          "name": "Target Name",
-                                          "target": "{{Caster}}"
-                                        },
-                                        "flagName": "STAT_CTRL"
-                                      },
-                                      {
-                                        "name": "Has Flag",
-                                        "target": {
-                                          "name": "Target Name",
-                                          "target": "{{Caster}}"
-                                        },
-                                        "flagName": "DisableAction"
-                                      }
-                                    ]
-                                  },
-                                  "failed": [
-                                    {
-                                      "name": "Add Events/Bonuses",
-                                      "to": {
-                                        "name": "Target Name",
-                                        "target": "{{Modifier Holder}}"
-                                      },
-                                      "modifier": "<a class=\"gModGreen\" id=\"-1496935031\">Bailu_Revive_Mark</a>"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Attacked End [Owner]"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "references": []
     }
   }
 }

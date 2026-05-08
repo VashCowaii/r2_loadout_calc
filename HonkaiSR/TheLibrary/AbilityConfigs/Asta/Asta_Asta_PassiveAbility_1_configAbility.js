@@ -90,8 +90,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1587956839\">Asta_AbilityPreShowModifier</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -120,6 +118,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-89645956\">M_Asta_Passive</a>",
+      "stackData": [
+        "MDF_CostLayer",
+        "MDF_MaxCount"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -518,12 +520,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_CostLayer",
-        "MDF_MaxCount"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

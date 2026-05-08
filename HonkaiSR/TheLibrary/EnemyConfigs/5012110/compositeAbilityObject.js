@@ -5,10 +5,10 @@ const compositeAbilityObject = {
   "abilityList": [
     "5012110_Monster_W5_Limao_Ability02_Part02",
     "5012110_Monster_W5_Limao_Ability02_Part01",
-    "5012110_Monster_W5_Limao_Ability01_Part02",
-    "5012110_Monster_W5_Limao_Ability01_Part01",
     "5012110_Monster_W5_Limao_FrameCapture",
     "5012110_Monster_W5_Limao_PassiveAbilityInitiate",
+    "5012110_Monster_W5_Limao_Ability01_Part02",
+    "5012110_Monster_W5_Limao_Ability01_Part01",
     "5012110_Modifiers"
   ],
   "abilityObject": {
@@ -339,76 +339,6 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "5012110_Monster_W5_Limao_Ability01_Part02": {
-      "fileName": "5012110_Monster_W5_Limao_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "5012110_Monster_W5_Limao_Ability01_Part01": {
-      "fileName": "5012110_Monster_W5_Limao_Ability01_Part01",
-      "childAbilityList": [
-        "5012110_Monster_W5_Limao_Ability01_Part01",
-        "5012110_Monster_W5_Limao_Ability01_Part02",
-        "5012110_Monster_W5_Limao_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Limao_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
       },
       "references": []
     },
@@ -808,9 +738,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2091,11 +2019,79 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
+    },
+    "5012110_Monster_W5_Limao_Ability01_Part02": {
+      "fileName": "5012110_Monster_W5_Limao_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "5012110_Monster_W5_Limao_Ability01_Part01": {
+      "fileName": "5012110_Monster_W5_Limao_Ability01_Part01",
+      "childAbilityList": [
+        "5012110_Monster_W5_Limao_Ability01_Part01",
+        "5012110_Monster_W5_Limao_Ability01_Part02",
+        "5012110_Monster_W5_Limao_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W5_Limao_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
     },
     "5012110_Modifiers": {
       "fileName": "5012110_Modifiers",
@@ -2120,7 +2116,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
-          "stackData": [],
           "latentQueue": [
             "_RankRatio"
           ]
@@ -2199,9 +2194,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2239,9 +2232,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2249,7 +2240,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
-          "stackData": [],
           "latentQueue": [
             "_RankRatio"
           ]
@@ -2260,7 +2250,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
-          "stackData": [],
           "latentQueue": [
             "_RankRatio"
           ]
@@ -2271,7 +2260,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
-          "stackData": [],
           "latentQueue": [
             "_RankRatio"
           ]
@@ -2280,6 +2268,16 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1492528010\">Enemy_W5_Limao_ElationDamageUp</a>[<span class=\"descriptionNumberColor\">Make Headlines, Please!</span>]",
           "stackType": "Multiple",
+          "stackData": [
+            "MDF_ElationDamageAddedRatio"
+          ],
+          "latentQueue": [
+            "_RankRatio"
+          ],
+          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_ElationDamageAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "Elation Boost",
+          "statusName": "Make Headlines, Please!",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2302,17 +2300,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ElationDamageAddedRatio"
-          ],
-          "latentQueue": [
-            "_RankRatio"
-          ],
-          "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_ElationDamageAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "Elation Boost",
-          "statusName": "Make Headlines, Please!"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2413,9 +2401,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2424,7 +2410,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
-          "stackData": [],
           "latentQueue": [
             "_IsPhase1",
             "#CL_PhotoCheck",

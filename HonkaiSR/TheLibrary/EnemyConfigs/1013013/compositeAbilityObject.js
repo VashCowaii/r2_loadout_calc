@@ -4,15 +4,11 @@ const compositeAbilityObject = {
   "trimCharacterName": 1013013,
   "abilityList": [
     "1013013_Monster_W1_Mecha03_RL_PassiveAbility_InsertCamera",
-    "1013013_Monster_W1_Mecha03_RL_PassiveAbility_Insert3",
     "1013013_Monster_W1_Mecha03_RL_PassiveAbility_Insert2",
     "1013013_Monster_W1_Mecha03_RL_PassiveAbility_Insert",
-    "1013013_WMonster_W1_Mecha_02_RL_Ability07_Part02",
-    "1013013_WMonster_W1_Mecha_02_RL_Ability07_Part01",
+    "1013013_WMonster_W1_Mecha_02_RL_Passive_AIControlAndHPLock",
     "1013013_WMonster_W1_Mecha_02_RL_Ability06_Part02",
     "1013013_WMonster_W1_Mecha_02_RL_Ability06_Part01",
-    "1013013_WMonster_W1_Mecha_02_RL_Passive_AIControlAndHPLock",
-    "1013013_WMonster_W1_Mecha_02_Passive_AIControlAndHPLock",
     "1013013_WMonster_W1_Mecha_02_Ability05_Part02",
     "1013013_WMonster_W1_Mecha_02_Ability05_Part01",
     "1013013_WMonster_W1_Mecha_02_Ability04_Part02",
@@ -23,7 +19,6 @@ const compositeAbilityObject = {
     "1013013_WMonster_W1_Mecha_02_Ability02_Part01",
     "1013013_WMonster_W1_Mecha_02_Ability01_Part02",
     "1013013_WMonster_W1_Mecha_02_Ability01_Part01",
-    "1013013_WMonster_Mecha_02_PassiveAbilityInitiate",
     "1013013_Modifiers"
   ],
   "abilityObject": {
@@ -33,375 +28,6 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1013013_Monster_W1_Mecha03_RL_PassiveAbility_Insert3": {
-      "fileName": "1013013_Monster_W1_Mecha03_RL_PassiveAbility_Insert3",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "searchRandom": true,
-          "includeDyingTargets": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"736844777\">Monster_W1_Mecha04_RL_PartController</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-301883151\">Monster_W1_Mecha04_RL_Dormancy</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]"
-            },
-            {
-              "name": "Lock HP",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            {
-              "name": "Dispel Debuffs",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "silent": true
-            },
-            {
-              "name": "Dispel Debuffs",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "silent": true
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1670817312\">W1_Mecha02_AttackBonus</a>[<span class=\"descriptionNumberColor\">Charging</span>]"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1364752860\">W1_Mecha02_AttackBonus_Effect</a>"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster's Minions}}"
-                },
-                "value1": "TeamCharacterCount",
-                "compareType": ">=",
-                "value2": 1
-              },
-              "passed": [
-                {
-                  "name": "Remove Modifier Behavior Flag(s)",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "flagNames": []
-                },
-                {
-                  "name": "Mark Entity For Immediate Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  }
-                },
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  }
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1139046842\">Monster_W1_Mecha03_RL_Explode</a>"
-                }
-              ]
-            },
-            {
-              "name": "Action Advance/Delay",
-              "advanceType": "Set",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "multiBase": 0
-            },
-            {
-              "name": "Action Advance/Delay",
-              "advanceType": "Set",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "multiBase": 0.01
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-            },
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1902031976\">Monster_ChangePhase_ParamEntity</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1362109025\">Monster_W1_Mecha04_RL_Part3Passive</a>[<span class=\"descriptionNumberColor\">Combat Speed-Up</span>]",
-              "valuePerStack": {
-                "MDF_SpeedAddedRatio": {
-                  "operator": "Variables[0] (MDF_RogueGoalID) || RETURN",
-                  "displayLines": "MDF_RogueGoalID",
-                  "constants": [],
-                  "variables": [
-                    "MDF_RogueGoalID"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-735432971\">Monster_W1_Mecha03_RL_Revenge</a>[<span class=\"descriptionNumberColor\">Obliteration Order</span>]",
-              "valuePerStack": {
-                "MDF_DamageUpRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_48) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_48",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_48"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-16772570\">Monster_W1_Mecha03_RL_Endurance</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-404471381\">Monster_W1_Mecha03_RemoveOneMore</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-9287253\">Monster_W1_Mecha03_RL_ChargeFlag</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1676987149\">Monster_W1_Mecha03_RL_Part02Effect</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1629066392\">Monster_W1_Mecha03_RL_Part03Effect</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1488319040\">Standard_CTRL_Taunt</a>[<span class=\"descriptionNumberColor\">Taunt</span>]",
-              "onlyRemoveOwnersInstance": true
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1547227211\">Monster_W1_Mecha04_RL_Endurance</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1945457431\">Monster_W1_Mecha04_PassiveMDF</a>[<span class=\"descriptionNumberColor\">Hounding Pursuit</span>]"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1520229010\">Enemy_W1_Mecha04_ChainSawSpeedUp</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1780187848\">Monster_W1_Mecha04_RL_ChargeFlag</a>",
-              "casterAssign": "TargetSelf"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1289880646\">Monster_W1_Mecha04_RL_Part02Effect</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1980712149\">Monster_W1_Mecha04_RL_Part03Effect</a>",
-              "casterAssign": "TargetSelf"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1432540592\">Monster_Mecha04_RL_ResetAI</a>",
-              "casterAssign": "TargetSelf"
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "InsertCheck",
-              "value": 1
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "AIFlag",
-              "value": 1
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "InsertCheck",
-              "value": 1
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "TeammateSurvive",
-              "value": 1
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "TeammateSurvive",
-              "value": 1
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-              "value": 1
-            }
-          ]
-        }
-      ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
@@ -450,11 +76,11 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-735432971\">Monster_W1_Mecha03_RL_Revenge</a>[<span class=\"descriptionNumberColor\">Obliteration Order</span>]",
           "valuePerStack": {
             "MDF_DamageUpRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_48) || RETURN",
-              "displayLines": "UnusedUnderThisBase_48",
+              "operator": "Variables[0] (UnusedUnderThisBase_7939) || RETURN",
+              "displayLines": "UnusedUnderThisBase_7939",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_48"
+                "UnusedUnderThisBase_7939"
               ]
             }
           }
@@ -821,356 +447,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "1013013_WMonster_W1_Mecha_02_RL_Ability07_Part02": {
-      "fileName": "1013013_WMonster_W1_Mecha_02_RL_Ability07_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
-            "compareType": "=",
-            "value2": 1,
-            "valueType": "LifeTime"
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]"
-            },
-            {
-              "name": "Dispel Debuffs",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "silent": true
-            },
-            {
-              "name": "Exit Broken-State",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            },
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variableName": "MaxHPValue",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Modifier Holder}}"
-                },
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 2
-              },
-              "passed": [
-                {
-                  "name": "Set HP Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "setValue": {
-                    "operator": "Variables[0] (MaxHPValue) || Variables[1] (UnusedUnderThisBase_49) || MUL || RETURN",
-                    "displayLines": "(MaxHPValue * UnusedUnderThisBase_49)",
-                    "constants": [],
-                    "variables": [
-                      "MaxHPValue",
-                      "UnusedUnderThisBase_49"
-                    ]
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Set HP Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "setValue": {
-                    "operator": "Variables[0] (MaxHPValue) || Variables[1] (UnusedUnderThisBase_54) || MUL || RETURN",
-                    "displayLines": "(MaxHPValue * UnusedUnderThisBase_54)",
-                    "constants": [],
-                    "variables": [
-                      "MaxHPValue",
-                      "UnusedUnderThisBase_54"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "name": "Reset Toughness",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 2
-                  }
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 2
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1676987149\">Monster_W1_Mecha03_RL_Part02Effect</a>"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1629066392\">Monster_W1_Mecha03_RL_Part03Effect</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
-                "compareType": "=",
-                "value2": 2,
-                "valueType": "LifeTime"
-              },
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
-                    "compareType": "=",
-                    "value2": 3,
-                    "valueType": "LifeTime"
-                  },
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
-                        "compareType": "=",
-                        "value2": 4,
-                        "valueType": "LifeTime"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1013013_WMonster_W1_Mecha_02_RL_Ability07_Part01": {
-      "fileName": "1013013_WMonster_W1_Mecha_02_RL_Ability07_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "WMonster_W1_Mecha_02_RL_Ability07_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1013013_WMonster_W1_Mecha_02_RL_Ability06_Part02": {
-      "fileName": "1013013_WMonster_W1_Mecha_02_RL_Ability06_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "({[Skill06[0]]} * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "30%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.3) || MUL || RETURN",
-              "displayLines": "({[Skill06[0]]} * 0.3)",
-              "constants": [
-                0.3
-              ],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "30%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.4) || MUL || RETURN",
-              "displayLines": "({[Skill06[0]]} * 0.4)",
-              "constants": [
-                0.4
-              ],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "40%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1013013_WMonster_W1_Mecha_02_RL_Ability06_Part01": {
-      "fileName": "1013013_WMonster_W1_Mecha_02_RL_Ability06_Part01",
-      "childAbilityList": [
-        "1013013_WMonster_W1_Mecha_02_RL_Ability06_Camera",
-        "1013013_WMonster_W1_Mecha_02_RL_Ability06_Part01",
-        "1013013_WMonster_W1_Mecha_02_RL_Ability06_Part02"
-      ],
-      "skillTrigger": "Skill06",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "WMonster_W1_Mecha_02_RL_Ability06_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "1013013_WMonster_W1_Mecha_02_RL_Passive_AIControlAndHPLock": {
       "fileName": "1013013_WMonster_W1_Mecha_02_RL_Passive_AIControlAndHPLock",
       "childAbilityList": [
@@ -1367,9 +643,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1377,7 +651,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteHitFly"
           ],
-          "stackData": [],
           "latentQueue": [
             "SummonSequence"
           ]
@@ -1385,6 +658,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
+          "latentQueue": [
+            "SummonSequence"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]"
@@ -1392,197 +668,128 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Choice Window [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "SummonSequence"
           ]
         }
       ]
     },
-    "1013013_WMonster_W1_Mecha_02_Passive_AIControlAndHPLock": {
-      "fileName": "1013013_WMonster_W1_Mecha_02_Passive_AIControlAndHPLock",
+    "1013013_WMonster_W1_Mecha_02_RL_Ability06_Part02": {
+      "fileName": "1013013_WMonster_W1_Mecha_02_RL_Ability06_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
+        "Ability Start",
         {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 1013011,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Automaton Grizzly (Bug)"
-          },
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-404471381\">Monster_W1_Mecha03_RemoveOneMore</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1280509085\">Monster_Mecha03_BreakResetCharge</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
+          "name": "ATK Scaling DMG",
           "target": {
             "name": "Target Name",
-            "target": "{{Caster}}"
+            "target": "{{Ability Target(ST)}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "SummonSequence",
-          "value": 1
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.3) || MUL || RETURN",
+              "displayLines": "({[Skill06[0]]} * 0.3)",
+              "constants": [
+                0.3
+              ],
+              "variables": [
+                "{[Skill06[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "30%"
+          }
         },
         {
-          "name": "Add Events/Bonuses",
-          "to": {
+          "name": "ATK Scaling DMG",
+          "target": {
             "name": "Target Name",
-            "target": "{{Caster}}"
+            "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"1068246674\">HideMonsterHUD</a>"
-        }
-      ],
-      "whenAdded": [
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.3) || MUL || RETURN",
+              "displayLines": "({[Skill06[0]]} * 0.3)",
+              "constants": [
+                0.3
+              ],
+              "variables": [
+                "{[Skill06[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "30%"
+          }
+        },
         {
-          "name": "Add Events/Bonuses",
-          "to": {
+          "name": "ATK Scaling DMG",
+          "target": {
             "name": "Target Name",
-            "target": "{{Caster}}"
+            "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-69428728\">WMonster_Mecha_02_MuteHitFly</a>"
-        }
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill06[0]]}) || Constants[0] (0.4) || MUL || RETURN",
+              "displayLines": "({[Skill06[0]]} * 0.4)",
+              "constants": [
+                0.4
+              ],
+              "variables": [
+                "{[Skill06[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "40%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
+        "primaryTarget": "{{Ability Target List}}"
       },
-      "references": [
+      "references": []
+    },
+    "1013013_WMonster_W1_Mecha_02_RL_Ability06_Part01": {
+      "fileName": "1013013_WMonster_W1_Mecha_02_RL_Ability06_Part01",
+      "childAbilityList": [
+        "1013013_WMonster_W1_Mecha_02_RL_Ability06_Camera",
+        "1013013_WMonster_W1_Mecha_02_RL_Ability06_Part01",
+        "1013013_WMonster_W1_Mecha_02_RL_Ability06_Part02"
+      ],
+      "skillTrigger": "Skill06",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
         {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1280509085\">Monster_Mecha03_BreakResetCharge</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1670817312\">W1_Mecha02_AttackBonus</a>[<span class=\"descriptionNumberColor\">Charging</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": 1013011,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "characterName": "Automaton Grizzly (Bug)"
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "AIFlag",
-                            "compareType": "=",
-                            "value2": 3,
-                            "contextScope": "TargetEntity"
-                          },
-                          "passed": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "AIFlag",
-                              "value": 2
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 4
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "WMonster_W1_Mecha_02_RL_Ability06_Part02",
+          "isTrigger": true
         },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-69428728\">WMonster_Mecha_02_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "SummonSequence"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]"
-            },
-            {
-              "eventTrigger": "Action Choice Window [Owner]"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "SummonSequence"
-          ]
-        }
-      ]
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
     },
     "1013013_WMonster_W1_Mecha_02_Ability05_Part02": {
       "fileName": "1013013_WMonster_W1_Mecha_02_Ability05_Part02",
@@ -3173,122 +2380,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "1013013_WMonster_Mecha_02_PassiveAbilityInitiate": {
-      "fileName": "1013013_WMonster_Mecha_02_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ActivationCountDown",
-          "value": 2
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ActivationMode"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "BeingDamageFlag",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"639506044\">WMonster_Mecha_02_Activation_Controller</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__639506044\">WMonster_Mecha_02_Activation_Controller</a>",
-          "execute": [
-            {
-              "eventTrigger": "Take Damage End [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "BeingDamageFlag",
-                        "compareType": "=",
-                        "value2": 1,
-                        "contextScope": "TargetEntity"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "ActivationMode",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "BeingDamageFlag"
-                    },
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "WMonster_Mecha_02_Ability10_InsertAbility",
-                      "priorityTag": "EnemyAttackFromSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "ActivationCountDown",
-            "ActivationMode",
-            "BeingDamageFlag"
-          ]
-        }
-      ]
-    },
     "1013013_Modifiers": {
       "fileName": "1013013_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -3302,6 +2393,7 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1648872677\">Monster_W1_Mecha03_RL_AfterCharge</a>",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3336,8 +2428,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3397,13 +2488,14 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1629066392\">Monster_W1_Mecha03_RL_Part03Effect</a>",
+          "latentQueue": [
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3412,13 +2504,15 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1139046842\">Monster_W1_Mecha03_RL_Explode</a>",
+          "latentQueue": [
+            "SummonSequence",
+            "TeammateSurvive"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3436,11 +2530,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "SummonSequence",
-            "TeammateSurvive"
           ]
         },
         {
@@ -3494,14 +2583,20 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__118150896\">Monster_W1_Mecha03_RL_Ability03_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_DamageUpRatio_PerLayer"
+          ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3531,20 +2626,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUpRatio_PerLayer"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-735432971\">Monster_W1_Mecha03_RL_Revenge</a>[<span class=\"descriptionNumberColor\">Obliteration Order</span>]",
+          "stackData": [
+            "MDF_DamageUpRatio"
+          ],
+          "description": "Increases DMG by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>. Every time this unit enters the Charging state, DMG is increased further.",
+          "type": "Buff",
+          "effectName": "Obliteration Order",
+          "statusName": "Obliteration Order",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3567,15 +2660,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageUpRatio"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span>. Every time this unit enters the Charging state, DMG is increased further.",
-          "type": "Buff",
-          "effectName": "Obliteration Order",
-          "statusName": "Obliteration Order"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3722,6 +2807,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "DisableHealHP"
           ],
+          "description": "Currently cannot take action.",
+          "type": "Other",
+          "statusName": "Firepower Recovery",
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3858,11 +2947,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Currently cannot take action.",
-          "type": "Other",
-          "statusName": "Firepower Recovery",
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4128,11 +3213,11 @@ const compositeAbilityObject = {
                                           },
                                           "variableName": "Mecha03_00_DamageUpBasePercentage",
                                           "value": {
-                                            "operator": "Variables[0] (UnusedUnderThisBase_48) || RETURN",
-                                            "displayLines": "UnusedUnderThisBase_48",
+                                            "operator": "Variables[0] (UnusedUnderThisBase_7939) || RETURN",
+                                            "displayLines": "UnusedUnderThisBase_7939",
                                             "constants": [],
                                             "variables": [
-                                              "UnusedUnderThisBase_48"
+                                              "UnusedUnderThisBase_7939"
                                             ]
                                           }
                                         }
@@ -4250,7 +3335,7 @@ const compositeAbilityObject = {
                                                 "target": "{{Modifier Holder}}"
                                               },
                                               "advanceType": "Set",
-                                              "multiAdd": "UnusedUnderThisBase_53"
+                                              "multiAdd": "UnusedUnderThisBase_7953"
                                             },
                                             {
                                               "name": "Add Events/Bonuses",
@@ -4260,11 +3345,11 @@ const compositeAbilityObject = {
                                               },
                                               "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                               "duration": {
-                                                "operator": "Variables[0] (UnusedUnderThisBase_52) || RETURN",
-                                                "displayLines": "UnusedUnderThisBase_52",
+                                                "operator": "Variables[0] (UnusedUnderThisBase_7950) || RETURN",
+                                                "displayLines": "UnusedUnderThisBase_7950",
                                                 "constants": [],
                                                 "variables": [
-                                                  "UnusedUnderThisBase_52"
+                                                  "UnusedUnderThisBase_7950"
                                                 ]
                                               }
                                             }
@@ -4277,7 +3362,7 @@ const compositeAbilityObject = {
                                                 "target": "{{Modifier Holder}}"
                                               },
                                               "advanceType": "Set",
-                                              "multiAdd": "UnusedUnderThisBase_51"
+                                              "multiAdd": "UnusedUnderThisBase_7938"
                                             },
                                             {
                                               "name": "Add Events/Bonuses",
@@ -4287,11 +3372,11 @@ const compositeAbilityObject = {
                                               },
                                               "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                               "duration": {
-                                                "operator": "Variables[0] (UnusedUnderThisBase_50) || RETURN",
-                                                "displayLines": "UnusedUnderThisBase_50",
+                                                "operator": "Variables[0] (UnusedUnderThisBase_7951) || RETURN",
+                                                "displayLines": "UnusedUnderThisBase_7951",
                                                 "constants": [],
                                                 "variables": [
-                                                  "UnusedUnderThisBase_50"
+                                                  "UnusedUnderThisBase_7951"
                                                 ]
                                               }
                                             }
@@ -4359,11 +3444,11 @@ const compositeAbilityObject = {
                                           },
                                           "variableName": "Mecha03_00_DamageUpBasePercentage",
                                           "value": {
-                                            "operator": "Variables[0] (UnusedUnderThisBase_48) || RETURN",
-                                            "displayLines": "UnusedUnderThisBase_48",
+                                            "operator": "Variables[0] (UnusedUnderThisBase_7939) || RETURN",
+                                            "displayLines": "UnusedUnderThisBase_7939",
                                             "constants": [],
                                             "variables": [
-                                              "UnusedUnderThisBase_48"
+                                              "UnusedUnderThisBase_7939"
                                             ]
                                           }
                                         }
@@ -4795,11 +3880,11 @@ const compositeAbilityObject = {
                                                           },
                                                           "variableName": "Mecha03_00_DamageUpBasePercentage",
                                                           "value": {
-                                                            "operator": "Variables[0] (UnusedUnderThisBase_48) || RETURN",
-                                                            "displayLines": "UnusedUnderThisBase_48",
+                                                            "operator": "Variables[0] (UnusedUnderThisBase_7939) || RETURN",
+                                                            "displayLines": "UnusedUnderThisBase_7939",
                                                             "constants": [],
                                                             "variables": [
-                                                              "UnusedUnderThisBase_48"
+                                                              "UnusedUnderThisBase_7939"
                                                             ]
                                                           }
                                                         }
@@ -4919,7 +4004,7 @@ const compositeAbilityObject = {
                                                             "target": "{{Modifier Holder}}"
                                                           },
                                                           "advanceType": "Set",
-                                                          "multiAdd": "UnusedUnderThisBase_53"
+                                                          "multiAdd": "UnusedUnderThisBase_7953"
                                                         },
                                                         {
                                                           "name": "Add Events/Bonuses",
@@ -4929,11 +4014,11 @@ const compositeAbilityObject = {
                                                           },
                                                           "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                                           "duration": {
-                                                            "operator": "Variables[0] (UnusedUnderThisBase_52) || RETURN",
-                                                            "displayLines": "UnusedUnderThisBase_52",
+                                                            "operator": "Variables[0] (UnusedUnderThisBase_7950) || RETURN",
+                                                            "displayLines": "UnusedUnderThisBase_7950",
                                                             "constants": [],
                                                             "variables": [
-                                                              "UnusedUnderThisBase_52"
+                                                              "UnusedUnderThisBase_7950"
                                                             ]
                                                           }
                                                         }
@@ -4946,7 +4031,7 @@ const compositeAbilityObject = {
                                                             "target": "{{Modifier Holder}}"
                                                           },
                                                           "advanceType": "Set",
-                                                          "multiAdd": "UnusedUnderThisBase_51"
+                                                          "multiAdd": "UnusedUnderThisBase_7938"
                                                         },
                                                         {
                                                           "name": "Add Events/Bonuses",
@@ -4956,11 +4041,11 @@ const compositeAbilityObject = {
                                                           },
                                                           "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                                           "duration": {
-                                                            "operator": "Variables[0] (UnusedUnderThisBase_50) || RETURN",
-                                                            "displayLines": "UnusedUnderThisBase_50",
+                                                            "operator": "Variables[0] (UnusedUnderThisBase_7951) || RETURN",
+                                                            "displayLines": "UnusedUnderThisBase_7951",
                                                             "constants": [],
                                                             "variables": [
-                                                              "UnusedUnderThisBase_50"
+                                                              "UnusedUnderThisBase_7951"
                                                             ]
                                                           }
                                                         }
@@ -5044,11 +4129,11 @@ const compositeAbilityObject = {
                                                       },
                                                       "variableName": "Mecha03_00_DamageUpBasePercentage",
                                                       "value": {
-                                                        "operator": "Variables[0] (UnusedUnderThisBase_48) || RETURN",
-                                                        "displayLines": "UnusedUnderThisBase_48",
+                                                        "operator": "Variables[0] (UnusedUnderThisBase_7939) || RETURN",
+                                                        "displayLines": "UnusedUnderThisBase_7939",
                                                         "constants": [],
                                                         "variables": [
-                                                          "UnusedUnderThisBase_48"
+                                                          "UnusedUnderThisBase_7939"
                                                         ]
                                                       }
                                                     }
@@ -5138,9 +4223,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5227,9 +4310,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

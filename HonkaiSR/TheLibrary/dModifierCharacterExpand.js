@@ -4724,7 +4724,7 @@ let modifiersCharacter = [
     "perma": true
   },
   {
-    "name": "GlobalAbility_Castorice_DeathTime",
+    "name": "<a class=\"gModGreen\" id=\"-678658688\">GlobalAbility_Castorice_DeathTime</a>",
     "realName": "Mooncocoon",
     "aim": "Other",
     "desc": "This character delays becoming downed and can take actions normally. After the action and before the next turn, if they receive healing or they gain a Shield, \"Mooncocoon\" is removed. Otherwise, they will be downed immediately.",
@@ -7187,7 +7187,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Sam_PassiveAbility_RedMode",
+    "name": "<a class=\"gModGreen\" id=\"-508204277\">Advanced_Sam_PassiveAbility_RedMode</a>",
     "realName": "Fyrefly Type-IV: Complete Combustion",
     "aim": "Other",
     "desc": "When using Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by #1[i]% and increases the Break DMG dealt by SAM to the enemy targets by #4[f1]%. Increases SPD by #2[i], and Effect RES by #3[i]%.",
@@ -7202,7 +7202,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Sam_PassiveAbility_AllDamageTypeResistance",
+    "name": "<a class=\"gModGreen\" id=\"468515060\">Advanced_Sam_PassiveAbility_AllDamageTypeResistance</a>",
     "realName": "Chrysalid Pyronexus",
     "aim": "Buff",
     "desc": "DMG taken decreases by #1[i]%.",
@@ -7213,7 +7213,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Sam_Ability21_FireWeakType",
+    "name": "<a class=\"gModGreen\" id=\"-1165299909\">Advanced_Sam_Ability21_FireWeakType</a>",
     "realName": "Additional Fire Weakness",
     "aim": "Debuff",
     "desc": "Additionally implanted Fire Weakness.",
@@ -7221,7 +7221,7 @@ let modifiersCharacter = [
     "perma": false
   },
   {
-    "name": "Advanced_Sam_Eidolon2_BonusCD",
+    "name": "<a class=\"gModGreen\" id=\"-143623323\">Advanced_Sam_Eidolon2_BonusCD</a>",
     "realName": "From Shattered Sky, I Free Fall",
     "aim": "Other",
     "desc": "The \"From Shattered Sky, I Free Fall\" effect cannot be triggered yet.",
@@ -7229,7 +7229,7 @@ let modifiersCharacter = [
     "perma": false
   },
   {
-    "name": "Advanced_Sam_Eidolon6_FirePenetrate",
+    "name": "<a class=\"gModGreen\" id=\"770661145\">Advanced_Sam_Eidolon6_FirePenetrate</a>",
     "realName": "In Finalized Morrow, I Full Bloom",
     "aim": "Buff",
     "desc": "Fire RES PEN +#1[i]%.",
@@ -7251,7 +7251,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Sam_PointB1_BreakDamageAddedRatioBase",
+    "name": "<a class=\"gModGreen\" id=\"-688726584\">Advanced_Sam_PointB1_BreakDamageAddedRatioBase</a>",
     "realName": "Module α: Antilag Outburst",
     "aim": "Buff",
     "desc": "Break Effect increases by #1[i]%.",

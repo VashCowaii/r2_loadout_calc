@@ -3,107 +3,22 @@ const compositeAbilityObject = {
   "fullCharacterName": 4034012,
   "trimCharacterName": 4034012,
   "abilityList": [
-    "4034012_Monster_W4_FireProwler_ChargeBreak",
     "4034012_Monster_W4_FireProwler_HPBack",
+    "4034012_Monster_W4_FireProwler_ChargeBreak",
     "4034012_Monster_W4_FireProwler_01_DeathRattle",
-    "4034012_Monster_W4_FireProwler_Ability06_Part02",
-    "4034012_Monster_W4_FireProwler_Ability06_Part01",
+    "4034012_Monster_W4_FireProwler_ChangePhase1",
+    "4034012_Monster_W4_FireProwler_Ability01_Assist",
     "4034012_Monster_W4_FireProwler_Ability07_Part02",
     "4034012_Monster_W4_FireProwler_Ability07_Part01",
     "4034012_Monster_W4_FireProwler_Ability05_Part02",
     "4034012_Monster_W4_FireProwler_Ability05_Part01",
     "4034012_Monster_W4_FireProwler_Ability04_Part02",
     "4034012_Monster_W4_FireProwler_Ability04_Part01",
-    "4034012_Monster_W4_FireProwler_Ability03_Part02",
-    "4034012_Monster_W4_FireProwler_Ability03_Part01",
-    "4034012_Monster_W4_FireProwler_Ability02_Assist",
-    "4034012_Monster_W4_FireProwler_Ability01_Assist",
-    "4034012_Monster_W4_FireProwler_Ability02_Part02",
-    "4034012_Monster_W4_FireProwler_Ability02_Part01",
-    "4034012_Monster_W4_FireProwler_Ability01_Part02",
-    "4034012_Monster_W4_FireProwler_Ability01_Part01",
-    "4034012_Monster_W4_FireProwler_ChangePhase1",
-    "4034012_Monster_W4_FireProwler_PassiveAbility02",
-    "4034012_Monster_W4_FireProwler_PassiveAbility01",
     "4034012_Monster_W4_FireProwler_ChangePhase",
     "4034012_Monster_W4_FireProwler_PassiveAbility_BGM",
     "4034012_Modifiers"
   ],
   "abilityObject": {
-    "4034012_Monster_W4_FireProwler_ChargeBreak": {
-      "fileName": "4034012_Monster_W4_FireProwler_ChargeBreak",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "includeDyingTargets": true,
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "value1": "CurrentHP",
-            "compareType": "<=",
-            "value2": 0
-          },
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]"
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-834356036\">Enemy_W4_FireProwler_01_HPBack</a>[<span class=\"descriptionNumberColor\">Enfettered</span>]"
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "scope": "TargetEntity",
-          "variableName": "HPBack",
-          "value": 0
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4034012_Monster_W4_FireProwler_HPBack": {
       "fileName": "4034012_Monster_W4_FireProwler_HPBack",
       "abilityType": null,
@@ -491,6 +406,80 @@ const compositeAbilityObject = {
       },
       "references": []
     },
+    "4034012_Monster_W4_FireProwler_ChargeBreak": {
+      "fileName": "4034012_Monster_W4_FireProwler_ChargeBreak",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "includeDyingTargets": true,
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "value1": "CurrentHP",
+            "compareType": "<=",
+            "value2": 0
+          },
+          "ifTargetFound": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]"
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-834356036\">Enemy_W4_FireProwler_01_HPBack</a>[<span class=\"descriptionNumberColor\">Enfettered</span>]"
+        },
+        {
+          "name": "Force Entity Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "scope": "TargetEntity",
+          "variableName": "HPBack",
+          "value": 0
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "4034012_Monster_W4_FireProwler_01_DeathRattle": {
       "fileName": "4034012_Monster_W4_FireProwler_01_DeathRattle",
       "abilityType": null,
@@ -660,1153 +649,832 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4034012_Monster_W4_FireProwler_Ability06_Part02": {
-      "fileName": "4034012_Monster_W4_FireProwler_Ability06_Part02",
+    "4034012_Monster_W4_FireProwler_ChangePhase1": {
+      "fileName": "4034012_Monster_W4_FireProwler_ChangePhase1",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Define Custom Variable",
-          "variableName": "Skill01_AssistCount",
-          "value": 0
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
         },
         {
-          "name": "Define Custom Variable",
-          "variableName": "Skill02_AssistCount",
-          "value": 0
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "ChangePhase_Layer"
         },
         {
-          "name": "Define Custom Variable",
-          "variableName": "Skill01_CurCount",
-          "value": 0
+          "name": "Define Custom Variable with Modifier Values",
+          "valueType": "Layer",
+          "variableName": "ChangePhase_Layer",
+          "modifierName": "<a class=\"gModGreen\" id=\"33624492\">Enemy_W4_FireProwler_TimePower</a>[<span class=\"descriptionNumberColor\">Calamity Power</span>]",
+          "multiplier": 1
         },
         {
-          "name": "Define Custom Variable",
-          "variableName": "Skill02_CurCount",
-          "value": 0
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"33624492\">Enemy_W4_FireProwler_TimePower</a>[<span class=\"descriptionNumberColor\">Calamity Power</span>]",
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ChangePhase_Layer) || INVERT || RETURN",
+            "displayLines": "-ChangePhase_Layer",
+            "constants": [],
+            "variables": [
+              "ChangePhase_Layer"
+            ]
+          }
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": 0,
+          "entityClass": "Enemy",
+          "maximum": 0,
+          "assignState": "True",
+          "barType": "FireProwler",
+          "trigger": "Step_01"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "multiBase": 0
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
+          "stackLimit": {
+            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+            "displayLines": "{[Skill01[3]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[3]]}"
+            ]
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
+              "displayLines": "{[Skill01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[2]]}"
+              ]
+            }
+          },
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+            "displayLines": "{[Skill01[3]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[3]]}"
+            ]
+          }
+        },
+        {
+          "name": "UI Display Event (On Entity)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "popUpText": "DMG Reduction"
         },
         {
           "name": "Remove Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
+            "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-231482417\">Enemy_W4_FireProwler_Ability06_Target</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"1404590263\">Standard_Endurance</a>"
         },
         {
-          "name": "Find New Target",
-          "from": {
+          "name": "Declare Custom Variable",
+          "target": {
             "name": "Target Name",
-            "target": "{{Enemies by Aggro OR Random}}"
+            "target": "{{Caster}}"
           },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "ifTargetFound": [
+          "scope": "TargetEntity",
+          "variableName": "ChangePhase",
+          "value": 1
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 1
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "SkillFlag",
+          "value": 2
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Deathrattle"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-415724336\">Monster_W4_FireProwler_MainStory_04</a>"
+          },
+          "passed": [
             {
-              "name": "Add Events/Bonuses",
-              "to": {
+              "name": "Declare Custom Variable",
+              "target": {
                 "name": "Target Name",
-                "target": "{{Parameter Target}}"
+                "target": "{{Caster}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-231482417\">Enemy_W4_FireProwler_Ability06_Target</a>"
+              "scope": "TargetEntity",
+              "variableName": "AIFlag",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Phase_Flag",
+          "value": 2
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage Type",
+                "stageType": "Challenge"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "VerseSimulation"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "StrongChallengeActivity"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "RogueRelic"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "GridFightActivity"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-29397814\">Monster_W4_FireProwler_MainStory_33</a>"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1484368126\">Enemy_W4_FireProwler_10_NoMask</a>"
+              }
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4034012_Monster_W4_FireProwler_Ability01_Assist": {
+      "fileName": "4034012_Monster_W4_FireProwler_Ability01_Assist",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1484368126\">Enemy_W4_FireProwler_10_NoMask</a>"
+          }
+        },
+        "Deleted bullshit",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+              "displayLines": "{[Skill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[1]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "Skill01_Assist_Damage"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "Skill01_Assist_Damage_Adjoin"
+        },
+        {
+          "name": "Define Custom Variable with Copy",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2020453285\">Enemy_W4_FireProwler_01_DamageValue</a>",
+          "variable": "MDF_Skill01",
+          "target2": null,
+          "variable2": "Skill01_Assist_Damage"
+        },
+        {
+          "name": "Define Custom Variable with Copy",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2020453285\">Enemy_W4_FireProwler_01_DamageValue</a>",
+          "variable": "MDF_Skill01_Adjoin",
+          "target2": null,
+          "variable2": "Skill01_Assist_Damage_Adjoin"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 1
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 4034017,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Flame Reaver of the Deepest Dark",
+                "isBaseCompare": true,
+                "invertCondition": true
+              },
+              {
+                "name": "Compare: Variable",
+                "value1": "Skill01_AssistCount",
+                "compareType": "=",
+                "value2": 1
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] (Skill01_Assist_Damage) || RETURN",
+                  "displayLines": "Skill01_Assist_Damage",
+                  "constants": [],
+                  "variables": [
+                    "Skill01_Assist_Damage"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "50%"
+              }
+            },
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] (Skill01_Assist_Damage_Adjoin) || RETURN",
+                  "displayLines": "Skill01_Assist_Damage_Adjoin",
+                  "constants": [],
+                  "variables": [
+                    "Skill01_Assist_Damage_Adjoin"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "50%"
+              }
             }
           ]
         },
         {
           "name": "IF",
           "conditions": {
-            "name": "Compare: Variable",
-            "value1": "Assist_Flag",
-            "compareType": "=",
-            "value2": 1
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "HP_Bars_Remaining",
+                    "compareType": ">",
+                    "value2": 1
+                  },
+                  {
+                    "name": "Enemy ID",
+                    "ID": 4034017,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": "Flame Reaver of the Deepest Dark",
+                    "isBaseCompare": true
+                  }
+                ]
+              },
+              {
+                "name": "Compare: Variable",
+                "value1": "Skill01_AssistCount",
+                "compareType": "=",
+                "value2": 1
+              }
+            ]
           },
           "passed": [
             {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Far Left Enemy Entity}}"
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] (Skill01_Assist_Damage) || RETURN",
+                  "displayLines": "Skill01_Assist_Damage",
+                  "constants": [],
+                  "variables": [
+                    "Skill01_Assist_Damage"
+                  ]
                 },
-                "target2": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "50%"
+              }
+            },
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] (Skill01_Assist_Damage_Adjoin) || RETURN",
+                  "displayLines": "Skill01_Assist_Damage_Adjoin",
+                  "constants": [],
+                  "variables": [
+                    "Skill01_Assist_Damage_Adjoin"
+                  ]
                 },
-                "invertCondition": true
-              },
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Far Left Enemy Entity}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Target Right of Caster}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": {
-                          "operator": "Variables[0] (SummonID_1) || RETURN",
-                          "displayLines": "SummonID_1",
-                          "constants": [],
-                          "variables": [
-                            "SummonID_1"
-                          ]
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Target Right of Caster}}"
-                        },
-                        "characterName": null
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": {
-                          "operator": "Variables[0] (SummonID_1) || RETURN",
-                          "displayLines": "SummonID_1",
-                          "constants": [],
-                          "variables": [
-                            "SummonID_1"
-                          ]
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Target Right of Caster}}"
-                        },
-                        "characterName": null
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": {
-                          "operator": "Variables[0] (SummonID_1) || RETURN",
-                          "displayLines": "SummonID_1",
-                          "constants": [],
-                          "variables": [
-                            "SummonID_1"
-                          ]
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Far Left Enemy Entity}}"
-                        },
-                        "characterName": null
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            "Deleted bullshit",
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 4034017,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Flame Reaver of the Deepest Dark",
-                    "isBaseCompare": true,
-                    "invertCondition": true
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "maxTargets": 2,
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID_1) || RETURN",
-                      "displayLines": "SummonID_1",
-                      "constants": [],
-                      "variables": [
-                        "SummonID_1"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Trigger Joint-Attack Ability",
-                      "abilityList": [
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "inherentTarget": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Hostile Entities(AOE)}}"
-                              },
-                              {
-                                "name": "Target Filter",
-                                "conditions": {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-231482417\">Enemy_W4_FireProwler_Ability06_Target</a>"
-                                }
-                              }
-                            ]
-                          },
-                          "ability": "Monster_W4_FireProwler_Ability01_Assist"
-                        },
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target List}}"
-                              },
-                              {
-                                "name": "Target Index",
-                                "indexType": "IndexStrict"
-                              }
-                            ]
-                          },
-                          "inherentTarget": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Hostile Entities(AOE)}}"
-                              },
-                              {
-                                "name": "Target Filter",
-                                "conditions": {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-231482417\">Enemy_W4_FireProwler_Ability06_Target</a>"
-                                }
-                              }
-                            ]
-                          },
-                          "delay": 1.4,
-                          "ability": "Monster_W4_FireProwler_01_Ability01_Assist"
-                        },
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target List}}"
-                              },
-                              {
-                                "name": "Target Index",
-                                "indexType": "IndexStrict",
-                                "indexValue": 1
-                              }
-                            ]
-                          },
-                          "inherentTarget": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Hostile Entities(AOE)}}"
-                              },
-                              {
-                                "name": "Target Filter",
-                                "conditions": {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-231482417\">Enemy_W4_FireProwler_Ability06_Target</a>"
-                                }
-                              }
-                            ]
-                          },
-                          "delay": 1.8,
-                          "ability": "Monster_W4_FireProwler_01_Ability01_Assist"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Mark Entity For Immediate Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target List}}"
-                      }
-                    },
-                    {
-                      "name": "Force Entity Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target List}}"
-                      }
-                    }
-                  ],
-                  "noTargetFound": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Stage Type",
-                            "stageType": "EvolveBuildActivity"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Trigger Joint-Attack Ability",
-                      "abilityList": [
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "inherentTarget": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Hostile Entities(AOE)}}"
-                              },
-                              {
-                                "name": "Target Filter",
-                                "conditions": {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-231482417\">Enemy_W4_FireProwler_Ability06_Target</a>"
-                                }
-                              }
-                            ]
-                          },
-                          "ability": "Monster_W4_FireProwler_Ability01_Assist"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 2
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 4034017,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Flame Reaver of the Deepest Dark",
-                    "isBaseCompare": true
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "maxTargets": 4,
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID_1) || RETURN",
-                      "displayLines": "SummonID_1",
-                      "constants": [],
-                      "variables": [
-                        "SummonID_1"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Trigger Joint-Attack Ability",
-                      "abilityList": [
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "inherentTarget": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Hostile Entities(AOE)}}"
-                              },
-                              {
-                                "name": "Target Filter",
-                                "conditions": {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-231482417\">Enemy_W4_FireProwler_Ability06_Target</a>"
-                                }
-                              }
-                            ]
-                          },
-                          "ability": "Monster_W4_FireProwler_Ability01_Assist"
-                        },
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target List}}"
-                              },
-                              {
-                                "name": "Target Index",
-                                "indexType": "IndexStrict"
-                              }
-                            ]
-                          },
-                          "inherentTarget": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Hostile Entities(AOE)}}"
-                              },
-                              {
-                                "name": "Target Filter",
-                                "conditions": {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-231482417\">Enemy_W4_FireProwler_Ability06_Target</a>"
-                                }
-                              }
-                            ]
-                          },
-                          "delay": 1.4,
-                          "ability": "Monster_W4_FireProwler_01_Ability01_Assist"
-                        },
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target List}}"
-                              },
-                              {
-                                "name": "Target Index",
-                                "indexType": "IndexStrict",
-                                "indexValue": 1
-                              }
-                            ]
-                          },
-                          "inherentTarget": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Hostile Entities(AOE)}}"
-                              },
-                              {
-                                "name": "Target Filter",
-                                "conditions": {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-231482417\">Enemy_W4_FireProwler_Ability06_Target</a>"
-                                }
-                              }
-                            ]
-                          },
-                          "delay": 1.6,
-                          "ability": "Monster_W4_FireProwler_01_Ability01_Assist"
-                        },
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target List}}"
-                              },
-                              {
-                                "name": "Target Index",
-                                "indexType": "IndexStrict",
-                                "indexValue": 2
-                              }
-                            ]
-                          },
-                          "inherentTarget": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Hostile Entities(AOE)}}"
-                              },
-                              {
-                                "name": "Target Filter",
-                                "conditions": {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-231482417\">Enemy_W4_FireProwler_Ability06_Target</a>"
-                                }
-                              }
-                            ]
-                          },
-                          "delay": 2.1,
-                          "ability": "Monster_W4_FireProwler_01_Ability01_Assist"
-                        },
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target List}}"
-                              },
-                              {
-                                "name": "Target Index",
-                                "indexType": "IndexStrict",
-                                "indexValue": 3
-                              }
-                            ]
-                          },
-                          "inherentTarget": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Hostile Entities(AOE)}}"
-                              },
-                              {
-                                "name": "Target Filter",
-                                "conditions": {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-231482417\">Enemy_W4_FireProwler_Ability06_Target</a>"
-                                }
-                              }
-                            ]
-                          },
-                          "delay": 2.4,
-                          "ability": "Monster_W4_FireProwler_01_Ability01_Assist"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Mark Entity For Immediate Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target List}}"
-                      }
-                    },
-                    {
-                      "name": "Force Entity Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target List}}"
-                      }
-                    }
-                  ],
-                  "noTargetFound": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Stage Type",
-                            "stageType": "EvolveBuildActivity"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Trigger Joint-Attack Ability",
-                      "abilityList": [
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "inherentTarget": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Hostile Entities(AOE)}}"
-                              },
-                              {
-                                "name": "Target Filter",
-                                "conditions": {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-231482417\">Enemy_W4_FireProwler_Ability06_Target</a>"
-                                }
-                              }
-                            ]
-                          },
-                          "ability": "Monster_W4_FireProwler_Ability01_Assist"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Assist_Flag",
-              "value": 2
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Far Right Enemy Entity}}"
-                },
-                "target2": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "invertCondition": true
-              },
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Far Right Enemy Entity}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Target Left of Caster}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": {
-                          "operator": "Variables[0] (SummonID_2) || RETURN",
-                          "displayLines": "SummonID_2",
-                          "constants": [],
-                          "variables": [
-                            "SummonID_2"
-                          ]
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Target Left of Caster}}"
-                        },
-                        "characterName": null
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": {
-                          "operator": "Variables[0] (SummonID_2) || RETURN",
-                          "displayLines": "SummonID_2",
-                          "constants": [],
-                          "variables": [
-                            "SummonID_2"
-                          ]
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Target Left of Caster}}"
-                        },
-                        "characterName": null
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": {
-                          "operator": "Variables[0] (SummonID_2) || RETURN",
-                          "displayLines": "SummonID_2",
-                          "constants": [],
-                          "variables": [
-                            "SummonID_2"
-                          ]
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Far Right Enemy Entity}}"
-                        },
-                        "characterName": null
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            "Deleted bullshit",
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 4034017,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Flame Reaver of the Deepest Dark",
-                    "isBaseCompare": true,
-                    "invertCondition": true
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "maxTargets": 2,
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID_2) || RETURN",
-                      "displayLines": "SummonID_2",
-                      "constants": [],
-                      "variables": [
-                        "SummonID_2"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Trigger Joint-Attack Ability",
-                      "abilityList": [
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "ability": "Monster_W4_FireProwler_Ability02_Assist"
-                        },
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target List}}"
-                              },
-                              {
-                                "name": "Target Index",
-                                "indexType": "IndexStrict"
-                              }
-                            ]
-                          },
-                          "delay": 1.5,
-                          "ability": "Monster_W4_FireProwler_01_Ability02_Assist"
-                        },
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target List}}"
-                              },
-                              {
-                                "name": "Target Index",
-                                "indexType": "IndexStrict",
-                                "indexValue": 1
-                              }
-                            ]
-                          },
-                          "delay": 2,
-                          "ability": "Monster_W4_FireProwler_01_Ability02_Assist"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Mark Entity For Immediate Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target List}}"
-                      }
-                    },
-                    {
-                      "name": "Force Entity Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target List}}"
-                      }
-                    }
-                  ],
-                  "noTargetFound": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Stage Type",
-                            "stageType": "EvolveBuildActivity"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Trigger Joint-Attack Ability",
-                      "abilityList": [
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "ability": "Monster_W4_FireProwler_Ability02_Assist"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 2
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 4034017,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Flame Reaver of the Deepest Dark",
-                    "isBaseCompare": true
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "maxTargets": 4,
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID_2) || RETURN",
-                      "displayLines": "SummonID_2",
-                      "constants": [],
-                      "variables": [
-                        "SummonID_2"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Trigger Joint-Attack Ability",
-                      "abilityList": [
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "ability": "Monster_W4_FireProwler_Ability02_Assist"
-                        },
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target List}}"
-                              },
-                              {
-                                "name": "Target Index",
-                                "indexType": "IndexStrict"
-                              }
-                            ]
-                          },
-                          "delay": 1.5,
-                          "ability": "Monster_W4_FireProwler_01_Ability02_Assist"
-                        },
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target List}}"
-                              },
-                              {
-                                "name": "Target Index",
-                                "indexType": "IndexStrict",
-                                "indexValue": 1
-                              }
-                            ]
-                          },
-                          "delay": 1.8,
-                          "ability": "Monster_W4_FireProwler_01_Ability02_Assist"
-                        },
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target List}}"
-                              },
-                              {
-                                "name": "Target Index",
-                                "indexType": "IndexStrict",
-                                "indexValue": 2
-                              }
-                            ]
-                          },
-                          "delay": 2.3,
-                          "ability": "Monster_W4_FireProwler_01_Ability02_Assist"
-                        },
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target List}}"
-                              },
-                              {
-                                "name": "Target Index",
-                                "indexType": "IndexStrict",
-                                "indexValue": 3
-                              }
-                            ]
-                          },
-                          "delay": 2.7,
-                          "ability": "Monster_W4_FireProwler_01_Ability02_Assist"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Mark Entity For Immediate Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target List}}"
-                      }
-                    },
-                    {
-                      "name": "Force Entity Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target List}}"
-                      }
-                    }
-                  ],
-                  "noTargetFound": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Stage Type",
-                            "stageType": "EvolveBuildActivity"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Trigger Joint-Attack Ability",
-                      "abilityList": [
-                        {
-                          "name": "Trigger Ability",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "ability": "Monster_W4_FireProwler_Ability02_Assist"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Assist_Flag",
-              "value": 1
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "50%"
+              }
             }
           ]
         },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": [
         {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-231482417\">Enemy_W4_FireProwler_Ability06_Target</a>",
-          "stackData": [],
-          "latentQueue": [
-            "Skill01_AssistCount",
-            "Skill02_AssistCount"
-          ]
-        }
-      ]
-    },
-    "4034012_Monster_W4_FireProwler_Ability06_Part01": {
-      "fileName": "4034012_Monster_W4_FireProwler_Ability06_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "HP_Bars_Remaining",
+                    "compareType": ">",
+                    "value2": 1
+                  },
+                  {
+                    "name": "Enemy ID",
+                    "ID": 4034017,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": "Flame Reaver of the Deepest Dark",
+                    "isBaseCompare": true
+                  }
+                ]
+              },
+              {
+                "name": "Compare: Variable",
+                "value1": "Skill01_AssistCount",
+                "compareType": "=",
+                "value2": 2
+              }
+            ]
           },
-          "ability": "Monster_W4_FireProwler_Ability06_Part02",
-          "isTrigger": true
-        }
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] (Skill01_Assist_Damage) || RETURN",
+                  "displayLines": "Skill01_Assist_Damage",
+                  "constants": [],
+                  "variables": [
+                    "Skill01_Assist_Damage"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "50%"
+              }
+            },
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] (Skill01_Assist_Damage_Adjoin) || RETURN",
+                  "displayLines": "Skill01_Assist_Damage_Adjoin",
+                  "constants": [],
+                  "variables": [
+                    "Skill01_Assist_Damage_Adjoin"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "50%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 1
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 4034017,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Flame Reaver of the Deepest Dark",
+                "isBaseCompare": true,
+                "invertCondition": true
+              },
+              {
+                "name": "Compare: Variable",
+                "value1": "Skill01_AssistCount",
+                "compareType": "=",
+                "value2": 2
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] (Skill01_Assist_Damage) || RETURN",
+                  "displayLines": "Skill01_Assist_Damage",
+                  "constants": [],
+                  "variables": [
+                    "Skill01_Assist_Damage"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "50%"
+              }
+            },
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] (Skill01_Assist_Damage_Adjoin) || RETURN",
+                  "displayLines": "Skill01_Assist_Damage_Adjoin",
+                  "constants": [],
+                  "variables": [
+                    "Skill01_Assist_Damage_Adjoin"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "50%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "HP_Bars_Remaining",
+                    "compareType": ">",
+                    "value2": 1
+                  },
+                  {
+                    "name": "Enemy ID",
+                    "ID": 4034017,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": "Flame Reaver of the Deepest Dark",
+                    "isBaseCompare": true
+                  }
+                ]
+              },
+              {
+                "name": "Compare: Variable",
+                "value1": "Skill01_AssistCount",
+                "compareType": "=",
+                "value2": 3
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] (Skill01_Assist_Damage) || RETURN",
+                  "displayLines": "Skill01_Assist_Damage",
+                  "constants": [],
+                  "variables": [
+                    "Skill01_Assist_Damage"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "50%"
+              }
+            },
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] (Skill01_Assist_Damage_Adjoin) || RETURN",
+                  "displayLines": "Skill01_Assist_Damage_Adjoin",
+                  "constants": [],
+                  "variables": [
+                    "Skill01_Assist_Damage_Adjoin"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "50%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "HP_Bars_Remaining",
+                    "compareType": ">",
+                    "value2": 1
+                  },
+                  {
+                    "name": "Enemy ID",
+                    "ID": 4034017,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": "Flame Reaver of the Deepest Dark",
+                    "isBaseCompare": true
+                  }
+                ]
+              },
+              {
+                "name": "Compare: Variable",
+                "value1": "Skill01_AssistCount",
+                "compareType": "=",
+                "value2": 4
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] (Skill01_Assist_Damage) || RETURN",
+                  "displayLines": "Skill01_Assist_Damage",
+                  "constants": [],
+                  "variables": [
+                    "Skill01_Assist_Damage"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "50%"
+              }
+            },
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] (Skill01_Assist_Damage_Adjoin) || RETURN",
+                  "displayLines": "Skill01_Assist_Damage_Adjoin",
+                  "constants": [],
+                  "variables": [
+                    "Skill01_Assist_Damage_Adjoin"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "50%"
+              }
+            }
+          ]
+        },
+        "Trigger: Attack End"
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
+        "primaryTarget": "Inherent Target"
       },
       "references": []
     },
@@ -2205,9 +1873,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3130,9 +2796,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3141,9 +2805,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -3185,3048 +2847,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{All Team Members}}"
       },
       "references": []
-    },
-    "4034012_Monster_W4_FireProwler_Ability03_Part02": {
-      "fileName": "4034012_Monster_W4_FireProwler_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 4034017,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Flame Reaver of the Deepest Dark",
-                "isBaseCompare": true,
-                "invertCondition": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Stage Type",
-                    "stageType": "EvolveBuildActivity"
-                  }
-                ]
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Stage Type",
-                    "stageType": "EvolveBuildActivity"
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": {
-              "operator": "Variables[0] (SummonID_1) || RETURN",
-              "displayLines": "SummonID_1",
-              "constants": [],
-              "variables": [
-                "SummonID_1"
-              ]
-            },
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null
-          },
-          "ifTargetFound": [
-            {
-              "name": "Change Character Transformation",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "phase": "Phase01"
-            },
-            "Deleted bullshit",
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-585162959\">Enemy_W4_FireProwler_01_Activated01</a>[<span class=\"descriptionNumberColor\">Mutual Sacrifice</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": {
-              "operator": "Variables[0] (SummonID_2) || RETURN",
-              "displayLines": "SummonID_2",
-              "constants": [],
-              "variables": [
-                "SummonID_2"
-              ]
-            },
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null
-          },
-          "ifTargetFound": [
-            {
-              "name": "Change Character Transformation",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "phase": "Phase02"
-            },
-            "Deleted bullshit",
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-635495816\">Enemy_W4_FireProwler_01_Activated02</a>[<span class=\"descriptionNumberColor\">Mutual Sacrifice</span>]"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 2
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 4034017,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Flame Reaver of the Deepest Dark",
-                    "isBaseCompare": true
-                  }
-                ]
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>",
-                "invertCondition": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Assign Advance/Delay to Current Ability Use",
-              "adjustmentValue": {
-                "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                "displayLines": "{[Skill03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[0]]}"
-                ]
-              },
-              "adjustmentType": "Advance"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-635495816\">Enemy_W4_FireProwler_01_Activated02</a>[<span class=\"descriptionNumberColor\">Mutual Sacrifice</span>]",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When \"%CasterName\" uses \"Fading Fate,\" also use \"Fading Fate\" at the same time.",
-          "type": "Other",
-          "effectName": "Simultaneously use \"Fading Fate\"",
-          "statusName": "Mutual Sacrifice"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-585162959\">Enemy_W4_FireProwler_01_Activated01</a>[<span class=\"descriptionNumberColor\">Mutual Sacrifice</span>]",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When \"%CasterName\" uses \"Demise's Storm\", also use \"Demise's Storm\" at the same time.",
-          "type": "Other",
-          "effectName": "Simultaneously use \"Demise's Storm\"",
-          "statusName": "Mutual Sacrifice"
-        }
-      ]
-    },
-    "4034012_Monster_W4_FireProwler_Ability03_Part01": {
-      "fileName": "4034012_Monster_W4_FireProwler_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_FireProwler_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Far Left Enemy Entity}}"
-            },
-            "target2": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Far Left Enemy Entity}}"
-                },
-                "target2": {
-                  "name": "Target Name",
-                  "target": "{{Target Right of Caster}}"
-                }
-              },
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID_1) || RETURN",
-                      "displayLines": "SummonID_1",
-                      "constants": [],
-                      "variables": [
-                        "SummonID_1"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Target Right of Caster}}"
-                    },
-                    "characterName": null
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID_1) || RETURN",
-                      "displayLines": "SummonID_1",
-                      "constants": [],
-                      "variables": [
-                        "SummonID_1"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Target Right of Caster}}"
-                    },
-                    "characterName": null
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID_1) || RETURN",
-                      "displayLines": "SummonID_1",
-                      "constants": [],
-                      "variables": [
-                        "SummonID_1"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Far Left Enemy Entity}}"
-                    },
-                    "characterName": null
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Far Right Enemy Entity}}"
-            },
-            "target2": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Far Right Enemy Entity}}"
-                },
-                "target2": {
-                  "name": "Target Name",
-                  "target": "{{Target Left of Caster}}"
-                }
-              },
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID_2) || RETURN",
-                      "displayLines": "SummonID_2",
-                      "constants": [],
-                      "variables": [
-                        "SummonID_2"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Target Left of Caster}}"
-                    },
-                    "characterName": null
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID_2) || RETURN",
-                      "displayLines": "SummonID_2",
-                      "constants": [],
-                      "variables": [
-                        "SummonID_2"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Target Left of Caster}}"
-                    },
-                    "characterName": null
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID_2) || RETURN",
-                      "displayLines": "SummonID_2",
-                      "constants": [],
-                      "variables": [
-                        "SummonID_2"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Far Right Enemy Entity}}"
-                    },
-                    "characterName": null
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4034012_Monster_W4_FireProwler_Ability02_Assist": {
-      "fileName": "4034012_Monster_W4_FireProwler_Ability02_Assist",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1484368126\">Enemy_W4_FireProwler_10_NoMask</a>"
-          }
-        },
-        "Deleted bullshit",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 4034017,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Flame Reaver of the Deepest Dark",
-                "isBaseCompare": true,
-                "invertCondition": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
-              "valuePerStack": {
-                "MDF_RallyTransferRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[0]]}"
-                  ]
-                },
-                "MDF_Rally_HealPercentage": {
-                  "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[4]]}"
-                  ]
-                },
-                "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[2]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 2
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 4034017,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Flame Reaver of the Deepest Dark",
-                "isBaseCompare": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
-              "valuePerStack": {
-                "MDF_RallyTransferRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[1]]}"
-                  ]
-                },
-                "MDF_Rally_HealPercentage": {
-                  "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[4]]}"
-                  ]
-                },
-                "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[2]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "Skill02_Assist_Damage"
-        },
-        {
-          "name": "Define Custom Variable with Copy",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2020453285\">Enemy_W4_FireProwler_01_DamageValue</a>",
-          "variable": "MDF_Skill02",
-          "target2": null,
-          "variable2": "Skill02_Assist_Damage"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 4034017,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Flame Reaver of the Deepest Dark",
-                "isBaseCompare": true,
-                "invertCondition": true
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "Skill02_AssistCount",
-                "compareType": "=",
-                "value2": 1
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill02_Assist_Damage) || RETURN",
-                  "displayLines": "Skill02_Assist_Damage",
-                  "constants": [],
-                  "variables": [
-                    "Skill02_Assist_Damage"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": ">",
-                    "value2": 1
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 4034017,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Flame Reaver of the Deepest Dark",
-                    "isBaseCompare": true
-                  }
-                ]
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "Skill02_AssistCount",
-                "compareType": "=",
-                "value2": 1
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill02_Assist_Damage) || RETURN",
-                  "displayLines": "Skill02_Assist_Damage",
-                  "constants": [],
-                  "variables": [
-                    "Skill02_Assist_Damage"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": ">",
-                    "value2": 1
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 4034017,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Flame Reaver of the Deepest Dark",
-                    "isBaseCompare": true
-                  }
-                ]
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "Skill02_AssistCount",
-                "compareType": "=",
-                "value2": 2
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill02_Assist_Damage) || RETURN",
-                  "displayLines": "Skill02_Assist_Damage",
-                  "constants": [],
-                  "variables": [
-                    "Skill02_Assist_Damage"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 4034017,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Flame Reaver of the Deepest Dark",
-                "isBaseCompare": true,
-                "invertCondition": true
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "Skill02_AssistCount",
-                "compareType": "=",
-                "value2": 2
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill02_Assist_Damage) || RETURN",
-                  "displayLines": "Skill02_Assist_Damage",
-                  "constants": [],
-                  "variables": [
-                    "Skill02_Assist_Damage"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": ">",
-                    "value2": 1
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 4034017,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Flame Reaver of the Deepest Dark",
-                    "isBaseCompare": true
-                  }
-                ]
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "Skill02_AssistCount",
-                "compareType": "=",
-                "value2": 3
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill02_Assist_Damage) || RETURN",
-                  "displayLines": "Skill02_Assist_Damage",
-                  "constants": [],
-                  "variables": [
-                    "Skill02_Assist_Damage"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": ">",
-                    "value2": 1
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 4034017,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Flame Reaver of the Deepest Dark",
-                    "isBaseCompare": true
-                  }
-                ]
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "Skill02_AssistCount",
-                "compareType": "=",
-                "value2": 4
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill02_Assist_Damage) || RETURN",
-                  "displayLines": "Skill02_Assist_Damage",
-                  "constants": [],
-                  "variables": [
-                    "Skill02_Assist_Damage"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4034012_Monster_W4_FireProwler_Ability01_Assist": {
-      "fileName": "4034012_Monster_W4_FireProwler_Ability01_Assist",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1484368126\">Enemy_W4_FireProwler_10_NoMask</a>"
-          }
-        },
-        "Deleted bullshit",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "Skill01_Assist_Damage"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "Skill01_Assist_Damage_Adjoin"
-        },
-        {
-          "name": "Define Custom Variable with Copy",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2020453285\">Enemy_W4_FireProwler_01_DamageValue</a>",
-          "variable": "MDF_Skill01",
-          "target2": null,
-          "variable2": "Skill01_Assist_Damage"
-        },
-        {
-          "name": "Define Custom Variable with Copy",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2020453285\">Enemy_W4_FireProwler_01_DamageValue</a>",
-          "variable": "MDF_Skill01_Adjoin",
-          "target2": null,
-          "variable2": "Skill01_Assist_Damage_Adjoin"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 4034017,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Flame Reaver of the Deepest Dark",
-                "isBaseCompare": true,
-                "invertCondition": true
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "Skill01_AssistCount",
-                "compareType": "=",
-                "value2": 1
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill01_Assist_Damage) || RETURN",
-                  "displayLines": "Skill01_Assist_Damage",
-                  "constants": [],
-                  "variables": [
-                    "Skill01_Assist_Damage"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Targets Adjacent(Blast)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill01_Assist_Damage_Adjoin) || RETURN",
-                  "displayLines": "Skill01_Assist_Damage_Adjoin",
-                  "constants": [],
-                  "variables": [
-                    "Skill01_Assist_Damage_Adjoin"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": ">",
-                    "value2": 1
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 4034017,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Flame Reaver of the Deepest Dark",
-                    "isBaseCompare": true
-                  }
-                ]
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "Skill01_AssistCount",
-                "compareType": "=",
-                "value2": 1
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill01_Assist_Damage) || RETURN",
-                  "displayLines": "Skill01_Assist_Damage",
-                  "constants": [],
-                  "variables": [
-                    "Skill01_Assist_Damage"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Targets Adjacent(Blast)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill01_Assist_Damage_Adjoin) || RETURN",
-                  "displayLines": "Skill01_Assist_Damage_Adjoin",
-                  "constants": [],
-                  "variables": [
-                    "Skill01_Assist_Damage_Adjoin"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": ">",
-                    "value2": 1
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 4034017,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Flame Reaver of the Deepest Dark",
-                    "isBaseCompare": true
-                  }
-                ]
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "Skill01_AssistCount",
-                "compareType": "=",
-                "value2": 2
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill01_Assist_Damage) || RETURN",
-                  "displayLines": "Skill01_Assist_Damage",
-                  "constants": [],
-                  "variables": [
-                    "Skill01_Assist_Damage"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Targets Adjacent(Blast)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill01_Assist_Damage_Adjoin) || RETURN",
-                  "displayLines": "Skill01_Assist_Damage_Adjoin",
-                  "constants": [],
-                  "variables": [
-                    "Skill01_Assist_Damage_Adjoin"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 4034017,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Flame Reaver of the Deepest Dark",
-                "isBaseCompare": true,
-                "invertCondition": true
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "Skill01_AssistCount",
-                "compareType": "=",
-                "value2": 2
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill01_Assist_Damage) || RETURN",
-                  "displayLines": "Skill01_Assist_Damage",
-                  "constants": [],
-                  "variables": [
-                    "Skill01_Assist_Damage"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Targets Adjacent(Blast)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill01_Assist_Damage_Adjoin) || RETURN",
-                  "displayLines": "Skill01_Assist_Damage_Adjoin",
-                  "constants": [],
-                  "variables": [
-                    "Skill01_Assist_Damage_Adjoin"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": ">",
-                    "value2": 1
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 4034017,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Flame Reaver of the Deepest Dark",
-                    "isBaseCompare": true
-                  }
-                ]
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "Skill01_AssistCount",
-                "compareType": "=",
-                "value2": 3
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill01_Assist_Damage) || RETURN",
-                  "displayLines": "Skill01_Assist_Damage",
-                  "constants": [],
-                  "variables": [
-                    "Skill01_Assist_Damage"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Targets Adjacent(Blast)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill01_Assist_Damage_Adjoin) || RETURN",
-                  "displayLines": "Skill01_Assist_Damage_Adjoin",
-                  "constants": [],
-                  "variables": [
-                    "Skill01_Assist_Damage_Adjoin"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": ">",
-                    "value2": 1
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 4034017,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Flame Reaver of the Deepest Dark",
-                    "isBaseCompare": true
-                  }
-                ]
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "Skill01_AssistCount",
-                "compareType": "=",
-                "value2": 4
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill01_Assist_Damage) || RETURN",
-                  "displayLines": "Skill01_Assist_Damage",
-                  "constants": [],
-                  "variables": [
-                    "Skill01_Assist_Damage"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Targets Adjacent(Blast)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] (Skill01_Assist_Damage_Adjoin) || RETURN",
-                  "displayLines": "Skill01_Assist_Damage_Adjoin",
-                  "constants": [],
-                  "variables": [
-                    "Skill01_Assist_Damage_Adjoin"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "50%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "4034012_Monster_W4_FireProwler_Ability02_Part02": {
-      "fileName": "4034012_Monster_W4_FireProwler_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1484368126\">Enemy_W4_FireProwler_10_NoMask</a>"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 4034017,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Flame Reaver of the Deepest Dark",
-                "isBaseCompare": true,
-                "invertCondition": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
-              "valuePerStack": {
-                "MDF_RallyTransferRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[0]]}"
-                  ]
-                },
-                "MDF_Rally_HealPercentage": {
-                  "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[4]]}"
-                  ]
-                },
-                "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[2]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 2
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 4034017,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Flame Reaver of the Deepest Dark",
-                "isBaseCompare": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
-              "valuePerStack": {
-                "MDF_RallyTransferRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[1]]}"
-                  ]
-                },
-                "MDF_Rally_HealPercentage": {
-                  "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[4]]}"
-                  ]
-                },
-                "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                  "displayLines": "{[PassiveSkill02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill02[2]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Define Custom Variable with HP%",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "CurrentHPRatio"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1787963468\">Enemy_W4_FireProwler_FantasticStory</a>",
-                "invertCondition": true
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 4034017,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Flame Reaver of the Deepest Dark",
-                "isBaseCompare": true,
-                "invertCondition": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "refreshPositions": false,
-              "enemyList": [
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "SummonID_2",
-                  "summonLocation": "AroundCasterOnEdge"
-                },
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "SummonID_2",
-                  "summonLocation": "AroundCasterOnEdge"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1787963468\">Enemy_W4_FireProwler_FantasticStory</a>",
-                "invertCondition": true
-              },
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 2
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 4034017,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Flame Reaver of the Deepest Dark",
-                    "isBaseCompare": true
-                  }
-                ]
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "refreshPositions": false,
-              "enemyList": [
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "SummonID_2",
-                  "summonLocation": "AroundCasterOnEdge"
-                },
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "SummonID_2",
-                  "summonLocation": "AroundCasterOnEdge"
-                },
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "SummonID_2",
-                  "summonLocation": "AroundCasterOnEdge"
-                },
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "SummonID_2",
-                  "summonLocation": "AroundCasterOnEdge"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": {
-              "operator": "Variables[0] (SummonID_2) || RETURN",
-              "displayLines": "SummonID_2",
-              "constants": [],
-              "variables": [
-                "SummonID_2"
-              ]
-            },
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-            },
-            {
-              "name": "Change Character Transformation",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "phase": "Phase02_Still"
-            },
-            "Deleted bullshit"
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4034012_Monster_W4_FireProwler_Ability02_Part01": {
-      "fileName": "4034012_Monster_W4_FireProwler_Ability02_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_FireProwler_Ability02_Part02",
-          "isTrigger": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Far Left Enemy Entity}}"
-            },
-            "target2": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Far Left Enemy Entity}}"
-                },
-                "target2": {
-                  "name": "Target Name",
-                  "target": "{{Target Right of Caster}}"
-                }
-              },
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID_1) || RETURN",
-                      "displayLines": "SummonID_1",
-                      "constants": [],
-                      "variables": [
-                        "SummonID_1"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Target Right of Caster}}"
-                    },
-                    "characterName": null
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID_1) || RETURN",
-                      "displayLines": "SummonID_1",
-                      "constants": [],
-                      "variables": [
-                        "SummonID_1"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Target Right of Caster}}"
-                    },
-                    "characterName": null
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID_1) || RETURN",
-                      "displayLines": "SummonID_1",
-                      "constants": [],
-                      "variables": [
-                        "SummonID_1"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Far Left Enemy Entity}}"
-                    },
-                    "characterName": null
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4034012_Monster_W4_FireProwler_Ability01_Part02": {
-      "fileName": "4034012_Monster_W4_FireProwler_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1484368126\">Enemy_W4_FireProwler_10_NoMask</a>"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Define Custom Variable with HP%",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "CurrentHPRatio"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1787963468\">Enemy_W4_FireProwler_FantasticStory</a>",
-                "invertCondition": true
-              },
-              {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 4034017,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Flame Reaver of the Deepest Dark",
-                "isBaseCompare": true,
-                "invertCondition": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "refreshPositions": false,
-              "enemyList": [
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "SummonID_1",
-                  "summonLocation": "AroundCasterOnEdge"
-                },
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "SummonID_1",
-                  "summonLocation": "AroundCasterOnEdge"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1787963468\">Enemy_W4_FireProwler_FantasticStory</a>",
-                "invertCondition": true
-              },
-              {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 2
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 4034017,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Flame Reaver of the Deepest Dark",
-                    "isBaseCompare": true
-                  }
-                ]
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "refreshPositions": false,
-              "enemyList": [
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "SummonID_1",
-                  "summonLocation": "AroundCasterOnEdge"
-                },
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "SummonID_1",
-                  "summonLocation": "AroundCasterOnEdge"
-                },
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "SummonID_1",
-                  "summonLocation": "AroundCasterOnEdge"
-                },
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "SummonID_1",
-                  "summonLocation": "AroundCasterOnEdge"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": {
-              "operator": "Variables[0] (SummonID_1) || RETURN",
-              "displayLines": "SummonID_1",
-              "constants": [],
-              "variables": [
-                "SummonID_1"
-              ]
-            },
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": null
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-            },
-            {
-              "name": "Change Character Transformation",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "phase": "Phase01_Still"
-            },
-            "Deleted bullshit"
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4034012_Monster_W4_FireProwler_Ability01_Part01": {
-      "fileName": "4034012_Monster_W4_FireProwler_Ability01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_FireProwler_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4034012_Monster_W4_FireProwler_ChangePhase1": {
-      "fileName": "4034012_Monster_W4_FireProwler_ChangePhase1",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "ChangePhase_Layer"
-        },
-        {
-          "name": "Define Custom Variable with Modifier Values",
-          "valueType": "Layer",
-          "variableName": "ChangePhase_Layer",
-          "modifierName": "<a class=\"gModGreen\" id=\"33624492\">Enemy_W4_FireProwler_TimePower</a>[<span class=\"descriptionNumberColor\">Calamity Power</span>]",
-          "multiplier": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"33624492\">Enemy_W4_FireProwler_TimePower</a>[<span class=\"descriptionNumberColor\">Calamity Power</span>]",
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (ChangePhase_Layer) || INVERT || RETURN",
-            "displayLines": "-ChangePhase_Layer",
-            "constants": [],
-            "variables": [
-              "ChangePhase_Layer"
-            ]
-          }
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": 0,
-          "entityClass": "Enemy",
-          "maximum": 0,
-          "assignState": "True",
-          "barType": "FireProwler",
-          "trigger": "Step_01"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 0
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
-          "stackLimit": {
-            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-            "displayLines": "{[Skill01[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[3]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            }
-          },
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-            "displayLines": "{[Skill01[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[3]]}"
-            ]
-          }
-        },
-        {
-          "name": "UI Display Event (On Entity)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "popUpText": "DMG Reduction"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1404590263\">Standard_Endurance</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ChangePhase",
-          "value": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "SkillFlag",
-          "value": 2
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Deathrattle"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-415724336\">Monster_W4_FireProwler_MainStory_04</a>"
-          },
-          "passed": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "AIFlag",
-              "value": 4
-            }
-          ]
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Phase_Flag",
-          "value": 2
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage Type",
-                "stageType": "Challenge"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "VerseSimulation"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "StrongChallengeActivity"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "RogueRelic"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "GridFightActivity"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-29397814\">Monster_W4_FireProwler_MainStory_33</a>"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1484368126\">Enemy_W4_FireProwler_10_NoMask</a>"
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4034012_Monster_W4_FireProwler_PassiveAbility02": {
-      "fileName": "4034012_Monster_W4_FireProwler_PassiveAbility02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4034012_Monster_W4_FireProwler_PassiveAbility01": {
-      "fileName": "4034012_Monster_W4_FireProwler_PassiveAbility01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1416002547\">Enemy_W4_FireProwler_AudioReset</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1791597207\">W4_FireProwler_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1808374826\">W4_FireProwler_BattleScore2</a>"
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "W4_FireProwler_00",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 4034014,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Flame Reaver of the Deepest Dark",
-            "isBaseCompare": true
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1787963468\">Enemy_W4_FireProwler_FantasticStory</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 4034015,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Dawn-Denied Khaslana",
-                "isBaseCompare": true
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 4034018,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "???",
-                "isBaseCompare": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1484368126\">Enemy_W4_FireProwler_10_NoMask</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1787963468\">Enemy_W4_FireProwler_FantasticStory</a>",
-                "invertCondition": true
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 4034017,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Flame Reaver of the Deepest Dark",
-                "isBaseCompare": true,
-                "invertCondition": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1319355089\">Enemy_W4_FireProwler_ChangePhaseController</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-442867397\">Enemy_W4_FireProwler_EffectController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"911157260\">Enemy_W4_FireProwler_TimePowerListener</a>",
-          "valuePerStack": {
-            "MDF_MaxCount": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1332813778\">Enemy_W4_FireProwler_RallyHPListener</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1787963468\">Enemy_W4_FireProwler_FantasticStory</a>",
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
-              "stackLimit": {
-                "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                "displayLines": "{[Skill01[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[3]]}"
-                ]
-              },
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
-                }
-              },
-              "addStacksPerTrigger": {
-                "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                "displayLines": "{[Skill01[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[3]]}"
-                ]
-              }
-            },
-            {
-              "name": "UI Display Event (On Entity)",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "popUpText": "DMG Reduction"
-            }
-          ]
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-442867397\">Enemy_W4_FireProwler_EffectController</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "HP_Bars_Remaining",
-                        "compareType": ">",
-                        "value2": 1
-                      },
-                      {
-                        "name": "Enemy ID",
-                        "ID": 4034017,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "characterName": "Flame Reaver of the Deepest Dark",
-                        "isBaseCompare": true
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "HP_Bars_Remaining",
-                        "compareType": ">",
-                        "value2": 1
-                      },
-                      {
-                        "name": "Enemy ID",
-                        "ID": 4034017,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "characterName": "Flame Reaver of the Deepest Dark",
-                        "isBaseCompare": true
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]"
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "HP_Bars_Remaining",
-                        "compareType": "=",
-                        "value2": 1
-                      },
-                      {
-                        "name": "Enemy ID",
-                        "ID": 4034017,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "characterName": "Flame Reaver of the Deepest Dark",
-                        "isBaseCompare": true,
-                        "invertCondition": true
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1319355089\">Enemy_W4_FireProwler_ChangePhaseController</a>",
-          "execute": [
-            {
-              "eventTrigger": "Waiting for Healing in Limbo",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "ChangePhase",
-                    "compareType": "=",
-                    "value2": 1,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1070811154\">Enemy_W4_FireProwler_RallyHP</a>[<span class=\"descriptionNumberColor\">Entangled By Agony</span>]"
-                      },
-                      "passed": [
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1577610826\">Enemy_W4_FireProwler_RallyHP_Mark</a>",
-                          "removeAllInstances": true
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1070811154\">Enemy_W4_FireProwler_RallyHP</a>[<span class=\"descriptionNumberColor\">Entangled By Agony</span>]"
-                        },
-                        {
-                          "name": "Stack Target Stat Value",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;",
-                          "value": 0
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Minions}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1207820325\">Enemy_W4_FireProwler_01_DeathRattle</a>"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]"
-                    },
-                    {
-                      "name": "Force Entity Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Minions}}"
-                      }
-                    },
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "ChangePhase"
-                    },
-                    {
-                      "name": "Dispel Debuffs",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "silent": true
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1404590263\">Standard_Endurance</a>"
-                    },
-                    {
-                      "name": "Set Enemy Phase",
-                      "mode": "Inc"
-                    },
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Monster_W4_FireProwler_ChangePhase1",
-                      "priorityTag": "EnemyPhaseChange",
-                      "ownerState": "Mask_AliveOrLimbo",
-                      "targetState": "Mask_AliveOrLimbo",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                },
-                "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -90
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1416002547\">Enemy_W4_FireProwler_AudioReset</a>",
-          "execute": [
-            {
-              "eventTrigger": "Leave Battle"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
     },
     "4034012_Monster_W4_FireProwler_ChangePhase": {
       "fileName": "4034012_Monster_W4_FireProwler_ChangePhase",
@@ -6384,9 +3004,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -6489,9 +3107,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6681,9 +3297,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6701,15 +3315,11 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1787963468\">Enemy_W4_FireProwler_FantasticStory</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1787963468\">Enemy_W4_FireProwler_FantasticStory</a>"
         },
         {
           "name": "Modifier Construction",
@@ -6869,6 +3479,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Each stack reduces DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. 1 stack is lost after 1 \"Long-Shattered Vessel\" is defeated.",
+          "type": "Buff",
+          "statusName": "DMG Reduction",
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -6956,15 +3573,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Each stack reduces DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. 1 stack is lost after 1 \"Long-Shattered Vessel\" is defeated.",
-          "type": "Buff",
-          "statusName": "DMG Reduction",
-          "addStacksPerTrigger": -1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6973,6 +3582,10 @@ const compositeAbilityObject = {
             "Deathrattle",
             "KeepOnDeathrattle"
           ],
+          "description": "After receiving a killing blow, if \"%CasterName\"'s \"Calamity Power\" stacks are not 0, be instantly resummoned and enter the \"Enfettered\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
+          "type": "Other",
+          "effectName": "Enfettered",
+          "statusName": "Enfettered",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -7052,13 +3665,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "After receiving a killing blow, if \"%CasterName\"'s \"Calamity Power\" stacks are not 0, be instantly resummoned and enter the \"Enfettered\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
-          "type": "Other",
-          "effectName": "Enfettered",
-          "statusName": "Enfettered"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7069,13 +3676,16 @@ const compositeAbilityObject = {
           ],
           "stackData": [
             "MDF_RallyHP"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1070811154\">Enemy_W4_FireProwler_RallyHP</a>[<span class=\"descriptionNumberColor\">Entangled By Agony</span>]",
           "stackType": "Replace",
+          "description": "After absorbing \"Long-Shattered Vessel,\" restores the HP consumed to summon the current \"Long-Shattered Vessel.\" After \"Long-Shattered Vessel\" is defeated, this unit cannot restore the HP consumed used to summon the current \"Long-Shattered Vessel\" again.",
+          "type": "Other",
+          "statusName": "Entangled By Agony",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -7154,11 +3764,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After absorbing \"Long-Shattered Vessel,\" restores the HP consumed to summon the current \"Long-Shattered Vessel.\" After \"Long-Shattered Vessel\" is defeated, this unit cannot restore the HP consumed used to summon the current \"Long-Shattered Vessel\" again.",
-          "type": "Other",
-          "statusName": "Entangled By Agony",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7286,16 +3892,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__33624492\">Enemy_W4_FireProwler_TimePower</a>[<span class=\"descriptionNumberColor\">Calamity Power</span>]",
           "stackType": "Replace",
-          "stackData": [],
-          "latentQueue": [],
           "description": "When using certain abilities, consume all \"Calamity Power\" stacks to increase Hits Per Action.",
           "type": "Other",
           "statusName": "Calamity Power",
@@ -7752,15 +4354,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MaxCount"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1169574682\">Enemy_W4_FireProwler_Charge</a>[<span class=\"descriptionNumberColor\">Silent Sorrow</span>]",
+          "description": "Use \"Cry Not For The Discarded\" during the next action.",
+          "type": "Other",
+          "effectName": "Silent Sorrow",
+          "statusName": "Silent Sorrow",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -7917,13 +4519,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Use \"Cry Not For The Discarded\" during the next action.",
-          "type": "Other",
-          "effectName": "Silent Sorrow",
-          "statusName": "Silent Sorrow"
+          ]
         }
       ],
       "references": []

@@ -298,9 +298,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__543576054\">StageAbility_3999913_Modifier_AlwaysSuccess</a>",
       "modifierFlags": [
         "AlwaysSuccess"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

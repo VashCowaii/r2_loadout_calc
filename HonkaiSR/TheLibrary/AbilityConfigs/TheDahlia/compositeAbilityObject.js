@@ -3,110 +3,175 @@ const compositeAbilityObject = {
   "fullCharacterName": "The Dahlia",
   "trimCharacterName": "TheDahlia",
   "abilityList": [
+    "TheDahlia_Modifiers",
+    "TheDahlia_Constance_Trace03",
     "TheDahlia_Constance_Eidolon6",
     "TheDahlia_Constance_Eidolon2",
-    "TheDahlia_Constance_Trace03",
+    "TheDahlia_LocalPlayer_StandardAbility_AttackBreak",
+    "TheDahlia_LocalPlayer_Constance_TechniqueUsage",
+    "TheDahlia_LocalPlayer_Constance_NormalAtk01",
     "TheDahlia_Constance_TechniqueInLevel",
-    "TheDahlia_Constance_PassiveAbility01",
     "TheDahlia_Constance_Insert_Part02",
     "TheDahlia_Constance_Insert_Part01",
     "TheDahlia_Constance_Insert_SelectTarget",
+    "TheDahlia_Constance_PassiveAbility01",
     "TheDahlia_Constance_Ability03_Part02",
     "TheDahlia_Constance_Ability03_Part01",
     "TheDahlia_Constance_Ability03_EnterReady",
     "TheDahlia_Constance_Ability02_Part02",
     "TheDahlia_Constance_Ability02_Part01",
     "TheDahlia_Constance_Ability01_Part02",
-    "TheDahlia_Constance_Ability01_Part01",
-    "TheDahlia_Modifiers"
+    "TheDahlia_Constance_Ability01_Part01"
   ],
   "abilityObject": {
-    "TheDahlia_Constance_Eidolon6": {
-      "fileName": "TheDahlia_Constance_Eidolon6",
-      "abilityType": null,
+    "TheDahlia_Modifiers": {
+      "fileName": "TheDahlia_Modifiers",
+      "abilityType": "Char. Modifiers",
       "energy": null,
-      "toughnessList": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
       "parse": [
         {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-919146628\">Constance_Eidolon6</a>"
-        }
-      ],
-      "references": [
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1331167740\">ADV_StageAbility_Maze_Constance</a>",
+          "counter": 1,
+          "stackType": "Merge",
+          "modifierFlags": [
+            "Blind"
+          ]
+        },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-919146628\">Constance_Eidolon6</a>",
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TheDahlia_Constance_Eidolon2": {
-      "fileName": "TheDahlia_Constance_Eidolon2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-986257104\">Constance_Eidolon2</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1789407747\">Constance_Eidolon2_Bonus_OnCharacterCreate</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2093019273\">_M_Constance_InsertCheck</a>",
+          "modifierFlags": [
+            "CustomEvent_InfiniteRefresh"
+          ],
           "execute": [
             {
-              "eventTrigger": "Entity Created [Anyone]",
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Action Choice Window [Anyone]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
+                }
+              ],
+              "priorityLevel": -55
+            },
+            {
+              "eventTrigger": "Custom Event",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "New Enemy Wave",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: End",
               "execute": [
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team"
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Living State",
+                        "state": "Mask_AliveOrRevivable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
+                      }
+                    ]
                   },
                   "passed": [
                     {
-                      "name": "Add Events/Bonuses",
-                      "to": {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "modifierFunctions": [
+            {
+              "name": "CharacterFunctions",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-715058594\">Constance_InsertRetargetSelf</a>",
+              "parse": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Enemies Still Alive",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Inject Ability Use",
+                      "condition": {
+                        "name": "Insert Ability Condition",
+                        "type": "AbilityOwnerInsertUnusedCount",
+                        "typeValue": 1
+                      },
+                      "abilityName": "Constance_Insert_SelectTarget",
+                      "abilitySource": {
                         "name": "Target Name",
-                        "target": "{{Parameter Target}}"
+                        "target": "{{Caster}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1539081164\">Constance_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Wilt</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "valuePerStack": {
-                        "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (0.18) || RETURN",
-                          "displayLines": "0.18",
-                          "constants": [],
-                          "variables": [
-                            0.18
-                          ]
-                        }
-                      }
+                      "priorityTag": "CharacterAttackFromSelf",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "abortFlags": [
+                        "STAT_CTRL",
+                        "DisableAction"
+                      ],
+                      "allowAbilityTriggers": false
                     }
                   ]
                 }
@@ -116,66 +181,635 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-986257104\">Constance_Eidolon2</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1116970838\">Constance_InsertCD</a>[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]",
+          "description": "Talent's Follow-Up ATK cannot be triggered yet.",
+          "type": "Other",
+          "statusName": "Who's Afraid of Constance?",
           "execute": [
             {
-              "eventTrigger": "Enter Battle",
+              "eventTrigger": "When Modifier Destroyed/Removed",
               "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-2139860773\">Constance_Aura</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "priorState": "Active",
+                      "cooldown": 0
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "priorState": "Normal",
+                      "cooldown": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Turn [Action-End Phase]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ],
+              "priorityLevel": 100
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "priorState": "CoolDown",
+                  "cooldown": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__628099091\">Constance_Ultimate_Weakness_Sub_Imaginary</a>",
+          "stackType": "EntityUnique",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Imaginary"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1073816607\">Constance_Ultimate_Weakness_Sub_Quantum</a>",
+          "stackType": "EntityUnique",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Quantum"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1412482872\">Constance_Ultimate_Weakness_Sub_Wind</a>",
+          "stackType": "EntityUnique",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Wind"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1441945696\">Constance_Ultimate_Weakness_Sub_Thunder</a>",
+          "stackType": "EntityUnique",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Thunder"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-401157135\">Constance_Ultimate_Weakness_Sub_Ice</a>",
+          "stackType": "EntityUnique",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Ice"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2114479442\">Constance_Ultimate_Weakness_Sub_Fire</a>",
+          "stackType": "EntityUnique",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Fire"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-447864201\">Constance_Ultimate_Weakness_Sub_Physical</a>",
+          "stackType": "EntityUnique",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Attach",
+                  "valueList": [
+                    "Physical"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1539081164\">Constance_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Wilt</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_AttachWeakness",
+            "STAT_DefenceDown"
+          ],
+          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. Gains Weaknesses of all Dance Partners' Types.",
+          "type": "Debuff",
+          "effectName": "Wilt",
+          "statusName": "Wilt",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyRatio) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyRatio)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyRatio"
+                    ]
+                  }
+                },
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-29129894\">_T_Constance_RefreshWeakness</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier is Added [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-29129894\">_T_Constance_RefreshWeakness</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "modifierFunctions": [
+            {
+              "name": "CharacterFunctions",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-29129894\">_T_Constance_RefreshWeakness</a>",
+              "parse": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-447864201\">Constance_Ultimate_Weakness_Sub_Physical</a>",
+                  "onlyRemoveOwnersInstance": true
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2114479442\">Constance_Ultimate_Weakness_Sub_Fire</a>",
+                  "onlyRemoveOwnersInstance": true
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-401157135\">Constance_Ultimate_Weakness_Sub_Ice</a>",
+                  "onlyRemoveOwnersInstance": true
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1441945696\">Constance_Ultimate_Weakness_Sub_Thunder</a>",
+                  "onlyRemoveOwnersInstance": true
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1412482872\">Constance_Ultimate_Weakness_Sub_Wind</a>",
+                  "onlyRemoveOwnersInstance": true
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1073816607\">Constance_Ultimate_Weakness_Sub_Quantum</a>",
+                  "onlyRemoveOwnersInstance": true
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"628099091\">Constance_Ultimate_Weakness_Sub_Imaginary</a>",
+                  "onlyRemoveOwnersInstance": true
+                },
                 {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                    "target": "{{Dahlia's Dance Partners}}"
                   },
+                  "includeDyingTargets": true,
                   "ifTargetFound": [
                     {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
+                      "name": "SWITCH",
+                      "source": {
+                        "name": "Damage Type Source",
+                        "sourceType": "ReadTargetType",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1539081164\">Constance_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Wilt</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (0.18) || RETURN",
-                          "displayLines": "0.18",
-                          "constants": [],
-                          "variables": [
-                            0.18
+                      "caseEvents": [
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": "Physical",
+                          "execute": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-447864201\">Constance_Ultimate_Weakness_Sub_Physical</a>",
+                              "silentAdd": true
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": "Fire",
+                          "execute": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-2114479442\">Constance_Ultimate_Weakness_Sub_Fire</a>",
+                              "silentAdd": true
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": "Ice",
+                          "execute": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-401157135\">Constance_Ultimate_Weakness_Sub_Ice</a>",
+                              "silentAdd": true
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": "Thunder",
+                          "execute": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1441945696\">Constance_Ultimate_Weakness_Sub_Thunder</a>",
+                              "silentAdd": true
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": "Wind",
+                          "execute": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1412482872\">Constance_Ultimate_Weakness_Sub_Wind</a>",
+                              "silentAdd": true
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": "Quantum",
+                          "execute": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1073816607\">Constance_Ultimate_Weakness_Sub_Quantum</a>",
+                              "silentAdd": true
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": "Imaginary",
+                          "execute": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"628099091\">Constance_Ultimate_Weakness_Sub_Imaginary</a>",
+                              "silentAdd": true
+                            }
                           ]
                         }
+                      ],
+                      "defaultEvents": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1701170235\">Constance_Aura_OnEnemy</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
+          "modifierFlags": [
+            "STAT_ForceSuperBreakDamage"
+          ],
+          "description": "Toughness Reduction taken when not Weakness Broken can also be converted to Super Break DMG.",
+          "type": "Debuff",
+          "statusName": "Lick... Enkindled Betrayal"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2139860773\">Constance_Aura</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Toughness Reduction taken by enemy targets that are not Weakness Broken can also be converted to Super Break DMG.",
+          "type": "Buff",
+          "statusName": "Lick... Enkindled Betrayal",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1701170235\">Constance_Aura_OnEnemy</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
+              "aliveOnly": "False",
+              "haloStatus": true
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-152934148\">Constance_Aura_OnTeam</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
+              "refModifier": "<a class=\"gModGreen\" id=\"1782063048\">MReference_StanceBreakAddedRatio</a>",
+              "aliveOnly": "False",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                  "displayLines": "MDF_PropertyValue",
+                  "constants": [],
+                  "variables": [
+                    "MDF_PropertyValue"
+                  ]
+                }
+              }
+            }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (MDF_Aura_Lifetime) || RETURN",
+                    "displayLines": "MDF_Aura_Lifetime",
+                    "constants": [],
+                    "variables": [
+                      "MDF_Aura_Lifetime"
+                    ]
+                  },
+                  "priorState": "Active"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "scope": "AITag",
+                  "variableName": "BPSkillPriority",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": 0,
+                  "priorState": "Normal"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "scope": "AITag",
+                  "variableName": "BPSkillPriority",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "MDF_Aura_Lifetime",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (MDF_Aura_Lifetime) || RETURN",
+                        "displayLines": "MDF_Aura_Lifetime",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Aura_Lifetime"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "MDF_Aura_Lifetime",
+                        "compareType": "<=",
+                        "value2": 1,
+                        "contextScope": "ContextModifier"
                       }
                     }
                   ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1789407747\">Constance_Eidolon2_Bonus_OnCharacterCreate</a>"
-                },
-                "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -80
+                }
+              ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
+      "references": []
     },
     "TheDahlia_Constance_Trace03": {
       "fileName": "TheDahlia_Constance_Trace03",
@@ -295,6 +929,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "Outgrow the Old, Espouse the New",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -317,11 +955,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "Outgrow the Old, Espouse the New"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -914,8 +1548,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2073058540\">Constance_Trace03</a>",
-          "stackData": [],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -952,6 +1584,453 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TheDahlia_Constance_Eidolon6": {
+      "fileName": "TheDahlia_Constance_Eidolon6",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-919146628\">Constance_Eidolon6</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-919146628\">Constance_Eidolon6</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TheDahlia_Constance_Eidolon2": {
+      "fileName": "TheDahlia_Constance_Eidolon2",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-986257104\">Constance_Eidolon2</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1789407747\">Constance_Eidolon2_Bonus_OnCharacterCreate</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Enemy Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1539081164\">Constance_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Wilt</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (3) || RETURN",
+                        "displayLines": "3",
+                        "constants": [],
+                        "variables": [
+                          3
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_PropertyRatio": {
+                          "operator": "Variables[0] (0.18) || RETURN",
+                          "displayLines": "0.18",
+                          "constants": [],
+                          "variables": [
+                            0.18
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-986257104\">Constance_Eidolon2</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1539081164\">Constance_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Wilt</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (3) || RETURN",
+                        "displayLines": "3",
+                        "constants": [],
+                        "variables": [
+                          3
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_PropertyRatio": {
+                          "operator": "Variables[0] (0.18) || RETURN",
+                          "displayLines": "0.18",
+                          "constants": [],
+                          "variables": [
+                            0.18
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1789407747\">Constance_Eidolon2_Bonus_OnCharacterCreate</a>"
+                },
+                "Modifier Deletes Itself"
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TheDahlia_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "TheDahlia_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TheDahlia_LocalPlayer_Constance_TechniqueUsage": {
+      "fileName": "TheDahlia_LocalPlayer_Constance_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target"
+        },
+        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            {
+              "name": "Create Overworld Entity",
+              "summonID": 13211
+            }
+          ],
+          "failed": [
+            {
+              "name": "Create Overworld Entity",
+              "summonID": 13211
+            }
+          ]
+        },
+        {
+          "name": "Overworld Attack Instance"
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "TheDahlia_LocalPlayer_Constance_NormalAtk01": {
+      "fileName": "TheDahlia_LocalPlayer_Constance_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "TheDahlia_Constance_TechniqueInLevel": {
@@ -1184,9 +2263,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -59
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1272,9 +2349,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1282,6 +2357,551 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "TheDahlia_Constance_Insert_Part02": {
+      "fileName": "TheDahlia_Constance_Insert_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 4
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380368106\">Constance_Eidolon4_Property</a>[<span class=\"descriptionNumberColor\">Pity Its Heart Gnawed by Worms</span>]",
+              "duration": {
+                "operator": "Variables[0] (2) || RETURN",
+                "displayLines": "2",
+                "constants": [],
+                "variables": [
+                  2
+                ]
+              },
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.12) || RETURN",
+                  "displayLines": "0.12",
+                  "constants": [],
+                  "variables": [
+                    0.12
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1116970838\">Constance_InsertCD</a>[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2093019273\">_M_Constance_InsertCheck</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Lament, Lost Soul"
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
+                "invertCondition": true
+              },
+              "passed": [
+                {
+                  "name": "Skill Points Modification",
+                  "adjustmentValue": 1,
+                  "adjustmentType": "+"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
+                  "counter": {
+                    "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
+                    "displayLines": "(2 - 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      2
+                    ]
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Define Modifier Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifierName": "<a class=\"gModGreen\" id=\"1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
+                  "function": "Add"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "scope": "ContextAbility",
+          "variableName": "ADF_AttackGap",
+          "value": {
+            "operator": "Constants[0] (0.1) || Variables[0] (5) || DIV || RETURN",
+            "displayLines": "(0.1 / 5)",
+            "constants": [
+              0.1
+            ],
+            "variables": [
+              5
+            ]
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "ADF_FirstHit",
+          "value": 1
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 4
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "ADF_BounceCount",
+              "value": {
+                "operator": "Variables[0] (5) || Variables[1] (5) || ADD || RETURN",
+                "displayLines": "(5 + 5)",
+                "constants": [],
+                "variables": [
+                  5,
+                  5
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "ADF_BounceCount",
+              "value": {
+                "operator": "Variables[0] (5) || RETURN",
+                "displayLines": "5",
+                "constants": [],
+                "variables": [
+                  5
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1527090005\">ReduceNextActionDelay</a>",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Dahlia's Dance Partners}}"
+              },
+              "variables": {
+                "parameter[0]_NormalizedValue": {
+                  "operator": "Variables[0] (0.2) || RETURN",
+                  "displayLines": "0.2",
+                  "constants": [],
+                  "variables": [
+                    0.2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": {
+            "operator": "Variables[0] (ADF_BounceCount) || RETURN",
+            "displayLines": "ADF_BounceCount",
+            "constants": [],
+            "variables": [
+              "ADF_BounceCount"
+            ]
+          },
+          "Event": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "paramSequence": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "ADF_FirstHit",
+                    "compareType": ">=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "ADF_FirstHit",
+                      "value": 0
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1229984298\">_M_Constance_Insert_StanceRecorded</a>"
+                },
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Fire",
+                    "Damage": {
+                      "operator": "Variables[0] (0.3) || RETURN",
+                      "displayLines": "0.3",
+                      "constants": [],
+                      "variables": [
+                        0.3
+                      ]
+                    },
+                    "Toughness": {
+                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
+                      "displayLines": "ST Toughness Value",
+                      "constants": [],
+                      "variables": [
+                        "ST Toughness Value"
+                      ]
+                    },
+                    "ToughnessDMGType": {
+                      "DamageType": "Fire"
+                    },
+                    "instanceTag": "Constance_InsertHit",
+                    "Tags": null,
+                    "attackType": "Follow-up",
+                    "EnergyGainPercent": "100%"
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1229984298\">_M_Constance_Insert_StanceRecorded</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Copy",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1229984298\">_M_Constance_Insert_StanceRecorded</a>",
+                      "variable": "MDF_TotalStanceDamage",
+                      "target2": null,
+                      "variable2": "ADF_StanceValue",
+                      "scope": "ContextAbility"
+                    },
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"795502164\">DealSuperBreakDamage</a>",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variables": {
+                        "DamagePercentage": {
+                          "operator": "Variables[0] (2) || RETURN",
+                          "displayLines": "2",
+                          "constants": [],
+                          "variables": [
+                            2
+                          ]
+                        },
+                        "StanceValue": {
+                          "operator": "Variables[0] (ADF_StanceValue) || RETURN",
+                          "displayLines": "ADF_StanceValue",
+                          "constants": [],
+                          "variables": [
+                            "ADF_StanceValue"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1229984298\">_M_Constance_Insert_StanceRecorded</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Attack End"
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1229984298\">_M_Constance_Insert_StanceRecorded</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "latentQueue": [
+            "ADF_AttackGap",
+            "ADF_FirstHit"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Taking Toughness DMG [Owner]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "Break"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "flagName": "STAT_ForceSuperBreakDamage"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_ForceSuperBreakDamage"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Varying Data",
+                      "target": null,
+                      "variableName": "MDF_HitStanceDamage",
+                      "value": "ParamValue2"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_TotalStanceDamage",
+                      "value": {
+                        "operator": "Variables[0] (MDF_TotalStanceDamage) || Variables[1] (MDF_HitStanceDamage) || ADD || RETURN",
+                        "displayLines": "(MDF_TotalStanceDamage + MDF_HitStanceDamage)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_TotalStanceDamage",
+                          "MDF_HitStanceDamage"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
+          "description": "After using Talent's Follow-Up ATK <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s), the Skill Point recovery effect from \"Lament, Lost Soul\" can be triggered again.",
+          "type": "Other",
+          "statusName": "Lament, Lost Soul"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-380368106\">Constance_Eidolon4_Property</a>[<span class=\"descriptionNumberColor\">Pity Its Heart Gnawed by Worms</span>]",
+          "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Pity Its Heart Gnawed by Worms",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "TheDahlia_Constance_Insert_Part01": {
+      "fileName": "TheDahlia_Constance_Insert_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Who's Afraid of Constance?"
+        },
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Constance_Insert_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "TheDahlia_Constance_Insert_SelectTarget": {
+      "fileName": "TheDahlia_Constance_Insert_SelectTarget",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemies Still Alive",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
+          },
+          "passed": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "inherentTarget": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "ability": "Constance_Insert_Part01",
+              "isTrigger": true
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-2093019273\">_M_Constance_InsertCheck</a>"
+            }
+          ]
+        }
+      ],
+      "onAbort": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2093019273\">_M_Constance_InsertCheck</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
       }
     },
     "TheDahlia_Constance_PassiveAbility01": {
@@ -1719,6 +3339,9 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "STAT_SuperBreakBuff"
           ],
+          "description": "After attacking a Weakness Broken enemy target, converts the Toughness Reduction of this attack into 1 instance of <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> Super Break DMG.",
+          "type": "Buff",
+          "statusName": "When a Bud Readies to Bloom",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -1760,10 +3383,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After attacking a Weakness Broken enemy target, converts the Toughness Reduction of this attack into 1 instance of <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> Super Break DMG.",
-          "type": "Buff",
-          "statusName": "When a Bud Readies to Bloom"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1848,38 +3468,6 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "invertCondition": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}} - {{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
-                    }
-                  ]
-                }
-              ]
-            }
           ],
           "description": "After attacking a Weakness Broken enemy target, converts the Toughness Reduction of this attack into 1 instance of <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> Super Break DMG.",
           "type": "Buff",
@@ -1988,6 +3576,38 @@ const compositeAbilityObject = {
                   ]
                 }
               }
+            }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "invertCondition": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}} - {{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -2346,8 +3966,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-157877441\">Constance_Ultimate_AddWeaknessPreShow</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -2365,6 +3983,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "All-Type RES Reduction",
+          "statusName": "Fresh, Ethereal, and Beloved",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2389,11 +4011,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "All-Type RES Reduction",
-          "statusName": "Fresh, Ethereal, and Beloved"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2524,6 +4142,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "And Yet, Always, Deathly Beautiful",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2546,10 +4167,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "And Yet, Always, Deathly Beautiful"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2617,6 +4235,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1852842917\">Constance_Tree01_Property</a>[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Break Effect Boost",
+          "statusName": "Yet Another Funeral",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2668,11 +4290,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Break Effect Boost",
-          "statusName": "Yet Another Funeral"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2849,54 +4467,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2129474083\">Constance_Passive</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Wave Count",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Energy",
-                      "on": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "value": {
-                        "operator": "Variables[0] (35) || RETURN",
-                        "displayLines": "35",
-                        "constants": [],
-                        "variables": [
-                          35
-                        ]
-                      },
-                      "isFixed": "* ERR"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1358334362\">_M_Constance_DancerManager</a>"
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -2988,6 +4558,52 @@ const compositeAbilityObject = {
                 "MDF_SuperBreakDamagePercentage": 0
               }
             }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Wave Count",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Energy",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "value": {
+                        "operator": "Variables[0] (35) || RETURN",
+                        "displayLines": "35",
+                        "constants": [],
+                        "variables": [
+                          35
+                        ]
+                      },
+                      "isFixed": "* ERR"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1358334362\">_M_Constance_DancerManager</a>"
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
           ]
         }
       ],
@@ -2996,555 +4612,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TheDahlia_Constance_Insert_Part02": {
-      "fileName": "TheDahlia_Constance_Insert_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 4
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-380368106\">Constance_Eidolon4_Property</a>[<span class=\"descriptionNumberColor\">Pity Its Heart Gnawed by Worms</span>]",
-              "duration": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
-              },
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1116970838\">Constance_InsertCD</a>[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2093019273\">_M_Constance_InsertCheck</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Trace Activated",
-            "conditionList": "Lament, Lost Soul"
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
-                "invertCondition": true
-              },
-              "passed": [
-                {
-                  "name": "Skill Points Modification",
-                  "adjustmentValue": 1,
-                  "adjustmentType": "+"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
-                  "counter": {
-                    "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(2 - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      2
-                    ]
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Define Modifier Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifierName": "<a class=\"gModGreen\" id=\"1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
-                  "function": "Add"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "scope": "ContextAbility",
-          "variableName": "ADF_AttackGap",
-          "value": {
-            "operator": "Constants[0] (0.1) || Variables[0] (5) || DIV || RETURN",
-            "displayLines": "(0.1 / 5)",
-            "constants": [
-              0.1
-            ],
-            "variables": [
-              5
-            ]
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "ADF_FirstHit",
-          "value": 1
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 4
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "ADF_BounceCount",
-              "value": {
-                "operator": "Variables[0] (5) || Variables[1] (5) || ADD || RETURN",
-                "displayLines": "(5 + 5)",
-                "constants": [],
-                "variables": [
-                  5,
-                  5
-                ]
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "ADF_BounceCount",
-              "value": {
-                "operator": "Variables[0] (5) || RETURN",
-                "displayLines": "5",
-                "constants": [],
-                "variables": [
-                  5
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 6
-          },
-          "passed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1527090005\">ReduceNextActionDelay</a>",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Dahlia's Dance Partners}}"
-              },
-              "variables": {
-                "parameter[0]_NormalizedValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": {
-            "operator": "Variables[0] (ADF_BounceCount) || RETURN",
-            "displayLines": "ADF_BounceCount",
-            "constants": [],
-            "variables": [
-              "ADF_BounceCount"
-            ]
-          },
-          "Event": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "paramSequence": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "ADF_FirstHit",
-                    "compareType": ">=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "ADF_FirstHit",
-                      "value": 0
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1229984298\">_M_Constance_Insert_StanceRecorded</a>"
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] (0.3) || RETURN",
-                      "displayLines": "0.3",
-                      "constants": [],
-                      "variables": [
-                        0.3
-                      ]
-                    },
-                    "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                      "displayLines": "ST Toughness Value",
-                      "constants": [],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
-                    },
-                    "ToughnessDMGType": {
-                      "DamageType": "Fire"
-                    },
-                    "instanceTag": "Constance_InsertHit",
-                    "Tags": null,
-                    "attackType": "Follow-up",
-                    "EnergyGainPercent": "100%"
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1229984298\">_M_Constance_Insert_StanceRecorded</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Copy",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1229984298\">_M_Constance_Insert_StanceRecorded</a>",
-                      "variable": "MDF_TotalStanceDamage",
-                      "target2": null,
-                      "variable2": "ADF_StanceValue",
-                      "scope": "ContextAbility"
-                    },
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"795502164\">DealSuperBreakDamage</a>",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "variables": {
-                        "DamagePercentage": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
-                        },
-                        "StanceValue": {
-                          "operator": "Variables[0] (ADF_StanceValue) || RETURN",
-                          "displayLines": "ADF_StanceValue",
-                          "constants": [],
-                          "variables": [
-                            "ADF_StanceValue"
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1229984298\">_M_Constance_Insert_StanceRecorded</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End"
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1229984298\">_M_Constance_Insert_StanceRecorded</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Taking Toughness DMG [Owner]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "Break"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "flagName": "STAT_ForceSuperBreakDamage"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_ForceSuperBreakDamage"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Varying Data",
-                      "target": null,
-                      "variableName": "MDF_HitStanceDamage",
-                      "value": "ParamValue2"
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalStanceDamage",
-                      "value": {
-                        "operator": "Variables[0] (MDF_TotalStanceDamage) || Variables[1] (MDF_HitStanceDamage) || ADD || RETURN",
-                        "displayLines": "(MDF_TotalStanceDamage + MDF_HitStanceDamage)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TotalStanceDamage",
-                          "MDF_HitStanceDamage"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "ADF_AttackGap",
-            "ADF_FirstHit"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1367019028\">Constance_Tree02_CD</a>[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
-          "stackData": [],
-          "latentQueue": [],
-          "description": "After using Talent's Follow-Up ATK <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s), the Skill Point recovery effect from \"Lament, Lost Soul\" can be triggered again.",
-          "type": "Other",
-          "statusName": "Lament, Lost Soul"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-380368106\">Constance_Eidolon4_Property</a>[<span class=\"descriptionNumberColor\">Pity Its Heart Gnawed by Worms</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Pity Its Heart Gnawed by Worms"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "TheDahlia_Constance_Insert_Part01": {
-      "fileName": "TheDahlia_Constance_Insert_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Who's Afraid of Constance?"
-        },
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Constance_Insert_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "TheDahlia_Constance_Insert_SelectTarget": {
-      "fileName": "TheDahlia_Constance_Insert_SelectTarget",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemies Still Alive",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            }
-          },
-          "passed": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "inherentTarget": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "ability": "Constance_Insert_Part01",
-              "isTrigger": true
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2093019273\">_M_Constance_InsertCheck</a>"
-            }
-          ]
-        }
-      ],
-      "onAbort": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2093019273\">_M_Constance_InsertCheck</a>"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "TheDahlia_Constance_Ability03_Part02": {
@@ -3918,796 +4985,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "TheDahlia_Modifiers": {
-      "fileName": "TheDahlia_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2093019273\">_M_Constance_InsertCheck</a>",
-          "modifierFlags": [
-            "CustomEvent_InfiniteRefresh"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Action Choice Window [Anyone]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
-                }
-              ],
-              "priorityLevel": -55
-            },
-            {
-              "eventTrigger": "Custom Event",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Anyone]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Living State",
-                        "state": "Mask_AliveOrRevivable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        }
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "modifierFunctions": [
-            {
-              "name": "CharacterFunctions",
-              "functionName": "<a class=\"gTempYellow\" id=\"fun__-715058594\">Constance_InsertRetargetSelf</a>",
-              "parse": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemies Still Alive",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "Constance_Insert_SelectTarget",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "priorityTag": "CharacterAttackFromSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "abortFlags": [
-                        "STAT_CTRL",
-                        "DisableAction"
-                      ],
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1116970838\">Constance_InsertCD</a>[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-2139860773\">Constance_Aura</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "priorState": "Active",
-                      "cooldown": 0
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "priorState": "Normal",
-                      "cooldown": 0
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Action-End Phase]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ],
-              "priorityLevel": 100
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "priorState": "CoolDown",
-                  "cooldown": 1
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Talent's Follow-Up ATK cannot be triggered yet.",
-          "type": "Other",
-          "statusName": "Who's Afraid of Constance?"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__628099091\">Constance_Ultimate_Weakness_Sub_Imaginary</a>",
-          "stackType": "EntityUnique",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Imaginary"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1073816607\">Constance_Ultimate_Weakness_Sub_Quantum</a>",
-          "stackType": "EntityUnique",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Quantum"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1412482872\">Constance_Ultimate_Weakness_Sub_Wind</a>",
-          "stackType": "EntityUnique",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Wind"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1441945696\">Constance_Ultimate_Weakness_Sub_Thunder</a>",
-          "stackType": "EntityUnique",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Thunder"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-401157135\">Constance_Ultimate_Weakness_Sub_Ice</a>",
-          "stackType": "EntityUnique",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Ice"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2114479442\">Constance_Ultimate_Weakness_Sub_Fire</a>",
-          "stackType": "EntityUnique",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Fire"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-447864201\">Constance_Ultimate_Weakness_Sub_Physical</a>",
-          "stackType": "EntityUnique",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Attach",
-                  "valueList": [
-                    "Physical"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1539081164\">Constance_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Wilt</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_AttachWeakness",
-            "STAT_DefenceDown"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyRatio) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyRatio)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
-                  }
-                },
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-29129894\">_T_Constance_RefreshWeakness</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-29129894\">_T_Constance_RefreshWeakness</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "modifierFunctions": [
-            {
-              "name": "CharacterFunctions",
-              "functionName": "<a class=\"gTempYellow\" id=\"fun__-29129894\">_T_Constance_RefreshWeakness</a>",
-              "parse": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-447864201\">Constance_Ultimate_Weakness_Sub_Physical</a>",
-                  "onlyRemoveOwnersInstance": true
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2114479442\">Constance_Ultimate_Weakness_Sub_Fire</a>",
-                  "onlyRemoveOwnersInstance": true
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-401157135\">Constance_Ultimate_Weakness_Sub_Ice</a>",
-                  "onlyRemoveOwnersInstance": true
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1441945696\">Constance_Ultimate_Weakness_Sub_Thunder</a>",
-                  "onlyRemoveOwnersInstance": true
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1412482872\">Constance_Ultimate_Weakness_Sub_Wind</a>",
-                  "onlyRemoveOwnersInstance": true
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1073816607\">Constance_Ultimate_Weakness_Sub_Quantum</a>",
-                  "onlyRemoveOwnersInstance": true
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"628099091\">Constance_Ultimate_Weakness_Sub_Imaginary</a>",
-                  "onlyRemoveOwnersInstance": true
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Dahlia's Dance Partners}}"
-                  },
-                  "includeDyingTargets": true,
-                  "ifTargetFound": [
-                    {
-                      "name": "SWITCH",
-                      "source": {
-                        "name": "Damage Type Source",
-                        "sourceType": "ReadTargetType",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        }
-                      },
-                      "caseEvents": [
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": "Physical",
-                          "execute": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-447864201\">Constance_Ultimate_Weakness_Sub_Physical</a>",
-                              "silentAdd": true
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": "Fire",
-                          "execute": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-2114479442\">Constance_Ultimate_Weakness_Sub_Fire</a>",
-                              "silentAdd": true
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": "Ice",
-                          "execute": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-401157135\">Constance_Ultimate_Weakness_Sub_Ice</a>",
-                              "silentAdd": true
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": "Thunder",
-                          "execute": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1441945696\">Constance_Ultimate_Weakness_Sub_Thunder</a>",
-                              "silentAdd": true
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": "Wind",
-                          "execute": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1412482872\">Constance_Ultimate_Weakness_Sub_Wind</a>",
-                              "silentAdd": true
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": "Quantum",
-                          "execute": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1073816607\">Constance_Ultimate_Weakness_Sub_Quantum</a>",
-                              "silentAdd": true
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": "Imaginary",
-                          "execute": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"628099091\">Constance_Ultimate_Weakness_Sub_Imaginary</a>",
-                              "silentAdd": true
-                            }
-                          ]
-                        }
-                      ],
-                      "defaultEvents": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [],
-          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. Gains Weaknesses of all Dance Partners' Types.",
-          "type": "Debuff",
-          "effectName": "Wilt",
-          "statusName": "Wilt"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1701170235\">Constance_Aura_OnEnemy</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
-          "modifierFlags": [
-            "STAT_ForceSuperBreakDamage"
-          ],
-          "description": "Toughness Reduction taken when not Weakness Broken can also be converted to Super Break DMG.",
-          "type": "Debuff",
-          "statusName": "Lick... Enkindled Betrayal"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2139860773\">Constance_Aura</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (MDF_Aura_Lifetime) || RETURN",
-                    "displayLines": "MDF_Aura_Lifetime",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Aura_Lifetime"
-                    ]
-                  },
-                  "priorState": "Active"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "AITag",
-                  "variableName": "BPSkillPriority",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": 0,
-                  "priorState": "Normal"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "AITag",
-                  "variableName": "BPSkillPriority",
-                  "value": 1
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "MDF_Aura_Lifetime",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (MDF_Aura_Lifetime) || RETURN",
-                        "displayLines": "MDF_Aura_Lifetime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Aura_Lifetime"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "MDF_Aura_Lifetime",
-                        "compareType": "<=",
-                        "value2": 1,
-                        "contextScope": "ContextModifier"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Toughness Reduction taken by enemy targets that are not Weakness Broken can also be converted to Super Break DMG.",
-          "type": "Buff",
-          "statusName": "Lick... Enkindled Betrayal",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1701170235\">Constance_Aura_OnEnemy</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
-              "aliveOnly": "False",
-              "haloStatus": true
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-152934148\">Constance_Aura_OnTeam</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
-              "refModifier": "<a class=\"gModGreen\" id=\"1782063048\">MReference_StanceBreakAddedRatio</a>",
-              "aliveOnly": "False",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "references": []
     }
   }
 }

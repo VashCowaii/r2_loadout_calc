@@ -26,6 +26,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1926285053\">Relic_127_Sub4</a>[<span class=\"descriptionNumberColor\">World-Remaking Deliverer</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">#SkillRelic_127_4_P2_DamageAddRatio</span>.",
+          "type": "Buff",
+          "statusName": "World-Remaking Deliverer",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -48,15 +51,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">#SkillRelic_127_4_P2_DamageAddRatio</span>.",
-          "type": "Buff",
-          "statusName": "World-Remaking Deliverer"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1842396958\">Relic_127_Sub3</a>[<span class=\"descriptionNumberColor\">World-Remaking Deliverer</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Max HP increases by <span class=\"descriptionNumberColor\">#SkillRelic_127_4_P1_HPAddedRatio</span>.",
+          "type": "Buff",
+          "statusName": "World-Remaking Deliverer",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -79,10 +82,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Max HP increases by <span class=\"descriptionNumberColor\">#SkillRelic_127_4_P1_HPAddedRatio</span>.",
-          "type": "Buff",
-          "statusName": "World-Remaking Deliverer"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -190,9 +190,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

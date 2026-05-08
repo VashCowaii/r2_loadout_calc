@@ -27,6 +27,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1111450796\">Klara_Trace01</a>",
+      "stackData": [
+        "MDF_Chance"
+      ],
       "execute": [
         {
           "eventTrigger": "Being Attacked Start [Owner]",
@@ -58,11 +61,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Chance"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

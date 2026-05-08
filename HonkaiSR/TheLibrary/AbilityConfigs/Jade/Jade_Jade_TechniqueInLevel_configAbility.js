@@ -28,6 +28,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-78900852\">StageAbility_Maze_Jade_Modifier</a>",
+      "stackData": [
+        "MDF_HitNumb_Maze"
+      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -151,11 +154,7 @@ const configAbility = {
           ],
           "priorityLevel": -60
         }
-      ],
-      "stackData": [
-        "MDF_HitNumb_Maze"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

@@ -22,6 +22,10 @@ const configAbility = {
         "Deathrattle",
         "RemoveWhenCasterDead"
       ],
+      "description": "Increases received Basic ATK DMG and DoT by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>. Allies will recover Skill Points after this unit is defeated.",
+      "type": "Debuff",
+      "effectName": "Memory Imprint",
+      "statusName": "Memory Imprint",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -170,11 +174,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases received Basic ATK DMG and DoT by <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span>. Allies will recover Skill Points after this unit is defeated.",
-      "type": "Debuff",
-      "effectName": "Memory Imprint",
-      "statusName": "Memory Imprint"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -289,9 +289,7 @@ const configAbility = {
           ],
           "priorityLevel": -45
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

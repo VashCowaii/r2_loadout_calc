@@ -47,8 +47,6 @@ const configAbility = {
         "AvatarBreak",
         "DisableAction"
       ],
-      "stackData": [],
-      "latentQueue": [],
       "duration": 1
     },
     {
@@ -57,6 +55,7 @@ const configAbility = {
       "modifierFlags": [
         "Endurance"
       ],
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -67,20 +66,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__73852059\">Monster_W2_HuanlongPart_01_Number02</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__73852059\">Monster_W2_HuanlongPart_01_Number02</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__90629678\">Monster_W2_HuanlongPart_01_Number01</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__90629678\">Monster_W2_HuanlongPart_01_Number01</a>"
     },
     {
       "name": "Modifier Construction",
@@ -569,14 +563,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "Replace",
+      "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Vulnerability",
+      "duration": 1,
+      "stackLimit": 2,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Owner]",
@@ -629,26 +628,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ActionDelayRatio",
-        "MDF_DamageTakenUpRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "InsertFlag",
-        "Insert2Flag",
-        "Insert1Flag",
-        "Insert3Flag",
-        "TeammateInsertFlag",
-        "TeammateInsertFlag2"
-      ],
-      "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Vulnerability",
-      "duration": 1,
-      "stackLimit": 2,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -675,10 +655,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Phase3End"
       ]
     },
     {
@@ -688,6 +664,10 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "Will use Havoc during the next action. This status can be dispelled by abilities.",
+      "type": "Buff",
+      "effectName": "Bloom",
+      "statusName": "Bloom",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1367,11 +1347,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Will use Havoc during the next action. This status can be dispelled by abilities.",
-      "type": "Buff",
-      "effectName": "Bloom",
-      "statusName": "Bloom"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1384,6 +1360,12 @@ const configAbility = {
         "STAT_AITargetLowerPriority",
         "MuteBreak"
       ],
+      "latentQueue": [
+        "PartDecisionFlag"
+      ],
+      "description": "When Destruction Lotus is not in Bloom, its Toughness cannot be reduced.",
+      "type": "Other",
+      "statusName": "Weakness Protected",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1407,14 +1389,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "PartDecisionFlag"
-      ],
-      "description": "When Destruction Lotus is not in Bloom, its Toughness cannot be reduced.",
-      "type": "Other",
-      "statusName": "Weakness Protected"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1422,6 +1397,10 @@ const configAbility = {
       "modifierFlags": [
         "DisableHealHP"
       ],
+      "description": "In Repose.",
+      "type": "Other",
+      "statusName": "Repose",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1494,20 +1473,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "InsertFlag",
-        "Insert2Flag",
-        "Insert1Flag",
-        "Insert3Flag",
-        "TeammateInsertFlag",
-        "TeammateInsertFlag2"
-      ],
-      "description": "In Repose.",
-      "type": "Other",
-      "statusName": "Repose",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1525,15 +1491,6 @@ const configAbility = {
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "TeammateInsertFlag2",
-        "TeammateInsertFlag",
-        "Insert3Flag",
-        "Insert1Flag",
-        "Insert2Flag",
-        "InsertFlag"
       ]
     },
     {
@@ -1924,11 +1881,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DormancyLifeTime"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

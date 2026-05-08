@@ -3,23 +3,44 @@ const compositeAbilityObject = {
   "fullCharacterName": 60020,
   "trimCharacterName": 60020,
   "abilityList": [
-    "60020_BattleEventAbility_60020_Camera",
+    "60020_Modifiers",
     "60020_MissionBattleEvent60020_PassiveAbility01",
+    "60020_BattleEventAbility_60020_Camera",
     "60020_MissionBattleEvent60020_Ability03_Part02",
-    "60020_MissionBattleEvent60020_Ability03_Part01",
-    "60020_Modifiers"
+    "60020_MissionBattleEvent60020_Ability03_Part01"
   ],
   "abilityObject": {
-    "60020_BattleEventAbility_60020_Camera": {
-      "fileName": "60020_BattleEventAbility_60020_Camera",
-      "abilityType": null,
+    "60020_Modifiers": {
+      "fileName": "60020_Modifiers",
+      "abilityType": "Char. Modifiers",
       "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1381424630\">MStageMissionBattleEvent60020</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Ability",
+                  "abilityName": "MissionBattleEvent60020_Ability03_Part01"
+                },
+                {
+                  "name": "Add Ability",
+                  "abilityName": "MissionBattleEvent60020_Ability03_Part02"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
     },
     "60020_MissionBattleEvent60020_PassiveAbility01": {
       "fileName": "60020_MissionBattleEvent60020_PassiveAbility01",
@@ -86,6 +107,12 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-867638461\">MissionBattleEvent60020_Charge</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
+          ],
+          "stackData": [
+            "MDF_SPValue"
+          ],
+          "latentQueue": [
+            "BattleEvent_BlackSwan"
           ],
           "execute": [
             {
@@ -161,12 +188,6 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Injected Ability Use [Anyone]: End"
             }
-          ],
-          "stackData": [
-            "MDF_SPValue"
-          ],
-          "latentQueue": [
-            "BattleEvent_BlackSwan"
           ]
         },
         {
@@ -175,6 +196,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "BlockDamage",
             "Stealth"
+          ],
+          "latentQueue": [
+            "BattleEvent_BlackSwan"
           ],
           "execute": [
             {
@@ -214,15 +238,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "BattleEvent_BlackSwan"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__768878434\">Death_BattleEventAttackUPByMaxHP</a>",
+          "latentQueue": [
+            "BattleEvent_BlackSwan"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -264,15 +287,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "BattleEvent_BlackSwan"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2011183040\">MissionBattleEvent60020_AutoUseUltraAbility</a>",
+          "latentQueue": [
+            "BattleEvent_BlackSwan"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -286,10 +308,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "BattleEvent_BlackSwan"
           ]
         }
       ],
@@ -298,6 +316,17 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "60020_BattleEventAbility_60020_Camera": {
+      "fileName": "60020_BattleEventAbility_60020_Camera",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
       }
     },
     "60020_MissionBattleEvent60020_Ability03_Part02": {
@@ -423,38 +452,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "All Enemy Team"
       }
-    },
-    "60020_Modifiers": {
-      "fileName": "60020_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1381424630\">MStageMissionBattleEvent60020</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Ability",
-                  "abilityName": "MissionBattleEvent60020_Ability03_Part01"
-                },
-                {
-                  "name": "Add Ability",
-                  "abilityName": "MissionBattleEvent60020_Ability03_Part02"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": []
     }
   },
   "enemyData": {

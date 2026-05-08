@@ -10,8 +10,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1130386500\">ADV_StageAbility_Maze_Sunday</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">_CritialDamage_Add</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "Dawn of Sidereal Cacophony",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -82,11 +92,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">_CritialDamage_Add</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "Dawn of Sidereal Cacophony"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -187,6 +193,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "CRIT Rate Boost",
+      "statusName": "The Sorrowing Body",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -298,21 +308,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_CritValue"
-      ],
-      "latentQueue": [],
-      "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "CRIT Rate Boost",
-      "statusName": "The Sorrowing Body"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-376848843\">Sunday_10_Ability02_PreshowForSummonUnit</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -343,8 +343,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1403569034\">Sunday_10_Ability02_PreshowForLongling</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -375,6 +373,32 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1534107855\">Sunday_10_Ability02_Preshow</a>",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Player's Aim Target List}} - {{Player's Aim Target List}}.[[getMemosprite]]"
+        },
+        "skillType": [
+          "Skill"
+        ],
+        "conditions": {
+          "name": "Target is Pathstrider",
+          "path": [
+            "Harmony"
+          ],
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player's Aim Target List}}"
+          },
+          "invertCondition": true
+        },
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": "0(Set AV)"
+        }
+      },
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -450,40 +474,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "target": {
-          "name": "Target Name",
-          "target": "{{Player's Aim Target List}} - {{Player's Aim Target List}}.[[getMemosprite]]"
-        },
-        "skillType": [
-          "Skill"
-        ],
-        "conditions": {
-          "name": "Target is Pathstrider",
-          "path": [
-            "Harmony"
-          ],
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player's Aim Target List}}"
-          },
-          "invertCondition": true
-        },
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": "0(Set AV)"
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1698887691\">Sunday_10_Eidolon1_SuperBonusForServant</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF.",
+      "type": "Buff",
+      "effectName": "Millennium's Quietus",
+      "statusName": "Millennium's Quietus",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -500,20 +500,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF.",
-      "type": "Buff",
-      "effectName": "Millennium's Quietus",
-      "statusName": "Millennium's Quietus"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-817980433\">Sunday_10_Eidolon1_SuperBonus</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF.",
+      "type": "Buff",
+      "effectName": "Millennium's Quietus",
+      "statusName": "Millennium's Quietus",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -789,21 +785,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio",
-        "MDF_PropertyRatio02"
-      ],
-      "latentQueue": [],
-      "description": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF.",
-      "type": "Buff",
-      "effectName": "Millennium's Quietus",
-      "statusName": "Millennium's Quietus"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2041266105\">Sunday_10_MazeBonus</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "The Glorious Mysteries",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -826,20 +817,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "The Glorious Mysteries"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyFinal</span>.",
+      "type": "Buff",
+      "effectName": "The Beatified",
+      "statusName": "The Beatified",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1036,16 +1023,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio",
-        "MDF_PropertyBase"
-      ],
-      "latentQueue": [],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyFinal</span>.",
-      "type": "Buff",
-      "effectName": "The Beatified",
-      "statusName": "The Beatified"
+      ]
     }
   ],
   "references": []

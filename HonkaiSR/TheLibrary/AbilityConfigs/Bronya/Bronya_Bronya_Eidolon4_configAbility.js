@@ -24,9 +24,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-109336730\">Bronya_Eidolon4_ATK_Flag</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-109336730\">Bronya_Eidolon4_ATK_Flag</a>"
     },
     {
       "name": "Modifier Construction",
@@ -220,9 +218,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

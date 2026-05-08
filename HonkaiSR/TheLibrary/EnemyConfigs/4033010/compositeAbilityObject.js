@@ -3,22 +3,404 @@ const compositeAbilityObject = {
   "fullCharacterName": 4033010,
   "trimCharacterName": 4033010,
   "abilityList": [
+    "4033010_Monster_XP_Elite01_02_PassiveAbility01",
+    "4033010_Monster_XP_Elite01_02_Ability06_Part02",
+    "4033010_Monster_XP_Elite01_02_Ability06_Part01",
     "4033010_Monster_XP_Elite01_02_Ability05_Part02",
     "4033010_Monster_XP_Elite01_02_Ability05_Part01",
     "4033010_Monster_XP_Elite01_02_Ability04_Part02",
     "4033010_Monster_XP_Elite01_02_Ability04_Part01",
-    "4033010_Monster_XP_Elite01_02_Ability06_Part02",
-    "4033010_Monster_XP_Elite01_02_Ability06_Part01",
     "4033010_Monster_XP_Elite01_02_Ability03_Part02",
     "4033010_Monster_XP_Elite01_02_Ability03_Part01",
     "4033010_Monster_XP_Elite01_02_Ability02_Part02",
     "4033010_Monster_XP_Elite01_02_Ability02_Part01",
     "4033010_Monster_XP_Elite01_02_Ability01_Part02",
     "4033010_Monster_XP_Elite01_02_Ability01_Part01",
-    "4033010_Monster_XP_Elite01_02_PassiveAbility01",
     "4033010_Modifiers"
   ],
   "abilityObject": {
+    "4033010_Monster_XP_Elite01_02_PassiveAbility01": {
+      "fileName": "4033010_Monster_XP_Elite01_02_PassiveAbility01",
+      "childAbilityList": [
+        "4033010_Monster_XP_Elite01_02_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-381723021\">Enemy_XP_Elite01_02_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1205033025\">Enemy_XP_Elite01_02_Charge_Controller</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-621544638\">Enemy_XP_Elite01_02_Charge_Complete</a>",
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "AIFlag",
+                  "value": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1205033025\">Enemy_XP_Elite01_02_Charge_Controller</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-621544638\">Enemy_XP_Elite01_02_Charge_Complete</a>"
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": 0,
+                  "entityClass": "Enemy",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "maximum": {
+                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+                    "displayLines": "{[SkillP01[0]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[SkillP01[0]]}"
+                    ]
+                  },
+                  "assignState": "False"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": 0,
+                  "entityClass": "Enemy",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "maximum": {
+                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+                    "displayLines": "{[SkillP01[0]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[SkillP01[0]]}"
+                    ]
+                  },
+                  "assignState": "True"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Name",
+                    "skillName": [
+                      "Skill05"
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-621544638\">Enemy_XP_Elite01_02_Charge_Complete</a>"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_CurrentCount",
+                      "value": 0
+                    },
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (_CurrentCount) || RETURN",
+                        "displayLines": "_CurrentCount",
+                        "constants": [],
+                        "variables": [
+                          "_CurrentCount"
+                        ]
+                      },
+                      "entityClass": "Enemy",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "maximum": {
+                        "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+                        "displayLines": "{[SkillP01[0]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[SkillP01[0]]}"
+                        ]
+                      },
+                      "assignState": "True"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking Modifier Instance [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1810848072\">Enemy_XP_Elite01_02_Charge</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_CurrentCount",
+                      "value": {
+                        "operator": "Variables[0] (_CurrentCount) || Constants[0] (1) || ADD || RETURN",
+                        "displayLines": "(_CurrentCount + 1)",
+                        "constants": [
+                          1
+                        ],
+                        "variables": [
+                          "_CurrentCount"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "_CurrentCount",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+                          "displayLines": "{[SkillP01[0]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[SkillP01[0]]}"
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "_CurrentCount",
+                          "value": {
+                            "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+                            "displayLines": "{[SkillP01[0]]}",
+                            "constants": [],
+                            "variables": [
+                              "{[SkillP01[0]]}"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-621544638\">Enemy_XP_Elite01_02_Charge_Complete</a>"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (_CurrentCount) || RETURN",
+                        "displayLines": "_CurrentCount",
+                        "constants": [],
+                        "variables": [
+                          "_CurrentCount"
+                        ]
+                      },
+                      "entityClass": "Enemy",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "maximum": {
+                        "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+                        "displayLines": "{[SkillP01[0]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[SkillP01[0]]}"
+                        ]
+                      },
+                      "assignState": "True"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-381723021\">Enemy_XP_Elite01_02_MuteHitFly</a>",
+          "modifierFlags": [
+            "MuteHitFly"
+          ]
+        }
+      ]
+    },
+    "4033010_Monster_XP_Elite01_02_Ability06_Part02": {
+      "fileName": "4033010_Monster_XP_Elite01_02_Ability06_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"550129180\">Enemy_XP_Elite01_02_DefenceDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
+            "displayLines": "{[Skill06[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill06[1]]}"
+            ]
+          }
+        },
+        {
+          "name": "Achievement",
+          "relatedAchievements": [
+            {
+              "title": "Immaculate Body",
+              "desc": "In a single battle, ensure the Black Tide's Corroded Daemon does not absorb any \"corrosion\" when using \"Filth Eater\"",
+              "rarity": "Low"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__550129180\">Enemy_XP_Elite01_02_DefenceDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+          "stackType": "Replace",
+          "description": "DEF decreases by <span class=\"descriptionNumberColor\">#Skill06_P1_Ratio</span>.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "DEF Reduction",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (1) || INVERT || Variables[0] ({[Skill06[0]]}) || MUL || RETURN",
+                    "displayLines": "(-1 * {[Skill06[0]]})",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "{[Skill06[0]]}"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "4033010_Monster_XP_Elite01_02_Ability06_Part01": {
+      "fileName": "4033010_Monster_XP_Elite01_02_Ability06_Part01",
+      "childAbilityList": [
+        "4033010_Monster_XP_Elite01_02_Ability03_Camera",
+        "4033010_Monster_XP_Elite01_02_Ability03_Part01",
+        "4033010_Monster_XP_Elite01_02_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill06",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_XP_Elite01_02_Ability06_Part02",
+          "isTrigger": true
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
     "4033010_Monster_XP_Elite01_02_Ability05_Part02": {
       "fileName": "4033010_Monster_XP_Elite01_02_Ability05_Part02",
       "abilityType": null,
@@ -277,6 +659,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2071311511\">Enemy_XP_Elite01_02_Charge_Enhance</a>[<span class=\"descriptionNumberColor\">Ominous Degeneration</span>]",
+          "description": "Uses \"Torrential Surge\" in the next action.",
+          "type": "Other",
+          "statusName": "Ominous Degeneration",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -287,12 +672,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Uses \"Torrential Surge\" in the next action.",
-          "type": "Other",
-          "statusName": "Ominous Degeneration"
+          ]
         }
       ]
     },
@@ -324,113 +704,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4033010_Monster_XP_Elite01_02_Ability06_Part02": {
-      "fileName": "4033010_Monster_XP_Elite01_02_Ability06_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"550129180\">Enemy_XP_Elite01_02_DefenceDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-            "displayLines": "{[Skill06[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[1]]}"
-            ]
-          }
-        },
-        {
-          "name": "Achievement",
-          "relatedAchievements": [
-            {
-              "title": "Immaculate Body",
-              "desc": "In a single battle, ensure the Black Tide's Corroded Daemon does not absorb any \"corrosion\" when using \"Filth Eater\"",
-              "rarity": "Low"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__550129180\">Enemy_XP_Elite01_02_DefenceDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
-          "stackType": "Replace",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (1) || INVERT || Variables[0] ({[Skill06[0]]}) || MUL || RETURN",
-                    "displayLines": "(-1 * {[Skill06[0]]})",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "{[Skill06[0]]}"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "DEF decreases by <span class=\"descriptionNumberColor\">#Skill06_P1_Ratio</span>.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "DEF Reduction"
-        }
-      ]
-    },
-    "4033010_Monster_XP_Elite01_02_Ability06_Part01": {
-      "fileName": "4033010_Monster_XP_Elite01_02_Ability06_Part01",
-      "childAbilityList": [
-        "4033010_Monster_XP_Elite01_02_Ability03_Camera",
-        "4033010_Monster_XP_Elite01_02_Ability03_Part01",
-        "4033010_Monster_XP_Elite01_02_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill06",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Elite01_02_Ability06_Part02",
-          "isTrigger": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
       "references": []
     },
@@ -1071,7 +1344,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2055465700\">Enemy_XP_Elite01_02_Ability02AlreadyAttacked</a>",
-          "stackData": [],
           "latentQueue": [
             "FireBallNum"
           ]
@@ -1225,287 +1497,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4033010_Monster_XP_Elite01_02_PassiveAbility01": {
-      "fileName": "4033010_Monster_XP_Elite01_02_PassiveAbility01",
-      "childAbilityList": [
-        "4033010_Monster_XP_Elite01_02_PassiveAbility01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-381723021\">Enemy_XP_Elite01_02_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1205033025\">Enemy_XP_Elite01_02_Charge_Controller</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-621544638\">Enemy_XP_Elite01_02_Charge_Complete</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 4
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1205033025\">Enemy_XP_Elite01_02_Charge_Controller</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-621544638\">Enemy_XP_Elite01_02_Charge_Complete</a>"
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": 0,
-                  "entityClass": "Enemy",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "maximum": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                    "displayLines": "{[SkillP01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}"
-                    ]
-                  },
-                  "assignState": "False"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": 0,
-                  "entityClass": "Enemy",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "maximum": {
-                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                    "displayLines": "{[SkillP01[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP01[0]]}"
-                    ]
-                  },
-                  "assignState": "True"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Name",
-                    "skillName": [
-                      "Skill05"
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-621544638\">Enemy_XP_Elite01_02_Charge_Complete</a>"
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_CurrentCount",
-                      "value": 0
-                    },
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (_CurrentCount) || RETURN",
-                        "displayLines": "_CurrentCount",
-                        "constants": [],
-                        "variables": [
-                          "_CurrentCount"
-                        ]
-                      },
-                      "entityClass": "Enemy",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "maximum": {
-                        "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                        "displayLines": "{[SkillP01[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP01[0]]}"
-                        ]
-                      },
-                      "assignState": "True"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking Modifier Instance [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1810848072\">Enemy_XP_Elite01_02_Charge</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_CurrentCount",
-                      "value": {
-                        "operator": "Variables[0] (_CurrentCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_CurrentCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_CurrentCount"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "_CurrentCount",
-                        "compareType": ">=",
-                        "value2": {
-                          "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                          "displayLines": "{[SkillP01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP01[0]]}"
-                          ]
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "_CurrentCount",
-                          "value": {
-                            "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                            "displayLines": "{[SkillP01[0]]}",
-                            "constants": [],
-                            "variables": [
-                              "{[SkillP01[0]]}"
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-621544638\">Enemy_XP_Elite01_02_Charge_Complete</a>"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (_CurrentCount) || RETURN",
-                        "displayLines": "_CurrentCount",
-                        "constants": [],
-                        "variables": [
-                          "_CurrentCount"
-                        ]
-                      },
-                      "entityClass": "Enemy",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "maximum": {
-                        "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                        "displayLines": "{[SkillP01[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[SkillP01[0]]}"
-                        ]
-                      },
-                      "assignState": "True"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-381723021\">Enemy_XP_Elite01_02_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "4033010_Modifiers": {
       "fileName": "4033010_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1526,9 +1517,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

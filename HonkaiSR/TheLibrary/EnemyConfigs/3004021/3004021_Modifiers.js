@@ -71,9 +71,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -124,22 +122,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1072054994\">MModifier_Monster_W3_Theater_DamageSharePhase2</a>",
+      "latentQueue": [
+        "BreakEndFlag",
+        "InsertCheck"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "BreakEndFlag",
-        "InsertCheck"
       ]
     },
     {
@@ -155,9 +150,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -234,6 +227,14 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__579019848\">MModifier_Monster_W3_TV_02_FaceLock</a>[<span class=\"descriptionNumberColor\">Tutoring</span>]",
+      "latentQueue": [
+        "AIFlag"
+      ],
+      "description": "In Tutoring mode, this unit will not change its channel when attacked.",
+      "type": "Other",
+      "effectName": "Being Tutored",
+      "statusName": "Tutoring",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -420,16 +421,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
-      ],
-      "description": "In Tutoring mode, this unit will not change its channel when attacked.",
-      "type": "Other",
-      "effectName": "Being Tutored",
-      "statusName": "Tutoring",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -448,6 +440,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__665202517\">MModifier_Monster_W3_TV_02_Side2</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]",
+      "latentQueue": [
+        "AIFlag"
+      ],
+      "description": "Banacademic Office members can use \"Classroom Channel\" abilities. After they are attacked, they switch to \"Off-Class Channel\" mode.",
+      "type": "Other",
+      "statusName": "Classroom Channel",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -480,22 +478,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "BreakEndFlag",
-        "InsertCheck",
-        "LockCount",
-        "AI_HeiShengBei_SpecialAI",
-        "AI_HeiShengBei_Need"
-      ],
-      "description": "Banacademic Office members can use \"Classroom Channel\" abilities. After they are attacked, they switch to \"Off-Class Channel\" mode.",
-      "type": "Other",
-      "statusName": "Classroom Channel"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]",
+      "latentQueue": [
+        "AIFlag"
+      ],
+      "description": "Banacademic Office members can use \"Off-Class Channel\" abilities. After they are attacked, they will not switch channels.",
+      "type": "Other",
+      "statusName": "Off-Class Channel",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -674,14 +667,7 @@ const configAbility = {
         {
           "eventTrigger": "Being Attacked End [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "AIFlag"
-      ],
-      "description": "Banacademic Office members can use \"Off-Class Channel\" abilities. After they are attacked, they will not switch channels.",
-      "type": "Other",
-      "statusName": "Off-Class Channel"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1048,9 +1034,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1167,14 +1151,13 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1877150008\">Enemy_W3_Theater_IF_ImmuneDebuff</a>",
       "modifierFlags": [
         "ImmuneDebuff"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1090299931\">MModifier_W3_Theater_IF_UltraDamageReduce</a>",
       "stackType": "Replace",
+      "stackLimit": 5,
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1214,13 +1197,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 5
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-685472168\">MModifier_W3_Theater_IF_UltraDamageReduce_TriggerFlag</a>",
-      "stackData": [],
       "latentQueue": [
         "AIFlag"
       ]
@@ -1296,9 +1277,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1308,6 +1287,12 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__890205763\">Enemy_W3_Theater_IF_BattleEvent</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_BEBreakDamageReduce"
+      ],
+      "latentQueue": [
+        "BreakEndFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -1630,18 +1615,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_BEBreakDamageReduce"
-      ],
-      "latentQueue": [
-        "BreakEndFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__168509453\">Enemy_W3_Theater_IF_DuringChangePhase</a>",
-      "stackData": [],
       "latentQueue": [
         "InsertCheck"
       ]
@@ -1649,7 +1627,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-831498858\">MModifier_Monster_W3_Theater_IF_Part2</a>",
-      "stackData": [],
       "latentQueue": [
         "BreakEndFlag",
         "InsertCheck"
@@ -1661,14 +1638,16 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-2083560746\">MModifier_W3_Theater_IF_HourglassTrigger_Flop</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-2083560746\">MModifier_W3_Theater_IF_HourglassTrigger_Flop</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-396183840\">Enemy_W3_Dinosaur_02_IF_StanceBreakRatioUp</a>[<span class=\"descriptionNumberColor\">Weakness Break Efficiency Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Weakness Break Efficiency Boost",
+      "statusName": "Weakness Break Efficiency Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1691,45 +1670,27 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Weakness Break Efficiency Boost",
-      "statusName": "Weakness Break Efficiency Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1371722317\">MModifier_Monster_W3_Theater_IF_DuringAbility</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1371722317\">MModifier_Monster_W3_Theater_IF_DuringAbility</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-831657031\">Enemy_W3_Theater_IF_AbilityEX04</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-831657031\">Enemy_W3_Theater_IF_AbilityEX04</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-814879412\">Enemy_W3_Theater_IF_AbilityEX03</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-814879412\">Enemy_W3_Theater_IF_AbilityEX03</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-798101793\">Enemy_W3_Theater_IF_AbilityEX02</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-798101793\">Enemy_W3_Theater_IF_AbilityEX02</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-781324174\">Enemy_W3_Theater_IF_AbilityEX01</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-781324174\">Enemy_W3_Theater_IF_AbilityEX01</a>"
     },
     {
       "name": "Modifier Construction",
@@ -1857,6 +1818,10 @@ const configAbility = {
         "STAT_SuperArmorBreak",
         "STAT_AITargetKeepActionDelay"
       ],
+      "description": "When Blaznana Monkey Trick is in the \"Safeguard Breach\" state, increases this unit's DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
+      "type": "Debuff",
+      "effectName": "Prolonged Class",
+      "statusName": "Prolonged Class",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1914,16 +1879,22 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "When Blaznana Monkey Trick is in the \"Safeguard Breach\" state, increases this unit's DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
-      "type": "Debuff",
-      "effectName": "Prolonged Class",
-      "statusName": "Prolonged Class"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1242309858\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Homework In-Class</span>]",
       "modifierFlags": [],
+      "stackData": [
+        "MDF_AllDamageReduce"
+      ],
+      "latentQueue": [
+        "BreakEndFlag"
+      ],
+      "description": "When Blaznana Monkey Trick is in the \"Steadfast Safeguard\" state, reduces this unit's DMG received by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
+      "type": "Buff",
+      "effectName": "Homework In-Class",
+      "statusName": "Homework In-Class",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -2152,17 +2123,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AllDamageReduce"
-      ],
-      "latentQueue": [
-        "BreakEndFlag"
-      ],
-      "description": "When Blaznana Monkey Trick is in the \"Steadfast Safeguard\" state, reduces this unit's DMG received by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
-      "type": "Buff",
-      "effectName": "Homework In-Class",
-      "statusName": "Homework In-Class"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2326,17 +2287,22 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_MinionsSuperArmor_AllDamageReduce",
-        "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
-        "MDF_SetActionDelayValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1013818127\">MModifier_Monster_W3_Theater_IF_HourglassCharge</a>[<span class=\"descriptionNumberColor\">Regular Examination</span>]",
+      "stackData": [
+        "MDF_DamageStanceValue_Dinosaur",
+        "MDF_DamageStanceValue_TV",
+        "MDF_DamageStanceValue_Mecha",
+        "MDF_DamageStanceValue_Clock",
+        "MDF_DamageStanceValue_2",
+        "MDF_DamageStanceValue_All"
+      ],
+      "description": "When enemy units in the \"Classroom Channel\" state are switched to \"Off-Class Channel\" via either Breaking their Weaknesses or accumulating the tally, reduces the Toughness of \"Blaznana Monkey Trick\". When all enemy units are Weakness Broken, attacking any enemy units can reduce the Toughness of \"Blaznana Monkey Trick\" by a minor amount. When \"Blaznana Monkey Trick\" is Weakness Broken, all enemy targets will be Broken, and the \"Blaznana Monkey Trick\" will enter the \"Safeguard Breach\" state.",
+      "type": "Other",
+      "statusName": "Regular Examination",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -2784,19 +2750,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageStanceValue_Dinosaur",
-        "MDF_DamageStanceValue_TV",
-        "MDF_DamageStanceValue_Mecha",
-        "MDF_DamageStanceValue_Clock",
-        "MDF_DamageStanceValue_2",
-        "MDF_DamageStanceValue_All"
-      ],
-      "latentQueue": [],
-      "description": "When enemy units in the \"Classroom Channel\" state are switched to \"Off-Class Channel\" via either Breaking their Weaknesses or accumulating the tally, reduces the Toughness of \"Blaznana Monkey Trick\". When all enemy units are Weakness Broken, attacking any enemy units can reduce the Toughness of \"Blaznana Monkey Trick\" by a minor amount. When \"Blaznana Monkey Trick\" is Weakness Broken, all enemy targets will be Broken, and the \"Blaznana Monkey Trick\" will enter the \"Safeguard Breach\" state.",
-      "type": "Other",
-      "statusName": "Regular Examination"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3068,9 +3022,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3333,9 +3285,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3604,9 +3554,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3872,14 +3820,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-521198824\">MModifier_Monster_W3_Theater_IF_Flop</a>",
       "stackType": "Replace",
+      "latentQueue": [
+        "FaceChangeFlag",
+        "DoingFlop"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3984,11 +3934,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "FaceChangeFlag",
-        "DoingFlop"
       ]
     },
     {
@@ -4114,6 +4059,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1218613881\">MModifier_Monster_W3_Theater_IF_Side_Noise_Count</a>",
+      "latentQueue": [
+        "Negative_Count"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -4212,15 +4160,15 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Negative_Count"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2042117256\">MModifier_Monster_W3_Theater_IF_Side_Negative_Count</a>",
+      "latentQueue": [
+        "BreakEndFlag",
+        "InsertCheck"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -4273,11 +4221,11 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_Negative_Count_Max",
                       "value": {
-                        "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
-                        "displayLines": "MDF_Negative_Count_Max",
+                        "operator": "Variables[0] (UnusedUnderThisBase_10290) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_10290",
                         "constants": [],
                         "variables": [
-                          "MDF_Negative_Count_Max"
+                          "UnusedUnderThisBase_10290"
                         ]
                       }
                     }
@@ -4300,11 +4248,11 @@ const configAbility = {
                           "name": "Define Custom Variable",
                           "variableName": "MDF_Negative_Count_Max",
                           "value": {
-                            "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
-                            "displayLines": "MDF_Negative_Count",
+                            "operator": "Variables[0] (UnusedUnderThisBase_10292) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_10292",
                             "constants": [],
                             "variables": [
-                              "MDF_Negative_Count"
+                              "UnusedUnderThisBase_10292"
                             ]
                           }
                         }
@@ -4327,11 +4275,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_Negative_Count_Max",
                               "value": {
-                                "operator": "Variables[0] (Negative_Count) || RETURN",
-                                "displayLines": "Negative_Count",
+                                "operator": "Variables[0] (UnusedUnderThisBase_10284) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_10284",
                                 "constants": [],
                                 "variables": [
-                                  "Negative_Count"
+                                  "UnusedUnderThisBase_10284"
                                 ]
                               }
                             }
@@ -4347,11 +4295,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_Negative_Count_Max",
                   "value": {
-                    "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
-                    "displayLines": "MDF_Negative_Count_Max",
+                    "operator": "Variables[0] (UnusedUnderThisBase_10290) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_10290",
                     "constants": [],
                     "variables": [
-                      "MDF_Negative_Count_Max"
+                      "UnusedUnderThisBase_10290"
                     ]
                   }
                 }
@@ -4360,11 +4308,11 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (BreakEndFlag) || RETURN",
-                "displayLines": "BreakEndFlag",
+                "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
+                "displayLines": "MDF_Negative_Count",
                 "constants": [],
                 "variables": [
-                  "BreakEndFlag"
+                  "MDF_Negative_Count"
                 ]
               },
               "entityClass": "Enemy",
@@ -4373,11 +4321,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (InsertCheck) || RETURN",
-                "displayLines": "InsertCheck",
+                "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
+                "displayLines": "MDF_Negative_Count_Max",
                 "constants": [],
                 "variables": [
-                  "InsertCheck"
+                  "MDF_Negative_Count_Max"
                 ]
               },
               "assignState": "True",
@@ -4391,11 +4339,11 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (BreakEndFlag) || RETURN",
-                "displayLines": "BreakEndFlag",
+                "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
+                "displayLines": "MDF_Negative_Count",
                 "constants": [],
                 "variables": [
-                  "BreakEndFlag"
+                  "MDF_Negative_Count"
                 ]
               },
               "entityClass": "Enemy",
@@ -4404,11 +4352,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (InsertCheck) || RETURN",
-                "displayLines": "InsertCheck",
+                "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
+                "displayLines": "MDF_Negative_Count_Max",
                 "constants": [],
                 "variables": [
-                  "InsertCheck"
+                  "MDF_Negative_Count_Max"
                 ]
               },
               "assignState": "False",
@@ -4449,13 +4397,13 @@ const configAbility = {
                   "variableName": "MDF_Negative_Count",
                   "context": "ContextModifier",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (ReadytoFlop) || SUB || RETURN",
-                    "displayLines": "(0 - ReadytoFlop)",
+                    "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_10291) || SUB || RETURN",
+                    "displayLines": "(0 - UnusedUnderThisBase_10291)",
                     "constants": [
                       0
                     ],
                     "variables": [
-                      "ReadytoFlop"
+                      "UnusedUnderThisBase_10291"
                     ]
                   },
                   "max": 100
@@ -4469,22 +4417,22 @@ const configAbility = {
                   "scope": "TargetEntity",
                   "variableName": "Negative_Count",
                   "value": {
-                    "operator": "Variables[0] (BreakEndFlag) || RETURN",
-                    "displayLines": "BreakEndFlag",
+                    "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
+                    "displayLines": "MDF_Negative_Count",
                     "constants": [],
                     "variables": [
-                      "BreakEndFlag"
+                      "MDF_Negative_Count"
                     ]
                   }
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (BreakEndFlag) || RETURN",
-                    "displayLines": "BreakEndFlag",
+                    "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
+                    "displayLines": "MDF_Negative_Count",
                     "constants": [],
                     "variables": [
-                      "BreakEndFlag"
+                      "MDF_Negative_Count"
                     ]
                   },
                   "entityClass": "Enemy",
@@ -4493,11 +4441,11 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (InsertCheck) || RETURN",
-                    "displayLines": "InsertCheck",
+                    "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
+                    "displayLines": "MDF_Negative_Count_Max",
                     "constants": [],
                     "variables": [
-                      "InsertCheck"
+                      "MDF_Negative_Count_Max"
                     ]
                   },
                   "assignState": "True",
@@ -4529,13 +4477,13 @@ const configAbility = {
               "scope": "ContextModifier",
               "variableName": "MDF_Negative_Count",
               "value": {
-                "operator": "Variables[0] (BreakEndFlag) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(BreakEndFlag + 1)",
+                "operator": "Variables[0] (MDF_Negative_Count) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(MDF_Negative_Count + 1)",
                 "constants": [
                   1
                 ],
                 "variables": [
-                  "BreakEndFlag"
+                  "MDF_Negative_Count"
                 ]
               }
             },
@@ -4548,22 +4496,22 @@ const configAbility = {
               "scope": "TargetEntity",
               "variableName": "Negative_Count",
               "value": {
-                "operator": "Variables[0] (BreakEndFlag) || RETURN",
-                "displayLines": "BreakEndFlag",
+                "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
+                "displayLines": "MDF_Negative_Count",
                 "constants": [],
                 "variables": [
-                  "BreakEndFlag"
+                  "MDF_Negative_Count"
                 ]
               }
             },
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (BreakEndFlag) || RETURN",
-                "displayLines": "BreakEndFlag",
+                "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
+                "displayLines": "MDF_Negative_Count",
                 "constants": [],
                 "variables": [
-                  "BreakEndFlag"
+                  "MDF_Negative_Count"
                 ]
               },
               "entityClass": "Enemy",
@@ -4572,11 +4520,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (InsertCheck) || RETURN",
-                "displayLines": "InsertCheck",
+                "operator": "Variables[0] (MDF_Negative_Count_Max) || RETURN",
+                "displayLines": "MDF_Negative_Count_Max",
                 "constants": [],
                 "variables": [
-                  "InsertCheck"
+                  "MDF_Negative_Count_Max"
                 ]
               },
               "assignState": "True",
@@ -4591,12 +4539,12 @@ const configAbility = {
               "scope": "ContextModifier",
               "variableName": "MDF_Negative_Count_Diff",
               "value": {
-                "operator": "Variables[0] (InsertCheck) || Variables[1] (BreakEndFlag) || SUB || RETURN",
-                "displayLines": "(InsertCheck - BreakEndFlag)",
+                "operator": "Variables[0] (MDF_Negative_Count_Max) || Variables[1] (MDF_Negative_Count) || SUB || RETURN",
+                "displayLines": "(MDF_Negative_Count_Max - MDF_Negative_Count)",
                 "constants": [],
                 "variables": [
-                  "InsertCheck",
-                  "BreakEndFlag"
+                  "MDF_Negative_Count_Max",
+                  "MDF_Negative_Count"
                 ]
               }
             },
@@ -4737,16 +4685,19 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "BreakEndFlag",
-        "InsertCheck"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-373657900\">MModifier_Monster_W3_Theater_IF_Side_Negative</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]",
+      "latentQueue": [
+        "DoingFlop",
+        "FaceChangeFlag",
+        "AIFlag"
+      ],
+      "description": "\"Banacademic Office\" members can use \"Classroom Channel\" abilities. When the tally reaches the maximum, switches to \"Off-Class Channel\" and enters the Weakness Broken state.",
+      "type": "Other",
+      "statusName": "Classroom Channel",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -4800,20 +4751,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]",
       "latentQueue": [
         "DoingFlop",
         "FaceChangeFlag",
         "AIFlag"
       ],
-      "description": "\"Banacademic Office\" members can use \"Classroom Channel\" abilities. When the tally reaches the maximum, switches to \"Off-Class Channel\" and enters the Weakness Broken state.",
+      "description": "Banacademic Office members can use \"Off-Class Channel\" abilities. After they are attacked, they will not switch channels.",
       "type": "Other",
-      "statusName": "Classroom Channel"
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]",
+      "statusName": "Off-Class Channel",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5023,16 +4973,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DoingFlop",
-        "FaceChangeFlag",
-        "AIFlag"
-      ],
-      "description": "Banacademic Office members can use \"Off-Class Channel\" abilities. After they are attacked, they will not switch channels.",
-      "type": "Other",
-      "statusName": "Off-Class Channel"
+      ]
     }
   ],
   "references": []

@@ -112,9 +112,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -122,9 +120,7 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -158,6 +154,10 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "KeepOnDeathrattle"
       ],
+      "description": "Locked on by %CasterName as their attack target.",
+      "type": "Other",
+      "effectName": "Target Locked On",
+      "statusName": "Lock On",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -262,13 +262,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Locked on by %CasterName as their attack target.",
-      "type": "Other",
-      "effectName": "Target Locked On",
-      "statusName": "Lock On"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -321,6 +315,24 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "RemoveWhenCasterUnstage"
       ],
+      "stackData": [
+        "_GriffinMark_SPCost",
+        "_GriffinMark_DamagePercentage",
+        "_MixedMark_LoseHpRatio",
+        "_UnicornMark_Chance",
+        "_UnicornMark_LifeTime",
+        "_UnicornMark_ActionDelayRatio",
+        "_UnicornMark_DebuffDamagePercentage",
+        "_UnicornMark_DamagePercentage"
+      ],
+      "latentQueue": [
+        "_Location"
+      ],
+      "description": "When a target gains \"Aquila's Mark\" again, dispel all marks, and they take Fire DMG and lose Energy. When a target gains \"Oronyx's Mark\" again, dispel all marks, and they take True DMG based on <span class=\"descriptionNumberColor\">_MixedMark_LoseHpRatio</span> of their Max HP, lose Energy, and have a high chance to be afflicted with Entanglement. After any ally target defeats an enemy target, this mark can be dispelled, prioritizing dispelling the mark from the target that dealt the fatal damage.",
+      "type": "Other",
+      "effectName": "Aquila's Mark",
+      "statusName": "Aquila's Mark",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -666,31 +678,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "_GriffinMark_SPCost",
-        "_GriffinMark_DamagePercentage",
-        "_MixedMark_LoseHpRatio",
-        "_UnicornMark_Chance",
-        "_UnicornMark_LifeTime",
-        "_UnicornMark_ActionDelayRatio",
-        "_UnicornMark_DebuffDamagePercentage",
-        "_UnicornMark_DamagePercentage"
-      ],
-      "latentQueue": [
-        "_Location"
-      ],
-      "description": "When a target gains \"Aquila's Mark\" again, dispel all marks, and they take Fire DMG and lose Energy. When a target gains \"Oronyx's Mark\" again, dispel all marks, and they take True DMG based on <span class=\"descriptionNumberColor\">_MixedMark_LoseHpRatio</span> of their Max HP, lose Energy, and have a high chance to be afflicted with Entanglement. After any ally target defeats an enemy target, this mark can be dispelled, prioritizing dispelling the mark from the target that dealt the fatal damage.",
-      "type": "Other",
-      "effectName": "Aquila's Mark",
-      "statusName": "Aquila's Mark",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1506863241\">Enemy_W4_Griffin_Debuff_Status</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
+      ],
+      "latentQueue": [
+        "_Location"
       ],
       "execute": [
         {
@@ -768,10 +765,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_Location"
       ]
     }
   ],

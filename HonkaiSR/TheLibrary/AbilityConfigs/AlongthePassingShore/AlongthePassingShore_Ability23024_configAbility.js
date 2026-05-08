@@ -22,15 +22,15 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1868046089\">LC_23024_Sub</a>[<span class=\"descriptionNumberColor\">Mirage Fizzle</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "The wearer deals <span class=\"descriptionNumberColor\">MDF_PropertyValue01</span> more DMG to the target. And additionally increases the Ultimate DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue02</span>.",
+      "type": "Debuff",
+      "effectName": "Mirage Fizzle",
+      "statusName": "Mirage Fizzle",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "description": "The wearer deals <span class=\"descriptionNumberColor\">MDF_PropertyValue01</span> more DMG to the target. And additionally increases the Ultimate DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue02</span>.",
-      "type": "Debuff",
-      "effectName": "Mirage Fizzle",
-      "statusName": "Mirage Fizzle"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -164,9 +164,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

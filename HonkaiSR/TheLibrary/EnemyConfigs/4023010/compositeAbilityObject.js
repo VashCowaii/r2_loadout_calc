@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 4023010,
   "trimCharacterName": 4023010,
   "abilityList": [
+    "4023010_Monster_W4_Griffin_PassiveAbilityInitiate",
     "4023010_Monster_W4_Griffin_Ability04_Part02",
     "4023010_Monster_W4_Griffin_Ability04_Part01",
     "4023010_Monster_W4_Griffin_Ability03_Part02",
@@ -11,10 +12,169 @@ const compositeAbilityObject = {
     "4023010_Monster_W4_Griffin_Ability02_Part01",
     "4023010_Monster_W4_Griffin_Ability01_Part02",
     "4023010_Monster_W4_Griffin_Ability01_Part01",
-    "4023010_Monster_W4_Griffin_PassiveAbilityInitiate",
     "4023010_Modifiers"
   ],
   "abilityObject": {
+    "4023010_Monster_W4_Griffin_PassiveAbilityInitiate": {
+      "fileName": "4023010_Monster_W4_Griffin_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"203272356\">Enemy_W4_Griffin_Status</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__203272356\">Enemy_W4_Griffin_Status</a>",
+          "modifierFlags": [
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Pre-Death [Owner]",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2109418688\">Enemy_W4_Griffin_SignOnAvatar</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                  "onlyRemoveOwnersInstance": true
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "AIFlag",
+                        "compareType": "=",
+                        "value2": 2,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "AIFlag",
+                        "compareType": "=",
+                        "value2": 4,
+                        "contextScope": "TargetEntity"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Added Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "AIFlag",
+                      "context": "TargetEntity",
+                      "value": -1,
+                      "max": 20
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "AIFlag",
+                    "compareType": "=",
+                    "value2": 5,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "AIFlag",
+                      "value": 1
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>",
+                    "invertCondition": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2109418688\">Enemy_W4_Griffin_SignOnAvatar</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                  "onlyRemoveOwnersInstance": true
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1209574560\">Enemy_W4_Griffin_UltraReady</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "4023010_Monster_W4_Griffin_Ability04_Part02": {
       "fileName": "4023010_Monster_W4_Griffin_Ability04_Part02",
       "abilityType": null,
@@ -539,11 +699,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_378) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_378",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11244) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11244",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_378"
+                        "UnusedUnderThisBase_11244"
                       ]
                     },
                     "Toughness": null,
@@ -1370,28 +1530,28 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
                   "duration": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_376) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_376",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12690) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12690",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_376"
+                      "UnusedUnderThisBase_12690"
                     ]
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_375) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_375",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12683) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12683",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_375"
+                      "UnusedUnderThisBase_12683"
                     ]
                   },
                   "valuePerStack": {
                     "MDF_DamagePercentage_Layer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_377) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_377",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12691) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12691",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_377"
+                        "UnusedUnderThisBase_12691"
                       ]
                     }
                   }
@@ -1669,28 +1829,28 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
                   "duration": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_376) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_376",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12690) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12690",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_376"
+                      "UnusedUnderThisBase_12690"
                     ]
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_375) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_375",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12683) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12683",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_375"
+                      "UnusedUnderThisBase_12683"
                     ]
                   },
                   "valuePerStack": {
                     "MDF_DamagePercentage_Layer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_377) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_377",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12691) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12691",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_377"
+                        "UnusedUnderThisBase_12691"
                       ]
                     }
                   }
@@ -1968,28 +2128,28 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
                   "duration": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_376) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_376",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12690) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12690",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_376"
+                      "UnusedUnderThisBase_12690"
                     ]
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_375) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_375",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12683) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12683",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_375"
+                      "UnusedUnderThisBase_12683"
                     ]
                   },
                   "valuePerStack": {
                     "MDF_DamagePercentage_Layer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_377) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_377",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12691) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12691",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_377"
+                        "UnusedUnderThisBase_12691"
                       ]
                     }
                   }
@@ -2267,28 +2427,28 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
                   "duration": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_376) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_376",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12690) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12690",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_376"
+                      "UnusedUnderThisBase_12690"
                     ]
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_375) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_375",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12683) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12683",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_375"
+                      "UnusedUnderThisBase_12683"
                     ]
                   },
                   "valuePerStack": {
                     "MDF_DamagePercentage_Layer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_377) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_377",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12691) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12691",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_377"
+                        "UnusedUnderThisBase_12691"
                       ]
                     }
                   }
@@ -2396,21 +2556,15 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1715953719\">Monster_W4_Griffin_Ability02_Target03</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1715953719\">Monster_W4_Griffin_Ability02_Target03</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1699176100\">Monster_W4_Griffin_Ability02_Target02</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1699176100\">Monster_W4_Griffin_Ability02_Target02</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1749508957\">Monster_W4_Griffin_Ability02_Target01</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1749508957\">Monster_W4_Griffin_Ability02_Target01</a>"
         }
       ]
     },
@@ -2495,28 +2649,28 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_376) || RETURN",
-                "displayLines": "UnusedUnderThisBase_376",
+                "operator": "Variables[0] (UnusedUnderThisBase_12690) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12690",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_376"
+                  "UnusedUnderThisBase_12690"
                 ]
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_375) || RETURN",
-                "displayLines": "UnusedUnderThisBase_375",
+                "operator": "Variables[0] (UnusedUnderThisBase_12683) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12683",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_375"
+                  "UnusedUnderThisBase_12683"
                 ]
               },
               "valuePerStack": {
                 "MDF_DamagePercentage_Layer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_377) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_377",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12691) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12691",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_377"
+                    "UnusedUnderThisBase_12691"
                   ]
                 }
               }
@@ -2561,168 +2715,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "4023010_Monster_W4_Griffin_PassiveAbilityInitiate": {
-      "fileName": "4023010_Monster_W4_Griffin_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"203272356\">Enemy_W4_Griffin_Status</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__203272356\">Enemy_W4_Griffin_Status</a>",
-          "modifierFlags": [
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Pre-Death [Owner]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2109418688\">Enemy_W4_Griffin_SignOnAvatar</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
-                  "onlyRemoveOwnersInstance": true
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "AIFlag",
-                        "compareType": "=",
-                        "value2": 2,
-                        "contextScope": "TargetEntity"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "AIFlag",
-                        "compareType": "=",
-                        "value2": 4,
-                        "contextScope": "TargetEntity"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": -1,
-                      "max": 20
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "AIFlag",
-                    "compareType": "=",
-                    "value2": 5,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 1
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>",
-                    "invertCondition": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2109418688\">Enemy_W4_Griffin_SignOnAvatar</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
-                  "onlyRemoveOwnersInstance": true
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1209574560\">Enemy_W4_Griffin_UltraReady</a>"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
     },
     "4023010_Modifiers": {
       "fileName": "4023010_Modifiers",
@@ -2838,9 +2830,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2848,9 +2838,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "RemoveWhenCasterDead"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2884,6 +2872,10 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "KeepOnDeathrattle"
           ],
+          "description": "Locked on by %CasterName as their attack target.",
+          "type": "Other",
+          "effectName": "Target Locked On",
+          "statusName": "Lock On",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -2988,13 +2980,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Locked on by %CasterName as their attack target.",
-          "type": "Other",
-          "effectName": "Target Locked On",
-          "statusName": "Lock On"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3047,6 +3033,24 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "RemoveWhenCasterUnstage"
           ],
+          "stackData": [
+            "_GriffinMark_SPCost",
+            "_GriffinMark_DamagePercentage",
+            "_MixedMark_LoseHpRatio",
+            "_UnicornMark_Chance",
+            "_UnicornMark_LifeTime",
+            "_UnicornMark_ActionDelayRatio",
+            "_UnicornMark_DebuffDamagePercentage",
+            "_UnicornMark_DamagePercentage"
+          ],
+          "latentQueue": [
+            "_Location"
+          ],
+          "description": "When a target gains \"Aquila's Mark\" again, dispel all marks, and they take Fire DMG and lose Energy. When a target gains \"Oronyx's Mark\" again, dispel all marks, and they take True DMG based on <span class=\"descriptionNumberColor\">_MixedMark_LoseHpRatio</span> of their Max HP, lose Energy, and have a high chance to be afflicted with Entanglement. After any ally target defeats an enemy target, this mark can be dispelled, prioritizing dispelling the mark from the target that dealt the fatal damage.",
+          "type": "Other",
+          "effectName": "Aquila's Mark",
+          "statusName": "Aquila's Mark",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -3392,31 +3396,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "_GriffinMark_SPCost",
-            "_GriffinMark_DamagePercentage",
-            "_MixedMark_LoseHpRatio",
-            "_UnicornMark_Chance",
-            "_UnicornMark_LifeTime",
-            "_UnicornMark_ActionDelayRatio",
-            "_UnicornMark_DebuffDamagePercentage",
-            "_UnicornMark_DamagePercentage"
-          ],
-          "latentQueue": [
-            "_Location"
-          ],
-          "description": "When a target gains \"Aquila's Mark\" again, dispel all marks, and they take Fire DMG and lose Energy. When a target gains \"Oronyx's Mark\" again, dispel all marks, and they take True DMG based on <span class=\"descriptionNumberColor\">_MixedMark_LoseHpRatio</span> of their Max HP, lose Energy, and have a high chance to be afflicted with Entanglement. After any ally target defeats an enemy target, this mark can be dispelled, prioritizing dispelling the mark from the target that dealt the fatal damage.",
-          "type": "Other",
-          "effectName": "Aquila's Mark",
-          "statusName": "Aquila's Mark",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1506863241\">Enemy_W4_Griffin_Debuff_Status</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "latentQueue": [
+            "_Location"
           ],
           "execute": [
             {
@@ -3494,10 +3483,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_Location"
           ]
         }
       ],

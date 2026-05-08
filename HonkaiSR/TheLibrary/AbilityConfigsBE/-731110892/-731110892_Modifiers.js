@@ -351,6 +351,9 @@ const configAbility = {
       "modifierFlags": [
         "ElationEchoPoint"
       ],
+      "description": "Missing Description",
+      "type": "Buff",
+      "duration": 2,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -373,10 +376,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff",
-      "duration": 2
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -385,6 +385,9 @@ const configAbility = {
       "modifierFlags": [
         "ElationEchoPoint"
       ],
+      "description": "Missing Description",
+      "type": "Buff",
+      "duration": 2,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -407,10 +410,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Missing Description",
-      "type": "Buff",
-      "duration": 2
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1194,11 +1194,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "BattleEvent_Elation_00_BaseSpeed",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_493) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_493",
+                    "operator": "Variables[0] (UnusedUnderThisBase_3060) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_3060",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_493"
+                      "UnusedUnderThisBase_3060"
                     ]
                   }
                 },
@@ -1277,11 +1277,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_SpeedCalTemp2",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_494) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_494",
+                                "operator": "Variables[0] (UnusedUnderThisBase_3058) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_3058",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_494"
+                                  "UnusedUnderThisBase_3058"
                                 ]
                               }
                             }
@@ -1295,11 +1295,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_SpeedCalTemp2",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_495) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_495",
+                                "operator": "Variables[0] (UnusedUnderThisBase_3061) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_3061",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_495"
+                                  "UnusedUnderThisBase_3061"
                                 ]
                               }
                             }
@@ -1313,11 +1313,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_SpeedCalTemp2",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_496) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_496",
+                                "operator": "Variables[0] (UnusedUnderThisBase_3056) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_3056",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_496"
+                                  "UnusedUnderThisBase_3056"
                                 ]
                               }
                             }
@@ -1331,11 +1331,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_SpeedCalTemp2",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_497) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_497",
+                                "operator": "Variables[0] (UnusedUnderThisBase_3052) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_3052",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_497"
+                                  "UnusedUnderThisBase_3052"
                                 ]
                               }
                             }
@@ -1349,11 +1349,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_SpeedCalTemp2",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_498) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_498",
+                                "operator": "Variables[0] (UnusedUnderThisBase_3053) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_3053",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_498"
+                                  "UnusedUnderThisBase_3053"
                                 ]
                               }
                             }
@@ -1689,14 +1689,61 @@ const configAbility = {
           "eventTrigger": "Aha Instant: Start",
           "execute": [
             "Unknown EventType1 (Not always an error)",
-            "Override Priority Tags (true) [OBJECT WIP]"
+            {
+              "name": "Override Priority Tags",
+              "dynamicStringsArray": [
+                {
+                  "name": "MonsterReviveSelf",
+                  "value": "DuringElationTime_MonsterReviveSelf"
+                },
+                {
+                  "name": "MonsterHealSelf",
+                  "value": "DuringElationTime_MonsterHealSelf"
+                },
+                {
+                  "name": "MonsterReviveOthers",
+                  "value": "DuringElationTime_MonsterReviveOthers"
+                },
+                {
+                  "name": "MonsterHealOthers",
+                  "value": "DuringElationTime_MonsterHealOthers"
+                },
+                {
+                  "name": "MonsterDeathRattleByLevel",
+                  "value": "DuringElationTime_MonsterDeathRattleByLevel"
+                },
+                {
+                  "name": "MonsterDeathRattle",
+                  "value": "DuringElationTime_MonsterDeathRattle"
+                },
+                {
+                  "name": "MonsterSummon",
+                  "value": "DuringElationTime_MonsterSummon"
+                },
+                {
+                  "name": "MonsterBuffSelf_Elation",
+                  "value": "DuringElationTime_MonsterBuffSelf_Elation"
+                },
+                {
+                  "name": "MonsterBuffOthers_Elation",
+                  "value": "DuringElationTime_MonsterBuffOthers_Elation"
+                },
+                {
+                  "name": "UseElationSkill",
+                  "value": "DuringElationTime_UseElationSkill"
+                }
+              ]
+            }
           ],
           "priorityLevel": 100
         },
         {
           "eventTrigger": "Aha Instant: End",
           "execute": [
-            "Override Priority Tags (false) [OBJECT WIP]",
+            {
+              "name": "Override Priority Tags",
+              "reset": true
+            },
             "Unknown EventType2 (Not always an error)[1 false]",
             "Unknown EventType1 (Not always an error)[1 false][2 true]",
             {
@@ -1862,9 +1909,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1891,13 +1936,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-881220179\">MLevel_ElationBE_ActionStateFalse</a>",
+      "latentQueue": [
+        "ElationTime_IsNoConsume"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1920,10 +1966,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "ElationTime_IsNoConsume"
       ]
     },
     {
@@ -2053,9 +2095,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

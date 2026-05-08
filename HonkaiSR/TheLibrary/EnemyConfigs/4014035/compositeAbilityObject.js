@@ -3,9 +3,10 @@ const compositeAbilityObject = {
   "fullCharacterName": 4014035,
   "trimCharacterName": 4014035,
   "abilityList": [
+    "4014035_Monster_W4_Pollux_SpecailAbility05",
     "4014035_Monster_W4_Pollux_EndInsert_Part02",
     "4014035_Monster_W4_Pollux_EndInsert_Part01",
-    "4014035_Monster_W4_Pollux_SpecailAbility05",
+    "4014035_Monster_W4_Pollux_PassiveAbility_BGM",
     "4014035_Monster_W4_Pollux_Stun_Insert_Camera",
     "4014035_Monster_W4_Pollux_Stun_Insert",
     "4014035_Monster_W4_Pollux_StunRecover_Insert_Camera",
@@ -24,11 +25,27 @@ const compositeAbilityObject = {
     "4014035_Monster_W4_Pollux_Ability02_Part01",
     "4014035_Monster_W4_Pollux_Ability01_Part02",
     "4014035_Monster_W4_Pollux_Ability01_Part01",
-    "4014035_Monster_W4_Pollux_PassiveAbility_BGM",
     "4014035_Modifiers",
     "4014035_Functions"
   ],
   "abilityObject": {
+    "4014035_Monster_W4_Pollux_SpecailAbility05": {
+      "fileName": "4014035_Monster_W4_Pollux_SpecailAbility05",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_StorySimulationSpeed",
+          "value": 1
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "4014035_Monster_W4_Pollux_EndInsert_Part02": {
       "fileName": "4014035_Monster_W4_Pollux_EndInsert_Part02",
       "abilityType": null,
@@ -80,22 +97,110 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4014035_Monster_W4_Pollux_SpecailAbility05": {
-      "fileName": "4014035_Monster_W4_Pollux_SpecailAbility05",
-      "abilityType": null,
+    "4014035_Monster_W4_Pollux_PassiveAbility_BGM": {
+      "fileName": "4014035_Monster_W4_Pollux_PassiveAbility_BGM",
+      "skillTrigger": "Passive_BGM",
+      "abilityType": "Basic ATK",
       "energy": null,
       "toughnessList": null,
-      "parse": [
+      "parse": [],
+      "whenAdded": [
         {
-          "name": "Define Custom Variable",
-          "variableName": "_StorySimulationSpeed",
-          "value": 1
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage Type",
+                "stageType": "Challenge"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "VerseSimulation"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "StrongChallengeActivity"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "RogueRelic"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "GridFightActivity"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"715173654\">Enemy_W4_Pollux_ResetStageBGM</a>"
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
-      "references": []
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__715173654\">Enemy_W4_Pollux_ResetStageBGM</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Varying Data",
+                  "target": null,
+                  "variableName": "MDF_WaveIndex",
+                  "value": "CurWaveIndex"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "New Enemy Wave: Start",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Varying Data",
+                  "target": null,
+                  "variableName": "MDF_WaveIndex2",
+                  "value": "CurWaveIndex"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_WaveIndex",
+                    "compareType": "NOT=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
+                      "displayLines": "MDF_WaveIndex2",
+                      "constants": [],
+                      "variables": [
+                        "MDF_WaveIndex2"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     "4014035_Monster_W4_Pollux_Stun_Insert_Camera": {
       "fileName": "4014035_Monster_W4_Pollux_Stun_Insert_Camera",
@@ -146,11 +251,11 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_66) || RETURN",
-                "displayLines": "UnusedUnderThisBase_66",
+                "operator": "Variables[0] (UnusedUnderThisBase_11916) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11916",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_66"
+                  "UnusedUnderThisBase_11916"
                 ]
               }
             }
@@ -204,11 +309,11 @@ const compositeAbilityObject = {
                 "target": "{{Player Team All}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_85) || RETURN",
-                "displayLines": "UnusedUnderThisBase_85",
+                "operator": "Variables[0] (UnusedUnderThisBase_11926) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11926",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_85"
+                  "UnusedUnderThisBase_11926"
                 ]
               },
               "formula": "Heal from Target MaxHP"
@@ -566,11 +671,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_76) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_76",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11954) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11954",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_76"
+                    "UnusedUnderThisBase_11954"
                   ]
                 }
               }
@@ -792,11 +897,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_76) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_76",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11954) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11954",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_76"
+                    "UnusedUnderThisBase_11954"
                   ]
                 }
               }
@@ -915,11 +1020,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "_Skill05_LoseHpRatio",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_78) || RETURN",
-                "displayLines": "UnusedUnderThisBase_78",
+                "operator": "Variables[0] (UnusedUnderThisBase_11951) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11951",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_78"
+                  "UnusedUnderThisBase_11951"
                 ]
               }
             },
@@ -927,11 +1032,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "_Skill05_ActionDelay",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_79) || RETURN",
-                "displayLines": "UnusedUnderThisBase_79",
+                "operator": "Variables[0] (UnusedUnderThisBase_11913) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11913",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_79"
+                  "UnusedUnderThisBase_11913"
                 ]
               }
             },
@@ -939,11 +1044,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "_Skill05_Part_ActionDelay",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_80) || RETURN",
-                "displayLines": "UnusedUnderThisBase_80",
+                "operator": "Variables[0] (UnusedUnderThisBase_11911) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11911",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_80"
+                  "UnusedUnderThisBase_11911"
                 ]
               }
             }
@@ -1026,15 +1131,11 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-226864099\">Monster_W4_PolluxPart_R</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-226864099\">Monster_W4_PolluxPart_R</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-193308861\">Monster_W4_PolluxPart_L</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-193308861\">Monster_W4_PolluxPart_L</a>"
         },
         {
           "name": "Modifier Construction",
@@ -1649,13 +1750,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1130988503\">Monster_W4_Pollux_WaveStart</a>",
+          "latentQueue": [
+            "_WorldLevel",
+            "StoryMode"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -1663,11 +1766,6 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_WorldLevel",
-            "StoryMode"
           ]
         }
       ]
@@ -2728,19 +2826,19 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
               "valuePerStack": {
                 "_HpLimitRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_74) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_74",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11919) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11919",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_74"
+                    "UnusedUnderThisBase_11919"
                   ]
                 },
                 "_FatigueRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_75) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_75",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11952) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11952",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_75"
+                    "UnusedUnderThisBase_11952"
                   ]
                 }
               }
@@ -2807,19 +2905,19 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_82) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_82",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11918) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11918",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_82"
+                    "UnusedUnderThisBase_11918"
                   ]
                 },
                 "MDF_SpeedUpRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_82) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_82",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11918) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11918",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_82"
+                    "UnusedUnderThisBase_11918"
                   ]
                 }
               }
@@ -3992,113 +4090,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4014035_Monster_W4_Pollux_PassiveAbility_BGM": {
-      "fileName": "4014035_Monster_W4_Pollux_PassiveAbility_BGM",
-      "skillTrigger": "Passive_BGM",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage Type",
-                "stageType": "Challenge"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "VerseSimulation"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "StrongChallengeActivity"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "RogueRelic"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "GridFightActivity"
-              }
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"715173654\">Enemy_W4_Pollux_ResetStageBGM</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__715173654\">Enemy_W4_Pollux_ResetStageBGM</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex",
-                  "value": "CurWaveIndex"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave: Start",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex2",
-                  "value": "CurWaveIndex"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_WaveIndex",
-                    "compareType": "NOT=",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
-                      "displayLines": "MDF_WaveIndex2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_WaveIndex2"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "4014035_Modifiers": {
       "fileName": "4014035_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -4158,9 +4149,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4224,9 +4213,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4288,13 +4275,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1061433740\">Monster_W4_Pollux_StoryMode_SpecailAbility05</a>",
+          "latentQueue": [
+            "AIFlag",
+            "StoryMode",
+            "_StorySkill05"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -4330,12 +4320,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag",
-            "StoryMode",
-            "_StorySkill05"
           ]
         },
         {
@@ -4346,6 +4330,17 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_DOT"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_DamagePercentage",
+            "MDF_DamageHpAddedRatio"
+          ],
+          "description": "Receives DMG at the start of the turn. The higher the target's current HP percentage, the more DMG they receive. This DMG is \"Non-fatal.\"",
+          "type": "Debuff",
+          "effectName": "DoT",
+          "statusName": "Hastened Death",
+          "stackLimit": 1,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -4447,19 +4442,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_DamagePercentage",
-            "MDF_DamageHpAddedRatio"
-          ],
-          "latentQueue": [],
-          "description": "Receives DMG at the start of the turn. The higher the target's current HP percentage, the more DMG they receive. This DMG is \"Non-fatal.\"",
-          "type": "Debuff",
-          "effectName": "DoT",
-          "statusName": "Hastened Death",
-          "stackLimit": 1,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4487,6 +4470,11 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-289587260\">Monster_W4_Pollux_StoryMode_LockHP</a>",
+          "latentQueue": [
+            "_StorySimulationSpeed",
+            "AIFlag",
+            "StoryMode"
+          ],
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -4577,17 +4565,14 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_StorySimulationSpeed",
-            "AIFlag",
-            "StoryMode"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-720682465\">Monster_W4_Pollux_PartController_LockHP</a>",
+          "latentQueue": [
+            "_WorldLevel"
+          ],
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -4651,10 +4636,6 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_WorldLevel"
           ]
         },
         {
@@ -4690,6 +4671,18 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "RemoveWhenCasterUnstage"
           ],
+          "stackData": [
+            "_HpLimitRatio",
+            "_FatigueRatio"
+          ],
+          "latentQueue": [
+            "AIFlag",
+            "_WorldLevel"
+          ],
+          "description": "When this target deals DMG to enemy targets, decreases DMG received by enemy targets by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Restore HP to an ally target until it reaches <span class=\"descriptionNumberColor\">MDF_ShowValue2</span> to dispel this effect.",
+          "type": "Other",
+          "effectName": "DMG Reduction",
+          "statusName": "Indulging Slumber",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4922,19 +4915,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "_HpLimitRatio",
-            "_FatigueRatio"
-          ],
-          "latentQueue": [
-            "AIFlag",
-            "_WorldLevel"
-          ],
-          "description": "When this target deals DMG to enemy targets, decreases DMG received by enemy targets by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Restore HP to an ally target until it reaches <span class=\"descriptionNumberColor\">MDF_ShowValue2</span> to dispel this effect.",
-          "type": "Other",
-          "effectName": "DMG Reduction",
-          "statusName": "Indulging Slumber"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4943,6 +4924,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Endurance"
           ],
+          "description": "\"The Living Shan't Flee\" enhances to \"The Dead Shan't Avoid.\"",
+          "type": "Other",
+          "effectName": "Enhance",
+          "statusName": "Overdue Obituary",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5106,22 +5091,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "\"The Living Shan't Flee\" enhances to \"The Dead Shan't Avoid.\"",
-          "type": "Other",
-          "effectName": "Enhance",
-          "statusName": "Overdue Obituary"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__276281376\">Monster_W4_Pollux_Main_DisableAction</a>",
           "modifierFlags": [
             "DisableAction"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5129,7 +5106,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "DisableAction"
           ],
-          "stackData": [],
           "latentQueue": [
             "_WorldLevel"
           ],
@@ -5138,6 +5114,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-888665654\">Monster_W4_Pollux_Strengthen_Break</a>",
+          "latentQueue": [
+            "_WorldLevel"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5200,10 +5179,6 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "_WorldLevel"
           ]
         },
         {
@@ -6260,6 +6235,9 @@ const compositeAbilityObject = {
             "MuteBreak",
             "Endurance"
           ],
+          "description": "Before \"Pollux\" takes their next action, their Toughness cannot be reduced and is immune to action delay effects inflicted by targets.",
+          "type": "Other",
+          "statusName": "Weakness Protected",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -6318,10 +6296,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Before \"Pollux\" takes their next action, their Toughness cannot be reduced and is immune to action delay effects inflicted by targets.",
-          "type": "Other",
-          "statusName": "Weakness Protected"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6329,6 +6304,18 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "stackData": [
+            "MDF_ShowValue1",
+            "MDF_SpeedUpRatio"
+          ],
+          "latentQueue": [
+            "AIFlag",
+            "_WorldLevel"
+          ],
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Attacks against \"Pollux\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
+          "type": "Other",
+          "effectName": "Enhance",
+          "statusName": "Fragrance of Death",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -6386,19 +6373,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_71) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_71",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11925) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11925",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_71"
+                            "UnusedUnderThisBase_11925"
                           ]
                         },
                         "MDF_ShieldAttack_HealRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_69) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_69",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11953) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11953",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_69"
+                            "UnusedUnderThisBase_11953"
                           ]
                         }
                       }
@@ -6761,24 +6748,11 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Pre-Death [Owner]"
             }
-          ],
-          "stackData": [
-            "MDF_ShowValue1",
-            "MDF_SpeedUpRatio"
-          ],
-          "latentQueue": [
-            "AIFlag",
-            "_WorldLevel"
-          ],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Attacks against \"Pollux\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
-          "type": "Other",
-          "effectName": "Enhance",
-          "statusName": "Fragrance of Death"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2086497725\">Monster_W4_Pollux_EnergyBar</a>",
-          "stackData": [],
           "latentQueue": [
             "AIFlag",
             "StoryMode",
@@ -6788,7 +6762,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-977406110\">Monster_W4_Pollux_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]",
-          "stackData": [],
           "latentQueue": [
             "_WorldLevel",
             "AIFlag"
@@ -6799,13 +6772,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1924886096\">Monster_W4_Pollux_Ability03_Mark</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__599310144\">Monster_W4_Pollux_FX_Ground</a>",
+          "latentQueue": [
+            "StoryMode",
+            "_StorySetSpeed",
+            "_StorySimulationSpeed",
+            "IsNeedFade",
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -6835,14 +6813,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "StoryMode",
-            "_StorySetSpeed",
-            "_StorySimulationSpeed",
-            "IsNeedFade",
-            "AIFlag"
           ]
         }
       ],

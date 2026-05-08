@@ -3,255 +3,12 @@ const compositeAbilityObject = {
   "fullCharacterName": 4012010,
   "trimCharacterName": 4012010,
   "abilityList": [
+    "4012010_Monster_W4_Strongman_PassiveAbilityInitiate",
     "4012010_Monster_W4_Strongman_Ability01_Part02",
     "4012010_Monster_W4_Strongman_Ability01_Part01",
-    "4012010_Monster_W4_Strongman_PassiveAbilityInitiate",
-    "4012010_Monster_W4_Strongman_MainStory",
-    "4012010_Monster_W4_Strongman_MainStory_20411041_SpecialWin",
     "4012010_Modifiers"
   ],
   "abilityObject": {
-    "4012010_Monster_W4_Strongman_Ability01_Part02": {
-      "fileName": "4012010_Monster_W4_Strongman_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-            "compareType": ">=",
-            "value2": 1,
-            "valueType": "Layer"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-            "compareType": ">=",
-            "value2": 1,
-            "valueType": "Layer"
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Ability Target(ST)}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
-                    "invertCondition": true
-                  },
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Ability Target(ST)}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
-                    "invertCondition": true
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
-                  "duration": {
-                    "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                    "displayLines": "{[Skill01[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[2]]}"
-                    ]
-                  },
-                  "baseChance": {
-                    "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                    "displayLines": "{[Skill01[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[1]]}"
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_Shake_ActionDelayRatio": {
-                      "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                      "displayLines": "{[Skill01[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[3]]}"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"773544799\">Standard_Unstable_Monster</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
-                    "invertCondition": true
-                  },
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1822783917\">Standard_Shake_Monster</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
-                    "invertCondition": true
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"773544799\">Standard_Unstable_Monster</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
-                  "duration": {
-                    "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                    "displayLines": "{[Skill01[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill01[2]]}"
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_Shake_ActionDelayRatio": {
-                      "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                      "displayLines": "{[Skill01[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[3]]}"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4012010_Monster_W4_Strongman_Ability01_Part01": {
-      "fileName": "4012010_Monster_W4_Strongman_Ability01_Part01",
-      "childAbilityList": [
-        "4012010_Monster_W4_Strongman_Ability01_Camera",
-        "4012010_Monster_W4_Strongman_Ability01_Part01",
-        "4012010_Monster_W4_Strongman_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Strongman_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-            "compareType": ">=",
-            "value2": 1,
-            "valueType": "Layer"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "4012010_Monster_W4_Strongman_PassiveAbilityInitiate": {
       "fileName": "4012010_Monster_W4_Strongman_PassiveAbilityInitiate",
       "skillTrigger": "PassiveSkillInitiate",
@@ -508,14 +265,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
-    "4012010_Monster_W4_Strongman_MainStory": {
-      "fileName": "4012010_Monster_W4_Strongman_MainStory",
+    "4012010_Monster_W4_Strongman_Ability01_Part02": {
+      "fileName": "4012010_Monster_W4_Strongman_Ability01_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
@@ -523,159 +278,235 @@ const compositeAbilityObject = {
         {
           "name": "IF",
           "conditions": {
-            "name": "Enemy ID",
-            "ID": 401201000,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": null
+            "name": "Compare: Variable",
+            "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
+            "compareType": ">=",
+            "value2": 1,
+            "valueType": "Layer"
           },
           "passed": [
             {
-              "name": "Add Events/Bonuses",
-              "to": {
+              "name": "ATK Scaling DMG",
+              "target": {
                 "name": "Target Name",
-                "target": "{{Level Entity}}"
+                "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"790911426\">Enemy_W4_Strongman_MainStory_20411041_SpecialWin</a>"
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                  "displayLines": "{[Skill01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill01[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                  "displayLines": "{[Skill01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill01[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "EnergyGainPercent": "100%"
+              }
             }
           ]
         },
+        "Trigger: Attack End",
         {
           "name": "IF",
           "conditions": {
-            "name": "Enemy ID",
-            "ID": 401201000,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": null
+            "name": "Compare: Variable",
+            "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
+            "compareType": ">=",
+            "value2": 1,
+            "valueType": "Layer"
           },
           "passed": [
             {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"745728663\">Enemy_W4_Strongman_MainStory_20411041_CustomWaveInfo</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 401201020,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": null
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1702783112\">Enemy_W4_Strongman_MainStory_20411042_CustomString</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1702783112\">Enemy_W4_Strongman_MainStory_20411042_CustomString</a>",
-          "execute": [
-            {
-              "eventTrigger": "Attack DMG End [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
                     "target": {
                       "name": "Target Name",
-                      "target": "{{Parameter Target}}"
+                      "target": "{{Ability Target(ST)}}"
                     },
-                    "team": "Player Team"
+                    "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+                  "duration": {
+                    "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
+                    "displayLines": "{[Skill01[2]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill01[2]]}"
+                    ]
+                  },
+                  "baseChance": {
+                    "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+                    "displayLines": "{[Skill01[1]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill01[1]]}"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_Shake_ActionDelayRatio": {
+                      "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+                      "displayLines": "{[Skill01[3]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[3]]}"
+                      ]
+                    }
                   }
                 }
               ]
             }
           ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__790911426\">Enemy_W4_Strongman_MainStory_20411041_SpecialWin</a>",
-          "execute": [
+          "failed": [
             {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Ability",
-                  "abilityName": "Monster_W4_Strongman_MainStory_20411041_SpecialWin"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_W4_Strongman_MainStory_20411041_SpecialWin",
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"773544799\">Standard_Unstable_Monster</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+                    "invertCondition": true
                   },
-                  "priorityTag": "EnemyBattleCry",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__745728663\">Enemy_W4_Strongman_MainStory_20411041_CustomWaveInfo</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1822783917\">Standard_Shake_Monster</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "passed": [
                 {
-                  "name": "Set Custom Wave Info",
-                  "currentWave": 1,
-                  "maxWave": 1
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"773544799\">Standard_Unstable_Monster</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+                  "duration": {
+                    "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
+                    "displayLines": "{[Skill01[2]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill01[2]]}"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_Shake_ActionDelayRatio": {
+                      "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+                      "displayLines": "{[Skill01[3]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[3]]}"
+                      ]
+                    }
+                  }
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
     },
-    "4012010_Monster_W4_Strongman_MainStory_20411041_SpecialWin": {
-      "fileName": "4012010_Monster_W4_Strongman_MainStory_20411041_SpecialWin",
-      "abilityType": null,
+    "4012010_Monster_W4_Strongman_Ability01_Part01": {
+      "fileName": "4012010_Monster_W4_Strongman_Ability01_Part01",
+      "childAbilityList": [
+        "4012010_Monster_W4_Strongman_Ability01_Camera",
+        "4012010_Monster_W4_Strongman_Ability01_Part01",
+        "4012010_Monster_W4_Strongman_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
       "energy": null,
       "toughnessList": null,
-      "parse": [],
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Strongman_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
+            "compareType": ">=",
+            "value2": 1,
+            "valueType": "Layer"
+          }
+        }
+      ],
       "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       },
       "references": []
     },
@@ -698,6 +529,10 @@ const compositeAbilityObject = {
             "STAT_CTRL",
             "STAT_Stun_Effect"
           ],
+          "description": "Action delayed. Cannot take actions for a certain number of turns.",
+          "type": "Debuff",
+          "effectName": "Strong Reverberation",
+          "statusName": "Strong Reverberation",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -777,15 +612,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Action delayed. Cannot take actions for a certain number of turns.",
-          "type": "Debuff",
-          "effectName": "Strong Reverberation",
-          "statusName": "Strong Reverberation"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__773544799\">Standard_Unstable_Monster</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_Shake_ActionDelayRatio"
+          ],
+          "description": "After receiving an attack, enters \"Strong Reverberation,\" then dispels \"Reverberation.\"",
+          "type": "Debuff",
+          "effectName": "Reverberation",
+          "statusName": "Reverberation",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -816,16 +655,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_Shake_ActionDelayRatio"
-          ],
-          "latentQueue": [],
-          "description": "After receiving an attack, enters \"Strong Reverberation,\" then dispels \"Reverberation.\"",
-          "type": "Debuff",
-          "effectName": "Reverberation",
-          "statusName": "Reverberation"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -880,9 +710,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

@@ -79,6 +79,13 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
+      "stackData": [
+        "MDF_DefenceDownRatio"
+      ],
+      "description": "DEF -<span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>.",
+      "type": "Debuff",
+      "effectName": "DEF Reduction",
+      "statusName": "Exposed",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -103,15 +110,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DefenceDownRatio"
-      ],
-      "latentQueue": [],
-      "description": "DEF -<span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>.",
-      "type": "Debuff",
-      "effectName": "DEF Reduction",
-      "statusName": "Exposed"
+      ]
     }
   ],
   "targetObjectData": {

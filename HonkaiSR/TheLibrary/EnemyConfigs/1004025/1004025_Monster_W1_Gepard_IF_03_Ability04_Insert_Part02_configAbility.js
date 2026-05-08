@@ -253,6 +253,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-691800003\">Monster_W1_Gepard_IF_03_Toast</a>",
+      "latentQueue": [
+        "ReturnAttackCounter",
+        "PhaseFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -278,11 +282,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "ReturnAttackCounter",
-        "PhaseFlag"
       ]
     }
   ]

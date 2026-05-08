@@ -77,6 +77,29 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1078632093\">Aglaea_Passive</a>",
       "stackType": "ReplaceByCaster",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "entityType": "Servant",
+        "entityID": 11402,
+        "skillType": [
+          "Skill"
+        ],
+        "conditions": {
+          "name": "Compare: Target Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Memosprite}}"
+          },
+          "compareType": "<=",
+          "value2": 0,
+          "livingTargets": true
+        },
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": -1
+        }
+      },
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -204,32 +227,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "entityType": "Servant",
-        "entityID": 11402,
-        "skillType": [
-          "Skill"
-        ],
-        "conditions": {
-          "name": "Compare: Target Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Memosprite}}"
-          },
-          "compareType": "<=",
-          "value2": 0,
-          "livingTargets": true
-        },
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": -1
-        }
-      }
+      ]
     }
   ],
   "targetObjectData": {

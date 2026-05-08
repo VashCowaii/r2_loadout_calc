@@ -140,25 +140,27 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2009182373\">LC_23035_Sub</a>[<span class=\"descriptionNumberColor\">Charring</span>]",
           "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
           "stackData": [
             "MDF_PropertyValue1",
             "MDF_PropertyValue2"
           ],
-          "latentQueue": [],
           "description": "Each stack increases the Break DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyValue1</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> time(s).",
           "type": "Debuff",
           "effectName": "Charring",
-          "statusName": "Charring"
+          "statusName": "Charring",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__833308356\">LC_23035_BreakDebuff</a>",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue1"
+          ],
           "execute": [
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -286,11 +288,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue1"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -504,9 +502,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

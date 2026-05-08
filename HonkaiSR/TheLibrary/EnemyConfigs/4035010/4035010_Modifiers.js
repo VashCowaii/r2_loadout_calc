@@ -40,9 +40,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -118,9 +116,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -941,13 +937,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1626881642\">Enemy_W4_IronTombCore_Main_P3_AvatarDamageAdded</a>[<span class=\"descriptionNumberColor\">Chronicled \"Love\"</span>]",
+      "description": "Cyrene's \"Love\" greatly increases DMG dealt by the target.",
+      "type": "Buff",
+      "statusName": "Chronicled \"Love\"",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -972,14 +969,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Cyrene's \"Love\" greatly increases DMG dealt by the target.",
-      "type": "Buff",
-      "statusName": "Chronicled \"Love\""
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1529513281\">Enemy_W4_IronTombCore_Main_P3_AvatarDamageAdded_Listener</a>",
+      "latentQueue": [
+        "_IsWeek",
+        "_PhaseCheck",
+        "_Trigger1",
+        "_Trigger2"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1042,18 +1042,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_IsWeek",
-        "_PhaseCheck",
-        "_Trigger1",
-        "_Trigger2"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-470333037\">Enemy_W4_IronTombCore_Main_P3_HpRatioAdded</a>",
+      "latentQueue": [
+        "_IsWeek",
+        "_PhaseCheck",
+        "_Trigger1",
+        "_Trigger2",
+        "AIFlag",
+        "_WorldLevel"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1080,21 +1081,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_IsWeek",
-        "_PhaseCheck",
-        "_Trigger1",
-        "_Trigger2",
-        "AIFlag",
-        "_WorldLevel"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2081954099\">Enemy_W4_IronTombCore_BlackBlood</a>[<span class=\"descriptionNumberColor\">Descent into Chaos</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Maximum Restorable HP and Maximum Recoverable Skill Points are reduced. This effect can be weakened when \"Amphorean Hatred\" decreases.",
+      "type": "Debuff",
+      "statusName": "Descent into Chaos",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1117,16 +1112,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Maximum Restorable HP and Maximum Recoverable Skill Points are reduced. This effect can be weakened when \"Amphorean Hatred\" decreases.",
-      "type": "Debuff",
-      "statusName": "Descent into Chaos"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-453954106\">Enemy_W4_IronTombCorePart_DamageTransfer</a>[<span class=\"descriptionNumberColor\">Damage Resonance</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "When the target takes damage, \"Anti-Creator\" will also take the same damage.",
       "type": "Other",
       "statusName": "Damage Resonance"
@@ -1140,6 +1130,15 @@ const configAbility = {
         "STAT_CTRL",
         "DisableAction"
       ],
+      "useEntitySnapshot": true,
+      "stackData": [
+        "MDF_SPConvert",
+        "MDF_ActionDelayConvert"
+      ],
+      "description": "This target's action value will not change because of the end of any target's turn. This target can reduce the \"Unlock Value\" through action advance effects or Energy regeneration. When the \"Unlock Value\" is depleted, this state will be dispelled.",
+      "type": "Debuff",
+      "effectName": "Action Lock",
+      "statusName": "Action Lock",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1509,17 +1508,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_SPConvert",
-        "MDF_ActionDelayConvert"
-      ],
-      "latentQueue": [],
-      "description": "This target's action value will not change because of the end of any target's turn. This target can reduce the \"Unlock Value\" through action advance effects or Energy regeneration. When the \"Unlock Value\" is depleted, this state will be dispelled.",
-      "type": "Debuff",
-      "effectName": "Action Lock",
-      "statusName": "Action Lock"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1535,15 +1524,11 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-827834429\">MModifier_W4_IronTombCore_TimeLock_UIEff</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-827834429\">MModifier_W4_IronTombCore_TimeLock_UIEff</a>"
     },
     {
       "name": "Modifier Construction",
@@ -1579,9 +1564,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1623,6 +1606,37 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1914142012\">MModifier_W4_IronTombCore_BlackBP</a>",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_BPMaxCost",
+        "MDF_DirtyHPRatio_PerLayer"
+      ],
+      "latentQueue": [
+        "_PhaseLock",
+        "#PassiveSkill01_P3_Percentage",
+        "#PassiveSkill01_P2_Percentage",
+        "#PassiveSkill01_P1_Percentage"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2081954099\">Enemy_W4_IronTombCore_BlackBlood</a>[<span class=\"descriptionNumberColor\">Descent into Chaos</span>]",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_DirtyHPRatio": {
+              "operator": "Variables[0] (MDF_DirtyHPRatio_PerLayer) || RETURN",
+              "displayLines": "MDF_DirtyHPRatio_PerLayer",
+              "constants": [],
+              "variables": [
+                "MDF_DirtyHPRatio_PerLayer"
+              ]
+            }
+          }
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1724,37 +1738,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [
-        "MDF_BPMaxCost",
-        "MDF_DirtyHPRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "_PhaseLock",
-        "#PassiveSkill01_P3_Percentage",
-        "#PassiveSkill01_P2_Percentage",
-        "#PassiveSkill01_P1_Percentage"
-      ],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2081954099\">Enemy_W4_IronTombCore_BlackBlood</a>[<span class=\"descriptionNumberColor\">Descent into Chaos</span>]",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_DirtyHPRatio": {
-              "operator": "Variables[0] (MDF_DirtyHPRatio_PerLayer) || RETURN",
-              "displayLines": "MDF_DirtyHPRatio_PerLayer",
-              "constants": [],
-              "variables": [
-                "MDF_DirtyHPRatio_PerLayer"
-              ]
-            }
-          }
         }
       ]
     },
@@ -1970,18 +1953,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1381137894\">MModifier_W4_IronTombCore_Ability07_MuteBreak</a>",
       "modifierFlags": [
         "MuteBreak"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2014,9 +1993,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2024,6 +2001,9 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
+      "description": "\"Anti-Creator\" enters Charging state, and will use \"Immolate the Heavens, Abandon the World\" in the next action. Dispel the Charging state by dealing a killing blow to \"Mythos\" and \"Logos.\"",
+      "type": "Other",
+      "statusName": "Resist and Destroy",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2221,12 +2201,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "\"Anti-Creator\" enters Charging state, and will use \"Immolate the Heavens, Abandon the World\" in the next action. Dispel the Charging state by dealing a killing blow to \"Mythos\" and \"Logos.\"",
-      "type": "Other",
-      "statusName": "Resist and Destroy"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2238,6 +2213,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2078801645\">Enemy_W4_IronTombCorePart_Break</a>[<span class=\"descriptionNumberColor\">Grave Wound</span>]",
+      "description": "Target cannot take action.",
+      "type": "Other",
+      "effectName": "Grave Wound",
+      "statusName": "Grave Wound",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2341,11 +2320,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Target cannot take action.",
-      "type": "Other",
-      "effectName": "Grave Wound",
-      "statusName": "Grave Wound"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2851,6 +2826,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2029275245\">Enemy_W4_IronTombCore_P3_PartController</a>",
+      "latentQueue": [
+        "_PhaseCheck",
+        "InsertCheck",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -2909,12 +2889,6 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_PhaseCheck",
-        "InsertCheck",
-        "AIFlag"
       ]
     },
     {
@@ -2978,9 +2952,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3041,11 +3013,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "_Skill08_DamagePercentage",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_30) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_30",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11396) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11396",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_30"
+                      "UnusedUnderThisBase_11396"
                     ]
                   }
                 }
@@ -3432,9 +3404,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3443,9 +3413,7 @@ const configAbility = {
         {
           "eventTrigger": "Turn [Pre-action Phase]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

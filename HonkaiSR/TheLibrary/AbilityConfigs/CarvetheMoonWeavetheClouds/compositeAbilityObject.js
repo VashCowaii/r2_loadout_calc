@@ -27,6 +27,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-182810700\">LC_21032_Bonus3</a>[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
           "stackType": "ReplaceByCasterOrUnStack",
+          "description": "Increases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">#SkillEquip_P3_SPRatio</span>.",
+          "type": "Buff",
+          "effectName": "Energy Regeneration Rate Boost",
+          "statusName": "Energy Regeneration Rate Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -49,16 +53,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">#SkillEquip_P3_SPRatio</span>.",
-          "type": "Buff",
-          "effectName": "Energy Regeneration Rate Boost",
-          "statusName": "Energy Regeneration Rate Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-166033081\">LC_21032_Bonus2</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
           "stackType": "ReplaceByCasterOrUnStack",
+          "description": "CRIT DMG +<span class=\"descriptionNumberColor\">#SkillEquip_P2_CriticalDamage</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "CRIT DMG Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -81,16 +85,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG +<span class=\"descriptionNumberColor\">#SkillEquip_P2_CriticalDamage</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "CRIT DMG Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-149255462\">LC_21032_Bonus1</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCasterOrUnStack",
+          "description": "ATK +<span class=\"descriptionNumberColor\">#SkillEquip_P1_AttackAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "ATK Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -113,11 +117,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "ATK +<span class=\"descriptionNumberColor\">#SkillEquip_P1_AttackAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "ATK Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -305,9 +305,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -401,9 +399,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -519,9 +515,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

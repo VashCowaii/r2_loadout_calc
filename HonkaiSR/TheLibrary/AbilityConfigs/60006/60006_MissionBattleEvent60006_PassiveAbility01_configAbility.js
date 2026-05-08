@@ -84,15 +84,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1018498779\">MissionBattleEvent60006_Charge</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
+      ],
+      "stackData": [
+        "MDF_SPValue"
       ],
       "execute": [
         {
@@ -142,11 +143,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SPValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -220,9 +217,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

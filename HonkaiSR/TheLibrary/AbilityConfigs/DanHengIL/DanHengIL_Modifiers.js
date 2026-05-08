@@ -10,6 +10,37 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__983817284\">M_ADV_Maze_DanHengIL_StopSprintFlag</a>",
+      "counter": 1,
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__888002889\">ADV_Modifier_Maze_DanHengIL_HolyShield</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "HolyShield"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-748629763\">ADV_Modifier_Maze_DanHengIL</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "duration": 20,
+      "onStageExit": [
+        "Modifier Deletes Itself"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1981106226\">ADV_StageAbility_Maze_DanHengIL</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-807307973\">DanHengIL_CancelCamera</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
@@ -53,6 +84,12 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-330148584\">DanHengIL_Eidolon6_ImaginaryPenetrate</a>[<span class=\"descriptionNumberColor\">Reign, Returned</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increase Imaginary RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> for this character's next Fulgurant Leap attack.",
+      "type": "Buff",
+      "effectName": "Imaginary RES PEN",
+      "statusName": "Reign, Returned",
+      "stackLimit": 3,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -108,13 +145,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increase Imaginary RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> for this character's next Fulgurant Leap attack.",
-      "type": "Buff",
-      "effectName": "Imaginary RES PEN",
-      "statusName": "Reign, Returned",
-      "stackLimit": 3,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -188,9 +219,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -286,14 +315,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1955464894\">DanHengIL_Ability02_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Outroar</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases CRIT DMG dealt by <span class=\"descriptionNumberColor\">MDF_AddCriticalDamage</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
+      "type": "Buff",
+      "statusName": "Outroar",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -327,33 +358,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AddCriticalDamage",
-        "MDF_MaxLayer"
-      ],
-      "latentQueue": [],
-      "description": "Each stack increases CRIT DMG dealt by <span class=\"descriptionNumberColor\">MDF_AddCriticalDamage</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
-      "type": "Buff",
-      "statusName": "Outroar",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+      "description": "Can be used to offset Dan Heng • Imbibitor Lunae's consumption of skill points. A maximum of <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> Squama Sacrosancta can be possessed at any given time. Consuming Squama Sacrosancta is considered equivalent to consuming Skill Points.",
+      "type": "Other",
+      "statusName": "Squama Sacrosancta",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [
-        "MDF_BPExChange",
-        "MDF_MaxLayer"
-      ],
-      "latentQueue": [],
-      "description": "Can be used to offset Dan Heng • Imbibitor Lunae's consumption of skill points. A maximum of <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> Squama Sacrosancta can be possessed at any given time. Consuming Squama Sacrosancta is considered equivalent to consuming Skill Points.",
-      "type": "Other",
-      "statusName": "Squama Sacrosancta"
+      ]
     }
   ],
   "references": []

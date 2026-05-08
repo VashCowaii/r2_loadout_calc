@@ -27,6 +27,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-579247332\">M_Luocha_Trace03</a>",
+      "stackData": [
+        "MDF_Resistance"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -49,11 +52,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Resistance"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

@@ -23,6 +23,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1848268909\">Enemy_W2_Xuanlu_02_Counter_RL</a>[<span class=\"descriptionNumberColor\">Retaliation</span>]",
       "stackType": "Replace",
+      "description": "When attacked by an enemy, deals DMG to that enemy.",
+      "type": "Buff",
+      "effectName": "Counter",
+      "statusName": "Retaliation",
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -151,13 +155,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "When attacked by an enemy, deals DMG to that enemy.",
-      "type": "Buff",
-      "effectName": "Counter",
-      "statusName": "Retaliation"
+      ]
     }
   ]
 }

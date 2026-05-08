@@ -179,6 +179,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1100856476\">Memosprite_CastoriceServant_StandByOnPhase2</a>",
+      "latentQueue": [
+        "CastoriceServant_ReadyFlag"
+      ],
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -209,12 +213,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "CastoriceServant_ReadyFlag"
-      ],
-      "duration": 1
+      ]
     }
   ],
   "targetObjectData": {

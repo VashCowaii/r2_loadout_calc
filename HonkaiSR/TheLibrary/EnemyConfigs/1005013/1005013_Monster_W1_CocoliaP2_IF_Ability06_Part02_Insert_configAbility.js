@@ -178,11 +178,11 @@ const configAbility = {
                 ]
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_144) || RETURN",
-                "displayLines": "UnusedUnderThisBase_144",
+                "operator": "Variables[0] (UnusedUnderThisBase_7761) || RETURN",
+                "displayLines": "UnusedUnderThisBase_7761",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_144"
+                  "UnusedUnderThisBase_7761"
                 ]
               },
               "valuePerStack": {
@@ -223,11 +223,11 @@ const configAbility = {
                 ]
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_145) || RETURN",
-                "displayLines": "UnusedUnderThisBase_145",
+                "operator": "Variables[0] (UnusedUnderThisBase_7750) || RETURN",
+                "displayLines": "UnusedUnderThisBase_7750",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_145"
+                  "UnusedUnderThisBase_7750"
                 ]
               },
               "valuePerStack": {
@@ -268,11 +268,11 @@ const configAbility = {
                 ]
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_146) || RETURN",
-                "displayLines": "UnusedUnderThisBase_146",
+                "operator": "Variables[0] (UnusedUnderThisBase_7762) || RETURN",
+                "displayLines": "UnusedUnderThisBase_7762",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_146"
+                  "UnusedUnderThisBase_7762"
                 ]
               },
               "valuePerStack": {
@@ -313,11 +313,11 @@ const configAbility = {
                 ]
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_147) || RETURN",
-                "displayLines": "UnusedUnderThisBase_147",
+                "operator": "Variables[0] (UnusedUnderThisBase_7763) || RETURN",
+                "displayLines": "UnusedUnderThisBase_7763",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_147"
+                  "UnusedUnderThisBase_7763"
                 ]
               },
               "valuePerStack": {

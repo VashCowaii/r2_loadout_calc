@@ -19,6 +19,9 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__202295497\">Klara_Eidolon4_DamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "DMG Mitigation",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -41,10 +44,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "DMG Mitigation"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -75,9 +75,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

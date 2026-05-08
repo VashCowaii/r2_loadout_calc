@@ -179,6 +179,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1395014383\">Moze_Ability03_DamageAddModifier</a>[<span class=\"descriptionNumberColor\">Heathprowler</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_DamageAddRatio"
+      ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageAddRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Heathprowler",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -201,19 +208,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageAddRatio"
-      ],
-      "latentQueue": [],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageAddRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Heathprowler"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1536415722\">M_Moze_Ultimate_AddRegardAsAttackType</a>",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -256,8 +256,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "duration": 1
+      ]
     }
   ],
   "targetObjectData": {

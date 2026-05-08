@@ -114,14 +114,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__999661832\">M_MissionBattleEvent60022_AddDamage</a>[<span class=\"descriptionNumberColor\">Blood of \"Strife\"</span>]",
       "stackType": "Replace",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">_DamageRatio</span>.",
+      "type": "Buff",
+      "effectName": "Blood of \"Strife\"",
+      "statusName": "Blood of \"Strife\"",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -189,13 +191,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">_DamageRatio</span>.",
-      "type": "Buff",
-      "effectName": "Blood of \"Strife\"",
-      "statusName": "Blood of \"Strife\""
+      ]
     }
   ],
   "references": []

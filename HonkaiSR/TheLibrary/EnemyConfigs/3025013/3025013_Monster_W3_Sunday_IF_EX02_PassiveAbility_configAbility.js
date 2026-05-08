@@ -35,6 +35,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__901570774\">Monster_W3_SundayPart_IF_EX02_DamageTaken</a>[<span class=\"descriptionNumberColor\">Shattered Illusion</span>]",
+      "description": "\"Echo of Faded Dreams\" takes <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> increased DMG. This effect is dispelled when Cacophonic Conductor recovers from a Weakness Break.",
+      "type": "Other",
+      "statusName": "Shattered Illusion",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -57,14 +60,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "\"Echo of Faded Dreams\" takes <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> increased DMG. This effect is dispelled when Cacophonic Conductor recovers from a Weakness Break.",
-      "type": "Other",
-      "statusName": "Shattered Illusion"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__606317793\">Monster_W3_SundayPart_IF_EX02_DamageReduce</a>[<span class=\"descriptionNumberColor\">Rhythm Without End</span>]",
+      "description": "\"Echo of Faded Dreams\" takes <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> less DMG. This effect is dispelled when Cacophonic Conductor becomes Weakness Broken.",
+      "type": "Other",
+      "statusName": "Rhythm Without End",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -87,10 +90,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "\"Echo of Faded Dreams\" takes <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> less DMG. This effect is dispelled when Cacophonic Conductor becomes Weakness Broken.",
-      "type": "Other",
-      "statusName": "Rhythm Without End"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -253,9 +253,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

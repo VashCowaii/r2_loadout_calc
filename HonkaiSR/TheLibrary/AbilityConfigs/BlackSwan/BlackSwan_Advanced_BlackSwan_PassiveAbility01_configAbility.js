@@ -167,9 +167,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -212,6 +210,18 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__969774839\">M_Advanced_BlackSwan_P01_ListenAddPoison</a>",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1015025143\">M_Advanced_BlackSwan_P01_ListenAddPoison_SubOnEnemy</a>",
+          "aliveOnly": "False",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking Modifier Instance [Anyone]",
@@ -245,20 +255,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1015025143\">M_Advanced_BlackSwan_P01_ListenAddPoison_SubOnEnemy</a>",
-          "aliveOnly": "False",
-          "haloStatus": true
         }
       ]
     }

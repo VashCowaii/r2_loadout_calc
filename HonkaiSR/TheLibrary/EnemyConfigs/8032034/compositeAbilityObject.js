@@ -3,6 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": 8032034,
   "trimCharacterName": 8032034,
   "abilityList": [
+    "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_ForceKill_Insert_Part02",
+    "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_ForceKill_Insert",
+    "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert_Part02",
+    "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert",
+    "8032034_Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert_Part02",
+    "8032034_Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert",
+    "8032034_Monster_W3_AventurinePart_01_IF_Passive01",
     "8032034_Monster_W3_AventurinePart_Ability04_Part02",
     "8032034_Monster_W3_AventurinePart_Ability04_Part01",
     "8032034_Monster_W3_AventurinePart_Ability03_Part02",
@@ -11,20 +18,797 @@ const compositeAbilityObject = {
     "8032034_Monster_W3_AventurinePart_Ability02_Part01",
     "8032034_Monster_W3_AventurinePart_Ability01_Part02",
     "8032034_Monster_W3_AventurinePart_Ability01_Part01",
-    "8032034_Monster_W3_AventurinePart_Passive01",
-    "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_ForceKill_Insert_Part02",
-    "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_ForceKill_Insert",
-    "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert_Part02",
-    "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert",
-    "8032034_Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert_Part02",
-    "8032034_Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert",
-    "8032034_Monster_W3_AventurinePart_IF_AbilityEX04",
-    "8032034_Monster_W3_AventurinePart_IF_AbilityEX03",
-    "8032034_Monster_W3_AventurinePart_01_IF_Passive01",
-    "8032034_Monster_W3_AventurinePart_IF_Passive01",
     "8032034_Modifiers"
   ],
   "abilityObject": {
+    "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_ForceKill_Insert_Part02": {
+      "fileName": "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_ForceKill_Insert_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-43533344\">Enemy_W3_Aventurine_IF_Double</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"499818287\">Enemy_W3_AventurinePart_01_IF_DeathRattle</a>"
+        },
+        {
+          "name": "Mark Entity For Immediate Death"
+        },
+        {
+          "name": "Force Entity Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Summoner}}"
+            },
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster's Summoner}}"
+                },
+                "value1": "SummonCountNumber",
+                "compareType": ">=",
+                "value2": 7
+              },
+              "failed": [
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_W3_Aventurine_IF_AbilityP01_InsertAbility02_Part01",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "priorityTag": "EnemyReviveOthers",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Summoner}}"
+            },
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 2
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster's Summoner}}"
+                },
+                "value1": "SummonCountNumber",
+                "compareType": ">=",
+                "value2": 10
+              },
+              "failed": [
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_W3_Aventurine_IF_AbilityP01_InsertAbility02_Part01",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "priorityTag": "EnemyReviveOthers",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_ForceKill_Insert": {
+      "fileName": "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_ForceKill_Insert",
+      "childAbilityList": [
+        "8032034_Monster_W3_AventurinePart_Ability01_Camera",
+        "8032034_Monster_W3_AventurinePart_Ability01_Part01",
+        "8032034_Monster_W3_AventurinePart_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_AventurinePart_01_IF_AbilityP01_ForceKill_Insert_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert_Part02": {
+      "fileName": "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-43533344\">Enemy_W3_Aventurine_IF_Double</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Summoner}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"280539715\">Enemy_W3_Aventurine_IF_Defence_Protect</a>[<span class=\"descriptionNumberColor\">House Advantage (II)</span>]"
+          },
+          "passed": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"280539715\">Enemy_W3_Aventurine_IF_Defence_Protect</a>[<span class=\"descriptionNumberColor\">House Advantage (II)</span>]"
+            },
+            {
+              "name": "Deal Toughness DMG",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[0]]}"
+                ]
+              },
+              "attacker": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "defender": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "forceReduction": true,
+              "canDelay": true,
+              "ToughnessDMGType": "Imaginary"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"280539715\">Enemy_W3_Aventurine_IF_Defence_Protect</a>[<span class=\"descriptionNumberColor\">House Advantage (II)</span>]"
+            }
+          ],
+          "failed": [
+            {
+              "name": "Deal Toughness DMG",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[0]]}"
+                ]
+              },
+              "attacker": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "defender": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "forceReduction": true,
+              "canDelay": true,
+              "ToughnessDMGType": "Imaginary"
+            }
+          ]
+        },
+        {
+          "name": "Consume",
+          "consumeFrom": "MaxHP",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Summoner}}"
+          },
+          "sourceTarget": {
+            "name": "Target Name",
+            "target": "{{Caster's Summoner}}"
+          },
+          "consumePercent": {
+            "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+            "displayLines": "{[PassiveSkill01[1]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill01[1]]}"
+            ]
+          },
+          "consumeFloor": 1
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-769919494\">Enemy_W3_Aventurine_IF_Score_Light_Add</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-769919494\">Enemy_W3_Aventurine_IF_Score_Light_Add</a>",
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (W3_Aventurine_00_IF_Score_Light) || RETURN",
+            "displayLines": "W3_Aventurine_00_IF_Score_Light",
+            "constants": [],
+            "variables": [
+              "W3_Aventurine_00_IF_Score_Light"
+            ]
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"197888775\">Enemy_W3_Aventurine_IF_Score_Light_Display</a>",
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (W3_Aventurine_00_IF_Score_Light) || RETURN",
+            "displayLines": "W3_Aventurine_00_IF_Score_Light",
+            "constants": [],
+            "variables": [
+              "W3_Aventurine_00_IF_Score_Light"
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Summoner}}"
+            },
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster's Summoner}}"
+                },
+                "value1": "SummonCountNumber",
+                "compareType": ">=",
+                "value2": 7
+              },
+              "failed": [
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_W3_Aventurine_IF_AbilityP01_InsertAbility02_Part01",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "priorityTag": "EnemyReviveOthers",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Summoner}}"
+            },
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 2
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster's Summoner}}"
+                },
+                "value1": "SummonCountNumber",
+                "compareType": ">=",
+                "value2": 10
+              },
+              "failed": [
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_W3_Aventurine_IF_AbilityP01_InsertAbility02_Part01",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "priorityTag": "EnemyReviveOthers",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert": {
+      "fileName": "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Double Bet"
+        },
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Summoner}}"
+          },
+          "ability": "Monster_W3_Aventurine_IF_AbilityP01_Formation",
+          "isTrigger": true
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8032034_Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert_Part02": {
+      "fileName": "8032034_Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1592277974\">Enemy_W3_Aventurine_IF_Score_Dark</a>[<span class=\"descriptionNumberColor\">House Points</span>]"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Summoner}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"280539715\">Enemy_W3_Aventurine_IF_Defence_Protect</a>[<span class=\"descriptionNumberColor\">House Advantage (II)</span>]"
+          },
+          "passed": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"280539715\">Enemy_W3_Aventurine_IF_Defence_Protect</a>[<span class=\"descriptionNumberColor\">House Advantage (II)</span>]"
+            },
+            {
+              "name": "Deal Toughness DMG",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[0]]}"
+                ]
+              },
+              "attacker": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "defender": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "forceReduction": true,
+              "canDelay": true,
+              "ToughnessDMGType": "Imaginary"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"280539715\">Enemy_W3_Aventurine_IF_Defence_Protect</a>[<span class=\"descriptionNumberColor\">House Advantage (II)</span>]"
+            }
+          ],
+          "failed": [
+            {
+              "name": "Deal Toughness DMG",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[0]]}"
+                ]
+              },
+              "attacker": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "defender": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "forceReduction": true,
+              "canDelay": true,
+              "ToughnessDMGType": "Imaginary"
+            }
+          ]
+        },
+        {
+          "name": "Consume",
+          "consumeFrom": "MaxHP",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Summoner}}"
+          },
+          "sourceTarget": {
+            "name": "Target Name",
+            "target": "{{Caster's Summoner}}"
+          },
+          "consumePercent": {
+            "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+            "displayLines": "{[PassiveSkill01[1]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill01[1]]}"
+            ]
+          },
+          "consumeFloor": 1
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-769919494\">Enemy_W3_Aventurine_IF_Score_Light_Add</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-769919494\">Enemy_W3_Aventurine_IF_Score_Light_Add</a>",
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (W3_Aventurine_00_IF_Score) || RETURN",
+            "displayLines": "W3_Aventurine_00_IF_Score",
+            "constants": [],
+            "variables": [
+              "W3_Aventurine_00_IF_Score"
+            ]
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"197888775\">Enemy_W3_Aventurine_IF_Score_Light_Display</a>",
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (W3_Aventurine_00_IF_Score) || RETURN",
+            "displayLines": "W3_Aventurine_00_IF_Score",
+            "constants": [],
+            "variables": [
+              "W3_Aventurine_00_IF_Score"
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Summoner}}"
+            },
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster's Summoner}}"
+                },
+                "value1": "SummonCountNumber",
+                "compareType": ">=",
+                "value2": 7
+              },
+              "failed": [
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_W3_Aventurine_IF_AbilityP01_InsertAbility02_Part01",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "priorityTag": "EnemyReviveOthers",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Summoner}}"
+            },
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 2
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster's Summoner}}"
+                },
+                "value1": "SummonCountNumber",
+                "compareType": ">=",
+                "value2": 10
+              },
+              "failed": [
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_W3_Aventurine_IF_AbilityP01_InsertAbility02_Part01",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "priorityTag": "EnemyReviveOthers",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "8032034_Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert": {
+      "fileName": "8032034_Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Bet"
+        },
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Summoner}}"
+          },
+          "ability": "Monster_W3_Aventurine_IF_AbilityP01_Formation",
+          "isTrigger": true
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8032034_Monster_W3_AventurinePart_01_IF_Passive01": {
+      "fileName": "8032034_Monster_W3_AventurinePart_01_IF_Passive01",
+      "childAbilityList": [
+        "8032034_Monster_W3_AventurinePart_01_IF_Passive01"
+      ],
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-43533344\">Enemy_W3_Aventurine_IF_Double</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"499818287\">Enemy_W3_AventurinePart_01_IF_DeathRattle</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "8032034_Monster_W3_AventurinePart_Ability04_Part02": {
       "fileName": "8032034_Monster_W3_AventurinePart_Ability04_Part02",
       "abilityType": null,
@@ -903,876 +1687,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "8032034_Monster_W3_AventurinePart_Passive01": {
-      "fileName": "8032034_Monster_W3_AventurinePart_Passive01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"126188110\">Monster_W3_AventurinePart_SpeedZero</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_ForceKill_Insert_Part02": {
-      "fileName": "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_ForceKill_Insert_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-43533344\">Enemy_W3_Aventurine_IF_Double</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"499818287\">Enemy_W3_AventurinePart_01_IF_DeathRattle</a>"
-        },
-        {
-          "name": "Mark Entity For Immediate Death"
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster's Summoner}}"
-                },
-                "value1": "SummonCountNumber",
-                "compareType": ">=",
-                "value2": 7
-              },
-              "failed": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_W3_Aventurine_IF_AbilityP01_InsertAbility02_Part01",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "priorityTag": "EnemyReviveOthers",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster's Summoner}}"
-                },
-                "value1": "SummonCountNumber",
-                "compareType": ">=",
-                "value2": 10
-              },
-              "failed": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_W3_Aventurine_IF_AbilityP01_InsertAbility02_Part01",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "priorityTag": "EnemyReviveOthers",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_ForceKill_Insert": {
-      "fileName": "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_ForceKill_Insert",
-      "childAbilityList": [
-        "8032034_Monster_W3_AventurinePart_Ability01_Camera",
-        "8032034_Monster_W3_AventurinePart_Ability01_Part01",
-        "8032034_Monster_W3_AventurinePart_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_AventurinePart_01_IF_AbilityP01_ForceKill_Insert_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert_Part02": {
-      "fileName": "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-43533344\">Enemy_W3_Aventurine_IF_Double</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"280539715\">Enemy_W3_Aventurine_IF_Defence_Protect</a>[<span class=\"descriptionNumberColor\">House Advantage (II)</span>]"
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"280539715\">Enemy_W3_Aventurine_IF_Defence_Protect</a>[<span class=\"descriptionNumberColor\">House Advantage (II)</span>]"
-            },
-            {
-              "name": "Deal Toughness DMG",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
-              },
-              "attacker": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "defender": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "forceReduction": true,
-              "canDelay": true,
-              "ToughnessDMGType": "Imaginary"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"280539715\">Enemy_W3_Aventurine_IF_Defence_Protect</a>[<span class=\"descriptionNumberColor\">House Advantage (II)</span>]"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Deal Toughness DMG",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
-              },
-              "attacker": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "defender": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "forceReduction": true,
-              "canDelay": true,
-              "ToughnessDMGType": "Imaginary"
-            }
-          ]
-        },
-        {
-          "name": "Consume",
-          "consumeFrom": "MaxHP",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "sourceTarget": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "consumePercent": {
-            "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[1]]}"
-            ]
-          },
-          "consumeFloor": 1
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-769919494\">Enemy_W3_Aventurine_IF_Score_Light_Add</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-769919494\">Enemy_W3_Aventurine_IF_Score_Light_Add</a>",
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (W3_Aventurine_00_IF_Score_Light) || RETURN",
-            "displayLines": "W3_Aventurine_00_IF_Score_Light",
-            "constants": [],
-            "variables": [
-              "W3_Aventurine_00_IF_Score_Light"
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"197888775\">Enemy_W3_Aventurine_IF_Score_Light_Display</a>",
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (W3_Aventurine_00_IF_Score_Light) || RETURN",
-            "displayLines": "W3_Aventurine_00_IF_Score_Light",
-            "constants": [],
-            "variables": [
-              "W3_Aventurine_00_IF_Score_Light"
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster's Summoner}}"
-                },
-                "value1": "SummonCountNumber",
-                "compareType": ">=",
-                "value2": 7
-              },
-              "failed": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_W3_Aventurine_IF_AbilityP01_InsertAbility02_Part01",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "priorityTag": "EnemyReviveOthers",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster's Summoner}}"
-                },
-                "value1": "SummonCountNumber",
-                "compareType": ">=",
-                "value2": 10
-              },
-              "failed": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_W3_Aventurine_IF_AbilityP01_InsertAbility02_Part01",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "priorityTag": "EnemyReviveOthers",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert": {
-      "fileName": "8032034_Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Double Bet"
-        },
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "ability": "Monster_W3_Aventurine_IF_AbilityP01_Formation",
-          "isTrigger": true
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8032034_Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert_Part02": {
-      "fileName": "8032034_Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1592277974\">Enemy_W3_Aventurine_IF_Score_Dark</a>[<span class=\"descriptionNumberColor\">House Points</span>]"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"280539715\">Enemy_W3_Aventurine_IF_Defence_Protect</a>[<span class=\"descriptionNumberColor\">House Advantage (II)</span>]"
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"280539715\">Enemy_W3_Aventurine_IF_Defence_Protect</a>[<span class=\"descriptionNumberColor\">House Advantage (II)</span>]"
-            },
-            {
-              "name": "Deal Toughness DMG",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
-              },
-              "attacker": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "defender": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "forceReduction": true,
-              "canDelay": true,
-              "ToughnessDMGType": "Imaginary"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"280539715\">Enemy_W3_Aventurine_IF_Defence_Protect</a>[<span class=\"descriptionNumberColor\">House Advantage (II)</span>]"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Deal Toughness DMG",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
-              },
-              "attacker": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "defender": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "forceReduction": true,
-              "canDelay": true,
-              "ToughnessDMGType": "Imaginary"
-            }
-          ]
-        },
-        {
-          "name": "Consume",
-          "consumeFrom": "MaxHP",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "sourceTarget": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "consumePercent": {
-            "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[1]]}"
-            ]
-          },
-          "consumeFloor": 1
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-769919494\">Enemy_W3_Aventurine_IF_Score_Light_Add</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-769919494\">Enemy_W3_Aventurine_IF_Score_Light_Add</a>",
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (W3_Aventurine_00_IF_Score) || RETURN",
-            "displayLines": "W3_Aventurine_00_IF_Score",
-            "constants": [],
-            "variables": [
-              "W3_Aventurine_00_IF_Score"
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"197888775\">Enemy_W3_Aventurine_IF_Score_Light_Display</a>",
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (W3_Aventurine_00_IF_Score) || RETURN",
-            "displayLines": "W3_Aventurine_00_IF_Score",
-            "constants": [],
-            "variables": [
-              "W3_Aventurine_00_IF_Score"
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster's Summoner}}"
-                },
-                "value1": "SummonCountNumber",
-                "compareType": ">=",
-                "value2": 7
-              },
-              "failed": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_W3_Aventurine_IF_AbilityP01_InsertAbility02_Part01",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "priorityTag": "EnemyReviveOthers",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster's Summoner}}"
-                },
-                "value1": "SummonCountNumber",
-                "compareType": ">=",
-                "value2": 10
-              },
-              "failed": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_W3_Aventurine_IF_AbilityP01_InsertAbility02_Part01",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "priorityTag": "EnemyReviveOthers",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "8032034_Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert": {
-      "fileName": "8032034_Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Bet"
-        },
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "ability": "Monster_W3_Aventurine_IF_AbilityP01_Formation",
-          "isTrigger": true
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8032034_Monster_W3_AventurinePart_IF_AbilityEX04": {
-      "fileName": "8032034_Monster_W3_AventurinePart_IF_AbilityEX04",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8032034_Monster_W3_AventurinePart_IF_AbilityEX03": {
-      "fileName": "8032034_Monster_W3_AventurinePart_IF_AbilityEX03",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8032034_Monster_W3_AventurinePart_01_IF_Passive01": {
-      "fileName": "8032034_Monster_W3_AventurinePart_01_IF_Passive01",
-      "childAbilityList": [
-        "8032034_Monster_W3_AventurinePart_01_IF_Passive01"
-      ],
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-43533344\">Enemy_W3_Aventurine_IF_Double</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"499818287\">Enemy_W3_AventurinePart_01_IF_DeathRattle</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8032034_Monster_W3_AventurinePart_IF_Passive01": {
-      "fileName": "8032034_Monster_W3_AventurinePart_IF_Passive01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"718847384\">Monster_W3_AventurinePart_IF_SpeedZero</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1089097326\">Enemy_W3_AventurinePart_IF_DeathRattle</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "8032034_Modifiers": {
       "fileName": "8032034_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1785,12 +1699,186 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-500446648\">Monster_W3_AventurinePart_IF_ChangePhaseDestroy</a>",
+          "modifierFlags": [
+            "STAT_MonsterChangePhase"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__718847384\">Monster_W3_AventurinePart_IF_SpeedZero</a>",
+          "modifierFlags": [
+            "MuteSpeed"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Block Advance/Delay Effects",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "isLock": false
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Block Advance/Delay Effects",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "whitelist": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "whitelistTag": "Mask_TurnBasedAdvance"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__499818287\">Enemy_W3_AventurinePart_01_IF_DeathRattle</a>",
+          "modifierFlags": [
+            "Deathrattle",
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Was Killed (Queued) [Owner]",
+              "execute": [
+                {
+                  "name": "Dispel Debuffs",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "silent": true
+                },
+                {
+                  "name": "Mark Entity For Immediate Death"
+                },
+                {
+                  "name": "Inject Ability Use",
+                  "conditionActive": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Summoner}}"
+                    },
+                    "value1": "CurrentHP",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "checkOverride": {
+                    "name": "Condition Priority",
+                    "overridePriority": "MonsterForceKill",
+                    "condition": {
+                      "name": "Compare: Ability Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Summoner of Modifier Holder}}"
+                      },
+                      "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                      "compareType": "<=",
+                      "value2": 0
+                    }
+                  },
+                  "abilityName": "Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert",
+                  "priorityTag": "EnemyDeathEffect",
+                  "ownerState": "Mask_AliveOrLimbo",
+                  "targetState": "Mask_AliveOrLimbo",
+                  "canHitNonTargets": true,
+                  "showInActionOrder": true,
+                  "abortFlags": [
+                    "STAT_MonsterChangePhase"
+                  ],
+                  "allowAbilityTriggers": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1089097326\">Enemy_W3_AventurinePart_IF_DeathRattle</a>",
+          "modifierFlags": [
+            "Deathrattle",
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Was Killed (Queued) [Owner]",
+              "execute": [
+                {
+                  "name": "Dispel Debuffs",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "silent": true
+                },
+                {
+                  "name": "Mark Entity For Immediate Death"
+                },
+                {
+                  "name": "Inject Ability Use",
+                  "conditionActive": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Summoner}}"
+                    },
+                    "value1": "CurrentHP",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "checkOverride": {
+                    "name": "Condition Priority",
+                    "overridePriority": "MonsterForceKill",
+                    "condition": {
+                      "name": "Compare: Ability Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Summoner of Modifier Holder}}"
+                      },
+                      "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                      "compareType": "<=",
+                      "value2": 0
+                    }
+                  },
+                  "abilityName": "Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert",
+                  "priorityTag": "EnemyDeathEffect",
+                  "ownerState": "Mask_AliveOrLimbo",
+                  "targetState": "Mask_AliveOrLimbo",
+                  "canHitNonTargets": true,
+                  "showInActionOrder": true,
+                  "abortFlags": [
+                    "STAT_MonsterChangePhase"
+                  ],
+                  "allowAbilityTriggers": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2114595919\">Monster_W3_AventurinePart_ResultCountZero</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-699513905\">Monster_W3_AventurinePart_ResultCount</a>",
           "stackType": "Replace",
+          "stackLimit": 999,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Owner]",
@@ -3331,13 +3419,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 999,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-34127136\">Monster_W3_AventurinePart_Result</a>",
+          "latentQueue": [
+            "DiceGamblingInsertCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4566,10 +4655,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DiceGamblingInsertCheck"
           ]
         },
         {
@@ -4613,7 +4698,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1604729097\">Monster_W3_AventurinePart_ResultTarget</a>",
-          "stackData": [],
           "latentQueue": [
             "DiceGamblingInsertCheck"
           ]
@@ -4624,6 +4708,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteSpeed"
           ],
+          "description": "Immune to DMG. When this unit is attacked by a target that has entered the Gamble, apply 1 random number (between 1 and 6) to the target.",
+          "type": "Other",
+          "statusName": "Fickle Fortune",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -4655,12 +4742,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Immune to DMG. When this unit is attacked by a target that has entered the Gamble, apply 1 random number (between 1 and 6) to the target.",
-          "type": "Other",
-          "statusName": "Fickle Fortune"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4830,200 +4912,19 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__718327308\">Monster_W3_AventurinePart_Speed</a>",
+          "latentQueue": [
+            "DiceGamblingInsertCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DiceGamblingInsertCheck"
           ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-500446648\">Monster_W3_AventurinePart_IF_ChangePhaseDestroy</a>",
-          "modifierFlags": [
-            "STAT_MonsterChangePhase"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__718847384\">Monster_W3_AventurinePart_IF_SpeedZero</a>",
-          "modifierFlags": [
-            "MuteSpeed"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Block Advance/Delay Effects",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "isLock": false
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Block Advance/Delay Effects",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "whitelist": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "whitelistTag": "Mask_TurnBasedAdvance"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__499818287\">Enemy_W3_AventurinePart_01_IF_DeathRattle</a>",
-          "modifierFlags": [
-            "Deathrattle",
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Was Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Dispel Debuffs",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "silent": true
-                },
-                {
-                  "name": "Mark Entity For Immediate Death"
-                },
-                {
-                  "name": "Inject Ability Use",
-                  "conditionActive": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster's Summoner}}"
-                    },
-                    "value1": "CurrentHP",
-                    "compareType": ">",
-                    "value2": 0
-                  },
-                  "checkOverride": {
-                    "name": "Condition Priority",
-                    "overridePriority": "MonsterForceKill",
-                    "condition": {
-                      "name": "Compare: Ability Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Summoner of Modifier Holder}}"
-                      },
-                      "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                      "compareType": "<=",
-                      "value2": 0
-                    }
-                  },
-                  "abilityName": "Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert",
-                  "priorityTag": "EnemyDeathEffect",
-                  "ownerState": "Mask_AliveOrLimbo",
-                  "targetState": "Mask_AliveOrLimbo",
-                  "canHitNonTargets": true,
-                  "showInActionOrder": true,
-                  "abortFlags": [
-                    "STAT_MonsterChangePhase"
-                  ],
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1089097326\">Enemy_W3_AventurinePart_IF_DeathRattle</a>",
-          "modifierFlags": [
-            "Deathrattle",
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Was Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Dispel Debuffs",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "silent": true
-                },
-                {
-                  "name": "Mark Entity For Immediate Death"
-                },
-                {
-                  "name": "Inject Ability Use",
-                  "conditionActive": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster's Summoner}}"
-                    },
-                    "value1": "CurrentHP",
-                    "compareType": ">",
-                    "value2": 0
-                  },
-                  "checkOverride": {
-                    "name": "Condition Priority",
-                    "overridePriority": "MonsterForceKill",
-                    "condition": {
-                      "name": "Compare: Ability Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Summoner of Modifier Holder}}"
-                      },
-                      "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                      "compareType": "<=",
-                      "value2": 0
-                    }
-                  },
-                  "abilityName": "Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert",
-                  "priorityTag": "EnemyDeathEffect",
-                  "ownerState": "Mask_AliveOrLimbo",
-                  "targetState": "Mask_AliveOrLimbo",
-                  "canHitNonTargets": true,
-                  "showInActionOrder": true,
-                  "abortFlags": [
-                    "STAT_MonsterChangePhase"
-                  ],
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
         }
       ],
       "references": []

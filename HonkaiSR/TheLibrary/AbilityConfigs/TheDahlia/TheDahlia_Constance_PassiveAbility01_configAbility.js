@@ -433,6 +433,9 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "STAT_SuperBreakBuff"
       ],
+      "description": "After attacking a Weakness Broken enemy target, converts the Toughness Reduction of this attack into 1 instance of <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> Super Break DMG.",
+      "type": "Buff",
+      "statusName": "When a Bud Readies to Bloom",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -474,10 +477,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "After attacking a Weakness Broken enemy target, converts the Toughness Reduction of this attack into 1 instance of <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> Super Break DMG.",
-      "type": "Buff",
-      "statusName": "When a Bud Readies to Bloom"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -562,38 +562,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "execute": [
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier",
-          "execute": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Modifier Holder}}"
-                },
-                "target2": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "invertCondition": true
-              },
-              "passed": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}} - {{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
-                }
-              ]
-            }
-          ]
-        }
       ],
       "description": "After attacking a Weakness Broken enemy target, converts the Toughness Reduction of this attack into 1 instance of <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> Super Break DMG.",
       "type": "Buff",
@@ -702,6 +670,38 @@ const configAbility = {
               ]
             }
           }
+        }
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "invertCondition": true
+              },
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}} - {{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1060,8 +1060,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-157877441\">Constance_Ultimate_AddWeaknessPreShow</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -1079,6 +1077,10 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "All-Type RES Reduction",
+      "statusName": "Fresh, Ethereal, and Beloved",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1103,11 +1105,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "All-Type RES Reduction",
-      "statusName": "Fresh, Ethereal, and Beloved"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1238,6 +1236,9 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "And Yet, Always, Deathly Beautiful",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1260,10 +1261,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "And Yet, Always, Deathly Beautiful"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1331,6 +1329,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1852842917\">Constance_Tree01_Property</a>[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Break Effect Boost",
+      "statusName": "Yet Another Funeral",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1382,11 +1384,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Break Effect Boost",
-      "statusName": "Yet Another Funeral"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1563,54 +1561,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2129474083\">Constance_Passive</a>",
-      "execute": [
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier"
-        },
-        {
-          "eventTrigger": "Enter Battle",
-          "execute": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "Wave Count",
-                "compareType": "=",
-                "value2": 1
-              },
-              "passed": [
-                {
-                  "name": "Update Energy",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "value": {
-                    "operator": "Variables[0] (35) || RETURN",
-                    "displayLines": "35",
-                    "constants": [],
-                    "variables": [
-                      35
-                    ]
-                  },
-                  "isFixed": "* ERR"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1358334362\">_M_Constance_DancerManager</a>"
-                }
-              ]
-            }
-          ],
-          "priorityLevel": -80
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -1701,6 +1651,52 @@ const configAbility = {
           "valuePerStack": {
             "MDF_SuperBreakDamagePercentage": 0
           }
+        }
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier"
+        },
+        {
+          "eventTrigger": "Enter Battle",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Wave Count",
+                "compareType": "=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "Update Energy",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "value": {
+                    "operator": "Variables[0] (35) || RETURN",
+                    "displayLines": "35",
+                    "constants": [],
+                    "variables": [
+                      35
+                    ]
+                  },
+                  "isFixed": "* ERR"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1358334362\">_M_Constance_DancerManager</a>"
+                }
+              ]
+            }
+          ],
+          "priorityLevel": -80
         }
       ]
     }

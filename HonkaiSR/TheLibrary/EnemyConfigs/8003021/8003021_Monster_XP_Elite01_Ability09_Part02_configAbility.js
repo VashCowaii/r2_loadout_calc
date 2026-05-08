@@ -25,13 +25,13 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
-              "operator": "Variables[0] ({[Skill09[0]]}) || Variables[1] ({[Skill09[1]]}) || Variables[2] (UnusedUnderThisBase_159) || MUL || ADD || RETURN",
-              "displayLines": "({[Skill09[0]]} + ({[Skill09[1]]} * UnusedUnderThisBase_159))",
+              "operator": "Variables[0] ({[Skill09[0]]}) || Variables[1] ({[Skill09[1]]}) || Variables[2] (ENEMIES_OBJECT_UNUSED__253) || MUL || ADD || RETURN",
+              "displayLines": "({[Skill09[0]]} + ({[Skill09[1]]} * ENEMIES_OBJECT_UNUSED__253))",
               "constants": [],
               "variables": [
                 "{[Skill09[0]]}",
                 "{[Skill09[1]]}",
-                "UnusedUnderThisBase_159"
+                "ENEMIES_OBJECT_UNUSED__253"
               ]
             },
             "Toughness": null,

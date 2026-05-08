@@ -18,28 +18,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1308834030\">MStrongChallengeEX_Talent_StageAbility_SVT_053</a>",
-      "execute": [
-        {
-          "eventTrigger": "Deal Damage Start [Owner]: Any",
-          "execute": [
-            {
-              "name": "Adjust Target Stats",
-              "modifiedValuesArray": [
-                {
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
-                  "value": "MDF_DefaultStanceBreakRatio"
-                },
-                {
-                  "on": "Defender",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": "(-1 * MDF_IgnoreDefenceRatioTotal)"
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -62,7 +40,29 @@ const configAbility = {
             "MDF_DefaultStanceBreakRatio"
           ]
         }
-      }
+      },
+      "execute": [
+        {
+          "eventTrigger": "Deal Damage Start [Owner]: Any",
+          "execute": [
+            {
+              "name": "Adjust Target Stats",
+              "modifiedValuesArray": [
+                {
+                  "on": "Attacker",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
+                  "value": "MDF_DefaultStanceBreakRatio"
+                },
+                {
+                  "on": "Defender",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                  "value": "(-1 * MDF_IgnoreDefenceRatioTotal)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -125,9 +125,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

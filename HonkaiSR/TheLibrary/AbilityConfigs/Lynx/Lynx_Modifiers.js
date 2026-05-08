@@ -10,8 +10,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__148301289\">ADV_StageAbility_Maze_Lynx</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-96135638\">Lynx_Eidolon4_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "ATK Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -34,15 +44,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "ATK Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -50,6 +52,9 @@ const configAbility = {
       "modifierFlags": [
         "ImmuneDebuff"
       ],
+      "description": "Resists 1 debuff.",
+      "type": "Buff",
+      "statusName": "Debuff RES",
       "execute": [
         {
           "eventTrigger": "Debuff Immunity[?]",
@@ -64,12 +69,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Resists 1 debuff.",
-      "type": "Buff",
-      "statusName": "Debuff RES"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -96,11 +96,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -166,17 +162,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Lynx_PointB1_AddSpValue"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-704553388\">Lynx_HOT_HealByMaxHp</a>[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "useEntitySnapshot": true,
+      "description": "Restores a certain amount of HP at the start of each turn.",
+      "type": "Buff",
+      "effectName": "Healing Over Time",
+      "statusName": "Healing Over Time",
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -261,24 +258,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_HOT_HOTPercentage",
-        "MDF_HOT_HealValue",
-        "MDF_HOT_AggroUp_HOTPercentage",
-        "MDF_HOT_AggroUp_HealValue"
-      ],
-      "latentQueue": [],
-      "description": "Restores a certain amount of HP at the start of each turn.",
-      "type": "Buff",
-      "effectName": "Healing Over Time",
-      "statusName": "Healing Over Time"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__683860338\">Lynx_HPAddedRatio02</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases Max HP by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and Effect RES by <span class=\"descriptionNumberColor\">MDF_AddStatusResistance</span>.",
+      "type": "Buff",
+      "effectName": "Max HP Boost",
+      "statusName": "Survival Response",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -377,24 +366,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_HPAddValueConvert",
-        "MDF_HPDelta",
-        "MDF_AggroUp",
-        "MDF_AddStatusResistance"
-      ],
-      "latentQueue": [],
-      "description": "Increases Max HP by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and Effect RES by <span class=\"descriptionNumberColor\">MDF_AddStatusResistance</span>.",
-      "type": "Buff",
-      "effectName": "Max HP Boost",
-      "statusName": "Survival Response"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__667082719\">Lynx_HPAddedRatio01</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases Max HP by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Max HP Boost",
+      "statusName": "Survival Response",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -477,18 +458,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_HPAddValueConvert",
-        "MDF_HPDelta",
-        "MDF_AggroUp"
-      ],
-      "latentQueue": [],
-      "description": "Increases Max HP by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Max HP Boost",
-      "statusName": "Survival Response"
+      ]
     }
   ],
   "references": []

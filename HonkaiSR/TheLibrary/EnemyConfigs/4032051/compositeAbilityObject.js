@@ -3,198 +3,87 @@ const compositeAbilityObject = {
   "fullCharacterName": 4032051,
   "trimCharacterName": 4032051,
   "abilityList": [
-    "4032051_Monster_W4_Shooter_01_LocalLegend02_Ability01_Part02",
-    "4032051_Monster_W4_Shooter_01_LocalLegend02_Ability01_Part01",
-    "4032051_Monster_W4_Shooter_01_LocalLegend02_AbilityP01",
+    "4032051_Monster_AML_Minion02_01_LocalLegend_NagetiveBlood_Enter",
+    "4032051_Monster_W4_Shooter_01_LocalLegend_AbilityP01",
     "4032051_Monster_W4_Shooter_01_LocalLegend_Ability01_Part02",
     "4032051_Monster_W4_Shooter_01_LocalLegend_Ability01_Part01",
-    "4032051_Monster_W4_Shooter_01_LocalLegend_AbilityP01"
+    "4032051_Modifiers"
   ],
   "abilityObject": {
-    "4032051_Monster_W4_Shooter_01_LocalLegend02_Ability01_Part02": {
-      "fileName": "4032051_Monster_W4_Shooter_01_LocalLegend02_Ability01_Part02",
+    "4032051_Monster_AML_Minion02_01_LocalLegend_NagetiveBlood_Enter": {
+      "fileName": "4032051_Monster_AML_Minion02_01_LocalLegend_NagetiveBlood_Enter",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
-          "valuePerStack": {
-            "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_391) || RETURN",
-              "displayLines": "UnusedUnderThisBase_391",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_391"
-              ]
-            },
-            "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_392) || RETURN",
-              "displayLines": "UnusedUnderThisBase_392",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_392"
-              ]
-            },
-            "MDF_Rally_HealUpRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_393) || RETURN",
-              "displayLines": "UnusedUnderThisBase_393",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_393"
-              ]
-            },
-            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_394) || RETURN",
-              "displayLines": "UnusedUnderThisBase_394",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_394"
-              ]
-            }
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "flagName": "STAT_CTRL",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "flagName": "Break",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "flagName": "DisableAction",
+                "invertCondition": true
+              }
+            ]
           }
         },
-        "Ability Start",
         {
-          "name": "ATK Scaling DMG",
+          "name": "Exit Broken-State",
           "target": {
             "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
+            "target": "{{Caster}}"
           }
         },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4032051_Monster_W4_Shooter_01_LocalLegend02_Ability01_Part01": {
-      "fileName": "4032051_Monster_W4_Shooter_01_LocalLegend02_Ability01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
         {
-          "name": "Trigger Ability",
-          "from": {
+          "name": "Reset Toughness",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Change Character Transformation",
+          "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_W4_Shooter_01_LocalLegend02_Ability01_Part02",
-          "isTrigger": true
+          "phase": "Phase1"
         },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4032051_Monster_W4_Shooter_01_LocalLegend02_AbilityP01": {
-      "fileName": "4032051_Monster_W4_Shooter_01_LocalLegend02_AbilityP01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
         {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"276019182\">Enemy_W4_Shooter_01_ConfineHit_Controller</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"1771764709\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood</a>[<span class=\"descriptionNumberColor\">HP Overload</span>]"
         }
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4032051_Monster_W4_Shooter_01_LocalLegend_Ability01_Part02": {
-      "fileName": "4032051_Monster_W4_Shooter_01_LocalLegend_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4032051_Monster_W4_Shooter_01_LocalLegend_Ability01_Part01": {
-      "fileName": "4032051_Monster_W4_Shooter_01_LocalLegend_Ability01_Part01",
-      "childAbilityList": [
-        "4032051_Monster_W4_Shooter_01_Ability01_Camera",
-        "4032051_Monster_W4_Shooter_01_LocalLegend_Ability01_Part01",
-        "4032051_Monster_W4_Shooter_01_LocalLegend_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Shooter_01_LocalLegend_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
+        "primaryTarget": "Inherent Target"
       },
       "references": []
     },
@@ -413,11 +302,172 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
+    },
+    "4032051_Monster_W4_Shooter_01_LocalLegend_Ability01_Part02": {
+      "fileName": "4032051_Monster_W4_Shooter_01_LocalLegend_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4032051_Monster_W4_Shooter_01_LocalLegend_Ability01_Part01": {
+      "fileName": "4032051_Monster_W4_Shooter_01_LocalLegend_Ability01_Part01",
+      "childAbilityList": [
+        "4032051_Monster_W4_Shooter_01_Ability01_Camera",
+        "4032051_Monster_W4_Shooter_01_LocalLegend_Ability01_Part01",
+        "4032051_Monster_W4_Shooter_01_LocalLegend_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Shooter_01_LocalLegend_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4032051_Modifiers": {
+      "fileName": "4032051_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1771764709\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood</a>[<span class=\"descriptionNumberColor\">HP Overload</span>]",
+          "modifierFlags": [
+            "MuteBreak"
+          ],
+          "description": "Target has accumulated \"HP Overload,\" healing <span class=\"descriptionNumberColor\">MDF_NegativeBlood</span> HP will remove this state. When the \"Overload Settlement\" turn begins, the target will receive fatal damage.",
+          "type": "Other",
+          "statusName": "HP Overload",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_NegativeBlood_Temp",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_NegativeBlood",
+                  "value": {
+                    "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
+                    "constants": [],
+                    "variables": [
+                      "CEIL",
+                      "MDF_NegativeBlood_Temp"
+                    ]
+                  }
+                },
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Protected",
+                  "valueList": [
+                    "Physical",
+                    "Fire",
+                    "Ice",
+                    "Thunder",
+                    "Wind",
+                    "Quantum",
+                    "Imaginary"
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "HP Change [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_NegativeBlood_Temp",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_NegativeBlood",
+                  "value": {
+                    "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
+                    "constants": [],
+                    "variables": [
+                      "CEIL",
+                      "MDF_NegativeBlood_Temp"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
     }
   }
 }

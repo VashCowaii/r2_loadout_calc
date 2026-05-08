@@ -10,6 +10,201 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-999922107\">ADV_StageAbility_Maze_Jingliu3</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "modifierFlags": [
+        "Freeze"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1457669525\">ADV_Modifier_Maze_JingliuMask2</a>",
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__179849979\">ADV_Modifier_Maze_JingliuMask</a>",
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1016699726\">ADV_StageAbility_Maze_Jingliu2</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierTasks": [
+        {
+          "name": "Overworld Snapshot Event",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Team Leader",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"179849979\">ADV_Modifier_Maze_JingliuMask</a>"
+                }
+              ]
+            }
+          ],
+          "exit": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Team Leader",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
+              }
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"179849979\">ADV_Modifier_Maze_JingliuMask</a>"
+            }
+          ]
+        }
+      ],
+      "onCreation": [
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 12121
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Team Leader",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            }
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier (OVERWORLD)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1457669525\">ADV_Modifier_Maze_JingliuMask2</a>",
+                "invertCondition": true
+              }
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1457669525\">ADV_Modifier_Maze_JingliuMask2</a>",
+              "duration": 19.9
+            }
+          ]
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1457669525\">ADV_Modifier_Maze_JingliuMask2</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier (OVERWORLD)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"179849979\">ADV_Modifier_Maze_JingliuMask</a>",
+            "invertCondition": true
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier (OVERWORLD)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1457669525\">ADV_Modifier_Maze_JingliuMask2</a>",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Is Team Leader",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"179849979\">ADV_Modifier_Maze_JingliuMask</a>"
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "modifier": null,
+          "overworldID": 121201
+        },
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "summonID": 12121
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1204404236\">ADV_StageAbility_Maze_Jingliu</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-950469386\">Jingliu_LoseHPPreShow_RealShow</a>"
     },
     {
@@ -90,13 +285,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1857615455\">Jingliu_Passive_CriticalUp</a>[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
+      "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_CriticalRatio</span>.",
+      "type": "Buff",
+      "effectName": "CRIT Rate Boost",
+      "statusName": "Spectral Transmigration",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -119,15 +316,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_CriticalRatio</span>.",
-      "type": "Buff",
-      "effectName": "CRIT Rate Boost",
-      "statusName": "Spectral Transmigration"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-89851365\">Jingliu_Trace_B1_Resist</a>[<span class=\"descriptionNumberColor\">Deathrealm</span>]",
+      "description": "Increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Effect RES Boost",
+      "statusName": "Deathrealm",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -150,11 +347,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Effect RES Boost",
-      "statusName": "Deathrealm"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -332,6 +525,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__828232276\">MWJingliu_Attack_Transfer_AddATK</a>[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
+      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackDelta1</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Spectral Transmigration",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -365,16 +562,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackDelta1</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Spectral Transmigration"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-62616171\">MWJingliu_PointB3</a>[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Ultimate deals <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> more DMG.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Frost Wraith",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -407,11 +604,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Ultimate deals <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> more DMG.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Frost Wraith"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -827,13 +1020,13 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_AttackDelta",
                   "value": {
-                    "operator": "Variables[0] (SkillP01_P3_ATKRatioUp) || Variables[1] (HpConsumption) || MUL || Variables[2] (SkillRank_Rank04_P1_DamageUpRatio) || Variables[1] (HpConsumption) || MUL || ADD || RETURN",
-                    "displayLines": "((SkillP01_P3_ATKRatioUp * HpConsumption) + (SkillRank_Rank04_P1_DamageUpRatio * HpConsumption))",
+                    "operator": "Variables[0] (SkillP01_P3_ATKRatioUp) || Variables[1] (HpConsumption) || MUL || Variables[2] ([object Object]) || Variables[1] (HpConsumption) || MUL || ADD || RETURN",
+                    "displayLines": "((SkillP01_P3_ATKRatioUp * HpConsumption) + ([object Object] * HpConsumption))",
                     "constants": [],
                     "variables": [
                       "SkillP01_P3_ATKRatioUp",
                       "HpConsumption",
-                      "SkillRank_Rank04_P1_DamageUpRatio"
+                      {}
                     ]
                   }
                 },
@@ -844,13 +1037,13 @@ const configAbility = {
                     "value1": "MDF_AttackDelta",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (SkillP01_P4_JingliuAttackBase) || Variables[1] (MDF_BaseAttack) || MUL || Variables[2] (SkillRank_Rank04_P2_DamageUpLimit) || Variables[1] (MDF_BaseAttack) || MUL || ADD || RETURN",
-                      "displayLines": "((SkillP01_P4_JingliuAttackBase * MDF_BaseAttack) + (SkillRank_Rank04_P2_DamageUpLimit * MDF_BaseAttack))",
+                      "operator": "Variables[0] (SkillP01_P4_JingliuAttackBase) || Variables[1] (MDF_BaseAttack) || MUL || Variables[2] ([object Object]) || Variables[1] (MDF_BaseAttack) || MUL || ADD || RETURN",
+                      "displayLines": "((SkillP01_P4_JingliuAttackBase * MDF_BaseAttack) + ([object Object] * MDF_BaseAttack))",
                       "constants": [],
                       "variables": [
                         "SkillP01_P4_JingliuAttackBase",
                         "MDF_BaseAttack",
-                        "SkillRank_Rank04_P2_DamageUpLimit"
+                        {}
                       ]
                     }
                   },
@@ -859,13 +1052,13 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_AttackDelta",
                       "value": {
-                        "operator": "Variables[0] (SkillP01_P4_JingliuAttackBase) || Variables[1] (MDF_BaseAttack) || MUL || Variables[2] (SkillRank_Rank04_P2_DamageUpLimit) || Variables[1] (MDF_BaseAttack) || MUL || ADD || RETURN",
-                        "displayLines": "((SkillP01_P4_JingliuAttackBase * MDF_BaseAttack) + (SkillRank_Rank04_P2_DamageUpLimit * MDF_BaseAttack))",
+                        "operator": "Variables[0] (SkillP01_P4_JingliuAttackBase) || Variables[1] (MDF_BaseAttack) || MUL || Variables[2] ([object Object]) || Variables[1] (MDF_BaseAttack) || MUL || ADD || RETURN",
+                        "displayLines": "((SkillP01_P4_JingliuAttackBase * MDF_BaseAttack) + ([object Object] * MDF_BaseAttack))",
                         "constants": [],
                         "variables": [
                           "SkillP01_P4_JingliuAttackBase",
                           "MDF_BaseAttack",
-                          "SkillRank_Rank04_P2_DamageUpLimit"
+                          {}
                         ]
                       }
                     }
@@ -1032,20 +1225,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "SkillP01_P1_HpConsumption",
-        "SkillP01_P3_ATKRatioUp",
-        "SkillP01_P2_HpConsumption",
-        "SkillP01_P4_JingliuAttackBase",
-        "SkillRank_Rank04_P1_DamageUpRatio",
-        "SkillRank_Rank04_P2_DamageUpLimit"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1827977639\">Jingliu_Eidolon6</a>[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]",
+      "stackData": [
+        "MDF_CriticalDamage"
+      ],
+      "description": "CRIT DMG +<span class=\"descriptionNumberColor\">MDF_CriticalDamage</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "Eclipse Hollows Corporeal Husk",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1068,22 +1259,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_CriticalDamage"
-      ],
-      "latentQueue": [
-        "SkillRank_Rank04_P2_DamageUpLimit",
-        "SkillRank_Rank04_P1_DamageUpRatio"
-      ],
-      "description": "CRIT DMG +<span class=\"descriptionNumberColor\">MDF_CriticalDamage</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "Eclipse Hollows Corporeal Husk"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1760867163\">Jingliu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]",
+      "description": "Increases DMG dealt by the next Enhanced Skill by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Crescent Shadows Qixing Dipper",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -1124,19 +1307,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "Increases DMG dealt by the next Enhanced Skill by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "statusName": "Crescent Shadows Qixing Dipper"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1949094753\">Jingliu_Eidolon1_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT DMG +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "Moon Crashes Tianguan Gate",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1159,15 +1339,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "CRIT DMG +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "Moon Crashes Tianguan Gate"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1497,9 +1669,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2011,15 +2181,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1865477749\">Jingliu_Transfer_PreShow</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -2047,11 +2213,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-582112064\">Jingliu_AbilityPreShow</a>",
-      "stackData": [],
-      "latentQueue": [
-        "SkillRank_Rank04_P2_DamageUpLimit",
-        "SkillRank_Rank04_P1_DamageUpRatio"
-      ],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -2079,25 +2240,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1713327141\">Jingliu_Trace02_ModifyAction</a>",
       "stackType": "Multiple",
-      "execute": [
-        {
-          "eventTrigger": "Turn End [Anyone]",
-          "execute": [
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "advanceType": "Advance",
-              "multiAdd": "-0.1"
-            },
-            "Modifier Deletes Itself"
-          ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -2119,7 +2261,24 @@ const configAbility = {
             ]
           }
         }
-      }
+      },
+      "execute": [
+        {
+          "eventTrigger": "Turn End [Anyone]",
+          "execute": [
+            {
+              "name": "Action Advance/Delay",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "advanceType": "Advance",
+              "multiAdd": "-0.1"
+            },
+            "Modifier Deletes Itself"
+          ]
+        }
+      ]
     }
   ],
   "references": []

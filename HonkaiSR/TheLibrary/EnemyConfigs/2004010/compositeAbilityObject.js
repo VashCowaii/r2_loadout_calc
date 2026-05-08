@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 2004010,
   "trimCharacterName": 2004010,
   "abilityList": [
+    "2004010_Monster_W2_Kafka_Passive01",
     "2004010_Monster_W2_Kafka_Ability07_Part02",
     "2004010_Monster_W2_Kafka_Ability07_Part01",
     "2004010_Monster_W2_Kafka_Ability06_Part02",
@@ -17,11 +18,242 @@ const compositeAbilityObject = {
     "2004010_Monster_W2_Kafka_Ability02_Part01",
     "2004010_Monster_W2_Kafka_Ability01_Part02",
     "2004010_Monster_W2_Kafka_Ability01_Part01",
-    "2004010_Monster_W2_Kafka_Passive01",
     "2004010_Monster_W2_Kafka_PassiveAbility_BGM",
     "2004010_Modifiers"
   ],
   "abilityObject": {
+    "2004010_Monster_W2_Kafka_Passive01": {
+      "fileName": "2004010_Monster_W2_Kafka_Passive01",
+      "skillTrigger": "Monster_W2_Kafka_00_Passive01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1961920728\">Monster_W2_Kafka_BattleScore1</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "DisPelCount"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1082518094\">Monster_W2_Kafka_Pursuit</a>",
+          "valuePerStack": {
+            "MDF_Count": {
+              "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
+              "displayLines": "{[Skill06[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill06[1]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2066030702\">Monster_W2_Kafka_AIChange</a>"
+        },
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 200401010,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "Stellaron Hunter: Kafka"
+          },
+          "passed": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
+              "searchRandom": true,
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Character ID",
+                    "ID": 1001,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": "March 7th"
+                  },
+                  {
+                    "name": "Character ID",
+                    "ID": 1101,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": "Bronya"
+                  },
+                  {
+                    "name": "Character ID",
+                    "ID": 1105,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": "Natasha"
+                  },
+                  {
+                    "name": "Character ID",
+                    "ID": 1203,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": "Luocha"
+                  }
+                ]
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1137001600\">Monster_W2_Kafka_TargetFilter</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1137001600\">Monster_W2_Kafka_TargetFilter</a>",
+          "latentQueue": [
+            "DisPelCount"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2066030702\">Monster_W2_Kafka_AIChange</a>",
+          "latentQueue": [
+            "DisPelCount"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1961920728\">Monster_W2_Kafka_BattleScore1</a>",
+          "execute": [
+            {
+              "eventTrigger": "Modifier Cleansed [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Modifier Was",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]"
+                      },
+                      {
+                        "name": "Is Teammate",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Added Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "variableName": "DisPelCount",
+                      "context": "TargetEntity",
+                      "value": 1,
+                      "max": 3
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "DisPelCount",
+                        "compareType": ">=",
+                        "value2": 3,
+                        "contextScope": "TargetEntity"
+                      },
+                      "passed": [
+                        {
+                          "name": "Achievement",
+                          "matchTags": true,
+                          "relatedAchievements": [
+                            {
+                              "title": "Will of Steel",
+                              "desc": "In a single battle against Boss Kafka, dispel Dominated 3 times",
+                              "rarity": "Low",
+                              "type": "Hidden until Completion"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "2004010_Monster_W2_Kafka_Ability07_Part02": {
       "fileName": "2004010_Monster_W2_Kafka_Ability07_Part02",
       "abilityType": null,
@@ -737,11 +969,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_14) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_14",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8765) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8765",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_14"
+                    "UnusedUnderThisBase_8765"
                   ]
                 }
               }
@@ -1121,11 +1353,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_14) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_14",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8765) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8765",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_14"
+                    "UnusedUnderThisBase_8765"
                   ]
                 }
               }
@@ -1317,242 +1549,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2004010_Monster_W2_Kafka_Passive01": {
-      "fileName": "2004010_Monster_W2_Kafka_Passive01",
-      "skillTrigger": "Monster_W2_Kafka_00_Passive01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1961920728\">Monster_W2_Kafka_BattleScore1</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "DisPelCount"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1082518094\">Monster_W2_Kafka_Pursuit</a>",
-          "valuePerStack": {
-            "MDF_Count": {
-              "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-              "displayLines": "{[Skill06[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[1]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2066030702\">Monster_W2_Kafka_AIChange</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 200401010,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Stellaron Hunter: Kafka"
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Character ID",
-                    "ID": 1001,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": "March 7th"
-                  },
-                  {
-                    "name": "Character ID",
-                    "ID": 1101,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": "Bronya"
-                  },
-                  {
-                    "name": "Character ID",
-                    "ID": 1105,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": "Natasha"
-                  },
-                  {
-                    "name": "Character ID",
-                    "ID": 1203,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": "Luocha"
-                  }
-                ]
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1137001600\">Monster_W2_Kafka_TargetFilter</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1137001600\">Monster_W2_Kafka_TargetFilter</a>",
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2066030702\">Monster_W2_Kafka_AIChange</a>",
-          "stackData": [],
-          "latentQueue": [
-            "DisPelCount"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1961920728\">Monster_W2_Kafka_BattleScore1</a>",
-          "execute": [
-            {
-              "eventTrigger": "Modifier Cleansed [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Was",
-                        "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]"
-                      },
-                      {
-                        "name": "Is Teammate",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "DisPelCount",
-                      "context": "TargetEntity",
-                      "value": 1,
-                      "max": 3
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "DisPelCount",
-                        "compareType": ">=",
-                        "value2": 3,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Achievement",
-                          "matchTags": true,
-                          "relatedAchievements": [
-                            {
-                              "title": "Will of Steel",
-                              "desc": "In a single battle against Boss Kafka, dispel Dominated 3 times",
-                              "rarity": "Low",
-                              "type": "Hidden until Completion"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "2004010_Monster_W2_Kafka_PassiveAbility_BGM": {
       "fileName": "2004010_Monster_W2_Kafka_PassiveAbility_BGM",
       "childAbilityList": [
@@ -1658,9 +1654,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1677,6 +1671,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-879407781\">Monster_W2_Kafka_CharmTargetMark</a>",
+          "latentQueue": [
+            "PursuitCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1684,10 +1681,6 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "PursuitCheck"
           ]
         },
         {
@@ -1735,6 +1728,10 @@ const compositeAbilityObject = {
             "AvatarBreak",
             "RemoveWhenCasterDead"
           ],
+          "description": "Makes a single target unable to take action. Target will use Basic ATK to attack a random ally of theirs. If an ability is cast on the target to remove a debuff, the Dominated status will be removed first.",
+          "type": "Debuff",
+          "effectName": "Dominated",
+          "statusName": "Dominated",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1879,11 +1876,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Makes a single target unable to take action. Target will use Basic ATK to attack a random ally of theirs. If an ability is cast on the target to remove a debuff, the Dominated status will be removed first.",
-          "type": "Debuff",
-          "effectName": "Dominated",
-          "statusName": "Dominated"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1910,11 +1903,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_15) || Variables[1] (SkillMaxHit) || DIV || RETURN",
-                      "displayLines": "(UnusedUnderThisBase_15 / SkillMaxHit)",
+                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__252) || Variables[1] (SkillMaxHit) || DIV || RETURN",
+                      "displayLines": "(ENEMIES_OBJECT_UNUSED__252 / SkillMaxHit)",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_15",
+                        "ENEMIES_OBJECT_UNUSED__252",
                         "SkillMaxHit"
                       ]
                     },
@@ -1935,13 +1928,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1442954604\">Monster_W2_Kafka_EnhanceElectricDamage</a>",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1959,10 +1951,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2047,6 +2036,12 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1082518094\">Monster_W2_Kafka_Pursuit</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
+          ],
+          "stackData": [
+            "MDF_Count"
+          ],
+          "latentQueue": [
+            "DisPelCount"
           ],
           "execute": [
             {
@@ -2278,12 +2273,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Count"
-          ],
-          "latentQueue": [
-            "DisPelCount"
           ]
         }
       ],

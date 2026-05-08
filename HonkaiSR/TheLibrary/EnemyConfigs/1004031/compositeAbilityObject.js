@@ -3,7 +3,6 @@ const compositeAbilityObject = {
   "fullCharacterName": 1004031,
   "trimCharacterName": 1004031,
   "abilityList": [
-    "1004031_Monster_W1_Bronya_RL_ShowHPBar",
     "1004031_Monster_W1_Bronya_RL_PassiveAbilityInitiate",
     "1004031_Monster_W1_Bronya_RL_Ability04_Part02",
     "1004031_Monster_W1_Bronya_RL_Ability04_Part01",
@@ -16,26 +15,6 @@ const compositeAbilityObject = {
     "1004031_Modifiers"
   ],
   "abilityObject": {
-    "1004031_Monster_W1_Bronya_RL_ShowHPBar": {
-      "fileName": "1004031_Monster_W1_Bronya_RL_ShowHPBar",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "1004031_Monster_W1_Bronya_RL_PassiveAbilityInitiate": {
       "fileName": "1004031_Monster_W1_Bronya_RL_PassiveAbilityInitiate",
       "skillTrigger": "PassiveSkillInitiate",
@@ -112,6 +91,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2074412751\">Enemy_W1_Bronya_ListenSelfBreak</a>",
+          "latentQueue": [
+            "Bronya_SummonCounter",
+            "Bronya_SummonMode"
+          ],
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -137,11 +120,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Bronya_SummonCounter",
-            "Bronya_SummonMode"
           ]
         },
         {
@@ -150,6 +128,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteBreak"
           ],
+          "description": "Bronya's Toughness cannot be reduced while there are enemies on the field.",
+          "type": "Buff",
+          "effectName": "Weakness Protected",
+          "statusName": "Weakness Protected",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -191,11 +173,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Bronya's Toughness cannot be reduced while there are enemies on the field.",
-          "type": "Buff",
-          "effectName": "Weakness Protected",
-          "statusName": "Weakness Protected"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -637,6 +615,13 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-409658375\">Enemy_W1_Bronya_RL_Ability02_PowerUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "stackData": [
+            "MDF_DamageAddedRatio"
+          ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -662,15 +647,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageAddedRatio"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost"
+          ]
         }
       ]
     },

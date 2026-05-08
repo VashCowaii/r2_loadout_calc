@@ -634,7 +634,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "Colossus_PassiveAbility02_Weekly"
+                    "realModifierNamne": "Colossus_PassiveAbility02_Weekly",
+                    "BEKey": -414341064
                   }
                 ],
                 "stageType": "Cocoon",

@@ -3,14 +3,39 @@ const compositeAbilityObject = {
   "fullCharacterName": 5012020,
   "trimCharacterName": 5012020,
   "abilityList": [
+    "5012020_Monster_W2_Beast01_05_AbilityP01_Initiate",
     "5012020_Monster_W2_Beast01_05_Ability02_Part02",
     "5012020_Monster_W2_Beast01_05_Ability02_Part01",
     "5012020_Monster_W2_Beast01_05_Ability01_Part02",
     "5012020_Monster_W2_Beast01_05_Ability01_Part01",
-    "5012020_Monster_W2_Beast01_05_AbilityP01_Initiate",
     "5012020_Modifiers"
   ],
   "abilityObject": {
+    "5012020_Monster_W2_Beast01_05_AbilityP01_Initiate": {
+      "fileName": "5012020_Monster_W2_Beast01_05_AbilityP01_Initiate",
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-867295363\">Monster_Standard_ConfineHit</a>"
+        }
+      ],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "5012020_Monster_W2_Beast01_05_Ability02_Part02": {
       "fileName": "5012020_Monster_W2_Beast01_05_Ability02_Part02",
       "abilityType": null,
@@ -155,31 +180,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "5012020_Monster_W2_Beast01_05_AbilityP01_Initiate": {
-      "fileName": "5012020_Monster_W2_Beast01_05_AbilityP01_Initiate",
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-867295363\">Monster_Standard_ConfineHit</a>"
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "5012020_Modifiers": {
       "fileName": "5012020_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -255,9 +255,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -624,6 +622,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_ElationPoint"
+          ],
+          "description": "When a target with \"Fealty\" is attacked, the DMG from this attack will be transferred to the Security Doggo, and causes the target team to gain Punchline.",
+          "type": "Buff",
+          "effectName": "Fealty",
+          "statusName": "Fealty",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -780,15 +785,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ElationPoint"
-          ],
-          "latentQueue": [],
-          "description": "When a target with \"Fealty\" is attacked, the DMG from this attack will be transferred to the Security Doggo, and causes the target team to gain Punchline.",
-          "type": "Buff",
-          "effectName": "Fealty",
-          "statusName": "Fealty"
+          ]
         }
       ],
       "references": []

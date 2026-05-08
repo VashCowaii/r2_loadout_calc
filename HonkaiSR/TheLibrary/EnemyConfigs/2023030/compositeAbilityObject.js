@@ -3,10 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 2023030,
   "trimCharacterName": 2023030,
   "abilityList": [
-    "2023030_Monster_XP_Elite02_02_BattlePerform_Insert",
-    "2023030_Monster_XP_Elite02_02_BattlePerformAbility",
-    "2023030_Monster_XP_Elite02_02_InstantDirtyHPAbility",
-    "2023030_Monster_XP_Elite02_02_MuteDirtyHPAbility",
+    "2023030_Monster_XP_Elite02_02_Passive01",
     "2023030_Monster_XP_Elite02_02_Ability05_Part02",
     "2023030_Monster_XP_Elite02_02_Ability05_Part01",
     "2023030_Monster_XP_Elite02_02_Ability04_Part02",
@@ -17,34 +14,26 @@ const compositeAbilityObject = {
     "2023030_Monster_XP_Elite02_02_Ability02_Part01",
     "2023030_Monster_XP_Elite02_02_Ability01_Part02",
     "2023030_Monster_XP_Elite02_02_Ability01_Part01",
-    "2023030_Monster_XP_Elite02_02_Passive01",
     "2023030_Modifiers"
   ],
   "abilityObject": {
-    "2023030_Monster_XP_Elite02_02_BattlePerform_Insert": {
-      "fileName": "2023030_Monster_XP_Elite02_02_BattlePerform_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2023030_Monster_XP_Elite02_02_BattlePerformAbility": {
-      "fileName": "2023030_Monster_XP_Elite02_02_BattlePerformAbility",
-      "abilityType": null,
+    "2023030_Monster_XP_Elite02_02_Passive01": {
+      "fileName": "2023030_Monster_XP_Elite02_02_Passive01",
+      "childAbilityList": [
+        "2023030_Monster_XP_Elite02_02_Passive01"
+      ],
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Change Character Transformation",
-          "target": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "phase": "Phase1"
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -52,113 +41,98 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"1667528367\">Monster_XP_Elite02_02_BattlePerform_LockHP</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"853497156\">Monster_XP_Elite02_02_PartControl</a>"
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-207530010\">Monster_XP_Elite02_02_Instance_DisableAction</a>",
-          "modifierFlags": [
-            "DisableAction"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1667528367\">Monster_XP_Elite02_02_BattlePerform_LockHP</a>",
-          "modifierFlags": [
-            "Deathrattle"
-          ],
+          "for": "<a class=\"gModGreen\" id=\"mod__853497156\">Monster_XP_Elite02_02_PartControl</a>",
           "execute": [
             {
-              "eventTrigger": "When Put in Deathstate Limbo",
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
               "execute": [
                 {
-                  "name": "Add Ability",
-                  "abilityName": "Monster_XP_Elite02_02_BattlePerform_Insert"
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "AIFlag",
+                        "compareType": "=",
+                        "value2": 5,
+                        "contextScope": "TargetEntity"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "AIFlag",
+                      "value": 4
+                    }
+                  ]
                 },
                 {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_XP_Elite02_02_BattlePerform_Insert",
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "SpecialFlag",
+                        "compareType": "=",
+                        "value2": 1,
+                        "contextScope": "TargetEntity"
+                      }
+                    ]
                   },
-                  "priorityTag": "EnemyDeathEffect",
-                  "ownerState": "Mask_AliveOrLimbo",
-                  "targetState": "Mask_AliveOrLimbo",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Mute Last Kill",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  }
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "SpecialFlag",
+                      "value": 2
+                    }
+                  ]
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2023030_Monster_XP_Elite02_02_InstantDirtyHPAbility": {
-      "fileName": "2023030_Monster_XP_Elite02_02_InstantDirtyHPAbility",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "SpecialFlag",
-          "value": 2
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2023030_Monster_XP_Elite02_02_MuteDirtyHPAbility": {
-      "fileName": "2023030_Monster_XP_Elite02_02_MuteDirtyHPAbility",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-241662933\">Monster_XP_Elite02_02_MuteDirtyHP</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-241662933\">Monster_XP_Elite02_02_MuteDirtyHP</a>",
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -920,127 +894,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2023030_Monster_XP_Elite02_02_Passive01": {
-      "fileName": "2023030_Monster_XP_Elite02_02_Passive01",
-      "childAbilityList": [
-        "2023030_Monster_XP_Elite02_02_Passive01"
-      ],
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"853497156\">Monster_XP_Elite02_02_PartControl</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__853497156\">Monster_XP_Elite02_02_PartControl</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "AIFlag",
-                        "compareType": "=",
-                        "value2": 5,
-                        "contextScope": "TargetEntity"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 4
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "SpecialFlag",
-                        "compareType": "=",
-                        "value2": 1,
-                        "contextScope": "TargetEntity"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "SpecialFlag",
-                      "value": 2
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "2023030_Modifiers": {
       "fileName": "2023030_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1055,6 +908,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__545314015\">Monster_XP_Elite02_02_DirtyHPSpecial</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
           "stackType": "Replace",
+          "description": "Missing Description",
+          "type": "Debuff",
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1087,15 +943,25 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Missing Description",
-          "type": "Debuff",
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-14434436\">Monster_XP_Elite02_02_DirtyHP</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
           "stackType": "Replace",
+          "description": "Decreases Maximum Restorable HP by <span class=\"descriptionNumberColor\">MDF_DirtyHPRatio_PerLayer</span>.",
+          "type": "Debuff",
+          "effectName": "Prana-Siphoned",
+          "statusName": "Prana-Siphoned",
+          "stackLimit": 3,
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+            "displayLines": "ModifierStackLayer",
+            "constants": [],
+            "variables": [
+              "ModifierStackLayer"
+            ]
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1125,24 +991,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Decreases Maximum Restorable HP by <span class=\"descriptionNumberColor\">MDF_DirtyHPRatio_PerLayer</span>.",
-          "type": "Debuff",
-          "effectName": "Prana-Siphoned",
-          "statusName": "Prana-Siphoned",
-          "stackLimit": 3,
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1633463751\">Monster_XP_Elite02_02_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Japa</span>]",
+          "description": "Uses Black Prana's Snare on all targets during the next action.",
+          "type": "Buff",
+          "effectName": "Japa",
+          "statusName": "Japa",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1164,13 +1021,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Uses Black Prana's Snare on all targets during the next action.",
-          "type": "Buff",
-          "effectName": "Japa",
-          "statusName": "Japa"
+          ]
         }
       ],
       "references": []

@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__361999223\">LC_23048_Sub</a>[<span class=\"descriptionNumberColor\">Skill DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases Skill DMG dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P4_Skill02DamageAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "Skill DMG Boost",
+      "statusName": "Skill DMG Boost",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -45,11 +49,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Skill DMG dealt by <span class=\"descriptionNumberColor\">#SkillEquip_P4_Skill02DamageAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "Skill DMG Boost",
-      "statusName": "Skill DMG Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -138,9 +138,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

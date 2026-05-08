@@ -148,9 +148,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -216,9 +214,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -265,9 +261,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -276,14 +270,24 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1985962154\">Phainon_Guard</a>[<span class=\"descriptionNumberColor\">Soulscorch</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyRatio"
+      ],
+      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. Launches Counter after enemy targets finish taking actions.",
+      "type": "Buff",
+      "effectName": "Soulscorch",
+      "statusName": "Soulscorch",
+      "stackLimit": 9999,
+      "removalDependencies": {
+        "name": "Removal Dependency",
+        "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
+      },
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -648,30 +652,6 @@ const configAbility = {
           ]
         }
       ],
-      "variableValueChange": [
-        {
-          "name": "Variable Value Changes",
-          "variableName": "MDF_Count",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                    "displayLines": "MDF_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Count"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
@@ -781,25 +761,34 @@ const configAbility = {
           ]
         }
       ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. Launches Counter after enemy targets finish taking actions.",
-      "type": "Buff",
-      "effectName": "Soulscorch",
-      "statusName": "Soulscorch",
-      "stackLimit": 9999,
-      "removalDependencies": {
-        "name": "Removal Dependency",
-        "dependancyName": "<a class=\"gModGreen\" id=\"1136992241\">Phainon_Ultra</a>[<span class=\"descriptionNumberColor\">Divine Vessel</span>]"
-      }
+      "variableValueChange": [
+        {
+          "name": "Variable Value Changes",
+          "variableName": "MDF_Count",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "whenValueChanges": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (MDF_Count) || RETURN",
+                    "displayLines": "MDF_Count",
+                    "constants": [],
+                    "variables": [
+                      "MDF_Count"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-389259557\">M_Phainon_Ability21_Insert_Preshow</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",

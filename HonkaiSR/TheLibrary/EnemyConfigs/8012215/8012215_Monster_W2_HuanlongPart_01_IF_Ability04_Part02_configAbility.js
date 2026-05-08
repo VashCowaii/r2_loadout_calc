@@ -388,6 +388,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-913053505\">Monster_W2_HuanlongPart_01_IF_Ability04_SetDamage</a>",
+      "latentQueue": [
+        "PartDecisionFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -426,11 +429,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "SkillUltra_DamagePercentage",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_213) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_213",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12300) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12300",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_213"
+                      "UnusedUnderThisBase_12300"
                     ]
                   }
                 }
@@ -453,11 +456,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "SkillUltra_DamagePercentage",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_212) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_212",
+                    "operator": "Variables[0] (UnusedUnderThisBase_8691) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_8691",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_212"
+                      "UnusedUnderThisBase_8691"
                     ]
                   }
                 }
@@ -480,11 +483,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "SkillUltra_DamagePercentage",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_211) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_211",
+                    "operator": "Variables[0] (UnusedUnderThisBase_8669) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_8669",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_211"
+                      "UnusedUnderThisBase_8669"
                     ]
                   }
                 }
@@ -507,11 +510,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "SkillUltra_DamagePercentage",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_210) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_210",
+                    "operator": "Variables[0] (UnusedUnderThisBase_8670) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_8670",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_210"
+                      "UnusedUnderThisBase_8670"
                     ]
                   }
                 }
@@ -833,15 +836,15 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "PartDecisionFlag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1389512631\">Monster_W2_HuanlongPart_IF_TurnChoise</a>",
+      "latentQueue": [
+        "PartDecisionFlag",
+        "AIFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -895,11 +898,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "PartDecisionFlag",
-        "AIFlag"
       ]
     }
   ]

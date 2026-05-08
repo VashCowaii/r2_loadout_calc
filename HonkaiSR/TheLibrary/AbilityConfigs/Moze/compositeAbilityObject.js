@@ -3,6 +3,9 @@ const compositeAbilityObject = {
   "fullCharacterName": "Moze",
   "trimCharacterName": "Moze",
   "abilityList": [
+    "Moze_Modifiers",
+    "Moze_LocalPlayer_StandardAbility_AttackBreak",
+    "Moze_LocalPlayer_Moze_NormalAtk01",
     "Moze_Moze_TechniqueInLevel",
     "Moze_Moze_Insert_Part01_Eidolon6Extra",
     "Moze_Moze_Insert_Part01",
@@ -13,10 +16,1340 @@ const compositeAbilityObject = {
     "Moze_Moze_Ability02_Part02",
     "Moze_Moze_Ability02_Part01",
     "Moze_Moze_Ability01_Part02",
-    "Moze_Moze_Ability01_Part01",
-    "Moze_Modifiers"
+    "Moze_Moze_Ability01_Part01"
   ],
   "abilityObject": {
+    "Moze_Modifiers": {
+      "fileName": "Moze_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1998221839\">ADV_Modifier_MazeEffect_Moze</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "modifierFlags": [
+            "Stealth"
+          ],
+          "duration": 20,
+          "onCreation": [
+            {
+              "name": "Overworld Filter Enemies",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Task Action Target}}"
+                  },
+                  "modifier": null,
+                  "ID": "1000118(null)"
+                }
+              ]
+            }
+          ],
+          "onStageExit": [
+            "Modifier Deletes Itself"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1731516452\">ADV_Modifier_Maze_Moze</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "duration": 20,
+          "onStageExit": [
+            "Modifier Deletes Itself"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1159155887\">ADV_StageAbility_Maze_MozeOnHitTag</a>",
+          "counter": 1,
+          "stackType": "Refresh"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1747433687\">ADV_StageAbility_Maze_Moze</a>",
+          "counter": 1,
+          "stackType": "Refresh"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1726925121\">Moze_Ability02_InShadowModifier</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "Stealth"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_SkillP01_CurrentCount",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_EnergyCost",
+                  "value": 0
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || RETURN",
+                    "displayLines": "MDF_SkillP01_CurrentCount",
+                    "constants": [],
+                    "variables": [
+                      "MDF_SkillP01_CurrentCount"
+                    ]
+                  },
+                  "maximum": {
+                    "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
+                    "displayLines": "MDF_MaxEnergy",
+                    "constants": [],
+                    "variables": [
+                      "MDF_MaxEnergy"
+                    ]
+                  },
+                  "assignState": "True",
+                  "priorState": "Disable",
+                  "bar#": 2
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                "Assign DEPARTED(Modifier: Standard_Departed)",
+                {
+                  "name": "Disable Abilities",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "abilityTypes": [
+                    "Basic ATK",
+                    "Skill"
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_SkillP01_CurrentCount",
+                  "value": {
+                    "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
+                    "displayLines": "MDF_MaxEnergy",
+                    "constants": [],
+                    "variables": [
+                      "MDF_MaxEnergy"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_EnergyCost",
+                  "value": 0
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || RETURN",
+                    "displayLines": "MDF_SkillP01_CurrentCount",
+                    "constants": [],
+                    "variables": [
+                      "MDF_SkillP01_CurrentCount"
+                    ]
+                  },
+                  "maximum": {
+                    "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
+                    "displayLines": "MDF_MaxEnergy",
+                    "constants": [],
+                    "variables": [
+                      "MDF_MaxEnergy"
+                    ]
+                  },
+                  "assignState": "True",
+                  "priorState": "Normal",
+                  "bar#": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-59329108\">Moze_InInsert_Tag</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__707417159\">Moze_Eidolon1_DeBonus</a>[<span class=\"descriptionNumberColor\">Vengewise</span>]",
+          "modifierFlags": [
+            "BlockInfect"
+          ],
+          "description": "Follow-Up ATK DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Follow-Up ATK DMG Vulnerability",
+          "statusName": "Vengewise",
+          "execute": [
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Follow-up"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__707542368\">Moze_Point01_CD</a>[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "The Trace \"Nightfeather\" effect's auto-trigger is still on cooldown.",
+          "type": "Other",
+          "statusName": "Nightfeather"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]",
+          "modifierFlags": [
+            "KeepOnDeathrattle",
+            "BlockInfect",
+            "RemoveWhenOwnerUnstage"
+          ],
+          "description": "This unit is marked as \"Prey.\" After every time it receives an attack, it will receive Lightning Additional DMG equal to <span class=\"descriptionNumberColor\">#SkillP01_P1_ExtraDamagePercentage</span> of Moze's ATK, and Moze will consume 1 point of Charge.",
+          "type": "Debuff",
+          "effectName": "Prey",
+          "statusName": "Prey",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"707417159\">Moze_Eidolon1_DeBonus</a>[<span class=\"descriptionNumberColor\">Vengewise</span>]"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "CurrentHP",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "Deathrattle",
+                    "invertCondition": true
+                  }
+                },
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Turn End [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_SkillP01_CurrentCount",
+                    "compareType": "=",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
+                    },
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+                          "value": "MDF_TotalDamage"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Modifier Description",
+                      "popUpText": "This unit is marked as the Prey. After every attack it receives, it will receive Lightning Additional DMG equal to <span class=\"descriptionNumberColor\">#SkillP01_P1_ExtraDamagePercentage</span> of Moze's ATK, and Moze will consume 1 point of Charge. When ally targets attack the enemy marked as \"Prey,\" the CRIT DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_TotalDamage</span>."
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_TotalDamage",
+                      "value": {
+                        "operator": "Variables[0] (0.4) || RETURN",
+                        "displayLines": "0.4",
+                        "constants": [],
+                        "variables": [
+                          0.4
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Trace Activated",
+                    "conditionList": "Vengewise"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"707417159\">Moze_Eidolon1_DeBonus</a>[<span class=\"descriptionNumberColor\">Vengewise</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.25) || RETURN",
+                          "displayLines": "0.25",
+                          "constants": [],
+                          "variables": [
+                            0.25
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Attacked End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      }
+                    },
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Thunder",
+                        "Damage": {
+                          "operator": "Variables[0] (0.3) || RETURN",
+                          "displayLines": "0.3",
+                          "constants": [],
+                          "variables": [
+                            0.3
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Additional DMG"
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Eidolon Activated",
+                        "eidolon": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "Update Energy",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "value": {
+                            "operator": "Variables[0] (2) || RETURN",
+                            "displayLines": "2",
+                            "constants": [],
+                            "variables": [
+                              2
+                            ]
+                          },
+                          "isFixed": "* ERR"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-59329108\">Moze_InInsert_Tag</a>",
+                        "invertCondition": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_SkillP01_CurrentCount",
+                          "value": {
+                            "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || Constants[0] (1) || SUB || RETURN",
+                            "displayLines": "(MDF_SkillP01_CurrentCount - 1)",
+                            "constants": [
+                              1
+                            ],
+                            "variables": [
+                              "MDF_SkillP01_CurrentCount"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_EnergyCost",
+                          "value": {
+                            "operator": "Variables[0] (MDF_EnergyCost) || Constants[0] (1) || ADD || RETURN",
+                            "displayLines": "(MDF_EnergyCost + 1)",
+                            "constants": [
+                              1
+                            ],
+                            "variables": [
+                              "MDF_EnergyCost"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "MDF_SkillP01_CurrentCount",
+                            "compareType": "<=",
+                            "value2": 0
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "MDF_SkillP01_CurrentCount",
+                              "value": 0
+                            }
+                          ]
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "OR",
+                            "conditionList": [
+                              {
+                                "name": "Compare: Variable",
+                                "value1": "MDF_EnergyCost",
+                                "compareType": "=",
+                                "value2": {
+                                  "operator": "Variables[0] (3) || Constants[0] (1) || SUB || RETURN",
+                                  "displayLines": "(3 - 1)",
+                                  "constants": [
+                                    1
+                                  ],
+                                  "variables": [
+                                    3
+                                  ]
+                                }
+                              },
+                              {
+                                "name": "Compare: Variable",
+                                "value1": "MDF_EnergyCost",
+                                "compareType": "=",
+                                "value2": {
+                                  "operator": "Variables[0] (3) || Constants[0] (2) || ADD || RETURN",
+                                  "displayLines": "(3 + 2)",
+                                  "constants": [
+                                    2
+                                  ],
+                                  "variables": [
+                                    3
+                                  ]
+                                }
+                              },
+                              {
+                                "name": "Compare: Variable",
+                                "value1": "MDF_EnergyCost",
+                                "compareType": "=",
+                                "value2": {
+                                  "operator": "Variables[0] (3) || Constants[0] (5) || ADD || RETURN",
+                                  "displayLines": "(3 + 5)",
+                                  "constants": [
+                                    5
+                                  ],
+                                  "variables": [
+                                    3
+                                  ]
+                                }
+                              }
+                            ]
+                          },
+                          "passed": [
+                            {
+                              "name": "Update Displayed Energy Bar",
+                              "value": {
+                                "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || RETURN",
+                                "displayLines": "MDF_SkillP01_CurrentCount",
+                                "constants": [],
+                                "variables": [
+                                  "MDF_SkillP01_CurrentCount"
+                                ]
+                              },
+                              "maximum": {
+                                "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
+                                "displayLines": "MDF_MaxEnergy",
+                                "constants": [],
+                                "variables": [
+                                  "MDF_MaxEnergy"
+                                ]
+                              },
+                              "assignState": "True",
+                              "priorState": "Active",
+                              "bar#": 2
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Compare: Variable",
+                                "value1": "MDF_SkillP01_CurrentCount",
+                                "compareType": ">=",
+                                "value2": 1
+                              },
+                              "passed": [
+                                {
+                                  "name": "Update Displayed Energy Bar",
+                                  "value": {
+                                    "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || RETURN",
+                                    "displayLines": "MDF_SkillP01_CurrentCount",
+                                    "constants": [],
+                                    "variables": [
+                                      "MDF_SkillP01_CurrentCount"
+                                    ]
+                                  },
+                                  "maximum": {
+                                    "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
+                                    "displayLines": "MDF_MaxEnergy",
+                                    "constants": [],
+                                    "variables": [
+                                      "MDF_MaxEnergy"
+                                    ]
+                                  },
+                                  "assignState": "True",
+                                  "priorState": "Normal",
+                                  "bar#": 2
+                                }
+                              ],
+                              "failed": [
+                                {
+                                  "name": "Update Displayed Energy Bar",
+                                  "value": {
+                                    "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || RETURN",
+                                    "displayLines": "MDF_SkillP01_CurrentCount",
+                                    "constants": [],
+                                    "variables": [
+                                      "MDF_SkillP01_CurrentCount"
+                                    ]
+                                  },
+                                  "maximum": {
+                                    "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
+                                    "displayLines": "MDF_MaxEnergy",
+                                    "constants": [],
+                                    "variables": [
+                                      "MDF_MaxEnergy"
+                                    ]
+                                  },
+                                  "assignState": "True",
+                                  "priorState": "Disable",
+                                  "bar#": 2
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "MDF_EnergyCost",
+                            "compareType": ">=",
+                            "value2": {
+                              "operator": "Variables[0] (3) || RETURN",
+                              "displayLines": "3",
+                              "constants": [],
+                              "variables": [
+                                3
+                              ]
+                            }
+                          },
+                          "passed": [
+                            {
+                              "name": "Inject Ability Use",
+                              "condition": {
+                                "name": "Insert Ability Condition",
+                                "type": "AbilityOwnerInsertUnusedCount",
+                                "typeValue": 1
+                              },
+                              "abilityName": "Moze_Insert_Part01",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "priorityTag": "CharacterAttackFromSelf",
+                              "canHitNonTargets": true,
+                              "showInActionOrder": true,
+                              "abortFlags": [
+                                "STAT_CTRL",
+                                "DisableAction"
+                              ],
+                              "allowAbilityTriggers": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Update Target Selected(UI) [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Target Count SUM",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
+                        "conditions": {
+                          "name": "Compare: Target",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Toggle Skill Mark",
+                      "toggle": true,
+                      "trigger": "State_Active"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Toggle Skill Mark",
+                      "toggle": true,
+                      "trigger": "State_Normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Active Ability Chosen [Anyone]",
+              "execute": [
+                {
+                  "name": "Toggle Skill Mark",
+                  "toggle": true
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Member Removed from Team [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Get Revived [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_EnergyCost",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (3) || RETURN",
+                      "displayLines": "3",
+                      "constants": [],
+                      "variables": [
+                        3
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Inject Ability Use",
+                      "condition": {
+                        "name": "Insert Ability Condition",
+                        "type": "AbilityOwnerInsertUnusedCount",
+                        "typeValue": 1
+                      },
+                      "abilityName": "Moze_Insert_Part01",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "priorityTag": "CharacterAttackFromSelf",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "abortFlags": [
+                        "STAT_CTRL",
+                        "DisableAction"
+                      ],
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Unselectable Adjustment [Owner]: Start",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1728393079\">Moze_InsertAction_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Update Ability Properties",
+                  "abilityTagList": [
+                    "Skill02"
+                  ],
+                  "propertyList": [
+                    {
+                      "name": "Ability Property Action",
+                      "propertyName": "Skill Point Cost",
+                      "propertyAction": "Remove",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Update Ability Properties",
+                  "abilityTagList": [
+                    "Skill02"
+                  ],
+                  "propertyList": [
+                    {
+                      "name": "Ability Property Action",
+                      "propertyName": "Skill Point Cost",
+                      "propertyAction": "Remove"
+                    }
+                  ]
+                },
+                {
+                  "name": "Disable Abilities",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "abilityTypes": [
+                    "Basic ATK"
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Skill"
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "Moze_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Moze_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Moze_LocalPlayer_Moze_NormalAtk01": {
+      "fileName": "Moze_LocalPlayer_Moze_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier (OVERWORLD)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1731516452\">ADV_Modifier_Maze_Moze</a>"
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": "Ability Has a Target",
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": null,
+                  "overworldID": 122302
+                },
+                {
+                  "name": "Overworld Attack Instance",
+                  "onAttack": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "122304(SkillMaze)"
+                    }
+                  ],
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "122301(SkillMaze)"
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": null,
+                  "overworldID": 122303
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier (OVERWORLD)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1159155887\">ADV_StageAbility_Maze_MozeOnHitTag</a>"
+                  }
+                }
+              ],
+              "failed": [
+                "Deleted bullshit",
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": null,
+                  "overworldID": 122302
+                },
+                {
+                  "name": "Overworld Attack Instance",
+                  "onAttack": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "122304(SkillMaze)"
+                    }
+                  ],
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "122301(SkillMaze)"
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": null,
+                  "overworldID": 122303
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier (OVERWORLD)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1159155887\">ADV_StageAbility_Maze_MozeOnHitTag</a>"
+                  }
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": "Ability Has a Target",
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Shot Fired",
+                  "execute": [
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "projectileFinished": [
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                "Deleted bullshit",
+                {
+                  "name": "Shot Fired",
+                  "execute": [
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "projectileFinished": [
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
     "Moze_Moze_TechniqueInLevel": {
       "fileName": "Moze_Moze_TechniqueInLevel",
       "childAbilityList": [
@@ -45,6 +1378,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2094982629\">Moze_TechniqueUsage_DamageUpModifier</a>[<span class=\"descriptionNumberColor\">Bated Wings</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Bated Wings",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -67,12 +1405,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Bated Wings",
-          "duration": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -129,9 +1462,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1591,9 +2922,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2209,9 +3538,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2286,9 +3613,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2327,9 +3652,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2520,6 +3843,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1395014383\">Moze_Ability03_DamageAddModifier</a>[<span class=\"descriptionNumberColor\">Heathprowler</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_DamageAddRatio"
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageAddRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Heathprowler",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2542,19 +3872,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageAddRatio"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageAddRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Heathprowler"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1536415722\">M_Moze_Ultimate_AddRegardAsAttackType</a>",
+          "duration": 1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2597,8 +3920,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "duration": 1
+          ]
         }
       ],
       "targetObjectData": {
@@ -2948,902 +4270,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Moze_Modifiers": {
-      "fileName": "Moze_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1726925121\">Moze_Ability02_InShadowModifier</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "Stealth"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillP01_CurrentCount",
-                  "value": 0
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_EnergyCost",
-                  "value": 0
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || RETURN",
-                    "displayLines": "MDF_SkillP01_CurrentCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SkillP01_CurrentCount"
-                    ]
-                  },
-                  "maximum": {
-                    "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
-                    "displayLines": "MDF_MaxEnergy",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxEnergy"
-                    ]
-                  },
-                  "assignState": "True",
-                  "priorState": "Disable",
-                  "bar#": 2
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                "Assign DEPARTED(Modifier: Standard_Departed)",
-                {
-                  "name": "Disable Abilities",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "abilityTypes": [
-                    "Basic ATK",
-                    "Skill"
-                  ]
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillP01_CurrentCount",
-                  "value": {
-                    "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
-                    "displayLines": "MDF_MaxEnergy",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxEnergy"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_EnergyCost",
-                  "value": 0
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || RETURN",
-                    "displayLines": "MDF_SkillP01_CurrentCount",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SkillP01_CurrentCount"
-                    ]
-                  },
-                  "maximum": {
-                    "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
-                    "displayLines": "MDF_MaxEnergy",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxEnergy"
-                    ]
-                  },
-                  "assignState": "True",
-                  "priorState": "Normal",
-                  "bar#": 2
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-59329108\">Moze_InInsert_Tag</a>",
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__707417159\">Moze_Eidolon1_DeBonus</a>[<span class=\"descriptionNumberColor\">Vengewise</span>]",
-          "modifierFlags": [
-            "BlockInfect"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Attack Type",
-                    "attackTypes": [
-                      "Follow-up"
-                    ],
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Defender",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                          "value": "MDF_PropertyValue"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "description": "Follow-Up ATK DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Follow-Up ATK DMG Vulnerability",
-          "statusName": "Vengewise"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__707542368\">Moze_Point01_CD</a>[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The Trace \"Nightfeather\" effect's auto-trigger is still on cooldown.",
-          "type": "Other",
-          "statusName": "Nightfeather"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]",
-          "modifierFlags": [
-            "KeepOnDeathrattle",
-            "BlockInfect",
-            "RemoveWhenOwnerUnstage"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"707417159\">Moze_Eidolon1_DeBonus</a>[<span class=\"descriptionNumberColor\">Vengewise</span>]"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "CurrentHP",
-                    "compareType": ">",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "flagName": "Deathrattle",
-                    "invertCondition": true
-                  }
-                },
-                {
-                  "name": "Toggle Skill Mark"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn End [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_SkillP01_CurrentCount",
-                    "compareType": "=",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
-                    },
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 2
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                          "value": "MDF_TotalDamage"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 2
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Modifier Description",
-                      "popUpText": "This unit is marked as the Prey. After every attack it receives, it will receive Lightning Additional DMG equal to <span class=\"descriptionNumberColor\">#SkillP01_P1_ExtraDamagePercentage</span> of Moze's ATK, and Moze will consume 1 point of Charge. When ally targets attack the enemy marked as \"Prey,\" the CRIT DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_TotalDamage</span>."
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalDamage",
-                      "value": {
-                        "operator": "Variables[0] (0.4) || RETURN",
-                        "displayLines": "0.4",
-                        "constants": [],
-                        "variables": [
-                          0.4
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Trace Activated",
-                    "conditionList": "Vengewise"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"707417159\">Moze_Eidolon1_DeBonus</a>[<span class=\"descriptionNumberColor\">Vengewise</span>]",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Attacked End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Player Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      }
-                    },
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Thunder",
-                        "Damage": {
-                          "operator": "Variables[0] (0.3) || RETURN",
-                          "displayLines": "0.3",
-                          "constants": [],
-                          "variables": [
-                            0.3
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Additional DMG"
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Eidolon Activated",
-                        "eidolon": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Update Energy",
-                          "on": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "value": {
-                            "operator": "Variables[0] (2) || RETURN",
-                            "displayLines": "2",
-                            "constants": [],
-                            "variables": [
-                              2
-                            ]
-                          },
-                          "isFixed": "* ERR"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-59329108\">Moze_InInsert_Tag</a>",
-                        "invertCondition": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "MDF_SkillP01_CurrentCount",
-                          "value": {
-                            "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || Constants[0] (1) || SUB || RETURN",
-                            "displayLines": "(MDF_SkillP01_CurrentCount - 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_SkillP01_CurrentCount"
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "MDF_EnergyCost",
-                          "value": {
-                            "operator": "Variables[0] (MDF_EnergyCost) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_EnergyCost + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_EnergyCost"
-                            ]
-                          }
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "value1": "MDF_SkillP01_CurrentCount",
-                            "compareType": "<=",
-                            "value2": 0
-                          },
-                          "passed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "MDF_SkillP01_CurrentCount",
-                              "value": 0
-                            }
-                          ]
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "OR",
-                            "conditionList": [
-                              {
-                                "name": "Compare: Variable",
-                                "value1": "MDF_EnergyCost",
-                                "compareType": "=",
-                                "value2": {
-                                  "operator": "Variables[0] (3) || Constants[0] (1) || SUB || RETURN",
-                                  "displayLines": "(3 - 1)",
-                                  "constants": [
-                                    1
-                                  ],
-                                  "variables": [
-                                    3
-                                  ]
-                                }
-                              },
-                              {
-                                "name": "Compare: Variable",
-                                "value1": "MDF_EnergyCost",
-                                "compareType": "=",
-                                "value2": {
-                                  "operator": "Variables[0] (3) || Constants[0] (2) || ADD || RETURN",
-                                  "displayLines": "(3 + 2)",
-                                  "constants": [
-                                    2
-                                  ],
-                                  "variables": [
-                                    3
-                                  ]
-                                }
-                              },
-                              {
-                                "name": "Compare: Variable",
-                                "value1": "MDF_EnergyCost",
-                                "compareType": "=",
-                                "value2": {
-                                  "operator": "Variables[0] (3) || Constants[0] (5) || ADD || RETURN",
-                                  "displayLines": "(3 + 5)",
-                                  "constants": [
-                                    5
-                                  ],
-                                  "variables": [
-                                    3
-                                  ]
-                                }
-                              }
-                            ]
-                          },
-                          "passed": [
-                            {
-                              "name": "Update Displayed Energy Bar",
-                              "value": {
-                                "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || RETURN",
-                                "displayLines": "MDF_SkillP01_CurrentCount",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_SkillP01_CurrentCount"
-                                ]
-                              },
-                              "maximum": {
-                                "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
-                                "displayLines": "MDF_MaxEnergy",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxEnergy"
-                                ]
-                              },
-                              "assignState": "True",
-                              "priorState": "Active",
-                              "bar#": 2
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Variable",
-                                "value1": "MDF_SkillP01_CurrentCount",
-                                "compareType": ">=",
-                                "value2": 1
-                              },
-                              "passed": [
-                                {
-                                  "name": "Update Displayed Energy Bar",
-                                  "value": {
-                                    "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || RETURN",
-                                    "displayLines": "MDF_SkillP01_CurrentCount",
-                                    "constants": [],
-                                    "variables": [
-                                      "MDF_SkillP01_CurrentCount"
-                                    ]
-                                  },
-                                  "maximum": {
-                                    "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
-                                    "displayLines": "MDF_MaxEnergy",
-                                    "constants": [],
-                                    "variables": [
-                                      "MDF_MaxEnergy"
-                                    ]
-                                  },
-                                  "assignState": "True",
-                                  "priorState": "Normal",
-                                  "bar#": 2
-                                }
-                              ],
-                              "failed": [
-                                {
-                                  "name": "Update Displayed Energy Bar",
-                                  "value": {
-                                    "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || RETURN",
-                                    "displayLines": "MDF_SkillP01_CurrentCount",
-                                    "constants": [],
-                                    "variables": [
-                                      "MDF_SkillP01_CurrentCount"
-                                    ]
-                                  },
-                                  "maximum": {
-                                    "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
-                                    "displayLines": "MDF_MaxEnergy",
-                                    "constants": [],
-                                    "variables": [
-                                      "MDF_MaxEnergy"
-                                    ]
-                                  },
-                                  "assignState": "True",
-                                  "priorState": "Disable",
-                                  "bar#": 2
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "value1": "MDF_EnergyCost",
-                            "compareType": ">=",
-                            "value2": {
-                              "operator": "Variables[0] (3) || RETURN",
-                              "displayLines": "3",
-                              "constants": [],
-                              "variables": [
-                                3
-                              ]
-                            }
-                          },
-                          "passed": [
-                            {
-                              "name": "Inject Ability Use",
-                              "condition": {
-                                "name": "Insert Ability Condition",
-                                "type": "AbilityOwnerInsertUnusedCount",
-                                "typeValue": 1
-                              },
-                              "abilityName": "Moze_Insert_Part01",
-                              "abilitySource": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "abilityTarget": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "priorityTag": "CharacterAttackFromSelf",
-                              "canHitNonTargets": true,
-                              "showInActionOrder": true,
-                              "abortFlags": [
-                                "STAT_CTRL",
-                                "DisableAction"
-                              ],
-                              "allowAbilityTriggers": false
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "Toggle Skill Mark"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "Toggle Skill Mark"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Update Target Selected(UI) [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Target Count SUM",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Player's Aim Target List}}"
-                        },
-                        "conditions": {
-                          "name": "Compare: Target",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "target2": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Toggle Skill Mark",
-                      "toggle": true,
-                      "trigger": "State_Active"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Toggle Skill Mark",
-                      "toggle": true,
-                      "trigger": "State_Normal"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Active Ability Chosen [Anyone]",
-              "execute": [
-                {
-                  "name": "Toggle Skill Mark",
-                  "toggle": true
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Member Removed from Team [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1612096231\">Moze_Ability02_ShadowTargetModifier</a>[<span class=\"descriptionNumberColor\">Prey</span>]"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Get Revived [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_EnergyCost",
-                    "compareType": ">=",
-                    "value2": {
-                      "operator": "Variables[0] (3) || RETURN",
-                      "displayLines": "3",
-                      "constants": [],
-                      "variables": [
-                        3
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "Moze_Insert_Part01",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "priorityTag": "CharacterAttackFromSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "abortFlags": [
-                        "STAT_CTRL",
-                        "DisableAction"
-                      ],
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Unselectable Adjustment [Owner]: Start",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1726925121\">Moze_Ability02_InShadowModifier</a>"
-                },
-                "Modifier Deletes Itself"
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "This unit is marked as \"Prey.\" After every time it receives an attack, it will receive Lightning Additional DMG equal to <span class=\"descriptionNumberColor\">#SkillP01_P1_ExtraDamagePercentage</span> of Moze's ATK, and Moze will consume 1 point of Charge.",
-          "type": "Debuff",
-          "effectName": "Prey",
-          "statusName": "Prey"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1728393079\">Moze_InsertAction_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Update Ability Properties",
-                  "abilityTagList": [
-                    "Skill02"
-                  ],
-                  "propertyList": [
-                    {
-                      "name": "Ability Property Action",
-                      "propertyName": "Skill Point Cost",
-                      "propertyAction": "Remove",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Update Ability Properties",
-                  "abilityTagList": [
-                    "Skill02"
-                  ],
-                  "propertyList": [
-                    {
-                      "name": "Ability Property Action",
-                      "propertyName": "Skill Point Cost",
-                      "propertyAction": "Remove"
-                    }
-                  ]
-                },
-                {
-                  "name": "Disable Abilities",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "abilityTypes": [
-                    "Basic ATK"
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Skill"
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": []
     }
   }
 }

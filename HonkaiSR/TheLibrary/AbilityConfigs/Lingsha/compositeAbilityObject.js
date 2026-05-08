@@ -3,23 +3,1087 @@ const compositeAbilityObject = {
   "fullCharacterName": "Lingsha",
   "trimCharacterName": "Lingsha",
   "abilityList": [
+    "Lingsha_Modifiers",
+    "Lingsha_LocalPlayer_StandardAbility_AttackBreak",
+    "Lingsha_LocalPlayer_Lingsha_TechniqueUsage",
+    "Lingsha_LocalPlayer_Lingsha_NormalAtk01",
     "Lingsha_Lingsha_TechniqueInLevel",
+    "Lingsha_Lingsha_BPAbility_BattleEvent_Part02",
     "Lingsha_Lingsha_PassiveAbility01",
     "Lingsha_Lingsha_Ability03_Part02",
     "Lingsha_Lingsha_Ability03_Part01",
     "Lingsha_Lingsha_Ability03_EnterReady",
-    "Lingsha_Lingsha_BPAbility_BattleEvent_Part02",
-    "Lingsha_Lingsha_BPAbility_BattleEvent_Part01",
-    "Lingsha_Lingsha_BE_PassiveAbility",
     "Lingsha_Lingsha_Ability02_Part02",
     "Lingsha_Lingsha_Ability02_Part01",
     "Lingsha_Lingsha_Ability01_Part02",
     "Lingsha_Lingsha_Ability01_Part01",
-    "Lingsha_Modifiers",
     "Lingsha_Functions",
     "Lingsha_BE_BattleEvents"
   ],
   "abilityObject": {
+    "Lingsha_Modifiers": {
+      "fileName": "Lingsha_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1616123582\">ADV_StageAbility_Maze_Lingsha</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1203114075\">Lingsha_Eidolon6_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Arcadia Under Deep Seclusion</span>]",
+          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "All-Type RES Reduction",
+          "statusName": "Arcadia Under Deep Seclusion",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1458980452\">Lingsha_Eidolon6_Listen</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1203114075\">Lingsha_Eidolon6_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Arcadia Under Deep Seclusion</span>]",
+              "aliveOnly": "False",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.2) || RETURN",
+                  "displayLines": "0.2",
+                  "constants": [],
+                  "variables": [
+                    0.2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-962483629\">Lingsha_Eidolon2_BreakDamageAttackRatio</a>[<span class=\"descriptionNumberColor\">Leisure in Carmine Smokeveil</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Break Effect Boost",
+          "statusName": "Leisure in Carmine Smokeveil",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-127930650\">Lingsha_Eidolon1_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">Bloom on Vileward Bouquet</span>]",
+          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "Bloom on Vileward Bouquet",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_DefenceDown"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1709120566\">Lingsha_Eidolon1_ListenBreak</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: Start [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>",
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (Rank01_MDF_PropertyValue) || RETURN",
+                      "displayLines": "Rank01_MDF_PropertyValue",
+                      "constants": [],
+                      "variables": [
+                        "Rank01_MDF_PropertyValue"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-127930650\">Lingsha_Eidolon1_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">Bloom on Vileward Bouquet</span>]",
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (Rank01_MDF_PropertyValue) || RETURN",
+                      "displayLines": "Rank01_MDF_PropertyValue",
+                      "constants": [],
+                      "variables": [
+                        "Rank01_MDF_PropertyValue"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1721297245\">Lingsha_Eidolon1_Listen</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__551246003\">Lingsha_PointB3_CD</a>[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "The Trace \"Ember's Echo\" effect's auto-trigger is still on cooldown.",
+          "type": "Other",
+          "statusName": "Ember's Echo",
+          "duration": 1
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__210278197\">Lingsha_PointB3_OnListen</a>",
+          "modifierFlags": [
+            "CustomEvent_InfiniteRefresh"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "HP Change [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "ParameterValue",
+                        "compareType": "<",
+                        "value2": 0
+                      },
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
+                      "searchRandom": true,
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value1": "CurrentHP",
+                        "compareType": ">",
+                        "value2": 0
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Battle Event's Caster}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"551246003\">Lingsha_PointB3_CD</a>[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
+                            "invertCondition": true
+                          },
+                          "passed": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "AND",
+                                "conditionList": [
+                                  {
+                                    "name": "Compare: Variable",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Parameter Target}}"
+                                    },
+                                    "value1": "CurrentHP%",
+                                    "compareType": "<=",
+                                    "value2": {
+                                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
+                                      "displayLines": "MDF_HPRatio",
+                                      "constants": [],
+                                      "variables": [
+                                        "MDF_HPRatio"
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "name": "Has Flag",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Battle Event's Caster}}"
+                                    },
+                                    "flagName": "STAT_CTRL_UnOperable",
+                                    "invertCondition": true,
+                                    "justAddedOrLiving": true
+                                  }
+                                ]
+                              },
+                              "passed": [
+                                {
+                                  "name": "Define Custom Variable",
+                                  "variableName": "BattleEvent_Lingsha_00_PointB3",
+                                  "value": 1
+                                },
+                                {
+                                  "name": "Inject Ability Use",
+                                  "condition": {
+                                    "name": "Insert Ability Condition",
+                                    "type": "AbilityOwnerInsertUnusedCount",
+                                    "typeValue": 1
+                                  },
+                                  "conditionActive": {
+                                    "name": "Has Flag",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Battle Event's Caster}}"
+                                    },
+                                    "flagName": "STAT_CTRL_UnOperable",
+                                    "invertCondition": true,
+                                    "justAddedOrLiving": true
+                                  },
+                                  "abilityName": "Lingsha_BPAbility_BattleEvent_Part01",
+                                  "abilitySource": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
+                                  "abilityTarget": {
+                                    "name": "Target Name",
+                                    "target": "{{Hostile Entities(AOE)}}"
+                                  },
+                                  "priorityTag": "CharacterAttackFromSelf",
+                                  "ownerState": "Mask_AliveOrRevivable",
+                                  "canHitNonTargets": true,
+                                  "showInActionOrder": true,
+                                  "abortFlags": [
+                                    "DisableAction",
+                                    "STAT_CTRL"
+                                  ],
+                                  "allowAbilityTriggers": false
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Custom Event",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "BattleEvent_Lingsha_00_PointB3",
+                    "compareType": ">=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "searchRandom": true,
+                      "maxTargets": 1,
+                      "conditions": {
+                        "name": "Target Exists",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "living": true
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "Inject Ability Use",
+                          "condition": {
+                            "name": "Insert Ability Condition",
+                            "type": "AbilityOwnerInsertUnusedCount",
+                            "typeValue": 1
+                          },
+                          "abilityName": "Lingsha_BPAbility_BattleEvent_Part01",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
+                          "priorityTag": "CharacterAttackFromSelf",
+                          "ownerState": "Mask_AliveOrRevivable",
+                          "canHitNonTargets": true,
+                          "showInActionOrder": true,
+                          "allowAbilityTriggers": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "New Enemy Wave",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "BattleEvent_Lingsha_00_PointB3",
+                    "compareType": ">=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "searchRandom": true,
+                      "maxTargets": 1,
+                      "conditions": {
+                        "name": "Target Exists",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "living": true
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "Inject Ability Use",
+                          "condition": {
+                            "name": "Insert Ability Condition",
+                            "type": "AbilityOwnerInsertUnusedCount",
+                            "typeValue": 1
+                          },
+                          "abilityName": "Lingsha_BPAbility_BattleEvent_Part01",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
+                          "priorityTag": "CharacterAttackFromSelf",
+                          "ownerState": "Mask_AliveOrRevivable",
+                          "canHitNonTargets": true,
+                          "showInActionOrder": true,
+                          "allowAbilityTriggers": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Get Revived [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "BattleEvent_Lingsha_00_PointB3",
+                        "compareType": ">=",
+                        "value2": 1
+                      },
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "searchRandom": true,
+                      "maxTargets": 1,
+                      "conditions": {
+                        "name": "Target Exists",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "living": true
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "Inject Ability Use",
+                          "condition": {
+                            "name": "Insert Ability Condition",
+                            "type": "AbilityOwnerInsertUnusedCount",
+                            "typeValue": 1
+                          },
+                          "abilityName": "Lingsha_BPAbility_BattleEvent_Part01",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
+                          "priorityTag": "CharacterAttackFromSelf",
+                          "ownerState": "Mask_AliveOrRevivable",
+                          "canHitNonTargets": true,
+                          "showInActionOrder": true,
+                          "allowAbilityTriggers": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
+          "stackType": "Replace",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": 0,
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Battle Event's Caster}}"
+                  },
+                  "priorState": "Normal"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Battle Event's Caster}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "Lingsha_AttackTime",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "Define Modifier Variable",
+                  "modifierName": null,
+                  "function": "Add"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_AttackTime",
+                  "value": {
+                    "operator": "Variables[0] (_AttackTime) || Constants[0] (1) || SUB || RETURN",
+                    "displayLines": "(_AttackTime - 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "_AttackTime"
+                    ]
+                  }
+                },
+                {
+                  "name": "Show Attack Time",
+                  "time": {
+                    "operator": "Variables[0] (_AttackTime) || RETURN",
+                    "displayLines": "_AttackTime",
+                    "constants": [],
+                    "variables": [
+                      "_AttackTime"
+                    ]
+                  },
+                  "on": null,
+                  "show": true
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Battle Event's Caster}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "Lingsha_AttackTime",
+                  "value": {
+                    "operator": "Variables[0] (_AttackTime) || RETURN",
+                    "displayLines": "_AttackTime",
+                    "constants": [],
+                    "variables": [
+                      "_AttackTime"
+                    ]
+                  }
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (_AttackTime) || RETURN",
+                    "displayLines": "_AttackTime",
+                    "constants": [],
+                    "variables": [
+                      "_AttackTime"
+                    ]
+                  },
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Battle Event's Caster}}"
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "_AttackTime",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (_AttackTime) || RETURN",
+                    "displayLines": "_AttackTime",
+                    "constants": [],
+                    "variables": [
+                      "_AttackTime"
+                    ]
+                  },
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Battle Event's Caster}}"
+                  }
+                },
+                {
+                  "name": "Show Attack Time",
+                  "time": {
+                    "operator": "Variables[0] (_AttackTime) || RETURN",
+                    "displayLines": "_AttackTime",
+                    "constants": [],
+                    "variables": [
+                      "_AttackTime"
+                    ]
+                  },
+                  "on": null,
+                  "show": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-637709984\">Lingsha_BreakDamageUp</a>[<span class=\"descriptionNumberColor\">Befog</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Break DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Befog",
+          "statusName": "Befog",
+          "execute": [
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Break DMG"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "Lingsha_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Lingsha_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Lingsha_LocalPlayer_Lingsha_TechniqueUsage": {
+      "fileName": "Lingsha_LocalPlayer_Lingsha_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "122201(SkillMaze)",
+          "counter": 1,
+          "duration": -1
+        },
+        "Submit Technique Use"
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Lingsha_LocalPlayer_Lingsha_NormalAtk01": {
+      "fileName": "Lingsha_LocalPlayer_Lingsha_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
     "Lingsha_Lingsha_TechniqueInLevel": {
       "fileName": "Lingsha_Lingsha_TechniqueInLevel",
       "childAbilityList": [
@@ -225,9 +1289,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -235,763 +1297,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Lingsha_Lingsha_PassiveAbility01": {
-      "fileName": "Lingsha_Lingsha_PassiveAbility01",
-      "childAbilityList": [
-        "Lingsha_Lingsha_PassiveAbility01",
-        "Lingsha_Lingsha_BPAbility_BattleEvent_Part02"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": [
-        0,
-        10,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1977976670\">Lingsha_Passive</a>"
-        },
-        {
-          "name": "Preload Battle Event(s)",
-          "eventID": [
-            11222
-          ]
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": 0,
-          "maximum": {
-            "operator": "Variables[0] (5) || RETURN",
-            "displayLines": "5",
-            "constants": [],
-            "variables": [
-              5
-            ]
-          },
-          "assignState": "True",
-          "priorState": "Normal",
-          "bar#": 4
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Trace Activated",
-            "conditionList": "Vermilion Waft"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"237515927\">Lingsha_PointB1_OnListen</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1482372912\">Lingsha_Olisten_BE_Create</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"285427978\">Lingsha_Ability_ModifyBEAction</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1907662117\">Lingsha_Ultimate_ModifyBEAction</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1721297245\">Lingsha_Eidolon1_Listen</a>",
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 6
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Lingsha_Rank06_StanceDamage",
-              "value": {
-                "operator": "Variables[0] (5) || Constants[0] (3) || MUL || RETURN",
-                "displayLines": "(5 * 3)",
-                "constants": [
-                  3
-                ],
-                "variables": [
-                  5
-                ]
-              }
-            }
-          ]
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1907662117\">Lingsha_Ultimate_ModifyBEAction</a>",
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Fuyuan}}"
-            },
-            "skillType": [
-              "Ultimate"
-            ],
-            "conditions": {
-              "name": "Compare: Variable",
-              "value1": "Lingsha_BENum",
-              "compareType": ">=",
-              "value2": 1
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": {
-                "operator": "Variables[0] (1) || INVERT || RETURN",
-                "displayLines": "-1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
-              }
-            }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__285427978\">Lingsha_Ability_ModifyBEAction</a>",
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Fuyuan}}"
-            },
-            "skillType": [
-              "Skill"
-            ],
-            "conditions": {
-              "name": "Compare: Variable",
-              "value1": "Lingsha_BENum",
-              "compareType": ">=",
-              "value2": 1
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": {
-                "operator": "Variables[0] (0.2) || INVERT || RETURN",
-                "displayLines": "-0.2",
-                "constants": [],
-                "variables": [
-                  0.2
-                ]
-              }
-            }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1482372912\">Lingsha_Olisten_BE_Create</a>",
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "entityType": "BattleEvent",
-            "entityID": 11222,
-            "skillType": [
-              "Skill"
-            ],
-            "conditions": {
-              "name": "Compare: Variable",
-              "value1": "Lingsha_BENum",
-              "compareType": "<=",
-              "value2": 0
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": {
-                "operator": "Variables[0] (0.2) || INVERT || RETURN",
-                "displayLines": "-0.2",
-                "constants": [],
-                "variables": [
-                  0.2
-                ]
-              }
-            }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-835950999\">Lingsha_PointB1_Sub2</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingConverted</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                    "displayLines": "MDF_PropertyRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-988682847\">Lingsha_PointB1_Sub</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "Lingsha_BaseAttack",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyRatio) || Variables[1] (Lingsha_BaseAttack) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyRatio * Lingsha_BaseAttack)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyRatio",
-                      "Lingsha_BaseAttack"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__237515927\">Lingsha_PointB1_OnListen</a>",
-          "modifierFlags": [
-            "ListenBattleEventSkill"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "Lingsha_BreakDamageAdded",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-988682847\">Lingsha_PointB1_Sub</a>",
-                  "valuePerStack": {
-                    "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.25) || MUL || Variables[3] (0.5) || PARAM_2 || FUNCTION || RETURN",
-                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Lingsha_BreakDamageAdded * 0.25), 0.5)",
-                      "constants": [],
-                      "variables": [
-                        "MIN",
-                        "Lingsha_BreakDamageAdded",
-                        0.25,
-                        0.5
-                      ]
-                    }
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-835950999\">Lingsha_PointB1_Sub2</a>",
-                  "valuePerStack": {
-                    "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.1) || MUL || Variables[3] (0.2) || PARAM_2 || FUNCTION || RETURN",
-                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Lingsha_BreakDamageAdded * 0.1), 0.2)",
-                      "constants": [],
-                      "variables": [
-                        "MIN",
-                        "Lingsha_BreakDamageAdded",
-                        0.1,
-                        0.2
-                      ]
-                    }
-                  }
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": -999,
-                  "maxValue": 999,
-                  "whenValueChanges": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "Lingsha_BreakDamageAdded",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-988682847\">Lingsha_PointB1_Sub</a>",
-                      "valuePerStack": {
-                        "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.25) || MUL || Variables[3] (0.5) || PARAM_2 || FUNCTION || RETURN",
-                          "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Lingsha_BreakDamageAdded * 0.25), 0.5)",
-                          "constants": [],
-                          "variables": [
-                            "MIN",
-                            "Lingsha_BreakDamageAdded",
-                            0.25,
-                            0.5
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-835950999\">Lingsha_PointB1_Sub2</a>",
-                      "valuePerStack": {
-                        "MDF_PropertyRatio": {
-                          "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.1) || MUL || Variables[3] (0.2) || PARAM_2 || FUNCTION || RETURN",
-                          "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Lingsha_BreakDamageAdded * 0.1), 0.2)",
-                          "constants": [],
-                          "variables": [
-                            "MIN",
-                            "Lingsha_BreakDamageAdded",
-                            0.1,
-                            0.2
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1977976670\">Lingsha_Passive</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Self-Made Battle-Events}}"
-                  },
-                  "ignoreHPLossTriggers": true,
-                  "ignoreDeathTriggers": true
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Eidolon Activated",
-                        "eidolon": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>"
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1709120566\">Lingsha_Eidolon1_ListenBreak</a>",
-                          "valuePerStack": {
-                            "Eidolon1_MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.2) || RETURN",
-                              "displayLines": "0.2",
-                              "constants": [],
-                              "variables": [
-                                0.2
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1709120566\">Lingsha_Eidolon1_ListenBreak</a>",
-                      "valuePerStack": {
-                        "Eidolon1_MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Lingsha_Lingsha_Ability03_Part02": {
-      "fileName": "Lingsha_Lingsha_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 2
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-962483629\">Lingsha_Eidolon2_BreakDamageAttackRatio</a>[<span class=\"descriptionNumberColor\">Leisure in Carmine Smokeveil</span>]",
-              "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
-              },
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.4) || RETURN",
-                  "displayLines": "0.4",
-                  "constants": [],
-                  "variables": [
-                    0.4
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-637709984\">Lingsha_BreakDamageUp</a>[<span class=\"descriptionNumberColor\">Befog</span>]",
-          "duration": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.25) || RETURN",
-              "displayLines": "0.25",
-              "constants": [],
-              "variables": [
-                0.25
-              ]
-            }
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] (1.5) || RETURN",
-              "displayLines": "1.5",
-              "constants": [],
-              "variables": [
-                1.5
-              ]
-            },
-            "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
-            },
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Heal",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members}}"
-          },
-          "healPercent": {
-            "operator": "Variables[0] (0.12) || RETURN",
-            "displayLines": "0.12",
-            "constants": [],
-            "variables": [
-              0.12
-            ]
-          },
-          "healFlat": {
-            "operator": "Variables[0] (360) || RETURN",
-            "displayLines": "360",
-            "constants": [],
-            "variables": [
-              360
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "Lingsha_BENum",
-            "compareType": ">=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Self-Made Battle-Events}}"
-              },
-              "advanceType": "Advance",
-              "multiAdd": "-1"
-            }
-          ]
-        },
-        "Trigger: Skip Death Handling",
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Lingsha_Lingsha_Ability03_Part01": {
-      "fileName": "Lingsha_Lingsha_Ability03_Part01",
-      "childAbilityList": [
-        "Lingsha_Lingsha_Ability03_Camera",
-        "Lingsha_Lingsha_Ability03_EnterReady",
-        "Lingsha_Lingsha_Ability03_Part01",
-        "Lingsha_Lingsha_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Ultimate",
-      "energy": 5,
-      "toughnessList": [
-        0,
-        20,
-        0
-      ],
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Lingsha_Ability03_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Lingsha_Lingsha_Ability03_EnterReady": {
-      "fileName": "Lingsha_Lingsha_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Lingsha_Lingsha_BPAbility_BattleEvent_Part02": {
@@ -1224,54 +1529,66 @@ const compositeAbilityObject = {
         "primaryTarget": "Inherent Target"
       }
     },
-    "Lingsha_Lingsha_BPAbility_BattleEvent_Part01": {
-      "fileName": "Lingsha_Lingsha_BPAbility_BattleEvent_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Battle Event's Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Lingsha_BPAbility_BattleEvent_Part02",
-          "isTrigger": true
-        }
+    "Lingsha_Lingsha_PassiveAbility01": {
+      "fileName": "Lingsha_Lingsha_PassiveAbility01",
+      "childAbilityList": [
+        "Lingsha_Lingsha_PassiveAbility01",
+        "Lingsha_Lingsha_BPAbility_BattleEvent_Part02"
       ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "Lingsha_Lingsha_BE_PassiveAbility": {
-      "fileName": "Lingsha_Lingsha_BE_PassiveAbility",
-      "abilityType": null,
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
       "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
+      "toughnessList": [
+        0,
+        10,
+        0
+      ],
+      "parse": [
         {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"1795719445\">Lingsha_BPAbility_BattleEvent</a>",
-          "counter": {
-            "operator": "Variables[0] (BattleEvent_Lingsha_PointB3) || RETURN",
-            "displayLines": "BattleEvent_Lingsha_PointB3",
+          "modifier": "<a class=\"gModGreen\" id=\"-1977976670\">Lingsha_Passive</a>"
+        },
+        {
+          "name": "Preload Battle Event(s)",
+          "eventID": [
+            11222
+          ]
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": 0,
+          "maximum": {
+            "operator": "Variables[0] (5) || RETURN",
+            "displayLines": "5",
             "constants": [],
             "variables": [
-              "BattleEvent_Lingsha_PointB3"
+              5
             ]
-          }
+          },
+          "assignState": "True",
+          "priorState": "Normal",
+          "bar#": 4
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Vermilion Waft"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"237515927\">Lingsha_PointB1_OnListen</a>"
+            }
+          ]
         },
         {
           "name": "Add Events/Bonuses",
@@ -1279,75 +1596,175 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
-          "counter": {
-            "operator": "Variables[0] (BattleEvent_Lingsha_AttackTime) || RETURN",
-            "displayLines": "BattleEvent_Lingsha_AttackTime",
-            "constants": [],
-            "variables": [
-              "BattleEvent_Lingsha_AttackTime"
-            ]
+          "modifier": "<a class=\"gModGreen\" id=\"-1482372912\">Lingsha_Olisten_BE_Create</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
           },
-          "valuePerStack": {
-            "_AttackTime": {
-              "operator": "Variables[0] (BattleEvent_Lingsha_AttackTime) || RETURN",
-              "displayLines": "BattleEvent_Lingsha_AttackTime",
-              "constants": [],
-              "variables": [
-                "BattleEvent_Lingsha_AttackTime"
-              ]
+          "modifier": "<a class=\"gModGreen\" id=\"285427978\">Lingsha_Ability_ModifyBEAction</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1907662117\">Lingsha_Ultimate_ModifyBEAction</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1721297245\">Lingsha_Eidolon1_Listen</a>",
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.5) || RETURN",
+                  "displayLines": "0.5",
+                  "constants": [],
+                  "variables": [
+                    0.5
+                  ]
+                }
+              }
             }
-          }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Lingsha_Rank06_StanceDamage",
+              "value": {
+                "operator": "Variables[0] (5) || Constants[0] (3) || MUL || RETURN",
+                "displayLines": "(5 * 3)",
+                "constants": [
+                  3
+                ],
+                "variables": [
+                  5
+                ]
+              }
+            }
+          ]
         }
       ],
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1795719445\">Lingsha_BPAbility_BattleEvent</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1907662117\">Lingsha_Ultimate_ModifyBEAction</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Fuyuan}}"
+            },
+            "skillType": [
+              "Ultimate"
+            ],
+            "conditions": {
+              "name": "Compare: Variable",
+              "value1": "Lingsha_BENum",
+              "compareType": ">=",
+              "value2": 1
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": {
+                "operator": "Variables[0] (1) || INVERT || RETURN",
+                "displayLines": "-1",
+                "constants": [],
+                "variables": [
+                  1
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__285427978\">Lingsha_Ability_ModifyBEAction</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Fuyuan}}"
+            },
+            "skillType": [
+              "Skill"
+            ],
+            "conditions": {
+              "name": "Compare: Variable",
+              "value1": "Lingsha_BENum",
+              "compareType": ">=",
+              "value2": 1
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": {
+                "operator": "Variables[0] (0.2) || INVERT || RETURN",
+                "displayLines": "-0.2",
+                "constants": [],
+                "variables": [
+                  0.2
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1482372912\">Lingsha_Olisten_BE_Create</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "entityType": "BattleEvent",
+            "entityID": 11222,
+            "skillType": [
+              "Skill"
+            ],
+            "conditions": {
+              "name": "Compare: Variable",
+              "value1": "Lingsha_BENum",
+              "compareType": "<=",
+              "value2": 0
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": {
+                "operator": "Variables[0] (0.2) || INVERT || RETURN",
+                "displayLines": "-0.2",
+                "constants": [],
+                "variables": [
+                  0.2
+                ]
+              }
+            }
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-835950999\">Lingsha_PointB1_Sub2</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Battle Event's Caster}}"
-                  },
-                  "variableName": "Lingsha_BENum",
-                  "context": "TargetEntity",
-                  "value": -1,
-                  "max": 100
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "condition": {
-                    "name": "Insert Ability Condition",
-                    "type": "AbilityOwnerInsertUnusedCount",
-                    "typeValue": 1
-                  },
-                  "abilityName": "Lingsha_BPAbility_BattleEvent_Part01",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "priorityTag": "CharacterAttackFromSelf",
-                  "ownerState": "Mask_AliveOrRevivable",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
@@ -1357,25 +1774,506 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (BattleEvent_Lingsha_BaseSpeed) || RETURN",
-                    "displayLines": "BattleEvent_Lingsha_BaseSpeed",
+                    "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
+                    "displayLines": "MDF_PropertyRatio",
                     "constants": [],
                     "variables": [
-                      "BattleEvent_Lingsha_BaseSpeed"
+                      "MDF_PropertyRatio"
                     ]
                   }
                 }
               ]
             }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-988682847\">Lingsha_PointB1_Sub</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "Lingsha_BaseAttack",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyRatio) || Variables[1] (Lingsha_BaseAttack) || MUL || RETURN",
+                    "displayLines": "(MDF_PropertyRatio * Lingsha_BaseAttack)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyRatio",
+                      "Lingsha_BaseAttack"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__237515927\">Lingsha_PointB1_OnListen</a>",
+          "modifierFlags": [
+            "ListenBattleEventSkill"
           ],
-          "stackData": [],
-          "latentQueue": []
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "Lingsha_BreakDamageAdded",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-988682847\">Lingsha_PointB1_Sub</a>",
+                  "valuePerStack": {
+                    "MDF_PropertyRatio": {
+                      "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.25) || MUL || Variables[3] (0.5) || PARAM_2 || FUNCTION || RETURN",
+                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Lingsha_BreakDamageAdded * 0.25), 0.5)",
+                      "constants": [],
+                      "variables": [
+                        "MIN",
+                        "Lingsha_BreakDamageAdded",
+                        0.25,
+                        0.5
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-835950999\">Lingsha_PointB1_Sub2</a>",
+                  "valuePerStack": {
+                    "MDF_PropertyRatio": {
+                      "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.1) || MUL || Variables[3] (0.2) || PARAM_2 || FUNCTION || RETURN",
+                      "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Lingsha_BreakDamageAdded * 0.1), 0.2)",
+                      "constants": [],
+                      "variables": [
+                        "MIN",
+                        "Lingsha_BreakDamageAdded",
+                        0.1,
+                        0.2
+                      ]
+                    }
+                  }
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ],
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": -999,
+                  "maxValue": 999,
+                  "whenValueChanges": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "variableName": "Lingsha_BreakDamageAdded",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-988682847\">Lingsha_PointB1_Sub</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyRatio": {
+                          "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.25) || MUL || Variables[3] (0.5) || PARAM_2 || FUNCTION || RETURN",
+                          "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Lingsha_BreakDamageAdded * 0.25), 0.5)",
+                          "constants": [],
+                          "variables": [
+                            "MIN",
+                            "Lingsha_BreakDamageAdded",
+                            0.25,
+                            0.5
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-835950999\">Lingsha_PointB1_Sub2</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyRatio": {
+                          "operator": "Variables[0] (MIN) || Variables[1] (Lingsha_BreakDamageAdded) || Variables[2] (0.1) || MUL || Variables[3] (0.2) || PARAM_2 || FUNCTION || RETURN",
+                          "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Lingsha_BreakDamageAdded * 0.1), 0.2)",
+                          "constants": [],
+                          "variables": [
+                            "MIN",
+                            "Lingsha_BreakDamageAdded",
+                            0.1,
+                            0.2
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1977976670\">Lingsha_Passive</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Force Entity Death",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Self-Made Battle-Events}}"
+                  },
+                  "ignoreHPLossTriggers": true,
+                  "ignoreDeathTriggers": true
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Enemy Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Eidolon Activated",
+                        "eidolon": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>"
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1709120566\">Lingsha_Eidolon1_ListenBreak</a>",
+                          "valuePerStack": {
+                            "Eidolon1_MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.2) || RETURN",
+                              "displayLines": "0.2",
+                              "constants": [],
+                              "variables": [
+                                0.2
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1709120566\">Lingsha_Eidolon1_ListenBreak</a>",
+                      "valuePerStack": {
+                        "Eidolon1_MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.2) || RETURN",
+                          "displayLines": "0.2",
+                          "constants": [],
+                          "variables": [
+                            0.2
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Lingsha_Lingsha_Ability03_Part02": {
+      "fileName": "Lingsha_Lingsha_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 2
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-962483629\">Lingsha_Eidolon2_BreakDamageAttackRatio</a>[<span class=\"descriptionNumberColor\">Leisure in Carmine Smokeveil</span>]",
+              "duration": {
+                "operator": "Variables[0] (3) || RETURN",
+                "displayLines": "3",
+                "constants": [],
+                "variables": [
+                  3
+                ]
+              },
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.4) || RETURN",
+                  "displayLines": "0.4",
+                  "constants": [],
+                  "variables": [
+                    0.4
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-637709984\">Lingsha_BreakDamageUp</a>[<span class=\"descriptionNumberColor\">Befog</span>]",
+          "duration": {
+            "operator": "Variables[0] (2) || RETURN",
+            "displayLines": "2",
+            "constants": [],
+            "variables": [
+              2
+            ]
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (0.25) || RETURN",
+              "displayLines": "0.25",
+              "constants": [],
+              "variables": [
+                0.25
+              ]
+            }
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] (1.5) || RETURN",
+              "displayLines": "1.5",
+              "constants": [],
+              "variables": [
+                1.5
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
+              "displayLines": "AOE Toughness Value",
+              "constants": [],
+              "variables": [
+                "AOE Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Heal",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
+          "healPercent": {
+            "operator": "Variables[0] (0.12) || RETURN",
+            "displayLines": "0.12",
+            "constants": [],
+            "variables": [
+              0.12
+            ]
+          },
+          "healFlat": {
+            "operator": "Variables[0] (360) || RETURN",
+            "displayLines": "360",
+            "constants": [],
+            "variables": [
+              360
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Lingsha_BENum",
+            "compareType": ">=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Action Advance/Delay",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Self-Made Battle-Events}}"
+              },
+              "advanceType": "Advance",
+              "multiAdd": "-1"
+            }
+          ]
+        },
+        "Trigger: Skip Death Handling",
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "Lingsha_Lingsha_Ability03_Part01": {
+      "fileName": "Lingsha_Lingsha_Ability03_Part01",
+      "childAbilityList": [
+        "Lingsha_Lingsha_Ability03_Camera",
+        "Lingsha_Lingsha_Ability03_EnterReady",
+        "Lingsha_Lingsha_Ability03_Part01",
+        "Lingsha_Lingsha_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Ultimate",
+      "energy": 5,
+      "toughnessList": [
+        0,
+        20,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Lingsha_Ability03_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "Lingsha_Lingsha_Ability03_EnterReady": {
+      "fileName": "Lingsha_Lingsha_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
       }
     },
     "Lingsha_Lingsha_Ability02_Part02": {
@@ -1789,808 +2687,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Lingsha_Modifiers": {
-      "fileName": "Lingsha_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1203114075\">Lingsha_Eidolon6_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Arcadia Under Deep Seclusion</span>]",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "All-Type RES Reduction",
-          "statusName": "Arcadia Under Deep Seclusion"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1458980452\">Lingsha_Eidolon6_Listen</a>",
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1203114075\">Lingsha_Eidolon6_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Arcadia Under Deep Seclusion</span>]",
-              "aliveOnly": "False",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-962483629\">Lingsha_Eidolon2_BreakDamageAttackRatio</a>[<span class=\"descriptionNumberColor\">Leisure in Carmine Smokeveil</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Break Effect Boost",
-          "statusName": "Leisure in Carmine Smokeveil"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-127930650\">Lingsha_Eidolon1_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">Bloom on Vileward Bouquet</span>]",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "Bloom on Vileward Bouquet"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_DefenceDown"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1709120566\">Lingsha_Eidolon1_ListenBreak</a>",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: Start [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>",
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] (Rank01_MDF_PropertyValue) || RETURN",
-                      "displayLines": "Rank01_MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "Rank01_MDF_PropertyValue"
-                      ]
-                    }
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-127930650\">Lingsha_Eidolon1_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">Bloom on Vileward Bouquet</span>]",
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] (Rank01_MDF_PropertyValue) || RETURN",
-                      "displayLines": "Rank01_MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "Rank01_MDF_PropertyValue"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "Rank01_MDF_PropertyValue"
-          ],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1721297245\">Lingsha_Eidolon1_Listen</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__551246003\">Lingsha_PointB3_CD</a>[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "stackData": [],
-          "latentQueue": [
-            "BattleEvent_Lingsha_00_PointB3"
-          ],
-          "description": "The Trace \"Ember's Echo\" effect's auto-trigger is still on cooldown.",
-          "type": "Other",
-          "statusName": "Ember's Echo",
-          "duration": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__210278197\">Lingsha_PointB3_OnListen</a>",
-          "modifierFlags": [
-            "CustomEvent_InfiniteRefresh"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "HP Change [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "ParameterValue",
-                        "compareType": "<",
-                        "value2": 0
-                      },
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members}}"
-                      },
-                      "searchRandom": true,
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Battle Event's Caster}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"551246003\">Lingsha_PointB3_CD</a>[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
-                            "invertCondition": true
-                          },
-                          "passed": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "AND",
-                                "conditionList": [
-                                  {
-                                    "name": "Compare: Variable",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "value1": "CurrentHP%",
-                                    "compareType": "<=",
-                                    "value2": {
-                                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                                      "displayLines": "MDF_HPRatio",
-                                      "constants": [],
-                                      "variables": [
-                                        "MDF_HPRatio"
-                                      ]
-                                    }
-                                  },
-                                  {
-                                    "name": "Has Flag",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Battle Event's Caster}}"
-                                    },
-                                    "flagName": "STAT_CTRL_UnOperable",
-                                    "invertCondition": true,
-                                    "justAddedOrLiving": true
-                                  }
-                                ]
-                              },
-                              "passed": [
-                                {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "BattleEvent_Lingsha_00_PointB3",
-                                  "value": 1
-                                },
-                                {
-                                  "name": "Inject Ability Use",
-                                  "condition": {
-                                    "name": "Insert Ability Condition",
-                                    "type": "AbilityOwnerInsertUnusedCount",
-                                    "typeValue": 1
-                                  },
-                                  "conditionActive": {
-                                    "name": "Has Flag",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Battle Event's Caster}}"
-                                    },
-                                    "flagName": "STAT_CTRL_UnOperable",
-                                    "invertCondition": true,
-                                    "justAddedOrLiving": true
-                                  },
-                                  "abilityName": "Lingsha_BPAbility_BattleEvent_Part01",
-                                  "abilitySource": {
-                                    "name": "Target Name",
-                                    "target": "{{Caster}}"
-                                  },
-                                  "abilityTarget": {
-                                    "name": "Target Name",
-                                    "target": "{{Hostile Entities(AOE)}}"
-                                  },
-                                  "priorityTag": "CharacterAttackFromSelf",
-                                  "ownerState": "Mask_AliveOrRevivable",
-                                  "canHitNonTargets": true,
-                                  "showInActionOrder": true,
-                                  "abortFlags": [
-                                    "DisableAction",
-                                    "STAT_CTRL"
-                                  ],
-                                  "allowAbilityTriggers": false
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Custom Event",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "BattleEvent_Lingsha_00_PointB3",
-                    "compareType": ">=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Target Exists",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "living": true
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Inject Ability Use",
-                          "condition": {
-                            "name": "Insert Ability Condition",
-                            "type": "AbilityOwnerInsertUnusedCount",
-                            "typeValue": 1
-                          },
-                          "abilityName": "Lingsha_BPAbility_BattleEvent_Part01",
-                          "abilitySource": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "abilityTarget": {
-                            "name": "Target Name",
-                            "target": "{{Hostile Entities(AOE)}}"
-                          },
-                          "priorityTag": "CharacterAttackFromSelf",
-                          "ownerState": "Mask_AliveOrRevivable",
-                          "canHitNonTargets": true,
-                          "showInActionOrder": true,
-                          "allowAbilityTriggers": false
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "BattleEvent_Lingsha_00_PointB3",
-                    "compareType": ">=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Target Exists",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "living": true
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Inject Ability Use",
-                          "condition": {
-                            "name": "Insert Ability Condition",
-                            "type": "AbilityOwnerInsertUnusedCount",
-                            "typeValue": 1
-                          },
-                          "abilityName": "Lingsha_BPAbility_BattleEvent_Part01",
-                          "abilitySource": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "abilityTarget": {
-                            "name": "Target Name",
-                            "target": "{{Hostile Entities(AOE)}}"
-                          },
-                          "priorityTag": "CharacterAttackFromSelf",
-                          "ownerState": "Mask_AliveOrRevivable",
-                          "canHitNonTargets": true,
-                          "showInActionOrder": true,
-                          "allowAbilityTriggers": false
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Get Revived [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "BattleEvent_Lingsha_00_PointB3",
-                        "compareType": ">=",
-                        "value2": 1
-                      },
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Target Exists",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "living": true
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Inject Ability Use",
-                          "condition": {
-                            "name": "Insert Ability Condition",
-                            "type": "AbilityOwnerInsertUnusedCount",
-                            "typeValue": 1
-                          },
-                          "abilityName": "Lingsha_BPAbility_BattleEvent_Part01",
-                          "abilitySource": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "abilityTarget": {
-                            "name": "Target Name",
-                            "target": "{{Hostile Entities(AOE)}}"
-                          },
-                          "priorityTag": "CharacterAttackFromSelf",
-                          "ownerState": "Mask_AliveOrRevivable",
-                          "canHitNonTargets": true,
-                          "showInActionOrder": true,
-                          "allowAbilityTriggers": false
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_HPRatio",
-            "MDF_LifeTime"
-          ],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
-          "stackType": "Replace",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": 0,
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Battle Event's Caster}}"
-                  },
-                  "priorState": "Normal"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Battle Event's Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Lingsha_AttackTime",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Define Modifier Variable",
-                  "modifierName": null,
-                  "function": "Add"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_AttackTime",
-                  "value": {
-                    "operator": "Variables[0] (_AttackTime) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(_AttackTime - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_AttackTime"
-                    ]
-                  }
-                },
-                {
-                  "name": "Show Attack Time",
-                  "time": {
-                    "operator": "Variables[0] (_AttackTime) || RETURN",
-                    "displayLines": "_AttackTime",
-                    "constants": [],
-                    "variables": [
-                      "_AttackTime"
-                    ]
-                  },
-                  "on": null,
-                  "show": true
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Battle Event's Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Lingsha_AttackTime",
-                  "value": {
-                    "operator": "Variables[0] (_AttackTime) || RETURN",
-                    "displayLines": "_AttackTime",
-                    "constants": [],
-                    "variables": [
-                      "_AttackTime"
-                    ]
-                  }
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (_AttackTime) || RETURN",
-                    "displayLines": "_AttackTime",
-                    "constants": [],
-                    "variables": [
-                      "_AttackTime"
-                    ]
-                  },
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Battle Event's Caster}}"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "_AttackTime",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (_AttackTime) || RETURN",
-                    "displayLines": "_AttackTime",
-                    "constants": [],
-                    "variables": [
-                      "_AttackTime"
-                    ]
-                  },
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Battle Event's Caster}}"
-                  }
-                },
-                {
-                  "name": "Show Attack Time",
-                  "time": {
-                    "operator": "Variables[0] (_AttackTime) || RETURN",
-                    "displayLines": "_AttackTime",
-                    "constants": [],
-                    "variables": [
-                      "_AttackTime"
-                    ]
-                  },
-                  "on": null,
-                  "show": true
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "_AttackTime"
-          ],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-637709984\">Lingsha_BreakDamageUp</a>[<span class=\"descriptionNumberColor\">Befog</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Attack Type",
-                    "attackTypes": [
-                      "Break DMG"
-                    ],
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Defender",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                          "value": "MDF_PropertyValue"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Break DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Befog",
-          "statusName": "Befog"
-        }
-      ],
-      "references": []
     },
     "Lingsha_Functions": {
       "fileName": "Lingsha_Functions",

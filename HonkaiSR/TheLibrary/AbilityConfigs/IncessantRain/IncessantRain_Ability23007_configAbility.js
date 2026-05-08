@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2037149365\">LC_23007_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Aether Code</span>]",
       "stackType": "Replace",
+      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">#SkillEquip_P3_DamageTakenRatio</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Aether Code",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,11 +44,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">#SkillEquip_P3_DamageTakenRatio</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Aether Code"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -200,9 +200,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

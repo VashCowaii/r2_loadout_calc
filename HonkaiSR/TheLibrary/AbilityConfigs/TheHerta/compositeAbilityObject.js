@@ -3,7 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": "The Herta",
   "trimCharacterName": "TheHerta",
   "abilityList": [
+    "TheHerta_Modifiers",
     "TheHerta_TheHerta_TechniqueInRougeLevel",
+    "TheHerta_LocalPlayer_StandardAbility_AttackBreak",
+    "TheHerta_LocalPlayer_TheHerta_TechniqueUsage",
+    "TheHerta_LocalPlayer_TheHerta_NormalAtk01",
     "TheHerta_TheHerta_TechniqueInLevel",
     "TheHerta_TheHerta_PassiveAbility01",
     "TheHerta_TheHerta_Ability03_Part02",
@@ -15,4917 +19,9 @@ const compositeAbilityObject = {
     "TheHerta_TheHerta_Ability02_Part01",
     "TheHerta_TheHerta_Ability01_Part02",
     "TheHerta_TheHerta_Ability01_Part01",
-    "TheHerta_Modifiers",
     "TheHerta_Functions"
   ],
   "abilityObject": {
-    "TheHerta_TheHerta_TechniqueInRougeLevel": {
-      "fileName": "TheHerta_TheHerta_TechniqueInRougeLevel",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2036504722\">TheHerta_TechniqueInRougeLevel</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2036504722\">TheHerta_TechniqueInRougeLevel</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "TargetHP",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Monster Rank",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "compareType": ">=",
-                        "value2": 3
-                      },
-                      "passed": [
-                        {
-                          "name": "ATK Scaling DMG",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "canPhase": true,
-                          "AttackScaling": {
-                            "DamageType": {
-                              "name": "Damage Type Source",
-                              "sourceType": {}
-                            },
-                            "DamageFlat": {
-                              "operator": "Variables[0] (TargetHP) || Variables[1] (EliteDamagePercentage) || MUL || RETURN",
-                              "displayLines": "(TargetHP * EliteDamagePercentage)",
-                              "constants": [],
-                              "variables": [
-                                "TargetHP",
-                                "EliteDamagePercentage"
-                              ]
-                            },
-                            "dmgFormulaFinal": "Converted DMG Base",
-                            "Toughness": null,
-                            "Tags": null,
-                            "attackType": "True DMG"
-                          }
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "ATK Scaling DMG",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "canPhase": true,
-                          "AttackScaling": {
-                            "DamageType": {
-                              "name": "Damage Type Source",
-                              "sourceType": {}
-                            },
-                            "DamageFlat": {
-                              "operator": "Variables[0] (TargetHP) || Variables[1] (BasicDamagePercentage) || MUL || RETURN",
-                              "displayLines": "(TargetHP * BasicDamagePercentage)",
-                              "constants": [],
-                              "variables": [
-                                "TargetHP",
-                                "BasicDamagePercentage"
-                              ]
-                            },
-                            "dmgFormulaFinal": "Converted DMG Base",
-                            "Toughness": null,
-                            "Tags": null,
-                            "attackType": "True DMG"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -60
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TheHerta_TheHerta_TechniqueInLevel": {
-      "fileName": "TheHerta_TheHerta_TechniqueInLevel",
-      "childAbilityList": [
-        "TheHerta_TheHerta_TechniqueInLevel"
-      ],
-      "skillTrigger": "SkillMaze",
-      "abilityType": "Technique",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1753550945\">Technique_TheHerta_Modifier</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__127317606\">TheHerta_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Vibe Checker</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Vibe Checker"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1753550945\">Technique_TheHerta_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Wave Count",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"127317606\">TheHerta_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Vibe Checker</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.6) || RETURN",
-                          "displayLines": "0.6",
-                          "constants": [],
-                          "variables": [
-                            0.6
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TheHerta_TheHerta_PassiveAbility01": {
-      "fileName": "TheHerta_TheHerta_PassiveAbility01",
-      "childAbilityList": [
-        "TheHerta_TheHerta_PassiveAbility01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": 30,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Energy_Layer",
-          "value": 0
-        },
-        {
-          "name": "Read Variable Value",
-          "adjustmentType": "Add to Value (Default)",
-          "variableName": "Skill21_Layer",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Adjust Variable Value",
-          "adjustmentType": "Overwrite Value",
-          "variableName": "Skill21_Layer",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "value": 0
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "S03_Mark_Max",
-          "value": {
-            "operator": "Variables[0] (42) || RETURN",
-            "displayLines": "42",
-            "constants": [],
-            "variables": [
-              42
-            ]
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Skill21_Layer_Add",
-          "value": 1
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Skill21_Layer_Max",
-          "value": {
-            "operator": "Variables[0] (4) || RETURN",
-            "displayLines": "4",
-            "constants": [],
-            "variables": [
-              4
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 2
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"489116474\">TheHerta_Eidolon2_PreShow</a>",
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.35) || RETURN",
-                  "displayLines": "0.35",
-                  "constants": [],
-                  "variables": [
-                    0.35
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Adjust Variable Value",
-              "adjustmentType": "Add to Value (Default)",
-              "variableName": "Skill21_Layer",
-              "on": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "value": 1
-            },
-            {
-              "name": "Update Ability Binding",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "abilityName": "Skill21",
-              "skillSlot": "Skill",
-              "enableSecondaryType": "ControlSkill02"
-            },
-            {
-              "name": "Update Ability Enhance Button",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "display": "Show",
-              "abilityName": "Skill"
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "_MaxSp",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-910560068\">TheHerta_Passive_MagicMark_Caster</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-928577282\">TheHerta_Passive</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-57316235\">TheHerta_Passive_PreShow</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"734755482\">TheHerta_Passive_PreShow_Ability21</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1935947210\">TheHerta_Passive_PreShow_Ability21_All</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2664689\">TheHerta_MageNum</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"611803002\">TheHerta_SKL21_Listen</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-614684164\">TheHerta_ExtraMark</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2011497788\">TheHerta_UltraBoost</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_PointB3_Ratio",
-          "value": 0
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Trace Activated",
-            "conditionList": "Starved Landscape of Vacua"
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_SkillTree03_MaxCount",
-              "value": {
-                "operator": "Variables[0] (99) || RETURN",
-                "displayLines": "99",
-                "constants": [],
-                "variables": [
-                  99
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_PointB3_Ratio",
-              "value": {
-                "operator": "Variables[0] (0.01) || RETURN",
-                "displayLines": "0.01",
-                "constants": [],
-                "variables": [
-                  0.01
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Trace Activated",
-            "conditionList": "Message From Beyond the Veil"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-450886652\">TheHerta_Trace02</a>",
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.8) || RETURN",
-                  "displayLines": "0.8",
-                  "constants": [],
-                  "variables": [
-                    0.8
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 4
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1044334207\">TheHerta_Eidolon4_Listen</a>",
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 6
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-73718393\">TheHerta_Eidolon6_Bonus</a>",
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Trace Activated",
-            "conditionList": "Aloofly Honest"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-400553795\">TheHerta_Trace01</a>",
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (3) || RETURN",
-                  "displayLines": "3",
-                  "constants": [],
-                  "variables": [
-                    3
-                  ]
-                },
-                "MDF_MaxCount": {
-                  "operator": "Variables[0] (S03_Mark_Max) || RETURN",
-                  "displayLines": "S03_Mark_Max",
-                  "constants": [],
-                  "variables": [
-                    "S03_Mark_Max"
-                  ]
-                },
-                "MDF_MinCount": 0,
-                "MDF_AddLayer": 0,
-                "MDF_MaxLayer": {
-                  "operator": "Variables[0] (42) || RETURN",
-                  "displayLines": "42",
-                  "constants": [],
-                  "variables": [
-                    42
-                  ]
-                },
-                "MDF_MaxLayer_PointB3": {
-                  "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
-                  "displayLines": "_SkillTree03_MaxCount",
-                  "constants": [],
-                  "variables": [
-                    "_SkillTree03_MaxCount"
-                  ]
-                },
-                "MDF_Ratio_PointB3": {
-                  "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                  "displayLines": "_PointB3_Ratio",
-                  "constants": [],
-                  "variables": [
-                    "_PointB3_Ratio"
-                  ]
-                },
-                "MDF_BounceLayer": 0
-              }
-            }
-          ]
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "maximum": 1,
-          "assignState": "True",
-          "priorState": "Normal",
-          "bar#": 4,
-          "cooldown": 0
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 2
-          },
-          "passed": [
-            {
-              "name": "Update Displayed Energy Bar",
-              "value": {
-                "operator": "Variables[0] (Skill21_Layer) || RETURN",
-                "displayLines": "Skill21_Layer",
-                "constants": [],
-                "variables": [
-                  "Skill21_Layer"
-                ]
-              },
-              "priorState": "Active"
-            }
-          ]
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1890012800\">TheHerta_Trace02_Bonus</a>[<span class=\"descriptionNumberColor\">Message From Beyond the Veil</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Message From Beyond the Veil"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1949332681\">TheHerta_Trace02_Mage</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate"
-                  },
-                  "passed": [
-                    {
-                      "name": "Skill Points Modification",
-                      "adjustmentValue": 1,
-                      "adjustmentType": "+"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1909734267\">TheHerta_Trace02_CheckMage</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1890012800\">TheHerta_Trace02_Bonus</a>[<span class=\"descriptionNumberColor\">Message From Beyond the Veil</span>]",
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Player Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1890012800\">TheHerta_Trace02_Bonus</a>[<span class=\"descriptionNumberColor\">Message From Beyond the Veil</span>]",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-450886652\">TheHerta_Trace02</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_Mage_Count",
-                  "value": 0
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "conditions": {
-                    "name": "Target is Pathstrider",
-                    "path": [
-                      "Erudition"
-                    ],
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "typeFilter": "All"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_Mage_Count",
-                      "value": {
-                        "operator": "Variables[0] (_Mage_Count) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_Mage_Count + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_Mage_Count"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "_Mage_Count",
-                    "compareType": ">=",
-                    "value2": 2
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1909734267\">TheHerta_Trace02_CheckMage</a>",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1280907269\">TheHerta_PointB2_Listen</a>"
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "Skill21_Layer_Max"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2011497788\">TheHerta_UltraBoost</a>",
-          "stackData": [],
-          "latentQueue": [
-            "Skill21_Layer_Max"
-          ],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "skillType": [
-              "Ultimate"
-            ],
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": "0(Set AV)"
-            }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-910560068\">TheHerta_Passive_MagicMark_Caster</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-                    "invertCondition": true
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-                      "stackLimit": {
-                        "operator": "Variables[0] (42) || RETURN",
-                        "displayLines": "42",
-                        "constants": [],
-                        "variables": [
-                          42
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MagicMark_MaxCount_Max": {
-                          "operator": "Variables[0] (42) || RETURN",
-                          "displayLines": "42",
-                          "constants": [],
-                          "variables": [
-                            42
-                          ]
-                        },
-                        "MagicMark_MaxCount": {
-                          "operator": "Variables[0] (42) || RETURN",
-                          "displayLines": "42",
-                          "constants": [],
-                          "variables": [
-                            42
-                          ]
-                        },
-                        "MagicMark_Ratio": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
-                        }
-                      },
-                      "addStacksPerTrigger": 1
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Trace Activated",
-                        "conditionList": "Starved Landscape of Vacua"
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
-                          "stackLimit": {
-                            "operator": "Variables[0] (99) || RETURN",
-                            "displayLines": "99",
-                            "constants": [],
-                            "variables": [
-                              99
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                              "displayLines": "_PointB3_Ratio",
-                              "constants": [],
-                              "variables": [
-                                "_PointB3_Ratio"
-                              ]
-                            }
-                          },
-                          "addStacksPerTrigger": 1
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team Unselectables}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"887606439\">TheHerta_Passive_MagicMark_Unselectable</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Is Part Of",
-                        "of": {
-                          "name": "Target Name",
-                          "target": "{{Enemy Team All}}"
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
-                          },
-                          "failed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-                              "stackLimit": {
-                                "operator": "Variables[0] (42) || RETURN",
-                                "displayLines": "42",
-                                "constants": [],
-                                "variables": [
-                                  42
-                                ]
-                              },
-                              "valuePerStack": {
-                                "MagicMark_MaxCount_Max": {
-                                  "operator": "Variables[0] (42) || RETURN",
-                                  "displayLines": "42",
-                                  "constants": [],
-                                  "variables": [
-                                    42
-                                  ]
-                                },
-                                "MagicMark_MaxCount": {
-                                  "operator": "Variables[0] (42) || RETURN",
-                                  "displayLines": "42",
-                                  "constants": [],
-                                  "variables": [
-                                    42
-                                  ]
-                                },
-                                "MagicMark_Ratio": {
-                                  "operator": "Variables[0] (1) || RETURN",
-                                  "displayLines": "1",
-                                  "constants": [],
-                                  "variables": [
-                                    1
-                                  ]
-                                }
-                              },
-                              "addStacksPerTrigger": 1
-                            },
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Trace Activated",
-                                "conditionList": "Starved Landscape of Vacua"
-                              },
-                              "passed": [
-                                {
-                                  "name": "Add Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Caster}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
-                                  "stackLimit": {
-                                    "operator": "Variables[0] (99) || RETURN",
-                                    "displayLines": "99",
-                                    "constants": [],
-                                    "variables": [
-                                      99
-                                    ]
-                                  },
-                                  "valuePerStack": {
-                                    "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                                      "displayLines": "_PointB3_Ratio",
-                                      "constants": [],
-                                      "variables": [
-                                        "_PointB3_Ratio"
-                                      ]
-                                    }
-                                  },
-                                  "addStacksPerTrigger": 1
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"887606439\">TheHerta_Passive_MagicMark_Unselectable</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Skill21_Layer_Max"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__887606439\">TheHerta_Passive_MagicMark_Unselectable</a>",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Unselectable Adjustment [Owner]: End",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-                  "stackLimit": {
-                    "operator": "Variables[0] (42) || RETURN",
-                    "displayLines": "42",
-                    "constants": [],
-                    "variables": [
-                      42
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MagicMark_MaxCount_Max": {
-                      "operator": "Variables[0] (42) || RETURN",
-                      "displayLines": "42",
-                      "constants": [],
-                      "variables": [
-                        42
-                      ]
-                    },
-                    "MagicMark_MaxCount": {
-                      "operator": "Variables[0] (42) || RETURN",
-                      "displayLines": "42",
-                      "constants": [],
-                      "variables": [
-                        42
-                      ]
-                    },
-                    "MagicMark_Ratio": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
-                    }
-                  },
-                  "addStacksPerTrigger": 1
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Trace Activated",
-                    "conditionList": "Starved Landscape of Vacua"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
-                      "stackLimit": {
-                        "operator": "Variables[0] (99) || RETURN",
-                        "displayLines": "99",
-                        "constants": [],
-                        "variables": [
-                          99
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                          "displayLines": "_PointB3_Ratio",
-                          "constants": [],
-                          "variables": [
-                            "_PointB3_Ratio"
-                          ]
-                        }
-                      },
-                      "addStacksPerTrigger": 1
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"887606439\">TheHerta_Passive_MagicMark_Unselectable</a>"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Skill21_Layer_Max"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-928577282\">TheHerta_Passive</a>",
-          "modifierFlags": [
-            "ListenBattleEventSkill"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Skill21_Layer_Max"
-          ],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-682623552\">TheHerta_BPdamageNumber_UIconfig</a>",
-              "haloStatus": true
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-434693417\">TheHerta_Trace01_Regen</a>",
-          "modifierFlags": [
-            "RemoveWhenCasterDead",
-            "ListenBattleEventSkill"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"220694751\">TheHerta_Trace01_Regen_CD</a>",
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"220694751\">TheHerta_Trace01_Regen_CD</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-                      "stackLimit": {
-                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                        "displayLines": "MDF_MaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxLayer"
-                        ]
-                      },
-                      "addStacksPerTrigger": 1
-                    },
-                    {
-                      "name": "Define Custom Variable with Modifier Values",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "valueType": "Layer",
-                      "variableName": "_Effect_Layer",
-                      "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-                      "multiplier": 1
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Trace Activated",
-                        "conditionList": "Starved Landscape of Vacua"
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
-                          "stackLimit": {
-                            "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                            "displayLines": "MDF_MaxLayer_PointB3",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer_PointB3"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                              "displayLines": "MDF_Ratio_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_Ratio_PointB3"
-                              ]
-                            }
-                          },
-                          "addStacksPerTrigger": 1
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_Hit_Count",
-                      "value": {
-                        "operator": "Variables[0] (_Hit_Count) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_Hit_Count + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_Hit_Count"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack Start [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_Hit_Count",
-                  "value": 0
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All(with Unselectable)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"220694751\">TheHerta_Trace01_Regen_CD</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "_Hit_Count",
-                    "compareType": ">",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                      "displayLines": "MDF_MaxCount",
-                      "constants": [],
-                      "variables": [
-                        "MDF_MaxCount"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_Hit_Count",
-                      "value": {
-                        "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                        "displayLines": "MDF_MaxCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MaxCount"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "_Hit_Count",
-                        "compareType": "<",
-                        "value2": {
-                          "operator": "Variables[0] (MDF_MinCount) || RETURN",
-                          "displayLines": "MDF_MinCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MinCount"
-                          ]
-                        }
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-2073297144\">TheHerta_MageNum_2</a>"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_Hit_Count",
-                      "value": {
-                        "operator": "Variables[0] (MDF_MinCount) || RETURN",
-                        "displayLines": "MDF_MinCount",
-                        "constants": [],
-                        "variables": [
-                          "MDF_MinCount"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Update Energy",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "value": {
-                    "operator": "Variables[0] (_Hit_Count) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
-                    "displayLines": "(_Hit_Count * MDF_PropertyValue)",
-                    "constants": [],
-                    "variables": [
-                      "_Hit_Count",
-                      "MDF_PropertyValue"
-                    ]
-                  },
-                  "isFixed": "(Fixed)"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_Hit_Count",
-                  "value": 0
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All(with Unselectable)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"220694751\">TheHerta_Trace01_Regen_CD</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__220694751\">TheHerta_Trace01_Regen_CD</a>",
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-400553795\">TheHerta_Trace01</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Trace Activated",
-                    "conditionList": "Message From Beyond the Veil"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
-                        },
-                        "MDF_PropertyValue_2": {
-                          "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
-                          "displayLines": "MDF_PropertyValue_2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue_2"
-                          ]
-                        },
-                        "MDF_MaxCount": {
-                          "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                          "displayLines": "MDF_MaxCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxCount"
-                          ]
-                        },
-                        "MDF_MinCount": {
-                          "operator": "Variables[0] (MDF_MinCount) || Variables[1] (3) || ADD || RETURN",
-                          "displayLines": "(MDF_MinCount + 3)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MinCount",
-                            3
-                          ]
-                        },
-                        "MDF_AddLayer": {
-                          "operator": "Variables[0] (MDF_AddLayer) || RETURN",
-                          "displayLines": "MDF_AddLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AddLayer"
-                          ]
-                        },
-                        "MDF_MaxLayer": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
-                        },
-                        "MDF_MaxLayer_PointB3": {
-                          "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                          "displayLines": "MDF_MaxLayer_PointB3",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer_PointB3"
-                          ]
-                        },
-                        "MDF_Ratio_PointB3": {
-                          "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                          "displayLines": "MDF_Ratio_PointB3",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Ratio_PointB3"
-                          ]
-                        },
-                        "MDF_BounceLayer": {
-                          "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
-                          "displayLines": "MDF_BounceLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_BounceLayer"
-                          ]
-                        }
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
-                        },
-                        "MDF_PropertyValue_2": {
-                          "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
-                          "displayLines": "MDF_PropertyValue_2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue_2"
-                          ]
-                        },
-                        "MDF_MaxCount": {
-                          "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                          "displayLines": "MDF_MaxCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxCount"
-                          ]
-                        },
-                        "MDF_MinCount": {
-                          "operator": "Variables[0] (MDF_MinCount) || RETURN",
-                          "displayLines": "MDF_MinCount",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MinCount"
-                          ]
-                        },
-                        "MDF_AddLayer": {
-                          "operator": "Variables[0] (MDF_AddLayer) || RETURN",
-                          "displayLines": "MDF_AddLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AddLayer"
-                          ]
-                        },
-                        "MDF_MaxLayer": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
-                        },
-                        "MDF_MaxLayer_PointB3": {
-                          "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                          "displayLines": "MDF_MaxLayer_PointB3",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer_PointB3"
-                          ]
-                        },
-                        "MDF_Ratio_PointB3": {
-                          "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                          "displayLines": "MDF_Ratio_PointB3",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Ratio_PointB3"
-                          ]
-                        },
-                        "MDF_BounceLayer": {
-                          "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
-                          "displayLines": "MDF_BounceLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_BounceLayer"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Player Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Trace Activated",
-                        "conditionList": "Message From Beyond the Veil"
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                              "displayLines": "MDF_PropertyValue",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue"
-                              ]
-                            },
-                            "MDF_PropertyValue_2": {
-                              "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
-                              "displayLines": "MDF_PropertyValue_2",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue_2"
-                              ]
-                            },
-                            "MDF_MaxCount": {
-                              "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                              "displayLines": "MDF_MaxCount",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxCount"
-                              ]
-                            },
-                            "MDF_MinCount": {
-                              "operator": "Variables[0] (MDF_MinCount) || Variables[1] (3) || ADD || RETURN",
-                              "displayLines": "(MDF_MinCount + 3)",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MinCount",
-                                3
-                              ]
-                            },
-                            "MDF_AddLayer": {
-                              "operator": "Variables[0] (MDF_AddLayer) || RETURN",
-                              "displayLines": "MDF_AddLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_AddLayer"
-                              ]
-                            },
-                            "MDF_MaxLayer": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
-                            },
-                            "MDF_MaxLayer_PointB3": {
-                              "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                              "displayLines": "MDF_MaxLayer_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer_PointB3"
-                              ]
-                            },
-                            "MDF_Ratio_PointB3": {
-                              "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                              "displayLines": "MDF_Ratio_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_Ratio_PointB3"
-                              ]
-                            },
-                            "MDF_BounceLayer": {
-                              "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
-                              "displayLines": "MDF_BounceLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_BounceLayer"
-                              ]
-                            }
-                          }
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                              "displayLines": "MDF_PropertyValue",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue"
-                              ]
-                            },
-                            "MDF_PropertyValue_2": {
-                              "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
-                              "displayLines": "MDF_PropertyValue_2",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue_2"
-                              ]
-                            },
-                            "MDF_MaxCount": {
-                              "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                              "displayLines": "MDF_MaxCount",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxCount"
-                              ]
-                            },
-                            "MDF_MinCount": {
-                              "operator": "Variables[0] (MDF_MinCount) || RETURN",
-                              "displayLines": "MDF_MinCount",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MinCount"
-                              ]
-                            },
-                            "MDF_AddLayer": {
-                              "operator": "Variables[0] (MDF_AddLayer) || RETURN",
-                              "displayLines": "MDF_AddLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_AddLayer"
-                              ]
-                            },
-                            "MDF_MaxLayer": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
-                            },
-                            "MDF_MaxLayer_PointB3": {
-                              "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                              "displayLines": "MDF_MaxLayer_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer_PointB3"
-                              ]
-                            },
-                            "MDF_Ratio_PointB3": {
-                              "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                              "displayLines": "MDF_Ratio_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_Ratio_PointB3"
-                              ]
-                            },
-                            "MDF_BounceLayer": {
-                              "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
-                              "displayLines": "MDF_BounceLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_BounceLayer"
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Battle Event/Summon Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Player Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Trace Activated",
-                        "conditionList": "Message From Beyond the Veil"
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                              "displayLines": "MDF_PropertyValue",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue"
-                              ]
-                            },
-                            "MDF_PropertyValue_2": {
-                              "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
-                              "displayLines": "MDF_PropertyValue_2",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue_2"
-                              ]
-                            },
-                            "MDF_MaxCount": {
-                              "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                              "displayLines": "MDF_MaxCount",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxCount"
-                              ]
-                            },
-                            "MDF_MinCount": {
-                              "operator": "Variables[0] (MDF_MinCount) || Variables[1] (3) || ADD || RETURN",
-                              "displayLines": "(MDF_MinCount + 3)",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MinCount",
-                                3
-                              ]
-                            },
-                            "MDF_AddLayer": {
-                              "operator": "Variables[0] (MDF_AddLayer) || RETURN",
-                              "displayLines": "MDF_AddLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_AddLayer"
-                              ]
-                            },
-                            "MDF_MaxLayer": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
-                            },
-                            "MDF_MaxLayer_PointB3": {
-                              "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                              "displayLines": "MDF_MaxLayer_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer_PointB3"
-                              ]
-                            },
-                            "MDF_Ratio_PointB3": {
-                              "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                              "displayLines": "MDF_Ratio_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_Ratio_PointB3"
-                              ]
-                            },
-                            "MDF_BounceLayer": {
-                              "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
-                              "displayLines": "MDF_BounceLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_BounceLayer"
-                              ]
-                            }
-                          }
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                              "displayLines": "MDF_PropertyValue",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue"
-                              ]
-                            },
-                            "MDF_PropertyValue_2": {
-                              "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
-                              "displayLines": "MDF_PropertyValue_2",
-                              "constants": [],
-                              "variables": [
-                                "MDF_PropertyValue_2"
-                              ]
-                            },
-                            "MDF_MaxCount": {
-                              "operator": "Variables[0] (MDF_MaxCount) || RETURN",
-                              "displayLines": "MDF_MaxCount",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxCount"
-                              ]
-                            },
-                            "MDF_MinCount": {
-                              "operator": "Variables[0] (MDF_MinCount) || RETURN",
-                              "displayLines": "MDF_MinCount",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MinCount"
-                              ]
-                            },
-                            "MDF_AddLayer": {
-                              "operator": "Variables[0] (MDF_AddLayer) || RETURN",
-                              "displayLines": "MDF_AddLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_AddLayer"
-                              ]
-                            },
-                            "MDF_MaxLayer": {
-                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                              "displayLines": "MDF_MaxLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer"
-                              ]
-                            },
-                            "MDF_MaxLayer_PointB3": {
-                              "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                              "displayLines": "MDF_MaxLayer_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_MaxLayer_PointB3"
-                              ]
-                            },
-                            "MDF_Ratio_PointB3": {
-                              "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                              "displayLines": "MDF_Ratio_PointB3",
-                              "constants": [],
-                              "variables": [
-                                "MDF_Ratio_PointB3"
-                              ]
-                            },
-                            "MDF_BounceLayer": {
-                              "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
-                              "displayLines": "MDF_BounceLayer",
-                              "constants": [],
-                              "variables": [
-                                "MDF_BounceLayer"
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_MaxCount",
-            "MDF_MinCount",
-            "MDF_AddLayer",
-            "MDF_MaxLayer",
-            "MDF_MaxLayer_PointB3",
-            "MDF_Ratio_PointB3",
-            "MDF_BounceLayer"
-          ],
-          "latentQueue": [
-            "Skill21_Layer_Max"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2073297144\">TheHerta_MageNum_2</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2664689\">TheHerta_MageNum</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_MCount",
-                  "value": 0
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "conditions": {
-                    "name": "Target is Pathstrider",
-                    "path": [
-                      "Erudition"
-                    ],
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "typeFilter": "All"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_MCount",
-                      "value": {
-                        "operator": "Variables[0] (_MCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(_MCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_MCount"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "_MCount",
-                    "compareType": ">=",
-                    "value2": 2
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-2073297144\">TheHerta_MageNum_2</a>"
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Skill21_Layer_Max"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1935947210\">TheHerta_Passive_PreShow_Ability21_All</a>",
-          "stackData": [],
-          "latentQueue": [
-            "Skill21_Layer_Max"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__734755482\">TheHerta_Passive_PreShow_Ability21</a>",
-          "execute": [
-            {
-              "eventTrigger": "Update Target Selected(UI) [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Skill21_Layer",
-                        "compareType": ">",
-                        "value2": 0.5
-                      },
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Skill",
-                        "activeSkill": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Modifier: UI Preview",
-                      "show": "Hide",
-                      "target": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Player's Aim Primary-Target}}"
-                          },
-                          "Adjust Target by Adjacent Targets"
-                        ]
-                      },
-                      "attacker": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "toughnessType": "Ice",
-                      "baseToughnessDMG": 15
-                    },
-                    {
-                      "name": "Modifier: UI Preview",
-                      "show": "Hide",
-                      "target": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Hostile Entities(AOE)}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "AND",
-                              "conditionList": [
-                                {
-                                  "name": "Is Part Of",
-                                  "of": {
-                                    "name": "Target Name",
-                                    "target": "{{Player's Aim Primary-Target}}"
-                                  },
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "mustBeAlive2": true,
-                                  "invertCondition": true
-                                },
-                                {
-                                  "name": "OR",
-                                  "conditionList": [
-                                    {
-                                      "name": "Is Part Of",
-                                      "of": {
-                                        "name": "Target Sequence",
-                                        "Sequence": [
-                                          {
-                                            "name": "Target Name",
-                                            "target": "{{Player's Aim Primary-Target}}"
-                                          },
-                                          "Adjust Target by Adjacent Targets"
-                                        ]
-                                      },
-                                      "target": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "mustBeAlive2": true
-                                    },
-                                    {
-                                      "name": "Is Part Of",
-                                      "of": {
-                                        "name": "Target Sequence",
-                                        "Sequence": [
-                                          {
-                                            "name": "Target Name",
-                                            "target": "{{Player's Aim Primary-Target}}"
-                                          },
-                                          "Adjust Target by Adjacent Targets"
-                                        ]
-                                      },
-                                      "target": {
-                                        "name": "Target Sequence",
-                                        "Sequence": [
-                                          {
-                                            "name": "Target Name",
-                                            "target": "{{Parameter Target}}"
-                                          },
-                                          "Adjust Target by Adjacent Targets"
-                                        ]
-                                      },
-                                      "mustBeAlive2": true
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      },
-                      "attacker": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "toughnessType": "Ice",
-                      "baseToughnessDMG": 15
-                    },
-                    {
-                      "name": "Modifier: UI Preview",
-                      "show": "Hide",
-                      "target": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Hostile Entities(AOE)}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "NOT",
-                              "condition": {
-                                "name": "Is Part Of",
-                                "of": {
-                                  "name": "Target Name",
-                                  "target": "{{Player's Aim Primary-Target}}"
-                                },
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "mustBeAlive2": true
-                              }
-                            }
-                          }
-                        ]
-                      },
-                      "attacker": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "toughnessType": "Ice",
-                      "baseToughnessDMG": 15
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Skill21_Layer_Max"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-57316235\">TheHerta_Passive_PreShow</a>",
-          "stackData": [],
-          "latentQueue": [
-            "Skill21_Layer_Max"
-          ],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "skillType": "Skill",
-            "conditions": {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Compare: Variable",
-                  "value1": "Skill21_Layer",
-                  "compareType": "<",
-                  "value2": 0.5
-                },
-                {
-                  "name": "Is Part Of",
-                  "of": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Player's Aim Primary-Target}}"
-                  },
-                  "mustBeAlive2": true,
-                  "invertCondition": true
-                },
-                {
-                  "name": "Is Part Of",
-                  "of": {
-                    "name": "Target Name",
-                    "target": "{{Targets Adjacent to Parameter Target}}"
-                  },
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Player's Aim Primary-Target}}"
-                  },
-                  "mustBeAlive2": true,
-                  "invertCondition": true
-                }
-              ]
-            },
-            "multiplier": 0.5
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__611803002\">TheHerta_SKL21_Listen</a>",
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "Skill21_Layer",
-              "from": "ContextOwner",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": -999,
-                  "maxValue": 1,
-                  "whenEnteringRange": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]"
-                    }
-                  ],
-                  "whenValueChanges": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]"
-                    }
-                  ]
-                },
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 1,
-                  "maxValue": 999,
-                  "whenEnteringRange": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]"
-                    },
-                    {
-                      "name": "Define Modifier Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifierName": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]",
-                      "value": {
-                        "operator": "Variables[0] (Skill21_Layer) || RETURN",
-                        "displayLines": "Skill21_Layer",
-                        "constants": [],
-                        "variables": [
-                          "Skill21_Layer"
-                        ]
-                      }
-                    }
-                  ],
-                  "whenValueChanges": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]"
-                    },
-                    {
-                      "name": "Define Modifier Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifierName": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]",
-                      "value": {
-                        "operator": "Variables[0] (Skill21_Layer) || RETURN",
-                        "displayLines": "Skill21_Layer",
-                        "constants": [],
-                        "variables": [
-                          "Skill21_Layer"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Skill21_Layer_Max"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1573828152\">TheHerta_PointB2_Ally</a>",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Target is Pathstrider",
-                    "path": [
-                      "Erudition"
-                    ],
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "typeFilter": "All"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_Exec_Layer",
-                      "value": {
-                        "operator": "Variables[0] (MDF_BounceLayer) || Variables[1] (MDF_MageLayer) || ADD || RETURN",
-                        "displayLines": "(MDF_BounceLayer + MDF_MageLayer)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_BounceLayer",
-                          "MDF_MageLayer"
-                        ]
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_Exec_Layer",
-                      "value": {
-                        "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
-                        "displayLines": "MDF_BounceLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_BounceLayer"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Looped Event",
-                  "maxLoops": {
-                    "operator": "Variables[0] (_Exec_Layer) || RETURN",
-                    "displayLines": "_Exec_Layer",
-                    "constants": [],
-                    "variables": [
-                      "_Exec_Layer"
-                    ]
-                  },
-                  "Event": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Attack Targets of Modifier Holder}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "AND",
-                              "conditionList": [
-                                {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "name": "Sort by Modifier Value",
-                            "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-                            "value": "Layer",
-                            "sortByHighest": true
-                          }
-                        ]
-                      },
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-                        "compareType": "<",
-                        "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
-                        },
-                        "valueType": "Layer"
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-                          "stackLimit": {
-                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                            "displayLines": "MDF_MaxLayer",
-                            "constants": [],
-                            "variables": [
-                              "MDF_MaxLayer"
-                            ]
-                          },
-                          "addStacksPerTrigger": 1
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Trace Activated",
-                            "conditionList": "Starved Landscape of Vacua"
-                          },
-                          "passed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
-                              "stackLimit": {
-                                "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                                "displayLines": "MDF_MaxLayer_PointB3",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_MaxLayer_PointB3"
-                                ]
-                              },
-                              "valuePerStack": {
-                                "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                                  "displayLines": "MDF_Ratio_PointB3",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_Ratio_PointB3"
-                                  ]
-                                }
-                              },
-                              "addStacksPerTrigger": 1
-                            }
-                          ]
-                        }
-                      ],
-                      "noTargetFound": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Trace Activated",
-                            "conditionList": "Starved Landscape of Vacua"
-                          },
-                          "passed": [
-                            {
-                              "name": "Find New Target",
-                              "from": {
-                                "name": "Target Name",
-                                "target": "{{Attack Targets of Modifier Holder}}"
-                              },
-                              "maxTargets": 1,
-                              "ifTargetFound": [
-                                {
-                                  "name": "Add Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Caster}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
-                                  "stackLimit": {
-                                    "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
-                                    "displayLines": "MDF_MaxLayer_PointB3",
-                                    "constants": [],
-                                    "variables": [
-                                      "MDF_MaxLayer_PointB3"
-                                    ]
-                                  },
-                                  "valuePerStack": {
-                                    "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
-                                      "displayLines": "MDF_Ratio_PointB3",
-                                      "constants": [],
-                                      "variables": [
-                                        "MDF_Ratio_PointB3"
-                                      ]
-                                    }
-                                  },
-                                  "addStacksPerTrigger": 1
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1280907269\">TheHerta_PointB2_Listen</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1573828152\">TheHerta_PointB2_Ally</a>",
-                  "valuePerStack": {
-                    "MDF_MaxLayer_PointB3": {
-                      "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
-                      "displayLines": "_SkillTree03_MaxCount",
-                      "constants": [],
-                      "variables": [
-                        "_SkillTree03_MaxCount"
-                      ]
-                    },
-                    "MDF_Ratio_PointB3": {
-                      "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                      "displayLines": "_PointB3_Ratio",
-                      "constants": [],
-                      "variables": [
-                        "_PointB3_Ratio"
-                      ]
-                    },
-                    "MDF_MaxLayer": {
-                      "operator": "Variables[0] (42) || RETURN",
-                      "displayLines": "42",
-                      "constants": [],
-                      "variables": [
-                        42
-                      ]
-                    },
-                    "MDF_BounceLayer": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
-                    },
-                    "MDF_MageLayer": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
-                    }
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Battle Event List}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "AND",
-                          "conditionList": [
-                            {
-                              "name": "Is Part Of Team",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "team": "Player Team"
-                            },
-                            {
-                              "name": "Is Entity a Battle Event/Summon",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "invertCondition": true,
-                              "expectedType": "Summon"
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1573828152\">TheHerta_PointB2_Ally</a>",
-                  "valuePerStack": {
-                    "MDF_MaxLayer_PointB3": {
-                      "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
-                      "displayLines": "_SkillTree03_MaxCount",
-                      "constants": [],
-                      "variables": [
-                        "_SkillTree03_MaxCount"
-                      ]
-                    },
-                    "MDF_Ratio_PointB3": {
-                      "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                      "displayLines": "_PointB3_Ratio",
-                      "constants": [],
-                      "variables": [
-                        "_PointB3_Ratio"
-                      ]
-                    },
-                    "MDF_MaxLayer": {
-                      "operator": "Variables[0] (42) || RETURN",
-                      "displayLines": "42",
-                      "constants": [],
-                      "variables": [
-                        42
-                      ]
-                    },
-                    "MDF_BounceLayer": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
-                    },
-                    "MDF_MageLayer": {
-                      "operator": "Variables[0] (2) || RETURN",
-                      "displayLines": "2",
-                      "constants": [],
-                      "variables": [
-                        2
-                      ]
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Player Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1573828152\">TheHerta_PointB2_Ally</a>",
-                      "valuePerStack": {
-                        "MDF_MaxLayer_PointB3": {
-                          "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
-                          "displayLines": "_SkillTree03_MaxCount",
-                          "constants": [],
-                          "variables": [
-                            "_SkillTree03_MaxCount"
-                          ]
-                        },
-                        "MDF_Ratio_PointB3": {
-                          "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                          "displayLines": "_PointB3_Ratio",
-                          "constants": [],
-                          "variables": [
-                            "_PointB3_Ratio"
-                          ]
-                        },
-                        "MDF_MaxLayer": {
-                          "operator": "Variables[0] (42) || RETURN",
-                          "displayLines": "42",
-                          "constants": [],
-                          "variables": [
-                            42
-                          ]
-                        },
-                        "MDF_BounceLayer": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
-                        },
-                        "MDF_MageLayer": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Battle Event/Summon Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      },
-                      {
-                        "name": "Is Entity a Battle Event/Summon",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "invertCondition": true,
-                        "expectedType": "Summon"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1573828152\">TheHerta_PointB2_Ally</a>",
-                      "valuePerStack": {
-                        "MDF_MaxLayer_PointB3": {
-                          "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
-                          "displayLines": "_SkillTree03_MaxCount",
-                          "constants": [],
-                          "variables": [
-                            "_SkillTree03_MaxCount"
-                          ]
-                        },
-                        "MDF_Ratio_PointB3": {
-                          "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                          "displayLines": "_PointB3_Ratio",
-                          "constants": [],
-                          "variables": [
-                            "_PointB3_Ratio"
-                          ]
-                        },
-                        "MDF_MaxLayer": {
-                          "operator": "Variables[0] (42) || RETURN",
-                          "displayLines": "42",
-                          "constants": [],
-                          "variables": [
-                            42
-                          ]
-                        },
-                        "MDF_BounceLayer": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
-                        },
-                        "MDF_MageLayer": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Skill21_Layer_Max"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__780596583\">TheHerta_Herta_Listen</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Character ID",
-                          "ID": 1013,
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "characterName": "Herta"
-                        }
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1544367051\">TheHerta_Herta</a>",
-                  "valuePerStack": {
-                    "Cur_Count": 0
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Character ID",
-                    "ID": 1013,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": "Herta"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1544367051\">TheHerta_Herta</a>",
-                      "valuePerStack": {
-                        "Cur_Count": 0
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1544367051\">TheHerta_Herta</a>",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Turn [Action-End Phase]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1505063883\">TheHerta_Herta_CD</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Skill Type",
-                            "skillType": "Skill"
-                          },
-                          {
-                            "name": "Skill Type",
-                            "skillType": "Basic ATK"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"780596583\">TheHerta_Herta_Listen</a>"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1505063883\">TheHerta_Herta_CD</a>"
-                      },
-                      "failed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Has Flag",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Modifier Holder}}"
-                                },
-                                "flagName": "DisableAction",
-                                "invertCondition": true
-                              },
-                              {
-                                "name": "Has Flag",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Modifier Holder}}"
-                                },
-                                "flagName": "STAT_CTRL",
-                                "invertCondition": true
-                              }
-                            ]
-                          },
-                          "passed": [
-                            {
-                              "name": "Inject Ability Use",
-                              "abilityName": "Herta_PassiveAtkReady_Ability_Trigger",
-                              "abilityTarget": {
-                                "name": "Target Name",
-                                "target": "{{Hostile Entities(AOE)}}"
-                              },
-                              "priorityTag": "CharacterAttackFromSelf",
-                              "canHitNonTargets": true,
-                              "showInActionOrder": true,
-                              "abortFlags": [
-                                "STAT_CTRL",
-                                "DisableAction"
-                              ],
-                              "valuePerStack": {
-                                "Herta_Roll_Count": {
-                                  "operator": "Variables[0] (Cur_Count) || RETURN",
-                                  "displayLines": "Cur_Count",
-                                  "constants": [],
-                                  "variables": [
-                                    "Cur_Count"
-                                  ]
-                                }
-                              },
-                              "allowAbilityTriggers": false
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "Cur_Count"
-          ],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-614684164\">TheHerta_ExtraMark</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Looped Event",
-                  "maxLoops": 1,
-                  "Event": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          "Shuffle Targets",
-                          {
-                            "name": "Sort by Stat",
-                            "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                            "sortByHighest": true
-                          },
-                          {
-                            "name": "Sort by Monster Rank",
-                            "byHighest": true
-                          }
-                        ]
-                      },
-                      "includeDyingTargets": true,
-                      "maxTargets": 1,
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-                          "stackLimit": {
-                            "operator": "Variables[0] (42) || RETURN",
-                            "displayLines": "42",
-                            "constants": [],
-                            "variables": [
-                              42
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MagicMark_MaxCount_Max": {
-                              "operator": "Variables[0] (42) || RETURN",
-                              "displayLines": "42",
-                              "constants": [],
-                              "variables": [
-                                42
-                              ]
-                            },
-                            "MagicMark_MaxCount": {
-                              "operator": "Variables[0] (42) || RETURN",
-                              "displayLines": "42",
-                              "constants": [],
-                              "variables": [
-                                42
-                              ]
-                            },
-                            "MagicMark_Ratio": {
-                              "operator": "Variables[0] (1) || RETURN",
-                              "displayLines": "1",
-                              "constants": [],
-                              "variables": [
-                                1
-                              ]
-                            }
-                          },
-                          "addStacksPerTrigger": {
-                            "operator": "Variables[0] (25) || RETURN",
-                            "displayLines": "25",
-                            "constants": [],
-                            "variables": [
-                              25
-                            ]
-                          }
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Trace Activated",
-                            "conditionList": "Starved Landscape of Vacua"
-                          },
-                          "passed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
-                              "stackLimit": {
-                                "operator": "Variables[0] (99) || RETURN",
-                                "displayLines": "99",
-                                "constants": [],
-                                "variables": [
-                                  99
-                                ]
-                              },
-                              "valuePerStack": {
-                                "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
-                                  "displayLines": "_PointB3_Ratio",
-                                  "constants": [],
-                                  "variables": [
-                                    "_PointB3_Ratio"
-                                  ]
-                                }
-                              },
-                              "addStacksPerTrigger": {
-                                "operator": "Variables[0] (25) || RETURN",
-                                "displayLines": "25",
-                                "constants": [],
-                                "variables": [
-                                  25
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Skill21_Layer_Max"
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TheHerta_TheHerta_Ability03_Part02": {
-      "fileName": "TheHerta_TheHerta_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"426098232\">TheHerta_Passive_MagicMark_42_Block</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "__i",
-          "value": 0
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
-                }
-              },
-              {
-                "name": "Sort by Modifier Value",
-                "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-                "value": "Layer",
-                "sortByHighest": true
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "__i",
-              "value": {
-                "operator": "Variables[0] (__i) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(__i + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "__i"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "__j",
-              "value": 0
-            },
-            {
-              "name": "Define Custom Variable with Modifier Values",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "valueType": "Layer",
-              "variableName": "_Temp_Sort_Layer",
-              "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-              "multiplier": 1
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
-                    }
-                  },
-                  {
-                    "name": "Sort by Stat",
-                    "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                    "sortByHighest": true
-                  },
-                  {
-                    "name": "Sort by Monster Rank",
-                    "byHighest": true
-                  }
-                ]
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "__j",
-                  "value": {
-                    "operator": "Variables[0] (__j) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(__j + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "__j"
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "__j",
-                    "compareType": "=",
-                    "value2": {
-                      "operator": "Variables[0] (__i) || RETURN",
-                      "displayLines": "__i",
-                      "constants": [],
-                      "variables": [
-                        "__i"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>",
-                      "addStacksPerTrigger": {
-                        "operator": "Variables[0] (_Temp_Sort_Layer) || RETURN",
-                        "displayLines": "_Temp_Sort_Layer",
-                        "constants": [],
-                        "variables": [
-                          "_Temp_Sort_Layer"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>"
-                }
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Modifier Values",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "valueType": "Layer",
-              "variableName": "_Temp_Sort_Layer",
-              "modifierName": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>",
-              "multiplier": 1
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-              "stackLimit": {
-                "operator": "Variables[0] (42) || RETURN",
-                "displayLines": "42",
-                "constants": [],
-                "variables": [
-                  42
-                ]
-              },
-              "valuePerStack": {
-                "MagicMark_MaxCount_Max": {
-                  "operator": "Variables[0] (42) || RETURN",
-                  "displayLines": "42",
-                  "constants": [],
-                  "variables": [
-                    42
-                  ]
-                },
-                "MagicMark_MaxCount": {
-                  "operator": "Variables[0] (42) || RETURN",
-                  "displayLines": "42",
-                  "constants": [],
-                  "variables": [
-                    42
-                  ]
-                },
-                "MagicMark_Ratio": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
-                }
-              },
-              "addStacksPerTrigger": {
-                "operator": "Variables[0] (_Temp_Sort_Layer) || RETURN",
-                "displayLines": "_Temp_Sort_Layer",
-                "constants": [],
-                "variables": [
-                  "_Temp_Sort_Layer"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_Hat",
-          "value": 0
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_SKL03_EXTRADAMAGE",
-          "value": 0
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Trace Activated",
-                "conditionList": "Starved Landscape of Vacua"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable with Modifier Values",
-              "valueType": "Layer",
-              "variableName": "_SKL03_EXTRADAMAGE",
-              "modifierName": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
-              "multiplier": 1
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_SKL03_EXTRADAMAGE",
-              "value": {
-                "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (_PointB3_Ratio) || MUL || RETURN",
-                "displayLines": "(_SKL03_EXTRADAMAGE * _PointB3_Ratio)",
-                "constants": [],
-                "variables": [
-                  "_SKL03_EXTRADAMAGE",
-                  "_PointB3_Ratio"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 6
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Target Count",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Hostile Entities(AOE)}}"
-                },
-                "compareType": ">=",
-                "value2": 3,
-                "livingTargets": true
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_SKL03_EXTRADAMAGE",
-                  "value": {
-                    "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (1.4) || ADD || RETURN",
-                    "displayLines": "(_SKL03_EXTRADAMAGE + 1.4)",
-                    "constants": [],
-                    "variables": [
-                      "_SKL03_EXTRADAMAGE",
-                      1.4
-                    ]
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target Count",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Hostile Entities(AOE)}}"
-                    },
-                    "compareType": "=",
-                    "value2": 2,
-                    "livingTargets": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_SKL03_EXTRADAMAGE",
-                      "value": {
-                        "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (2.5) || ADD || RETURN",
-                        "displayLines": "(_SKL03_EXTRADAMAGE + 2.5)",
-                        "constants": [],
-                        "variables": [
-                          "_SKL03_EXTRADAMAGE",
-                          2.5
-                        ]
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_SKL03_EXTRADAMAGE",
-                      "value": {
-                        "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (4) || ADD || RETURN",
-                        "displayLines": "(_SKL03_EXTRADAMAGE + 4)",
-                        "constants": [],
-                        "variables": [
-                          "_SKL03_EXTRADAMAGE",
-                          4
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"555212333\">TheHerta_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
-          "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
-            }
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"426098232\">TheHerta_Passive_MagicMark_42_Block</a>"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (2) || Variables[1] (_SKL03_EXTRADAMAGE) || ADD || RETURN",
-              "displayLines": "(2 + _SKL03_EXTRADAMAGE)",
-              "constants": [],
-              "variables": [
-                2,
-                "_SKL03_EXTRADAMAGE"
-              ]
-            },
-            "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
-            },
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Update Ability Binding",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "abilityName": "Skill21",
-          "skillSlot": "Skill",
-          "enableSecondaryType": "ControlSkill02"
-        },
-        {
-          "name": "Update Ability Enhance Button",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": "Show",
-          "abilityName": "Skill"
-        },
-        {
-          "name": "Adjust Variable Value",
-          "adjustmentType": "Add to Value (Default)",
-          "variableName": "Skill21_Layer",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "value": {
-            "operator": "Variables[0] (Skill21_Layer_Add) || RETURN",
-            "displayLines": "Skill21_Layer_Add",
-            "constants": [],
-            "variables": [
-              "Skill21_Layer_Add"
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 2
-          },
-          "passed": [
-            {
-              "name": "Adjust Variable Value",
-              "adjustmentType": "Add to Value (Default)",
-              "variableName": "Skill21_Layer",
-              "on": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": {
-            "operator": "Variables[0] (Skill21_Layer) || RETURN",
-            "displayLines": "Skill21_Layer",
-            "constants": [],
-            "variables": [
-              "Skill21_Layer"
-            ]
-          },
-          "priorState": "Active"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "set": 0
-        },
-        "Trigger: Skip Death Handling",
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "TheHerta_TheHerta_Ability03_Part01": {
-      "fileName": "TheHerta_TheHerta_Ability03_Part01",
-      "childAbilityList": [
-        "TheHerta_TheHerta_Ability03_Camera",
-        "TheHerta_TheHerta_Ability03_EnterReady",
-        "TheHerta_TheHerta_Ability03_Part01",
-        "TheHerta_TheHerta_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Ultimate",
-      "energy": 5,
-      "toughnessList": [
-        0,
-        20,
-        0
-      ],
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "TheHerta_Ability03_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "TheHerta_TheHerta_Ability03_EnterReady": {
-      "fileName": "TheHerta_TheHerta_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "TheHerta_TheHerta_Ability21_Part02": {
-      "fileName": "TheHerta_TheHerta_Ability21_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1324497127\">TheHerta_Ability21</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "S03_Mark_Count",
-          "value": 0
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable with Modifier Values",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "valueType": "Layer",
-              "variableName": "S03_Mark_Count",
-              "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-              "multiplier": 1
-            },
-            {
-              "name": "Define Custom Variable with Modifier Values",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "valueType": "Layer",
-              "variableName": "Orig_Layer",
-              "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-              "multiplier": 1
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Eidolon Activated",
-                "eidolon": 1
-              },
-              "passed": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{ST and Blast}}"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
-                        }
-                      },
-                      {
-                        "name": "Sort by Modifier Value",
-                        "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-                        "value": "Layer",
-                        "sortByHighest": true
-                      }
-                    ]
-                  },
-                  "includeDyingTargets": true,
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable with Modifier Values",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "valueType": "Layer",
-                      "variableName": "_ADJ_TMP_COUNT",
-                      "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-                      "multiplier": 1
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "S03_Mark_Count",
-                      "value": {
-                        "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (_ADJ_TMP_COUNT) || Variables[2] (0.5) || MUL || ADD || RETURN",
-                        "displayLines": "(S03_Mark_Count + (_ADJ_TMP_COUNT * 0.5))",
-                        "constants": [],
-                        "variables": [
-                          "S03_Mark_Count",
-                          "_ADJ_TMP_COUNT",
-                          0.5
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Trace Activated",
-                "conditionList": "Aloofly Honest"
-              },
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "S03_Mark_Count",
-                    "compareType": ">=",
-                    "value2": 42
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1341843949\">TheHerta_PointB1_42</a>",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-2073297144\">TheHerta_MageNum_2</a>"
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "S03_Mark_Count",
-                  "value": {
-                    "operator": "Variables[0] (S03_Mark_Count) || Constants[0] (2) || MUL || RETURN",
-                    "displayLines": "(S03_Mark_Count * 2)",
-                    "constants": [
-                      2
-                    ],
-                    "variables": [
-                      "S03_Mark_Count"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Eidolon Activated",
-                    "eidolon": 1
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-                  "stackLimit": {
-                    "operator": "Variables[0] (42) || RETURN",
-                    "displayLines": "42",
-                    "constants": [],
-                    "variables": [
-                      42
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MagicMark_MaxCount_Max": {
-                      "operator": "Variables[0] (42) || RETURN",
-                      "displayLines": "42",
-                      "constants": [],
-                      "variables": [
-                        42
-                      ]
-                    },
-                    "MagicMark_MaxCount": {
-                      "operator": "Variables[0] (42) || RETURN",
-                      "displayLines": "42",
-                      "constants": [],
-                      "variables": [
-                        42
-                      ]
-                    },
-                    "MagicMark_Ratio": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
-                    }
-                  },
-                  "addStacksPerTrigger": {
-                    "operator": "Variables[0] (15) || RETURN",
-                    "displayLines": "15",
-                    "constants": [],
-                    "variables": [
-                      15
-                    ]
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-                  "stackLimit": {
-                    "operator": "Variables[0] (42) || RETURN",
-                    "displayLines": "42",
-                    "constants": [],
-                    "variables": [
-                      42
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MagicMark_MaxCount_Max": {
-                      "operator": "Variables[0] (42) || RETURN",
-                      "displayLines": "42",
-                      "constants": [],
-                      "variables": [
-                        42
-                      ]
-                    },
-                    "MagicMark_MaxCount": {
-                      "operator": "Variables[0] (42) || RETURN",
-                      "displayLines": "42",
-                      "constants": [],
-                      "variables": [
-                        42
-                      ]
-                    },
-                    "MagicMark_Ratio": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
-                    }
-                  },
-                  "addStacksPerTrigger": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"1142002606\">TheHerta_SKL02</a>",
-          "variables": {
-            "DV_DamageRatio1": {
-              "operator": "Variables[0] (0.8) || RETURN",
-              "displayLines": "0.8",
-              "constants": [],
-              "variables": [
-                0.8
-              ]
-            },
-            "DV_MarkAddLayer": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
-            },
-            "DV_MarkMaxLayer": {
-              "operator": "Variables[0] (42) || RETURN",
-              "displayLines": "42",
-              "constants": [],
-              "variables": [
-                42
-              ]
-            }
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "Orig_Layer",
-            "compareType": ">=",
-            "value2": -1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"27955030\">TheHerta_Passive_MagicMark_Burst_Show</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "includeDyingTargets": true,
-          "maxTargets": 10,
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "S03_Mark_Count",
-                "compareType": ">",
-                "value2": 0
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "S03_Mark_Damage",
-                  "value": {
-                    "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (0.08) || MUL || RETURN",
-                    "displayLines": "(S03_Mark_Count * 0.08)",
-                    "constants": [],
-                    "variables": [
-                      "S03_Mark_Count",
-                      0.08
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of",
-                    "of": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Ability Target(ST)}}"
-                    },
-                    "mustBeAlive2": true
-                  },
-                  "passed": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Ice",
-                        "Damage": {
-                          "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (0.08) || MUL || Variables[2] (0.4) || ADD || RETURN",
-                          "displayLines": "((S03_Mark_Count * 0.08) + 0.4)",
-                          "constants": [],
-                          "variables": [
-                            "S03_Mark_Count",
-                            0.08,
-                            0.4
-                          ]
-                        },
-                        "Toughness": {
-                          "displayLines": 15
-                        },
-                        "Tags": null
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Ice",
-                        "Damage": {
-                          "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (0.04) || MUL || Variables[2] (0.4) || ADD || RETURN",
-                          "displayLines": "((S03_Mark_Count * 0.04) + 0.4)",
-                          "constants": [],
-                          "variables": [
-                            "S03_Mark_Count",
-                            0.04,
-                            0.4
-                          ]
-                        },
-                        "Toughness": {
-                          "displayLines": 15
-                        },
-                        "Tags": null
-                      }
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "canPhase": true,
-                  "AttackScaling": {
-                    "DamageType": "Ice",
-                    "Damage": {
-                      "operator": "Variables[0] (0.4) || RETURN",
-                      "displayLines": "0.4",
-                      "constants": [],
-                      "variables": [
-                        0.4
-                      ]
-                    },
-                    "Toughness": {
-                      "displayLines": 15
-                    },
-                    "Tags": null
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 2
-          },
-          "passed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1527090005\">ReduceNextActionDelay</a>",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variables": {
-                "parameter[0]_NormalizedValue": {
-                  "operator": "Variables[0] (0.35) || RETURN",
-                  "displayLines": "0.35",
-                  "constants": [],
-                  "variables": [
-                    0.35
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1324497127\">TheHerta_Ability21</a>"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-333672562\">TheHerta_Passive_MagicMark_Burst</a>"
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1324497127\">TheHerta_Ability21</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1341843949\">TheHerta_PointB1_42</a>"
-        },
-        {
-          "name": "Adjust Variable Value",
-          "adjustmentType": "Add to Value (Default)",
-          "variableName": "Skill21_Layer",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "value": -1
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "Skill21_Layer",
-            "compareType": ">",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "Update Displayed Energy Bar",
-              "value": {
-                "operator": "Variables[0] (Skill21_Layer) || RETURN",
-                "displayLines": "Skill21_Layer",
-                "constants": [],
-                "variables": [
-                  "Skill21_Layer"
-                ]
-              },
-              "priorState": "Active"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Update Displayed Energy Bar",
-              "value": {
-                "operator": "Variables[0] (Skill21_Layer) || RETURN",
-                "displayLines": "Skill21_Layer",
-                "constants": [],
-                "variables": [
-                  "Skill21_Layer"
-                ]
-              },
-              "priorState": "Normal"
-            },
-            {
-              "name": "Update Ability Binding",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "abilityName": "Skill02",
-              "skillSlot": "Skill",
-              "enableSecondaryType": "ControlSkill02"
-            },
-            {
-              "name": "Update Ability Enhance Button",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "display": "Hide",
-              "abilityName": "Skill"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "TheHerta_TheHerta_Ability21_Part01": {
-      "fileName": "TheHerta_TheHerta_Ability21_Part01",
-      "childAbilityList": [
-        "TheHerta_TheHerta_Ability021_Camera",
-        "TheHerta_TheHerta_Ability21_Part01",
-        "TheHerta_TheHerta_Ability21_Part02"
-      ],
-      "skillTrigger": "Skill21",
-      "abilityType": "Skill",
-      "energy": 30,
-      "toughnessList": [
-        20,
-        0,
-        10
-      ],
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "TheHerta_Ability21_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "subTarget": "All Other Team Members"
-      }
-    },
-    "TheHerta_TheHerta_Ability02_Part02": {
-      "fileName": "TheHerta_TheHerta_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-424945107\">TheHerta_Trace02_MainTarget</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"1142002606\">TheHerta_SKL02</a>",
-          "variables": {
-            "DV_DamageRatio1": {
-              "operator": "Variables[0] (0.7) || RETURN",
-              "displayLines": "0.7",
-              "constants": [],
-              "variables": [
-                0.7
-              ]
-            },
-            "DV_MarkAddLayer": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
-            },
-            "DV_MarkMaxLayer": {
-              "operator": "Variables[0] (42) || RETURN",
-              "displayLines": "42",
-              "constants": [],
-              "variables": [
-                42
-              ]
-            }
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-424945107\">TheHerta_Trace02_MainTarget</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "TheHerta_TheHerta_Ability02_Part01": {
-      "fileName": "TheHerta_TheHerta_Ability02_Part01",
-      "childAbilityList": [
-        "TheHerta_TheHerta_Ability02_Camera",
-        "TheHerta_TheHerta_Ability02_Part01",
-        "TheHerta_TheHerta_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": 30,
-      "toughnessList": [
-        15,
-        0,
-        10
-      ],
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "TheHerta_Ability02_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "subTarget": "Blast Targets",
-        "blastTargetCount": 2
-      }
-    },
-    "TheHerta_TheHerta_Ability01_Part02": {
-      "fileName": "TheHerta_TheHerta_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
-            },
-            "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
-            },
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "TheHerta_TheHerta_Ability01_Part01": {
-      "fileName": "TheHerta_TheHerta_Ability01_Part01",
-      "childAbilityList": [
-        "TheHerta_TheHerta_Ability01_Camera",
-        "TheHerta_TheHerta_Ability01_Part01",
-        "TheHerta_TheHerta_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": 20,
-      "toughnessList": [
-        10,
-        0,
-        0
-      ],
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "TheHerta_Ability01_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      }
-    },
     "TheHerta_Modifiers": {
       "fileName": "TheHerta_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -4938,15 +34,23 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1324497127\">TheHerta_Ability21</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__276886007\">ADV_StageAbility_Maze_TheHerta_RogueExtraEffect</a>",
+          "counter": 1,
+          "stackType": "Merge"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-424945107\">TheHerta_Trace02_MainTarget</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1507655097\">ADV_StageAbility_Maze_TheHerta</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1324497127\">TheHerta_Ability21</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-424945107\">TheHerta_Trace02_MainTarget</a>"
         },
         {
           "name": "Modifier Construction",
@@ -5442,6 +546,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__555212333\">TheHerta_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "ATK Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5464,29 +572,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "_Hat"
-          ],
-          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "ATK Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__184474088\">TheHerta_SKL03_Sort_Storge</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__184474088\">TheHerta_SKL03_Sort_Storge</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1940766665\">TheHerta_SKL02_Mark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1940766665\">TheHerta_SKL02_Mark</a>"
         },
         {
           "name": "Modifier Construction",
@@ -5548,12 +642,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__489116474\">TheHerta_Eidolon2_PreShow</a>",
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "Skill21_Layer_Max"
-          ],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -5659,28 +747,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Skill21_Layer_Max"
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__27955030\">TheHerta_Passive_MagicMark_Burst_Show</a>",
-          "stackData": [],
-          "latentQueue": [
-            "Orig_Layer"
-          ]
+          "for": "<a class=\"gModGreen\" id=\"mod__27955030\">TheHerta_Passive_MagicMark_Burst_Show</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-333672562\">TheHerta_Passive_MagicMark_Burst</a>",
-          "stackData": [],
-          "latentQueue": [
-            "Orig_Layer",
-            "S03_Mark_Damage"
-          ]
+          "for": "<a class=\"gModGreen\" id=\"mod__-333672562\">TheHerta_Passive_MagicMark_Burst</a>"
         },
         {
           "name": "Modifier Construction",
@@ -5691,6 +766,9 @@ const compositeAbilityObject = {
             "ListenBattleEventSkill",
             "KeepOnDeathrattle"
           ],
+          "description": "The Herta's Enhanced Skill will additionally deal DMG to all enemies based on the number of \"Interpretation\" stacks on the target.",
+          "type": "Other",
+          "statusName": "Interpretation",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -7445,18 +2523,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "MagicMark_MaxCount_Max",
-            "MagicMark_MaxCount",
-            "MagicMark_Ratio"
-          ],
-          "latentQueue": [
-            "Orig_Layer"
-          ],
-          "description": "The Herta's Enhanced Skill will additionally deal DMG to all enemies based on the number of \"Interpretation\" stacks on the target.",
-          "type": "Other",
-          "statusName": "Interpretation"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7578,12 +2645,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
           "stackType": "ReplaceByCaster",
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "Skill21_Layer_Max"
-          ],
           "description": "Each stack increases the multiplier of the DMG dealt by Ultimate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Other",
           "statusName": "Answer"
@@ -7592,21 +2653,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]",
           "counter": 1,
-          "stackData": [],
-          "latentQueue": [
-            "Skill21_Layer_Max"
-          ],
           "description": "Skill is enhanced to \"Hear Me Out.\"",
           "type": "Other",
           "statusName": "Inspiration"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__410301042\">TheHerta_Passive_MagicMark_Effect_Block_42</a>",
-          "stackData": [],
-          "latentQueue": [
-            "Orig_Layer"
-          ]
+          "for": "<a class=\"gModGreen\" id=\"mod__410301042\">TheHerta_Passive_MagicMark_Effect_Block_42</a>"
         },
         {
           "name": "Modifier Construction",
@@ -7614,9 +2667,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__426098232\">TheHerta_Passive_MagicMark_42_Block</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__426098232\">TheHerta_Passive_MagicMark_42_Block</a>"
         },
         {
           "name": "Modifier Construction",
@@ -7625,9 +2676,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7635,6 +2684,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "The Sixteenth Key",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7657,10 +2709,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "The Sixteenth Key"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7822,12 +2871,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "Skill21_Layer_Max"
           ]
         },
         {
@@ -7855,12 +2898,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "Orig_Layer"
           ]
         },
         {
@@ -7888,12 +2925,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "Skill21_Layer_Max"
           ]
         },
         {
@@ -7905,6 +2936,5220 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "TheHerta_TheHerta_TechniqueInRougeLevel": {
+      "fileName": "TheHerta_TheHerta_TechniqueInRougeLevel",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2036504722\">TheHerta_TechniqueInRougeLevel</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2036504722\">TheHerta_TechniqueInRougeLevel</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "TargetHP",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Monster Rank",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "compareType": ">=",
+                        "value2": 3
+                      },
+                      "passed": [
+                        {
+                          "name": "ATK Scaling DMG",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "canPhase": true,
+                          "AttackScaling": {
+                            "DamageType": {
+                              "name": "Damage Type Source",
+                              "sourceType": {}
+                            },
+                            "DamageFlat": {
+                              "operator": "Variables[0] (TargetHP) || Variables[1] (EliteDamagePercentage) || MUL || RETURN",
+                              "displayLines": "(TargetHP * EliteDamagePercentage)",
+                              "constants": [],
+                              "variables": [
+                                "TargetHP",
+                                "EliteDamagePercentage"
+                              ]
+                            },
+                            "dmgFormulaFinal": "Converted DMG Base",
+                            "Toughness": null,
+                            "Tags": null,
+                            "attackType": "True DMG"
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "ATK Scaling DMG",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "canPhase": true,
+                          "AttackScaling": {
+                            "DamageType": {
+                              "name": "Damage Type Source",
+                              "sourceType": {}
+                            },
+                            "DamageFlat": {
+                              "operator": "Variables[0] (TargetHP) || Variables[1] (BasicDamagePercentage) || MUL || RETURN",
+                              "displayLines": "(TargetHP * BasicDamagePercentage)",
+                              "constants": [],
+                              "variables": [
+                                "TargetHP",
+                                "BasicDamagePercentage"
+                              ]
+                            },
+                            "dmgFormulaFinal": "Converted DMG Base",
+                            "Toughness": null,
+                            "Tags": null,
+                            "attackType": "True DMG"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -60
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TheHerta_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "TheHerta_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TheHerta_LocalPlayer_TheHerta_TechniqueUsage": {
+      "fileName": "TheHerta_LocalPlayer_TheHerta_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Game Mode",
+            "modes": [
+              "RogueExplore",
+              "ChessRogue",
+              "RelicRogue",
+              "TournRogue",
+              "MagicRogue"
+            ]
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": null,
+              "ID": "140102(Avatar_TheHerta_00_SkillMazeInRougeLevel)",
+              "duration": -1,
+              "valuePerStack": {
+                "BasicDamagePercentage": {
+                  "operator": "Variables[0] (0.99) || RETURN",
+                  "displayLines": "0.99",
+                  "constants": [],
+                  "variables": [
+                    0.99
+                  ]
+                },
+                "EliteDamagePercentage": {
+                  "operator": "Variables[0] (0.3) || RETURN",
+                  "displayLines": "0.3",
+                  "constants": [],
+                  "variables": [
+                    0.3
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "140101(SkillMaze)",
+          "duration": -1
+        },
+        "Submit Technique Use"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "TheHerta_LocalPlayer_TheHerta_NormalAtk01": {
+      "fileName": "TheHerta_LocalPlayer_TheHerta_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "TheHerta_TheHerta_TechniqueInLevel": {
+      "fileName": "TheHerta_TheHerta_TechniqueInLevel",
+      "childAbilityList": [
+        "TheHerta_TheHerta_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
+      "abilityType": "Technique",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1753550945\">Technique_TheHerta_Modifier</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__127317606\">TheHerta_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Vibe Checker</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Vibe Checker",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1753550945\">Technique_TheHerta_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Wave Count",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"127317606\">TheHerta_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">Vibe Checker</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (2) || RETURN",
+                        "displayLines": "2",
+                        "constants": [],
+                        "variables": [
+                          2
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.6) || RETURN",
+                          "displayLines": "0.6",
+                          "constants": [],
+                          "variables": [
+                            0.6
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TheHerta_TheHerta_PassiveAbility01": {
+      "fileName": "TheHerta_TheHerta_PassiveAbility01",
+      "childAbilityList": [
+        "TheHerta_TheHerta_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": 30,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Energy_Layer",
+          "value": 0
+        },
+        {
+          "name": "Read Variable Value",
+          "adjustmentType": "Add to Value (Default)",
+          "variableName": "Skill21_Layer",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Adjust Variable Value",
+          "adjustmentType": "Overwrite Value",
+          "variableName": "Skill21_Layer",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "value": 0
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "S03_Mark_Max",
+          "value": {
+            "operator": "Variables[0] (42) || RETURN",
+            "displayLines": "42",
+            "constants": [],
+            "variables": [
+              42
+            ]
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Skill21_Layer_Add",
+          "value": 1
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Skill21_Layer_Max",
+          "value": {
+            "operator": "Variables[0] (4) || RETURN",
+            "displayLines": "4",
+            "constants": [],
+            "variables": [
+              4
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 2
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"489116474\">TheHerta_Eidolon2_PreShow</a>",
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.35) || RETURN",
+                  "displayLines": "0.35",
+                  "constants": [],
+                  "variables": [
+                    0.35
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Adjust Variable Value",
+              "adjustmentType": "Add to Value (Default)",
+              "variableName": "Skill21_Layer",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "value": 1
+            },
+            {
+              "name": "Update Ability Binding",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "abilityName": "Skill21",
+              "skillSlot": "Skill",
+              "enableSecondaryType": "ControlSkill02"
+            },
+            {
+              "name": "Update Ability Enhance Button",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "display": "Show",
+              "abilityName": "Skill"
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "_MaxSp",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-910560068\">TheHerta_Passive_MagicMark_Caster</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-928577282\">TheHerta_Passive</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-57316235\">TheHerta_Passive_PreShow</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"734755482\">TheHerta_Passive_PreShow_Ability21</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1935947210\">TheHerta_Passive_PreShow_Ability21_All</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2664689\">TheHerta_MageNum</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"611803002\">TheHerta_SKL21_Listen</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-614684164\">TheHerta_ExtraMark</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2011497788\">TheHerta_UltraBoost</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_PointB3_Ratio",
+          "value": 0
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Starved Landscape of Vacua"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_SkillTree03_MaxCount",
+              "value": {
+                "operator": "Variables[0] (99) || RETURN",
+                "displayLines": "99",
+                "constants": [],
+                "variables": [
+                  99
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_PointB3_Ratio",
+              "value": {
+                "operator": "Variables[0] (0.01) || RETURN",
+                "displayLines": "0.01",
+                "constants": [],
+                "variables": [
+                  0.01
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Message From Beyond the Veil"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-450886652\">TheHerta_Trace02</a>",
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.8) || RETURN",
+                  "displayLines": "0.8",
+                  "constants": [],
+                  "variables": [
+                    0.8
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 4
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1044334207\">TheHerta_Eidolon4_Listen</a>",
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.12) || RETURN",
+                  "displayLines": "0.12",
+                  "constants": [],
+                  "variables": [
+                    0.12
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-73718393\">TheHerta_Eidolon6_Bonus</a>",
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.2) || RETURN",
+                  "displayLines": "0.2",
+                  "constants": [],
+                  "variables": [
+                    0.2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Aloofly Honest"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-400553795\">TheHerta_Trace01</a>",
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (3) || RETURN",
+                  "displayLines": "3",
+                  "constants": [],
+                  "variables": [
+                    3
+                  ]
+                },
+                "MDF_MaxCount": {
+                  "operator": "Variables[0] (S03_Mark_Max) || RETURN",
+                  "displayLines": "S03_Mark_Max",
+                  "constants": [],
+                  "variables": [
+                    "S03_Mark_Max"
+                  ]
+                },
+                "MDF_MinCount": 0,
+                "MDF_AddLayer": 0,
+                "MDF_MaxLayer": {
+                  "operator": "Variables[0] (42) || RETURN",
+                  "displayLines": "42",
+                  "constants": [],
+                  "variables": [
+                    42
+                  ]
+                },
+                "MDF_MaxLayer_PointB3": {
+                  "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
+                  "displayLines": "_SkillTree03_MaxCount",
+                  "constants": [],
+                  "variables": [
+                    "_SkillTree03_MaxCount"
+                  ]
+                },
+                "MDF_Ratio_PointB3": {
+                  "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
+                  "displayLines": "_PointB3_Ratio",
+                  "constants": [],
+                  "variables": [
+                    "_PointB3_Ratio"
+                  ]
+                },
+                "MDF_BounceLayer": 0
+              }
+            }
+          ]
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "maximum": 1,
+          "assignState": "True",
+          "priorState": "Normal",
+          "bar#": 4,
+          "cooldown": 0
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 2
+          },
+          "passed": [
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": {
+                "operator": "Variables[0] (Skill21_Layer) || RETURN",
+                "displayLines": "Skill21_Layer",
+                "constants": [],
+                "variables": [
+                  "Skill21_Layer"
+                ]
+              },
+              "priorState": "Active"
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1890012800\">TheHerta_Trace02_Bonus</a>[<span class=\"descriptionNumberColor\">Message From Beyond the Veil</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Message From Beyond the Veil",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1949332681\">TheHerta_Trace02_Mage</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate"
+                  },
+                  "passed": [
+                    {
+                      "name": "Skill Points Modification",
+                      "adjustmentValue": 1,
+                      "adjustmentType": "+"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1909734267\">TheHerta_Trace02_CheckMage</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1890012800\">TheHerta_Trace02_Bonus</a>[<span class=\"descriptionNumberColor\">Message From Beyond the Veil</span>]",
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                      "displayLines": "MDF_PropertyValue",
+                      "constants": [],
+                      "variables": [
+                        "MDF_PropertyValue"
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1890012800\">TheHerta_Trace02_Bonus</a>[<span class=\"descriptionNumberColor\">Message From Beyond the Veil</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                          "displayLines": "MDF_PropertyValue",
+                          "constants": [],
+                          "variables": [
+                            "MDF_PropertyValue"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-450886652\">TheHerta_Trace02</a>",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "Skill21_Layer_Max"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_Mage_Count",
+                  "value": 0
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "conditions": {
+                    "name": "Target is Pathstrider",
+                    "path": [
+                      "Erudition"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "typeFilter": "All"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_Mage_Count",
+                      "value": {
+                        "operator": "Variables[0] (_Mage_Count) || Constants[0] (1) || ADD || RETURN",
+                        "displayLines": "(_Mage_Count + 1)",
+                        "constants": [
+                          1
+                        ],
+                        "variables": [
+                          "_Mage_Count"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_Mage_Count",
+                    "compareType": ">=",
+                    "value2": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1909734267\">TheHerta_Trace02_CheckMage</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                          "displayLines": "MDF_PropertyValue",
+                          "constants": [],
+                          "variables": [
+                            "MDF_PropertyValue"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1280907269\">TheHerta_PointB2_Listen</a>"
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2011497788\">TheHerta_UltraBoost</a>",
+          "latentQueue": [
+            "Skill21_Layer_Max"
+          ],
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "skillType": [
+              "Ultimate"
+            ],
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": "0(Set AV)"
+            }
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-910560068\">TheHerta_Passive_MagicMark_Caster</a>",
+          "latentQueue": [
+            "Skill21_Layer_Max"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                    "invertCondition": true
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                      "stackLimit": {
+                        "operator": "Variables[0] (42) || RETURN",
+                        "displayLines": "42",
+                        "constants": [],
+                        "variables": [
+                          42
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MagicMark_MaxCount_Max": {
+                          "operator": "Variables[0] (42) || RETURN",
+                          "displayLines": "42",
+                          "constants": [],
+                          "variables": [
+                            42
+                          ]
+                        },
+                        "MagicMark_MaxCount": {
+                          "operator": "Variables[0] (42) || RETURN",
+                          "displayLines": "42",
+                          "constants": [],
+                          "variables": [
+                            42
+                          ]
+                        },
+                        "MagicMark_Ratio": {
+                          "operator": "Variables[0] (1) || RETURN",
+                          "displayLines": "1",
+                          "constants": [],
+                          "variables": [
+                            1
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Trace Activated",
+                        "conditionList": "Starved Landscape of Vacua"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
+                          "stackLimit": {
+                            "operator": "Variables[0] (99) || RETURN",
+                            "displayLines": "99",
+                            "constants": [],
+                            "variables": [
+                              99
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
+                              "displayLines": "_PointB3_Ratio",
+                              "constants": [],
+                              "variables": [
+                                "_PointB3_Ratio"
+                              ]
+                            }
+                          },
+                          "addStacksPerTrigger": 1
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team Unselectables}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"887606439\">TheHerta_Passive_MagicMark_Unselectable</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Enemy Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Enemy Team All}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "mustBeAlive2": true
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                          },
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                              "stackLimit": {
+                                "operator": "Variables[0] (42) || RETURN",
+                                "displayLines": "42",
+                                "constants": [],
+                                "variables": [
+                                  42
+                                ]
+                              },
+                              "valuePerStack": {
+                                "MagicMark_MaxCount_Max": {
+                                  "operator": "Variables[0] (42) || RETURN",
+                                  "displayLines": "42",
+                                  "constants": [],
+                                  "variables": [
+                                    42
+                                  ]
+                                },
+                                "MagicMark_MaxCount": {
+                                  "operator": "Variables[0] (42) || RETURN",
+                                  "displayLines": "42",
+                                  "constants": [],
+                                  "variables": [
+                                    42
+                                  ]
+                                },
+                                "MagicMark_Ratio": {
+                                  "operator": "Variables[0] (1) || RETURN",
+                                  "displayLines": "1",
+                                  "constants": [],
+                                  "variables": [
+                                    1
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            },
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Trace Activated",
+                                "conditionList": "Starved Landscape of Vacua"
+                              },
+                              "passed": [
+                                {
+                                  "name": "Add Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
+                                  "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
+                                  "stackLimit": {
+                                    "operator": "Variables[0] (99) || RETURN",
+                                    "displayLines": "99",
+                                    "constants": [],
+                                    "variables": [
+                                      99
+                                    ]
+                                  },
+                                  "valuePerStack": {
+                                    "MDF_PropertyValue": {
+                                      "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
+                                      "displayLines": "_PointB3_Ratio",
+                                      "constants": [],
+                                      "variables": [
+                                        "_PointB3_Ratio"
+                                      ]
+                                    }
+                                  },
+                                  "addStacksPerTrigger": 1
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"887606439\">TheHerta_Passive_MagicMark_Unselectable</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__887606439\">TheHerta_Passive_MagicMark_Unselectable</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "latentQueue": [
+            "Skill21_Layer_Max"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Unselectable Adjustment [Owner]: End",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                  "stackLimit": {
+                    "operator": "Variables[0] (42) || RETURN",
+                    "displayLines": "42",
+                    "constants": [],
+                    "variables": [
+                      42
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MagicMark_MaxCount_Max": {
+                      "operator": "Variables[0] (42) || RETURN",
+                      "displayLines": "42",
+                      "constants": [],
+                      "variables": [
+                        42
+                      ]
+                    },
+                    "MagicMark_MaxCount": {
+                      "operator": "Variables[0] (42) || RETURN",
+                      "displayLines": "42",
+                      "constants": [],
+                      "variables": [
+                        42
+                      ]
+                    },
+                    "MagicMark_Ratio": {
+                      "operator": "Variables[0] (1) || RETURN",
+                      "displayLines": "1",
+                      "constants": [],
+                      "variables": [
+                        1
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Trace Activated",
+                    "conditionList": "Starved Landscape of Vacua"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
+                      "stackLimit": {
+                        "operator": "Variables[0] (99) || RETURN",
+                        "displayLines": "99",
+                        "constants": [],
+                        "variables": [
+                          99
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
+                          "displayLines": "_PointB3_Ratio",
+                          "constants": [],
+                          "variables": [
+                            "_PointB3_Ratio"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"887606439\">TheHerta_Passive_MagicMark_Unselectable</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-928577282\">TheHerta_Passive</a>",
+          "modifierFlags": [
+            "ListenBattleEventSkill"
+          ],
+          "latentQueue": [
+            "Skill21_Layer_Max"
+          ],
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-682623552\">TheHerta_BPdamageNumber_UIconfig</a>",
+              "haloStatus": true
+            }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-434693417\">TheHerta_Trace01_Regen</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead",
+            "ListenBattleEventSkill"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Hit",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"220694751\">TheHerta_Trace01_Regen_CD</a>",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"220694751\">TheHerta_Trace01_Regen_CD</a>"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                      "stackLimit": {
+                        "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                        "displayLines": "MDF_MaxLayer",
+                        "constants": [],
+                        "variables": [
+                          "MDF_MaxLayer"
+                        ]
+                      },
+                      "addStacksPerTrigger": 1
+                    },
+                    {
+                      "name": "Define Custom Variable with Modifier Values",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "valueType": "Layer",
+                      "variableName": "_Effect_Layer",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                      "multiplier": 1
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Trace Activated",
+                        "conditionList": "Starved Landscape of Vacua"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
+                          "stackLimit": {
+                            "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
+                            "displayLines": "MDF_MaxLayer_PointB3",
+                            "constants": [],
+                            "variables": [
+                              "MDF_MaxLayer_PointB3"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
+                              "displayLines": "MDF_Ratio_PointB3",
+                              "constants": [],
+                              "variables": [
+                                "MDF_Ratio_PointB3"
+                              ]
+                            }
+                          },
+                          "addStacksPerTrigger": 1
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_Hit_Count",
+                      "value": {
+                        "operator": "Variables[0] (_Hit_Count) || Constants[0] (1) || ADD || RETURN",
+                        "displayLines": "(_Hit_Count + 1)",
+                        "constants": [
+                          1
+                        ],
+                        "variables": [
+                          "_Hit_Count"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack Start [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_Hit_Count",
+                  "value": 0
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"220694751\">TheHerta_Trace01_Regen_CD</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_Hit_Count",
+                    "compareType": ">",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_MaxCount) || RETURN",
+                      "displayLines": "MDF_MaxCount",
+                      "constants": [],
+                      "variables": [
+                        "MDF_MaxCount"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_Hit_Count",
+                      "value": {
+                        "operator": "Variables[0] (MDF_MaxCount) || RETURN",
+                        "displayLines": "MDF_MaxCount",
+                        "constants": [],
+                        "variables": [
+                          "MDF_MaxCount"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "_Hit_Count",
+                        "compareType": "<",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_MinCount) || RETURN",
+                          "displayLines": "MDF_MinCount",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MinCount"
+                          ]
+                        }
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-2073297144\">TheHerta_MageNum_2</a>"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_Hit_Count",
+                      "value": {
+                        "operator": "Variables[0] (MDF_MinCount) || RETURN",
+                        "displayLines": "MDF_MinCount",
+                        "constants": [],
+                        "variables": [
+                          "MDF_MinCount"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Update Energy",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "value": {
+                    "operator": "Variables[0] (_Hit_Count) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
+                    "displayLines": "(_Hit_Count * MDF_PropertyValue)",
+                    "constants": [],
+                    "variables": [
+                      "_Hit_Count",
+                      "MDF_PropertyValue"
+                    ]
+                  },
+                  "isFixed": "(Fixed)"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_Hit_Count",
+                  "value": 0
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"220694751\">TheHerta_Trace01_Regen_CD</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__220694751\">TheHerta_Trace01_Regen_CD</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-400553795\">TheHerta_Trace01</a>",
+          "stackData": [
+            "MDF_PropertyValue",
+            "MDF_MaxCount",
+            "MDF_MinCount",
+            "MDF_AddLayer",
+            "MDF_MaxLayer",
+            "MDF_MaxLayer_PointB3",
+            "MDF_Ratio_PointB3",
+            "MDF_BounceLayer"
+          ],
+          "latentQueue": [
+            "Skill21_Layer_Max"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Trace Activated",
+                    "conditionList": "Message From Beyond the Veil"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                          "displayLines": "MDF_PropertyValue",
+                          "constants": [],
+                          "variables": [
+                            "MDF_PropertyValue"
+                          ]
+                        },
+                        "MDF_PropertyValue_2": {
+                          "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
+                          "displayLines": "MDF_PropertyValue_2",
+                          "constants": [],
+                          "variables": [
+                            "MDF_PropertyValue_2"
+                          ]
+                        },
+                        "MDF_MaxCount": {
+                          "operator": "Variables[0] (MDF_MaxCount) || RETURN",
+                          "displayLines": "MDF_MaxCount",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MaxCount"
+                          ]
+                        },
+                        "MDF_MinCount": {
+                          "operator": "Variables[0] (MDF_MinCount) || Variables[1] (3) || ADD || RETURN",
+                          "displayLines": "(MDF_MinCount + 3)",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MinCount",
+                            3
+                          ]
+                        },
+                        "MDF_AddLayer": {
+                          "operator": "Variables[0] (MDF_AddLayer) || RETURN",
+                          "displayLines": "MDF_AddLayer",
+                          "constants": [],
+                          "variables": [
+                            "MDF_AddLayer"
+                          ]
+                        },
+                        "MDF_MaxLayer": {
+                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                          "displayLines": "MDF_MaxLayer",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MaxLayer"
+                          ]
+                        },
+                        "MDF_MaxLayer_PointB3": {
+                          "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
+                          "displayLines": "MDF_MaxLayer_PointB3",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MaxLayer_PointB3"
+                          ]
+                        },
+                        "MDF_Ratio_PointB3": {
+                          "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
+                          "displayLines": "MDF_Ratio_PointB3",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Ratio_PointB3"
+                          ]
+                        },
+                        "MDF_BounceLayer": {
+                          "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
+                          "displayLines": "MDF_BounceLayer",
+                          "constants": [],
+                          "variables": [
+                            "MDF_BounceLayer"
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                          "displayLines": "MDF_PropertyValue",
+                          "constants": [],
+                          "variables": [
+                            "MDF_PropertyValue"
+                          ]
+                        },
+                        "MDF_PropertyValue_2": {
+                          "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
+                          "displayLines": "MDF_PropertyValue_2",
+                          "constants": [],
+                          "variables": [
+                            "MDF_PropertyValue_2"
+                          ]
+                        },
+                        "MDF_MaxCount": {
+                          "operator": "Variables[0] (MDF_MaxCount) || RETURN",
+                          "displayLines": "MDF_MaxCount",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MaxCount"
+                          ]
+                        },
+                        "MDF_MinCount": {
+                          "operator": "Variables[0] (MDF_MinCount) || RETURN",
+                          "displayLines": "MDF_MinCount",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MinCount"
+                          ]
+                        },
+                        "MDF_AddLayer": {
+                          "operator": "Variables[0] (MDF_AddLayer) || RETURN",
+                          "displayLines": "MDF_AddLayer",
+                          "constants": [],
+                          "variables": [
+                            "MDF_AddLayer"
+                          ]
+                        },
+                        "MDF_MaxLayer": {
+                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                          "displayLines": "MDF_MaxLayer",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MaxLayer"
+                          ]
+                        },
+                        "MDF_MaxLayer_PointB3": {
+                          "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
+                          "displayLines": "MDF_MaxLayer_PointB3",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MaxLayer_PointB3"
+                          ]
+                        },
+                        "MDF_Ratio_PointB3": {
+                          "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
+                          "displayLines": "MDF_Ratio_PointB3",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Ratio_PointB3"
+                          ]
+                        },
+                        "MDF_BounceLayer": {
+                          "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
+                          "displayLines": "MDF_BounceLayer",
+                          "constants": [],
+                          "variables": [
+                            "MDF_BounceLayer"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Trace Activated",
+                        "conditionList": "Message From Beyond the Veil"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                              "displayLines": "MDF_PropertyValue",
+                              "constants": [],
+                              "variables": [
+                                "MDF_PropertyValue"
+                              ]
+                            },
+                            "MDF_PropertyValue_2": {
+                              "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
+                              "displayLines": "MDF_PropertyValue_2",
+                              "constants": [],
+                              "variables": [
+                                "MDF_PropertyValue_2"
+                              ]
+                            },
+                            "MDF_MaxCount": {
+                              "operator": "Variables[0] (MDF_MaxCount) || RETURN",
+                              "displayLines": "MDF_MaxCount",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MaxCount"
+                              ]
+                            },
+                            "MDF_MinCount": {
+                              "operator": "Variables[0] (MDF_MinCount) || Variables[1] (3) || ADD || RETURN",
+                              "displayLines": "(MDF_MinCount + 3)",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MinCount",
+                                3
+                              ]
+                            },
+                            "MDF_AddLayer": {
+                              "operator": "Variables[0] (MDF_AddLayer) || RETURN",
+                              "displayLines": "MDF_AddLayer",
+                              "constants": [],
+                              "variables": [
+                                "MDF_AddLayer"
+                              ]
+                            },
+                            "MDF_MaxLayer": {
+                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                              "displayLines": "MDF_MaxLayer",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MaxLayer"
+                              ]
+                            },
+                            "MDF_MaxLayer_PointB3": {
+                              "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
+                              "displayLines": "MDF_MaxLayer_PointB3",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MaxLayer_PointB3"
+                              ]
+                            },
+                            "MDF_Ratio_PointB3": {
+                              "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
+                              "displayLines": "MDF_Ratio_PointB3",
+                              "constants": [],
+                              "variables": [
+                                "MDF_Ratio_PointB3"
+                              ]
+                            },
+                            "MDF_BounceLayer": {
+                              "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
+                              "displayLines": "MDF_BounceLayer",
+                              "constants": [],
+                              "variables": [
+                                "MDF_BounceLayer"
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                              "displayLines": "MDF_PropertyValue",
+                              "constants": [],
+                              "variables": [
+                                "MDF_PropertyValue"
+                              ]
+                            },
+                            "MDF_PropertyValue_2": {
+                              "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
+                              "displayLines": "MDF_PropertyValue_2",
+                              "constants": [],
+                              "variables": [
+                                "MDF_PropertyValue_2"
+                              ]
+                            },
+                            "MDF_MaxCount": {
+                              "operator": "Variables[0] (MDF_MaxCount) || RETURN",
+                              "displayLines": "MDF_MaxCount",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MaxCount"
+                              ]
+                            },
+                            "MDF_MinCount": {
+                              "operator": "Variables[0] (MDF_MinCount) || RETURN",
+                              "displayLines": "MDF_MinCount",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MinCount"
+                              ]
+                            },
+                            "MDF_AddLayer": {
+                              "operator": "Variables[0] (MDF_AddLayer) || RETURN",
+                              "displayLines": "MDF_AddLayer",
+                              "constants": [],
+                              "variables": [
+                                "MDF_AddLayer"
+                              ]
+                            },
+                            "MDF_MaxLayer": {
+                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                              "displayLines": "MDF_MaxLayer",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MaxLayer"
+                              ]
+                            },
+                            "MDF_MaxLayer_PointB3": {
+                              "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
+                              "displayLines": "MDF_MaxLayer_PointB3",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MaxLayer_PointB3"
+                              ]
+                            },
+                            "MDF_Ratio_PointB3": {
+                              "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
+                              "displayLines": "MDF_Ratio_PointB3",
+                              "constants": [],
+                              "variables": [
+                                "MDF_Ratio_PointB3"
+                              ]
+                            },
+                            "MDF_BounceLayer": {
+                              "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
+                              "displayLines": "MDF_BounceLayer",
+                              "constants": [],
+                              "variables": [
+                                "MDF_BounceLayer"
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Battle Event/Summon Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Trace Activated",
+                        "conditionList": "Message From Beyond the Veil"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                              "displayLines": "MDF_PropertyValue",
+                              "constants": [],
+                              "variables": [
+                                "MDF_PropertyValue"
+                              ]
+                            },
+                            "MDF_PropertyValue_2": {
+                              "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
+                              "displayLines": "MDF_PropertyValue_2",
+                              "constants": [],
+                              "variables": [
+                                "MDF_PropertyValue_2"
+                              ]
+                            },
+                            "MDF_MaxCount": {
+                              "operator": "Variables[0] (MDF_MaxCount) || RETURN",
+                              "displayLines": "MDF_MaxCount",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MaxCount"
+                              ]
+                            },
+                            "MDF_MinCount": {
+                              "operator": "Variables[0] (MDF_MinCount) || Variables[1] (3) || ADD || RETURN",
+                              "displayLines": "(MDF_MinCount + 3)",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MinCount",
+                                3
+                              ]
+                            },
+                            "MDF_AddLayer": {
+                              "operator": "Variables[0] (MDF_AddLayer) || RETURN",
+                              "displayLines": "MDF_AddLayer",
+                              "constants": [],
+                              "variables": [
+                                "MDF_AddLayer"
+                              ]
+                            },
+                            "MDF_MaxLayer": {
+                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                              "displayLines": "MDF_MaxLayer",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MaxLayer"
+                              ]
+                            },
+                            "MDF_MaxLayer_PointB3": {
+                              "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
+                              "displayLines": "MDF_MaxLayer_PointB3",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MaxLayer_PointB3"
+                              ]
+                            },
+                            "MDF_Ratio_PointB3": {
+                              "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
+                              "displayLines": "MDF_Ratio_PointB3",
+                              "constants": [],
+                              "variables": [
+                                "MDF_Ratio_PointB3"
+                              ]
+                            },
+                            "MDF_BounceLayer": {
+                              "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
+                              "displayLines": "MDF_BounceLayer",
+                              "constants": [],
+                              "variables": [
+                                "MDF_BounceLayer"
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-434693417\">TheHerta_Trace01_Regen</a>",
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                              "displayLines": "MDF_PropertyValue",
+                              "constants": [],
+                              "variables": [
+                                "MDF_PropertyValue"
+                              ]
+                            },
+                            "MDF_PropertyValue_2": {
+                              "operator": "Variables[0] (MDF_PropertyValue_2) || RETURN",
+                              "displayLines": "MDF_PropertyValue_2",
+                              "constants": [],
+                              "variables": [
+                                "MDF_PropertyValue_2"
+                              ]
+                            },
+                            "MDF_MaxCount": {
+                              "operator": "Variables[0] (MDF_MaxCount) || RETURN",
+                              "displayLines": "MDF_MaxCount",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MaxCount"
+                              ]
+                            },
+                            "MDF_MinCount": {
+                              "operator": "Variables[0] (MDF_MinCount) || RETURN",
+                              "displayLines": "MDF_MinCount",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MinCount"
+                              ]
+                            },
+                            "MDF_AddLayer": {
+                              "operator": "Variables[0] (MDF_AddLayer) || RETURN",
+                              "displayLines": "MDF_AddLayer",
+                              "constants": [],
+                              "variables": [
+                                "MDF_AddLayer"
+                              ]
+                            },
+                            "MDF_MaxLayer": {
+                              "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                              "displayLines": "MDF_MaxLayer",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MaxLayer"
+                              ]
+                            },
+                            "MDF_MaxLayer_PointB3": {
+                              "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
+                              "displayLines": "MDF_MaxLayer_PointB3",
+                              "constants": [],
+                              "variables": [
+                                "MDF_MaxLayer_PointB3"
+                              ]
+                            },
+                            "MDF_Ratio_PointB3": {
+                              "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
+                              "displayLines": "MDF_Ratio_PointB3",
+                              "constants": [],
+                              "variables": [
+                                "MDF_Ratio_PointB3"
+                              ]
+                            },
+                            "MDF_BounceLayer": {
+                              "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
+                              "displayLines": "MDF_BounceLayer",
+                              "constants": [],
+                              "variables": [
+                                "MDF_BounceLayer"
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2073297144\">TheHerta_MageNum_2</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2664689\">TheHerta_MageNum</a>",
+          "latentQueue": [
+            "Skill21_Layer_Max"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_MCount",
+                  "value": 0
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "conditions": {
+                    "name": "Target is Pathstrider",
+                    "path": [
+                      "Erudition"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "typeFilter": "All"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_MCount",
+                      "value": {
+                        "operator": "Variables[0] (_MCount) || Constants[0] (1) || ADD || RETURN",
+                        "displayLines": "(_MCount + 1)",
+                        "constants": [
+                          1
+                        ],
+                        "variables": [
+                          "_MCount"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_MCount",
+                    "compareType": ">=",
+                    "value2": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-2073297144\">TheHerta_MageNum_2</a>"
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1935947210\">TheHerta_Passive_PreShow_Ability21_All</a>",
+          "latentQueue": [
+            "Skill21_Layer_Max"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__734755482\">TheHerta_Passive_PreShow_Ability21</a>",
+          "latentQueue": [
+            "Skill21_Layer_Max"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Update Target Selected(UI) [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Skill21_Layer",
+                        "compareType": ">",
+                        "value2": 0.5
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Skill",
+                        "activeSkill": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Modifier: UI Preview",
+                      "show": "Hide",
+                      "target": {
+                        "name": "Target Sequence",
+                        "Sequence": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{Player's Aim Primary-Target}}"
+                          },
+                          "Adjust Target by Adjacent Targets"
+                        ]
+                      },
+                      "attacker": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "toughnessType": "Ice",
+                      "baseToughnessDMG": 15
+                    },
+                    {
+                      "name": "Modifier: UI Preview",
+                      "show": "Hide",
+                      "target": {
+                        "name": "Target Sequence",
+                        "Sequence": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "AND",
+                              "conditionList": [
+                                {
+                                  "name": "Is Part Of",
+                                  "of": {
+                                    "name": "Target Name",
+                                    "target": "{{Player's Aim Primary-Target}}"
+                                  },
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "mustBeAlive2": true,
+                                  "invertCondition": true
+                                },
+                                {
+                                  "name": "OR",
+                                  "conditionList": [
+                                    {
+                                      "name": "Is Part Of",
+                                      "of": {
+                                        "name": "Target Sequence",
+                                        "Sequence": [
+                                          {
+                                            "name": "Target Name",
+                                            "target": "{{Player's Aim Primary-Target}}"
+                                          },
+                                          "Adjust Target by Adjacent Targets"
+                                        ]
+                                      },
+                                      "target": {
+                                        "name": "Target Name",
+                                        "target": "{{Parameter Target}}"
+                                      },
+                                      "mustBeAlive2": true
+                                    },
+                                    {
+                                      "name": "Is Part Of",
+                                      "of": {
+                                        "name": "Target Sequence",
+                                        "Sequence": [
+                                          {
+                                            "name": "Target Name",
+                                            "target": "{{Player's Aim Primary-Target}}"
+                                          },
+                                          "Adjust Target by Adjacent Targets"
+                                        ]
+                                      },
+                                      "target": {
+                                        "name": "Target Sequence",
+                                        "Sequence": [
+                                          {
+                                            "name": "Target Name",
+                                            "target": "{{Parameter Target}}"
+                                          },
+                                          "Adjust Target by Adjacent Targets"
+                                        ]
+                                      },
+                                      "mustBeAlive2": true
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      "attacker": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "toughnessType": "Ice",
+                      "baseToughnessDMG": 15
+                    },
+                    {
+                      "name": "Modifier: UI Preview",
+                      "show": "Hide",
+                      "target": {
+                        "name": "Target Sequence",
+                        "Sequence": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "NOT",
+                              "condition": {
+                                "name": "Is Part Of",
+                                "of": {
+                                  "name": "Target Name",
+                                  "target": "{{Player's Aim Primary-Target}}"
+                                },
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "mustBeAlive2": true
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "attacker": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "toughnessType": "Ice",
+                      "baseToughnessDMG": 15
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-57316235\">TheHerta_Passive_PreShow</a>",
+          "latentQueue": [
+            "Skill21_Layer_Max"
+          ],
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "skillType": "Skill",
+            "conditions": {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Compare: Variable",
+                  "value1": "Skill21_Layer",
+                  "compareType": "<",
+                  "value2": 0.5
+                },
+                {
+                  "name": "Is Part Of",
+                  "of": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player's Aim Primary-Target}}"
+                  },
+                  "mustBeAlive2": true,
+                  "invertCondition": true
+                },
+                {
+                  "name": "Is Part Of",
+                  "of": {
+                    "name": "Target Name",
+                    "target": "{{Targets Adjacent to Parameter Target}}"
+                  },
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player's Aim Primary-Target}}"
+                  },
+                  "mustBeAlive2": true,
+                  "invertCondition": true
+                }
+              ]
+            },
+            "multiplier": 0.5
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__611803002\">TheHerta_SKL21_Listen</a>",
+          "latentQueue": [
+            "Skill21_Layer_Max"
+          ],
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "Skill21_Layer",
+              "from": "ContextOwner",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": -999,
+                  "maxValue": 1,
+                  "whenEnteringRange": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]"
+                    }
+                  ],
+                  "whenValueChanges": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]"
+                    }
+                  ]
+                },
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 1,
+                  "maxValue": 999,
+                  "whenEnteringRange": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]"
+                    },
+                    {
+                      "name": "Define Modifier Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifierName": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]",
+                      "value": {
+                        "operator": "Variables[0] (Skill21_Layer) || RETURN",
+                        "displayLines": "Skill21_Layer",
+                        "constants": [],
+                        "variables": [
+                          "Skill21_Layer"
+                        ]
+                      }
+                    }
+                  ],
+                  "whenValueChanges": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]"
+                    },
+                    {
+                      "name": "Define Modifier Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifierName": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]",
+                      "value": {
+                        "operator": "Variables[0] (Skill21_Layer) || RETURN",
+                        "displayLines": "Skill21_Layer",
+                        "constants": [],
+                        "variables": [
+                          "Skill21_Layer"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1573828152\">TheHerta_PointB2_Ally</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Target is Pathstrider",
+                    "path": [
+                      "Erudition"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "typeFilter": "All"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_Exec_Layer",
+                      "value": {
+                        "operator": "Variables[0] (MDF_BounceLayer) || Variables[1] (MDF_MageLayer) || ADD || RETURN",
+                        "displayLines": "(MDF_BounceLayer + MDF_MageLayer)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_BounceLayer",
+                          "MDF_MageLayer"
+                        ]
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_Exec_Layer",
+                      "value": {
+                        "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
+                        "displayLines": "MDF_BounceLayer",
+                        "constants": [],
+                        "variables": [
+                          "MDF_BounceLayer"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Looped Event",
+                  "maxLoops": {
+                    "operator": "Variables[0] (_Exec_Layer) || RETURN",
+                    "displayLines": "_Exec_Layer",
+                    "constants": [],
+                    "variables": [
+                      "_Exec_Layer"
+                    ]
+                  },
+                  "Event": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Sequence",
+                        "Sequence": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{Attack Targets of Modifier Holder}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "AND",
+                              "conditionList": [
+                                {
+                                  "name": "Has Modifier",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "name": "Sort by Modifier Value",
+                            "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                            "value": "Layer",
+                            "sortByHighest": true
+                          }
+                        ]
+                      },
+                      "maxTargets": 1,
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value1": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                        "compareType": "<",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                          "displayLines": "MDF_MaxLayer",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MaxLayer"
+                          ]
+                        },
+                        "valueType": "Layer"
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                          "stackLimit": {
+                            "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                            "displayLines": "MDF_MaxLayer",
+                            "constants": [],
+                            "variables": [
+                              "MDF_MaxLayer"
+                            ]
+                          },
+                          "addStacksPerTrigger": 1
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Trace Activated",
+                            "conditionList": "Starved Landscape of Vacua"
+                          },
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
+                              "stackLimit": {
+                                "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
+                                "displayLines": "MDF_MaxLayer_PointB3",
+                                "constants": [],
+                                "variables": [
+                                  "MDF_MaxLayer_PointB3"
+                                ]
+                              },
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
+                                  "displayLines": "MDF_Ratio_PointB3",
+                                  "constants": [],
+                                  "variables": [
+                                    "MDF_Ratio_PointB3"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "noTargetFound": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Trace Activated",
+                            "conditionList": "Starved Landscape of Vacua"
+                          },
+                          "passed": [
+                            {
+                              "name": "Find New Target",
+                              "from": {
+                                "name": "Target Name",
+                                "target": "{{Attack Targets of Modifier Holder}}"
+                              },
+                              "maxTargets": 1,
+                              "ifTargetFound": [
+                                {
+                                  "name": "Add Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
+                                  "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
+                                  "stackLimit": {
+                                    "operator": "Variables[0] (MDF_MaxLayer_PointB3) || RETURN",
+                                    "displayLines": "MDF_MaxLayer_PointB3",
+                                    "constants": [],
+                                    "variables": [
+                                      "MDF_MaxLayer_PointB3"
+                                    ]
+                                  },
+                                  "valuePerStack": {
+                                    "MDF_PropertyValue": {
+                                      "operator": "Variables[0] (MDF_Ratio_PointB3) || RETURN",
+                                      "displayLines": "MDF_Ratio_PointB3",
+                                      "constants": [],
+                                      "variables": [
+                                        "MDF_Ratio_PointB3"
+                                      ]
+                                    }
+                                  },
+                                  "addStacksPerTrigger": 1
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1280907269\">TheHerta_PointB2_Listen</a>",
+          "latentQueue": [
+            "Skill21_Layer_Max"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1573828152\">TheHerta_PointB2_Ally</a>",
+                  "valuePerStack": {
+                    "MDF_MaxLayer_PointB3": {
+                      "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
+                      "displayLines": "_SkillTree03_MaxCount",
+                      "constants": [],
+                      "variables": [
+                        "_SkillTree03_MaxCount"
+                      ]
+                    },
+                    "MDF_Ratio_PointB3": {
+                      "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
+                      "displayLines": "_PointB3_Ratio",
+                      "constants": [],
+                      "variables": [
+                        "_PointB3_Ratio"
+                      ]
+                    },
+                    "MDF_MaxLayer": {
+                      "operator": "Variables[0] (42) || RETURN",
+                      "displayLines": "42",
+                      "constants": [],
+                      "variables": [
+                        42
+                      ]
+                    },
+                    "MDF_BounceLayer": {
+                      "operator": "Variables[0] (1) || RETURN",
+                      "displayLines": "1",
+                      "constants": [],
+                      "variables": [
+                        1
+                      ]
+                    },
+                    "MDF_MageLayer": {
+                      "operator": "Variables[0] (2) || RETURN",
+                      "displayLines": "2",
+                      "constants": [],
+                      "variables": [
+                        2
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Sequence",
+                    "Sequence": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{Battle Event List}}"
+                      },
+                      {
+                        "name": "Target Filter",
+                        "conditions": {
+                          "name": "AND",
+                          "conditionList": [
+                            {
+                              "name": "Is Part Of Team",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "team": "Player Team"
+                            },
+                            {
+                              "name": "Is Entity a Battle Event/Summon",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "invertCondition": true,
+                              "expectedType": "Summon"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1573828152\">TheHerta_PointB2_Ally</a>",
+                  "valuePerStack": {
+                    "MDF_MaxLayer_PointB3": {
+                      "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
+                      "displayLines": "_SkillTree03_MaxCount",
+                      "constants": [],
+                      "variables": [
+                        "_SkillTree03_MaxCount"
+                      ]
+                    },
+                    "MDF_Ratio_PointB3": {
+                      "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
+                      "displayLines": "_PointB3_Ratio",
+                      "constants": [],
+                      "variables": [
+                        "_PointB3_Ratio"
+                      ]
+                    },
+                    "MDF_MaxLayer": {
+                      "operator": "Variables[0] (42) || RETURN",
+                      "displayLines": "42",
+                      "constants": [],
+                      "variables": [
+                        42
+                      ]
+                    },
+                    "MDF_BounceLayer": {
+                      "operator": "Variables[0] (1) || RETURN",
+                      "displayLines": "1",
+                      "constants": [],
+                      "variables": [
+                        1
+                      ]
+                    },
+                    "MDF_MageLayer": {
+                      "operator": "Variables[0] (2) || RETURN",
+                      "displayLines": "2",
+                      "constants": [],
+                      "variables": [
+                        2
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1573828152\">TheHerta_PointB2_Ally</a>",
+                      "valuePerStack": {
+                        "MDF_MaxLayer_PointB3": {
+                          "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
+                          "displayLines": "_SkillTree03_MaxCount",
+                          "constants": [],
+                          "variables": [
+                            "_SkillTree03_MaxCount"
+                          ]
+                        },
+                        "MDF_Ratio_PointB3": {
+                          "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
+                          "displayLines": "_PointB3_Ratio",
+                          "constants": [],
+                          "variables": [
+                            "_PointB3_Ratio"
+                          ]
+                        },
+                        "MDF_MaxLayer": {
+                          "operator": "Variables[0] (42) || RETURN",
+                          "displayLines": "42",
+                          "constants": [],
+                          "variables": [
+                            42
+                          ]
+                        },
+                        "MDF_BounceLayer": {
+                          "operator": "Variables[0] (1) || RETURN",
+                          "displayLines": "1",
+                          "constants": [],
+                          "variables": [
+                            1
+                          ]
+                        },
+                        "MDF_MageLayer": {
+                          "operator": "Variables[0] (2) || RETURN",
+                          "displayLines": "2",
+                          "constants": [],
+                          "variables": [
+                            2
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Battle Event/Summon Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Is Entity a Battle Event/Summon",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "invertCondition": true,
+                        "expectedType": "Summon"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1573828152\">TheHerta_PointB2_Ally</a>",
+                      "valuePerStack": {
+                        "MDF_MaxLayer_PointB3": {
+                          "operator": "Variables[0] (_SkillTree03_MaxCount) || RETURN",
+                          "displayLines": "_SkillTree03_MaxCount",
+                          "constants": [],
+                          "variables": [
+                            "_SkillTree03_MaxCount"
+                          ]
+                        },
+                        "MDF_Ratio_PointB3": {
+                          "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
+                          "displayLines": "_PointB3_Ratio",
+                          "constants": [],
+                          "variables": [
+                            "_PointB3_Ratio"
+                          ]
+                        },
+                        "MDF_MaxLayer": {
+                          "operator": "Variables[0] (42) || RETURN",
+                          "displayLines": "42",
+                          "constants": [],
+                          "variables": [
+                            42
+                          ]
+                        },
+                        "MDF_BounceLayer": {
+                          "operator": "Variables[0] (1) || RETURN",
+                          "displayLines": "1",
+                          "constants": [],
+                          "variables": [
+                            1
+                          ]
+                        },
+                        "MDF_MageLayer": {
+                          "operator": "Variables[0] (2) || RETURN",
+                          "displayLines": "2",
+                          "constants": [],
+                          "variables": [
+                            2
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__780596583\">TheHerta_Herta_Listen</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Sequence",
+                    "Sequence": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      {
+                        "name": "Target Filter",
+                        "conditions": {
+                          "name": "Character ID",
+                          "ID": 1013,
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "characterName": "Herta"
+                        }
+                      }
+                    ]
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1544367051\">TheHerta_Herta</a>",
+                  "valuePerStack": {
+                    "Cur_Count": 0
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Character ID",
+                    "ID": 1013,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": "Herta"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1544367051\">TheHerta_Herta</a>",
+                      "valuePerStack": {
+                        "Cur_Count": 0
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1544367051\">TheHerta_Herta</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "Cur_Count"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Turn [Action-End Phase]",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1505063883\">TheHerta_Herta_CD</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Skill Type",
+                            "skillType": "Skill"
+                          },
+                          {
+                            "name": "Skill Type",
+                            "skillType": "Basic ATK"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"780596583\">TheHerta_Herta_Listen</a>"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1505063883\">TheHerta_Herta_CD</a>"
+                      },
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Has Flag",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
+                                "flagName": "DisableAction",
+                                "invertCondition": true
+                              },
+                              {
+                                "name": "Has Flag",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
+                                "flagName": "STAT_CTRL",
+                                "invertCondition": true
+                              }
+                            ]
+                          },
+                          "passed": [
+                            {
+                              "name": "Inject Ability Use",
+                              "abilityName": "Herta_PassiveAtkReady_Ability_Trigger",
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Hostile Entities(AOE)}}"
+                              },
+                              "priorityTag": "CharacterAttackFromSelf",
+                              "canHitNonTargets": true,
+                              "showInActionOrder": true,
+                              "abortFlags": [
+                                "STAT_CTRL",
+                                "DisableAction"
+                              ],
+                              "valuePerStack": {
+                                "Herta_Roll_Count": {
+                                  "operator": "Variables[0] (Cur_Count) || RETURN",
+                                  "displayLines": "Cur_Count",
+                                  "constants": [],
+                                  "variables": [
+                                    "Cur_Count"
+                                  ]
+                                }
+                              },
+                              "allowAbilityTriggers": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-614684164\">TheHerta_ExtraMark</a>",
+          "latentQueue": [
+            "Skill21_Layer_Max"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Looped Event",
+                  "maxLoops": 1,
+                  "Event": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Sequence",
+                        "Sequence": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{Enemy Team All}}"
+                          },
+                          "Shuffle Targets",
+                          {
+                            "name": "Sort by Stat",
+                            "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                            "sortByHighest": true
+                          },
+                          {
+                            "name": "Sort by Monster Rank",
+                            "byHighest": true
+                          }
+                        ]
+                      },
+                      "includeDyingTargets": true,
+                      "maxTargets": 1,
+                      "ifTargetFound": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                          "stackLimit": {
+                            "operator": "Variables[0] (42) || RETURN",
+                            "displayLines": "42",
+                            "constants": [],
+                            "variables": [
+                              42
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MagicMark_MaxCount_Max": {
+                              "operator": "Variables[0] (42) || RETURN",
+                              "displayLines": "42",
+                              "constants": [],
+                              "variables": [
+                                42
+                              ]
+                            },
+                            "MagicMark_MaxCount": {
+                              "operator": "Variables[0] (42) || RETURN",
+                              "displayLines": "42",
+                              "constants": [],
+                              "variables": [
+                                42
+                              ]
+                            },
+                            "MagicMark_Ratio": {
+                              "operator": "Variables[0] (1) || RETURN",
+                              "displayLines": "1",
+                              "constants": [],
+                              "variables": [
+                                1
+                              ]
+                            }
+                          },
+                          "addStacksPerTrigger": {
+                            "operator": "Variables[0] (25) || RETURN",
+                            "displayLines": "25",
+                            "constants": [],
+                            "variables": [
+                              25
+                            ]
+                          }
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Trace Activated",
+                            "conditionList": "Starved Landscape of Vacua"
+                          },
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
+                              "stackLimit": {
+                                "operator": "Variables[0] (99) || RETURN",
+                                "displayLines": "99",
+                                "constants": [],
+                                "variables": [
+                                  99
+                                ]
+                              },
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] (_PointB3_Ratio) || RETURN",
+                                  "displayLines": "_PointB3_Ratio",
+                                  "constants": [],
+                                  "variables": [
+                                    "_PointB3_Ratio"
+                                  ]
+                                }
+                              },
+                              "addStacksPerTrigger": {
+                                "operator": "Variables[0] (25) || RETURN",
+                                "displayLines": "25",
+                                "constants": [],
+                                "variables": [
+                                  25
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TheHerta_TheHerta_Ability03_Part02": {
+      "fileName": "TheHerta_TheHerta_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"426098232\">TheHerta_Passive_MagicMark_42_Block</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "__i",
+          "value": 0
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                }
+              },
+              {
+                "name": "Sort by Modifier Value",
+                "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                "value": "Layer",
+                "sortByHighest": true
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "__i",
+              "value": {
+                "operator": "Variables[0] (__i) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(__i + 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "__i"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "__j",
+              "value": 0
+            },
+            {
+              "name": "Define Custom Variable with Modifier Values",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "valueType": "Layer",
+              "variableName": "_Temp_Sort_Layer",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+              "multiplier": 1
+            },
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                    }
+                  },
+                  {
+                    "name": "Sort by Stat",
+                    "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                    "sortByHighest": true
+                  },
+                  {
+                    "name": "Sort by Monster Rank",
+                    "byHighest": true
+                  }
+                ]
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "__j",
+                  "value": {
+                    "operator": "Variables[0] (__j) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(__j + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "__j"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "__j",
+                    "compareType": "=",
+                    "value2": {
+                      "operator": "Variables[0] (__i) || RETURN",
+                      "displayLines": "__i",
+                      "constants": [],
+                      "variables": [
+                        "__i"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>",
+                      "addStacksPerTrigger": {
+                        "operator": "Variables[0] (_Temp_Sort_Layer) || RETURN",
+                        "displayLines": "_Temp_Sort_Layer",
+                        "constants": [],
+                        "variables": [
+                          "_Temp_Sort_Layer"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>"
+                }
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Define Custom Variable with Modifier Values",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "valueType": "Layer",
+              "variableName": "_Temp_Sort_Layer",
+              "modifierName": "<a class=\"gModGreen\" id=\"184474088\">TheHerta_SKL03_Sort_Storge</a>",
+              "multiplier": 1
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+              "stackLimit": {
+                "operator": "Variables[0] (42) || RETURN",
+                "displayLines": "42",
+                "constants": [],
+                "variables": [
+                  42
+                ]
+              },
+              "valuePerStack": {
+                "MagicMark_MaxCount_Max": {
+                  "operator": "Variables[0] (42) || RETURN",
+                  "displayLines": "42",
+                  "constants": [],
+                  "variables": [
+                    42
+                  ]
+                },
+                "MagicMark_MaxCount": {
+                  "operator": "Variables[0] (42) || RETURN",
+                  "displayLines": "42",
+                  "constants": [],
+                  "variables": [
+                    42
+                  ]
+                },
+                "MagicMark_Ratio": {
+                  "operator": "Variables[0] (1) || RETURN",
+                  "displayLines": "1",
+                  "constants": [],
+                  "variables": [
+                    1
+                  ]
+                }
+              },
+              "addStacksPerTrigger": {
+                "operator": "Variables[0] (_Temp_Sort_Layer) || RETURN",
+                "displayLines": "_Temp_Sort_Layer",
+                "constants": [],
+                "variables": [
+                  "_Temp_Sort_Layer"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_Hat",
+          "value": 0
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_SKL03_EXTRADAMAGE",
+          "value": 0
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Trace Activated",
+                "conditionList": "Starved Landscape of Vacua"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable with Modifier Values",
+              "valueType": "Layer",
+              "variableName": "_SKL03_EXTRADAMAGE",
+              "modifierName": "<a class=\"gModGreen\" id=\"1985764523\">TheHerta_Trace03_ExtraDamage</a>[<span class=\"descriptionNumberColor\">Answer</span>]",
+              "multiplier": 1
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_SKL03_EXTRADAMAGE",
+              "value": {
+                "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (_PointB3_Ratio) || MUL || RETURN",
+                "displayLines": "(_SKL03_EXTRADAMAGE * _PointB3_Ratio)",
+                "constants": [],
+                "variables": [
+                  "_SKL03_EXTRADAMAGE",
+                  "_PointB3_Ratio"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target Count",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Hostile Entities(AOE)}}"
+                },
+                "compareType": ">=",
+                "value2": 3,
+                "livingTargets": true
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_SKL03_EXTRADAMAGE",
+                  "value": {
+                    "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (1.4) || ADD || RETURN",
+                    "displayLines": "(_SKL03_EXTRADAMAGE + 1.4)",
+                    "constants": [],
+                    "variables": [
+                      "_SKL03_EXTRADAMAGE",
+                      1.4
+                    ]
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target Count",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Hostile Entities(AOE)}}"
+                    },
+                    "compareType": "=",
+                    "value2": 2,
+                    "livingTargets": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_SKL03_EXTRADAMAGE",
+                      "value": {
+                        "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (2.5) || ADD || RETURN",
+                        "displayLines": "(_SKL03_EXTRADAMAGE + 2.5)",
+                        "constants": [],
+                        "variables": [
+                          "_SKL03_EXTRADAMAGE",
+                          2.5
+                        ]
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_SKL03_EXTRADAMAGE",
+                      "value": {
+                        "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (4) || ADD || RETURN",
+                        "displayLines": "(_SKL03_EXTRADAMAGE + 4)",
+                        "constants": [],
+                        "variables": [
+                          "_SKL03_EXTRADAMAGE",
+                          4
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"555212333\">TheHerta_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "duration": {
+            "operator": "Variables[0] (3) || RETURN",
+            "displayLines": "3",
+            "constants": [],
+            "variables": [
+              3
+            ]
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (0.8) || RETURN",
+              "displayLines": "0.8",
+              "constants": [],
+              "variables": [
+                0.8
+              ]
+            }
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"426098232\">TheHerta_Passive_MagicMark_42_Block</a>"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] (2) || Variables[1] (_SKL03_EXTRADAMAGE) || ADD || RETURN",
+              "displayLines": "(2 + _SKL03_EXTRADAMAGE)",
+              "constants": [],
+              "variables": [
+                2,
+                "_SKL03_EXTRADAMAGE"
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
+              "displayLines": "AOE Toughness Value",
+              "constants": [],
+              "variables": [
+                "AOE Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Update Ability Binding",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "abilityName": "Skill21",
+          "skillSlot": "Skill",
+          "enableSecondaryType": "ControlSkill02"
+        },
+        {
+          "name": "Update Ability Enhance Button",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": "Show",
+          "abilityName": "Skill"
+        },
+        {
+          "name": "Adjust Variable Value",
+          "adjustmentType": "Add to Value (Default)",
+          "variableName": "Skill21_Layer",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "value": {
+            "operator": "Variables[0] (Skill21_Layer_Add) || RETURN",
+            "displayLines": "Skill21_Layer_Add",
+            "constants": [],
+            "variables": [
+              "Skill21_Layer_Add"
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 2
+          },
+          "passed": [
+            {
+              "name": "Adjust Variable Value",
+              "adjustmentType": "Add to Value (Default)",
+              "variableName": "Skill21_Layer",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": {
+            "operator": "Variables[0] (Skill21_Layer) || RETURN",
+            "displayLines": "Skill21_Layer",
+            "constants": [],
+            "variables": [
+              "Skill21_Layer"
+            ]
+          },
+          "priorState": "Active"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "set": 0
+        },
+        "Trigger: Skip Death Handling",
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "TheHerta_TheHerta_Ability03_Part01": {
+      "fileName": "TheHerta_TheHerta_Ability03_Part01",
+      "childAbilityList": [
+        "TheHerta_TheHerta_Ability03_Camera",
+        "TheHerta_TheHerta_Ability03_EnterReady",
+        "TheHerta_TheHerta_Ability03_Part01",
+        "TheHerta_TheHerta_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Ultimate",
+      "energy": 5,
+      "toughnessList": [
+        0,
+        20,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "TheHerta_Ability03_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "TheHerta_TheHerta_Ability03_EnterReady": {
+      "fileName": "TheHerta_TheHerta_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "TheHerta_TheHerta_Ability21_Part02": {
+      "fileName": "TheHerta_TheHerta_Ability21_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1324497127\">TheHerta_Ability21</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "S03_Mark_Count",
+          "value": 0
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable with Modifier Values",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "valueType": "Layer",
+              "variableName": "S03_Mark_Count",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+              "multiplier": 1
+            },
+            {
+              "name": "Define Custom Variable with Modifier Values",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "valueType": "Layer",
+              "variableName": "Orig_Layer",
+              "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+              "multiplier": 1
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 1
+              },
+              "passed": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Sequence",
+                    "Sequence": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{ST and Blast}}"
+                      },
+                      {
+                        "name": "Target Filter",
+                        "conditions": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+                        }
+                      },
+                      {
+                        "name": "Sort by Modifier Value",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                        "value": "Layer",
+                        "sortByHighest": true
+                      }
+                    ]
+                  },
+                  "includeDyingTargets": true,
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable with Modifier Values",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "valueType": "Layer",
+                      "variableName": "_ADJ_TMP_COUNT",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                      "multiplier": 1
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "S03_Mark_Count",
+                      "value": {
+                        "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (_ADJ_TMP_COUNT) || Variables[2] (0.5) || MUL || ADD || RETURN",
+                        "displayLines": "(S03_Mark_Count + (_ADJ_TMP_COUNT * 0.5))",
+                        "constants": [],
+                        "variables": [
+                          "S03_Mark_Count",
+                          "_ADJ_TMP_COUNT",
+                          0.5
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Trace Activated",
+                "conditionList": "Aloofly Honest"
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "S03_Mark_Count",
+                    "compareType": ">=",
+                    "value2": 42
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1341843949\">TheHerta_PointB1_42</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.5) || RETURN",
+                          "displayLines": "0.5",
+                          "constants": [],
+                          "variables": [
+                            0.5
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-2073297144\">TheHerta_MageNum_2</a>"
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "S03_Mark_Count",
+                  "value": {
+                    "operator": "Variables[0] (S03_Mark_Count) || Constants[0] (2) || MUL || RETURN",
+                    "displayLines": "(S03_Mark_Count * 2)",
+                    "constants": [
+                      2
+                    ],
+                    "variables": [
+                      "S03_Mark_Count"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Eidolon Activated",
+                    "eidolon": 1
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                  "stackLimit": {
+                    "operator": "Variables[0] (42) || RETURN",
+                    "displayLines": "42",
+                    "constants": [],
+                    "variables": [
+                      42
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MagicMark_MaxCount_Max": {
+                      "operator": "Variables[0] (42) || RETURN",
+                      "displayLines": "42",
+                      "constants": [],
+                      "variables": [
+                        42
+                      ]
+                    },
+                    "MagicMark_MaxCount": {
+                      "operator": "Variables[0] (42) || RETURN",
+                      "displayLines": "42",
+                      "constants": [],
+                      "variables": [
+                        42
+                      ]
+                    },
+                    "MagicMark_Ratio": {
+                      "operator": "Variables[0] (1) || RETURN",
+                      "displayLines": "1",
+                      "constants": [],
+                      "variables": [
+                        1
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": {
+                    "operator": "Variables[0] (15) || RETURN",
+                    "displayLines": "15",
+                    "constants": [],
+                    "variables": [
+                      15
+                    ]
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
+                  "stackLimit": {
+                    "operator": "Variables[0] (42) || RETURN",
+                    "displayLines": "42",
+                    "constants": [],
+                    "variables": [
+                      42
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MagicMark_MaxCount_Max": {
+                      "operator": "Variables[0] (42) || RETURN",
+                      "displayLines": "42",
+                      "constants": [],
+                      "variables": [
+                        42
+                      ]
+                    },
+                    "MagicMark_MaxCount": {
+                      "operator": "Variables[0] (42) || RETURN",
+                      "displayLines": "42",
+                      "constants": [],
+                      "variables": [
+                        42
+                      ]
+                    },
+                    "MagicMark_Ratio": {
+                      "operator": "Variables[0] (1) || RETURN",
+                      "displayLines": "1",
+                      "constants": [],
+                      "variables": [
+                        1
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"1142002606\">TheHerta_SKL02</a>",
+          "variables": {
+            "DV_DamageRatio1": {
+              "operator": "Variables[0] (0.8) || RETURN",
+              "displayLines": "0.8",
+              "constants": [],
+              "variables": [
+                0.8
+              ]
+            },
+            "DV_MarkAddLayer": {
+              "operator": "Variables[0] (1) || RETURN",
+              "displayLines": "1",
+              "constants": [],
+              "variables": [
+                1
+              ]
+            },
+            "DV_MarkMaxLayer": {
+              "operator": "Variables[0] (42) || RETURN",
+              "displayLines": "42",
+              "constants": [],
+              "variables": [
+                42
+              ]
+            }
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Orig_Layer",
+            "compareType": ">=",
+            "value2": -1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"27955030\">TheHerta_Passive_MagicMark_Burst_Show</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "searchRandom": true,
+          "includeDyingTargets": true,
+          "maxTargets": 10,
+          "ifTargetFound": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "S03_Mark_Count",
+                "compareType": ">",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "S03_Mark_Damage",
+                  "value": {
+                    "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (0.08) || MUL || RETURN",
+                    "displayLines": "(S03_Mark_Count * 0.08)",
+                    "constants": [],
+                    "variables": [
+                      "S03_Mark_Count",
+                      0.08
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
+                    "mustBeAlive2": true
+                  },
+                  "passed": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Ice",
+                        "Damage": {
+                          "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (0.08) || MUL || Variables[2] (0.4) || ADD || RETURN",
+                          "displayLines": "((S03_Mark_Count * 0.08) + 0.4)",
+                          "constants": [],
+                          "variables": [
+                            "S03_Mark_Count",
+                            0.08,
+                            0.4
+                          ]
+                        },
+                        "Toughness": {
+                          "displayLines": 15
+                        },
+                        "Tags": null
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Ice",
+                        "Damage": {
+                          "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (0.04) || MUL || Variables[2] (0.4) || ADD || RETURN",
+                          "displayLines": "((S03_Mark_Count * 0.04) + 0.4)",
+                          "constants": [],
+                          "variables": [
+                            "S03_Mark_Count",
+                            0.04,
+                            0.4
+                          ]
+                        },
+                        "Toughness": {
+                          "displayLines": 15
+                        },
+                        "Tags": null
+                      }
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "canPhase": true,
+                  "AttackScaling": {
+                    "DamageType": "Ice",
+                    "Damage": {
+                      "operator": "Variables[0] (0.4) || RETURN",
+                      "displayLines": "0.4",
+                      "constants": [],
+                      "variables": [
+                        0.4
+                      ]
+                    },
+                    "Toughness": {
+                      "displayLines": 15
+                    },
+                    "Tags": null
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 2
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1527090005\">ReduceNextActionDelay</a>",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "variables": {
+                "parameter[0]_NormalizedValue": {
+                  "operator": "Variables[0] (0.35) || RETURN",
+                  "displayLines": "0.35",
+                  "constants": [],
+                  "variables": [
+                    0.35
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1324497127\">TheHerta_Ability21</a>"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-333672562\">TheHerta_Passive_MagicMark_Burst</a>"
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1324497127\">TheHerta_Ability21</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1341843949\">TheHerta_PointB1_42</a>"
+        },
+        {
+          "name": "Adjust Variable Value",
+          "adjustmentType": "Add to Value (Default)",
+          "variableName": "Skill21_Layer",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "value": -1
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Skill21_Layer",
+            "compareType": ">",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": {
+                "operator": "Variables[0] (Skill21_Layer) || RETURN",
+                "displayLines": "Skill21_Layer",
+                "constants": [],
+                "variables": [
+                  "Skill21_Layer"
+                ]
+              },
+              "priorState": "Active"
+            }
+          ],
+          "failed": [
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": {
+                "operator": "Variables[0] (Skill21_Layer) || RETURN",
+                "displayLines": "Skill21_Layer",
+                "constants": [],
+                "variables": [
+                  "Skill21_Layer"
+                ]
+              },
+              "priorState": "Normal"
+            },
+            {
+              "name": "Update Ability Binding",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "abilityName": "Skill02",
+              "skillSlot": "Skill",
+              "enableSecondaryType": "ControlSkill02"
+            },
+            {
+              "name": "Update Ability Enhance Button",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "display": "Hide",
+              "abilityName": "Skill"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "TheHerta_TheHerta_Ability21_Part01": {
+      "fileName": "TheHerta_TheHerta_Ability21_Part01",
+      "childAbilityList": [
+        "TheHerta_TheHerta_Ability021_Camera",
+        "TheHerta_TheHerta_Ability21_Part01",
+        "TheHerta_TheHerta_Ability21_Part02"
+      ],
+      "skillTrigger": "Skill21",
+      "abilityType": "Skill",
+      "energy": 30,
+      "toughnessList": [
+        20,
+        0,
+        10
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "TheHerta_Ability21_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "All Other Team Members"
+      }
+    },
+    "TheHerta_TheHerta_Ability02_Part02": {
+      "fileName": "TheHerta_TheHerta_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-424945107\">TheHerta_Trace02_MainTarget</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"1142002606\">TheHerta_SKL02</a>",
+          "variables": {
+            "DV_DamageRatio1": {
+              "operator": "Variables[0] (0.7) || RETURN",
+              "displayLines": "0.7",
+              "constants": [],
+              "variables": [
+                0.7
+              ]
+            },
+            "DV_MarkAddLayer": {
+              "operator": "Variables[0] (1) || RETURN",
+              "displayLines": "1",
+              "constants": [],
+              "variables": [
+                1
+              ]
+            },
+            "DV_MarkMaxLayer": {
+              "operator": "Variables[0] (42) || RETURN",
+              "displayLines": "42",
+              "constants": [],
+              "variables": [
+                42
+              ]
+            }
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-696979317\">TheHerta_SKL02_Mark_Pre</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1940766665\">TheHerta_SKL02_Mark</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-424945107\">TheHerta_Trace02_MainTarget</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "TheHerta_TheHerta_Ability02_Part01": {
+      "fileName": "TheHerta_TheHerta_Ability02_Part01",
+      "childAbilityList": [
+        "TheHerta_TheHerta_Ability02_Camera",
+        "TheHerta_TheHerta_Ability02_Part01",
+        "TheHerta_TheHerta_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": 30,
+      "toughnessList": [
+        15,
+        0,
+        10
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "TheHerta_Ability02_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets",
+        "blastTargetCount": 2
+      }
+    },
+    "TheHerta_TheHerta_Ability01_Part02": {
+      "fileName": "TheHerta_TheHerta_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] (1) || RETURN",
+              "displayLines": "1",
+              "constants": [],
+              "variables": [
+                1
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "TheHerta_TheHerta_Ability01_Part01": {
+      "fileName": "TheHerta_TheHerta_Ability01_Part01",
+      "childAbilityList": [
+        "TheHerta_TheHerta_Ability01_Camera",
+        "TheHerta_TheHerta_Ability01_Part01",
+        "TheHerta_TheHerta_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": 20,
+      "toughnessList": [
+        10,
+        0,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "TheHerta_Ability01_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "TheHerta_Functions": {
       "fileName": "TheHerta_Functions",

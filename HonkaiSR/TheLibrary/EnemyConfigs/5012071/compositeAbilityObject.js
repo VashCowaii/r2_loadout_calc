@@ -4,9 +4,9 @@ const compositeAbilityObject = {
   "trimCharacterName": 5012071,
   "abilityList": [
     "5012071_Monster_W5_VtuberPart01_VtuberAbility03",
+    "5012071_Monster_W5_VtuberPart01_PassiveAbilityInitiate",
     "5012071_Monster_W5_VtuberPart01_Ability01_Part02",
     "5012071_Monster_W5_VtuberPart01_Ability01_Part01",
-    "5012071_Monster_W5_VtuberPart01_PassiveAbilityInitiate",
     "5012071_Modifiers"
   ],
   "abilityObject": {
@@ -20,6 +20,46 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "5012071_Monster_W5_VtuberPart01_PassiveAbilityInitiate": {
+      "fileName": "5012071_Monster_W5_VtuberPart01_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkill",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1733040515\">Enemy_W5_VtuberPart01_00</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"361111729\">Enemy_W5_VtuberPart01_Eff</a>"
+        },
+        {
+          "name": "Change Character Transformation",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "phase": "Phase02"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },
@@ -127,46 +167,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "5012071_Monster_W5_VtuberPart01_PassiveAbilityInitiate": {
-      "fileName": "5012071_Monster_W5_VtuberPart01_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkill",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1733040515\">Enemy_W5_VtuberPart01_00</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"361111729\">Enemy_W5_VtuberPart01_Eff</a>"
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase02"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "5012071_Modifiers": {
       "fileName": "5012071_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -181,6 +181,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2117470935\">Enemy_W5_Vtuber_CriticalDamageAdd</a>[<span class=\"descriptionNumberColor\">Ally Gratuity</span>]",
           "stackType": "Replace",
+          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Ally Gratuity",
+          "stackLimit": 999,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -232,17 +237,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Ally Gratuity",
-          "stackLimit": 999,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]",
           "stackType": "Replace",
+          "description": "After being attacked, \"Ally Popularity\" increases and action advances. During the next action, grants \"Ally Gratuity\" to sub-field ally targets based on the increased \"Ally Popularity.\"",
+          "type": "Other",
+          "effectName": "Thumbs Up",
+          "statusName": "Ally Popularity",
+          "stackLimit": 999,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -662,19 +668,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After being attacked, \"Ally Popularity\" increases and action advances. During the next action, grants \"Ally Gratuity\" to sub-field ally targets based on the increased \"Ally Popularity.\"",
-          "type": "Other",
-          "effectName": "Thumbs Up",
-          "statusName": "Ally Popularity",
-          "stackLimit": 999,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1989512262\">Enemy_W5_VtuberPart01_Charge_Insert</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1989512262\">Enemy_W5_VtuberPart01_Charge_Insert</a>"
         },
         {
           "name": "Modifier Construction",
@@ -692,15 +690,11 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "End Broken State [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1733040515\">Enemy_W5_VtuberPart01_00</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1733040515\">Enemy_W5_VtuberPart01_00</a>"
         }
       ],
       "references": []

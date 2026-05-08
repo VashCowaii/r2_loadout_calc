@@ -10,14 +10,285 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1361568506\">Topaz_BE_UltraEnhance_ShowText</a>",
-      "stackType": "ReplaceByCaster",
-      "stackData": [
-        "ATKCount"
+      "for": "<a class=\"gModGreen\" id=\"mod__1590724181\">ADV_Modifier_ZhangZhang_FindTreasure_VFX</a>",
+      "counter": 1,
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1224676462\">ADV_Modifier_ZhangZhang_FindTreasure</a>",
+      "counter": 1,
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1400869110\">ADV_Modifier_ZhangZhang_FindTrotter_VFX</a>",
+      "counter": 1,
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1256063301\">ADV_Modifier_ZhangZhang_FindTrotter</a>",
+      "counter": 1,
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1063652083\">ADV_Modifier_Maze_Topaz_SummonUnit</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "onCreation": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Team Leader",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            }
+          },
+          "passed": [
+            {
+              "name": "Create Overworld Entity",
+              "summonID": 11121
+            }
+          ]
+        }
       ],
-      "latentQueue": [
-        "_damageStart"
+      "onRemoval": [
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "summonID": 11121
+          }
+        }
+      ],
+      "onStageExit": [
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "summonID": 11121
+          }
+        }
+      ],
+      "onBattleEnd": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Is Team Leader",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "onStageEntry": [
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 11121
+        }
       ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1886525404\">ADV_StageAbility_Maze_Topaz</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "onBattleEnd": [
+        {
+          "name": "IF",
+          "conditions": "Won last Battle"
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1602537794\">Klara_Passive_ShowAmmo</a>",
+      "stackType": "ReplaceByCaster"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-796199138\">Klara_Passive_DamageReduce</a>[<span class=\"descriptionNumberColor\">Guardian</span>]",
+      "stackType": "ReplaceByCaster",
+      "description": "DMG taken -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "statusName": "Guardian",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                "displayLines": "MDF_PropertyValue",
+                "constants": [],
+                "variables": [
+                  "MDF_PropertyValue"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__90816647\">Klara_BPAbility_Revenge</a>[<span class=\"descriptionNumberColor\">Mark of Counter</span>]",
+      "modifierFlags": [
+        "ListenBattleEventSkill",
+        "RemoveWhenCasterDead"
+      ],
+      "description": "The target is Marked by Svarog.",
+      "type": "Other",
+      "statusName": "Mark of Counter",
+      "execute": [
+        {
+          "eventTrigger": "Ability Use [Anyone]: Start",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
+              },
+              "passed": [
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Active Ability Chosen [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
+              },
+              "passed": [
+                {
+                  "name": "Toggle Skill Mark",
+                  "toggle": true,
+                  "skillTypesAllow": [
+                    "Skill"
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-459252663\">Klara_TechniqueUsage_AggroUP</a>[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
+      "stackType": "ReplaceByCaster",
+      "description": "Higher chance to be attacked.",
+      "type": "Buff",
+      "statusName": "A Small Price for Victory",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                "displayLines": "MDF_PropertyValue",
+                "constants": [],
+                "variables": [
+                  "MDF_PropertyValue"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1426674462\">Klara_PassiveATK_Mark</a>",
+      "execute": [
+        {
+          "eventTrigger": "Attack DMG End [Owner]",
+          "execute": [
+            {
+              "name": "Inject Ability Use",
+              "abilityName": "Klara_PassiveAbility01_InsertAbility",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "priorityTag": "CharacterAttackFromSelf",
+              "showInActionOrder": true,
+              "abortFlags": [
+                "STAT_CTRL",
+                "DisableAction"
+              ],
+              "allowAbilityTriggers": false
+            },
+            "Modifier Deletes Itself"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1361568506\">Topaz_BE_UltraEnhance_ShowText</a>",
+      "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
@@ -278,6 +549,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1982768595\">Topaz_BE_FiretakenRatio</a>",
       "stackType": "ReplaceByCaster",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -300,21 +572,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1899526189\">Topaz_BE_HitEffect</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1899526189\">Topaz_BE_HitEffect</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1524167625\">Topaz_BE_UltraEnhance_Text</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "type": "Buff",
       "effectName": "DMG multiplier, CRIT DMG Boost",
       "duration": 1
@@ -324,6 +591,9 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
       "counter": 1,
       "stackType": "ReplaceByCaster",
+      "description": "Numby's DMG multiplier increases by <span class=\"descriptionNumberColor\">Skill03_P1_BEDamageRatio</span>, CRIT DMG increases by <span class=\"descriptionNumberColor\">Skill03_P2_CriticalChance</span>. When enemies with Proof of Debt receive attacks from allies' Basic ATK, Skill, or Ultimate, Numby's action is Advanced Forward by <span class=\"descriptionNumberColor\">Skill03_P3_DelayRatio</span>.",
+      "type": "Buff",
+      "statusName": "Windfall Bonanza!",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -359,17 +629,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "Skill03_P1_BEDamageRatio",
-        "Skill03_P2_CriticalChance",
-        "Skill03_P3_DelayRatio",
-        "Rank06_P2_PenRatio"
-      ],
-      "latentQueue": [],
-      "description": "Numby's DMG multiplier increases by <span class=\"descriptionNumberColor\">Skill03_P1_BEDamageRatio</span>, CRIT DMG increases by <span class=\"descriptionNumberColor\">Skill03_P2_CriticalChance</span>. When enemies with Proof of Debt receive attacks from allies' Basic ATK, Skill, or Ultimate, Numby's action is Advanced Forward by <span class=\"descriptionNumberColor\">Skill03_P3_DelayRatio</span>.",
-      "type": "Buff",
-      "statusName": "Windfall Bonanza!"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -421,10 +681,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_damageStart"
       ]
     },
     {
@@ -441,16 +697,12 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-373546697\">Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn</a>",
       "stackType": "Replace",
-      "stackData": [],
-      "latentQueue": [],
       "duration": 1
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-93497222\">Topaz_BE_FindNoTargetFlag</a>",
       "stackType": "Replace",
-      "stackData": [],
-      "latentQueue": [],
       "duration": 1
     },
     {
@@ -472,6 +724,10 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "ListenBattleEventSkill"
       ],
+      "description": "Increases Follow-Up ATK DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue1_DamageAdd</span>. Numby will target this unit as its attack target.",
+      "type": "Debuff",
+      "effectName": "Proof of Debt",
+      "statusName": "Proof of Debt",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1221,20 +1477,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue1_DamageAdd",
-        "MDF_PropertyValue3_InsertCriticalDamageAddRatio",
-        "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
-        "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer"
-      ],
-      "latentQueue": [
-        "_damageStart"
-      ],
-      "description": "Increases Follow-Up ATK DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue1_DamageAdd</span>. Numby will target this unit as its attack target.",
-      "type": "Debuff",
-      "effectName": "Proof of Debt",
-      "statusName": "Proof of Debt"
+      ]
     }
   ],
   "references": []

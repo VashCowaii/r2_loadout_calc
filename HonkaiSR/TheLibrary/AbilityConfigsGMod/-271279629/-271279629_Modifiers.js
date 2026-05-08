@@ -2531,6 +2531,7 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
+      "useEntitySnapshot": true,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2555,8 +2556,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true
+      ]
     },
     {
       "name": "Modifier Construction",

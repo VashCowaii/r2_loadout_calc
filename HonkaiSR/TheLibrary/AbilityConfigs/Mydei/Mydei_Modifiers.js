@@ -10,6 +10,52 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__421315126\">ADV_Modifier_Maze_Mydeimos_HolyShield</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "HolyShield"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1510110930\">ADV_StageAbility_Mydeimos_BeforeBattleStunListener</a>",
+      "onBattlePrep": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Parameter Target List}}"
+          },
+          "modifier": null,
+          "ID": "140401(SkillMaze)",
+          "counter": 1,
+          "duration": {
+            "operator": "Variables[0] (10) || RETURN",
+            "displayLines": "10",
+            "constants": [],
+            "variables": [
+              10
+            ]
+          },
+          "conditions": {
+            "name": "Has Flag",
+            "flagName": "Stun"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1005526458\">ADV_StageAbility_Maze_Mydeimos_Attack</a>",
+      "counter": 1,
+      "stackType": "Replace",
+      "modifierFlags": [
+        "Stun"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1569520574\">Mydeimos_UltraTargetSpecialMark</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
@@ -120,9 +166,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -131,16 +175,14 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "Prioritizes attacking this target in the next \"Godslayer Be God.\"",
+      "type": "Other",
+      "statusName": "Throne of Bones",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Prioritizes attacking this target in the next \"Godslayer Be God.\"",
-      "type": "Other",
-      "statusName": "Throne of Bones"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -148,16 +190,12 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_MydeimosRemoveTransfer"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__951504069\">Mydeimos_Trace01</a>[<span class=\"descriptionNumberColor\">Earth and Water</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "description": "During the \"Vendetta\" state, Mydei will not exit the \"Vendetta\" state when receiving a killing blow.",
       "type": "Buff",
       "effectName": "Earth and Water",
@@ -167,6 +205,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1739027787\">Mydeimos_Eidolon4</a>[<span class=\"descriptionNumberColor\">Siren Jolts the Laconic Lion</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "CRIT DMG Boost",
+      "statusName": "Siren Jolts the Laconic Lion",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -238,11 +280,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "CRIT DMG Boost",
-      "statusName": "Siren Jolts the Laconic Lion"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -430,6 +468,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-242497681\">Mydeimos_Trace03_Sub</a>[<span class=\"descriptionNumberColor\">Bloodied Chiton</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, Charge ratio from enemy targets' DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>, and the HP restored when receiving healing increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue3</span>.",
+      "type": "Buff",
+      "effectName": "Bloodied Chiton",
+      "statusName": "Bloodied Chiton",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -534,11 +576,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, Charge ratio from enemy targets' DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>, and the HP restored when receiving healing increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue3</span>.",
-      "type": "Buff",
-      "effectName": "Bloodied Chiton",
-      "statusName": "Bloodied Chiton"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -629,10 +667,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_ForceEnergyBarChange"
       ]
     },
     {
@@ -698,6 +732,72 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "Crazy"
+      ],
+      "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_HPAddValue</span>. DEF remains at 0.",
+      "type": "Other",
+      "effectName": "Vendetta",
+      "statusName": "Vendetta",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1839693501\">Mydeimos_Eidolon2</a>",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 2
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (0.15) || RETURN",
+              "displayLines": "0.15",
+              "constants": [],
+              "variables": [
+                0.15
+              ]
+            },
+            "MDF_PropertyValue2": {
+              "operator": "Variables[0] (0.4) || RETURN",
+              "displayLines": "0.4",
+              "constants": [],
+              "variables": [
+                0.4
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1739027787\">Mydeimos_Eidolon4</a>[<span class=\"descriptionNumberColor\">Siren Jolts the Laconic Lion</span>]",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 4
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (0.3) || RETURN",
+              "displayLines": "0.3",
+              "constants": [],
+              "variables": [
+                0.3
+              ]
+            },
+            "MDF_PropertyValue2": {
+              "operator": "Variables[0] (0.1) || RETURN",
+              "displayLines": "0.1",
+              "constants": [],
+              "variables": [
+                0.1
+              ]
+            }
+          }
+        }
       ],
       "execute": [
         {
@@ -1105,76 +1205,6 @@ const configAbility = {
               ]
             }
           ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_CanTransfer"
-      ],
-      "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_HPAddValue</span>. DEF remains at 0.",
-      "type": "Other",
-      "effectName": "Vendetta",
-      "statusName": "Vendetta",
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1839693501\">Mydeimos_Eidolon2</a>",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 2
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.15) || RETURN",
-              "displayLines": "0.15",
-              "constants": [],
-              "variables": [
-                0.15
-              ]
-            },
-            "MDF_PropertyValue2": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1739027787\">Mydeimos_Eidolon4</a>[<span class=\"descriptionNumberColor\">Siren Jolts the Laconic Lion</span>]",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 4
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
-            },
-            "MDF_PropertyValue2": {
-              "operator": "Variables[0] (0.1) || RETURN",
-              "displayLines": "0.1",
-              "constants": [],
-              "variables": [
-                0.1
-              ]
-            }
-          }
         }
       ]
     }

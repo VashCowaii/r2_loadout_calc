@@ -10,12 +10,186 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-500446648\">Monster_W3_AventurinePart_IF_ChangePhaseDestroy</a>",
+      "modifierFlags": [
+        "STAT_MonsterChangePhase"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__718847384\">Monster_W3_AventurinePart_IF_SpeedZero</a>",
+      "modifierFlags": [
+        "MuteSpeed"
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Block Advance/Delay Effects",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "isLock": false
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Block Advance/Delay Effects",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "whitelist": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "whitelistTag": "Mask_TurnBasedAdvance"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__499818287\">Enemy_W3_AventurinePart_01_IF_DeathRattle</a>",
+      "modifierFlags": [
+        "Deathrattle",
+        "KeepOnDeathrattle"
+      ],
+      "execute": [
+        {
+          "eventTrigger": "Was Killed (Queued) [Owner]",
+          "execute": [
+            {
+              "name": "Dispel Debuffs",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "silent": true
+            },
+            {
+              "name": "Mark Entity For Immediate Death"
+            },
+            {
+              "name": "Inject Ability Use",
+              "conditionActive": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster's Summoner}}"
+                },
+                "value1": "CurrentHP",
+                "compareType": ">",
+                "value2": 0
+              },
+              "checkOverride": {
+                "name": "Condition Priority",
+                "overridePriority": "MonsterForceKill",
+                "condition": {
+                  "name": "Compare: Ability Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Summoner of Modifier Holder}}"
+                  },
+                  "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                  "compareType": "<=",
+                  "value2": 0
+                }
+              },
+              "abilityName": "Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert",
+              "priorityTag": "EnemyDeathEffect",
+              "ownerState": "Mask_AliveOrLimbo",
+              "targetState": "Mask_AliveOrLimbo",
+              "canHitNonTargets": true,
+              "showInActionOrder": true,
+              "abortFlags": [
+                "STAT_MonsterChangePhase"
+              ],
+              "allowAbilityTriggers": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1089097326\">Enemy_W3_AventurinePart_IF_DeathRattle</a>",
+      "modifierFlags": [
+        "Deathrattle",
+        "KeepOnDeathrattle"
+      ],
+      "execute": [
+        {
+          "eventTrigger": "Was Killed (Queued) [Owner]",
+          "execute": [
+            {
+              "name": "Dispel Debuffs",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "silent": true
+            },
+            {
+              "name": "Mark Entity For Immediate Death"
+            },
+            {
+              "name": "Inject Ability Use",
+              "conditionActive": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster's Summoner}}"
+                },
+                "value1": "CurrentHP",
+                "compareType": ">",
+                "value2": 0
+              },
+              "checkOverride": {
+                "name": "Condition Priority",
+                "overridePriority": "MonsterForceKill",
+                "condition": {
+                  "name": "Compare: Ability Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Summoner of Modifier Holder}}"
+                  },
+                  "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                  "compareType": "<=",
+                  "value2": 0
+                }
+              },
+              "abilityName": "Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert",
+              "priorityTag": "EnemyDeathEffect",
+              "ownerState": "Mask_AliveOrLimbo",
+              "targetState": "Mask_AliveOrLimbo",
+              "canHitNonTargets": true,
+              "showInActionOrder": true,
+              "abortFlags": [
+                "STAT_MonsterChangePhase"
+              ],
+              "allowAbilityTriggers": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2114595919\">Monster_W3_AventurinePart_ResultCountZero</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-699513905\">Monster_W3_AventurinePart_ResultCount</a>",
       "stackType": "Replace",
+      "stackLimit": 999,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Owner]",
@@ -1556,13 +1730,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 999,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-34127136\">Monster_W3_AventurinePart_Result</a>",
+      "latentQueue": [
+        "DiceGamblingInsertCheck"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2791,10 +2966,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DiceGamblingInsertCheck"
       ]
     },
     {
@@ -2838,7 +3009,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1604729097\">Monster_W3_AventurinePart_ResultTarget</a>",
-      "stackData": [],
       "latentQueue": [
         "DiceGamblingInsertCheck"
       ]
@@ -2849,6 +3019,9 @@ const configAbility = {
       "modifierFlags": [
         "MuteSpeed"
       ],
+      "description": "Immune to DMG. When this unit is attacked by a target that has entered the Gamble, apply 1 random number (between 1 and 6) to the target.",
+      "type": "Other",
+      "statusName": "Fickle Fortune",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2880,12 +3053,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "Immune to DMG. When this unit is attacked by a target that has entered the Gamble, apply 1 random number (between 1 and 6) to the target.",
-      "type": "Other",
-      "statusName": "Fickle Fortune"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3055,200 +3223,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__718327308\">Monster_W3_AventurinePart_Speed</a>",
+      "latentQueue": [
+        "DiceGamblingInsertCheck"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DiceGamblingInsertCheck"
       ]
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-500446648\">Monster_W3_AventurinePart_IF_ChangePhaseDestroy</a>",
-      "modifierFlags": [
-        "STAT_MonsterChangePhase"
-      ]
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__718847384\">Monster_W3_AventurinePart_IF_SpeedZero</a>",
-      "modifierFlags": [
-        "MuteSpeed"
-      ],
-      "execute": [
-        {
-          "eventTrigger": "When Modifier Destroyed/Removed",
-          "execute": [
-            {
-              "name": "Block Advance/Delay Effects",
-              "on": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "isLock": false
-            }
-          ]
-        },
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier",
-          "execute": [
-            {
-              "name": "Block Advance/Delay Effects",
-              "on": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "whitelist": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "whitelistTag": "Mask_TurnBasedAdvance"
-            }
-          ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": []
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__499818287\">Enemy_W3_AventurinePart_01_IF_DeathRattle</a>",
-      "modifierFlags": [
-        "Deathrattle",
-        "KeepOnDeathrattle"
-      ],
-      "execute": [
-        {
-          "eventTrigger": "Was Killed (Queued) [Owner]",
-          "execute": [
-            {
-              "name": "Dispel Debuffs",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "silent": true
-            },
-            {
-              "name": "Mark Entity For Immediate Death"
-            },
-            {
-              "name": "Inject Ability Use",
-              "conditionActive": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster's Summoner}}"
-                },
-                "value1": "CurrentHP",
-                "compareType": ">",
-                "value2": 0
-              },
-              "checkOverride": {
-                "name": "Condition Priority",
-                "overridePriority": "MonsterForceKill",
-                "condition": {
-                  "name": "Compare: Ability Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Summoner of Modifier Holder}}"
-                  },
-                  "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                  "compareType": "<=",
-                  "value2": 0
-                }
-              },
-              "abilityName": "Monster_W3_AventurinePart_01_IF_AbilityP01_DeathRattle_Insert",
-              "priorityTag": "EnemyDeathEffect",
-              "ownerState": "Mask_AliveOrLimbo",
-              "targetState": "Mask_AliveOrLimbo",
-              "canHitNonTargets": true,
-              "showInActionOrder": true,
-              "abortFlags": [
-                "STAT_MonsterChangePhase"
-              ],
-              "allowAbilityTriggers": false
-            }
-          ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": []
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1089097326\">Enemy_W3_AventurinePart_IF_DeathRattle</a>",
-      "modifierFlags": [
-        "Deathrattle",
-        "KeepOnDeathrattle"
-      ],
-      "execute": [
-        {
-          "eventTrigger": "Was Killed (Queued) [Owner]",
-          "execute": [
-            {
-              "name": "Dispel Debuffs",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "silent": true
-            },
-            {
-              "name": "Mark Entity For Immediate Death"
-            },
-            {
-              "name": "Inject Ability Use",
-              "conditionActive": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster's Summoner}}"
-                },
-                "value1": "CurrentHP",
-                "compareType": ">",
-                "value2": 0
-              },
-              "checkOverride": {
-                "name": "Condition Priority",
-                "overridePriority": "MonsterForceKill",
-                "condition": {
-                  "name": "Compare: Ability Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Summoner of Modifier Holder}}"
-                  },
-                  "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                  "compareType": "<=",
-                  "value2": 0
-                }
-              },
-              "abilityName": "Monster_W3_AventurinePart_IF_AbilityP01_DeathRattle_Insert",
-              "priorityTag": "EnemyDeathEffect",
-              "ownerState": "Mask_AliveOrLimbo",
-              "targetState": "Mask_AliveOrLimbo",
-              "canHitNonTargets": true,
-              "showInActionOrder": true,
-              "abortFlags": [
-                "STAT_MonsterChangePhase"
-              ],
-              "allowAbilityTriggers": false
-            }
-          ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": []
     }
   ],
   "references": []

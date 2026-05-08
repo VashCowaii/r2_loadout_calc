@@ -29,19 +29,19 @@ const configAbility = {
           ]
         },
         "MDF_Damage": {
-          "operator": "Variables[0] (0) || RETURN",
-          "displayLines": "0",
+          "operator": "Variables[0] (UnusedUnderThisBase_4835) || RETURN",
+          "displayLines": "UnusedUnderThisBase_4835",
           "constants": [],
           "variables": [
-            0
+            "UnusedUnderThisBase_4835"
           ]
         },
         "MDF_LifeTime": {
-          "operator": "Variables[0] (0) || RETURN",
-          "displayLines": "0",
+          "operator": "Variables[0] (UnusedUnderThisBase_6017) || RETURN",
+          "displayLines": "UnusedUnderThisBase_6017",
           "constants": [],
           "variables": [
-            0
+            "UnusedUnderThisBase_6017"
           ]
         },
         "SpAdded2": {

@@ -612,6 +612,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2015662270\">Sunday_10_Ability02_Property</a>[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_PropertyRatio"
+      ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Benison of Paper and Rites",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -634,15 +641,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Benison of Paper and Rites"
+      ]
     }
   ],
   "targetObjectData": {

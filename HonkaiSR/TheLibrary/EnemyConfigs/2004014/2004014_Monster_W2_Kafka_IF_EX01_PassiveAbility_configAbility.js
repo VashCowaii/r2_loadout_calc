@@ -108,6 +108,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-916114620\">Enemy_W2_Kafka_IF_AssistController</a>",
+      "stackData": [
+        "MDF_DotMaxCount",
+        "MDF_DotConsume",
+        "MDF_DotCurCount"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
@@ -518,13 +523,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [
-        "MDF_DotMaxCount",
-        "MDF_DotConsume",
-        "MDF_DotCurCount"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",

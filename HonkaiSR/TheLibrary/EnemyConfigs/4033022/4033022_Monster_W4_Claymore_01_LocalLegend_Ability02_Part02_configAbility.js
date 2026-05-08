@@ -197,6 +197,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__357625087\">Monster_W4_Claymore_01_LocalLegend_Locking</a>",
+      "latentQueue": [
+        "InsertCheck03",
+        "_SelectTimes",
+        "_EnterBattle"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -238,12 +243,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "InsertCheck03",
-        "_SelectTimes",
-        "_EnterBattle"
       ]
     }
   ]

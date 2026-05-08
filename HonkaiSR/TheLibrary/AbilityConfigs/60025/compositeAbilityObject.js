@@ -3,128 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": 60025,
   "trimCharacterName": 60025,
   "abilityList": [
-    "60025_Phainon_Ability21_Insert_Part02_MainStory",
+    "60025_MissionBattleEvent60025_Ability03_Part01",
     "60025_Phainon_Ability21_Insert_Part01_MainStory",
-    "60025_MissionBattleEvent60025_Ability03_Part01"
+    "60025_Phainon_Ability21_Insert_Part02_MainStory"
   ],
   "abilityObject": {
-    "60025_Phainon_Ability21_Insert_Part02_MainStory": {
-      "fileName": "60025_Phainon_Ability21_Insert_Part02_MainStory",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Attack-Type Extension",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "typeToExtend": "Follow-up",
-          "extendTypeTo": "Skill",
-          "instanceIdentifier": "Phainon_Skill21"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "_CurrentHp",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "canPhase": true,
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "displayLines": 1
-                },
-                "DamageFlat": {
-                  "operator": "Variables[0] (_CurrentHp) || RETURN",
-                  "displayLines": "_CurrentHp",
-                  "constants": [],
-                  "variables": [
-                    "_CurrentHp"
-                  ]
-                },
-                "Toughness": {
-                  "displayLines": 30
-                },
-                "Tags": [
-                  "Counter"
-                ],
-                "behaviorTag": "DirectlyLoseHpHit",
-                "attackType": "Follow-up"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Attack-Type Extension",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "typeToExtend": "Follow-up",
-          "isRemove": true,
-          "instanceIdentifier": "Phainon_Skill21"
-        },
-        "Trigger: Attack End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "60025_Phainon_Ability21_Insert_Part01_MainStory": {
-      "fileName": "60025_Phainon_Ability21_Insert_Part01_MainStory",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Soulscorch Edict"
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Phainon_Ability21_Insert_Part02_MainStory",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "onAbort": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1520947056\">M_Phainon_Ability21_InsertCheck</a>"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
     "60025_MissionBattleEvent60025_Ability03_Part01": {
       "fileName": "60025_MissionBattleEvent60025_Ability03_Part01",
       "childAbilityList": [
@@ -233,9 +116,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -243,6 +124,123 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "All Enemy Team"
+      }
+    },
+    "60025_Phainon_Ability21_Insert_Part01_MainStory": {
+      "fileName": "60025_Phainon_Ability21_Insert_Part01_MainStory",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Soulscorch Edict"
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Phainon_Ability21_Insert_Part02_MainStory",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "onAbort": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1520947056\">M_Phainon_Ability21_InsertCheck</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "60025_Phainon_Ability21_Insert_Part02_MainStory": {
+      "fileName": "60025_Phainon_Ability21_Insert_Part02_MainStory",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Attack-Type Extension",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "typeToExtend": "Follow-up",
+          "extendTypeTo": "Skill",
+          "instanceIdentifier": "Phainon_Skill21"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Define Custom Variable with Stat",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "variableName": "_CurrentHp",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
+            },
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "displayLines": 1
+                },
+                "DamageFlat": {
+                  "operator": "Variables[0] (_CurrentHp) || RETURN",
+                  "displayLines": "_CurrentHp",
+                  "constants": [],
+                  "variables": [
+                    "_CurrentHp"
+                  ]
+                },
+                "Toughness": {
+                  "displayLines": 30
+                },
+                "Tags": [
+                  "Counter"
+                ],
+                "behaviorTag": "DirectlyLoseHpHit",
+                "attackType": "Follow-up"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Attack-Type Extension",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "typeToExtend": "Follow-up",
+          "isRemove": true,
+          "instanceIdentifier": "Phainon_Skill21"
+        },
+        "Trigger: Attack End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
       }
     }
   },

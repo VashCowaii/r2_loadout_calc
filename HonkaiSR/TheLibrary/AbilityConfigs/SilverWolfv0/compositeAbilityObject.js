@@ -3,22 +3,475 @@ const compositeAbilityObject = {
   "fullCharacterName": "Silver Wolf_v0",
   "trimCharacterName": "SilverWolfv0",
   "abilityList": [
+    "SilverWolfv0_Modifiers",
+    "SilverWolfv0_Silwolf_Trace01",
     "SilverWolfv0_Silwolf_Eidolon6",
     "SilverWolfv0_Silwolf_Eidolon2",
-    "SilverWolfv0_Silwolf_Trace01",
+    "SilverWolfv0_LocalPlayer_StandardAbility_AttackBreak",
+    "SilverWolfv0_LocalPlayer_Silwolf_TechniqueUsage",
+    "SilverWolfv0_LocalPlayer_Silwolf_NormalAtk01",
     "SilverWolfv0_Silwolf_TechniqueInLevel",
-    "SilverWolfv0_Silwolf_PassiveAbility_RandomBug",
     "SilverWolfv0_Silwolf_PassiveAbility01",
     "SilverWolfv0_Silwolf_Ability03_Part02",
     "SilverWolfv0_Silwolf_Ability03_Part01",
     "SilverWolfv0_Silwolf_Ability03_EnterReady",
     "SilverWolfv0_Silwolf_Ability02_Part02",
     "SilverWolfv0_Silwolf_Ability02_Part01",
+    "SilverWolfv0_Silwolf_PassiveAbility_RandomBug",
     "SilverWolfv0_Silwolf_Ability01_Part02",
-    "SilverWolfv0_Silwolf_Ability01_Part01",
-    "SilverWolfv0_Modifiers"
+    "SilverWolfv0_Silwolf_Ability01_Part01"
   ],
   "abilityObject": {
+    "SilverWolfv0_Modifiers": {
+      "fileName": "SilverWolfv0_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1167212020\">ADV_StageAbility_Maze_Silwolf</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__898206024\">Silwolf_Ultimate_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "modifierFlags": [
+            "STAT_DefenceDown"
+          ],
+          "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "DEF Reduction",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1573930598\">Silwolf_Eidolon2_StatusResistanceDown</a>[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Effect RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Effect RES Reduction",
+          "statusName": "Effect RES Reduction",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__50824187\">Silwolf_BPAbility_AllDamageTypeResistanceDown</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "All-Type DMG RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "All-Type RES Reduction",
+          "statusName": "All-Type RES Reduction",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_SpeedDown"
+          ],
+          "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Slow",
+          "statusName": "Type-3 Bug",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_DefenceDown"
+          ],
+          "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "Type-2 Bug",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1783933723\">Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_AttackDown"
+          ],
+          "description": "ATK -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "ATK Reduction",
+          "statusName": "Type-1 Bug",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-780191838\">Silwolf_BPAbility_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Extra Imaginary Weakness</span>]",
+          "stackType": "Replace",
+          "description": "Extra Imaginary Weakness implanted. Imaginary RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "statusName": "Extra Imaginary Weakness"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-69851026\">Silwolf_BPAbility_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Extra Quantum Weakness</span>]",
+          "stackType": "Replace",
+          "description": "Extra Quantum Weakness implanted. Quantum RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "statusName": "Extra Quantum Weakness"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__954284461\">Silwolf_BPAbility_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Extra Lightning Weakness</span>]",
+          "stackType": "Replace",
+          "description": "Extra Lightning Weakness implanted. Lightning RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "statusName": "Extra Lightning Weakness"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-719977260\">Silwolf_BPAbility_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
+          "stackType": "Replace",
+          "description": "Extra Physical Weakness implanted. Physical RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "statusName": "Extra Physical Weakness"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1411533355\">Silwolf_BPAbility_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Extra Wind Weakness</span>]",
+          "stackType": "Replace",
+          "description": "Extra Wind Weakness implanted. Wind RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "statusName": "Extra Wind Weakness"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__110873612\">Silwolf_BPAbility_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Extra Ice Weakness</span>]",
+          "stackType": "Replace",
+          "description": "Extra Ice Weakness implanted. Ice RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "statusName": "Extra Ice Weakness"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1099669275\">Silwolf_BPAbility_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]",
+          "stackType": "Replace",
+          "description": "Extra Fire Weakness implanted. Fire RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "statusName": "Extra Fire Weakness"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__551921933\">Silwolf_BPAbility_WeakType_Extra</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+          "stackType": "Replace",
+          "modifierFlags": [
+            "STAT_AttachWeakness"
+          ],
+          "description": "Extra Weakness implanted. Corresponding RES is lowered by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Implant a Weakness",
+          "statusName": "Extra Weakness",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Implant Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "element": null,
+                  "resReduction": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  },
+                  "maxImplant": 1,
+                  "returnWeaknessVar": [
+                    "Silwolf_BPAbility_WeakType_01",
+                    "Silwolf_BPAbility_WeakType_02"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-56897788\">Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+          "stackType": "Replace",
+          "modifierFlags": [
+            "STAT_AttachWeakness"
+          ],
+          "description": "Extra Weakness implanted. Corresponding RES is lowered by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Implant a Weakness",
+          "statusName": "Extra Weakness",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Implant Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "element": null,
+                  "resReduction": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  },
+                  "maxImplant": 1,
+                  "returnWeaknessVar": [
+                    "Silwolf_BPAbility_WeakType_01",
+                    "Silwolf_BPAbility_WeakType_02"
+                  ],
+                  "noNewWeaknesses": [
+                    "Modifier Deletes Itself"
+                  ]
+                },
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"958478851\">Silwolf_Ability02_OverrideNameForStatus</a>",
+                  "variables": {
+                    "DF_WeakType": {
+                      "operator": "Variables[0] (FREEVAR) || RETURN",
+                      "displayLines": "FREEVAR",
+                      "constants": [],
+                      "variables": [
+                        "FREEVAR"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "SilverWolfv0_Silwolf_Trace01": {
+      "fileName": "SilverWolfv0_Silwolf_Trace01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-521460678\">M_Silwolf_Trace01_Bonus</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-521460678\">M_Silwolf_Trace01_Bonus</a>",
+          "execute": [
+            {
+              "eventTrigger": "Weakness Break [Anyone]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Silwolf_00_AddModifier_Chance",
+                  "value": {
+                    "operator": "Variables[0] (0.65) || RETURN",
+                    "displayLines": "0.65",
+                    "constants": [],
+                    "variables": [
+                      0.65
+                    ]
+                  }
+                },
+                {
+                  "name": "Trigger Ability",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "inherentTarget": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "ability": "Silwolf_PassiveAbility_RandomBug"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "SilverWolfv0_Silwolf_Eidolon6": {
       "fileName": "SilverWolfv0_Silwolf_Eidolon6",
       "abilityType": null,
@@ -105,9 +558,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -208,19 +659,17 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "SilverWolfv0_Silwolf_Trace01": {
-      "fileName": "SilverWolfv0_Silwolf_Trace01",
-      "abilityType": null,
-      "energy": null,
+    "SilverWolfv0_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "SilverWolfv0_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
       "toughnessList": null,
       "parse": [
         {
@@ -229,50 +678,389 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-521460678\">M_Silwolf_Trace01_Bonus</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
         }
       ],
-      "references": [
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "SilverWolfv0_LocalPlayer_Silwolf_TechniqueUsage": {
+      "fileName": "SilverWolfv0_LocalPlayer_Silwolf_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
         {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-521460678\">M_Silwolf_Trace01_Bonus</a>",
-          "execute": [
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
             {
-              "eventTrigger": "Weakness Break [Anyone]",
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"933509647\">ADV_StageAbility_Maze_IgnoreWeakness_TechniqueUsageMark</a>"
+            },
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
               "execute": [
                 {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_Silwolf_00_AddModifier_Chance",
-                  "value": {
-                    "operator": "Variables[0] (0.65) || RETURN",
-                    "displayLines": "0.65",
-                    "constants": [],
-                    "variables": [
-                      0.65
-                    ]
-                  }
-                },
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "100601(SkillMaze)"
+                    }
+                  ]
+                }
+              ],
+              "projectileFinished": [
                 {
-                  "name": "Trigger Ability",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "inherentTarget": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "ability": "Silwolf_PassiveAbility_RandomBug"
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "100601(SkillMaze)"
+                    }
+                  ]
                 }
               ]
             }
           ],
-          "stackData": [],
-          "latentQueue": []
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"933509647\">ADV_StageAbility_Maze_IgnoreWeakness_TechniqueUsageMark</a>"
+            },
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "100601(SkillMaze)"
+                    }
+                  ]
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "100601(SkillMaze)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
+      "onAbortReg": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"933509647\">ADV_StageAbility_Maze_IgnoreWeakness_TechniqueUsageMark</a>"
+        }
+      ],
+      "references": [],
       "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "SilverWolfv0_LocalPlayer_Silwolf_NormalAtk01": {
+      "fileName": "SilverWolfv0_LocalPlayer_Silwolf_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"933509647\">ADV_StageAbility_Maze_IgnoreWeakness_TechniqueUsageMark</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "failed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "SilverWolfv0_Silwolf_TechniqueInLevel": {
@@ -352,9 +1140,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -70
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -362,680 +1148,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "SilverWolfv0_Silwolf_PassiveAbility_RandomBug": {
-      "fileName": "SilverWolfv0_Silwolf_PassiveAbility_RandomBug",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1783933723\">Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]"
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Ability Target(ST)}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]"
-              },
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Ability Target(ST)}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Random Event",
-                      "odds": [
-                        0.3333,
-                        0.3333,
-                        0.3334
-                      ],
-                      "execute": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Ability Target(ST)}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1783933723\">Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
-                          "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.1) || RETURN",
-                              "displayLines": "0.1",
-                              "constants": [],
-                              "variables": [
-                                0.1
-                              ]
-                            }
-                          }
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Ability Target(ST)}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
-                          "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.08) || RETURN",
-                              "displayLines": "0.08",
-                              "constants": [],
-                              "variables": [
-                                0.08
-                              ]
-                            }
-                          }
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Ability Target(ST)}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
-                          "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.06) || RETURN",
-                              "displayLines": "0.06",
-                              "constants": [],
-                              "variables": [
-                                0.06
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
-                      },
-                      "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.06) || RETURN",
-                          "displayLines": "0.06",
-                          "constants": [],
-                          "variables": [
-                            0.06
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Ability Target(ST)}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
-                      },
-                      "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.08) || RETURN",
-                          "displayLines": "0.08",
-                          "constants": [],
-                          "variables": [
-                            0.08
-                          ]
-                        }
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Random Event",
-                      "odds": [
-                        0.5,
-                        0.5
-                      ],
-                      "execute": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Ability Target(ST)}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
-                          "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.08) || RETURN",
-                              "displayLines": "0.08",
-                              "constants": [],
-                              "variables": [
-                                0.08
-                              ]
-                            }
-                          }
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Ability Target(ST)}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
-                          "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.06) || RETURN",
-                              "displayLines": "0.06",
-                              "constants": [],
-                              "variables": [
-                                0.06
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Ability Target(ST)}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]"
-              },
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Ability Target(ST)}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1783933723\">Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_LifeTime"
-                        ]
-                      },
-                      "baseChance": {
-                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Silwolf_00_AddModifier_Chance"
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.1) || RETURN",
-                          "displayLines": "0.1",
-                          "constants": [],
-                          "variables": [
-                            0.1
-                          ]
-                        }
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Random Event",
-                      "odds": [
-                        0.5,
-                        0.5
-                      ],
-                      "execute": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Ability Target(ST)}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1783933723\">Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
-                          "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.1) || RETURN",
-                              "displayLines": "0.1",
-                              "constants": [],
-                              "variables": [
-                                0.1
-                              ]
-                            }
-                          }
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Ability Target(ST)}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
-                          "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.06) || RETURN",
-                              "displayLines": "0.06",
-                              "constants": [],
-                              "variables": [
-                                0.06
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Ability Target(ST)}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Random Event",
-                      "odds": [
-                        0.5,
-                        0.5
-                      ],
-                      "execute": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Ability Target(ST)}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1783933723\">Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
-                          "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.1) || RETURN",
-                              "displayLines": "0.1",
-                              "constants": [],
-                              "variables": [
-                                0.1
-                              ]
-                            }
-                          }
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Ability Target(ST)}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
-                          "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.08) || RETURN",
-                              "displayLines": "0.08",
-                              "constants": [],
-                              "variables": [
-                                0.08
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Random Event",
-                      "odds": [
-                        0.3333,
-                        0.3333,
-                        0.3334
-                      ],
-                      "execute": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Ability Target(ST)}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1783933723\">Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
-                          "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.1) || RETURN",
-                              "displayLines": "0.1",
-                              "constants": [],
-                              "variables": [
-                                0.1
-                              ]
-                            }
-                          }
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Ability Target(ST)}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
-                          "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.08) || RETURN",
-                              "displayLines": "0.08",
-                              "constants": [],
-                              "variables": [
-                                0.08
-                              ]
-                            }
-                          }
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Ability Target(ST)}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
-                          "duration": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_LifeTime"
-                            ]
-                          },
-                          "baseChance": {
-                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
-                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Silwolf_00_AddModifier_Chance"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (0.06) || RETURN",
-                              "displayLines": "0.06",
-                              "constants": [],
-                              "variables": [
-                                0.06
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "SilverWolfv0_Silwolf_PassiveAbility01": {
@@ -1159,9 +1271,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1190,9 +1300,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1238,9 +1346,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2254,6 +2360,680 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       }
     },
+    "SilverWolfv0_Silwolf_PassiveAbility_RandomBug": {
+      "fileName": "SilverWolfv0_Silwolf_PassiveAbility_RandomBug",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1783933723\">Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]"
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]"
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "Random Event",
+                      "odds": [
+                        0.3333,
+                        0.3333,
+                        0.3334
+                      ],
+                      "execute": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1783933723\">Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_LifeTime"
+                            ]
+                          },
+                          "baseChance": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_Chance"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.1) || RETURN",
+                              "displayLines": "0.1",
+                              "constants": [],
+                              "variables": [
+                                0.1
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_LifeTime"
+                            ]
+                          },
+                          "baseChance": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_Chance"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.08) || RETURN",
+                              "displayLines": "0.08",
+                              "constants": [],
+                              "variables": [
+                                0.08
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_LifeTime"
+                            ]
+                          },
+                          "baseChance": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_Chance"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.06) || RETURN",
+                              "displayLines": "0.06",
+                              "constants": [],
+                              "variables": [
+                                0.06
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Silwolf_00_AddModifier_LifeTime"
+                        ]
+                      },
+                      "baseChance": {
+                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Silwolf_00_AddModifier_Chance"
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.06) || RETURN",
+                          "displayLines": "0.06",
+                          "constants": [],
+                          "variables": [
+                            0.06
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Silwolf_00_AddModifier_LifeTime"
+                        ]
+                      },
+                      "baseChance": {
+                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Silwolf_00_AddModifier_Chance"
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.08) || RETURN",
+                          "displayLines": "0.08",
+                          "constants": [],
+                          "variables": [
+                            0.08
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Random Event",
+                      "odds": [
+                        0.5,
+                        0.5
+                      ],
+                      "execute": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_LifeTime"
+                            ]
+                          },
+                          "baseChance": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_Chance"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.08) || RETURN",
+                              "displayLines": "0.08",
+                              "constants": [],
+                              "variables": [
+                                0.08
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_LifeTime"
+                            ]
+                          },
+                          "baseChance": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_Chance"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.06) || RETURN",
+                              "displayLines": "0.06",
+                              "constants": [],
+                              "variables": [
+                                0.06
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]"
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1783933723\">Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
+                        "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Silwolf_00_AddModifier_LifeTime"
+                        ]
+                      },
+                      "baseChance": {
+                        "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
+                        "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Silwolf_00_AddModifier_Chance"
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.1) || RETURN",
+                          "displayLines": "0.1",
+                          "constants": [],
+                          "variables": [
+                            0.1
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Random Event",
+                      "odds": [
+                        0.5,
+                        0.5
+                      ],
+                      "execute": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1783933723\">Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_LifeTime"
+                            ]
+                          },
+                          "baseChance": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_Chance"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.1) || RETURN",
+                              "displayLines": "0.1",
+                              "constants": [],
+                              "variables": [
+                                0.1
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_LifeTime"
+                            ]
+                          },
+                          "baseChance": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_Chance"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.06) || RETURN",
+                              "displayLines": "0.06",
+                              "constants": [],
+                              "variables": [
+                                0.06
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "Random Event",
+                      "odds": [
+                        0.5,
+                        0.5
+                      ],
+                      "execute": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1783933723\">Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_LifeTime"
+                            ]
+                          },
+                          "baseChance": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_Chance"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.1) || RETURN",
+                              "displayLines": "0.1",
+                              "constants": [],
+                              "variables": [
+                                0.1
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_LifeTime"
+                            ]
+                          },
+                          "baseChance": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_Chance"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.08) || RETURN",
+                              "displayLines": "0.08",
+                              "constants": [],
+                              "variables": [
+                                0.08
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Random Event",
+                      "odds": [
+                        0.3333,
+                        0.3333,
+                        0.3334
+                      ],
+                      "execute": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1783933723\">Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_LifeTime"
+                            ]
+                          },
+                          "baseChance": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_Chance"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.1) || RETURN",
+                              "displayLines": "0.1",
+                              "constants": [],
+                              "variables": [
+                                0.1
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_LifeTime"
+                            ]
+                          },
+                          "baseChance": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_Chance"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.08) || RETURN",
+                              "displayLines": "0.08",
+                              "constants": [],
+                              "variables": [
+                                0.08
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_LifeTime",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_LifeTime"
+                            ]
+                          },
+                          "baseChance": {
+                            "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_Chance) || RETURN",
+                            "displayLines": "MDF_Silwolf_00_AddModifier_Chance",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Silwolf_00_AddModifier_Chance"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.06) || RETURN",
+                              "displayLines": "0.06",
+                              "constants": [],
+                              "variables": [
+                                0.06
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
     "SilverWolfv0_Silwolf_Ability01_Part02": {
       "fileName": "SilverWolfv0_Silwolf_Ability01_Part02",
       "abilityType": null,
@@ -2396,424 +3176,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "SilverWolfv0_Modifiers": {
-      "fileName": "SilverWolfv0_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__898206024\">Silwolf_Ultimate_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "modifierFlags": [
-            "STAT_DefenceDown"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "DEF Reduction"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1573930598\">Silwolf_Eidolon2_StatusResistanceDown</a>[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Effect RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Effect RES Reduction",
-          "statusName": "Effect RES Reduction"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__50824187\">Silwolf_BPAbility_AllDamageTypeResistanceDown</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "All-Type DMG RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "All-Type RES Reduction",
-          "statusName": "All-Type RES Reduction"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_SpeedDown"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Slow",
-          "statusName": "Type-3 Bug"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_DefenceDown"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "Type-2 Bug"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1783933723\">Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_AttackDown"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "ATK -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "ATK Reduction",
-          "statusName": "Type-1 Bug"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-780191838\">Silwolf_BPAbility_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Extra Imaginary Weakness</span>]",
-          "stackType": "Replace",
-          "description": "Extra Imaginary Weakness implanted. Imaginary RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "statusName": "Extra Imaginary Weakness"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-69851026\">Silwolf_BPAbility_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Extra Quantum Weakness</span>]",
-          "stackType": "Replace",
-          "description": "Extra Quantum Weakness implanted. Quantum RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "statusName": "Extra Quantum Weakness"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__954284461\">Silwolf_BPAbility_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Extra Lightning Weakness</span>]",
-          "stackType": "Replace",
-          "description": "Extra Lightning Weakness implanted. Lightning RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "statusName": "Extra Lightning Weakness"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-719977260\">Silwolf_BPAbility_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
-          "stackType": "Replace",
-          "description": "Extra Physical Weakness implanted. Physical RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "statusName": "Extra Physical Weakness"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1411533355\">Silwolf_BPAbility_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Extra Wind Weakness</span>]",
-          "stackType": "Replace",
-          "description": "Extra Wind Weakness implanted. Wind RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "statusName": "Extra Wind Weakness"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__110873612\">Silwolf_BPAbility_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Extra Ice Weakness</span>]",
-          "stackType": "Replace",
-          "description": "Extra Ice Weakness implanted. Ice RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "statusName": "Extra Ice Weakness"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1099669275\">Silwolf_BPAbility_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]",
-          "stackType": "Replace",
-          "description": "Extra Fire Weakness implanted. Fire RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "statusName": "Extra Fire Weakness"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__551921933\">Silwolf_BPAbility_WeakType_Extra</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-          "stackType": "Replace",
-          "modifierFlags": [
-            "STAT_AttachWeakness"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Implant Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "element": null,
-                  "resReduction": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  },
-                  "maxImplant": 1,
-                  "returnWeaknessVar": [
-                    "Silwolf_BPAbility_WeakType_01",
-                    "Silwolf_BPAbility_WeakType_02"
-                  ]
-                }
-              ]
-            }
-          ],
-          "description": "Extra Weakness implanted. Corresponding RES is lowered by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Implant a Weakness",
-          "statusName": "Extra Weakness"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-56897788\">Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-          "stackType": "Replace",
-          "modifierFlags": [
-            "STAT_AttachWeakness"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Implant Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "element": null,
-                  "resReduction": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  },
-                  "maxImplant": 1,
-                  "returnWeaknessVar": [
-                    "Silwolf_BPAbility_WeakType_01",
-                    "Silwolf_BPAbility_WeakType_02"
-                  ],
-                  "noNewWeaknesses": [
-                    "Modifier Deletes Itself"
-                  ]
-                },
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"958478851\">Silwolf_Ability02_OverrideNameForStatus</a>",
-                  "variables": {
-                    "DF_WeakType": {
-                      "operator": "Variables[0] (_BPFlag) || RETURN",
-                      "displayLines": "_BPFlag",
-                      "constants": [],
-                      "variables": [
-                        "_BPFlag"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "_BPFlag"
-          ],
-          "description": "Extra Weakness implanted. Corresponding RES is lowered by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Implant a Weakness",
-          "statusName": "Extra Weakness"
-        }
-      ],
-      "references": []
     }
   }
 }

@@ -824,7 +824,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1417353432\">Enemy_W4_Shooter_AttackMark</a>",
-      "stackData": [],
       "latentQueue": [
         "CurrentTarget"
       ]

@@ -337,15 +337,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1708829325\">Enemy_W2_LycanKing_RageEffectFadeout</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1708829325\">Enemy_W2_LycanKing_RageEffectFadeout</a>"
     }
   ]
 }

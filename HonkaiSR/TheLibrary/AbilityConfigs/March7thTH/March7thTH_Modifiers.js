@@ -10,6 +10,202 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-389872781\">ADV_StageAbility_Maze_Mar_7th_10_Listener</a>",
+      "stackType": "Merge",
+      "onTechUse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Skill Type",
+                "skillType": "Technique[?]"
+              },
+              {
+                "name": "Compare: Target",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "invertCondition": true
+              },
+              {
+                "name": "Has Modifier (OVERWORLD)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "buffID": 122401,
+                "modifier": null,
+                "invertCondition": true
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": null,
+              "ID": "122401(Avatar_Mar_7th_10_SkillMazeEnergy)",
+              "buffLevel": 1,
+              "counter": 1,
+              "valuePerStack": {
+                "#ADF_1": 1,
+                "#ADF_2": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-51626442\">ADV_StageAbility_Maze_Mar_7th_10</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1904700983\">ADV_StageAbility_Maze_Mar_7th_10_Energy</a>",
+      "counter": 1,
+      "stackType": "Replace",
+      "onTechUse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Skill Type",
+                "skillType": "Technique[?]"
+              },
+              {
+                "name": "Compare: Target",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "invertCondition": true
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "#ADF_1",
+                "compareType": ">=",
+                "value2": {
+                  "operator": "Variables[0] (#ADF_2) || RETURN",
+                  "displayLines": "#ADF_2",
+                  "constants": [],
+                  "variables": [
+                    "#ADF_2"
+                  ]
+                }
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": null,
+                  "ID": "122401(Avatar_Mar_7th_10_SkillMazeEnergy)",
+                  "buffLevel": {
+                    "operator": "Variables[0] (#ADF_2) || RETURN",
+                    "displayLines": "#ADF_2",
+                    "constants": [],
+                    "variables": [
+                      "#ADF_2"
+                    ]
+                  },
+                  "counter": 1,
+                  "valuePerStack": {
+                    "#ADF_1": {
+                      "operator": "Variables[0] (#ADF_2) || RETURN",
+                      "displayLines": "#ADF_2",
+                      "constants": [],
+                      "variables": [
+                        "#ADF_2"
+                      ]
+                    },
+                    "#ADF_2": {
+                      "operator": "Variables[0] (#ADF_2) || RETURN",
+                      "displayLines": "#ADF_2",
+                      "constants": [],
+                      "variables": [
+                        "#ADF_2"
+                      ]
+                    }
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": null,
+                  "ID": "122401(Avatar_Mar_7th_10_SkillMazeEnergy)",
+                  "buffLevel": {
+                    "operator": "Variables[0] (#ADF_1) || RETURN",
+                    "displayLines": "#ADF_1",
+                    "constants": [],
+                    "variables": [
+                      "#ADF_1"
+                    ]
+                  },
+                  "counter": 1,
+                  "valuePerStack": {
+                    "#ADF_1": {
+                      "operator": "Variables[0] (#ADF_1) || Constants[0] (1) || ADD || RETURN",
+                      "displayLines": "(#ADF_1 + 1)",
+                      "constants": [
+                        1
+                      ],
+                      "variables": [
+                        "#ADF_1"
+                      ]
+                    },
+                    "#ADF_2": {
+                      "operator": "Variables[0] (#ADF_2) || RETURN",
+                      "displayLines": "#ADF_2",
+                      "constants": [],
+                      "variables": [
+                        "#ADF_2"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__126431759\">M_Mar_7th_10_InsertCheck</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
@@ -149,13 +345,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1941685711\">Mar_7th_10_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]",
+      "description": "The \"Blade Dances on Waves' Fight\" effect cannot be triggered yet.",
+      "type": "Other",
+      "statusName": "Blade Dances on Waves' Fight",
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -163,14 +360,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_target_stance_before_attack"
-      ],
-      "description": "The \"Blade Dances on Waves' Fight\" effect cannot be triggered yet.",
-      "type": "Other",
-      "statusName": "Blade Dances on Waves' Fight"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -305,6 +495,14 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__754306422\">Mar_7th_10_Enhance_Visual</a>",
+      "removalDependencies": {
+        "name": "Removal Dependency",
+        "dependancyName": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
+        "casterFilter": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        }
+      },
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -321,15 +519,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "removalDependencies": {
-        "name": "Removal Dependency",
-        "dependancyName": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
-        "casterFilter": {
-          "name": "Target Name",
-          "target": "{{Caster}}"
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -439,12 +629,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [
-        "_has_enhanced_this_turn"
       ]
     },
     {
@@ -454,6 +638,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "When Shifu is on the field, increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "My Sword Stirs Starlight",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -476,11 +664,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "When Shifu is on the field, increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "My Sword Stirs Starlight"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -489,33 +673,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
-      "execute": [
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier",
-          "execute": [
-            {
-              "name": "Stack Target Stat Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-              "value": {
-                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                "displayLines": "MDF_PropertyRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyRatio"
-                ]
-              }
-            }
-          ]
-        }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
       "description": "Increases SPD of %CasterName's Shifu by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
       "type": "Buff",
       "statusName": "Master, It's Tea Time!",
@@ -526,7 +683,30 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         }
-      }
+      },
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
+                "displayLines": "MDF_PropertyRatio",
+                "constants": [],
+                "variables": [
+                  "MDF_PropertyRatio"
+                ]
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -539,6 +719,10 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "After using an attack or Ultimate, %CasterName gains a max of 1 Charge point each time.",
+      "type": "Other",
+      "effectName": "Become Shifu",
+      "statusName": "Shifu",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -809,13 +993,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "After using an attack or Ultimate, %CasterName gains a max of 1 Charge point each time.",
-      "type": "Other",
-      "effectName": "Become Shifu",
-      "statusName": "Shifu"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -825,11 +1003,6 @@ const configAbility = {
       "modifierFlags": [
         "RetainCountZero"
       ],
-      "stackData": [
-        "MDF_PropertyRatio",
-        "MDF_Count"
-      ],
-      "latentQueue": [],
       "description": "When Charge equals to <span class=\"descriptionNumberColor\">MDF_Count</span> or more, immediately takes action and simultaneously increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. Additionally, Basic ATK gets Enhanced.",
       "type": "Other",
       "statusName": "Charge"

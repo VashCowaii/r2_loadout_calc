@@ -3,14 +3,50 @@ const compositeAbilityObject = {
   "fullCharacterName": 4032030,
   "trimCharacterName": 4032030,
   "abilityList": [
+    "4032030_Monster_W2_Valkyrie01_02_AbilityP01",
     "4032030_Monster_W2_Valkyrie01_02_Ability02_Part02",
     "4032030_Monster_W2_Valkyrie01_02_Ability02_Part01",
     "4032030_Monster_W2_Valkyrie01_02_Ability01_Part02",
     "4032030_Monster_W2_Valkyrie01_02_Ability01_Part01",
-    "4032030_Monster_W2_Valkyrie01_02_AbilityP01",
     "4032030_Modifiers"
   ],
   "abilityObject": {
+    "4032030_Monster_W2_Valkyrie01_02_AbilityP01": {
+      "fileName": "4032030_Monster_W2_Valkyrie01_02_AbilityP01",
+      "childAbilityList": [
+        "4032030_Monster_W2_Valkyrie01_02_AbilityP01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1227649077\">Enemy_W2_Valkyrie01_02_AbilityP01</a>[<span class=\"descriptionNumberColor\">Bitter Fracture</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-855496844\">Enemy_W2_Valkyrie01_02_EffectController</a>"
+        }
+      ],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "4032030_Monster_W2_Valkyrie01_02_Ability02_Part02": {
       "fileName": "4032030_Monster_W2_Valkyrie01_02_Ability02_Part02",
       "abilityType": null,
@@ -182,42 +218,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4032030_Monster_W2_Valkyrie01_02_AbilityP01": {
-      "fileName": "4032030_Monster_W2_Valkyrie01_02_AbilityP01",
-      "childAbilityList": [
-        "4032030_Monster_W2_Valkyrie01_02_AbilityP01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1227649077\">Enemy_W2_Valkyrie01_02_AbilityP01</a>[<span class=\"descriptionNumberColor\">Bitter Fracture</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-855496844\">Enemy_W2_Valkyrie01_02_EffectController</a>"
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4032030_Modifiers": {
       "fileName": "4032030_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -235,13 +235,14 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1227649077\">Enemy_W2_Valkyrie01_02_AbilityP01</a>[<span class=\"descriptionNumberColor\">Bitter Fracture</span>]",
+          "description": "When other friendly units are defeated, this unit immediately takes action and uses \"Fire of Vengeance\" once. When there are multiple \"Black Tide's Corroded Axe\" on the battlefield, only 1 \"Black Tide's Corroded Axe\"'s \"Bitter Fracture\" Talent can be triggered.",
+          "type": "Other",
+          "statusName": "Bitter Fracture",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -707,12 +708,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "When other friendly units are defeated, this unit immediately takes action and uses \"Fire of Vengeance\" once. When there are multiple \"Black Tide's Corroded Axe\" on the battlefield, only 1 \"Black Tide's Corroded Axe\"'s \"Bitter Fracture\" Talent can be triggered.",
-          "type": "Other",
-          "statusName": "Bitter Fracture"
+          ]
         }
       ],
       "references": []

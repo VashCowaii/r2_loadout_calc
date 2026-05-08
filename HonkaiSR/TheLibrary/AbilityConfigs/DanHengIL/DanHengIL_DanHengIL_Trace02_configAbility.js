@@ -27,6 +27,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-223874388\">DanHengIL_Trace02_Resistance</a>",
+      "stackData": [
+        "MDF_Resistance"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -49,11 +52,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Resistance"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

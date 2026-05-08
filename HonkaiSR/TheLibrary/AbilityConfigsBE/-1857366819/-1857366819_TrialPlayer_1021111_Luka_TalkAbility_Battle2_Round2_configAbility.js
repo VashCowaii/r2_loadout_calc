@@ -78,6 +78,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__535355805\">TrialPlayer_101111_Luka_LimboAddAttack2</a>",
+      "stackData": [
+        "MDF_AttackRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage End [Owner]: Any",
@@ -206,11 +209,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AttackRatio"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

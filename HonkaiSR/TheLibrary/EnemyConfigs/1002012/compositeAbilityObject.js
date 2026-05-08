@@ -4,14 +4,10 @@ const compositeAbilityObject = {
   "trimCharacterName": 1002012,
   "abilityList": [
     "1002012_Boss_Cocolia_P1_Weapon_DeathSetCamera",
-    "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability04_Part02",
-    "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability04_Part01",
     "1002012_Boss_Cocolia_P1_Weapon_DeathEffect",
     "1002012_Boss_Cocolia_P1_Weapon_MuteHitFly",
-    "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability03_Part02",
-    "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability03_Part01",
-    "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability02_Part01",
-    "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability01_Part01"
+    "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability04_Part02",
+    "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability04_Part01"
   ],
   "abilityObject": {
     "1002012_Boss_Cocolia_P1_Weapon_DeathSetCamera": {
@@ -93,11 +89,79 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
+    },
+    "1002012_Boss_Cocolia_P1_Weapon_DeathEffect": {
+      "fileName": "1002012_Boss_Cocolia_P1_Weapon_DeathEffect",
+      "skillTrigger": "PassiveSkill03",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1847839650\">Boss_Cocolia_P1_Weapon_DeathEffect</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1847839650\">Boss_Cocolia_P1_Weapon_DeathEffect</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Put in Deathstate Limbo",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "DeathEvent_Trigger_Times",
+                    "compareType": "=",
+                    "value2": 0,
+                    "contextScope": "TargetEntity"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "1002012_Boss_Cocolia_P1_Weapon_MuteHitFly": {
+      "fileName": "1002012_Boss_Cocolia_P1_Weapon_MuteHitFly",
+      "skillTrigger": "PassiveSkill02",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1485263337\">Boss_Cocolia_MuteHitFly_Modifier</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
     },
     "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability04_Part02": {
       "fileName": "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability04_Part02",
@@ -164,181 +228,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "1002012_Boss_Cocolia_P1_Weapon_DeathEffect": {
-      "fileName": "1002012_Boss_Cocolia_P1_Weapon_DeathEffect",
-      "skillTrigger": "PassiveSkill03",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1847839650\">Boss_Cocolia_P1_Weapon_DeathEffect</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1847839650\">Boss_Cocolia_P1_Weapon_DeathEffect</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Put in Deathstate Limbo",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "DeathEvent_Trigger_Times",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "1002012_Boss_Cocolia_P1_Weapon_MuteHitFly": {
-      "fileName": "1002012_Boss_Cocolia_P1_Weapon_MuteHitFly",
-      "skillTrigger": "PassiveSkill02",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1485263337\">Boss_Cocolia_MuteHitFly_Modifier</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability03_Part02": {
-      "fileName": "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED_1) || RETURN",
-              "displayLines": "ENEMIES_OBJECT_UNUSED_1",
-              "constants": [],
-              "variables": [
-                "ENEMIES_OBJECT_UNUSED_1"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Mark Entity For Immediate Death"
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability03_Part01": {
-      "fileName": "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "DeathEvent_Trigger_Times",
-          "context": "TargetEntity",
-          "value": 1,
-          "max": 1
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_Boss_Cocolia_P1_Weapon_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability02_Part01": {
-      "fileName": "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability02_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability01_Part01": {
-      "fileName": "1002012_Monster_Boss_Cocolia_P1_Weapon_Ability01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
       },
       "references": []
     }

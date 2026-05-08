@@ -489,7 +489,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__922102305\">M_Feixiao_Ability03_StanceAddedPreshow</a>",
-      "stackData": [],
       "latentQueue": [
         "First_Break_Effect"
       ],
@@ -533,7 +532,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-233737306\">M_Feixiao_Ability03_ForceStance</a>",
-      "stackData": [],
       "latentQueue": [
         "First_Break_Effect"
       ],
@@ -557,6 +555,13 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__176878499\">M_Feixiao_UltraTarget_Mark</a>",
+      "latentQueue": [
+        "First_Break_Effect"
+      ],
+      "removalDependencies": {
+        "name": "Removal Dependency",
+        "dependancyName": "<a class=\"gModGreen\" id=\"550698929\">M_Feixiao_UltraTarget</a>"
+      },
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -613,15 +618,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "First_Break_Effect"
-      ],
-      "removalDependencies": {
-        "name": "Removal Dependency",
-        "dependancyName": "<a class=\"gModGreen\" id=\"550698929\">M_Feixiao_UltraTarget</a>"
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -671,9 +668,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

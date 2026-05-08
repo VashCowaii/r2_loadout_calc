@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1455758345\">ADV_StageAbility_Maze_PlayerBoy_10</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2059998112\">PlayerBoy_Weapon_Effect</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
@@ -108,9 +114,7 @@ const configAbility = {
         {
           "eventTrigger": "Pre-Death [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -119,6 +123,12 @@ const configAbility = {
       "modifierFlags": [
         "Shield"
       ],
+      "useEntitySnapshot": true,
+      "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
+      "type": "Buff",
+      "effectName": "Shield",
+      "statusName": "Shield",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -164,22 +174,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "MWAvatar_PlayerBoy_10_Shield_Value01"
-      ],
-      "latentQueue": [],
-      "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
-      "type": "Buff",
-      "effectName": "Shield",
-      "statusName": "Shield",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-670613406\">PlayerBoy_10_DamageResistance_Team</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DMG taken -<span class=\"descriptionNumberColor\">MAvatar_PlayerBoy_10_DamageResistance_Team_Value01</span>.",
+      "type": "Buff",
+      "effectName": "DMG Mitigation",
+      "statusName": "DMG Mitigation",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -202,20 +206,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MAvatar_PlayerBoy_10_DamageResistance_Team_Value01"
-      ],
-      "latentQueue": [],
-      "description": "DMG taken -<span class=\"descriptionNumberColor\">MAvatar_PlayerBoy_10_DamageResistance_Team_Value01</span>.",
-      "type": "Buff",
-      "effectName": "DMG Mitigation",
-      "statusName": "DMG Mitigation"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-356032349\">MWPlayerBoy_10_DamageResistance</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DMG taken -<span class=\"descriptionNumberColor\">MWAvatar_PlayerBoy_10_DamageResistance_Value01</span>.",
+      "type": "Buff",
+      "effectName": "DMG Mitigation",
+      "statusName": "DMG Mitigation",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -257,11 +257,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MWAvatar_PlayerBoy_10_DamageResistance_Value01) || RETURN",
-                "displayLines": "MWAvatar_PlayerBoy_10_DamageResistance_Value01",
+                "operator": "Variables[0] (PlayerBoy_10_DamageResistance_Value01) || RETURN",
+                "displayLines": "PlayerBoy_10_DamageResistance_Value01",
                 "constants": [],
                 "variables": [
-                  "MWAvatar_PlayerBoy_10_DamageResistance_Value01"
+                  "PlayerBoy_10_DamageResistance_Value01"
                 ]
               }
             }
@@ -299,20 +299,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MWAvatar_PlayerBoy_10_DamageResistance_Value01"
-      ],
-      "latentQueue": [],
-      "description": "DMG taken -<span class=\"descriptionNumberColor\">MWAvatar_PlayerBoy_10_DamageResistance_Value01</span>.",
-      "type": "Buff",
-      "effectName": "DMG Mitigation",
-      "statusName": "DMG Mitigation"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
       "counter": 1,
+      "description": "When there are 4 or more stacks of Magma Will, Enhances Basic ATK.",
+      "type": "Other",
+      "statusName": "Magma Will",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -320,12 +315,7 @@ const configAbility = {
         {
           "eventTrigger": "Pre-Death [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "When there are 4 or more stacks of Magma Will, Enhances Basic ATK.",
-      "type": "Other",
-      "statusName": "Magma Will"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -378,15 +368,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1196656931\">PlayerBoy_10_WeaponCharge_Free</a>[<span class=\"descriptionNumberColor\">War-Flaming Lance</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "The next Basic ATK will become an Enhanced Basic ATK and will not consume Magma Will.",
       "type": "Other",
       "effectName": "Enhanced Basic ATK",
@@ -396,6 +382,12 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1564952013\">PlayerBoy_10_Eidolon6_Stack</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>, up to <span class=\"descriptionNumberColor\">Rank06_Max_Layer</span> stack(s).",
+      "type": "Buff",
+      "effectName": "DEF Boost",
+      "statusName": "DEF Boost",
+      "stackLimit": 4,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -429,17 +421,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DefenceAddedRatio"
-      ],
-      "latentQueue": [],
-      "description": "Each stack increases DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>, up to <span class=\"descriptionNumberColor\">Rank06_Max_Layer</span> stack(s).",
-      "type": "Buff",
-      "effectName": "DEF Boost",
-      "statusName": "DEF Boost",
-      "stackLimit": 4,
-      "addStacksPerTrigger": 1
+      ]
     }
   ],
   "references": []

@@ -16,22 +16,17 @@ const compositeAbilityObject = {
     "5014014_Monster_W5_Vtuber_IF_AbilityP01_Insert01_Part01",
     "5014014_Monster_W5_Vtuber_IF_ChangePhase01",
     "5014014_Monster_W5_Vtuber_IF_AbilityP01",
-    "5014014_Monster_W5_Vtuber_ChangePhase01",
-    "5014014_Monster_W5_Vtuber_PassiveAbilityInitiate",
     "5014014_Monster_W5_Vtuber_Ability07_Part02",
     "5014014_Monster_W5_Vtuber_Ability07_Part01",
     "5014014_Monster_W5_Vtuber_Ability06_Lose_Part02",
     "5014014_Monster_W5_Vtuber_Ability06_Win_ExtraElationTime",
     "5014014_Monster_W5_Vtuber_Ability06_Win_Part02",
     "5014014_Monster_W5_Vtuber_Ability06_Part01",
-    "5014014_Monster_W5_Vtuber_AbortInsert",
     "5014014_Monster_W5_Vtuber_Ability04_Part02",
     "5014014_Monster_W5_Vtuber_Ability04_Part01",
     "5014014_Monster_W5_Vtuber_Ability03_Part03",
     "5014014_Monster_W5_Vtuber_Ability03_Part02",
     "5014014_Monster_W5_Vtuber_Ability03_Part01",
-    "5014014_BattleEvent_Monster_W5_Vtuber_Part01",
-    "5014014_BattleEvent_Monster_W5_Vtuber_EnterReady",
     "5014014_Monster_W5_Vtuber_Ability03_Part00",
     "5014014_Monster_W5_Vtuber_Ability02_Part02",
     "5014014_Monster_W5_Vtuber_Ability02_Part01",
@@ -1248,9 +1243,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1259,9 +1252,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Leave Battle"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1270,671 +1261,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Ultimate Prep-Phase [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "5014014_Monster_W5_Vtuber_ChangePhase01": {
-      "fileName": "5014014_Monster_W5_Vtuber_ChangePhase01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          }
-        },
-        {
-          "name": "Reset Toughness",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variableName": "ChangePhase_MaxHP"
-            },
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "ChangePhase_MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "Set HP Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "setPercent": 1
-            }
           ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 2
-          }
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "set": 0
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1656334834\">Monster_W5_Vtuber_Eff</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{@Sparxiecon: Output Port 1}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"361111729\">Enemy_W5_VtuberPart01_Eff</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{@Sparxiecon: Output Port 2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"41880618\">Enemy_W5_VtuberPart02_Eff</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1693390580\">Enemy_W5_Vtuber_Ability03</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5014014_Monster_W5_Vtuber_PassiveAbilityInitiate": {
-      "fileName": "5014014_Monster_W5_Vtuber_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 5014011,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Live Stream Assistant",
-            "isBaseCompare": true,
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "Preload Battle Event(s)",
-              "eventID": [
-                20039,
-                20040
-              ]
-            },
-            {
-              "name": "Add Battle Event",
-              "teamName": "Player Team",
-              "dmgCountsForTeam": "Enemy Team",
-              "eventID": 20040,
-              "variables": null,
-              "whenCreated": [
-                {
-                  "name": "Assign Unique Name",
-                  "uniqueName": "SelectTarget",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1568913221\">Enemy_W5_Vtuber_PickUpMessage</a>"
-                },
-                "Show BattleEvent Button"
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"272622941\">Enemy_W5_Vtuber_AudioReset</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1143277281\">W5_Vtuber_BattleScore1</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1092944424\">W5_Vtuber_BattleScore2</a>"
-            },
-            {
-              "name": "Assign Unique Name",
-              "uniqueName": "W5_Vtuber_00",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1656334834\">Monster_W5_Vtuber_Eff</a>"
-            },
-            {
-              "name": "Create Enemies",
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                    "displayLines": "SummonList_ADF_1",
-                    "constants": [],
-                    "variables": [
-                      "SummonList_ADF_1"
-                    ]
-                  },
-                  "locationType": "BeforeCaster",
-                  "locationOffset": -1,
-                  "leader": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "Create Enemies",
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                    "displayLines": "SummonList_ADF_2",
-                    "constants": [],
-                    "variables": [
-                      "SummonList_ADF_2"
-                    ]
-                  },
-                  "locationType": "AfterCaster",
-                  "locationOffset": 1,
-                  "leader": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-            },
-            {
-              "name": "Create Shared HP Group",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "subTarget": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "removeShields": true
-            },
-            {
-              "name": "Boss Bar Display",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "display": true
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"2037166286\">Monster_W5_Vtuber_PartController</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1693390580\">Enemy_W5_Vtuber_Ability03</a>"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Assign Unique Name",
-              "uniqueName": "W5_Vtuber_00_Virtual",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2041132439\">Monster_W5_Vtuber_Death</a>",
-          "modifierFlags": [
-            "KeepOnDeathrattle"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2037166286\">Monster_W5_Vtuber_PartController</a>",
-          "execute": [
-            {
-              "eventTrigger": "Waiting for Healing in Limbo",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "ChangePhaseCheck",
-                    "compareType": "=",
-                    "value2": 1,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1656334834\">Monster_W5_Vtuber_Eff</a>"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Minions of Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"361111729\">Enemy_W5_VtuberPart01_Eff</a>"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Minions of Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"41880618\">Enemy_W5_VtuberPart02_Eff</a>"
-                    },
-                    {
-                      "name": "Set Enemy Phase",
-                      "mode": "Inc"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Enemy ID",
-                                "ID": 5014012,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                },
-                                "characterName": "@SparxiConOfficial",
-                                "isBaseCompare": true,
-                                "invertCondition": true
-                              },
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                },
-                                "value": "RLBoss",
-                                "invertCondition": true
-                              }
-                            ]
-                          },
-                          {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                },
-                                "value": "RLBoss"
-                              },
-                              {
-                                "name": "Compare: Variable",
-                                "value1": "HP_Bars_Remaining",
-                                "compareType": "=",
-                                "value2": 3
-                              }
-                            ]
-                          },
-                          {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Enemy ID",
-                                "ID": 5014012,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                },
-                                "characterName": "@SparxiConOfficial",
-                                "isBaseCompare": true
-                              },
-                              {
-                                "name": "Compare: Variable",
-                                "value1": "HP_Bars_Remaining",
-                                "compareType": "=",
-                                "value2": 3
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "ChangePhaseCheck"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-321445076\">Enemy_W5_Vtuber_Charge</a>"
-                      },
-                      "passed": [
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-321445076\">Enemy_W5_Vtuber_Charge</a>"
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Player Team All(with Unselectable)V2}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}} + {{Minions of Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1797863602\">Monster_W5_Vtuber_AllDamageTypeTaken</a>[<span class=\"descriptionNumberColor\">Tilted</span>]"
-                    },
-                    {
-                      "name": "Dispel Debuffs",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "silent": true
-                    },
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Monster_W5_Vtuber_ChangePhase01",
-                      "priorityTag": "EnemyPhaseChange",
-                      "ownerState": "Mask_AliveOrLimbo",
-                      "targetState": "Mask_AliveOrLimbo",
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-321445076\">Enemy_W5_Vtuber_Charge</a>"
-                      },
-                      "passed": [
-                        {
-                          "name": "Find New Target",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Minions of Modifier Holder}}"
-                          },
-                          "conditions": {
-                            "name": "OR",
-                            "conditionList": [
-                              {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"-1733040515\">Enemy_W5_VtuberPart01_00</a>"
-                              },
-                              {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"1182558090\">Enemy_W5_VtuberPart02_00</a>"
-                              }
-                            ]
-                          },
-                          "ifTargetFound": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target List}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"2041132439\">Monster_W5_Vtuber_Death</a>"
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-321445076\">Enemy_W5_Vtuber_Charge</a>"
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Player Team All(with Unselectable)V2}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"473072467\">Enemy_W5_Vtuber_InField_Mark</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -90
-            },
-            {
-              "eventTrigger": "Pre-Death [Owner]",
-              "execute": [
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Minions of Modifier Holder}}"
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__272622941\">Enemy_W5_Vtuber_AudioReset</a>",
-          "execute": [
-            {
-              "eventTrigger": "Leave Battle"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1568913221\">Enemy_W5_Vtuber_PickUpMessage</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ultimate Prep-Phase [Owner]"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
         }
       ]
     },
@@ -3067,69 +2394,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "5014014_Monster_W5_Vtuber_AbortInsert": {
-      "fileName": "5014014_Monster_W5_Vtuber_AbortInsert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Add Target by Unique Identifier",
-              "identifier": "W5_Vtuber_00"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"308759632\">Enemy_W5_Vtuber_SwitchField</a>"
-          },
-          "passed": [
-            {
-              "name": "Define Modifier-Specific Variable",
-              "target": {
-                "name": "Add Target by Unique Identifier",
-                "identifier": "W5_Vtuber_00"
-              },
-              "modifierName": "<a class=\"gModGreen\" id=\"308759632\">Enemy_W5_Vtuber_SwitchField</a>",
-              "variableName": "MDF_SwitchField",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "includeDyingTargets": true,
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "flagName": [
-              "Stealth"
-            ],
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add to Team Target Grouping",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "5014014_Monster_W5_Vtuber_Ability04_Part02": {
       "fileName": "5014014_Monster_W5_Vtuber_Ability04_Part02",
       "abilityType": null,
@@ -3199,6 +2463,12 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1255636057\">Enemy_W5_Vtuber_Ability04_Bonus</a>[<span class=\"descriptionNumberColor\">Flooding Viewers</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Increases action advances and CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Flooding Viewers",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3221,14 +2491,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Increases action advances and CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Flooding Viewers"
+          ]
         }
       ]
     },
@@ -3884,9 +3147,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4404,9 +3665,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -4477,68 +3736,6 @@ const compositeAbilityObject = {
       ],
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "5014014_BattleEvent_Monster_W5_Vtuber_Part01": {
-      "fileName": "5014014_BattleEvent_Monster_W5_Vtuber_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Add Target by Unique Identifier",
-            "identifier": "W5_Vtuber_00"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1713929309\">Enemy_W5_Vtuber_MainStory_Ability03</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1869034007\">Enemy_W5_Vtuber_MuteUltra</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Add Target by Unique Identifier",
-            "identifier": "W5_Vtuber_00"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2019186097\">Enemy_W5_Vtuber_Locking</a>"
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Add Target by Unique Identifier",
-            "identifier": "W5_Vtuber_00"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W5_Vtuber_Ability03_Part01",
-          "isTrigger": true
-        },
-        "Wait for Pending Ability Completions",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "5014014_BattleEvent_Monster_W5_Vtuber_EnterReady": {
-      "fileName": "5014014_BattleEvent_Monster_W5_Vtuber_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },
@@ -4645,9 +3842,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Exit View-Mode [Anyone]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4668,9 +3863,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5040,9 +4233,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -5060,6 +4251,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__768104180\">Enemy_W5_Vtuber_IF_AbilityEX04_TGT</a>[<span class=\"descriptionNumberColor\">Basking in Popularity</span>]",
           "stackType": "Replace",
+          "description": "Each stack reduces DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce_PerLayer</span>.",
+          "type": "Buff",
+          "statusName": "Basking in Popularity",
+          "stackLimit": 2,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5101,16 +4297,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack reduces DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce_PerLayer</span>.",
-          "type": "Buff",
-          "statusName": "Basking in Popularity",
-          "stackLimit": 2,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1191558894\">Enemy_W5_Vtuber_IF_AbilityEX04_EMY</a>",
+          "stackData": [
+            "MDF_AllDamageReduce"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5249,35 +4443,23 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageReduce"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__236497204\">Enemy_W5_Vtuber_IF_AbilityEX04</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__236497204\">Enemy_W5_Vtuber_IF_AbilityEX04</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__219719585\">Enemy_W5_Vtuber_IF_AbilityEX03</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__219719585\">Enemy_W5_Vtuber_IF_AbilityEX03</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__202941966\">Enemy_W5_Vtuber_IF_AbilityEX02</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__202941966\">Enemy_W5_Vtuber_IF_AbilityEX02</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__186164347\">Enemy_W5_Vtuber_IF_AbilityEX01</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__186164347\">Enemy_W5_Vtuber_IF_AbilityEX01</a>"
         },
         {
           "name": "Modifier Construction",
@@ -5286,6 +4468,9 @@ const compositeAbilityObject = {
             "STAT_SuperArmorBreak",
             "STAT_AITargetKeepActionDelay"
           ],
+          "description": "\"Super Idol: Center of Attention\" is currently in \"Safeguard Breach\" state, this unit's DMG taken increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
+          "type": "Debuff",
+          "statusName": "Quitting in Progress",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5397,15 +4582,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "\"Super Idol: Center of Attention\" is currently in \"Safeguard Breach\" state, this unit's DMG taken increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
-          "type": "Debuff",
-          "statusName": "Quitting in Progress"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1854745396\">Enemy_W5_VtuberPart_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Sparxheads Forever</span>]",
           "modifierFlags": [],
+          "description": "\"Super Idol: Center of Attention\" is currently in \"Steadfast Safeguard\" state, this unit's DMG received decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
+          "type": "Buff",
+          "statusName": "Sparxheads Forever",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -5634,16 +4819,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "\"Super Idol: Center of Attention\" is currently in \"Steadfast Safeguard\" state, this unit's DMG received decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
-          "type": "Buff",
-          "statusName": "Sparxheads Forever"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1418851340\">Enemy_W5_VtuberPart_IF_MinionsSuperArmorController</a>",
           "modifierFlags": [
             "CustomEvent_MonsterChangePhaseTrigger"
+          ],
+          "stackData": [
+            "MDF_MinionsSuperArmor_AllDamageReduce",
+            "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
+            "MDF_SetActionDelayValue"
           ],
           "execute": [
             {
@@ -5831,13 +5018,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_MinionsSuperArmor_AllDamageReduce",
-            "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
-            "MDF_SetActionDelayValue"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7241,6 +6422,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__433426443\">Enemy_W5_Vtuber_IF_LockStance</a>[<span class=\"descriptionNumberColor\">Toughness Lock</span>]",
+          "description": "Toughness cannot be reduced below 1.",
+          "type": "Other",
+          "statusName": "Toughness Lock",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7251,10 +6435,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Toughness cannot be reduced below 1.",
-          "type": "Other",
-          "statusName": "Toughness Lock"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7347,9 +6528,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7507,9 +6686,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7851,9 +7028,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7898,6 +7073,18 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SuperArmorBreak"
           ],
+          "stackData": [
+            "MDF_AllDamageTypeTakenRatio"
+          ],
+          "latentQueue": [
+            "MDF_Phase1",
+            "MDF_Suc",
+            "MDF_Phase2"
+          ],
+          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>. Action delayed.",
+          "type": "Debuff",
+          "effectName": "Tilted",
+          "statusName": "Tilted",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7920,19 +7107,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageTypeTakenRatio"
-          ],
-          "latentQueue": [
-            "MDF_Phase1",
-            "MDF_Suc",
-            "MDF_Phase2"
-          ],
-          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>. Action delayed.",
-          "type": "Debuff",
-          "effectName": "Tilted",
-          "statusName": "Tilted"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7940,6 +7115,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ListenBattleEventSkill"
           ],
+          "description": "Located on the sub-field.",
+          "type": "Other",
+          "statusName": "Epic showdown in progress!",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -8110,10 +7288,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Located on the sub-field.",
-          "type": "Other",
-          "statusName": "Epic showdown in progress!"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -8121,6 +7296,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ListenBattleEventSkill",
             "AllowAddToGridFightBackend"
+          ],
+          "latentQueue": [
+            "MDF_SwitchField"
           ],
           "execute": [
             {
@@ -8326,16 +7504,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_SwitchField"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1739259031\">Enemy_W5_Vtuber_OutField_Part1DotMark</a>",
-          "stackData": [],
           "latentQueue": [
             "MDF_SwitchField"
           ]
@@ -8345,6 +7518,9 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-354483792\">Enemy_W5_Vtuber_ElationAbilityUser</a>",
           "modifierFlags": [
             "AllowAddToGridFightBackend"
+          ],
+          "latentQueue": [
+            "MDF_SwitchField"
           ],
           "execute": [
             {
@@ -8374,10 +7550,6 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_SwitchField"
           ]
         },
         {
@@ -8397,7 +7569,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1627710607\">Enemy_W5_Vtuber_SwitchField_InsertActionPrepare</a>",
-          "stackData": [],
           "latentQueue": [
             "MDF_SwitchField"
           ]
@@ -8405,7 +7576,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1281523660\">Enemy_W5_Vtuber_SwitchField_UltraPrepare</a>",
-          "stackData": [],
           "latentQueue": [
             "MDF_SwitchField"
           ]
@@ -8413,6 +7583,48 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__308759632\">Enemy_W5_Vtuber_SwitchField</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{@Sparxiecon: Aha Instant Battle Event}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1141771649\">Enemy_W5_Vtuber_InField</a>[<span class=\"descriptionNumberColor\">Epic showdown in progress!</span>]",
+              "haloStatus": true,
+              "includeBattleEvent": true
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{@Sparxiecon: Prime-Field Targets}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1141771649\">Enemy_W5_Vtuber_InField</a>[<span class=\"descriptionNumberColor\">Epic showdown in progress!</span>]",
+              "haloStatus": true,
+              "includeBattleEvent": true
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{@Sparxiecon: Sub-Field Targets}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1334912120\">Enemy_W5_Vtuber_OutField</a>",
+              "haloStatus": true,
+              "includeBattleEvent": true
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Currency Wars Full OffFieldList}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1334912120\">Enemy_W5_Vtuber_OutField</a>",
+              "haloStatus": true,
+              "includeBattleEvent": true
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -9684,50 +8896,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{@Sparxiecon: Aha Instant Battle Event}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1141771649\">Enemy_W5_Vtuber_InField</a>[<span class=\"descriptionNumberColor\">Epic showdown in progress!</span>]",
-              "haloStatus": true,
-              "includeBattleEvent": true
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{@Sparxiecon: Prime-Field Targets}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1141771649\">Enemy_W5_Vtuber_InField</a>[<span class=\"descriptionNumberColor\">Epic showdown in progress!</span>]",
-              "haloStatus": true,
-              "includeBattleEvent": true
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{@Sparxiecon: Sub-Field Targets}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1334912120\">Enemy_W5_Vtuber_OutField</a>",
-              "haloStatus": true,
-              "includeBattleEvent": true
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Currency Wars Full OffFieldList}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1334912120\">Enemy_W5_Vtuber_OutField</a>",
-              "haloStatus": true,
-              "includeBattleEvent": true
-            }
           ]
         },
         {
@@ -10135,9 +9303,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -10224,6 +9390,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__610660362\">Enemy_W5_Vtuber_Screen02</a>",
+          "latentQueue": [
+            "MDF_SwitchField"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -10399,15 +9568,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_SwitchField"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__593882743\">Enemy_W5_Vtuber_Screen01</a>",
+          "latentQueue": [
+            "MDF_SwitchField"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -10513,15 +9681,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_SwitchField"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__724622034\">Enemy_W5_Vtuber_Charge02</a>[<span class=\"descriptionNumberColor\">Live Showdown</span>]",
+          "description": "The current remaining HP percentage of the enemy on the sub-field is at <span class=\"descriptionNumberColor\">MDF_Ratio</span>. When Live Showdown ends, if all enemies in the sub-field are defeated, uses \"Commence Chat Bombing!\" on ally characters going to the sub-field, or else uses \"Bullet Comments Ready!\" on all allies.",
+          "type": "Other",
+          "statusName": "Live Showdown",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -10666,16 +9833,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The current remaining HP percentage of the enemy on the sub-field is at <span class=\"descriptionNumberColor\">MDF_Ratio</span>. When Live Showdown ends, if all enemies in the sub-field are defeated, uses \"Commence Chat Bombing!\" on ally characters going to the sub-field, or else uses \"Bullet Comments Ready!\" on all allies.",
-          "type": "Other",
-          "statusName": "Live Showdown"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__707844415\">Enemy_W5_Vtuber_Charge01</a>[<span class=\"descriptionNumberColor\">Live Showdown</span>]",
+          "description": "The current remaining HP percentage of the enemy on the sub-field is at <span class=\"descriptionNumberColor\">MDF_Ratio</span>. When Live Showdown ends, uses \"Commence Chat Bombing!\" on ally characters going to the sub-field.",
+          "type": "Other",
+          "statusName": "Live Showdown",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -10820,16 +9985,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The current remaining HP percentage of the enemy on the sub-field is at <span class=\"descriptionNumberColor\">MDF_Ratio</span>. When Live Showdown ends, uses \"Commence Chat Bombing!\" on ally characters going to the sub-field.",
-          "type": "Other",
-          "statusName": "Live Showdown"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__404660666\">Enemy_W5_Vtuber_ChargeEnd_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">Privacy Protection</span>]",
+          "description": "Decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
+          "type": "Buff",
+          "effectName": "DMG Received Reduction",
+          "statusName": "Privacy Protection",
           "execute": [
             {
               "eventTrigger": "Take Damage End [Owner]: Hit",
@@ -10884,11 +10048,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
-          "type": "Buff",
-          "effectName": "DMG Received Reduction",
-          "statusName": "Privacy Protection"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -10896,6 +10056,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "EnduranceLogicOnly"
           ],
+          "description": "Immune to Crowd Control debuffs and DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
+          "type": "Buff",
+          "effectName": "DMG Received Reduction",
+          "statusName": "Privacy Protection",
           "execute": [
             {
               "eventTrigger": "Take Damage End [Owner]: Hit",
@@ -10937,15 +10101,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Immune to Crowd Control debuffs and DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
-          "type": "Buff",
-          "effectName": "DMG Received Reduction",
-          "statusName": "Privacy Protection"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-321445076\">Enemy_W5_Vtuber_Charge</a>",
+          "stackData": [
+            "MDF_AllDamageReduce"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -11261,11 +10424,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AllDamageReduce"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -11307,9 +10466,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "End Broken State [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -11367,14 +10524,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1092944424\">W5_Vtuber_BattleScore2</a>",
           "stackType": "Replace",
+          "latentQueue": [
+            "MDF_Phase1"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -11431,16 +10589,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_Phase1"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1143277281\">W5_Vtuber_BattleScore1</a>",
           "stackType": "Replace",
+          "latentQueue": [
+            "MDF_Phase1",
+            "MDF_Suc",
+            "MDF_Phase2"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -11487,12 +10646,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_Phase1",
-            "MDF_Suc",
-            "MDF_Phase2"
           ]
         },
         {
@@ -11505,9 +10658,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -11519,9 +10670,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -11533,9 +10682,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

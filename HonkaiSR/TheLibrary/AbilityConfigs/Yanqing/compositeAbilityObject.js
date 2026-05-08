@@ -3,10 +3,14 @@ const compositeAbilityObject = {
   "fullCharacterName": "Yanqing",
   "trimCharacterName": "Yanqing",
   "abilityList": [
-    "Yanqing_Yanqing_Eidolon4",
-    "Yanqing_Yanqing_Eidolon1",
+    "Yanqing_Modifiers",
     "Yanqing_YanQing_Trace03",
     "Yanqing_YanQing_Trace01",
+    "Yanqing_Yanqing_Eidolon4",
+    "Yanqing_Yanqing_Eidolon1",
+    "Yanqing_LocalPlayer_StandardAbility_AttackBreak",
+    "Yanqing_LocalPlayer_Yanqing_TechniqueUsage",
+    "Yanqing_LocalPlayer_Yanqing_NormalAtk01",
     "Yanqing_Yanqing_TechniqueInLevel",
     "Yanqing_Yanqing_PassiveAbility01_InsertAbilityPhase02",
     "Yanqing_Yanqing_PassiveAbility01_InsertAbility",
@@ -17,10 +21,713 @@ const compositeAbilityObject = {
     "Yanqing_Yanqing_Ability02_Part02",
     "Yanqing_Yanqing_Ability02_Part01",
     "Yanqing_Yanqing_Ability01_Part02",
-    "Yanqing_Yanqing_Ability01_Part01",
-    "Yanqing_Modifiers"
+    "Yanqing_Yanqing_Ability01_Part01"
   ],
   "abilityObject": {
+    "Yanqing_Modifiers": {
+      "fileName": "Yanqing_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1599003499\">ADV_StageAbility_Maze_Yanqing</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__294496269\">Yanqing_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_CriticalBoost</span>.",
+          "type": "Buff",
+          "effectName": "CRIT Rate Boost",
+          "statusName": "Amidst the Raining Bliss",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_CriticalBoost) || RETURN",
+                    "displayLines": "MDF_CriticalBoost",
+                    "constants": [],
+                    "variables": [
+                      "MDF_CriticalBoost"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Got a Kill [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 6
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Modifier Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifierName": "<a class=\"gModGreen\" id=\"294496269\">Yanqing_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
+                      "function": "Add",
+                      "value": 1,
+                      "valueType": "Duration"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-348622200\">Yanqing_BonusTargetMark</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CriticalBoost</span> and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_ALLCriticalDamage</span>.",
+          "type": "Buff",
+          "effectName": "CRIT Rate Boost",
+          "statusName": "Soulsteel Sync",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "priorState": "Normal"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_isBeingHit",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_isBeingHit",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "priorState": "Active"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Trace Activated",
+                    "conditionList": "Frost Favors the Brave"
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Modifier Description",
+                      "popUpText": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CriticalBoost</span>, CRIT DMG by <span class=\"descriptionNumberColor\">MDF_ALLCriticalDamage</span>, and Effect RES by <span class=\"descriptionNumberColor\">MDF_StatusResistance</span>."
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "Avatar_Yanqing_AggroBase",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">BaseAggroValue</span>&nbsp;"
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">BaseAggroValue</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (1) || INVERT || Variables[0] (Avatar_Yanqing_AggroBase) || MUL || Constants[1] (0.6) || MUL || RETURN",
+                    "displayLines": "((-1 * Avatar_Yanqing_AggroBase) * 0.6)",
+                    "constants": [
+                      1,
+                      0.6
+                    ],
+                    "variables": [
+                      "Avatar_Yanqing_AggroBase"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_CriticalBoost) || RETURN",
+                    "displayLines": "MDF_CriticalBoost",
+                    "constants": [],
+                    "variables": [
+                      "MDF_CriticalBoost"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_ALLCriticalDamage",
+                  "value": {
+                    "operator": "Variables[0] (MDF_CriticaDamage) || Variables[1] (MDF_AddCriticalDamage) || ADD || RETURN",
+                    "displayLines": "(MDF_CriticaDamage + MDF_AddCriticalDamage)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_CriticaDamage",
+                      "MDF_AddCriticalDamage"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_ALLCriticalDamage) || RETURN",
+                    "displayLines": "MDF_ALLCriticalDamage",
+                    "constants": [],
+                    "variables": [
+                      "MDF_ALLCriticalDamage"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_AddCriticalDamage",
+                  "value": 0
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Trace Activated",
+                    "conditionList": "Frost Favors the Brave"
+                  },
+                  "passed": [
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (MDF_StatusResistance) || RETURN",
+                        "displayLines": "MDF_StatusResistance",
+                        "constants": [],
+                        "variables": [
+                          "MDF_StatusResistance"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (MDF_AddSPRatio) || RETURN",
+                        "displayLines": "MDF_AddSPRatio",
+                        "constants": [],
+                        "variables": [
+                          "MDF_AddSPRatio"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Got a Kill [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 6
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Modifier Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifierName": "<a class=\"gModGreen\" id=\"1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
+                      "function": "Add",
+                      "value": 1,
+                      "valueType": "Duration"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "HP Change [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "ParameterValue",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_isBeingHit",
+                        "compareType": "=",
+                        "value2": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "Update Displayed Energy Bar",
+                          "priorState": "Normal"
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack Start [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Basic ATK",
+                      "Skill",
+                      "Ultimate"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Random Chance",
+                        "chance": {
+                          "operator": "Variables[0] (0.6) || Variables[1] (YANQING_OBJECT_UNUSED_1) || ADD || RETURN",
+                          "displayLines": "(0.6 + YANQING_OBJECT_UNUSED_1)",
+                          "constants": [],
+                          "variables": [
+                            0.6,
+                            "YANQING_OBJECT_UNUSED_1"
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target List}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-348622200\">Yanqing_BonusTargetMark</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-348622200\">Yanqing_BonusTargetMark</a>"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Inject Ability Use",
+                      "abilityName": "Yanqing_PassiveAbility01_InsertAbility",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "priorityTag": "CharacterAttackFromSelf",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "abortFlags": [
+                        "STAT_CTRL",
+                        "DisableAction"
+                      ],
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier is Added [Owner]"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1507574257\">Yanqing_PassiveAbility_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Skill"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
+                      "duration": 1,
+                      "valuePerStack": {
+                        "MDF_CriticalBoost": {
+                          "operator": "Variables[0] (MDF_CriticalBoost) || RETURN",
+                          "displayLines": "MDF_CriticalBoost",
+                          "constants": [],
+                          "variables": [
+                            "MDF_CriticalBoost"
+                          ]
+                        },
+                        "MDF_CriticaDamage": {
+                          "operator": "Variables[0] (MDF_CriticaDamage) || RETURN",
+                          "displayLines": "MDF_CriticaDamage",
+                          "constants": [],
+                          "variables": [
+                            "MDF_CriticaDamage"
+                          ]
+                        },
+                        "MDF_StatusResistance": {
+                          "operator": "Variables[0] (MDF_StatusResistance) || RETURN",
+                          "displayLines": "MDF_StatusResistance",
+                          "constants": [],
+                          "variables": [
+                            "MDF_StatusResistance"
+                          ]
+                        },
+                        "MDF_AddSPRatio": {
+                          "operator": "Variables[0] (MDF_AddSPRatio) || RETURN",
+                          "displayLines": "MDF_AddSPRatio",
+                          "constants": [],
+                          "variables": [
+                            "MDF_AddSPRatio"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "Yanqing_YanQing_Trace03": {
+      "fileName": "Yanqing_YanQing_Trace03",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"645549950\">M_Yanqing_Tree03</a>",
+          "valuePerStack": {
+            "MDF_SpeedValue": {
+              "operator": "Variables[0] (0.1) || RETURN",
+              "displayLines": "0.1",
+              "constants": [],
+              "variables": [
+                0.1
+              ]
+            }
+          }
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2119684740\">M_Yanqing_Tree03SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_SpeedValue</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
+          "duration": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_SpeedValue) || RETURN",
+                    "displayLines": "MDF_SpeedValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_SpeedValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__645549950\">M_Yanqing_Tree03</a>",
+          "stackData": [
+            "MDF_SpeedValue"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage End [Owner]: Hit",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is a Crit"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"2119684740\">M_Yanqing_Tree03SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (2) || RETURN",
+                        "displayLines": "2",
+                        "constants": [],
+                        "variables": [
+                          2
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_SpeedValue": {
+                          "operator": "Variables[0] (MDF_SpeedValue) || RETURN",
+                          "displayLines": "MDF_SpeedValue",
+                          "constants": [],
+                          "variables": [
+                            "MDF_SpeedValue"
+                          ]
+                        },
+                        "MDF_LifeTime": {
+                          "operator": "Variables[0] (2) || RETURN",
+                          "displayLines": "2",
+                          "constants": [],
+                          "variables": [
+                            2
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Yanqing_YanQing_Trace01": {
+      "fileName": "Yanqing_YanQing_Trace01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"611994712\">M_Yanqing_Tree01</a>",
+          "valuePerStack": {
+            "MDF_DamageRatio": {
+              "operator": "Variables[0] (0.3) || RETURN",
+              "displayLines": "0.3",
+              "constants": [],
+              "variables": [
+                0.3
+              ]
+            }
+          }
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__611994712\">M_Yanqing_Tree01</a>",
+          "stackData": [
+            "MDF_DamageRatio"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Weakness",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Skill Point User}}"
+                    },
+                    "DamageType": "Ice"
+                  },
+                  "passed": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Skill Point User}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Ice",
+                        "Damage": {
+                          "operator": "Variables[0] (MDF_DamageRatio) || RETURN",
+                          "displayLines": "MDF_DamageRatio",
+                          "constants": [],
+                          "variables": [
+                            "MDF_DamageRatio"
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Additional DMG"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "Yanqing_Yanqing_Eidolon4": {
       "fileName": "Yanqing_Yanqing_Eidolon4",
       "abilityType": null,
@@ -40,6 +747,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1096242682\">Yanqing_Eidolon4_IcePenetrate</a>[<span class=\"descriptionNumberColor\">Searing Sting</span>]",
+          "description": "Ice RES PEN +<span class=\"descriptionNumberColor\">MDF_IcePenetrate</span>.",
+          "type": "Buff",
+          "effectName": "Ice RES PEN",
+          "statusName": "Searing Sting",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -62,11 +773,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Ice RES PEN +<span class=\"descriptionNumberColor\">MDF_IcePenetrate</span>.",
-          "type": "Buff",
-          "effectName": "Ice RES PEN",
-          "statusName": "Searing Sting"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -182,9 +889,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -224,6 +929,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1494385561\">Yanqing_Eidolon1</a>",
+          "stackData": [
+            "MDF_DamageRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -265,21 +973,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageRatio"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
     },
-    "Yanqing_YanQing_Trace03": {
-      "fileName": "Yanqing_YanQing_Trace03",
-      "abilityType": null,
-      "energy": null,
+    "Yanqing_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Yanqing_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
       "toughnessList": null,
       "parse": [
         {
@@ -288,194 +992,283 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"645549950\">M_Yanqing_Tree03</a>",
-          "valuePerStack": {
-            "MDF_SpeedValue": {
-              "operator": "Variables[0] (0.1) || RETURN",
-              "displayLines": "0.1",
-              "constants": [],
-              "variables": [
-                0.1
-              ]
-            }
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2119684740\">M_Yanqing_Tree03SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_SpeedValue) || RETURN",
-                    "displayLines": "MDF_SpeedValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_SpeedValue</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost",
-          "duration": 1
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
         },
         {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__645549950\">M_Yanqing_Tree03</a>",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage End [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is a Crit"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2119684740\">M_Yanqing_Tree03SpeedUP</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_SpeedValue": {
-                          "operator": "Variables[0] (MDF_SpeedValue) || RETURN",
-                          "displayLines": "MDF_SpeedValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_SpeedValue"
-                          ]
-                        },
-                        "MDF_LifeTime": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
             }
-          ],
-          "stackData": [
-            "MDF_SpeedValue"
-          ],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Yanqing_YanQing_Trace01": {
-      "fileName": "Yanqing_YanQing_Trace01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
         {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"611994712\">M_Yanqing_Tree01</a>",
-          "valuePerStack": {
-            "MDF_DamageRatio": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
-            }
-          }
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
         }
       ],
-      "references": [
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Yanqing_LocalPlayer_Yanqing_TechniqueUsage": {
+      "fileName": "Yanqing_LocalPlayer_Yanqing_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
         {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__611994712\">M_Yanqing_Tree01</a>",
-          "execute": [
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "120901(SkillMaze)",
+          "duration": -1
+        },
+        "Submit Technique Use"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Yanqing_LocalPlayer_Yanqing_NormalAtk01": {
+      "fileName": "Yanqing_LocalPlayer_Yanqing_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
             {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
                 {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Weakness",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Skill Point User}}"
-                    },
-                    "DamageType": "Ice"
-                  },
-                  "passed": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Skill Point User}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Ice",
-                        "Damage": {
-                          "operator": "Variables[0] (MDF_DamageRatio) || RETURN",
-                          "displayLines": "MDF_DamageRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageRatio"
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Additional DMG"
-                      }
-                    }
-                  ]
+                  "name": "Overworld Attack Instance"
                 }
               ]
             }
           ],
-          "stackData": [
-            "MDF_DamageRatio"
-          ],
-          "latentQueue": []
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ]
         }
       ],
+      "onAbortReg": [],
+      "references": [],
       "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "Yanqing_Yanqing_TechniqueInLevel": {
@@ -505,6 +1298,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__704251526\">Yanqing_TechniqueUsage_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">The One True Sword</span>]",
+          "description": "Increases DMG dealt to enemies whose current HP percentage is higher than or equal to <span class=\"descriptionNumberColor\">MDF_HPRatio</span> by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "The One True Sword",
           "execute": [
             {
               "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -543,11 +1340,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases DMG dealt to enemies whose current HP percentage is higher than or equal to <span class=\"descriptionNumberColor\">MDF_HPRatio</span> by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "The One True Sword"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -604,9 +1397,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1295,521 +2086,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Yanqing_Modifiers": {
-      "fileName": "Yanqing_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__294496269\">Yanqing_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_CriticalBoost) || RETURN",
-                    "displayLines": "MDF_CriticalBoost",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CriticalBoost"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Got a Kill [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 6
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Modifier Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifierName": "<a class=\"gModGreen\" id=\"294496269\">Yanqing_Ability03_Bonus</a>[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
-                      "function": "Add",
-                      "value": 1,
-                      "valueType": "Duration"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_CriticalBoost"
-          ],
-          "latentQueue": [],
-          "description": "CRIT Rate +<span class=\"descriptionNumberColor\">MDF_CriticalBoost</span>.",
-          "type": "Buff",
-          "effectName": "CRIT Rate Boost",
-          "statusName": "Amidst the Raining Bliss"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-348622200\">Yanqing_BonusTargetMark</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "priorState": "Normal"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_isBeingHit",
-                  "value": 1
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_isBeingHit",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "priorState": "Active"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Trace Activated",
-                    "conditionList": "Frost Favors the Brave"
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Modifier Description",
-                      "popUpText": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CriticalBoost</span>, CRIT DMG by <span class=\"descriptionNumberColor\">MDF_ALLCriticalDamage</span>, and Effect RES by <span class=\"descriptionNumberColor\">MDF_StatusResistance</span>."
-                    }
-                  ]
-                },
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "Avatar_Yanqing_AggroBase",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">BaseAggroValue</span>&nbsp;"
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">BaseAggroValue</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (1) || INVERT || Variables[0] (Avatar_Yanqing_AggroBase) || MUL || Constants[1] (0.6) || MUL || RETURN",
-                    "displayLines": "((-1 * Avatar_Yanqing_AggroBase) * 0.6)",
-                    "constants": [
-                      1,
-                      0.6
-                    ],
-                    "variables": [
-                      "Avatar_Yanqing_AggroBase"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_CriticalBoost) || RETURN",
-                    "displayLines": "MDF_CriticalBoost",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CriticalBoost"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_ALLCriticalDamage",
-                  "value": {
-                    "operator": "Variables[0] (MDF_CriticaDamage) || Variables[1] (MDF_AddCriticalDamage) || ADD || RETURN",
-                    "displayLines": "(MDF_CriticaDamage + MDF_AddCriticalDamage)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CriticaDamage",
-                      "MDF_AddCriticalDamage"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_ALLCriticalDamage) || RETURN",
-                    "displayLines": "MDF_ALLCriticalDamage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ALLCriticalDamage"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_AddCriticalDamage",
-                  "value": 0
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Trace Activated",
-                    "conditionList": "Frost Favors the Brave"
-                  },
-                  "passed": [
-                    {
-                      "name": "Stack Target Stat Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_StatusResistance) || RETURN",
-                        "displayLines": "MDF_StatusResistance",
-                        "constants": [],
-                        "variables": [
-                          "MDF_StatusResistance"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 2
-                  },
-                  "passed": [
-                    {
-                      "name": "Stack Target Stat Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_AddSPRatio) || RETURN",
-                        "displayLines": "MDF_AddSPRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_AddSPRatio"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Got a Kill [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 6
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Modifier Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifierName": "<a class=\"gModGreen\" id=\"1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
-                      "function": "Add",
-                      "value": 1,
-                      "valueType": "Duration"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "HP Change [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "ParameterValue",
-                    "compareType": ">",
-                    "value2": 0
-                  },
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "MDF_isBeingHit",
-                        "compareType": "=",
-                        "value2": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Update Displayed Energy Bar",
-                          "priorState": "Normal"
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack Start [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Attack Type",
-                    "attackTypes": [
-                      "Basic ATK",
-                      "Skill",
-                      "Ultimate"
-                    ],
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Random Chance",
-                        "chance": {
-                          "operator": "Variables[0] (0.6) || Variables[1] (YANQING_OBJECT_UNUSED_1) || ADD || RETURN",
-                          "displayLines": "(0.6 + YANQING_OBJECT_UNUSED_1)",
-                          "constants": [],
-                          "variables": [
-                            0.6,
-                            "YANQING_OBJECT_UNUSED_1"
-                          ]
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Ability Target List}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-348622200\">Yanqing_BonusTargetMark</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-348622200\">Yanqing_BonusTargetMark</a>"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Yanqing_PassiveAbility01_InsertAbility",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "priorityTag": "CharacterAttackFromSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "abortFlags": [
-                        "STAT_CTRL",
-                        "DisableAction"
-                      ],
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Owner]"
-            }
-          ],
-          "stackData": [
-            "MDF_CriticalBoost",
-            "MDF_CriticaDamage",
-            "MDF_AddCriticalDamage"
-          ],
-          "latentQueue": [],
-          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CriticalBoost</span> and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_ALLCriticalDamage</span>.",
-          "type": "Buff",
-          "effectName": "CRIT Rate Boost",
-          "statusName": "Soulsteel Sync"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1507574257\">Yanqing_PassiveAbility_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Skill"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1361979350\">Yanqing_FrozenMark</a>[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
-                      "duration": 1,
-                      "valuePerStack": {
-                        "MDF_CriticalBoost": {
-                          "operator": "Variables[0] (MDF_CriticalBoost) || RETURN",
-                          "displayLines": "MDF_CriticalBoost",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CriticalBoost"
-                          ]
-                        },
-                        "MDF_CriticaDamage": {
-                          "operator": "Variables[0] (MDF_CriticaDamage) || RETURN",
-                          "displayLines": "MDF_CriticaDamage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CriticaDamage"
-                          ]
-                        },
-                        "MDF_StatusResistance": {
-                          "operator": "Variables[0] (MDF_StatusResistance) || RETURN",
-                          "displayLines": "MDF_StatusResistance",
-                          "constants": [],
-                          "variables": [
-                            "MDF_StatusResistance"
-                          ]
-                        },
-                        "MDF_AddSPRatio": {
-                          "operator": "Variables[0] (MDF_AddSPRatio) || RETURN",
-                          "displayLines": "MDF_AddSPRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AddSPRatio"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_CriticalBoost",
-            "MDF_CriticaDamage",
-            "MDF_StatusResistance",
-            "MDF_AddSPRatio"
-          ],
-          "latentQueue": []
-        }
-      ],
-      "references": []
     }
   }
 }

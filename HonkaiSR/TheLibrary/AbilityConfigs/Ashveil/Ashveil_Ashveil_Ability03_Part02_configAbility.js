@@ -229,9 +229,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__811958138\">Ashveil_Ability03_FloatingOnEnemy</a>",
       "modifierFlags": [
         "STAT_Confine_Effect"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

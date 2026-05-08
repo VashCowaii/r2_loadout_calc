@@ -267,24 +267,6 @@ const configAbility = {
           ]
         }
       ],
-      "abilityValueChange": [
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_CreatFlag",
-                  "value": 0
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "modifierFunctions": [
         {
           "name": "CharacterFunctions",
@@ -332,11 +314,23 @@ const configAbility = {
           ]
         }
       ],
-      "stackData": [
-        "MDF_ShowValue"
-      ],
-      "latentQueue": [
-        "Insert_Flag"
+      "abilityValueChange": [
+        {
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "whenValueChanges": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_CreatFlag",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -370,10 +364,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Insert_Flag"
       ]
     }
   ],

@@ -3,23 +3,12 @@ const compositeAbilityObject = {
   "fullCharacterName": 60010,
   "trimCharacterName": 60010,
   "abilityList": [
-    "60010_BattleEventAbility_60010_Camera",
     "60010_MissionBattleEvent60010_PassiveAbility01",
+    "60010_BattleEventAbility_60010_Camera",
     "60010_MissionBattleEvent60010_Ability03_Part02",
     "60010_MissionBattleEvent60010_Ability03_Part01"
   ],
   "abilityObject": {
-    "60010_BattleEventAbility_60010_Camera": {
-      "fileName": "60010_BattleEventAbility_60010_Camera",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "60010_MissionBattleEvent60010_PassiveAbility01": {
       "fileName": "60010_MissionBattleEvent60010_PassiveAbility01",
       "childAbilityList": [
@@ -98,6 +87,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1307250275\">MissionBattleEvent60010_AutoUseUltraAbility</a>",
+          "latentQueue": [
+            "BattleEvent_BlackSwan"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -111,10 +103,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "BattleEvent_BlackSwan"
           ]
         },
         {
@@ -122,6 +110,12 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__2037521246\">MissionBattleEvent60010_Charge</a>",
           "modifierFlags": [
             "ListenBattleEventSkill"
+          ],
+          "stackData": [
+            "MDF_SPValue"
+          ],
+          "latentQueue": [
+            "BattleEvent_BlackSwan"
           ],
           "execute": [
             {
@@ -171,12 +165,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SPValue"
-          ],
-          "latentQueue": [
-            "BattleEvent_BlackSwan"
           ]
         },
         {
@@ -185,6 +173,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "BlockDamage",
             "Stealth"
+          ],
+          "latentQueue": [
+            "BattleEvent_BlackSwan"
           ],
           "execute": [
             {
@@ -224,15 +215,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "BattleEvent_BlackSwan"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__768878434\">Death_BattleEventAttackUPByMaxHP</a>",
+          "latentQueue": [
+            "BattleEvent_BlackSwan"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -274,15 +264,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "BattleEvent_BlackSwan"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1638411891\">Death_BattleEventShow</a>",
+          "latentQueue": [
+            "BattleEvent_BlackSwan"
+          ],
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Anyone]",
@@ -476,10 +465,6 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Ability Use [Anyone]: End"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "BattleEvent_BlackSwan"
           ]
         }
       ],
@@ -487,6 +472,17 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       },
       "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "60010_BattleEventAbility_60010_Camera": {
+      "fileName": "60010_BattleEventAbility_60010_Camera",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
     },

@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__671225241\">ADV_StageAbility_Maze_Hanya</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1573793887\">WHanya_BpZhanYin_SpecialMark_Listen4</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
@@ -267,6 +273,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "Two Views",
+      "statusName": "Two Views",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -289,16 +299,38 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "Two Views",
-      "statusName": "Two Views"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-888545750\">Hanya_Eidolon2_Pre</a>",
       "stackType": "ReplaceByCaster",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
+        "skillType": [
+          "Skill"
+        ],
+        "conditions": {
+          "name": "NOT",
+          "condition": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-204754708\">Hanya_Eidolon2</a>[<span class=\"descriptionNumberColor\">Two Views</span>]"
+          }
+        },
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": "0.2(SPD Change)"
+        }
+      },
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -340,35 +372,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "target": {
-          "name": "Target Name",
-          "target": "{{Modifier Holder}}"
-        },
-        "skillType": [
-          "Skill"
-        ],
-        "conditions": {
-          "name": "NOT",
-          "condition": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-204754708\">Hanya_Eidolon2</a>[<span class=\"descriptionNumberColor\">Two Views</span>]"
-          }
-        },
-        "delayAdvancePreview": {
-          "name": "Delay/Advance Preview",
-          "previewValue": "0.2(SPD Change)"
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -385,14 +389,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1658392739\">Hanya_PointB1</a>[<span class=\"descriptionNumberColor\">Scrivener</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Scrivener",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -415,11 +421,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Scrivener"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -644,14 +646,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2003572748\">Hanya_Passive_AddDamage</a>[<span class=\"descriptionNumberColor\">Sanction</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUp2</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "Sanction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -674,11 +678,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUp2</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "Sanction"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -686,6 +686,10 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
+      "description": "For every 2 Basic Attacks, Skills, or Ultimates allies use on an enemy with Burden, recover 1 Skill Point.",
+      "type": "Other",
+      "effectName": "Burden",
+      "statusName": "Burden",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1422,19 +1426,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Lifetime",
-        "MDF_DamageUp",
-        "MDF_DamageUpExtra",
-        "MDF_RecoverCount",
-        "MDF_BPRecover"
-      ],
-      "latentQueue": [],
-      "description": "For every 2 Basic Attacks, Skills, or Ultimates allies use on an enemy with Burden, recover 1 Skill Point.",
-      "type": "Other",
-      "effectName": "Burden",
-      "statusName": "Burden"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1556,9 +1548,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1567,6 +1557,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackDelta</span> and SPD by <span class=\"descriptionNumberColor\">MDF_Speed</span> points.",
+      "type": "Buff",
+      "effectName": "ATK & SPD Boost",
+      "statusName": "Edict",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1631,22 +1625,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "Skill03_P1_ATKRatio",
-        "Skill03_P3_Speed",
-        "MDF_Skill03_Speed"
-      ],
-      "latentQueue": [],
-      "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackDelta</span> and SPD by <span class=\"descriptionNumberColor\">MDF_Speed</span> points.",
-      "type": "Buff",
-      "effectName": "ATK & SPD Boost",
-      "statusName": "Edict"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-659711141\">WHanya_BPRecover</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_RecoverValue"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1665,11 +1652,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_RecoverValue"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

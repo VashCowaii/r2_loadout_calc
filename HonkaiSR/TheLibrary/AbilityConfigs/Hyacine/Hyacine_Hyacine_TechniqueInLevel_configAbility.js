@@ -25,6 +25,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1998064298\">Hyacine_Maze_AddMaxHp</a>[<span class=\"descriptionNumberColor\">Day So Right, Life So Fine!</span>]",
+      "description": "Max HP increases by <span class=\"descriptionNumberColor\">_MaxHPAdd</span>.",
+      "type": "Buff",
+      "statusName": "Day So Right, Life So Fine!",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -47,10 +50,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Max HP increases by <span class=\"descriptionNumberColor\">_MaxHPAdd</span>.",
-      "type": "Buff",
-      "statusName": "Day So Right, Life So Fine!"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -123,9 +123,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

@@ -10,6 +10,239 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__450225831\">ADV_StageAbility_Maze_Feixiao_Achievement</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__164111166\">ADV_StageAbility_Maze_Feixiao_GatheredEnemyElite_Visual</a>",
+      "counter": 1,
+      "stackType": "Replace",
+      "modifierFlags": [
+        "LoopHit"
+      ],
+      "onApplication": [
+        "Deleted bullshit"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1694983067\">ADV_StageAbility_Maze_Feixiao_GatheredEnemy_Visual</a>",
+      "counter": 1,
+      "stackType": "Replace",
+      "modifierFlags": [
+        "Confine"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__2059238450\">ADV_StageAbility_Maze_Feixiao_GatheredEnemy</a>",
+      "counter": 1,
+      "stackType": "Replace",
+      "onCreation": [
+        {
+          "name": "Set Target Parameter",
+          "readTarget": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "summonID": 12201
+          },
+          "paramTarget": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "variableName": "_Feixiao_Achievement_Count"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target Count",
+            "target": {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Add Target by Summoned Units",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "summonID": 12201
+                }
+              ]
+            },
+            "compareType": ">=",
+            "value2": 5
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"450225831\">ADV_StageAbility_Maze_Feixiao_Achievement</a>",
+              "duration": -1
+            }
+          ]
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target Count",
+            "target": {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Add Target by Summoned Units",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "summonID": 12201
+                }
+              ]
+            },
+            "compareType": ">=",
+            "value2": 5
+          },
+          "failed": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"450225831\">ADV_StageAbility_Maze_Feixiao_Achievement</a>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1609663662\">ADV_StageAbility_Maze_Feixiao_Attack_HolyShield</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "HolyShield"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__698297764\">ADV_StageAbility_Maze_Feixiao_Attack</a>",
+      "counter": 1
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-147386284\">ADV_StageAbility_Maze_Feixiao_Visual</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "onCreation": [
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 12203
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "In Motion (Overworld)",
+            "flag": "FastRun"
+          }
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "summonID": 12203
+          }
+        }
+      ],
+      "onStageExit": [
+        "Modifier Deletes Itself"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1139036944\">ADV_StageAbility_Maze_Feixiao_SummonUnitLifetimer</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "onCreation": [
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 12201
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "summonID": 12201
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__769308695\">ADV_StageAbility_Maze_Feixiao</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "onCreation": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "CDF_IsEnterBattle",
+          "value": 0
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-147386284\">ADV_StageAbility_Maze_Feixiao_Visual</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "CDF_IsEnterBattle",
+            "compareType": "=",
+            "value2": 0
+          }
+        }
+      ],
+      "onStageExit": [
+        "Modifier Deletes Itself"
+      ],
+      "onStack": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-147386284\">ADV_StageAbility_Maze_Feixiao_Visual</a>"
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1813368649\">StageAbility_Maze_Feixiao_Modifier_GainSP</a>",
       "execute": [
         {
@@ -47,9 +280,7 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -73,10 +304,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__385618061\">M_Feixiao_UltraTarget_FadeInFlag</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [
-        "First_Break_Effect"
-      ],
       "removalDependencies": {
         "name": "Removal Dependency",
         "dependancyName": "<a class=\"gModGreen\" id=\"176878499\">M_Feixiao_UltraTarget_Mark</a>"
@@ -87,10 +314,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1192517657\">M_Feixiao_UltraTarget_Visual_Stun</a>",
       "modifierFlags": [
         "STAT_Stun_Effect"
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "First_Break_Effect"
       ]
     },
     {
@@ -98,10 +321,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1169885953\">M_Feixiao_UltraTarget_Visual_Confine</a>",
       "modifierFlags": [
         "STAT_Confine_Effect"
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "First_Break_Effect"
       ]
     },
     {
@@ -249,9 +468,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -394,9 +611,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -405,6 +620,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
+      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Buff",
+      "effectName": "SPD Boost",
+      "statusName": "Stormward I Hear",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -427,26 +646,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [
-        "IsUnCountedInsert"
-      ],
-      "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Buff",
-      "effectName": "SPD Boost",
-      "statusName": "Stormward I Hear"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-343822525\">Feixiao_Eidolon2_CD</a>[<span class=\"descriptionNumberColor\">Moonward I Wish</span>]",
       "counter": 3,
-      "stackData": [
-        "MDF_Count"
-      ],
-      "latentQueue": [],
       "description": "In the Talent's effect, for every 1 instance of Follow-Up ATK launched by ally targets, Feixiao gains 1 point of \"Flying Aureus.\" This effect can still trigger <span class=\"descriptionNumberColor\">MDF_Count</span> time(s).",
       "type": "Other",
       "statusName": "Moonward I Wish"
@@ -455,6 +660,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1384650414\">Feixiao_Eidolon1_Property</a>[<span class=\"descriptionNumberColor\">Skyward I Quell</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack additionally increases the Ultimate DMG dealt by an amount equal to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original DMG.",
+      "type": "Buff",
+      "statusName": "Skyward I Quell",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -517,16 +725,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack additionally increases the Ultimate DMG dealt by an amount equal to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original DMG.",
-      "type": "Buff",
-      "statusName": "Skyward I Quell"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-909564099\">Feixiao_InsertIsReady</a>[<span class=\"descriptionNumberColor\">Thunderhunt</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "The Talent's Follow-Up ATK can now be triggered.",
       "type": "Other",
       "statusName": "Thunderhunt"
@@ -595,9 +798,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -606,6 +807,11 @@ const configAbility = {
       "modifierFlags": [
         "ForceStanceDamage"
       ],
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "showAsForcedReduction": true
+      },
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -788,14 +994,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "showAsForcedReduction": true
-      }
+      ]
     }
   ],
   "references": []

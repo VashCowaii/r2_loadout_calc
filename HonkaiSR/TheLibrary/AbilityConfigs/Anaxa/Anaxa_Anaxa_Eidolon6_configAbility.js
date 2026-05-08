@@ -27,6 +27,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2017566930\">Anaxa_Eidolon6_DamageUp</a>[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
+      "stackData": [
+        "MDF_PropertyRatio"
+      ],
+      "description": "DMG dealt is <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original DMG.",
+      "type": "Buff",
+      "statusName": "Everything Is in Everything",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -49,14 +55,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "DMG dealt is <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original DMG.",
-      "type": "Buff",
-      "statusName": "Everything Is in Everything"
+      ]
     }
   ],
   "targetObjectData": {

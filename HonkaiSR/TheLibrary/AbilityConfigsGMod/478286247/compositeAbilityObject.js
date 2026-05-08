@@ -246,15 +246,15 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1989287647\">Modifier_BattleEventAbility_Challenge_Month_18_Sub4</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "<span class=\"descriptionNumberColor\">EntityStockSPForShow</span> extra Energy. This will be consumed first when unleashing Ultimate.",
+          "type": "Other",
+          "effectName": "Energy Overflow",
+          "statusName": "Energy Overflow",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "description": "<span class=\"descriptionNumberColor\">EntityStockSPForShow</span> extra Energy. This will be consumed first when unleashing Ultimate.",
-          "type": "Other",
-          "effectName": "Energy Overflow",
-          "statusName": "Energy Overflow"
+          ]
         },
         {
           "name": "Modifier Construction",

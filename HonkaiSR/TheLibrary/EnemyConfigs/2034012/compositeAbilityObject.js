@@ -3,58 +3,41 @@ const compositeAbilityObject = {
   "fullCharacterName": 2034012,
   "trimCharacterName": 2034012,
   "abilityList": [
-    "2034012_Monster_W2_LycanKing_RLBoss_Ability07_Part02",
-    "2034012_Monster_W2_LycanKing_RLBoss_Ability07_Part01",
-    "2034012_Monster_W2_LycanKing_RLBoss_PassiveAbility_Insert",
-    "2034012_Monster_W2_LycanKing_RLBoss_Ability03_Part02",
-    "2034012_Monster_W2_LycanKing_RLBoss_Ability03_Part01",
-    "2034012_Monster_W2_LycanKing_RLBoss_AbilityP05",
     "2034012_BattleEventAbility_Monster_W2_LycanKing_StanceDamage",
-    "2034012_BattleEventAbility_W2_LycanKing_Summon",
-    "2034012_BattleEventAbility_Monster_W2_LycanKing_SummonMonster",
-    "2034012_Monster_W2_LycanKing_Ability07_MainStroy_Part02",
-    "2034012_Monster_W2_LycanKing_Ability07_MainStroy_Part01",
-    "2034012_Monster_W2_LycanKing_Ability07_Part02",
-    "2034012_Monster_W2_LycanKing_Ability07_Part01",
+    "2034012_Monster_W2_LycanKing_RLBoss_PassiveAbility_Insert",
     "2034012_Monster_W2_LycanKing_ChangePhase_Part02",
     "2034012_Monster_W2_LycanKing_ChangePhase_Part01",
+    "2034012_Monster_W2_LycanKing_RLBoss_Ability07_Part02",
+    "2034012_Monster_W2_LycanKing_RLBoss_Ability07_Part01",
+    "2034012_Monster_W2_LycanKing_Ability07_Part02",
+    "2034012_Monster_W2_LycanKing_Ability07_Part01",
+    "2034012_Monster_W2_LycanKing_RLBoss_AbilityP05",
+    "2034012_Monster_W2_LycanKing_AbilityP03",
+    "2034012_Monster_W2_LycanKing_AbilityP02",
     "2034012_Monster_W2_LycanKing_PassiveAbility_Insert",
+    "2034012_Monster_W2_LycanKing_PassiveAbilityInitiate",
     "2034012_Monster_W2_LycanKing_Ability05_Insert_Part02",
     "2034012_Monster_W2_LycanKing_Ability05_Insert_Part01",
     "2034012_Monster_W2_LycanKing_Ability04_Part02",
     "2034012_Monster_W2_LycanKing_Ability04_Part01",
-    "2034012_Monster_W2_LycanKing_Ability03_Part02",
-    "2034012_Monster_W2_LycanKing_Ability03_Part01",
+    "2034012_Monster_W2_LycanKing_RLBoss_Ability03_Part02",
+    "2034012_Monster_W2_LycanKing_RLBoss_Ability03_Part01",
     "2034012_Monster_W2_LycanKing_Ability02_Part02",
     "2034012_Monster_W2_LycanKing_Ability02_Part01",
     "2034012_Monster_W2_LycanKing_Ability01_Part02",
     "2034012_Monster_W2_LycanKing_Ability01_Part01",
-    "2034012_Monster_W2_LycanKing_MainStoryPhase02Start",
-    "2034012_Monster_W2_LycanKing_MainStoryPhase01End",
-    "2034012_Monster_W2_LycanKing_MainStory",
-    "2034012_Monster_W2_LycanKing_AbilityP03",
-    "2034012_Monster_W2_LycanKing_AbilityP02",
-    "2034012_Monster_W2_LycanKing_PassiveAbilityInitiate",
     "2034012_Monster_W2_LycanKing_PassiveAbility_BGM",
     "2034012_Modifiers",
     "2034012_BE_BattleEvents"
   ],
   "abilityObject": {
-    "2034012_Monster_W2_LycanKing_RLBoss_Ability07_Part02": {
-      "fileName": "2034012_Monster_W2_LycanKing_RLBoss_Ability07_Part02",
+    "2034012_BattleEventAbility_Monster_W2_LycanKing_StanceDamage": {
+      "fileName": "2034012_BattleEventAbility_Monster_W2_LycanKing_StanceDamage",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1346076887\">Enemy_W2_Lycan_RageStartMark</a>"
-        },
-        {
           "name": "Find New Target",
           "from": {
             "name": "Target Name",
@@ -62,282 +45,101 @@ const compositeAbilityObject = {
           },
           "searchRandom": true,
           "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "ENEMIES_OBJECT_UNUSED__167"
+            "name": "Compare: Monster Rank",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "compareType": ">=",
+            "value2": 4
+          },
+          "ifTargetFound": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
               },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1346076887\">Enemy_W2_Lycan_RageStartMark</a>",
-                "invertCondition": true
+              "scope": "TargetEntity",
+              "variableName": "WolfBoss_BloodRageCount",
+              "value": {
+                "operator": "Variables[0] (ResetBloodRageCount) || RETURN",
+                "displayLines": "ResetBloodRageCount",
+                "constants": [],
+                "variables": [
+                  "ResetBloodRageCount"
+                ]
+              }
+            },
+            {
+              "name": "Action Advance/Delay",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
               },
-              {
+              "advanceType": "Set",
+              "multiAdd": "DelayRatio"
+            },
+            {
+              "name": "Deal Toughness DMG",
+              "value": {
+                "operator": "Variables[0] (StanceDamage) || RETURN",
+                "displayLines": "StanceDamage",
+                "constants": [],
+                "variables": [
+                  "StanceDamage"
+                ]
+              },
+              "forceReduction": true,
+              "canDelay": true,
+              "ToughnessDMGType": {
+                "name": "Damage Type Source",
+                "sourceType": {}
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
                 "name": "Has Flag",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "flagName": "Break",
-                "invertCondition": true
-              }
-            ]
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "ENEMIES_OBJECT_UNUSED__167"
+                "flagName": "Break"
               },
-              {
-                "name": "Compare: Target",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "target2": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "invertCondition": true
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1414738413\">Enemy_W2_Lycan_RagePhase1Mark</a>[<span class=\"descriptionNumberColor\">Bloodlust</span>]"
-            },
-            {
-              "name": "Update Displayed Energy Bar",
-              "value": {
-                "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                "displayLines": "Wolf_AttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_AttackCount"
-                ]
-              },
-              "entityClass": "Enemy",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "maximum": {
-                "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                "displayLines": "Wolf_MaxAttackCount",
-                "constants": [],
-                "variables": [
-                  "Wolf_MaxAttackCount"
-                ]
-              },
-              "assignState": "True",
-              "state": "Active"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "ENEMIES_OBJECT_UNUSED__167"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1414738413\">Enemy_W2_Lycan_RagePhase1Mark</a>[<span class=\"descriptionNumberColor\">Bloodlust</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1736159544\">Enemy_W2_Lycan_RageStatus</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-826569398\">Enemy_W2_Lycan_RageStatusPhase03</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1346076887\">Enemy_W2_Lycan_RageStartMark</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-826569398\">Enemy_W2_Lycan_RageStatusPhase03</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
+              "failed": [
                 {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "ENEMIES_OBJECT_UNUSED__167"
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
                   },
-                  "passed": [
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "entityClass": "Enemy",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "assignState": "True",
-                      "state": "Active"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "MonsterType_W2_Lycan_01"
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "MonsterType_W2_Lycan_00"
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "MonsterType_W2_Lycan"
-                      }
-                    }
-                  ]
+                  "modifier": "<a class=\"gModGreen\" id=\"563066245\">Enemy_W2_LycanKing_BloodRageMark</a>[<span class=\"descriptionNumberColor\">Irate</span>]",
+                  "addStacksPerTrigger": {
+                    "operator": "Variables[0] (ResetBloodRageCount) || RETURN",
+                    "displayLines": "ResetBloodRageCount",
+                    "constants": [],
+                    "variables": [
+                      "ResetBloodRageCount"
+                    ]
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"435779874\">Monster_W2_LycanKing_RefreshEnergyBar</a>",
+                  "casterAssign": "TargetSelf"
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>",
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
-      ]
-    },
-    "2034012_Monster_W2_LycanKing_RLBoss_Ability07_Part01": {
-      "fileName": "2034012_Monster_W2_LycanKing_RLBoss_Ability07_Part01",
-      "childAbilityList": [
-        "2034012_Monster_W2_LycanKing_Ability07_Part01",
-        "2034012_Monster_W2_LycanKing_Ability07_Part02",
-        "2034012_Monster_W2_LycanKing_Ability07_Camera",
-        "2034012_Monster_W2_LycanKing_RLBoss_Ability07_Part01",
-        "2034012_Monster_W2_LycanKing_RLBoss_Ability07_Part02"
-      ],
-      "skillTrigger": "Skill07",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_LycanKing_RLBoss_Ability07_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
+        "primaryTarget": "Inherent Target"
       },
       "references": []
     },
@@ -618,6 +420,13 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2108197417\">Enemy_W2_Lycan_Part3SummonSpeed</a>",
+          "stackData": [
+            "MDF_SpeedPhase3"
+          ],
+          "latentQueue": [
+            "PhaseFlag",
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -640,592 +449,36 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_SpeedPhase3"
-          ],
-          "latentQueue": [
-            "PhaseFlag",
-            "AIFlag"
           ]
         }
       ]
     },
-    "2034012_Monster_W2_LycanKing_RLBoss_Ability03_Part02": {
-      "fileName": "2034012_Monster_W2_LycanKing_RLBoss_Ability03_Part02",
+    "2034012_Monster_W2_LycanKing_ChangePhase_Part02": {
+      "fileName": "2034012_Monster_W2_LycanKing_ChangePhase_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
-        "Ability Start",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-661361560\">Enemy_W2_LycanKing_RLBoss_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Thirst for War</span>]",
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[SkillP05[0]]}) || RETURN",
-              "displayLines": "{[SkillP05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP05[0]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-717970764\">Enemy_W2_LycanKing_RLBoss_BeforeFear</a>",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1138048251\">Standard_FearPre</a>[<span class=\"descriptionNumberColor\">Terror Grip</span>]",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1708564836\">Standard_Fear</a>[<span class=\"descriptionNumberColor\">Terrified</span>]",
-                "invertCondition": true
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target List}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1138048251\">Standard_FearPre</a>[<span class=\"descriptionNumberColor\">Terror Grip</span>]",
-              "baseChance": {
-                "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                "displayLines": "{[Skill03[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[1]]}"
-                ]
-              },
-              "valuePerStack": {
-                "MDF_LoseSP": 0
-              },
-              "casterAssign": "CasterSelf"
-            }
-          ]
-        },
         "Trigger: Ability End"
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
+        "primaryTarget": "Inherent Target"
       },
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-717970764\">Enemy_W2_LycanKing_RLBoss_BeforeFear</a>",
-          "counter": 4,
-          "stackType": "Replace",
-          "modifierFlags": [
-            "RemoveWhenCasterDead",
-            "AttackSign"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Define Modifier Variable",
-                  "modifierName": null,
-                  "value": {
-                    "operator": "Variables[0] (MDF_Count) || RETURN",
-                    "displayLines": "MDF_Count",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Count"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_Count",
-                  "value": -1,
-                  "max": 100
-                },
-                {
-                  "name": "UI Display Event (On Entity)",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "popUpText": "Energy Regenerated",
-                  "living": true
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_Count",
-                    "compareType": "=",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Energy",
-                      "on": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "value": {
-                        "operator": "Variables[0] (MDF_SPRecover) || RETURN",
-                        "displayLines": "MDF_SPRecover",
-                        "constants": [],
-                        "variables": [
-                          "MDF_SPRecover"
-                        ]
-                      },
-                      "isFixed": "* ERR"
-                    },
-                    "Modifier Deletes Itself"
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Modifier Variable",
-                      "modifierName": null,
-                      "value": {
-                        "operator": "Variables[0] (MDF_Count) || RETURN",
-                        "displayLines": "MDF_Count",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Count"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Attacked End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "ENEMIES_OBJECT_UNUSED__168"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1708564836\">Standard_Fear</a>[<span class=\"descriptionNumberColor\">Terrified</span>]",
-                        "invertCondition": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1708564836\">Standard_Fear</a>[<span class=\"descriptionNumberColor\">Terrified</span>]",
-                          "valuePerStack": {
-                            "MDF_Count": 1
-                          }
-                        }
-                      ]
-                    },
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Was",
-                        "modifier": "<a class=\"gModGreen\" id=\"-1138048251\">Standard_FearPre</a>[<span class=\"descriptionNumberColor\">Terror Grip</span>]"
-                      },
-                      {
-                        "name": "Modifier Was",
-                        "modifier": "<a class=\"gModGreen\" id=\"-1708564836\">Standard_Fear</a>[<span class=\"descriptionNumberColor\">Terrified</span>]"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ]
+          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>"
         }
       ]
     },
-    "2034012_Monster_W2_LycanKing_RLBoss_Ability03_Part01": {
-      "fileName": "2034012_Monster_W2_LycanKing_RLBoss_Ability03_Part01",
+    "2034012_Monster_W2_LycanKing_ChangePhase_Part01": {
+      "fileName": "2034012_Monster_W2_LycanKing_ChangePhase_Part01",
       "childAbilityList": [
-        "2034012_Monster_W2_LycanKing_RLBoss_Ability03_Part01",
-        "2034012_Monster_W2_LycanKing_RLBoss_Ability03_Part02",
-        "2034012_Monster_W2_LycanKing_Ability03_Camera"
+        "2034012_Monster_W2_LycanKing_ChangePhase_Part01",
+        "2034012_Monster_W2_LycanKing_ChangePhase_Part02",
+        "2034012_Monster_W2_LycanKing_ChangePhase_Camera"
       ],
-      "skillTrigger": "Skill03",
+      "skillTrigger": "ChangePhase",
       "abilityType": "Basic ATK",
       "energy": null,
       "toughnessList": null,
@@ -1236,30 +489,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_W2_LycanKing_RLBoss_Ability03_Part02",
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W2_LycanKing_ChangePhase_Part02",
           "isTrigger": true
         },
         "Deleted bullshit"
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2034012_Monster_W2_LycanKing_RLBoss_AbilityP05": {
-      "fileName": "2034012_Monster_W2_LycanKing_RLBoss_AbilityP05",
-      "childAbilityList": [
-        "2034012_Monster_W2_LycanKing_RLBoss_AbilityP05"
-      ],
-      "skillTrigger": "SkillP05",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
       "realTargetData": {
@@ -1267,1044 +506,12 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2034012_BattleEventAbility_Monster_W2_LycanKing_StanceDamage": {
-      "fileName": "2034012_BattleEventAbility_Monster_W2_LycanKing_StanceDamage",
+    "2034012_Monster_W2_LycanKing_RLBoss_Ability07_Part02": {
+      "fileName": "2034012_Monster_W2_LycanKing_RLBoss_Ability07_Part02",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
       "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Compare: Monster Rank",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "compareType": ">=",
-            "value2": 4
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "WolfBoss_BloodRageCount",
-              "value": {
-                "operator": "Variables[0] (ResetBloodRageCount) || RETURN",
-                "displayLines": "ResetBloodRageCount",
-                "constants": [],
-                "variables": [
-                  "ResetBloodRageCount"
-                ]
-              }
-            },
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "advanceType": "Set",
-              "multiAdd": "DelayRatio"
-            },
-            {
-              "name": "Deal Toughness DMG",
-              "value": {
-                "operator": "Variables[0] (StanceDamage) || RETURN",
-                "displayLines": "StanceDamage",
-                "constants": [],
-                "variables": [
-                  "StanceDamage"
-                ]
-              },
-              "forceReduction": true,
-              "canDelay": true,
-              "ToughnessDMGType": {
-                "name": "Damage Type Source",
-                "sourceType": {}
-              }
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "flagName": "Break"
-              },
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"563066245\">Enemy_W2_LycanKing_BloodRageMark</a>[<span class=\"descriptionNumberColor\">Irate</span>]",
-                  "addStacksPerTrigger": {
-                    "operator": "Variables[0] (ResetBloodRageCount) || RETURN",
-                    "displayLines": "ResetBloodRageCount",
-                    "constants": [],
-                    "variables": [
-                      "ResetBloodRageCount"
-                    ]
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"435779874\">Monster_W2_LycanKing_RefreshEnergyBar</a>",
-                  "casterAssign": "TargetSelf"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "2034012_BattleEventAbility_W2_LycanKing_Summon": {
-      "fileName": "2034012_BattleEventAbility_W2_LycanKing_Summon",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "BattleEventAbility_Monster_W2_LycanKing_SummonMonster",
-          "parameters": {}
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "set": 0
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"746359205\">Modifier_BattleEventAbility_SummonMonster</a>"
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "LycanSummon",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__746359205\">Modifier_BattleEventAbility_SummonMonster</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Enemy Team All}}"
-                    },
-                    "value1": "TeamCharacterCount",
-                    "compareType": "<",
-                    "value2": 5
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "BattleEventAbility_Monster_W2_LycanKing_SummonMonster",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "priorityTag": "EnemyChangeState",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2034012_BattleEventAbility_Monster_W2_LycanKing_SummonMonster": {
-      "fileName": "2034012_BattleEventAbility_Monster_W2_LycanKing_SummonMonster",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "value": "ENEMIES_OBJECT_UNUSED__168"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "P1_Lycan00Chance",
-              "value": 0.75
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "P2_Lycan01Chance",
-              "value": 0.25
-            }
-          ],
-          "noTargetFound": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "P1_Lycan00Chance",
-              "value": 0.5
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "P2_Lycan01Chance",
-              "value": 0.5
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Compare: Monster Rank",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "compareType": "=",
-            "value2": 4
-          },
-          "ifTargetFound": [
-            {
-              "name": "Random Event",
-              "isUnique": true,
-              "odds": [
-                {
-                  "operator": "Variables[0] (P1_Lycan00Chance) || RETURN",
-                  "displayLines": "P1_Lycan00Chance",
-                  "constants": [],
-                  "variables": [
-                    "P1_Lycan00Chance"
-                  ]
-                },
-                {
-                  "operator": "Variables[0] (P2_Lycan01Chance) || RETURN",
-                  "displayLines": "P2_Lycan01Chance",
-                  "constants": [],
-                  "variables": [
-                    "P2_Lycan01Chance"
-                  ]
-                }
-              ],
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team Location",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team",
-                    "location": "Left"
-                  },
-                  "passed": [
-                    {
-                      "name": "Create Enemies",
-                      "delayPercent": {
-                        "operator": "Variables[0] (P3_Lycan01Delay) || RETURN",
-                        "displayLines": "P3_Lycan01Delay",
-                        "constants": [],
-                        "variables": [
-                          "P3_Lycan01Delay"
-                        ]
-                      },
-                      "enemyList": [
-                        {
-                          "name": "Enemy Entry",
-                          "enemyID": {
-                            "operator": "Variables[0] (WolfID01) || RETURN",
-                            "displayLines": "WolfID01",
-                            "constants": [],
-                            "variables": [
-                              "WolfID01"
-                            ]
-                          },
-                          "locationType": "First"
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Create Enemies",
-                      "delayPercent": {
-                        "operator": "Variables[0] (P3_Lycan01Delay) || RETURN",
-                        "displayLines": "P3_Lycan01Delay",
-                        "constants": [],
-                        "variables": [
-                          "P3_Lycan01Delay"
-                        ]
-                      },
-                      "enemyList": [
-                        {
-                          "name": "Enemy Entry",
-                          "enemyID": {
-                            "operator": "Variables[0] (WolfID01) || RETURN",
-                            "displayLines": "WolfID01",
-                            "constants": [],
-                            "variables": [
-                              "WolfID01"
-                            ]
-                          },
-                          "locationType": "Last"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team Location",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team",
-                    "location": "Left"
-                  },
-                  "passed": [
-                    {
-                      "name": "Create Enemies",
-                      "delayPercent": {
-                        "operator": "Variables[0] (P3_Lycan01Delay) || RETURN",
-                        "displayLines": "P3_Lycan01Delay",
-                        "constants": [],
-                        "variables": [
-                          "P3_Lycan01Delay"
-                        ]
-                      },
-                      "enemyList": [
-                        {
-                          "name": "Enemy Entry",
-                          "enemyID": {
-                            "operator": "Variables[0] (WolfID02) || RETURN",
-                            "displayLines": "WolfID02",
-                            "constants": [],
-                            "variables": [
-                              "WolfID02"
-                            ]
-                          },
-                          "locationType": "First"
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Create Enemies",
-                      "delayPercent": {
-                        "operator": "Variables[0] (P3_Lycan01Delay) || RETURN",
-                        "displayLines": "P3_Lycan01Delay",
-                        "constants": [],
-                        "variables": [
-                          "P3_Lycan01Delay"
-                        ]
-                      },
-                      "enemyList": [
-                        {
-                          "name": "Enemy Entry",
-                          "enemyID": {
-                            "operator": "Variables[0] (WolfID02) || RETURN",
-                            "displayLines": "WolfID02",
-                            "constants": [],
-                            "variables": [
-                              "WolfID02"
-                            ]
-                          },
-                          "locationType": "Last"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": ">=",
-                    "value2": 2
-                  },
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1370655977\">Enemy_W2_LycanKing_MainStoryPhase2Mark</a>"
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Random Event",
-                  "isUnique": true,
-                  "odds": [
-                    {
-                      "operator": "Variables[0] (P1_Lycan00Chance) || RETURN",
-                      "displayLines": "P1_Lycan00Chance",
-                      "constants": [],
-                      "variables": [
-                        "P1_Lycan00Chance"
-                      ]
-                    },
-                    {
-                      "operator": "Variables[0] (P2_Lycan01Chance) || RETURN",
-                      "displayLines": "P2_Lycan01Chance",
-                      "constants": [],
-                      "variables": [
-                        "P2_Lycan01Chance"
-                      ]
-                    }
-                  ],
-                  "execute": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Is Part Of Team Location",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team",
-                        "location": "Left"
-                      },
-                      "passed": [
-                        {
-                          "name": "Create Enemies",
-                          "delayPercent": {
-                            "operator": "Variables[0] (P4_Lycan02Delay) || RETURN",
-                            "displayLines": "P4_Lycan02Delay",
-                            "constants": [],
-                            "variables": [
-                              "P4_Lycan02Delay"
-                            ]
-                          },
-                          "enemyList": [
-                            {
-                              "name": "Enemy Entry",
-                              "enemyID": {
-                                "operator": "Variables[0] (WolfID01) || RETURN",
-                                "displayLines": "WolfID01",
-                                "constants": [],
-                                "variables": [
-                                  "WolfID01"
-                                ]
-                              },
-                              "locationType": "First"
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Create Enemies",
-                          "delayPercent": {
-                            "operator": "Variables[0] (P4_Lycan02Delay) || RETURN",
-                            "displayLines": "P4_Lycan02Delay",
-                            "constants": [],
-                            "variables": [
-                              "P4_Lycan02Delay"
-                            ]
-                          },
-                          "enemyList": [
-                            {
-                              "name": "Enemy Entry",
-                              "enemyID": {
-                                "operator": "Variables[0] (WolfID01) || RETURN",
-                                "displayLines": "WolfID01",
-                                "constants": [],
-                                "variables": [
-                                  "WolfID01"
-                                ]
-                              },
-                              "locationType": "Last"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Is Part Of Team Location",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team",
-                        "location": "Left"
-                      },
-                      "passed": [
-                        {
-                          "name": "Create Enemies",
-                          "delayPercent": {
-                            "operator": "Variables[0] (P4_Lycan02Delay) || RETURN",
-                            "displayLines": "P4_Lycan02Delay",
-                            "constants": [],
-                            "variables": [
-                              "P4_Lycan02Delay"
-                            ]
-                          },
-                          "enemyList": [
-                            {
-                              "name": "Enemy Entry",
-                              "enemyID": {
-                                "operator": "Variables[0] (WolfID02) || RETURN",
-                                "displayLines": "WolfID02",
-                                "constants": [],
-                                "variables": [
-                                  "WolfID02"
-                                ]
-                              },
-                              "locationType": "First"
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Create Enemies",
-                          "delayPercent": {
-                            "operator": "Variables[0] (P4_Lycan02Delay) || RETURN",
-                            "displayLines": "P4_Lycan02Delay",
-                            "constants": [],
-                            "variables": [
-                              "P4_Lycan02Delay"
-                            ]
-                          },
-                          "enemyList": [
-                            {
-                              "name": "Enemy Entry",
-                              "enemyID": {
-                                "operator": "Variables[0] (WolfID02) || RETURN",
-                                "displayLines": "WolfID02",
-                                "constants": [],
-                                "variables": [
-                                  "WolfID02"
-                                ]
-                              },
-                              "locationType": "Last"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value1": "HP_Bars_Remaining",
-                "compareType": ">=",
-                "value2": 3
-              },
-              "passed": [
-                {
-                  "name": "Random Event",
-                  "isUnique": true,
-                  "odds": [
-                    {
-                      "operator": "Variables[0] (P1_Lycan00Chance) || RETURN",
-                      "displayLines": "P1_Lycan00Chance",
-                      "constants": [],
-                      "variables": [
-                        "P1_Lycan00Chance"
-                      ]
-                    },
-                    {
-                      "operator": "Variables[0] (P2_Lycan01Chance) || RETURN",
-                      "displayLines": "P2_Lycan01Chance",
-                      "constants": [],
-                      "variables": [
-                        "P2_Lycan01Chance"
-                      ]
-                    }
-                  ],
-                  "execute": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Is Part Of Team Location",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team",
-                        "location": "Left"
-                      },
-                      "passed": [
-                        {
-                          "name": "Create Enemies",
-                          "delayPercent": {
-                            "operator": "Variables[0] (P5_Lycan03Delay) || RETURN",
-                            "displayLines": "P5_Lycan03Delay",
-                            "constants": [],
-                            "variables": [
-                              "P5_Lycan03Delay"
-                            ]
-                          },
-                          "enemyList": [
-                            {
-                              "name": "Enemy Entry",
-                              "enemyID": {
-                                "operator": "Variables[0] (WolfID01) || RETURN",
-                                "displayLines": "WolfID01",
-                                "constants": [],
-                                "variables": [
-                                  "WolfID01"
-                                ]
-                              },
-                              "locationType": "First"
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Create Enemies",
-                          "delayPercent": {
-                            "operator": "Variables[0] (P5_Lycan03Delay) || RETURN",
-                            "displayLines": "P5_Lycan03Delay",
-                            "constants": [],
-                            "variables": [
-                              "P5_Lycan03Delay"
-                            ]
-                          },
-                          "enemyList": [
-                            {
-                              "name": "Enemy Entry",
-                              "enemyID": {
-                                "operator": "Variables[0] (WolfID01) || RETURN",
-                                "displayLines": "WolfID01",
-                                "constants": [],
-                                "variables": [
-                                  "WolfID01"
-                                ]
-                              },
-                              "locationType": "Last"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Is Part Of Team Location",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team",
-                        "location": "Left"
-                      },
-                      "passed": [
-                        {
-                          "name": "Create Enemies",
-                          "delayPercent": {
-                            "operator": "Variables[0] (P5_Lycan03Delay) || RETURN",
-                            "displayLines": "P5_Lycan03Delay",
-                            "constants": [],
-                            "variables": [
-                              "P5_Lycan03Delay"
-                            ]
-                          },
-                          "enemyList": [
-                            {
-                              "name": "Enemy Entry",
-                              "enemyID": {
-                                "operator": "Variables[0] (WolfID02) || RETURN",
-                                "displayLines": "WolfID02",
-                                "constants": [],
-                                "variables": [
-                                  "WolfID02"
-                                ]
-                              },
-                              "locationType": "First"
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Create Enemies",
-                          "delayPercent": {
-                            "operator": "Variables[0] (P5_Lycan03Delay) || RETURN",
-                            "displayLines": "P5_Lycan03Delay",
-                            "constants": [],
-                            "variables": [
-                              "P5_Lycan03Delay"
-                            ]
-                          },
-                          "enemyList": [
-                            {
-                              "name": "Enemy Entry",
-                              "enemyID": {
-                                "operator": "Variables[0] (WolfID02) || RETURN",
-                                "displayLines": "WolfID02",
-                                "constants": [],
-                                "variables": [
-                                  "WolfID02"
-                                ]
-                              },
-                              "locationType": "Last"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Random Event",
-                  "isUnique": true,
-                  "odds": [
-                    {
-                      "operator": "Variables[0] (P1_Lycan00Chance) || RETURN",
-                      "displayLines": "P1_Lycan00Chance",
-                      "constants": [],
-                      "variables": [
-                        "P1_Lycan00Chance"
-                      ]
-                    },
-                    {
-                      "operator": "Variables[0] (P2_Lycan01Chance) || RETURN",
-                      "displayLines": "P2_Lycan01Chance",
-                      "constants": [],
-                      "variables": [
-                        "P2_Lycan01Chance"
-                      ]
-                    }
-                  ],
-                  "execute": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Is Part Of Team Location",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team",
-                        "location": "Left"
-                      },
-                      "passed": [
-                        {
-                          "name": "Create Enemies",
-                          "delayPercent": {
-                            "operator": "Variables[0] (P6_Lycan04Delay) || RETURN",
-                            "displayLines": "P6_Lycan04Delay",
-                            "constants": [],
-                            "variables": [
-                              "P6_Lycan04Delay"
-                            ]
-                          },
-                          "enemyList": [
-                            {
-                              "name": "Enemy Entry",
-                              "enemyID": {
-                                "operator": "Variables[0] (WolfID01) || RETURN",
-                                "displayLines": "WolfID01",
-                                "constants": [],
-                                "variables": [
-                                  "WolfID01"
-                                ]
-                              },
-                              "locationType": "First"
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Create Enemies",
-                          "delayPercent": {
-                            "operator": "Variables[0] (P6_Lycan04Delay) || RETURN",
-                            "displayLines": "P6_Lycan04Delay",
-                            "constants": [],
-                            "variables": [
-                              "P6_Lycan04Delay"
-                            ]
-                          },
-                          "enemyList": [
-                            {
-                              "name": "Enemy Entry",
-                              "enemyID": {
-                                "operator": "Variables[0] (WolfID01) || RETURN",
-                                "displayLines": "WolfID01",
-                                "constants": [],
-                                "variables": [
-                                  "WolfID01"
-                                ]
-                              },
-                              "locationType": "Last"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Is Part Of Team Location",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team",
-                        "location": "Left"
-                      },
-                      "passed": [
-                        {
-                          "name": "Create Enemies",
-                          "delayPercent": {
-                            "operator": "Variables[0] (P6_Lycan04Delay) || RETURN",
-                            "displayLines": "P6_Lycan04Delay",
-                            "constants": [],
-                            "variables": [
-                              "P6_Lycan04Delay"
-                            ]
-                          },
-                          "enemyList": [
-                            {
-                              "name": "Enemy Entry",
-                              "enemyID": {
-                                "operator": "Variables[0] (WolfID02) || RETURN",
-                                "displayLines": "WolfID02",
-                                "constants": [],
-                                "variables": [
-                                  "WolfID02"
-                                ]
-                              },
-                              "locationType": "First"
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Create Enemies",
-                          "delayPercent": {
-                            "operator": "Variables[0] (P6_Lycan04Delay) || RETURN",
-                            "displayLines": "P6_Lycan04Delay",
-                            "constants": [],
-                            "variables": [
-                              "P6_Lycan04Delay"
-                            ]
-                          },
-                          "enemyList": [
-                            {
-                              "name": "Enemy Entry",
-                              "enemyID": {
-                                "operator": "Variables[0] (WolfID02) || RETURN",
-                                "displayLines": "WolfID02",
-                                "constants": [],
-                                "variables": [
-                                  "WolfID02"
-                                ]
-                              },
-                              "locationType": "Last"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "2034012_Monster_W2_LycanKing_Ability07_MainStroy_Part02": {
-      "fileName": "2034012_Monster_W2_LycanKing_Ability07_MainStroy_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": {
-            "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-            "displayLines": "Wolf_MaxAttackCount",
-            "constants": [],
-            "variables": [
-              "Wolf_MaxAttackCount"
-            ]
-          },
-          "entityClass": "Enemy",
-          "maximum": {
-            "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-            "displayLines": "Wolf_MaxAttackCount",
-            "constants": [],
-            "variables": [
-              "Wolf_MaxAttackCount"
-            ]
-          },
-          "assignState": "True",
-          "state": "Normal"
-        },
-        "Deleted bullshit",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-250493307\">Enemy_W2_Lycan_RageFirstTime</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "value": "ENEMIES_OBJECT_UNUSED__168"
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": ">=",
-                    "value2": 3
-                  }
-                ]
-              },
-              {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "value": "ENEMIES_OBJECT_UNUSED__168",
-                    "invertCondition": true
-                  },
-                  {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "HP_Bars_Remaining",
-                        "compareType": ">=",
-                        "value2": 2
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1370655977\">Enemy_W2_LycanKing_MainStoryPhase2Mark</a>"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        },
         {
           "name": "Add Events/Bonuses",
           "to": {
@@ -2341,40 +548,16 @@ const compositeAbilityObject = {
                 "invertCondition": true
               },
               {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "flagName": "STAT_CTRL",
-                    "invertCondition": true
-                  },
-                  {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "flagName": "Break",
-                    "invertCondition": true
-                  }
-                ]
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "flagName": "Break",
+                "invertCondition": true
               }
             ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1726527858\">Enemy_W2_Lycan_RageEffectMark</a>"
-            }
-          ]
+          }
         },
         {
           "name": "Find New Target",
@@ -2485,10 +668,12 @@ const compositeAbilityObject = {
           ]
         },
         {
-          "name": "Add Battle Event",
-          "teamName": "Enemy Team",
-          "eventID": 20009,
-          "variables": null
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1736159544\">Enemy_W2_Lycan_RageStatus</a>"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2496,7 +681,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1736159544\">Enemy_W2_Lycan_RageStatus</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-826569398\">Enemy_W2_Lycan_RageStatusPhase03</a>"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2506,72 +691,96 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1346076887\">Enemy_W2_Lycan_RageStartMark</a>"
         },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Ability Target(ST)}}"
-                },
-                "flagName": "STAT_CTRL",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Ability Target(ST)}}"
-                },
-                "flagName": "Break",
-                "invertCondition": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2068184553\">Enemy_W2_LycanKing_RageEffect</a>"
-            }
-          ]
-        }
+        "Trigger: Ability End"
       ],
       "targetObjectData": {
-        "primaryTarget": "Inherent Target"
+        "primaryTarget": "{{Caster}}"
       },
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-250493307\">Enemy_W2_Lycan_RageFirstTime</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-826569398\">Enemy_W2_Lycan_RageStatusPhase03</a>",
           "execute": [
             {
-              "eventTrigger": "Attack DMG End [Owner]",
+              "eventTrigger": "Entity Created [Anyone]",
               "execute": [
-                "Modifier Deletes Itself"
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "ENEMIES_OBJECT_UNUSED__167"
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "entityClass": "Enemy",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "assignState": "True",
+                      "state": "Active"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value": "MonsterType_W2_Lycan_01"
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value": "MonsterType_W2_Lycan_00"
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value": "MonsterType_W2_Lycan"
+                      }
+                    }
+                  ]
+                }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>"
         }
       ]
     },
-    "2034012_Monster_W2_LycanKing_Ability07_MainStroy_Part01": {
-      "fileName": "2034012_Monster_W2_LycanKing_Ability07_MainStroy_Part01",
-      "abilityType": null,
+    "2034012_Monster_W2_LycanKing_RLBoss_Ability07_Part01": {
+      "fileName": "2034012_Monster_W2_LycanKing_RLBoss_Ability07_Part01",
+      "childAbilityList": [
+        "2034012_Monster_W2_LycanKing_Ability07_Part01",
+        "2034012_Monster_W2_LycanKing_Ability07_Part02",
+        "2034012_Monster_W2_LycanKing_Ability07_Camera",
+        "2034012_Monster_W2_LycanKing_RLBoss_Ability07_Part01",
+        "2034012_Monster_W2_LycanKing_RLBoss_Ability07_Part02"
+      ],
+      "skillTrigger": "Skill07",
+      "abilityType": "Basic ATK",
       "energy": null,
       "toughnessList": null,
       "parse": [
@@ -2581,16 +790,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W2_LycanKing_Ability07_MainStroy_Part02",
+          "ability": "Monster_W2_LycanKing_RLBoss_Ability07_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "targetObjectData": {
-        "primaryTarget": "Inherent Target"
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       },
       "references": []
     },
@@ -2926,9 +1135,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>"
         }
       ]
     },
@@ -2958,51 +1165,52 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "2034012_Monster_W2_LycanKing_ChangePhase_Part02": {
-      "fileName": "2034012_Monster_W2_LycanKing_ChangePhase_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1736159544\">Enemy_W2_Lycan_RageStatus</a>"
-        }
-      ]
-    },
-    "2034012_Monster_W2_LycanKing_ChangePhase_Part01": {
-      "fileName": "2034012_Monster_W2_LycanKing_ChangePhase_Part01",
+    "2034012_Monster_W2_LycanKing_RLBoss_AbilityP05": {
+      "fileName": "2034012_Monster_W2_LycanKing_RLBoss_AbilityP05",
       "childAbilityList": [
-        "2034012_Monster_W2_LycanKing_ChangePhase_Part01",
-        "2034012_Monster_W2_LycanKing_ChangePhase_Part02",
-        "2034012_Monster_W2_LycanKing_ChangePhase_Camera"
+        "2034012_Monster_W2_LycanKing_RLBoss_AbilityP05"
       ],
-      "skillTrigger": "ChangePhase",
-      "abilityType": "Basic ATK",
+      "skillTrigger": "SkillP05",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W2_LycanKing_ChangePhase_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2034012_Monster_W2_LycanKing_AbilityP03": {
+      "fileName": "2034012_Monster_W2_LycanKing_AbilityP03",
+      "childAbilityList": [
+        "2034012_Monster_W2_LycanKing_AbilityP03"
       ],
+      "skillTrigger": "SkillP03",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2034012_Monster_W2_LycanKing_AbilityP02": {
+      "fileName": "2034012_Monster_W2_LycanKing_AbilityP02",
+      "childAbilityList": [
+        "2034012_Monster_W2_LycanKing_AbilityP02"
+      ],
+      "skillTrigger": "SkillP02",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
@@ -3235,2026 +1443,6 @@ const compositeAbilityObject = {
         }
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2034012_Monster_W2_LycanKing_Ability05_Insert_Part02": {
-      "fileName": "2034012_Monster_W2_LycanKing_Ability05_Insert_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Lupine Chase Calls Bloody Gleam"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"268414254\">W2_LycanKing_BattleScore2Mark</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "WolfBoss_BloodRageCount",
-          "value": 0
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1708829325\">Enemy_W2_LycanKing_RageEffectFadeout</a>"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
-            },
-            "HitSplit": 0.2,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
-            },
-            "HitSplit": 0.2,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
-            },
-            "HitSplit": 0.3,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
-            },
-            "HitSplit": 0.3,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "value": "ENEMIES_OBJECT_UNUSED__168"
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Ability Target(ST)}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1708564836\">Standard_Fear</a>[<span class=\"descriptionNumberColor\">Terrified</span>]",
-                "invertCondition": true
-              },
-              "passed": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1138048251\">Standard_FearPre</a>[<span class=\"descriptionNumberColor\">Terror Grip</span>]"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1708564836\">Standard_Fear</a>[<span class=\"descriptionNumberColor\">Terrified</span>]",
-                  "baseChance": {
-                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                    "displayLines": "{[Skill05[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[1]]}"
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_LoseSP": 0
-                  }
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Ability Target(ST)}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1708564836\">Standard_Fear</a>[<span class=\"descriptionNumberColor\">Terrified</span>]",
-                "invertCondition": true
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1138048251\">Standard_FearPre</a>[<span class=\"descriptionNumberColor\">Terror Grip</span>]",
-                  "baseChance": {
-                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                    "displayLines": "{[Skill05[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[1]]}"
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_LoseSP": {
-                      "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                      "displayLines": "{[Skill05[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill05[2]]}"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1344172938\">Enemy_W2_LycanKing_Part1End</a>",
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "WolfBoss_BloodRageCount",
-              "value": 0
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"563066245\">Enemy_W2_LycanKing_BloodRageMark</a>[<span class=\"descriptionNumberColor\">Irate</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"435779874\">Monster_W2_LycanKing_RefreshEnergyBar</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1344172938\">Enemy_W2_LycanKing_Part1End</a>"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 2034011,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Borisin Warhead: Hoolay"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1034285047\">Enemy_W2_LycanKing_MainStoryTutorial</a>"
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1708829325\">Enemy_W2_LycanKing_RageEffectFadeout</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1034285047\">Enemy_W2_LycanKing_MainStoryTutorial</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action Phase Start [Anyone][?]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Player Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "MDF_Mark",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "MDF_Mark",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1708829325\">Enemy_W2_LycanKing_RageEffectFadeout</a>",
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2034012_Monster_W2_LycanKing_Ability05_Insert_Part01": {
-      "fileName": "2034012_Monster_W2_LycanKing_Ability05_Insert_Part01",
-      "childAbilityList": [
-        "2034012_Monster_W2_LycanKing_Ability05_Insert_Part01",
-        "2034012_Monster_W2_LycanKing_Ability05_Insert_Part02",
-        "2034012_Monster_W2_LycanKing_Ability05_Insert_Camera"
-      ],
-      "skillTrigger": "Skill05",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W2_LycanKing_Ability05_Insert_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "2034012_Monster_W2_LycanKing_Ability04_Part02": {
-      "fileName": "2034012_Monster_W2_LycanKing_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "UsedShieldFlag",
-          "value": 1
-        },
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "advanceType": "Set",
-          "multiAdd": "{[Skill04[0]]}"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "advanceType": "Set",
-          "multiAdd": "{[Skill04[1]]}"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-              "displayLines": "{[Skill04[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[2]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-              "displayLines": "{[Skill04[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[3]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "UI Display Event (On Entity)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "popUpText": "Action Delayed",
-          "living": true
-        },
-        {
-          "name": "UI Display Event (On Entity)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "popUpText": "Action Delayed",
-          "living": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "WolfBoss_BloodRageCount",
-            "compareType": "<",
-            "value2": {
-              "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || Constants[0] (3) || SUB || RETURN",
-              "displayLines": "(WolfBoss_BloodRageMaxCount - 3)",
-              "constants": [
-                3
-              ],
-              "variables": [
-                "WolfBoss_BloodRageMaxCount"
-              ]
-            }
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2034012_Monster_W2_LycanKing_Ability04_Part01": {
-      "fileName": "2034012_Monster_W2_LycanKing_Ability04_Part01",
-      "childAbilityList": [
-        "2034012_Monster_W2_LycanKing_Ability04_Part01",
-        "2034012_Monster_W2_LycanKing_Ability04_Part02",
-        "2034012_Monster_W2_LycanKing_Ability04_Camera"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_LycanKing_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2034012_Monster_W2_LycanKing_Ability03_Part02": {
-      "fileName": "2034012_Monster_W2_LycanKing_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.2,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2034012_Monster_W2_LycanKing_Ability03_Part01": {
-      "fileName": "2034012_Monster_W2_LycanKing_Ability03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_LycanKing_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2034012_Monster_W2_LycanKing_Ability02_Part02": {
-      "fileName": "2034012_Monster_W2_LycanKing_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Targets Adjacent(Blast)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                  "displayLines": "{[Skill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[1]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Targets Adjacent(Blast)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                  "displayLines": "{[Skill02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[1]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2034012_Monster_W2_LycanKing_Ability02_Part01": {
-      "fileName": "2034012_Monster_W2_LycanKing_Ability02_Part01",
-      "childAbilityList": [
-        "2034012_Monster_W2_LycanKing_Ability02_Part01",
-        "2034012_Monster_W2_LycanKing_Ability02_Part02",
-        "2034012_Monster_W2_LycanKing_Ability02_Camera"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_LycanKing_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "subTarget": "Blast Targets"
-      },
-      "references": []
-    },
-    "2034012_Monster_W2_LycanKing_Ability01_Part02": {
-      "fileName": "2034012_Monster_W2_LycanKing_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2034012_Monster_W2_LycanKing_Ability01_Part01": {
-      "fileName": "2034012_Monster_W2_LycanKing_Ability01_Part01",
-      "childAbilityList": [
-        "2034012_Monster_W2_LycanKing_Ability01_Part01",
-        "2034012_Monster_W2_LycanKing_Ability01_Part02",
-        "2034012_Monster_W2_LycanKing_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_LycanKing_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "2034012_Monster_W2_LycanKing_MainStoryPhase02Start": {
-      "fileName": "2034012_Monster_W2_LycanKing_MainStoryPhase02Start",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-211625513\">Enemy_W2_LycanKing_Poison</a>[<span class=\"descriptionNumberColor\">\"Tumbledust\"</span>]",
-          "valuePerStack": {
-            "MDF_LoseHPRatio": {
-              "operator": "Variables[0] (P1_LoseHPRatio) || RETURN",
-              "displayLines": "P1_LoseHPRatio",
-              "constants": [],
-              "variables": [
-                "P1_LoseHPRatio"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-211625513\">Enemy_W2_LycanKing_Poison</a>[<span class=\"descriptionNumberColor\">\"Tumbledust\"</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Consume",
-                  "consumeFrom": "MaxHP",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "consumePercent": {
-                    "operator": "Variables[0] (MDF_LoseHPRatio) || RETURN",
-                    "displayLines": "MDF_LoseHPRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_LoseHPRatio"
-                    ]
-                  },
-                  "consumeFloor": 0.0009999999,
-                  "attackType": "DOT",
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "AllType"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is NOT in Auto-Battle State"
-                  },
-                  "failed": [
-                    {
-                      "name": "Consume",
-                      "consumeFrom": "MaxHP",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "consumePercent": {
-                        "operator": "Variables[0] (MDF_LoseHPRatio) || RETURN",
-                        "displayLines": "MDF_LoseHPRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_LoseHPRatio"
-                        ]
-                      },
-                      "consumeFloor": 0.0009999999,
-                      "attackType": "DOT",
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "AllType"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_LoseHPRatio"
-          ],
-          "latentQueue": [],
-          "description": "At the start of each turn, consumes <span class=\"descriptionNumberColor\">MDF_LoseHPRatio</span> of this unit's HP.",
-          "type": "Debuff",
-          "effectName": "\"Tumbledust\"",
-          "statusName": "\"Tumbledust\""
-        }
-      ]
-    },
-    "2034012_Monster_W2_LycanKing_MainStoryPhase01End": {
-      "fileName": "2034012_Monster_W2_LycanKing_MainStoryPhase01End",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "flagName": "Break"
-          },
-          "passed": [
-            {
-              "name": "Reset Toughness",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              }
-            },
-            {
-              "name": "Exit Broken-State",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "flagName": "STAT_CTRL"
-          },
-          "passed": [
-            {
-              "name": "Remove Modifier Behavior Flag(s)",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "flagNames": []
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1344172938\">Enemy_W2_LycanKing_Part1End</a>"
-        },
-        {
-          "name": "Inject Ability Use",
-          "abilityName": "Monster_W2_LycanKing_Ability05_Insert_Part01",
-          "abilitySource": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "abilityTarget": {
-            "name": "Target Name",
-            "target": "{{Enemies by Aggro}}"
-          },
-          "priorityTag": "EnemyChangeState",
-          "canHitNonTargets": true,
-          "showInActionOrder": true,
-          "abortFlags": [
-            "STAT_CTRL",
-            "Break",
-            "DisableAction"
-          ],
-          "allowAbilityTriggers": false
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-571680589\">Enemy_W2_LycanKing_HPListener</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1344172938\">Enemy_W2_LycanKing_Part1End</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.0009999999
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Locked HP Floor Reached [Owner]"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2034012_Monster_W2_LycanKing_MainStory": {
-      "fileName": "2034012_Monster_W2_LycanKing_MainStory",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 2034011,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Borisin Warhead: Hoolay"
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"545997619\">Monster_W2_LycanKing_Revive</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1274154445\">Enemy_W2_LycanKing_MainStoryPhase01</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-655371918\">Enemy_W2_LycanKing_FirstTimeRageMark</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-571680589\">Enemy_W2_LycanKing_HPListener</a>"
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": 203401100,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": null
-              },
-              "passed": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"545997619\">Monster_W2_LycanKing_Revive</a>"
-                },
-                {
-                  "name": "Add Stage Ability",
-                  "abilityName": "Monster_W2_LycanKing_MainStoryPhase02Start",
-                  "parameters": {
-                    "P1_LoseHPRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_338) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_338",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_338"
-                      ]
-                    }
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1099267528\">Enemy_W2_LycanKing_HPListenerPhase02</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1749070529\">Enemy_W2_LycanKing_MainStoryChangePhaseLockHP</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-913728417\">Enemy_W2_LycanKing_MainStoryPhase2LockHP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.0009999999
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Locked HP Floor Reached [Owner]",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "phase": "Phase1"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1370655977\">Enemy_W2_LycanKing_MainStoryPhase2Mark</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1749070529\">Enemy_W2_LycanKing_MainStoryChangePhaseLockHP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.5
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Locked HP Floor Reached [Owner]",
-              "execute": [
-                {
-                  "name": "Trigger 0-Toughness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  }
-                },
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "phase": "Phase1"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
-                        "displayLines": "Wolf_AttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_AttackCount"
-                        ]
-                      },
-                      "entityClass": "Enemy",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "maximum": {
-                        "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
-                        "displayLines": "Wolf_MaxAttackCount",
-                        "constants": [],
-                        "variables": [
-                          "Wolf_MaxAttackCount"
-                        ]
-                      },
-                      "assignState": "True",
-                      "state": "Normal"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"979801477\">Monster_Standard_Endurance</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1370655977\">Enemy_W2_LycanKing_MainStoryPhase2Mark</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-913728417\">Enemy_W2_LycanKing_MainStoryPhase2LockHP</a>"
-                },
-                {
-                  "name": "Inject Ability Use",
-                  "condition": {
-                    "name": "Insert Ability Condition",
-                    "type": "AbilityOwnerInsertUnusedCount",
-                    "typeValue": 1
-                  },
-                  "abilityName": "Monster_W2_LycanKing_PassiveAbility_Insert",
-                  "priorityTag": "EnemyPhaseChange",
-                  "ownerState": "Mask_AliveOrLimbo",
-                  "targetState": "Mask_AliveOrLimbo",
-                  "canHitNonTargets": true,
-                  "showInActionOrder": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1099267528\">Enemy_W2_LycanKing_HPListenerPhase02</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "condition": {
-                    "name": "Insert Ability Condition",
-                    "type": "AbilityOwnerInsertUnusedCount",
-                    "typeValue": 1
-                  },
-                  "abilityName": "Monster_W2_LycanKing_MainStoryPhase02Start",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Level Entity}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "priorityTag": "EnemyPhaseChange",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            },
-            {
-              "eventTrigger": "HP Change [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": "<=",
-                        "value2": 0.75
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": ">",
-                        "value2": 0.5
-                      }
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": "<=",
-                        "value2": 0.25
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": ">",
-                        "value2": 0.0009999999
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-571680589\">Enemy_W2_LycanKing_HPListener</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action Phase Start [Owner][?]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_DialogFlag",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.0009999999
-                }
-              ]
-            },
-            {
-              "eventTrigger": "HP Change [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": "<=",
-                        "value2": 0.5
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": ">",
-                        "value2": 0.25
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "MDF_DialogFlag",
-                        "compareType": "=",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_DialogFlag",
-                      "value": 1
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Character ID",
-                        "ID": 1220,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "characterName": "Feixiao"
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Compare: Variable",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Modifier Holder}}"
-                                },
-                                "value1": "CurrentHP%",
-                                "compareType": "<=",
-                                "value2": 0.0009999999
-                              }
-                            ]
-                          },
-                          "passed": [
-                            {
-                              "name": "Inject Ability Use",
-                              "condition": {
-                                "name": "Insert Ability Condition",
-                                "type": "AbilityOwnerInsertUnusedCount",
-                                "typeValue": 1
-                              },
-                              "abilityName": "Monster_W2_LycanKing_MainStoryPhase01End",
-                              "abilityTarget": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "priorityTag": "EnemyPhaseChange",
-                              "canHitNonTargets": true,
-                              "allowAbilityTriggers": false
-                            }
-                          ]
-                        }
-                      ],
-                      "noTargetFound": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Compare: Variable",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Modifier Holder}}"
-                                },
-                                "value1": "CurrentHP%",
-                                "compareType": "<=",
-                                "value2": 0.25
-                              },
-                              {
-                                "name": "Compare: Variable",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Modifier Holder}}"
-                                },
-                                "value1": "CurrentHP%",
-                                "compareType": ">",
-                                "value2": 0.0009999999
-                              },
-                              {
-                                "name": "Compare: Variable",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Modifier Holder}}"
-                                },
-                                "value1": "MDF_DialogFlag",
-                                "compareType": "=",
-                                "value2": 0
-                              }
-                            ]
-                          },
-                          "passed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "MDF_DialogFlag",
-                              "value": 1
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Variable",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Modifier Holder}}"
-                                },
-                                "value1": "CurrentHP%",
-                                "compareType": "<=",
-                                "value2": 0.0009999999
-                              },
-                              "passed": [
-                                {
-                                  "name": "Inject Ability Use",
-                                  "condition": {
-                                    "name": "Insert Ability Condition",
-                                    "type": "AbilityOwnerInsertUnusedCount",
-                                    "typeValue": 1
-                                  },
-                                  "abilityName": "Monster_W2_LycanKing_MainStoryPhase01End",
-                                  "abilityTarget": {
-                                    "name": "Target Name",
-                                    "target": "{{Modifier Holder}}"
-                                  },
-                                  "priorityTag": "EnemyPhaseChange",
-                                  "canHitNonTargets": true,
-                                  "allowAbilityTriggers": false
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Attacked Completed [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_DialogFlag",
-                  "value": 0
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-655371918\">Enemy_W2_LycanKing_FirstTimeRageMark</a>",
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1274154445\">Enemy_W2_LycanKing_MainStoryPhase01</a>",
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "2034012_Monster_W2_LycanKing_AbilityP03": {
-      "fileName": "2034012_Monster_W2_LycanKing_AbilityP03",
-      "childAbilityList": [
-        "2034012_Monster_W2_LycanKing_AbilityP03"
-      ],
-      "skillTrigger": "SkillP03",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2034012_Monster_W2_LycanKing_AbilityP02": {
-      "fileName": "2034012_Monster_W2_LycanKing_AbilityP02",
-      "childAbilityList": [
-        "2034012_Monster_W2_LycanKing_AbilityP02"
-      ],
-      "skillTrigger": "SkillP02",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
@@ -5636,19 +1824,19 @@ const compositeAbilityObject = {
                   "eventID": 20008,
                   "variables": {
                     "P3_Lycan01Delay": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_334) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_334",
+                      "operator": "Variables[0] (UnusedUnderThisBase_8964) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_8964",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_334"
+                        "UnusedUnderThisBase_8964"
                       ]
                     },
                     "P4_Lycan02Delay": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_335) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_335",
+                      "operator": "Variables[0] (UnusedUnderThisBase_8986) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_8986",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_335"
+                        "UnusedUnderThisBase_8986"
                       ]
                     }
                   }
@@ -5676,11 +1864,11 @@ const compositeAbilityObject = {
                       "scope": "TargetEntity",
                       "variableName": "P3_Lycan01Delay",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_334) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_334",
+                        "operator": "Variables[0] (UnusedUnderThisBase_8964) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_8964",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_334"
+                          "UnusedUnderThisBase_8964"
                         ]
                       }
                     }
@@ -5709,11 +1897,11 @@ const compositeAbilityObject = {
                       "scope": "TargetEntity",
                       "variableName": "P4_Lycan02Delay",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_335) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_335",
+                        "operator": "Variables[0] (UnusedUnderThisBase_8986) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_8986",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_335"
+                          "UnusedUnderThisBase_8986"
                         ]
                       }
                     }
@@ -6390,6 +2578,10 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__540941563\">Enemy_W2_LycanKing_RageStatusPhase2</a>[<span class=\"descriptionNumberColor\">Eclipse's Wrath</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. While in this state, Hoolay gains Irate and can use Barrenness of Earth Gouged and Lupine Chase Calls Bloody Gleam. This state will be removed when this unit is Weakness Broken.",
+          "type": "Buff",
+          "effectName": "Enters the Eclipse's Wrath state",
+          "statusName": "Eclipse's Wrath",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -6518,16 +2710,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. While in this state, Hoolay gains Irate and can use Barrenness of Earth Gouged and Lupine Chase Calls Bloody Gleam. This state will be removed when this unit is Weakness Broken.",
-          "type": "Buff",
-          "effectName": "Enters the Eclipse's Wrath state",
-          "statusName": "Eclipse's Wrath"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__224849748\">Enemy_W2_LycanKing_RageStatus</a>[<span class=\"descriptionNumberColor\">Eclipse's Ire</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. While in this state, Hoolay gains Irate and can use Lupine Chase Calls Bloody Gleam. This state will be removed when this unit is Weakness Broken.",
+          "type": "Buff",
+          "effectName": "Enters the Eclipse's Ire state",
+          "statusName": "Eclipse's Ire",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -6702,11 +2894,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Enters the Moon Rage state and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>. While in this state, Hoolay gains Irate and can use Lupine Chase Calls Bloody Gleam. This state will be removed when this unit is Weakness Broken.",
-          "type": "Buff",
-          "effectName": "Enters the Eclipse's Ire state",
-          "statusName": "Eclipse's Ire"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6714,6 +2902,9 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "AIFlag"
           ],
           "execute": [
             {
@@ -7164,13 +3355,1419 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
           ]
         }
       ]
+    },
+    "2034012_Monster_W2_LycanKing_Ability05_Insert_Part02": {
+      "fileName": "2034012_Monster_W2_LycanKing_Ability05_Insert_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Lupine Chase Calls Bloody Gleam"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"268414254\">W2_LycanKing_BattleScore2Mark</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "WolfBoss_BloodRageCount",
+          "value": 0
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1708829325\">Enemy_W2_LycanKing_RageEffectFadeout</a>"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+              "displayLines": "{[Skill05[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[0]]}"
+              ]
+            },
+            "HitSplit": 0.2,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+              "displayLines": "{[Skill05[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[0]]}"
+              ]
+            },
+            "HitSplit": 0.2,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+              "displayLines": "{[Skill05[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[0]]}"
+              ]
+            },
+            "HitSplit": 0.3,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+              "displayLines": "{[Skill05[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[0]]}"
+              ]
+            },
+            "HitSplit": 0.3,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "ENEMIES_OBJECT_UNUSED__168"
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1708564836\">Standard_Fear</a>[<span class=\"descriptionNumberColor\">Terrified</span>]",
+                "invertCondition": true
+              },
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1138048251\">Standard_FearPre</a>[<span class=\"descriptionNumberColor\">Terror Grip</span>]"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1708564836\">Standard_Fear</a>[<span class=\"descriptionNumberColor\">Terrified</span>]",
+                  "baseChance": {
+                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+                    "displayLines": "{[Skill05[1]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill05[1]]}"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_LoseSP": 0
+                  }
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1708564836\">Standard_Fear</a>[<span class=\"descriptionNumberColor\">Terrified</span>]",
+                "invertCondition": true
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1138048251\">Standard_FearPre</a>[<span class=\"descriptionNumberColor\">Terror Grip</span>]",
+                  "baseChance": {
+                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+                    "displayLines": "{[Skill05[1]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill05[1]]}"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_LoseSP": {
+                      "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
+                      "displayLines": "{[Skill05[2]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill05[2]]}"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1344172938\">Enemy_W2_LycanKing_Part1End</a>",
+            "invertCondition": true
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "WolfBoss_BloodRageCount",
+              "value": 0
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"563066245\">Enemy_W2_LycanKing_BloodRageMark</a>[<span class=\"descriptionNumberColor\">Irate</span>]"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"435779874\">Monster_W2_LycanKing_RefreshEnergyBar</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1344172938\">Enemy_W2_LycanKing_Part1End</a>"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 2034011,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "Borisin Warhead: Hoolay"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1034285047\">Enemy_W2_LycanKing_MainStoryTutorial</a>"
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1708829325\">Enemy_W2_LycanKing_RageEffectFadeout</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1034285047\">Enemy_W2_LycanKing_MainStoryTutorial</a>",
+          "execute": [
+            {
+              "eventTrigger": "Action Phase Start [Anyone][?]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_Mark",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_Mark",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1708829325\">Enemy_W2_LycanKing_RageEffectFadeout</a>"
+        }
+      ]
+    },
+    "2034012_Monster_W2_LycanKing_Ability05_Insert_Part01": {
+      "fileName": "2034012_Monster_W2_LycanKing_Ability05_Insert_Part01",
+      "childAbilityList": [
+        "2034012_Monster_W2_LycanKing_Ability05_Insert_Part01",
+        "2034012_Monster_W2_LycanKing_Ability05_Insert_Part02",
+        "2034012_Monster_W2_LycanKing_Ability05_Insert_Camera"
+      ],
+      "skillTrigger": "Skill05",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W2_LycanKing_Ability05_Insert_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "2034012_Monster_W2_LycanKing_Ability04_Part02": {
+      "fileName": "2034012_Monster_W2_LycanKing_Ability04_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "UsedShieldFlag",
+          "value": 1
+        },
+        {
+          "name": "Action Advance/Delay",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "advanceType": "Set",
+          "multiAdd": "{[Skill04[0]]}"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "advanceType": "Set",
+          "multiAdd": "{[Skill04[1]]}"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
+              "displayLines": "{[Skill04[2]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[2]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
+              "displayLines": "{[Skill04[3]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[3]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "UI Display Event (On Entity)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "popUpText": "Action Delayed",
+          "living": true
+        },
+        {
+          "name": "UI Display Event (On Entity)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "popUpText": "Action Delayed",
+          "living": true
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "WolfBoss_BloodRageCount",
+            "compareType": "<",
+            "value2": {
+              "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || Constants[0] (3) || SUB || RETURN",
+              "displayLines": "(WolfBoss_BloodRageMaxCount - 3)",
+              "constants": [
+                3
+              ],
+              "variables": [
+                "WolfBoss_BloodRageMaxCount"
+              ]
+            }
+          }
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "2034012_Monster_W2_LycanKing_Ability04_Part01": {
+      "fileName": "2034012_Monster_W2_LycanKing_Ability04_Part01",
+      "childAbilityList": [
+        "2034012_Monster_W2_LycanKing_Ability04_Part01",
+        "2034012_Monster_W2_LycanKing_Ability04_Part02",
+        "2034012_Monster_W2_LycanKing_Ability04_Camera"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_LycanKing_Ability04_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "2034012_Monster_W2_LycanKing_RLBoss_Ability03_Part02": {
+      "fileName": "2034012_Monster_W2_LycanKing_RLBoss_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                  "displayLines": "{[Skill03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill03[0]]}"
+                  ]
+                },
+                "HitSplit": 0.2,
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                  "displayLines": "{[Skill03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill03[0]]}"
+                  ]
+                },
+                "HitSplit": 0.2,
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                  "displayLines": "{[Skill03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill03[0]]}"
+                  ]
+                },
+                "HitSplit": 0.2,
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                  "displayLines": "{[Skill03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill03[0]]}"
+                  ]
+                },
+                "HitSplit": 0.2,
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                  "displayLines": "{[Skill03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill03[0]]}"
+                  ]
+                },
+                "HitSplit": 0.2,
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                  "displayLines": "{[Skill03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill03[0]]}"
+                  ]
+                },
+                "HitSplit": 0.2,
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                  "displayLines": "{[Skill03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill03[0]]}"
+                  ]
+                },
+                "HitSplit": 0.2,
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                  "displayLines": "{[Skill03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill03[0]]}"
+                  ]
+                },
+                "HitSplit": 0.2,
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                  "displayLines": "{[Skill03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill03[0]]}"
+                  ]
+                },
+                "HitSplit": 0.2,
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                  "displayLines": "{[Skill03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill03[0]]}"
+                  ]
+                },
+                "HitSplit": 0.2,
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-661361560\">Enemy_W2_LycanKing_RLBoss_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Thirst for War</span>]",
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] ({[SkillP05[0]]}) || RETURN",
+              "displayLines": "{[SkillP05[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP05[0]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-717970764\">Enemy_W2_LycanKing_RLBoss_BeforeFear</a>",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1138048251\">Standard_FearPre</a>[<span class=\"descriptionNumberColor\">Terror Grip</span>]",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1708564836\">Standard_Fear</a>[<span class=\"descriptionNumberColor\">Terrified</span>]",
+                "invertCondition": true
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1138048251\">Standard_FearPre</a>[<span class=\"descriptionNumberColor\">Terror Grip</span>]",
+              "baseChance": {
+                "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
+                "displayLines": "{[Skill03[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill03[1]]}"
+                ]
+              },
+              "valuePerStack": {
+                "MDF_LoseSP": 0
+              },
+              "casterAssign": "CasterSelf"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-717970764\">Enemy_W2_LycanKing_RLBoss_BeforeFear</a>",
+          "counter": 4,
+          "stackType": "Replace",
+          "modifierFlags": [
+            "RemoveWhenCasterDead",
+            "AttackSign"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Define Modifier Variable",
+                  "modifierName": null,
+                  "value": {
+                    "operator": "Variables[0] (MDF_Count) || RETURN",
+                    "displayLines": "MDF_Count",
+                    "constants": [],
+                    "variables": [
+                      "MDF_Count"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Added Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_Count",
+                  "value": -1,
+                  "max": 100
+                },
+                {
+                  "name": "UI Display Event (On Entity)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "popUpText": "Energy Regenerated",
+                  "living": true
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_Count",
+                    "compareType": "=",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Energy",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "value": {
+                        "operator": "Variables[0] (MDF_SPRecover) || RETURN",
+                        "displayLines": "MDF_SPRecover",
+                        "constants": [],
+                        "variables": [
+                          "MDF_SPRecover"
+                        ]
+                      },
+                      "isFixed": "* ERR"
+                    },
+                    "Modifier Deletes Itself"
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Modifier Variable",
+                      "modifierName": null,
+                      "value": {
+                        "operator": "Variables[0] (MDF_Count) || RETURN",
+                        "displayLines": "MDF_Count",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Count"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Attacked End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "ENEMIES_OBJECT_UNUSED__168"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1708564836\">Standard_Fear</a>[<span class=\"descriptionNumberColor\">Terrified</span>]",
+                        "invertCondition": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1708564836\">Standard_Fear</a>[<span class=\"descriptionNumberColor\">Terrified</span>]",
+                          "valuePerStack": {
+                            "MDF_Count": 1
+                          }
+                        }
+                      ]
+                    },
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier is Added [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Modifier Was",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1138048251\">Standard_FearPre</a>[<span class=\"descriptionNumberColor\">Terror Grip</span>]"
+                      },
+                      {
+                        "name": "Modifier Was",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1708564836\">Standard_Fear</a>[<span class=\"descriptionNumberColor\">Terrified</span>]"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "2034012_Monster_W2_LycanKing_RLBoss_Ability03_Part01": {
+      "fileName": "2034012_Monster_W2_LycanKing_RLBoss_Ability03_Part01",
+      "childAbilityList": [
+        "2034012_Monster_W2_LycanKing_RLBoss_Ability03_Part01",
+        "2034012_Monster_W2_LycanKing_RLBoss_Ability03_Part02",
+        "2034012_Monster_W2_LycanKing_Ability03_Camera"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_LycanKing_RLBoss_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "2034012_Monster_W2_LycanKing_Ability02_Part02": {
+      "fileName": "2034012_Monster_W2_LycanKing_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                  "displayLines": "{[Skill02[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill02[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            },
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+                  "displayLines": "{[Skill02[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill02[1]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                  "displayLines": "{[Skill02[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill02[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            },
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+                  "displayLines": "{[Skill02[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill02[1]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2034012_Monster_W2_LycanKing_Ability02_Part01": {
+      "fileName": "2034012_Monster_W2_LycanKing_Ability02_Part01",
+      "childAbilityList": [
+        "2034012_Monster_W2_LycanKing_Ability02_Part01",
+        "2034012_Monster_W2_LycanKing_Ability02_Part02",
+        "2034012_Monster_W2_LycanKing_Ability02_Camera"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_LycanKing_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
+      "references": []
+    },
+    "2034012_Monster_W2_LycanKing_Ability01_Part02": {
+      "fileName": "2034012_Monster_W2_LycanKing_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-2073013741\">Enemy_W2_Lycan_RageMarkV2</a>"
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                  "displayLines": "{[Skill01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill01[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                  "displayLines": "{[Skill01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill01[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2034012_Monster_W2_LycanKing_Ability01_Part01": {
+      "fileName": "2034012_Monster_W2_LycanKing_Ability01_Part01",
+      "childAbilityList": [
+        "2034012_Monster_W2_LycanKing_Ability01_Part01",
+        "2034012_Monster_W2_LycanKing_Ability01_Part02",
+        "2034012_Monster_W2_LycanKing_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_LycanKing_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
     },
     "2034012_Monster_W2_LycanKing_PassiveAbility_BGM": {
       "fileName": "2034012_Monster_W2_LycanKing_PassiveAbility_BGM",
@@ -7276,9 +4873,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -7296,6 +4891,14 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-661361560\">Enemy_W2_LycanKing_RLBoss_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Thirst for War</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect is stackable.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Thirst for War",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7325,22 +4928,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect is stackable.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Thirst for War",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__268414254\">W2_LycanKing_BattleScore2Mark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__268414254\">W2_LycanKing_BattleScore2Mark</a>"
         },
         {
           "name": "Modifier Construction",
@@ -7361,13 +4953,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-518764402\">W2_LycanKing_BattleScore1</a>",
+          "latentQueue": [
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7419,10 +5012,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
@@ -7430,6 +5019,9 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-2068184553\">Enemy_W2_LycanKing_RageEffect</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
+          ],
+          "latentQueue": [
+            "AIFlag"
           ],
           "execute": [
             {
@@ -7601,16 +5193,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__563066245\">Enemy_W2_LycanKing_BloodRageMark</a>[<span class=\"descriptionNumberColor\">Irate</span>]",
           "stackType": "Replace",
+          "latentQueue": [
+            "MDF_BloodRageCountRemain",
+            "MDF_BloodRageCountBefore"
+          ],
+          "description": "Hoolay currently possesses <span class=\"descriptionNumberColor\">MDF_Layer</span> stack(s) of Irate.",
+          "type": "Other",
+          "effectName": "Irate",
+          "statusName": "Irate",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7657,17 +5254,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_BloodRageCountRemain",
-            "MDF_BloodRageCountBefore"
-          ],
-          "description": "Hoolay currently possesses <span class=\"descriptionNumberColor\">MDF_Layer</span> stack(s) of Irate.",
-          "type": "Other",
-          "effectName": "Irate",
-          "statusName": "Irate",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -7705,17 +5292,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_BloodRageCountRemain",
-            "MDF_BloodRageCountBefore"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-717129648\">Enemy_W2_LycanKing_RageStatusEnhanceSelf</a>[<span class=\"descriptionNumberColor\">Lupine Lord's Majesty</span>]",
           "stackType": "Replace",
+          "description": "Hoolay's SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddRatioPerLayer</span> due to the presence of Sableclaw Wolftrooper and Eclipse Wolftrooper on the field.",
+          "type": "Buff",
+          "effectName": "Lupine Lord's Majesty",
+          "statusName": "Lupine Lord's Majesty",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -7739,29 +5326,13 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Hoolay's SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddRatioPerLayer</span> due to the presence of Sableclaw Wolftrooper and Eclipse Wolftrooper on the field.",
-          "type": "Buff",
-          "effectName": "Lupine Lord's Majesty",
-          "statusName": "Lupine Lord's Majesty",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1729331430\">Enemy_W2_LycanKing_RageStatusEnhance</a>[<span class=\"descriptionNumberColor\">Lupine Lord's Majesty</span>]",
           "modifierFlags": [
             "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "Deal Damage End [Owner]: Hit"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
           ],
           "stackData": [
             "MDF_SpeedAddRatio"
@@ -7772,11 +5343,25 @@ const compositeAbilityObject = {
           "description": "When entering Moon Rage, the effect of Moon Rage will be Enhanced.",
           "type": "Buff",
           "effectName": "Lupitoxin",
-          "statusName": "Lupine Lord's Majesty"
+          "statusName": "Lupine Lord's Majesty",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "Deal Damage End [Owner]: Hit"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__545997619\">Monster_W2_LycanKing_Revive</a>",
+          "latentQueue": [
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -7904,10 +5489,6 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
           ]
         }
       ],

@@ -313,6 +313,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1482818607\">Herta_AbilityEidolon4_DamageUp</a>",
+      "stackData": [
+        "SkillRank_Rank04_P1_DamagePercentage"
+      ],
+      "latentQueue": [
+        "Herta_Count_Insert"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -329,18 +335,23 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "SkillRank_Rank04_P1_DamagePercentage"
-      ],
-      "latentQueue": [
-        "Herta_Count_Insert"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1736222640\">Herta_AbilityEidolon2_CriticalChance</a>[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "MDF_CriticalChance"
+      ],
+      "latentQueue": [
+        "Herta_Count_Insert"
+      ],
+      "description": "Each stack increases CRIT rate by <span class=\"descriptionNumberColor\">MDF_CriticalChance</span>, up to 5 stacks.",
+      "type": "Buff",
+      "effectName": "CRIT Rate Boost",
+      "statusName": "CRIT Rate Boost",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -374,18 +385,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_CriticalChance"
-      ],
-      "latentQueue": [
-        "Herta_Count_Insert"
-      ],
-      "description": "Each stack increases CRIT rate by <span class=\"descriptionNumberColor\">MDF_CriticalChance</span>, up to 5 stacks.",
-      "type": "Buff",
-      "effectName": "CRIT Rate Boost",
-      "statusName": "CRIT Rate Boost",
-      "addStacksPerTrigger": 1
+      ]
     }
   ],
   "targetObjectData": {

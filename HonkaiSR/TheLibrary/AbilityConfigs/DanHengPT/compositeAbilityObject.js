@@ -3,13 +3,14 @@ const compositeAbilityObject = {
   "fullCharacterName": "Dan Heng • Permansor Terrae",
   "trimCharacterName": "DanHengPT",
   "abilityList": [
+    "DanHengPT_Modifiers",
+    "DanHengPT_LocalPlayer_DanHengPT_BeforeBattleStunListener",
+    "DanHengPT_LocalPlayer_StandardAbility_AttackBreak",
+    "DanHengPT_LocalPlayer_DanHengPT_TechniqueUsage",
+    "DanHengPT_LocalPlayer_DanHengPT_NormalAtk01",
     "DanHengPT_DanHengPT_TechniqueInLevel",
-    "DanHengPT_DanHengPT_PassiveAbility01",
-    "DanHengPT_DanHengPT_BE_PassiveAbility",
     "DanHengPT_DanHengPT_BE_InsertAttack_Part02",
-    "DanHengPT_DanHengPT_BE_InsertAttack_Part01",
-    "DanHengPT_DanHengPT_BE_InsertShield_Part02",
-    "DanHengPT_DanHengPT_BE_InsertShield_Part01",
+    "DanHengPT_DanHengPT_PassiveAbility01",
     "DanHengPT_DanHengPT_Ability03_Part02",
     "DanHengPT_DanHengPT_Ability03_Part01",
     "DanHengPT_DanHengPT_Ability03_EnterReady",
@@ -18,11 +19,1256 @@ const compositeAbilityObject = {
     "DanHengPT_DanHengPT_Ability02_Part01",
     "DanHengPT_DanHengPT_Ability01_Part02",
     "DanHengPT_DanHengPT_Ability01_Part01",
-    "DanHengPT_Modifiers",
     "DanHengPT_Functions",
     "DanHengPT_BE_BattleEvents"
   ],
   "abilityObject": {
+    "DanHengPT_Modifiers": {
+      "fileName": "DanHengPT_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1571575270\">ADV_StageAbility_Maze_DanHengPT_Empty</a>",
+          "counter": 1,
+          "stackType": "Replace",
+          "onStack": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Adventure Player}}"
+                }
+              },
+              "failed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": null,
+                  "overworldID": 141404
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1258046280\">ADV_StageAbility_Maze_DanHengPT_OnTeamLeaderChange</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "onStack": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Adventure Team Members}}"
+              },
+              "modifier": null,
+              "overworldID": 141404
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Adventure Player}}"
+              },
+              "modifier": null,
+              "ID": "141404()"
+            }
+          ],
+          "onChangeTeamLead": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Adventure Team Members}}"
+              },
+              "modifier": null,
+              "overworldID": 141404
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Adventure Player}}"
+              },
+              "modifier": null,
+              "ID": "141404()"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1294472860\">ADV_StageAbility_DanHengPT_BeforeBattleStunListener</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1379733689\">ADV_StageAbility_Maze_DanHengPT_Stun</a>",
+          "counter": 1,
+          "stackType": "Merge",
+          "modifierFlags": [
+            "Stun"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__297054432\">DanHengPT_LongLingExtraShield</a>",
+          "stackType": "Replace",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
+          "stackType": "Replace",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "DanHengPT_ExtraDamageCount",
+                  "value": 0
+                }
+              ]
+            }
+          ],
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "DanHengPT_ExtraDamageCount",
+              "from": "ContextOwner",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Define Custom Variable with Copy",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variable": "DanHengPT_ExtraDamageCount",
+                      "target2": null,
+                      "variable2": "MDF_DanHengPT_ExtraDamageCount"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_DanHengPT_ExtraDamageCount",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      "passed": [
+                        "Modifier Deletes Itself"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1866376122\">DanHengPT_LongLingFreeImmediateAction</a>",
+          "stackType": "Replace",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{DHPT}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>",
+                  "valuePerStack": {
+                    "MDF_IsStack": 1
+                  },
+                  "casterAssign": "TargetSelf"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "DanHengPT_IsFreeAction",
+                  "value": 1
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{DHPT}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1169230\">DanHengPT_ImmediateAction</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1272476867\">DanHengPT_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
+          "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the enemy target's DEF.",
+          "type": "Buff",
+          "statusName": "One Dream to Enfold All Wilds",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "Adjust Target Stats",
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "-MDF_PropertyValue"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1040309000\">DanHengPT_Eidolon6_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
+          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "statusName": "One Dream to Enfold All Wilds",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1985070537\">DanHengPT_Eidolon4</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
+                    "displayLines": "MDF_PropertyValue2",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue2"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-452137321\">DanHengPT_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">By Oath, This Vessel Is I</span>]",
+          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "By Oath, This Vessel Is I",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2035403394\">DanHengPT_Eidolon1</a>[<span class=\"descriptionNumberColor\">Shed Scales of Old</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "All-Type RES PEN Boost",
+          "statusName": "Shed Scales of Old",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "Shield"
+          ],
+          "description": "Gains a Shield that can offset DMG. Before the Shield gets depleted or the effect disappears, enemy attacks will not reduce the HP of the unit with the Shield.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Shield",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Shield",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
+                },
+                {
+                  "name": "Set Hit-Class",
+                  "reset": true
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Set Hit-Class"
+                },
+                {
+                  "name": "Stack Shield",
+                  "stackValue": {
+                    "operator": "Variables[0] (MDF_DanHengPT_InitShieldValue) || RETURN",
+                    "displayLines": "MDF_DanHengPT_InitShieldValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_DanHengPT_InitShieldValue"
+                    ]
+                  },
+                  "stackLimit": {
+                    "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (0.2) || MUL || Variables[2] (400) || ADD || Variables[3] (MDF_MaxShieldRatio) || MUL || RETURN",
+                    "displayLines": "(((DanHengPT_Attack * 0.2) + 400) * MDF_MaxShieldRatio)",
+                    "constants": [],
+                    "variables": [
+                      "DanHengPT_Attack",
+                      0.2,
+                      400,
+                      "MDF_MaxShieldRatio"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "scope": "ContextCaster",
+                  "variableName": "MDF_AchievementCount",
+                  "value": {
+                    "operator": "Variables[0] (MDF_DanHengPT_InitShieldValue) || RETURN",
+                    "displayLines": "MDF_DanHengPT_InitShieldValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_DanHengPT_InitShieldValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "scope": "ContextCaster",
+                  "variableName": "MDF_AchievementCount",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackDelta</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Empyreanity",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
+                    "displayLines": "MDF_AttackDelta",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AttackDelta"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "description": "\"Souldragon\" holder.",
+          "type": "Other",
+          "effectName": "Becomes the Bondmate",
+          "statusName": "Bondmate",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Souldragon}}"
+            },
+            "conditions": {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "Compare: Target",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Attack Source}}"
+                  },
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
+                },
+                {
+                  "name": "Action is an Attack",
+                  "useActiveAbility": true
+                },
+                {
+                  "name": "Trace Activated",
+                  "conditionList": "Sylvanity",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{DHPT}}"
+                  }
+                }
+              ]
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": {
+                "operator": "Constants[0] (0) || Variables[0] (MDF_PointB2_P3_DelayUp) || SUB || RETURN",
+                "displayLines": "(0 - MDF_PointB2_P3_DelayUp)",
+                "constants": [
+                  0
+                ],
+                "variables": [
+                  "MDF_PointB2_P3_DelayUp"
+                ]
+              }
+            }
+          },
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-452137321\">DanHengPT_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">By Oath, This Vessel Is I</span>]",
+              "aliveOnly": "False",
+              "haloStatus": true,
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "MDF_Rank04_AllDamageReduceRatio",
+                "compareType": ">",
+                "value2": 0
+              },
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (MDF_Rank04_AllDamageReduceRatio) || RETURN",
+                  "displayLines": "MDF_Rank04_AllDamageReduceRatio",
+                  "constants": [],
+                  "variables": [
+                    "MDF_Rank04_AllDamageReduceRatio"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1272476867\">DanHengPT_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
+              "aliveOnly": "False",
+              "haloStatus": true,
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "MDF_Rank06_DefPentRatio",
+                "compareType": ">",
+                "value2": 0
+              },
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (MDF_Rank06_DefPentRatio) || RETURN",
+                  "displayLines": "MDF_Rank06_DefPentRatio",
+                  "constants": [],
+                  "variables": [
+                    "MDF_Rank06_DefPentRatio"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1040309000\">DanHengPT_Eidolon6_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
+              "aliveOnly": "False",
+              "haloStatus": true,
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "MDF_Rank06_AllDamageTypeTakenRatio",
+                "compareType": ">",
+                "value2": 0
+              },
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (MDF_Rank06_AllDamageTypeTakenRatio) || RETURN",
+                  "displayLines": "MDF_Rank06_AllDamageTypeTakenRatio",
+                  "constants": [],
+                  "variables": [
+                    "MDF_Rank06_AllDamageTypeTakenRatio"
+                  ]
+                }
+              }
+            }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "HadServant",
+                    "compareType": "=",
+                    "value2": 0,
+                    "contextScope": "AITag"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "_modifyAiTag",
+                      "value": 1
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "scope": "AITag",
+                      "variableName": "HadServant",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{DHPT}}"
+                  },
+                  "variableName": "DanHengPT_LongLing_Flag",
+                  "value": 0
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "_modifyAiTag",
+                    "compareType": "=",
+                    "value2": 0,
+                    "invertCondition": true,
+                    "contextScope": "ContextModifier"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "_modifyAiTag",
+                      "value": 0
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "scope": "AITag",
+                      "variableName": "HadServant",
+                      "value": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{DHPT}}"
+                  },
+                  "variableName": "DanHengPT_LongLing_Flag",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack Start [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_PointB2_P2_AddSP",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Energy",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{DHPT}}"
+                      },
+                      "value": {
+                        "operator": "Variables[0] (MDF_PointB2_P2_AddSP) || RETURN",
+                        "displayLines": "MDF_PointB2_P2_AddSP",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PointB2_P2_AddSP"
+                        ]
+                      },
+                      "isFixed": "* ERR"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_PointB2_P3_DelayUp",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Souldragon}}"
+                      },
+                      "variables": {
+                        "parameter[0]_NormalizedValue": {
+                          "operator": "Variables[0] (MDF_PointB2_P3_DelayUp) || RETURN",
+                          "displayLines": "MDF_PointB2_P3_DelayUp",
+                          "constants": [],
+                          "variables": [
+                            "MDF_PointB2_P3_DelayUp"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1941107033\">DanHengPT_Eidolon2_LastBoostEnergyFlag</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1300423082\">DanHengPT_BoostEnergy</a>",
+          "stackType": "Replace",
+          "stackData": [
+            "MDF_IsStack"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_IsStack",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "scope": "ContextCaster",
+                      "variableName": "DanHengPT_Passive_Count",
+                      "value": {
+                        "operator": "Variables[0] (DanHengPT_Passive_Count) || Constants[0] (1) || SUB || RETURN",
+                        "displayLines": "(DanHengPT_Passive_Count - 1)",
+                        "constants": [
+                          1
+                        ],
+                        "variables": [
+                          "DanHengPT_Passive_Count"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Show Attack Time",
+                      "time": {
+                        "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
+                        "displayLines": "DanHengPT_Passive_Count",
+                        "constants": [],
+                        "variables": [
+                          "DanHengPT_Passive_Count"
+                        ]
+                      },
+                      "on": null,
+                      "show": true
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "DanHengPT_Passive_Count",
+                        "compareType": "=",
+                        "value2": 0,
+                        "contextScope": "ContextCaster"
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Eidolon Activated",
+                            "eidolon": 2,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
+                          },
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1941107033\">DanHengPT_Eidolon2_LastBoostEnergyFlag</a>"
+                            }
+                          ]
+                        },
+                        "Modifier Deletes Itself",
+                        {
+                          "name": "Show Attack Time",
+                          "time": 0,
+                          "on": null,
+                          "show": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "DanHengPT_LocalPlayer_DanHengPT_BeforeBattleStunListener": {
+      "fileName": "DanHengPT_LocalPlayer_DanHengPT_BeforeBattleStunListener",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1294472860\">ADV_StageAbility_DanHengPT_BeforeBattleStunListener</a>",
+          "counter": -1
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "DanHengPT_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "DanHengPT_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "DanHengPT_LocalPlayer_DanHengPT_TechniqueUsage": {
+      "fileName": "DanHengPT_LocalPlayer_DanHengPT_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Overworld Attack Instance",
+          "onAttack": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": null,
+              "ID": "141401(SkillMaze)",
+              "duration": {
+                "operator": "Variables[0] (10) || RETURN",
+                "displayLines": "10",
+                "constants": [],
+                "variables": [
+                  10
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "141402(SkillMaze)"
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "DanHengPT_LocalPlayer_DanHengPT_NormalAtk01": {
+      "fileName": "DanHengPT_LocalPlayer_DanHengPT_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "failed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
     "DanHengPT_DanHengPT_TechniqueInLevel": {
       "fileName": "DanHengPT_DanHengPT_TechniqueInLevel",
       "childAbilityList": [
@@ -95,9 +1341,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -55
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -105,1011 +1349,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "DanHengPT_DanHengPT_PassiveAbility01": {
-      "fileName": "DanHengPT_DanHengPT_PassiveAbility01",
-      "childAbilityList": [
-        "DanHengPT_DanHengPT_PassiveAbility01",
-        "DanHengPT_DanHengPT_BE_InsertAttack_Part02"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": [
-        0,
-        20,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "DanHengPT_Stance_All",
-          "value": {
-            "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-            "displayLines": "AOE Toughness Value",
-            "constants": [],
-            "variables": [
-              "AOE Toughness Value"
-            ]
-          }
-        },
-        {
-          "name": "Preload Battle Event(s)",
-          "eventID": [
-            11414
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"3985826\">DanHengPT_Olisten_BE_Create</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"292748857\">DanHengPT_PassiveModifier</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "DanHengPT_ExtraShieldUPRatio",
-          "value": 1
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "DanHengPT_IsFreeAction",
-          "value": 0
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1781840956\">DanHengPT_ExtraListen</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"933382237\">DanHengPT_Eidolon1_Onlisten</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 2
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-853961878\">DanHengPT_Eidolon2_Onlisten</a>"
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "DanHengPT_Passive_MaxCount",
-          "value": 99
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 2
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "scope": "AITag",
-              "variableName": "DamageCarry",
-              "value": 0.0009999999
-            }
-          ]
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": {
-            "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-            "displayLines": "DanHengPT_Passive_Count",
-            "constants": [],
-            "variables": [
-              "DanHengPT_Passive_Count"
-            ]
-          },
-          "maximum": {
-            "operator": "Variables[0] (DanHengPT_Passive_MaxCount) || RETURN",
-            "displayLines": "DanHengPT_Passive_MaxCount",
-            "constants": [],
-            "variables": [
-              "DanHengPT_Passive_MaxCount"
-            ]
-          },
-          "assignState": "True",
-          "priorState": "Normal",
-          "bar#": 4
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Skill03_InsertDanHengPTDamagePercentage",
-          "value": {
-            "operator": "Variables[0] (0.8) || RETURN",
-            "displayLines": "0.8",
-            "constants": [],
-            "variables": [
-              0.8
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 2
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Skill03_InsertOwnerDamagePercentage",
-              "value": {
-                "operator": "Variables[0] (0.8) || Variables[1] (2) || MUL || RETURN",
-                "displayLines": "(0.8 * 2)",
-                "constants": [],
-                "variables": [
-                  0.8,
-                  2
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "SkillTree_PointB3_OwnerDamagePercentage",
-              "value": {
-                "operator": "Variables[0] (0.4) || Variables[1] (2) || MUL || RETURN",
-                "displayLines": "(0.4 * 2)",
-                "constants": [],
-                "variables": [
-                  0.4,
-                  2
-                ]
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Skill03_InsertOwnerDamagePercentage",
-              "value": {
-                "operator": "Variables[0] (0.8) || RETURN",
-                "displayLines": "0.8",
-                "constants": [],
-                "variables": [
-                  0.8
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "SkillTree_PointB3_OwnerDamagePercentage",
-              "value": {
-                "operator": "Variables[0] (0.4) || RETURN",
-                "displayLines": "0.4",
-                "constants": [],
-                "variables": [
-                  0.4
-                ]
-              }
-            }
-          ]
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__85270413\">DanHengPT_ShieldUPFlag</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{DHPT}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"85270413\">DanHengPT_ShieldUPFlag</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Copy",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{DHPT}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"297054432\">DanHengPT_LongLingExtraShield</a>",
-                      "variable": "MDF_ShieldRatio",
-                      "target2": null,
-                      "variable2": "MDF_ShieldUPRatioTemp",
-                      "scope": "ContextModifier"
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "DanHengPT_ExtraShieldUPRatio",
-                      "value": {
-                        "operator": "Variables[0] (MDF_ShieldUPRatioTemp) || RETURN",
-                        "displayLines": "MDF_ShieldUPRatioTemp",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ShieldUPRatioTemp"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1169230\">DanHengPT_ImmediateAction</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Souldragon}}"
-                  },
-                  "variables": {
-                    "parameter[0]_NormalizedValue": 1
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__98427049\">DanHengPT_ExtraDamageCount</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "DanHengPT_ExtraDamageCount",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Copy",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{DHPT}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
-                  "variable": "MDF_DamageRatio",
-                  "target2": {
-                    "name": "Target Name",
-                    "target": "{{DHPT}}"
-                  },
-                  "variable2": "MDF_DamageRatioTemp",
-                  "scope": "ContextModifier"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "DanHengPT_ExtraDamageRatio",
-                  "value": {
-                    "operator": "Variables[0] (MDF_DamageRatioTemp) || RETURN",
-                    "displayLines": "MDF_DamageRatioTemp",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageRatioTemp"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable with Copy",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{DHPT}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
-                  "variable": "MDF_Count",
-                  "target2": {
-                    "name": "Target Name",
-                    "target": "{{DHPT}}"
-                  },
-                  "variable2": "MDF_DamageCountTemp",
-                  "scope": "ContextModifier"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "DanHengPT_ExtraDamageCount",
-                  "value": {
-                    "operator": "Variables[0] (MDF_DamageCountTemp) || RETURN",
-                    "displayLines": "MDF_DamageCountTemp",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageCountTemp"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "removalDependencies": {
-            "name": "Removal Dependency",
-            "dependancyName": "<a class=\"gModGreen\" id=\"-1655562855\">Memosprite_CyreneServant_AmazingBonus_DanHengPT</a>[<span class=\"descriptionNumberColor\">Ode to Earth</span>]"
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1781840956\">DanHengPT_ExtraListen</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking Modifier Instance [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{DHPT}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"98427049\">DanHengPT_ExtraDamageCount</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"297054432\">DanHengPT_LongLingExtraShield</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1866376122\">DanHengPT_LongLingFreeImmediateAction</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"297054432\">DanHengPT_LongLingExtraShield</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{DHPT}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"85270413\">DanHengPT_ShieldUPFlag</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DanHengPT_IsFreeAction"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__3985826\">DanHengPT_Olisten_BE_Create</a>",
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "entityType": "BattleEvent",
-            "entityID": 11414,
-            "skillType": [
-              "Skill"
-            ],
-            "conditions": {
-              "name": "Compare: Variable",
-              "value1": "DanHengPT_LongLing_Flag",
-              "compareType": "<",
-              "value2": 1
-            }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-853961878\">DanHengPT_Eidolon2_Onlisten</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate"
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Souldragon}}"
-                      },
-                      "variables": {
-                        "parameter[0]_NormalizedValue": 1
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DanHengPT_IsFreeAction"
-          ],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Souldragon}}"
-            },
-            "skillType": [
-              "Ultimate"
-            ],
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": -1
-            }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__933382237\">DanHengPT_Eidolon1_Onlisten</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate"
-                  },
-                  "passed": [
-                    {
-                      "name": "Skill Points Modification",
-                      "adjustmentValue": {
-                        "operator": "Variables[0] (1) || RETURN",
-                        "displayLines": "1",
-                        "constants": [],
-                        "variables": [
-                          1
-                        ]
-                      },
-                      "adjustmentType": "+"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Bondmate}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2035403394\">DanHengPT_Eidolon1</a>[<span class=\"descriptionNumberColor\">Shed Scales of Old</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.18) || RETURN",
-                          "displayLines": "0.18",
-                          "constants": [],
-                          "variables": [
-                            0.18
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DanHengPT_IsFreeAction"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__292748857\">DanHengPT_PassiveModifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
-                },
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Souldragon}}"
-                  },
-                  "ignoreHPLossTriggers": true,
-                  "ignoreDeathTriggers": true
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Trace Activated",
-                        "conditionList": "Sylvanity"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Wave Count",
-                        "compareType": "=",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "advanceType": "Advance",
-                      "multiAdd": "-0.4"
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ],
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "DanHengPT_Passive_Count",
-              "from": "ContextCaster",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 1,
-                  "maxValue": {
-                    "operator": "Variables[0] (DanHengPT_Passive_MaxCount) || RETURN",
-                    "displayLines": "DanHengPT_Passive_MaxCount",
-                    "constants": [],
-                    "variables": [
-                      "DanHengPT_Passive_MaxCount"
-                    ]
-                  },
-                  "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-                        "displayLines": "DanHengPT_Passive_Count",
-                        "constants": [],
-                        "variables": [
-                          "DanHengPT_Passive_Count"
-                        ]
-                      },
-                      "priorState": "Active"
-                    }
-                  ],
-                  "whenLeavingRange": [
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-                        "displayLines": "DanHengPT_Passive_Count",
-                        "constants": [],
-                        "variables": [
-                          "DanHengPT_Passive_Count"
-                        ]
-                      },
-                      "priorState": "Normal"
-                    }
-                  ],
-                  "whenValueChanges": [
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-                        "displayLines": "DanHengPT_Passive_Count",
-                        "constants": [],
-                        "variables": [
-                          "DanHengPT_Passive_Count"
-                        ]
-                      },
-                      "priorState": "Active"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "whenValueChanges": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "DanHengPT_Attack",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Trace Activated",
-                        "conditionList": "Empyreanity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable with Stat",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "variableName": "DanHengPT_ConvertAttack",
-                          "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;"
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Bondmate}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
-                          "valuePerStack": {
-                            "MDF_AttackDelta": {
-                              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (DanHengPT_ConvertAttack) || SUB || Variables[2] (0.15) || MUL || RETURN",
-                              "displayLines": "((DanHengPT_Attack - DanHengPT_ConvertAttack) * 0.15)",
-                              "constants": [],
-                              "variables": [
-                                "DanHengPT_Attack",
-                                "DanHengPT_ConvertAttack",
-                                0.15
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "whenValueChanges": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "DanHengPT_Attack",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Trace Activated",
-                        "conditionList": "Empyreanity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable with Stat",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "variableName": "DanHengPT_ConvertAttack",
-                          "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;"
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Bondmate}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
-                          "valuePerStack": {
-                            "MDF_AttackDelta": {
-                              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (DanHengPT_ConvertAttack) || SUB || Variables[2] (0.15) || MUL || RETURN",
-                              "displayLines": "((DanHengPT_Attack - DanHengPT_ConvertAttack) * 0.15)",
-                              "constants": [],
-                              "variables": [
-                                "DanHengPT_Attack",
-                                "DanHengPT_ConvertAttack",
-                                0.15
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "DanHengPT_DanHengPT_BE_PassiveAbility": {
-      "fileName": "DanHengPT_DanHengPT_BE_PassiveAbility",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-516529797\">DanHengPT_BEModifier</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-516529797\">DanHengPT_BEModifier</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{DHPT}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "DanHengPT_BE_InsertAttack_Part01",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "priorityTag": "CharacterAttackFromSelf",
-                      "ownerState": "Mask_AliveOrRevivable",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "DanHengPT_BE_InsertShield_Part01",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members}}"
-                      },
-                      "priorityTag": "CharacterBuffSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Event Owner Change",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}.[[getSummoner]]"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>"
-                    },
-                    {
-                      "name": "Set Action-State",
-                      "on": null,
-                      "stateName": "Standard_Departed"
-                    },
-                    {
-                      "name": "Remove Modifier Behavior Flag(s)",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "flagNames": [
-                        "STAT_SheepStatus_SummonObjects"
-                      ]
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-480380135\">Enemy_W2_LycanKing_IF_DisableAction</a>[<span class=\"descriptionNumberColor\">Departed</span>]"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"40667951\">Enemy_W2_LycanKing_IF_DisableActionEndMark</a>"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
       }
     },
     "DanHengPT_DanHengPT_BE_InsertAttack_Part02": {
@@ -1530,96 +1769,823 @@ const compositeAbilityObject = {
         "primaryTarget": "Inherent Target"
       }
     },
-    "DanHengPT_DanHengPT_BE_InsertAttack_Part01": {
-      "fileName": "DanHengPT_DanHengPT_BE_InsertAttack_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Of Virtue, Forms Unfold"
-        },
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{DHPT}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "DanHengPT_BE_InsertAttack_Part02",
-          "isTrigger": true
-        }
+    "DanHengPT_DanHengPT_PassiveAbility01": {
+      "fileName": "DanHengPT_DanHengPT_PassiveAbility01",
+      "childAbilityList": [
+        "DanHengPT_DanHengPT_PassiveAbility01",
+        "DanHengPT_DanHengPT_BE_InsertAttack_Part02"
       ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "DanHengPT_DanHengPT_BE_InsertShield_Part02": {
-      "fileName": "DanHengPT_DanHengPT_BE_InsertShield_Part02",
-      "abilityType": null,
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
       "energy": null,
-      "toughnessList": null,
+      "toughnessList": [
+        0,
+        20,
+        0
+      ],
       "parse": [
         {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members}}"
-          },
-          "dispelCount": {
-            "operator": "Variables[0] (MDF_DisperseNum) || RETURN",
-            "displayLines": "MDF_DisperseNum",
+          "name": "Define Custom Variable",
+          "variableName": "DanHengPT_Stance_All",
+          "value": {
+            "operator": "Variables[0] (AOE Toughness Value) || RETURN",
+            "displayLines": "AOE Toughness Value",
             "constants": [],
             "variables": [
-              "MDF_DisperseNum"
+              "AOE Toughness Value"
             ]
-          },
-          "dispelOrder": "LastAdded"
+          }
         },
         {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{DHPT}}"
-          },
-          "ability": "DanHengPT_BE_AddShield"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "DanHengPT_DanHengPT_BE_InsertShield_Part01": {
-      "fileName": "DanHengPT_DanHengPT_BE_InsertShield_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
+          "name": "Preload Battle Event(s)",
+          "eventID": [
+            11414
+          ]
+        },
         {
-          "name": "Trigger Ability",
-          "from": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "inherentTarget": {
+          "modifier": "<a class=\"gModGreen\" id=\"3985826\">DanHengPT_Olisten_BE_Create</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
+            "target": "{{Caster}}"
           },
-          "ability": "DanHengPT_BE_InsertShield_Part02",
-          "isTrigger": true
+          "modifier": "<a class=\"gModGreen\" id=\"292748857\">DanHengPT_PassiveModifier</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "DanHengPT_ExtraShieldUPRatio",
+          "value": 1
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "DanHengPT_IsFreeAction",
+          "value": 0
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1781840956\">DanHengPT_ExtraListen</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"933382237\">DanHengPT_Eidolon1_Onlisten</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 2
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-853961878\">DanHengPT_Eidolon2_Onlisten</a>"
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "DanHengPT_Passive_MaxCount",
+          "value": 99
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 2
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "scope": "AITag",
+              "variableName": "DamageCarry",
+              "value": 0.0009999999
+            }
+          ]
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": {
+            "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
+            "displayLines": "DanHengPT_Passive_Count",
+            "constants": [],
+            "variables": [
+              "DanHengPT_Passive_Count"
+            ]
+          },
+          "maximum": {
+            "operator": "Variables[0] (DanHengPT_Passive_MaxCount) || RETURN",
+            "displayLines": "DanHengPT_Passive_MaxCount",
+            "constants": [],
+            "variables": [
+              "DanHengPT_Passive_MaxCount"
+            ]
+          },
+          "assignState": "True",
+          "priorState": "Normal",
+          "bar#": 4
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Skill03_InsertDanHengPTDamagePercentage",
+          "value": {
+            "operator": "Variables[0] (0.8) || RETURN",
+            "displayLines": "0.8",
+            "constants": [],
+            "variables": [
+              0.8
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 2
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Skill03_InsertOwnerDamagePercentage",
+              "value": {
+                "operator": "Variables[0] (0.8) || Variables[1] (2) || MUL || RETURN",
+                "displayLines": "(0.8 * 2)",
+                "constants": [],
+                "variables": [
+                  0.8,
+                  2
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "SkillTree_PointB3_OwnerDamagePercentage",
+              "value": {
+                "operator": "Variables[0] (0.4) || Variables[1] (2) || MUL || RETURN",
+                "displayLines": "(0.4 * 2)",
+                "constants": [],
+                "variables": [
+                  0.4,
+                  2
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Skill03_InsertOwnerDamagePercentage",
+              "value": {
+                "operator": "Variables[0] (0.8) || RETURN",
+                "displayLines": "0.8",
+                "constants": [],
+                "variables": [
+                  0.8
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "SkillTree_PointB3_OwnerDamagePercentage",
+              "value": {
+                "operator": "Variables[0] (0.4) || RETURN",
+                "displayLines": "0.4",
+                "constants": [],
+                "variables": [
+                  0.4
+                ]
+              }
+            }
+          ]
         }
       ],
-      "references": [],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__85270413\">DanHengPT_ShieldUPFlag</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{DHPT}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"85270413\">DanHengPT_ShieldUPFlag</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Copy",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{DHPT}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"297054432\">DanHengPT_LongLingExtraShield</a>",
+                      "variable": "MDF_ShieldRatio",
+                      "target2": null,
+                      "variable2": "MDF_ShieldUPRatioTemp",
+                      "scope": "ContextModifier"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "DanHengPT_ExtraShieldUPRatio",
+                      "value": {
+                        "operator": "Variables[0] (MDF_ShieldUPRatioTemp) || RETURN",
+                        "displayLines": "MDF_ShieldUPRatioTemp",
+                        "constants": [],
+                        "variables": [
+                          "MDF_ShieldUPRatioTemp"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1169230\">DanHengPT_ImmediateAction</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Souldragon}}"
+                  },
+                  "variables": {
+                    "parameter[0]_NormalizedValue": 1
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__98427049\">DanHengPT_ExtraDamageCount</a>",
+          "stackType": "ReplaceByCaster",
+          "removalDependencies": {
+            "name": "Removal Dependency",
+            "dependancyName": "<a class=\"gModGreen\" id=\"-1655562855\">Memosprite_CyreneServant_AmazingBonus_DanHengPT</a>[<span class=\"descriptionNumberColor\">Ode to Earth</span>]"
+          },
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "DanHengPT_ExtraDamageCount",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Copy",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{DHPT}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
+                  "variable": "MDF_DamageRatio",
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{DHPT}}"
+                  },
+                  "variable2": "MDF_DamageRatioTemp",
+                  "scope": "ContextModifier"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "DanHengPT_ExtraDamageRatio",
+                  "value": {
+                    "operator": "Variables[0] (MDF_DamageRatioTemp) || RETURN",
+                    "displayLines": "MDF_DamageRatioTemp",
+                    "constants": [],
+                    "variables": [
+                      "MDF_DamageRatioTemp"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable with Copy",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{DHPT}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
+                  "variable": "MDF_Count",
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{DHPT}}"
+                  },
+                  "variable2": "MDF_DamageCountTemp",
+                  "scope": "ContextModifier"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "DanHengPT_ExtraDamageCount",
+                  "value": {
+                    "operator": "Variables[0] (MDF_DamageCountTemp) || RETURN",
+                    "displayLines": "MDF_DamageCountTemp",
+                    "constants": [],
+                    "variables": [
+                      "MDF_DamageCountTemp"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1781840956\">DanHengPT_ExtraListen</a>",
+          "latentQueue": [
+            "DanHengPT_IsFreeAction"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking Modifier Instance [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-249685208\">DanHengPT_LongLingAttackExtraDamage</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{DHPT}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"98427049\">DanHengPT_ExtraDamageCount</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"297054432\">DanHengPT_LongLingExtraShield</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1866376122\">DanHengPT_LongLingFreeImmediateAction</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"297054432\">DanHengPT_LongLingExtraShield</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{DHPT}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"85270413\">DanHengPT_ShieldUPFlag</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__3985826\">DanHengPT_Olisten_BE_Create</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "entityType": "BattleEvent",
+            "entityID": 11414,
+            "skillType": [
+              "Skill"
+            ],
+            "conditions": {
+              "name": "Compare: Variable",
+              "value1": "DanHengPT_LongLing_Flag",
+              "compareType": "<",
+              "value2": 1
+            }
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-853961878\">DanHengPT_Eidolon2_Onlisten</a>",
+          "latentQueue": [
+            "DanHengPT_IsFreeAction"
+          ],
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Souldragon}}"
+            },
+            "skillType": [
+              "Ultimate"
+            ],
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": -1
+            }
+          },
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate"
+                  },
+                  "passed": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Souldragon}}"
+                      },
+                      "variables": {
+                        "parameter[0]_NormalizedValue": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__933382237\">DanHengPT_Eidolon1_Onlisten</a>",
+          "latentQueue": [
+            "DanHengPT_IsFreeAction"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Owner]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate"
+                  },
+                  "passed": [
+                    {
+                      "name": "Skill Points Modification",
+                      "adjustmentValue": {
+                        "operator": "Variables[0] (1) || RETURN",
+                        "displayLines": "1",
+                        "constants": [],
+                        "variables": [
+                          1
+                        ]
+                      },
+                      "adjustmentType": "+"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Bondmate}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"2035403394\">DanHengPT_Eidolon1</a>[<span class=\"descriptionNumberColor\">Shed Scales of Old</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (3) || RETURN",
+                        "displayLines": "3",
+                        "constants": [],
+                        "variables": [
+                          3
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.18) || RETURN",
+                          "displayLines": "0.18",
+                          "constants": [],
+                          "variables": [
+                            0.18
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__292748857\">DanHengPT_PassiveModifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+                },
+                {
+                  "name": "Force Entity Death",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Souldragon}}"
+                  },
+                  "ignoreHPLossTriggers": true,
+                  "ignoreDeathTriggers": true
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Trace Activated",
+                        "conditionList": "Sylvanity"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Wave Count",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Action Advance/Delay",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "advanceType": "Advance",
+                      "multiAdd": "-0.4"
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ],
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "DanHengPT_Passive_Count",
+              "from": "ContextCaster",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 1,
+                  "maxValue": {
+                    "operator": "Variables[0] (DanHengPT_Passive_MaxCount) || RETURN",
+                    "displayLines": "DanHengPT_Passive_MaxCount",
+                    "constants": [],
+                    "variables": [
+                      "DanHengPT_Passive_MaxCount"
+                    ]
+                  },
+                  "includeMaxValueInRange": true,
+                  "whenEnteringRange": [
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
+                        "displayLines": "DanHengPT_Passive_Count",
+                        "constants": [],
+                        "variables": [
+                          "DanHengPT_Passive_Count"
+                        ]
+                      },
+                      "priorState": "Active"
+                    }
+                  ],
+                  "whenLeavingRange": [
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
+                        "displayLines": "DanHengPT_Passive_Count",
+                        "constants": [],
+                        "variables": [
+                          "DanHengPT_Passive_Count"
+                        ]
+                      },
+                      "priorState": "Normal"
+                    }
+                  ],
+                  "whenValueChanges": [
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
+                        "displayLines": "DanHengPT_Passive_Count",
+                        "constants": [],
+                        "variables": [
+                          "DanHengPT_Passive_Count"
+                        ]
+                      },
+                      "priorState": "Active"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "whenValueChanges": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "variableName": "DanHengPT_Attack",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Trace Activated",
+                        "conditionList": "Empyreanity"
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable with Stat",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "variableName": "DanHengPT_ConvertAttack",
+                          "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;"
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Bondmate}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
+                          "valuePerStack": {
+                            "MDF_AttackDelta": {
+                              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (DanHengPT_ConvertAttack) || SUB || Variables[2] (0.15) || MUL || RETURN",
+                              "displayLines": "((DanHengPT_Attack - DanHengPT_ConvertAttack) * 0.15)",
+                              "constants": [],
+                              "variables": [
+                                "DanHengPT_Attack",
+                                "DanHengPT_ConvertAttack",
+                                0.15
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "whenValueChanges": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "variableName": "DanHengPT_Attack",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Trace Activated",
+                        "conditionList": "Empyreanity"
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable with Stat",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "variableName": "DanHengPT_ConvertAttack",
+                          "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;"
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Bondmate}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
+                          "valuePerStack": {
+                            "MDF_AttackDelta": {
+                              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (DanHengPT_ConvertAttack) || SUB || Variables[2] (0.15) || MUL || RETURN",
+                              "displayLines": "((DanHengPT_Attack - DanHengPT_ConvertAttack) * 0.15)",
+                              "constants": [],
+                              "variables": [
+                                "DanHengPT_Attack",
+                                "DanHengPT_ConvertAttack",
+                                0.15
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "targetObjectData": {
-        "primaryTarget": "Inherent Target"
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       }
     },
     "DanHengPT_DanHengPT_Ability03_Part02": {
@@ -3005,848 +3971,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "DanHengPT_Modifiers": {
-      "fileName": "DanHengPT_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__297054432\">DanHengPT_LongLingExtraShield</a>",
-          "stackType": "Replace",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-249685208\">DanHengPT_LongLingAttackExtraDamage</a>",
-          "stackType": "Replace",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "DanHengPT_ExtraDamageCount",
-                  "value": 0
-                }
-              ]
-            }
-          ],
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "DanHengPT_ExtraDamageCount",
-              "from": "ContextOwner",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Define Custom Variable with Copy",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variable": "DanHengPT_ExtraDamageCount",
-                      "target2": null,
-                      "variable2": "MDF_DanHengPT_ExtraDamageCount"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "MDF_DanHengPT_ExtraDamageCount",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      "passed": [
-                        "Modifier Deletes Itself"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1866376122\">DanHengPT_LongLingFreeImmediateAction</a>",
-          "stackType": "Replace",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{DHPT}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1300423082\">DanHengPT_BoostEnergy</a>",
-                  "valuePerStack": {
-                    "MDF_IsStack": 1
-                  },
-                  "casterAssign": "TargetSelf"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "DanHengPT_IsFreeAction",
-                  "value": 1
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{DHPT}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1169230\">DanHengPT_ImmediateAction</a>"
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "DanHengPT_IsFreeAction"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1272476867\">DanHengPT_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "Adjust Target Stats",
-                  "modifiedValuesArray": [
-                    {
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                      "value": "-MDF_PropertyValue"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the enemy target's DEF.",
-          "type": "Buff",
-          "statusName": "One Dream to Enfold All Wilds"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1040309000\">DanHengPT_Eidolon6_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "statusName": "One Dream to Enfold All Wilds"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1985070537\">DanHengPT_Eidolon4</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                    "displayLines": "MDF_PropertyValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-452137321\">DanHengPT_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">By Oath, This Vessel Is I</span>]",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "By Oath, This Vessel Is I"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2035403394\">DanHengPT_Eidolon1</a>[<span class=\"descriptionNumberColor\">Shed Scales of Old</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "DanHengPT_IsFreeAction"
-          ],
-          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "All-Type RES PEN Boost",
-          "statusName": "Shed Scales of Old"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "Shield"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Shield",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  }
-                },
-                {
-                  "name": "Set Hit-Class",
-                  "reset": true
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Set Hit-Class"
-                },
-                {
-                  "name": "Stack Shield",
-                  "stackValue": {
-                    "operator": "Variables[0] (MDF_DanHengPT_InitShieldValue) || RETURN",
-                    "displayLines": "MDF_DanHengPT_InitShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DanHengPT_InitShieldValue"
-                    ]
-                  },
-                  "stackLimit": {
-                    "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (0.2) || MUL || Variables[2] (400) || ADD || Variables[3] (MDF_MaxShieldRatio) || MUL || RETURN",
-                    "displayLines": "(((DanHengPT_Attack * 0.2) + 400) * MDF_MaxShieldRatio)",
-                    "constants": [],
-                    "variables": [
-                      "DanHengPT_Attack",
-                      0.2,
-                      400,
-                      "MDF_MaxShieldRatio"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "ContextCaster",
-                  "variableName": "MDF_AchievementCount",
-                  "value": {
-                    "operator": "Variables[0] (MDF_DanHengPT_InitShieldValue) || RETURN",
-                    "displayLines": "MDF_DanHengPT_InitShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DanHengPT_InitShieldValue"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "ContextCaster",
-                  "variableName": "MDF_AchievementCount",
-                  "value": 0
-                }
-              ]
-            }
-          ],
-          "description": "Gains a Shield that can offset DMG. Before the Shield gets depleted or the effect disappears, enemy attacks will not reduce the HP of the unit with the Shield.",
-          "type": "Buff",
-          "effectName": "Shield",
-          "statusName": "Shield"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
-                    "displayLines": "MDF_AttackDelta",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackDelta"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_AttackDelta"
-          ],
-          "latentQueue": [
-            "DanHengPT_Skill02_Flag"
-          ],
-          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackDelta</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Empyreanity"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "HadServant",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "AITag"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "_modifyAiTag",
-                      "value": 1
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "AITag",
-                      "variableName": "HadServant",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{DHPT}}"
-                  },
-                  "variableName": "DanHengPT_LongLing_Flag",
-                  "value": 0
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-892900131\">DanHengPT_PointB1_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">Empyreanity</span>]"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "_modifyAiTag",
-                    "compareType": "=",
-                    "value2": 0,
-                    "invertCondition": true,
-                    "contextScope": "ContextModifier"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "_modifyAiTag",
-                      "value": 0
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "AITag",
-                      "variableName": "HadServant",
-                      "value": 0
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{DHPT}}"
-                  },
-                  "variableName": "DanHengPT_LongLing_Flag",
-                  "value": 1
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack Start [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_PointB2_P2_AddSP",
-                    "compareType": ">",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Energy",
-                      "on": {
-                        "name": "Target Name",
-                        "target": "{{DHPT}}"
-                      },
-                      "value": {
-                        "operator": "Variables[0] (MDF_PointB2_P2_AddSP) || RETURN",
-                        "displayLines": "MDF_PointB2_P2_AddSP",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PointB2_P2_AddSP"
-                        ]
-                      },
-                      "isFixed": "* ERR"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_PointB2_P3_DelayUp",
-                    "compareType": ">",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-537679168\">ReduceActionDelay</a>",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Souldragon}}"
-                      },
-                      "variables": {
-                        "parameter[0]_NormalizedValue": {
-                          "operator": "Variables[0] (MDF_PointB2_P3_DelayUp) || RETURN",
-                          "displayLines": "MDF_PointB2_P3_DelayUp",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PointB2_P3_DelayUp"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PointB2_P3_DelayUp",
-            "MDF_PointB2_P2_AddSP",
-            "MDF_Rank04_AllDamageReduceRatio",
-            "MDF_Rank06_AllDamageTypeTakenRatio",
-            "MDF_Rank06_DefPentRatio"
-          ],
-          "latentQueue": [
-            "DanHengPT_Skill02_Flag"
-          ],
-          "description": "\"Souldragon\" holder.",
-          "type": "Other",
-          "effectName": "Becomes the Bondmate",
-          "statusName": "Bondmate",
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Souldragon}}"
-            },
-            "conditions": {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "Compare: Target",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Attack Source}}"
-                  },
-                  "target2": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  }
-                },
-                {
-                  "name": "Action is an Attack",
-                  "useActiveAbility": true
-                },
-                {
-                  "name": "Trace Activated",
-                  "conditionList": "Sylvanity",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{DHPT}}"
-                  }
-                }
-              ]
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": {
-                "operator": "Constants[0] (0) || Variables[0] (MDF_PointB2_P3_DelayUp) || SUB || RETURN",
-                "displayLines": "(0 - MDF_PointB2_P3_DelayUp)",
-                "constants": [
-                  0
-                ],
-                "variables": [
-                  "MDF_PointB2_P3_DelayUp"
-                ]
-              }
-            }
-          },
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-452137321\">DanHengPT_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">By Oath, This Vessel Is I</span>]",
-              "aliveOnly": "False",
-              "haloStatus": true,
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "MDF_Rank04_AllDamageReduceRatio",
-                "compareType": ">",
-                "value2": 0
-              },
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_Rank04_AllDamageReduceRatio) || RETURN",
-                  "displayLines": "MDF_Rank04_AllDamageReduceRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Rank04_AllDamageReduceRatio"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1272476867\">DanHengPT_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
-              "aliveOnly": "False",
-              "haloStatus": true,
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "MDF_Rank06_DefPentRatio",
-                "compareType": ">",
-                "value2": 0
-              },
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_Rank06_DefPentRatio) || RETURN",
-                  "displayLines": "MDF_Rank06_DefPentRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Rank06_DefPentRatio"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1040309000\">DanHengPT_Eidolon6_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">One Dream to Enfold All Wilds</span>]",
-              "aliveOnly": "False",
-              "haloStatus": true,
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "MDF_Rank06_AllDamageTypeTakenRatio",
-                "compareType": ">",
-                "value2": 0
-              },
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_Rank06_AllDamageTypeTakenRatio) || RETURN",
-                  "displayLines": "MDF_Rank06_AllDamageTypeTakenRatio",
-                  "constants": [],
-                  "variables": [
-                    "MDF_Rank06_AllDamageTypeTakenRatio"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1941107033\">DanHengPT_Eidolon2_LastBoostEnergyFlag</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1300423082\">DanHengPT_BoostEnergy</a>",
-          "stackType": "Replace",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_IsStack",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "ContextCaster",
-                      "variableName": "DanHengPT_Passive_Count",
-                      "value": {
-                        "operator": "Variables[0] (DanHengPT_Passive_Count) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(DanHengPT_Passive_Count - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "DanHengPT_Passive_Count"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Show Attack Time",
-                      "time": {
-                        "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
-                        "displayLines": "DanHengPT_Passive_Count",
-                        "constants": [],
-                        "variables": [
-                          "DanHengPT_Passive_Count"
-                        ]
-                      },
-                      "on": null,
-                      "show": true
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "DanHengPT_Passive_Count",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "ContextCaster"
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Eidolon Activated",
-                            "eidolon": 2,
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            }
-                          },
-                          "passed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1941107033\">DanHengPT_Eidolon2_LastBoostEnergyFlag</a>"
-                            }
-                          ]
-                        },
-                        "Modifier Deletes Itself",
-                        {
-                          "name": "Show Attack Time",
-                          "time": 0,
-                          "on": null,
-                          "show": false
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_IsStack"
-          ],
-          "latentQueue": [
-            "DanHengPT_IsFreeAction"
-          ]
-        }
-      ],
-      "references": []
     },
     "DanHengPT_Functions": {
       "fileName": "DanHengPT_Functions",

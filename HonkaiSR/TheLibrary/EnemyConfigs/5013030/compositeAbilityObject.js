@@ -3,6 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": 5013030,
   "trimCharacterName": 5013030,
   "abilityList": [
+    "5013030_Monster_W5_Peacock_AbilityP01_Insert03_Part02",
+    "5013030_Monster_W5_Peacock_AbilityP01_Insert03_Part01",
+    "5013030_Monster_W5_Peacock_AbilityP01_Insert02_Part02",
+    "5013030_Monster_W5_Peacock_AbilityP01_Insert02_Part01",
+    "5013030_Monster_W5_Peacock_AbilityP01_Insert01_Part02",
+    "5013030_Monster_W5_Peacock_AbilityP01_Insert01_Part01",
+    "5013030_Monster_W5_Peacock_AbilityP01",
     "5013030_Monster_W5_Peacock_Ability05_Part02",
     "5013030_Monster_W5_Peacock_Ability05_Part01",
     "5013030_Monster_W5_Peacock_Ability04_Part02",
@@ -11,17 +18,474 @@ const compositeAbilityObject = {
     "5013030_Monster_W5_Peacock_Ability03_Part01",
     "5013030_Monster_W5_Peacock_Ability01_Part02",
     "5013030_Monster_W5_Peacock_Ability01_Part01",
-    "5013030_Monster_W5_Peacock_AbilityP01_Insert03_Part02",
-    "5013030_Monster_W5_Peacock_AbilityP01_Insert03_Part01",
-    "5013030_Monster_W5_Peacock_AbilityP01_Insert02_Part02",
-    "5013030_Monster_W5_Peacock_AbilityP01_Insert02_Part01",
-    "5013030_Monster_W5_Peacock_AbilityP01_Insert01_Part02",
-    "5013030_Monster_W5_Peacock_AbilityP01_Insert01_Part01",
-    "5013030_Monster_W5_Peacock_AbilityP01",
     "5013030_Modifiers",
     "5013030_Functions"
   ],
   "abilityObject": {
+    "5013030_Monster_W5_Peacock_AbilityP01_Insert03_Part02": {
+      "fileName": "5013030_Monster_W5_Peacock_AbilityP01_Insert03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "ColorOutInsertFlag"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "CurrentColorSlotIndex",
+            "compareType": ">=",
+            "value2": 6
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
+              "variables": {
+                "DynamicString_ColorSlotX": 6
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "CurrentColorSlotIndex",
+            "compareType": ">=",
+            "value2": 5
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
+              "variables": {
+                "DynamicString_ColorSlotX": 5
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "CurrentColorSlotIndex",
+            "compareType": ">=",
+            "value2": 4
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
+              "variables": {
+                "DynamicString_ColorSlotX": 4
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "CurrentColorSlotIndex",
+            "compareType": ">=",
+            "value2": 3
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
+              "variables": {
+                "DynamicString_ColorSlotX": 3
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "CurrentColorSlotIndex",
+            "compareType": ">=",
+            "value2": 2
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
+              "variables": {
+                "DynamicString_ColorSlotX": 2
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "CurrentColorSlotIndex",
+            "compareType": ">=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
+              "variables": {
+                "DynamicString_ColorSlotX": 1
+              }
+            }
+          ]
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
+          "variables": {
+            "DynamicString_ColorSlotX": 1
+          }
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
+          "variables": {
+            "DynamicString_ColorSlotX": 2
+          }
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
+          "variables": {
+            "DynamicString_ColorSlotX": 3
+          }
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
+          "variables": {
+            "DynamicString_ColorSlotX": 4
+          }
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
+          "variables": {
+            "DynamicString_ColorSlotX": 5
+          }
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
+          "variables": {
+            "DynamicString_ColorSlotX": 6
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Define Custom Variable",
+          "variableName": "CurrentColorSlotIndex",
+          "value": 0
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5013030_Monster_W5_Peacock_AbilityP01_Insert03_Part01": {
+      "fileName": "5013030_Monster_W5_Peacock_AbilityP01_Insert03_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W5_Peacock_AbilityP01_Insert03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5013030_Monster_W5_Peacock_AbilityP01_Insert02_Part02": {
+      "fileName": "5013030_Monster_W5_Peacock_AbilityP01_Insert02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "ColorOutInsertFlag"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"973037691\">Enemy_W5_Peacock_AbilityP01_Colorful</a>[<span class=\"descriptionNumberColor\">Color</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2047643861\">Enemy_W5_Peacock_AbilityP01_Colorful_Effect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]",
+          "valuePerStack": {
+            "MDF_ElationDamageExtraColorCount": {
+              "operator": "Variables[0] ({[SkillP01[6]]}) || RETURN",
+              "displayLines": "{[SkillP01[6]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[6]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5013030_Monster_W5_Peacock_AbilityP01_Insert02_Part01": {
+      "fileName": "5013030_Monster_W5_Peacock_AbilityP01_Insert02_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W5_Peacock_AbilityP01_Insert02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "onAbort": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "ColorOutInsertFlag"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5013030_Monster_W5_Peacock_AbilityP01_Insert01_Part02": {
+      "fileName": "5013030_Monster_W5_Peacock_AbilityP01_Insert01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "ColorInInsertFlag"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2047643861\">Enemy_W5_Peacock_AbilityP01_Colorful_Effect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"973037691\">Enemy_W5_Peacock_AbilityP01_Colorful</a>[<span class=\"descriptionNumberColor\">Color</span>]",
+          "valuePerStack": {
+            "MDF_ColorDiffDamageAddedRatio": {
+              "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
+              "displayLines": "{[SkillP01[4]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[4]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2014742101\">Enemy_W5_Peacock_Endurance</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+          },
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5013030_Monster_W5_Peacock_AbilityP01_Insert01_Part01": {
+      "fileName": "5013030_Monster_W5_Peacock_AbilityP01_Insert01_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W5_Peacock_AbilityP01_Insert01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "onAbort": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "ColorInInsertFlag"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5013030_Monster_W5_Peacock_AbilityP01": {
+      "fileName": "5013030_Monster_W5_Peacock_AbilityP01",
+      "childAbilityList": [
+        "5013030_Monster_W5_Peacock_AbilityP01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"521870185\">Enemy_W5_Peacock_RemoveOneMore</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2075359647\">Enemy_W5_Peacock_AbilityP01_ColorStateController</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1459756173\">W5_Peacock_BattleScore1</a>"
+        }
+      ],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "5013030_Monster_W5_Peacock_Ability05_Part02": {
       "fileName": "5013030_Monster_W5_Peacock_Ability05_Part02",
       "abilityType": null,
@@ -1625,470 +2089,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "5013030_Monster_W5_Peacock_AbilityP01_Insert03_Part02": {
-      "fileName": "5013030_Monster_W5_Peacock_AbilityP01_Insert03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ColorOutInsertFlag"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "CurrentColorSlotIndex",
-            "compareType": ">=",
-            "value2": 6
-          },
-          "passed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
-              "variables": {
-                "DynamicString_ColorSlotX": 6
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "CurrentColorSlotIndex",
-            "compareType": ">=",
-            "value2": 5
-          },
-          "passed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
-              "variables": {
-                "DynamicString_ColorSlotX": 5
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "CurrentColorSlotIndex",
-            "compareType": ">=",
-            "value2": 4
-          },
-          "passed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
-              "variables": {
-                "DynamicString_ColorSlotX": 4
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "CurrentColorSlotIndex",
-            "compareType": ">=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
-              "variables": {
-                "DynamicString_ColorSlotX": 3
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "CurrentColorSlotIndex",
-            "compareType": ">=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
-              "variables": {
-                "DynamicString_ColorSlotX": 2
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "CurrentColorSlotIndex",
-            "compareType": ">=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"1174046786\">TaskList_Monster_W5_Peacock_Ability01_UseColor_Pre</a>",
-              "variables": {
-                "DynamicString_ColorSlotX": 1
-              }
-            }
-          ]
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
-          "variables": {
-            "DynamicString_ColorSlotX": 1
-          }
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
-          "variables": {
-            "DynamicString_ColorSlotX": 2
-          }
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
-          "variables": {
-            "DynamicString_ColorSlotX": 3
-          }
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
-          "variables": {
-            "DynamicString_ColorSlotX": 4
-          }
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
-          "variables": {
-            "DynamicString_ColorSlotX": 5
-          }
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"81149260\">TaskList_Monster_W5_Peacock_Ability01_ColorBreak</a>",
-          "variables": {
-            "DynamicString_ColorSlotX": 6
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Define Custom Variable",
-          "variableName": "CurrentColorSlotIndex",
-          "value": 0
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013030_Monster_W5_Peacock_AbilityP01_Insert03_Part01": {
-      "fileName": "5013030_Monster_W5_Peacock_AbilityP01_Insert03_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Peacock_AbilityP01_Insert03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013030_Monster_W5_Peacock_AbilityP01_Insert02_Part02": {
-      "fileName": "5013030_Monster_W5_Peacock_AbilityP01_Insert02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ColorOutInsertFlag"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"973037691\">Enemy_W5_Peacock_AbilityP01_Colorful</a>[<span class=\"descriptionNumberColor\">Color</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2047643861\">Enemy_W5_Peacock_AbilityP01_Colorful_Effect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]",
-          "valuePerStack": {
-            "MDF_ElationDamageExtraColorCount": {
-              "operator": "Variables[0] ({[SkillP01[6]]}) || RETURN",
-              "displayLines": "{[SkillP01[6]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[6]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013030_Monster_W5_Peacock_AbilityP01_Insert02_Part01": {
-      "fileName": "5013030_Monster_W5_Peacock_AbilityP01_Insert02_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Peacock_AbilityP01_Insert02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "onAbort": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ColorOutInsertFlag"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013030_Monster_W5_Peacock_AbilityP01_Insert01_Part02": {
-      "fileName": "5013030_Monster_W5_Peacock_AbilityP01_Insert01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ColorInInsertFlag"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2047643861\">Enemy_W5_Peacock_AbilityP01_Colorful_Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"973037691\">Enemy_W5_Peacock_AbilityP01_Colorful</a>[<span class=\"descriptionNumberColor\">Color</span>]",
-          "valuePerStack": {
-            "MDF_ColorDiffDamageAddedRatio": {
-              "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-              "displayLines": "{[SkillP01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2014742101\">Enemy_W5_Peacock_Endurance</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-          },
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013030_Monster_W5_Peacock_AbilityP01_Insert01_Part01": {
-      "fileName": "5013030_Monster_W5_Peacock_AbilityP01_Insert01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Peacock_AbilityP01_Insert01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "onAbort": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ColorInInsertFlag"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013030_Monster_W5_Peacock_AbilityP01": {
-      "fileName": "5013030_Monster_W5_Peacock_AbilityP01",
-      "childAbilityList": [
-        "5013030_Monster_W5_Peacock_AbilityP01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"521870185\">Enemy_W5_Peacock_RemoveOneMore</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2075359647\">Enemy_W5_Peacock_AbilityP01_ColorStateController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1459756173\">W5_Peacock_BattleScore1</a>"
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "5013030_Modifiers": {
       "fileName": "5013030_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -2333,9 +2333,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2607,6 +2605,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1611732375\">Enemy_W5_Peacock_AbilityP01_Color_Green_Display</a>[<span class=\"descriptionNumberColor\">Jade Green</span>]",
           "stackType": "Replace",
+          "description": "Gained <span class=\"descriptionNumberColor\">ModifierLayers</span> points of Jade Green. When using abilities, consumes points to deal Wind Additional DMG.",
+          "type": "Other",
+          "statusName": "Jade Green",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2636,17 +2637,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Gained <span class=\"descriptionNumberColor\">ModifierLayers</span> points of Jade Green. When using abilities, consumes points to deal Wind Additional DMG.",
-          "type": "Other",
-          "statusName": "Jade Green"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1242269878\">Enemy_W5_Peacock_AbilityP01_Color_Purple_Display</a>[<span class=\"descriptionNumberColor\">Wisteria Purple</span>]",
           "stackType": "Replace",
+          "description": "Gained <span class=\"descriptionNumberColor\">ModifierLayers</span> points of Wisteria Purple. When using abilities, consumes points to deal Lightning Additional DMG.",
+          "type": "Other",
+          "statusName": "Wisteria Purple",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2676,17 +2675,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Gained <span class=\"descriptionNumberColor\">ModifierLayers</span> points of Wisteria Purple. When using abilities, consumes points to deal Lightning Additional DMG.",
-          "type": "Other",
-          "statusName": "Wisteria Purple"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__689948799\">Enemy_W5_Peacock_AbilityP01_Color_Cyan_Display</a>[<span class=\"descriptionNumberColor\">Ultramarine</span>]",
           "stackType": "Replace",
+          "description": "Gained <span class=\"descriptionNumberColor\">ModifierLayers</span> points of Ultramarine. When using abilities, consumes points to deal Quantum Additional DMG.",
+          "type": "Other",
+          "statusName": "Ultramarine",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2716,17 +2713,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Gained <span class=\"descriptionNumberColor\">ModifierLayers</span> points of Ultramarine. When using abilities, consumes points to deal Quantum Additional DMG.",
-          "type": "Other",
-          "statusName": "Ultramarine"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1698271149\">Enemy_W5_Peacock_AbilityP01_Color_White_Display</a>[<span class=\"descriptionNumberColor\">Unbleached Silk</span>]",
           "stackType": "Replace",
+          "description": "Gained <span class=\"descriptionNumberColor\">ModifierLayers</span> points of Unbleached Silk. When using abilities, consumes points to deal Physical Additional DMG.",
+          "type": "Other",
+          "statusName": "Unbleached Silk",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2756,17 +2751,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Gained <span class=\"descriptionNumberColor\">ModifierLayers</span> points of Unbleached Silk. When using abilities, consumes points to deal Physical Additional DMG.",
-          "type": "Other",
-          "statusName": "Unbleached Silk"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2012268992\">Enemy_W5_Peacock_AbilityP01_Color_Yellow_Display</a>[<span class=\"descriptionNumberColor\">Pale Yellow</span>]",
           "stackType": "Replace",
+          "description": "Gained <span class=\"descriptionNumberColor\">ModifierLayers</span> points of Pale Yellow. When using abilities, consumes points to deal Imaginary Additional DMG.",
+          "type": "Other",
+          "statusName": "Pale Yellow",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2796,17 +2789,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Gained <span class=\"descriptionNumberColor\">ModifierLayers</span> points of Pale Yellow. When using abilities, consumes points to deal Imaginary Additional DMG.",
-          "type": "Other",
-          "statusName": "Pale Yellow"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2087807700\">Enemy_W5_Peacock_AbilityP01_Color_Blue_Display</a>[<span class=\"descriptionNumberColor\">Indigo</span>]",
           "stackType": "Replace",
+          "description": "Gained <span class=\"descriptionNumberColor\">ModifierLayers</span> points of Indigo. When using abilities, consumes points to deal Ice Additional DMG.",
+          "type": "Other",
+          "statusName": "Indigo",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2836,17 +2827,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Gained <span class=\"descriptionNumberColor\">ModifierLayers</span> points of Indigo. When using abilities, consumes points to deal Ice Additional DMG.",
-          "type": "Other",
-          "statusName": "Indigo"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1174793913\">Enemy_W5_Peacock_AbilityP01_Color_Red_Display</a>[<span class=\"descriptionNumberColor\">Pure Crimson</span>]",
           "stackType": "Replace",
+          "description": "Gained <span class=\"descriptionNumberColor\">ModifierLayers</span> points of Pure Crimson. When using abilities, consumes points to deal Fire Additional DMG.",
+          "type": "Other",
+          "statusName": "Pure Crimson",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2876,17 +2865,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Gained <span class=\"descriptionNumberColor\">ModifierLayers</span> points of Pure Crimson. When using abilities, consumes points to deal Fire Additional DMG.",
-          "type": "Other",
-          "statusName": "Pure Crimson"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "As Jade Green is obtained, gains Wind Weakness after entering \"Color\" state, and Wind RES reduces by <span class=\"descriptionNumberColor\">MDF_ResistanceDown</span>.",
+          "type": "Other",
+          "statusName": "Wind Weakness",
+          "stackLimit": 1,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2942,17 +2931,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "As Jade Green is obtained, gains Wind Weakness after entering \"Color\" state, and Wind RES reduces by <span class=\"descriptionNumberColor\">MDF_ResistanceDown</span>.",
-          "type": "Other",
-          "statusName": "Wind Weakness",
-          "stackLimit": 1,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "As Wisteria Purple is obtained, gains Lightning Weakness after entering \"Color\" state, and Lightning RES reduces by <span class=\"descriptionNumberColor\">MDF_ResistanceDown</span>.",
+          "type": "Other",
+          "statusName": "Lightning Weakness",
+          "stackLimit": 1,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3008,17 +2997,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "As Wisteria Purple is obtained, gains Lightning Weakness after entering \"Color\" state, and Lightning RES reduces by <span class=\"descriptionNumberColor\">MDF_ResistanceDown</span>.",
-          "type": "Other",
-          "statusName": "Lightning Weakness",
-          "stackLimit": 1,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "As Ultramarine is obtained, gains Quantum Weakness after entering \"Color\" state, and Quantum RES reduces by <span class=\"descriptionNumberColor\">MDF_ResistanceDown</span>.",
+          "type": "Other",
+          "statusName": "Quantum Weakness",
+          "stackLimit": 1,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3074,17 +3063,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "As Ultramarine is obtained, gains Quantum Weakness after entering \"Color\" state, and Quantum RES reduces by <span class=\"descriptionNumberColor\">MDF_ResistanceDown</span>.",
-          "type": "Other",
-          "statusName": "Quantum Weakness",
-          "stackLimit": 1,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "As Unbleached Silk is obtained, gains Physical Weakness after entering \"Color\" state, and Physical RES reduces by <span class=\"descriptionNumberColor\">MDF_ResistanceDown</span>.",
+          "type": "Other",
+          "statusName": "Physical Weakness",
+          "stackLimit": 1,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3140,17 +3129,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "As Unbleached Silk is obtained, gains Physical Weakness after entering \"Color\" state, and Physical RES reduces by <span class=\"descriptionNumberColor\">MDF_ResistanceDown</span>.",
-          "type": "Other",
-          "statusName": "Physical Weakness",
-          "stackLimit": 1,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "As Pale Yellow is obtained, gains Imaginary Weakness after entering \"Color\" state, and Imaginary RES reduces by <span class=\"descriptionNumberColor\">MDF_ResistanceDown</span>.",
+          "type": "Other",
+          "statusName": "Imaginary Weakness",
+          "stackLimit": 1,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3206,17 +3195,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "As Pale Yellow is obtained, gains Imaginary Weakness after entering \"Color\" state, and Imaginary RES reduces by <span class=\"descriptionNumberColor\">MDF_ResistanceDown</span>.",
-          "type": "Other",
-          "statusName": "Imaginary Weakness",
-          "stackLimit": 1,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "As Indigo is obtained, gains Ice Weakness after entering \"Color\" state, and Ice RES reduces by <span class=\"descriptionNumberColor\">MDF_ResistanceDown</span>.",
+          "type": "Other",
+          "statusName": "Ice Weakness",
+          "stackLimit": 1,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3272,17 +3261,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "As Indigo is obtained, gains Ice Weakness after entering \"Color\" state, and Ice RES reduces by <span class=\"descriptionNumberColor\">MDF_ResistanceDown</span>.",
-          "type": "Other",
-          "statusName": "Ice Weakness",
-          "stackLimit": 1,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "As Pure Crimson is obtained, gains Fire Weakness after entering \"Color\" state, and Fire RES reduces by <span class=\"descriptionNumberColor\">MDF_ResistanceDown</span>.",
+          "type": "Other",
+          "statusName": "Fire Weakness",
+          "stackLimit": 1,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3338,16 +3327,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "As Pure Crimson is obtained, gains Fire Weakness after entering \"Color\" state, and Fire RES reduces by <span class=\"descriptionNumberColor\">MDF_ResistanceDown</span>.",
-          "type": "Other",
-          "statusName": "Fire Weakness",
-          "stackLimit": 1,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1921694254\">Enemy_W5_Peacock_AbilityP01_ElementResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Boost</span>]",
+          "description": "Increases All-Type RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Removed when Weakness is Broken. Regained when recovering from Weakness Broken state.",
+          "type": "Other",
+          "effectName": "All-Type RES Boost",
+          "statusName": "All-Type RES Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3370,16 +3358,16 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases All-Type RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Removed when Weakness is Broken. Regained when recovering from Weakness Broken state.",
-          "type": "Other",
-          "effectName": "All-Type RES Boost",
-          "statusName": "All-Type RES Boost"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1931542016\">Enemy_W5_Peacock_Ink</a>[<span class=\"descriptionNumberColor\">Color Imbalance</span>]",
           "stackType": "Replace",
+          "description": "Unable to use Ultimate.",
+          "type": "Debuff",
+          "effectName": "Ultimate cannot be used.",
+          "statusName": "Color Imbalance",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3397,11 +3385,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Unable to use Ultimate.",
-          "type": "Debuff",
-          "effectName": "Ultimate cannot be used.",
-          "statusName": "Color Imbalance"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3517,13 +3501,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2047643861\">Enemy_W5_Peacock_AbilityP01_Colorful_Effect</a>",
+          "latentQueue": [
+            "ColorInInsertFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -3537,10 +3522,6 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "ColorInInsertFlag"
           ]
         },
         {
@@ -3549,6 +3530,16 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "stackData": [
+            "MDF_ColorDiffDamageAddedRatio"
+          ],
+          "latentQueue": [
+            "ColorInInsertFlag"
+          ],
+          "description": "When using abilities, \"Paint\" will be consumed to deal Additional DMG of the corresponding Type. At the end of the turn, if all \"Paint\" has been consumed, enters the \"Colorless\" state and removes Weakness and Type RES reduction caused by \"Paint.\" When Weakness is Broken, consumes all \"Paint\" to deal Additional DMG equal to a percentage of this unit's max HP to this unit.",
+          "type": "Other",
+          "effectName": "Color",
+          "statusName": "Color",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4621,17 +4612,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ColorDiffDamageAddedRatio"
-          ],
-          "latentQueue": [
-            "ColorInInsertFlag"
-          ],
-          "description": "When using abilities, \"Paint\" will be consumed to deal Additional DMG of the corresponding Type. At the end of the turn, if all \"Paint\" has been consumed, enters the \"Colorless\" state and removes Weakness and Type RES reduction caused by \"Paint.\" When Weakness is Broken, consumes all \"Paint\" to deal Additional DMG equal to a percentage of this unit's max HP to this unit.",
-          "type": "Other",
-          "effectName": "Color",
-          "statusName": "Color"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4639,6 +4620,16 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "stackData": [
+            "MDF_ElationDamageExtraColorCount"
+          ],
+          "latentQueue": [
+            "ColorOutInsertFlag"
+          ],
+          "description": "When attacked by ally targets, gains 1 point of \"Paint\" based on the attacker's Type. If Elation DMG is received during the attack, then additionally gains a certain amount of \"Paint.\" When reaching 6 points of \"Paint,\" enters the \"Color\" state. During this state, based on the Types of Paint already gained, gains corresponding Types of Weakness and decreases the Type RES of corresponding Type. When in the \"Colorless\" state, Toughness will not drop below 1.",
+          "type": "Other",
+          "effectName": "Colorless",
+          "statusName": "Colorless",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -5014,44 +5005,6 @@ const compositeAbilityObject = {
                           "value": 0
                         }
                       ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "CurrentColorSlotIndex",
-              "from": "ContextOwner",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "maxValue": 7,
-                  "includeMaxValueInRange": true,
-                  "whenValueChanges": [
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (CurrentColorSlotIndex) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(CurrentColorSlotIndex - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "CurrentColorSlotIndex"
-                        ]
-                      },
-                      "entityClass": "Enemy",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "maximum": 6,
-                      "assignState": "True",
-                      "state": "Normal"
                     }
                   ]
                 }
@@ -5977,16 +5930,44 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "stackData": [
-            "MDF_ElationDamageExtraColorCount"
-          ],
-          "latentQueue": [
-            "ColorOutInsertFlag"
-          ],
-          "description": "When attacked by ally targets, gains 1 point of \"Paint\" based on the attacker's Type. If Elation DMG is received during the attack, then additionally gains a certain amount of \"Paint.\" When reaching 6 points of \"Paint,\" enters the \"Color\" state. During this state, based on the Types of Paint already gained, gains corresponding Types of Weakness and decreases the Type RES of corresponding Type. When in the \"Colorless\" state, Toughness will not drop below 1.",
-          "type": "Other",
-          "effectName": "Colorless",
-          "statusName": "Colorless"
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "CurrentColorSlotIndex",
+              "from": "ContextOwner",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "maxValue": 7,
+                  "includeMaxValueInRange": true,
+                  "whenValueChanges": [
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (CurrentColorSlotIndex) || Constants[0] (1) || SUB || RETURN",
+                        "displayLines": "(CurrentColorSlotIndex - 1)",
+                        "constants": [
+                          1
+                        ],
+                        "variables": [
+                          "CurrentColorSlotIndex"
+                        ]
+                      },
+                      "entityClass": "Enemy",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "maximum": 6,
+                      "assignState": "True",
+                      "state": "Normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -6296,9 +6277,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

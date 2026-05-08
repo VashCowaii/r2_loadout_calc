@@ -19,6 +19,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1754357914\">MLevel_BattleEventAbility_Challenge_Month_05</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "After launching attacks, consumes 1 stack of \"Memory Imprint\" and deals <span class=\"descriptionNumberColor\">ADF_1</span> of the character's ATK as Additional DMG to a random enemy target that was attacked.",
+      "type": "Buff",
+      "effectName": "Memory Imprint",
+      "statusName": "Memory Imprint",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -70,11 +74,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "After launching attacks, consumes 1 stack of \"Memory Imprint\" and deals <span class=\"descriptionNumberColor\">ADF_1</span> of the character's ATK as Additional DMG to a random enemy target that was attacked.",
-      "type": "Buff",
-      "effectName": "Memory Imprint",
-      "statusName": "Memory Imprint"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -133,9 +133,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

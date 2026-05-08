@@ -3,15 +3,16 @@ const compositeAbilityObject = {
   "fullCharacterName": 3003031,
   "trimCharacterName": 3003031,
   "abilityList": [
+    "3003031_Monster_W3_Figure_Standard_Part_Insert",
     "3003031_Monster_W3_Figure_02_AssistAbility02_Part02",
     "3003031_Monster_W3_Figure_02_AssistAbility02_Part01",
     "3003031_Monster_W3_Figure_02_AssistAbility01_Effect",
     "3003031_Monster_W3_Figure_02_AssistAbility01_Perform",
     "3003031_Monster_W3_Figure_02_AssistAbility01_Logic",
+    "3003031_Monster_W3_Figure_02_PassiveAbility_Initiate",
+    "3003031_Monster_W3_Figure_02_Ability07_Part00_BattleEvent",
     "3003031_Monster_W3_Figure_02_Ability07_Part02",
     "3003031_Monster_W3_Figure_02_Ability07_Part01",
-    "3003031_Monster_W3_Figure_02_Ability10_AssistInit_Insert",
-    "3003031_Monster_W3_Figure_02_Ability07_Part00_BattleEvent",
     "3003031_Monster_W3_Figure_02_Ability07_Part00",
     "3003031_Monster_W3_Figure_02_Ability05_Part02",
     "3003031_Monster_W3_Figure_02_Ability05_Part01",
@@ -23,11 +24,20 @@ const compositeAbilityObject = {
     "3003031_Monster_W3_Figure_02_Ability02_Part01",
     "3003031_Monster_W3_Figure_02_Ability01_Part02",
     "3003031_Monster_W3_Figure_02_Ability01_Part01",
-    "3003031_Monster_W3_Figure_Standard_Part_Insert",
-    "3003031_Monster_W3_Figure_02_PassiveAbility_Initiate",
     "3003031_Modifiers"
   ],
   "abilityObject": {
+    "3003031_Monster_W3_Figure_Standard_Part_Insert": {
+      "fileName": "3003031_Monster_W3_Figure_Standard_Part_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "3003031_Monster_W3_Figure_02_AssistAbility02_Part02": {
       "fileName": "3003031_Monster_W3_Figure_02_AssistAbility02_Part02",
       "abilityType": null,
@@ -84,87 +94,85 @@ const compositeAbilityObject = {
       "tag": "DOT_Burn",
       "references": []
     },
-    "3003031_Monster_W3_Figure_02_Ability07_Part02": {
-      "fileName": "3003031_Monster_W3_Figure_02_Ability07_Part02",
-      "abilityType": null,
+    "3003031_Monster_W3_Figure_02_PassiveAbility_Initiate": {
+      "fileName": "3003031_Monster_W3_Figure_02_PassiveAbility_Initiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
-      "parse": [
+      "parse": [],
+      "whenAdded": [
         {
-          "name": "Trigger Ability",
-          "from": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "ability": "Monster_W3_Figure_02_Ability07_Part01",
-          "isTrigger": true
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         },
         {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Add Target by Unique Identifier",
-            "identifier": "DollBoss"
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
           },
-          "variableName": "W3_FigureBoss_00_BattleScore2_Flag1",
-          "context": "TargetEntity",
-          "value": -1,
-          "max": 100
+          "modifier": "<a class=\"gModGreen\" id=\"-1711322020\">Monster_W3_Figure_02_FireInHead</a>"
         },
         {
-          "name": "ATK Scaling DMG",
-          "target": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
+            "target": "{{Caster}}"
           },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
-              "displayLines": "{[Skill07[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill07[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
+          "modifier": "<a class=\"gModGreen\" id=\"308616063\">Enemy_W3_Figure_02_AudioControllerForChosenOne</a>"
         },
-        "Trigger: Attack End"
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1606294659\">W3_Figure_02_BattleScore1</a>"
+        }
       ],
       "targetObjectData": {
-        "primaryTarget": "Inherent Target"
+        "primaryTarget": "{{Caster}}"
       },
-      "tag": "DOT",
-      "references": []
-    },
-    "3003031_Monster_W3_Figure_02_Ability07_Part01": {
-      "fileName": "3003031_Monster_W3_Figure_02_Ability07_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       },
-      "references": []
-    },
-    "3003031_Monster_W3_Figure_02_Ability10_AssistInit_Insert": {
-      "fileName": "3003031_Monster_W3_Figure_02_Ability10_AssistInit_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__308616063\">Enemy_W3_Figure_02_AudioControllerForChosenOne</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier is Added [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     "3003031_Monster_W3_Figure_02_Ability07_Part00_BattleEvent": {
       "fileName": "3003031_Monster_W3_Figure_02_Ability07_Part00_BattleEvent",
@@ -315,11 +323,80 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
+    },
+    "3003031_Monster_W3_Figure_02_Ability07_Part02": {
+      "fileName": "3003031_Monster_W3_Figure_02_Ability07_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "ability": "Monster_W3_Figure_02_Ability07_Part01",
+          "isTrigger": true
+        },
+        {
+          "name": "Define Custom Variable with Added Value",
+          "target": {
+            "name": "Add Target by Unique Identifier",
+            "identifier": "DollBoss"
+          },
+          "variableName": "W3_FigureBoss_00_BattleScore2_Flag1",
+          "context": "TargetEntity",
+          "value": -1,
+          "max": 100
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill07[0]]}) || RETURN",
+              "displayLines": "{[Skill07[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill07[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "tag": "DOT",
+      "references": []
+    },
+    "3003031_Monster_W3_Figure_02_Ability07_Part01": {
+      "fileName": "3003031_Monster_W3_Figure_02_Ability07_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
     },
     "3003031_Monster_W3_Figure_02_Ability07_Part00": {
       "fileName": "3003031_Monster_W3_Figure_02_Ability07_Part00",
@@ -516,9 +593,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1459,99 +1534,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "3003031_Monster_W3_Figure_Standard_Part_Insert": {
-      "fileName": "3003031_Monster_W3_Figure_Standard_Part_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3003031_Monster_W3_Figure_02_PassiveAbility_Initiate": {
-      "fileName": "3003031_Monster_W3_Figure_02_PassiveAbility_Initiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1711322020\">Monster_W3_Figure_02_FireInHead</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"308616063\">Enemy_W3_Figure_02_AudioControllerForChosenOne</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1606294659\">W3_Figure_02_BattleScore1</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__308616063\">Enemy_W3_Figure_02_AudioControllerForChosenOne</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier is Added [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-607059020\">Enemy_W3_DollElite_Commnon_TheChosenOne</a>[<span class=\"descriptionNumberColor\">Impresario</span>]"
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "3003031_Modifiers": {
       "fileName": "3003031_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1718,9 +1700,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1729,38 +1709,37 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1127149087\">Monster_W3_Figure_02_ChainMark4</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1127149087\">Monster_W3_Figure_02_ChainMark4</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1110371468\">Monster_W3_Figure_02_ChainMark3</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1110371468\">Monster_W3_Figure_02_ChainMark3</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1093593849\">Monster_W3_Figure_02_ChainMark2</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1093593849\">Monster_W3_Figure_02_ChainMark2</a>"
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1076816230\">Monster_W3_Figure_02_ChainMark1</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1076816230\">Monster_W3_Figure_02_ChainMark1</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-596409662\">Monster_W3_Figure_02_IsAiming</a>[<span class=\"descriptionNumberColor\">Shackle-Bearing Messenger</span>]",
           "stackType": "Replace",
+          "latentQueue": [
+            "MarkCount"
+          ],
+          "description": "About to use Desmios Evangelion. The current DMG level is <span class=\"descriptionNumberColor\">MDF_DangerLevel</span>.",
+          "type": "Other",
+          "effectName": "Target Locked On",
+          "statusName": "Shackle-Bearing Messenger",
+          "stackLimit": 4,
+          "addStacksPerTrigger": -1,
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1948,17 +1927,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MarkCount"
-          ],
-          "description": "About to use Desmios Evangelion. The current DMG level is <span class=\"descriptionNumberColor\">MDF_DangerLevel</span>.",
-          "type": "Other",
-          "effectName": "Target Locked On",
-          "statusName": "Shackle-Bearing Messenger",
-          "stackLimit": 4,
-          "addStacksPerTrigger": -1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1968,6 +1937,14 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
+          "latentQueue": [
+            "MarkCount",
+            "MDF_DangerLevel"
+          ],
+          "description": "%CasterName will focus attacks on this target.",
+          "type": "Other",
+          "effectName": "Target Locked On",
+          "statusName": "Target Locked On",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2111,16 +2088,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MarkCount",
-            "MDF_DangerLevel"
-          ],
-          "description": "%CasterName will focus attacks on this target.",
-          "type": "Other",
-          "effectName": "Target Locked On",
-          "statusName": "Target Locked On"
+          ]
         }
       ],
       "references": []

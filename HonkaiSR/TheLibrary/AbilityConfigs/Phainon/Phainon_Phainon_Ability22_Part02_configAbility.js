@@ -200,6 +200,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1753185453\">M_Phainon_Ability22_TargetTimeslow</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "_delta_frame",
+        "_prev_energy"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -210,11 +214,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_delta_frame",
-        "_prev_energy"
       ]
     }
   ],

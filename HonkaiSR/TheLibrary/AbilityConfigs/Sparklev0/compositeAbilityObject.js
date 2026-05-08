@@ -3,30 +3,1197 @@ const compositeAbilityObject = {
   "fullCharacterName": "Sparkle_v0",
   "trimCharacterName": "Sparklev0",
   "abilityList": [
-    "Sparklev0_Sparkle_Trace02",
+    "Sparklev0_Modifiers",
+    "Sparklev0_LocalPlayer_StandardAbility_AttackBreak",
+    "Sparklev0_LocalPlayer_Sparkle_TechniqueUsage",
+    "Sparklev0_LocalPlayer_Sparkle_NormalAtk01",
     "Sparklev0_Sparkle_TechniqueInLevel",
-    "Sparklev0_Sparkle_PassiveAbility_1",
     "Sparklev0_Sparkle_Eidolon6_BP",
+    "Sparklev0_Sparkle_PassiveAbility_1",
     "Sparklev0_Sparkle_Ability03_Part02",
     "Sparklev0_Sparkle_Ability03_Part01",
     "Sparklev0_Sparkle_Ability03_EnterReady",
-    "Sparklev0_Sparkle_Ability02_Self_Part02",
     "Sparklev0_Sparkle_Ability02_Others_Part02",
+    "Sparklev0_Sparkle_Ability02_Self_Part02",
     "Sparklev0_Sparkle_Ability02_Part01",
     "Sparklev0_Sparkle_Ability01_Part02",
-    "Sparklev0_Sparkle_Ability01_Part01",
-    "Sparklev0_Modifiers"
+    "Sparklev0_Sparkle_Ability01_Part01"
   ],
   "abilityObject": {
-    "Sparklev0_Sparkle_Trace02": {
-      "fileName": "Sparklev0_Sparkle_Trace02",
-      "abilityType": null,
+    "Sparklev0_Modifiers": {
+      "fileName": "Sparklev0_Modifiers",
+      "abilityType": "Char. Modifiers",
       "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-685638153\">ADV_StageAbility_Maze_Sparkle_Hide</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__212298658\">ADV_StageAbility_Maze_Sparkle</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "modifierFlags": [
+            "Stealth"
+          ],
+          "duration": 20,
+          "onCreation": [
+            {
+              "name": "Overworld Filter Enemies",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Task Action Target}}"
+                  },
+                  "modifier": null,
+                  "ID": "1000118(null)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+          "stackType": "Replace",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue3</span>.",
+          "type": "Buff",
+          "effectName": "Nocturne",
+          "statusName": "Nocturne",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Element",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "DamageType": {
+                          "name": "Damage Type Source",
+                          "sourceType": "Quantum"
+                        }
+                      },
+                      {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "type": "Memosprite",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_PropertyValue3",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_PropertyValue2) || ADD || RETURN",
+                        "displayLines": "(MDF_PropertyValue + MDF_PropertyValue2)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyValue",
+                          "MDF_PropertyValue2"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_PropertyValue2) || ADD || RETURN",
+                        "displayLines": "(MDF_PropertyValue + MDF_PropertyValue2)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyValue",
+                          "MDF_PropertyValue2"
+                        ]
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_PropertyValue3",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                        "displayLines": "MDF_PropertyValue",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyValue"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                        "displayLines": "MDF_PropertyValue",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyValue"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__690939863\">Sparkle_Eidolon6_Mark</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player & Enemy Team All(with Unselectable)}}"
+                  },
+                  "searchRandom": true,
+                  "includeDyingTargets": true,
+                  "maxTargets": 10,
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "invertCondition": true
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"690939863\">Sparkle_Eidolon6_Mark</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                          "value": "(0 - MDF_DefenceAddedRatio)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AllDamageAddedRatio) || RETURN",
+                    "displayLines": "MDF_AllDamageAddedRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AllDamageAddedRatio"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1668382571\">Sparkle_PointB3_Mark</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1017813291\">Sparkle_PassiveAbility_AllDamageAddedRatio02</a>[<span class=\"descriptionNumberColor\">Red Herring</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Red Herring",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_Count",
+                  "multiplier": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_Count",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_PassiveMaxLayer) || RETURN",
+                      "displayLines": "MDF_PassiveMaxLayer",
+                      "constants": [],
+                      "variables": [
+                        "MDF_PassiveMaxLayer"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Count",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PassiveMaxLayer) || RETURN",
+                        "displayLines": "MDF_PassiveMaxLayer",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PassiveMaxLayer"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_PropertyValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyValue2) || Variables[1] (MDF_PropertyValue3) || ADD || Variables[2] (MDF_Count) || MUL || RETURN",
+                        "displayLines": "((MDF_PropertyValue2 + MDF_PropertyValue3) * MDF_Count)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyValue2",
+                          "MDF_PropertyValue3",
+                          "MDF_Count"
+                        ]
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_PropertyValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyValue2) || Variables[1] (MDF_Count) || MUL || RETURN",
+                        "displayLines": "(MDF_PropertyValue2 * MDF_Count)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyValue2",
+                          "MDF_Count"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Modifier Description",
+                      "popUpText": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Ignores <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio2</span> of the target's DEF when dealing DMG."
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_DefenceAddedRatio2",
+                      "value": {
+                        "operator": "Variables[0] (MDF_DefenceAddedRatio2) || Variables[1] (MDF_Count) || MUL || RETURN",
+                        "displayLines": "(MDF_DefenceAddedRatio2 * MDF_Count)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_DefenceAddedRatio2",
+                          "MDF_Count"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>",
+                  "valuePerStack": {
+                    "MDF_AllDamageAddedRatio": {
+                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                      "displayLines": "MDF_PropertyValue",
+                      "constants": [],
+                      "variables": [
+                        "MDF_PropertyValue"
+                      ]
+                    },
+                    "MDF_DefenceAddedRatio": {
+                      "operator": "Variables[0] (MDF_DefenceAddedRatio2) || RETURN",
+                      "displayLines": "MDF_DefenceAddedRatio2",
+                      "constants": [],
+                      "variables": [
+                        "MDF_DefenceAddedRatio2"
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Owner]"
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Modifier Was",
+                        "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]"
+                      },
+                      {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "mustBeAlive2": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_PropertyValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyValue2) || Variables[1] (MDF_Count) || MUL || RETURN",
+                        "displayLines": "(MDF_PropertyValue2 * MDF_Count)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyValue2",
+                          "MDF_Count"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>",
+                      "valuePerStack": {
+                        "MDF_AllDamageAddedRatio": {
+                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                          "displayLines": "MDF_PropertyValue",
+                          "constants": [],
+                          "variables": [
+                            "MDF_PropertyValue"
+                          ]
+                        },
+                        "MDF_DefenceAddedRatio": {
+                          "operator": "Variables[0] (MDF_DefenceAddedRatio2) || RETURN",
+                          "displayLines": "MDF_DefenceAddedRatio2",
+                          "constants": [],
+                          "variables": [
+                            "MDF_DefenceAddedRatio2"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier is Added [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Modifier Was",
+                        "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]"
+                      },
+                      {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "mustBeAlive2": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_PropertyValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyValue2) || Variables[1] (MDF_PropertyValue3) || ADD || Variables[2] (MDF_Count) || MUL || RETURN",
+                        "displayLines": "((MDF_PropertyValue2 + MDF_PropertyValue3) * MDF_Count)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyValue2",
+                          "MDF_PropertyValue3",
+                          "MDF_Count"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>",
+                      "valuePerStack": {
+                        "MDF_AllDamageAddedRatio": {
+                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                          "displayLines": "MDF_PropertyValue",
+                          "constants": [],
+                          "variables": [
+                            "MDF_PropertyValue"
+                          ]
+                        },
+                        "MDF_DefenceAddedRatio": {
+                          "operator": "Variables[0] (MDF_DefenceAddedRatio2) || RETURN",
+                          "displayLines": "MDF_DefenceAddedRatio2",
+                          "constants": [],
+                          "variables": [
+                            "MDF_DefenceAddedRatio2"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1304623516\">Sparkle_Eidolon6_CritDmgAddedRatio01</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_PropertyValue",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValueConvert) || RETURN",
+                    "displayLines": "MDF_PropertyValueConvert",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValueConvert"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValueConvert) || RETURN",
+                    "displayLines": "MDF_PropertyValueConvert",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValueConvert"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1766946532\">Sparkle_Ability02_CritDmgAddedRatio02</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+          "stackType": "Replace",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Increase CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
+          "type": "Buff",
+          "statusName": "Dreamdiver",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_PropertyValue2",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValueConvert2) || Variables[1] (MDF_PropertyValueBase2) || ADD || RETURN",
+                    "displayLines": "(MDF_PropertyValueConvert2 + MDF_PropertyValueBase2)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValueConvert2",
+                      "MDF_PropertyValueBase2"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
+                    "displayLines": "MDF_PropertyValue2",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue2"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increase CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "Dreamdiver",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Trace Activated",
+                    "conditionList": "Artificial Flower"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1766946532\">Sparkle_Ability02_CritDmgAddedRatio02</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+                      "duration": 1,
+                      "valuePerStack": {
+                        "MDF_PropertyValueConvert2": {
+                          "operator": "Variables[0] (MDF_PropertyValueConvert) || RETURN",
+                          "displayLines": "MDF_PropertyValueConvert",
+                          "constants": [],
+                          "variables": [
+                            "MDF_PropertyValueConvert"
+                          ]
+                        },
+                        "MDF_PropertyValueBase2": {
+                          "operator": "Variables[0] (MDF_PropertyValueBase) || RETURN",
+                          "displayLines": "MDF_PropertyValueBase",
+                          "constants": [],
+                          "variables": [
+                            "MDF_PropertyValueBase"
+                          ]
+                        }
+                      },
+                      "casterAssign": "TargetSelf"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1766946532\">Sparkle_Ability02_CritDmgAddedRatio02</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_PropertyValue",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValueConvert) || Variables[1] (MDF_PropertyValueBase) || ADD || RETURN",
+                    "displayLines": "(MDF_PropertyValueConvert + MDF_PropertyValueBase)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValueConvert",
+                      "MDF_PropertyValueBase"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValueConvert) || Variables[1] (MDF_PropertyValueBase) || ADD || RETURN",
+                    "displayLines": "(MDF_PropertyValueConvert + MDF_PropertyValueBase)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValueConvert",
+                      "MDF_PropertyValueBase"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-167826022\">Sparkle_Eidolon4_CD</a>",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Action-End Phase]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "ListenBattleEventSkill"
+          ],
+          "description": "Additionally enhances the DMG Boost effect provided by each stack of Sparkle's talent by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Cipher",
+          "statusName": "Cipher",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Modifier Variable",
+                      "modifierName": null,
+                      "function": "Add",
+                      "value": 1,
+                      "valueType": "Duration"
+                    },
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
+                        "displayLines": "MDF_PropertyValue2",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyValue2"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Update Modifier Description",
+                      "popUpText": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> and additionally enhances the DMG Boost effect provided by each stack of Sparkle's talent by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: End"
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "Sparklev0_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Sparklev0_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
       "toughnessList": null,
-      "parse": [],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Sparklev0_LocalPlayer_Sparkle_TechniqueUsage": {
+      "fileName": "Sparklev0_LocalPlayer_Sparkle_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Lineup}}"
+          },
+          "modifier": null,
+          "ID": "130601()",
+          "duration": {
+            "operator": "Variables[0] (20) || RETURN",
+            "displayLines": "20",
+            "constants": [],
+            "variables": [
+              20
+            ]
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "130602(SkillMaze)",
+          "duration": {
+            "operator": "Variables[0] (20) || RETURN",
+            "displayLines": "20",
+            "constants": [],
+            "variables": [
+              20
+            ]
+          }
+        },
+        "Submit Technique Use"
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Sparklev0_LocalPlayer_Sparkle_NormalAtk01": {
+      "fileName": "Sparklev0_LocalPlayer_Sparkle_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier (OVERWORLD)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-659142427\">ADV_Modifier_Maze_SparkleMask</a>"
+                      },
+                      "passed": [
+                        "Deleted bullshit"
+                      ],
+                      "failed": [
+                        "Deleted bullshit"
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-659142427\">ADV_Modifier_Maze_SparkleMask</a>",
+                      "duration": 1.1
+                    },
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-659142427\">ADV_Modifier_Maze_SparkleMask</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-659142427\">ADV_Modifier_Maze_SparkleMask</a>",
+          "stackType": "Refresh"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "Sparklev0_Sparkle_TechniqueInLevel": {
@@ -86,9 +1253,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -96,6 +1261,129 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Sparklev0_Sparkle_Eidolon6_BP": {
+      "fileName": "Sparklev0_Sparkle_Eidolon6_BP",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Current Action Holder Is",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            }
+          },
+          "passed": [
+            "Deleted bullshit"
+          ],
+          "failed": [
+            "Deleted bullshit"
+          ]
+        },
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "MDF_Sparkle_CritDmgValue",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "MDF_CriticalDamageBase_change",
+          "value": {
+            "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || RETURN",
+            "displayLines": "MDF_Sparkle_CritDmgValue",
+            "constants": [],
+            "variables": [
+              "MDF_Sparkle_CritDmgValue"
+            ]
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "MDF_CriticalDamageBase_change",
+          "value": {
+            "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (0.24) || MUL || RETURN",
+            "displayLines": "(MDF_CriticalDamageBase_change * 0.24)",
+            "constants": [],
+            "variables": [
+              "MDF_CriticalDamageBase_change",
+              0.24
+            ]
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+          "duration": {
+            "operator": "Variables[0] (1) || RETURN",
+            "displayLines": "1",
+            "constants": [],
+            "variables": [
+              1
+            ]
+          },
+          "valuePerStack": {
+            "MDF_PropertyValueConvert": {
+              "operator": "Variables[0] (MDF_CriticalDamageBase_change) || RETURN",
+              "displayLines": "MDF_CriticalDamageBase_change",
+              "constants": [],
+              "variables": [
+                "MDF_CriticalDamageBase_change"
+              ]
+            },
+            "MDF_PropertyValueBase": {
+              "operator": "Variables[0] (0.45) || RETURN",
+              "displayLines": "0.45",
+              "constants": [],
+              "variables": [
+                0.45
+              ]
+            }
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Part Of",
+            "of": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "mustBeAlive2": true,
+            "invertCondition": true
+          },
+          "passed": [
+            {
+              "name": "Action Advance/Delay",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "advanceType": "Advance",
+              "multiAdd": "-0.5"
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
       }
     },
     "Sparklev0_Sparkle_PassiveAbility_1": {
@@ -719,15 +2007,11 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__705433852\">Sparkle_AbilityPreshow</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -763,129 +2047,6 @@ const compositeAbilityObject = {
       },
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Sparklev0_Sparkle_Eidolon6_BP": {
-      "fileName": "Sparklev0_Sparkle_Eidolon6_BP",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Current Action Holder Is",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            }
-          },
-          "passed": [
-            "Deleted bullshit"
-          ],
-          "failed": [
-            "Deleted bullshit"
-          ]
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "MDF_Sparkle_CritDmgValue",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "MDF_CriticalDamageBase_change",
-          "value": {
-            "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || RETURN",
-            "displayLines": "MDF_Sparkle_CritDmgValue",
-            "constants": [],
-            "variables": [
-              "MDF_Sparkle_CritDmgValue"
-            ]
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "MDF_CriticalDamageBase_change",
-          "value": {
-            "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (0.24) || MUL || RETURN",
-            "displayLines": "(MDF_CriticalDamageBase_change * 0.24)",
-            "constants": [],
-            "variables": [
-              "MDF_CriticalDamageBase_change",
-              0.24
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
-          "duration": {
-            "operator": "Variables[0] (1) || RETURN",
-            "displayLines": "1",
-            "constants": [],
-            "variables": [
-              1
-            ]
-          },
-          "valuePerStack": {
-            "MDF_PropertyValueConvert": {
-              "operator": "Variables[0] (MDF_CriticalDamageBase_change) || RETURN",
-              "displayLines": "MDF_CriticalDamageBase_change",
-              "constants": [],
-              "variables": [
-                "MDF_CriticalDamageBase_change"
-              ]
-            },
-            "MDF_PropertyValueBase": {
-              "operator": "Variables[0] (0.45) || RETURN",
-              "displayLines": "0.45",
-              "constants": [],
-              "variables": [
-                0.45
-              ]
-            }
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Is Part Of",
-            "of": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "mustBeAlive2": true,
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "advanceType": "Advance",
-              "multiAdd": "-0.5"
-            }
-          ]
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "Sparklev0_Sparkle_Ability03_Part02": {
@@ -1201,6 +2362,198 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
+    "Sparklev0_Sparkle_Ability02_Others_Part02": {
+      "fileName": "Sparklev0_Sparkle_Ability02_Others_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "MDF_Sparkle_CritDmgValue",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "MDF_CriticalDamageBase_change",
+          "value": {
+            "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || RETURN",
+            "displayLines": "MDF_Sparkle_CritDmgValue",
+            "constants": [],
+            "variables": [
+              "MDF_Sparkle_CritDmgValue"
+            ]
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "MDF_CriticalDamageBase_change",
+          "value": {
+            "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (0.24) || MUL || RETURN",
+            "displayLines": "(MDF_CriticalDamageBase_change * 0.24)",
+            "constants": [],
+            "variables": [
+              "MDF_CriticalDamageBase_change",
+              0.24
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "NDF_Sparkle_Rank06_CritDmg",
+              "value": {
+                "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || Variables[1] (0.3) || MUL || RETURN",
+                "displayLines": "(MDF_Sparkle_CritDmgValue * 0.3)",
+                "constants": [],
+                "variables": [
+                  "MDF_Sparkle_CritDmgValue",
+                  0.3
+                ]
+              }
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "OR",
+                      "conditionList": [
+                        {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]"
+                        },
+                        {
+                          "name": "Is Part Of",
+                          "of": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
+                          "mustBeAlive2": true
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+              "duration": {
+                "operator": "Variables[0] (1) || RETURN",
+                "displayLines": "1",
+                "constants": [],
+                "variables": [
+                  1
+                ]
+              },
+              "valuePerStack": {
+                "MDF_PropertyValueConvert": {
+                  "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (NDF_Sparkle_Rank06_CritDmg) || ADD || RETURN",
+                  "displayLines": "(MDF_CriticalDamageBase_change + NDF_Sparkle_Rank06_CritDmg)",
+                  "constants": [],
+                  "variables": [
+                    "MDF_CriticalDamageBase_change",
+                    "NDF_Sparkle_Rank06_CritDmg"
+                  ]
+                },
+                "MDF_PropertyValueBase": {
+                  "operator": "Variables[0] (0.45) || RETURN",
+                  "displayLines": "0.45",
+                  "constants": [],
+                  "variables": [
+                    0.45
+                  ]
+                }
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+              "duration": {
+                "operator": "Variables[0] (1) || RETURN",
+                "displayLines": "1",
+                "constants": [],
+                "variables": [
+                  1
+                ]
+              },
+              "valuePerStack": {
+                "MDF_PropertyValueConvert": {
+                  "operator": "Variables[0] (MDF_CriticalDamageBase_change) || RETURN",
+                  "displayLines": "MDF_CriticalDamageBase_change",
+                  "constants": [],
+                  "variables": [
+                    "MDF_CriticalDamageBase_change"
+                  ]
+                },
+                "MDF_PropertyValueBase": {
+                  "operator": "Variables[0] (0.45) || RETURN",
+                  "displayLines": "0.45",
+                  "constants": [],
+                  "variables": [
+                    0.45
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Action Advance/Delay",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "advanceType": "Advance",
+          "multiAdd": "-0.5"
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "valuePercent": 1,
+          "ofAbilitySplit": true,
+          "isFixed": "* ERR"
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
     "Sparklev0_Sparkle_Ability02_Self_Part02": {
       "fileName": "Sparklev0_Sparkle_Ability02_Self_Part02",
       "abilityType": null,
@@ -1407,198 +2760,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Ability Target List}}"
       }
     },
-    "Sparklev0_Sparkle_Ability02_Others_Part02": {
-      "fileName": "Sparklev0_Sparkle_Ability02_Others_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "MDF_Sparkle_CritDmgValue",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "MDF_CriticalDamageBase_change",
-          "value": {
-            "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || RETURN",
-            "displayLines": "MDF_Sparkle_CritDmgValue",
-            "constants": [],
-            "variables": [
-              "MDF_Sparkle_CritDmgValue"
-            ]
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "MDF_CriticalDamageBase_change",
-          "value": {
-            "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (0.24) || MUL || RETURN",
-            "displayLines": "(MDF_CriticalDamageBase_change * 0.24)",
-            "constants": [],
-            "variables": [
-              "MDF_CriticalDamageBase_change",
-              0.24
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 6
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "NDF_Sparkle_Rank06_CritDmg",
-              "value": {
-                "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || Variables[1] (0.3) || MUL || RETURN",
-                "displayLines": "(MDF_Sparkle_CritDmgValue * 0.3)",
-                "constants": [],
-                "variables": [
-                  "MDF_Sparkle_CritDmgValue",
-                  0.3
-                ]
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "OR",
-                      "conditionList": [
-                        {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]"
-                        },
-                        {
-                          "name": "Is Part Of",
-                          "of": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Ability Target(ST)}}"
-                          },
-                          "mustBeAlive2": true
-                        }
-                      ]
-                    }
-                  }
-                ]
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
-              "duration": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
-              },
-              "valuePerStack": {
-                "MDF_PropertyValueConvert": {
-                  "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (NDF_Sparkle_Rank06_CritDmg) || ADD || RETURN",
-                  "displayLines": "(MDF_CriticalDamageBase_change + NDF_Sparkle_Rank06_CritDmg)",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CriticalDamageBase_change",
-                    "NDF_Sparkle_Rank06_CritDmg"
-                  ]
-                },
-                "MDF_PropertyValueBase": {
-                  "operator": "Variables[0] (0.45) || RETURN",
-                  "displayLines": "0.45",
-                  "constants": [],
-                  "variables": [
-                    0.45
-                  ]
-                }
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
-              "duration": {
-                "operator": "Variables[0] (1) || RETURN",
-                "displayLines": "1",
-                "constants": [],
-                "variables": [
-                  1
-                ]
-              },
-              "valuePerStack": {
-                "MDF_PropertyValueConvert": {
-                  "operator": "Variables[0] (MDF_CriticalDamageBase_change) || RETURN",
-                  "displayLines": "MDF_CriticalDamageBase_change",
-                  "constants": [],
-                  "variables": [
-                    "MDF_CriticalDamageBase_change"
-                  ]
-                },
-                "MDF_PropertyValueBase": {
-                  "operator": "Variables[0] (0.45) || RETURN",
-                  "displayLines": "0.45",
-                  "constants": [],
-                  "variables": [
-                    0.45
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "advanceType": "Advance",
-          "multiAdd": "-0.5"
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "valuePercent": 1,
-          "ofAbilitySplit": true,
-          "isFixed": "* ERR"
-        },
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
     "Sparklev0_Sparkle_Ability02_Part01": {
       "fileName": "Sparklev0_Sparkle_Ability02_Part01",
       "childAbilityList": [
@@ -1764,821 +2925,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Sparklev0_Modifiers": {
-      "fileName": "Sparklev0_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
-          "stackType": "Replace",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Element",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "Quantum"
-                        }
-                      },
-                      {
-                        "name": "Is Entity Type",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "type": "Memosprite",
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue3",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_PropertyValue2) || ADD || RETURN",
-                        "displayLines": "(MDF_PropertyValue + MDF_PropertyValue2)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue",
-                          "MDF_PropertyValue2"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Stack Target Stat Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_PropertyValue2) || ADD || RETURN",
-                        "displayLines": "(MDF_PropertyValue + MDF_PropertyValue2)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue",
-                          "MDF_PropertyValue2"
-                        ]
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue3",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Stack Target Stat Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_PropertyValue2"
-          ],
-          "latentQueue": [],
-          "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue3</span>.",
-          "type": "Buff",
-          "effectName": "Nocturne",
-          "statusName": "Nocturne"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__690939863\">Sparkle_Eidolon6_Mark</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player & Enemy Team All(with Unselectable)}}"
-                  },
-                  "searchRandom": true,
-                  "includeDyingTargets": true,
-                  "maxTargets": 10,
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "invertCondition": true
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"690939863\">Sparkle_Eidolon6_Mark</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 2
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Defender",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                          "value": "(0 - MDF_DefenceAddedRatio)"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AllDamageAddedRatio) || RETURN",
-                    "displayLines": "MDF_AllDamageAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageAddedRatio"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1668382571\">Sparkle_PointB3_Mark</a>",
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1017813291\">Sparkle_PassiveAbility_AllDamageAddedRatio02</a>[<span class=\"descriptionNumberColor\">Red Herring</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "MDF_Count",
-                  "multiplier": 1
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_Count",
-                    "compareType": ">=",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_PassiveMaxLayer) || RETURN",
-                      "displayLines": "MDF_PassiveMaxLayer",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PassiveMaxLayer"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PassiveMaxLayer) || RETURN",
-                        "displayLines": "MDF_PassiveMaxLayer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PassiveMaxLayer"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue2) || Variables[1] (MDF_PropertyValue3) || ADD || Variables[2] (MDF_Count) || MUL || RETURN",
-                        "displayLines": "((MDF_PropertyValue2 + MDF_PropertyValue3) * MDF_Count)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue2",
-                          "MDF_PropertyValue3",
-                          "MDF_Count"
-                        ]
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue2) || Variables[1] (MDF_Count) || MUL || RETURN",
-                        "displayLines": "(MDF_PropertyValue2 * MDF_Count)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue2",
-                          "MDF_Count"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 2
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Modifier Description",
-                      "popUpText": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Ignores <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio2</span> of the target's DEF when dealing DMG."
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_DefenceAddedRatio2",
-                      "value": {
-                        "operator": "Variables[0] (MDF_DefenceAddedRatio2) || Variables[1] (MDF_Count) || MUL || RETURN",
-                        "displayLines": "(MDF_DefenceAddedRatio2 * MDF_Count)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DefenceAddedRatio2",
-                          "MDF_Count"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>",
-                  "valuePerStack": {
-                    "MDF_AllDamageAddedRatio": {
-                      "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                      "displayLines": "MDF_PropertyValue",
-                      "constants": [],
-                      "variables": [
-                        "MDF_PropertyValue"
-                      ]
-                    },
-                    "MDF_DefenceAddedRatio": {
-                      "operator": "Variables[0] (MDF_DefenceAddedRatio2) || RETURN",
-                      "displayLines": "MDF_DefenceAddedRatio2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DefenceAddedRatio2"
-                      ]
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Owner]"
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Was",
-                        "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]"
-                      },
-                      {
-                        "name": "Is Part Of",
-                        "of": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue2) || Variables[1] (MDF_Count) || MUL || RETURN",
-                        "displayLines": "(MDF_PropertyValue2 * MDF_Count)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue2",
-                          "MDF_Count"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>",
-                      "valuePerStack": {
-                        "MDF_AllDamageAddedRatio": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
-                        },
-                        "MDF_DefenceAddedRatio": {
-                          "operator": "Variables[0] (MDF_DefenceAddedRatio2) || RETURN",
-                          "displayLines": "MDF_DefenceAddedRatio2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DefenceAddedRatio2"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Was",
-                        "modifier": "<a class=\"gModGreen\" id=\"1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]"
-                      },
-                      {
-                        "name": "Is Part Of",
-                        "of": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue2) || Variables[1] (MDF_PropertyValue3) || ADD || Variables[2] (MDF_Count) || MUL || RETURN",
-                        "displayLines": "((MDF_PropertyValue2 + MDF_PropertyValue3) * MDF_Count)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue2",
-                          "MDF_PropertyValue3",
-                          "MDF_Count"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1056705380\">Sparkle_PassiveAbility_Real_AllDamageAddedRatio</a>",
-                      "valuePerStack": {
-                        "MDF_AllDamageAddedRatio": {
-                          "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                          "displayLines": "MDF_PropertyValue",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValue"
-                          ]
-                        },
-                        "MDF_DefenceAddedRatio": {
-                          "operator": "Variables[0] (MDF_DefenceAddedRatio2) || RETURN",
-                          "displayLines": "MDF_DefenceAddedRatio2",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DefenceAddedRatio2"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue2",
-            "MDF_PropertyValue3",
-            "MDF_DefenceAddedRatio2"
-          ],
-          "latentQueue": [],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Red Herring"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1304623516\">Sparkle_Eidolon6_CritDmgAddedRatio01</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValueConvert) || RETURN",
-                    "displayLines": "MDF_PropertyValueConvert",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValueConvert"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValueConvert) || RETURN",
-                    "displayLines": "MDF_PropertyValueConvert",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValueConvert"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1766946532\">Sparkle_Ability02_CritDmgAddedRatio02</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
-          "stackType": "Replace",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue2",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValueConvert2) || Variables[1] (MDF_PropertyValueBase2) || ADD || RETURN",
-                    "displayLines": "(MDF_PropertyValueConvert2 + MDF_PropertyValueBase2)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValueConvert2",
-                      "MDF_PropertyValueBase2"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                    "displayLines": "MDF_PropertyValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValueConvert2",
-            "MDF_PropertyValueBase2"
-          ],
-          "latentQueue": [
-            "MDF_PassiveLayer02"
-          ],
-          "description": "Increase CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
-          "type": "Buff",
-          "statusName": "Dreamdiver"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1817279389\">Sparkle_Ability02_CritDmgAddedRatio01</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Trace Activated",
-                    "conditionList": "Artificial Flower"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1766946532\">Sparkle_Ability02_CritDmgAddedRatio02</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
-                      "duration": 1,
-                      "valuePerStack": {
-                        "MDF_PropertyValueConvert2": {
-                          "operator": "Variables[0] (MDF_PropertyValueConvert) || RETURN",
-                          "displayLines": "MDF_PropertyValueConvert",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValueConvert"
-                          ]
-                        },
-                        "MDF_PropertyValueBase2": {
-                          "operator": "Variables[0] (MDF_PropertyValueBase) || RETURN",
-                          "displayLines": "MDF_PropertyValueBase",
-                          "constants": [],
-                          "variables": [
-                            "MDF_PropertyValueBase"
-                          ]
-                        }
-                      },
-                      "casterAssign": "TargetSelf"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1766946532\">Sparkle_Ability02_CritDmgAddedRatio02</a>[<span class=\"descriptionNumberColor\">Dreamdiver</span>]"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValueConvert) || Variables[1] (MDF_PropertyValueBase) || ADD || RETURN",
-                    "displayLines": "(MDF_PropertyValueConvert + MDF_PropertyValueBase)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValueConvert",
-                      "MDF_PropertyValueBase"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValueConvert) || Variables[1] (MDF_PropertyValueBase) || ADD || RETURN",
-                    "displayLines": "(MDF_PropertyValueConvert + MDF_PropertyValueBase)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValueConvert",
-                      "MDF_PropertyValueBase"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValueConvert",
-            "MDF_PropertyValueBase"
-          ],
-          "latentQueue": [],
-          "description": "Increase CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "Dreamdiver"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-167826022\">Sparkle_Eidolon4_CD</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Action-End Phase]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1486907244\">Sparkle_Ability03_PowerUp</a>[<span class=\"descriptionNumberColor\">Cipher</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "ListenBattleEventSkill"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Modifier Variable",
-                      "modifierName": null,
-                      "function": "Add",
-                      "value": 1,
-                      "valueType": "Duration"
-                    },
-                    {
-                      "name": "Stack Target Stat Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                        "displayLines": "MDF_PropertyValue2",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue2"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Update Modifier Description",
-                      "popUpText": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> and additionally enhances the DMG Boost effect provided by each stack of Sparkle's talent by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>."
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: End"
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_PropertyValue2"
-          ],
-          "latentQueue": [
-            "MDF_PassiveLayer02"
-          ],
-          "description": "Additionally enhances the DMG Boost effect provided by each stack of Sparkle's talent by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Cipher",
-          "statusName": "Cipher"
-        }
-      ],
-      "references": []
     }
   }
 }

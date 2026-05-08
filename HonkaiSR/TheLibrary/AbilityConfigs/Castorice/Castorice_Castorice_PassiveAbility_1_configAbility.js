@@ -242,7 +242,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1698152191\">Castorice_Eidolon4_Listen</a>",
-      "stackData": [],
       "latentQueue": [
         "OverHeal"
       ],
@@ -499,6 +498,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1345662684\">Castorice_RefreshMaxSpecialSPFlag</a>",
       "stackType": "ReplaceByCaster",
+      "latentQueue": [
+        "OverHeal"
+      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -511,10 +513,6 @@ const configAbility = {
           ],
           "priorityLevel": 10001
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "OverHeal"
       ]
     },
     {
@@ -523,6 +521,74 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill",
         "RemoveWhenCasterDead"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"958490815\">Castorice_Passive02_OnListenHPChange</a>",
+          "aliveOnly": "False",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_AllDamageTypeAddedRatio": {
+              "operator": "Variables[0] (0.2) || RETURN",
+              "displayLines": "0.2",
+              "constants": [],
+              "variables": [
+                0.2
+              ]
+            },
+            "MDF_LifeTime": {
+              "operator": "Variables[0] (3) || RETURN",
+              "displayLines": "3",
+              "constants": [],
+              "variables": [
+                3
+              ]
+            },
+            "MDF_MaxLayer": {
+              "operator": "Variables[0] (3) || RETURN",
+              "displayLines": "3",
+              "constants": [],
+              "variables": [
+                3
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] - {{Caster's Memosprite}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"445281600\">Castorice_LoseHPPreShow</a>",
+          "aliveOnly": "False",
+          "haloStatus": true,
+          "valuePerStack": {
+            "MDF_PreShowMaxHP": 0,
+            "MDF_PreShowCurrentHP": 0,
+            "MDF_LoseHPRatio01": {
+              "operator": "Variables[0] (0.3) || RETURN",
+              "displayLines": "0.3",
+              "constants": [],
+              "variables": [
+                0.3
+              ]
+            },
+            "MDF_LoseHPRatio02": {
+              "operator": "Variables[0] (0.4) || RETURN",
+              "displayLines": "0.4",
+              "constants": [],
+              "variables": [
+                0.4
+              ]
+            }
+          }
+        }
       ],
       "execute": [
         {
@@ -738,105 +804,6 @@ const configAbility = {
         },
         {
           "eventTrigger": "Leave Battle"
-        }
-      ],
-      "variableValueChange": [
-        {
-          "name": "Variable Value Changes",
-          "variableName": "Castorice_Passive_Count",
-          "from": "ContextOwner",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "minValue": 0,
-              "maxValue": 9999999,
-              "whenValueChanges": [
-                {
-                  "name": "Define Custom Variable with Changes to Stats",
-                  "variableName": "Castorice_DeltaAdd"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>",
-                    "invertCondition": true,
-                    "justAddedOrActive": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (Castorice_Passive_Count) || RETURN",
-                        "displayLines": "Castorice_Passive_Count",
-                        "constants": [],
-                        "variables": [
-                          "Castorice_Passive_Count"
-                        ]
-                      },
-                      "displaySubType": "Percent",
-                      "displayShowIcon": "False",
-                      "maximum": {
-                        "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                        "displayLines": "Castorice_Passive_MaxCount",
-                        "constants": [],
-                        "variables": [
-                          "Castorice_Passive_MaxCount"
-                        ]
-                      },
-                      "assignState": "True",
-                      "bar#": "Number"
-                    }
-                  ]
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "Castorice_DeltaAdd",
-                  "value": 0
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "abilityValueChange": [
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "minValue": 0,
-              "triggerClampedChanges": true,
-              "whenValueChanges": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-272315266\">Castorice_CheckCurrentSpecialSPChange</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;",
-          "valueRanges": [
-            {
-              "name": "Variable Value Range Conditions",
-              "minValue": 0,
-              "triggerClampedChanges": true,
-              "whenValueChanges": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-272315266\">Castorice_CheckCurrentSpecialSPChange</a>"
-                }
-              ]
-            }
-          ]
         }
       ],
       "modifierFunctions": [
@@ -1109,74 +1076,103 @@ const configAbility = {
           ]
         }
       ],
-      "stackData": [],
-      "latentQueue": [],
-      "subModList": [
+      "variableValueChange": [
         {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"958490815\">Castorice_Passive02_OnListenHPChange</a>",
-          "aliveOnly": "False",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
-            },
-            "MDF_LifeTime": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
-            },
-            "MDF_MaxLayer": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
+          "name": "Variable Value Changes",
+          "variableName": "Castorice_Passive_Count",
+          "from": "ContextOwner",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "minValue": 0,
+              "maxValue": 9999999,
+              "whenValueChanges": [
+                {
+                  "name": "Define Custom Variable with Changes to Stats",
+                  "variableName": "Castorice_DeltaAdd"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>",
+                    "invertCondition": true,
+                    "justAddedOrActive": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (Castorice_Passive_Count) || RETURN",
+                        "displayLines": "Castorice_Passive_Count",
+                        "constants": [],
+                        "variables": [
+                          "Castorice_Passive_Count"
+                        ]
+                      },
+                      "displaySubType": "Percent",
+                      "displayShowIcon": "False",
+                      "maximum": {
+                        "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
+                        "displayLines": "Castorice_Passive_MaxCount",
+                        "constants": [],
+                        "variables": [
+                          "Castorice_Passive_MaxCount"
+                        ]
+                      },
+                      "assignState": "True",
+                      "bar#": "Number"
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Castorice_DeltaAdd",
+                  "value": 0
+                }
               ]
             }
-          }
+          ]
+        }
+      ],
+      "abilityValueChange": [
+        {
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "minValue": 0,
+              "triggerClampedChanges": true,
+              "whenValueChanges": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-272315266\">Castorice_CheckCurrentSpecialSPChange</a>"
+                }
+              ]
+            }
+          ]
         },
         {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] - {{Caster's Memosprite}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"445281600\">Castorice_LoseHPPreShow</a>",
-          "aliveOnly": "False",
-          "haloStatus": true,
-          "valuePerStack": {
-            "MDF_PreShowMaxHP": 0,
-            "MDF_PreShowCurrentHP": 0,
-            "MDF_LoseHPRatio01": {
-              "operator": "Variables[0] (0.3) || RETURN",
-              "displayLines": "0.3",
-              "constants": [],
-              "variables": [
-                0.3
-              ]
-            },
-            "MDF_LoseHPRatio02": {
-              "operator": "Variables[0] (0.4) || RETURN",
-              "displayLines": "0.4",
-              "constants": [],
-              "variables": [
-                0.4
+          "name": "Ability Value Changes",
+          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "minValue": 0,
+              "triggerClampedChanges": true,
+              "whenValueChanges": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-272315266\">Castorice_CheckCurrentSpecialSPChange</a>"
+                }
               ]
             }
-          }
+          ]
         }
       ]
     }

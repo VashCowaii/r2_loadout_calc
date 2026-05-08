@@ -3,10 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 4033030,
   "trimCharacterName": 4033030,
   "abilityList": [
-    "4033030_Monster_W4_Shooter_01_Ability01_Abort",
-    "4033030_Monster_W4_Shooter_01_Ability01_Camera_Insert",
-    "4033030_Monster_W4_Shooter_01_Ability01_Part02_Insert",
-    "4033030_Monster_W4_Shooter_01_Ability01_Part01_Insert",
+    "4033030_Monster_W4_Griffin_01_PassiveAbilityInitiate",
     "4033030_Monster_W4_Griffin_01_Ability04_Part02",
     "4033030_Monster_W4_Griffin_01_Ability04_Part01",
     "4033030_Monster_W4_Griffin_01_Ability03_Part02",
@@ -15,177 +12,54 @@ const compositeAbilityObject = {
     "4033030_Monster_W4_Griffin_01_Ability02_Part01",
     "4033030_Monster_W4_Griffin_01_Ability01_Part02",
     "4033030_Monster_W4_Griffin_01_Ability01_Part01",
-    "4033030_Monster_W4_Griffin_01_PassiveAbilityInitiate",
     "4033030_Modifiers"
   ],
   "abilityObject": {
-    "4033030_Monster_W4_Shooter_01_Ability01_Abort": {
-      "fileName": "4033030_Monster_W4_Shooter_01_Ability01_Abort",
-      "abilityType": null,
+    "4033030_Monster_W4_Griffin_01_PassiveAbilityInitiate": {
+      "fileName": "4033030_Monster_W4_Griffin_01_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
-          "name": "Dispel Debuffs",
-          "target": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "toRemove": [
-            "STAT_CTRL"
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "flagName": "Break"
-          },
-          "passed": [
-            {
-              "name": "Exit Broken-State",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4033030_Monster_W4_Shooter_01_Ability01_Camera_Insert": {
-      "fileName": "4033030_Monster_W4_Shooter_01_Ability01_Camera_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4033030_Monster_W4_Shooter_01_Ability01_Part02_Insert": {
-      "fileName": "4033030_Monster_W4_Shooter_01_Ability01_Part02_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Modifier-Specific Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifierName": "<a class=\"gModGreen\" id=\"-534426566\">W4_Griffin_01_BattleScore1</a>",
-          "variableName": "AchievementFlag_W4_Griffin_01",
-          "value": 0
+          "modifier": "<a class=\"gModGreen\" id=\"-1193354499\">Enemy_W4_Griffin_01_AI</a>"
         },
         {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
+            "target": "{{Level Entity}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
-          "valuePerStack": {
-            "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_391) || RETURN",
-              "displayLines": "UnusedUnderThisBase_391",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_391"
-              ]
-            },
-            "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_392) || RETURN",
-              "displayLines": "UnusedUnderThisBase_392",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_392"
-              ]
-            },
-            "MDF_Rally_HealUpRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_393) || RETURN",
-              "displayLines": "UnusedUnderThisBase_393",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_393"
-              ]
-            },
-            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_394) || RETURN",
-              "displayLines": "UnusedUnderThisBase_394",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_394"
-              ]
-            }
-          }
+          "modifier": "<a class=\"gModGreen\" id=\"-534426566\">W4_Griffin_01_BattleScore1</a>"
         },
         {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "value": 10,
-          "isFixed": "* ERR"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4033030_Monster_W4_Shooter_01_Ability01_Part01_Insert": {
-      "fileName": "4033030_Monster_W4_Shooter_01_Ability01_Part01_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
+          "name": "Add Events/Bonuses",
+          "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ability": "Monster_W4_Shooter_01_Ability01_Part02_Insert",
-          "isTrigger": true
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
         },
-        "Deleted bullshit"
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        }
       ],
       "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
       },
       "references": []
     },
@@ -1393,54 +1267,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4033030_Monster_W4_Griffin_01_PassiveAbilityInitiate": {
-      "fileName": "4033030_Monster_W4_Griffin_01_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1193354499\">Enemy_W4_Griffin_01_AI</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-534426566\">W4_Griffin_01_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4033030_Modifiers": {
       "fileName": "4033030_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1505,9 +1331,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1550,13 +1374,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__170082228\">Enemy_W4_Griffin_01_Ability03_Enhance</a>[<span class=\"descriptionNumberColor\">The Dead Winds Cometh</span>]",
+          "description": "Uses \"Carol of Heat Death\" in the next action.",
+          "type": "Other",
+          "effectName": "Enhance",
+          "statusName": "The Dead Winds Cometh",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1609,13 +1435,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Uses \"Carol of Heat Death\" in the next action.",
-          "type": "Other",
-          "effectName": "Enhance",
-          "statusName": "The Dead Winds Cometh"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1624,6 +1444,9 @@ const compositeAbilityObject = {
             "MuteSpeed",
             "KeepOnDeathrattle"
           ],
+          "description": "\"Archer of the Dark Sun\" does not actively take action, and will only attack after the \"Dark Sun Gryphon\" that summoned this unit attacks. If this unit is under Crowd Control debuffs or Weakness Broken state at this point, this changes to dispelling the Crowd Control debuffs or Weakness Broken state on this unit.",
+          "type": "Other",
+          "statusName": "Chaotic Order",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1834,12 +1657,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "\"Archer of the Dark Sun\" does not actively take action, and will only attack after the \"Dark Sun Gryphon\" that summoned this unit attacks. If this unit is under Crowd Control debuffs or Weakness Broken state at this point, this changes to dispelling the Crowd Control debuffs or Weakness Broken state on this unit.",
-          "type": "Other",
-          "statusName": "Chaotic Order"
+          ]
         },
         {
           "name": "Modifier Construction",

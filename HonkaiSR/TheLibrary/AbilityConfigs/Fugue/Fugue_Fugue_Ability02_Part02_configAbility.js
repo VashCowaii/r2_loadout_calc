@@ -325,6 +325,19 @@ const configAbility = {
         "ListenBattleEventSkill",
         "ForceStanceDamage"
       ],
+      "stackData": [
+        "MDF_BreakDamageAdd",
+        "MDF_StanceBreakAddRatio",
+        "MDF_Chance",
+        "MDF_DefenceDownRatio",
+        "MDF_BreakDamageAddedRatio",
+        "MDF_LifeTime",
+        "MDF_PropertyRatio"
+      ],
+      "description": "Break DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAddedRatio</span>, Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_StanceBreakAddRatio</span>, and Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
+      "type": "Buff",
+      "effectName": "Foxian Prayer",
+      "statusName": "Foxian Prayer",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -432,21 +445,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_BreakDamageAdd",
-        "MDF_StanceBreakAddRatio",
-        "MDF_Chance",
-        "MDF_DefenceDownRatio",
-        "MDF_BreakDamageAddedRatio",
-        "MDF_LifeTime",
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "Break DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAddedRatio</span>, Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_StanceBreakAddRatio</span>, and Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
-      "type": "Buff",
-      "effectName": "Foxian Prayer",
-      "statusName": "Foxian Prayer"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -458,6 +457,18 @@ const configAbility = {
         "ListenBattleEventSkill",
         "ForceStanceDamage"
       ],
+      "stackData": [
+        "MDF_BreakDamageAdd",
+        "MDF_StanceBreakAddRatio",
+        "MDF_Chance",
+        "MDF_DefenceDownRatio",
+        "MDF_LifeTime",
+        "MDF_PropertyRatio"
+      ],
+      "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_StanceBreakAddRatio</span>. Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
+      "type": "Buff",
+      "effectName": "Foxian Prayer",
+      "statusName": "Foxian Prayer",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -525,20 +536,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_BreakDamageAdd",
-        "MDF_StanceBreakAddRatio",
-        "MDF_Chance",
-        "MDF_DefenceDownRatio",
-        "MDF_LifeTime",
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_StanceBreakAddRatio</span>. Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
-      "type": "Buff",
-      "effectName": "Foxian Prayer",
-      "statusName": "Foxian Prayer"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -550,6 +548,17 @@ const configAbility = {
         "ListenBattleEventSkill",
         "ForceStanceDamage"
       ],
+      "stackData": [
+        "MDF_BreakDamageAdd",
+        "MDF_Chance",
+        "MDF_DefenceDownRatio",
+        "MDF_LifeTime",
+        "MDF_PropertyRatio"
+      ],
+      "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
+      "type": "Buff",
+      "effectName": "Foxian Prayer",
+      "statusName": "Foxian Prayer",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -601,24 +610,20 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_BreakDamageAdd",
-        "MDF_Chance",
-        "MDF_DefenceDownRatio",
-        "MDF_LifeTime",
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_BreakDamageAdd</span>. Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
-      "type": "Buff",
-      "effectName": "Foxian Prayer",
-      "statusName": "Foxian Prayer"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-690913647\">Fugue_BPAbilityBonusListen</a>[<span class=\"descriptionNumberColor\">Torrid Scorch</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
+      "stackData": [
+        "MDF_Chance",
+        "MDF_DefenceDownRatio",
+        "MDF_LifeTime"
+      ],
+      "description": "The Basic ATK \"Radiant Streak\" is enhanced to \"Fiery Caress\" that can deal Blast DMG. Every time an ally target with \"Foxian Prayer\" attacks, Fugue has a <span class=\"descriptionNumberColor\">MDF_Chance</span> base chance to reduce the attacked enemy target's DEF by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>, lasting for <span class=\"descriptionNumberColor\">MDF_LifeTime</span> turn(s).",
+      "type": "Other",
+      "statusName": "Torrid Scorch",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -745,16 +750,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_Chance",
-        "MDF_DefenceDownRatio",
-        "MDF_LifeTime"
-      ],
-      "latentQueue": [],
-      "description": "The Basic ATK \"Radiant Streak\" is enhanced to \"Fiery Caress\" that can deal Blast DMG. Every time an ally target with \"Foxian Prayer\" attacks, Fugue has a <span class=\"descriptionNumberColor\">MDF_Chance</span> base chance to reduce the attacked enemy target's DEF by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>, lasting for <span class=\"descriptionNumberColor\">MDF_LifeTime</span> turn(s).",
-      "type": "Other",
-      "statusName": "Torrid Scorch"
+      ]
     }
   ],
   "targetObjectData": {

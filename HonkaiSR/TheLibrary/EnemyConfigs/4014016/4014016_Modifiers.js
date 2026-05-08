@@ -11,6 +11,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1329925524\">Modifier_Monster_W4_Nikadory_B_HardLockHp</a>",
+      "stackData": [
+        "MDF_LockHp"
+      ],
+      "latentQueue": [
+        "_IsStoryTri"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -161,17 +167,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_LockHp"
-      ],
-      "latentQueue": [
-        "_IsStoryTri"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1174103224\">Modifier_Monster_W4_Nikadory_B_HardLockHp_BFAbility02</a>",
+      "stackData": [
+        "MDF_LockHp"
+      ],
+      "latentQueue": [
+        "_IsStoryTri"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -189,12 +195,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_LockHp"
-      ],
-      "latentQueue": [
-        "_IsStoryTri"
       ]
     },
     {
@@ -284,9 +284,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -349,20 +347,21 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1563295566\">Monster_W4_Nikadory_SpecialAICheck</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1563295566\">Monster_W4_Nikadory_SpecialAICheck</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "Replace",
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -392,16 +391,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-994497740\">Monster_W4_Nikadory_RLBoss_Passive</a>",
+      "stackData": [
+        "MDF_DamageUpRatio_PerLayer"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier is Added [Anyone]",
@@ -448,11 +445,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -520,7 +513,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1717699504\">Monster_W4_Nikadory_UltraPrepare</a>",
-      "stackData": [],
       "latentQueue": [
         "Tutorial_Flag"
       ]
@@ -531,7 +523,6 @@ const configAbility = {
       "modifierFlags": [
         "DisableAction"
       ],
-      "stackData": [],
       "latentQueue": [
         "Tutorial_Flag"
       ]
@@ -966,6 +957,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1631457444\">MModifier_Monster_AML_Minion03_01_StoneShieldEnhance_Nikadory</a>[<span class=\"descriptionNumberColor\">Indomitable</span>]",
+      "description": "Increases max \"War Armor\" and \"Titanic Corpus\" stacks. Dispelled when %CasterName's \"War Armor\" is broken.",
+      "type": "Buff",
+      "effectName": "Max \"War Armor\" Boost",
+      "statusName": "Indomitable",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1084,11 +1079,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases max \"War Armor\" and \"Titanic Corpus\" stacks. Dispelled when %CasterName's \"War Armor\" is broken.",
-      "type": "Buff",
-      "effectName": "Max \"War Armor\" Boost",
-      "statusName": "Indomitable"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1111,6 +1102,13 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "latentQueue": [
+        "Tutorial_Flag"
+      ],
+      "description": "Distribute the \"All Realms Leveled, All Legions to Dust\" attack unleashed by \"Savage God, Mad King, Incarnation of Strife.\"",
+      "type": "Other",
+      "effectName": "Distributed Attack",
+      "statusName": "Forthcoming Strife",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1136,15 +1134,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Tutorial_Flag"
-      ],
-      "description": "Distribute the \"All Realms Leveled, All Legions to Dust\" attack unleashed by \"Savage God, Mad King, Incarnation of Strife.\"",
-      "type": "Other",
-      "effectName": "Distributed Attack",
-      "statusName": "Forthcoming Strife"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1152,9 +1142,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-945349590\">Monster_W4_Nikadory_FullPhase1</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
     },
     {
       "name": "Modifier Construction",
@@ -1446,15 +1434,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1873725361\">Monster_W4_Nikadory_InTurn</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1873725361\">Monster_W4_Nikadory_InTurn</a>"
     },
     {
       "name": "Modifier Construction",
@@ -1493,13 +1477,14 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__261985089\">Monster_W4_Nikadory_Energy</a>",
+      "stackData": [
+        "MDF_SPAddedRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -1540,15 +1525,15 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SPAddedRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__729203631\">Monster_W4_Nikadory_Brave_Immune</a>[<span class=\"descriptionNumberColor\">Immune to Crowd Control</span>]",
+      "description": "Immune to Crowd Control debuffs.",
+      "type": "Buff",
+      "effectName": "Immune to Crowd Control",
+      "statusName": "Immune to Crowd Control",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1564,15 +1549,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Immune to Crowd Control debuffs.",
-      "type": "Buff",
-      "effectName": "Immune to Crowd Control",
-      "statusName": "Immune to Crowd Control"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1462384175\">Monster_W4_Nikadory_Brave_Judge</a>",
+      "latentQueue": [
+        "Tutorial_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking Modifier Instance [Owner]",
@@ -1641,10 +1625,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Tutorial_Flag"
       ]
     },
     {
@@ -1659,6 +1639,19 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "AllowAddToGridFightBackend"
       ],
+      "stackData": [
+        "MDF_DamageUpRatio_PerLayer",
+        "MDF_EnergyAddRatio",
+        "MDF_MaxLayer"
+      ],
+      "latentQueue": [
+        "Tutorial_Flag"
+      ],
+      "description": "Each stack of \"Glory\" increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span> and Energy Regeneration Rate by <span class=\"descriptionNumberColor\">MDF_EnergyAddRatio</span>. When launching Skill or Ultimate, adds 1 stack of \"Glory,\" up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s). Attacking can dispel a certain stack of \"Titanic Corpus\" corresponding to the number of \"Glory\" stacks.",
+      "type": "Other",
+      "effectName": "Glory",
+      "statusName": "Glory",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2051,25 +2044,17 @@ const configAbility = {
         {
           "eventTrigger": "Extra Action/Turn [Owner]: Start "
         }
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer",
-        "MDF_EnergyAddRatio",
-        "MDF_MaxLayer"
-      ],
-      "latentQueue": [
-        "Tutorial_Flag"
-      ],
-      "description": "Each stack of \"Glory\" increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span> and Energy Regeneration Rate by <span class=\"descriptionNumberColor\">MDF_EnergyAddRatio</span>. When launching Skill or Ultimate, adds 1 stack of \"Glory,\" up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s). Attacking can dispel a certain stack of \"Titanic Corpus\" corresponding to the number of \"Glory\" stacks.",
-      "type": "Other",
-      "effectName": "Glory",
-      "statusName": "Glory",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1511774920\">Monster_W4_Nikadory_EnhanceShield</a>[<span class=\"descriptionNumberColor\">Titanic Corpus</span>]",
       "stackType": "Replace",
+      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_DamageResistance_PerLayer</span>. When stacks reach 0, action is delayed and this unit immediately loses a certain amount of HP, regenerates Energy for all targets, and dispels \"Titanic Corpus.\" When attacked by targets with \"Glory,\" \"Titanic Corpus\" stacks corresponding to the target's \"Glory\" stacks will be reduced. While this unit has \"Titanic Corpus,\" increases the DMG dealt by the next attack by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span> and causes the attacked target to become Imprisoned.",
+      "type": "Other",
+      "effectName": "Titanic Corpus",
+      "statusName": "Titanic Corpus",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2175,19 +2160,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_DamageResistance_PerLayer</span>. When stacks reach 0, action is delayed and this unit immediately loses a certain amount of HP, regenerates Energy for all targets, and dispels \"Titanic Corpus.\" When attacked by targets with \"Glory,\" \"Titanic Corpus\" stacks corresponding to the target's \"Glory\" stacks will be reduced. While this unit has \"Titanic Corpus,\" increases the DMG dealt by the next attack by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio</span> and causes the attacked target to become Imprisoned.",
-      "type": "Other",
-      "effectName": "Titanic Corpus",
-      "statusName": "Titanic Corpus",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__318155284\">Monster_W4_Nikadory_Shield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
       "stackType": "Replace",
+      "description": "Decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageResistance_PerLayer</span>. Loses 1 stack of \"War Armor\" after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit and delaying their action. The ally unit that destroyed the \"War Armor\" will regenerate Energy. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
+      "type": "Other",
+      "statusName": "War Armor",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2406,11 +2388,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageResistance_PerLayer</span>. Loses 1 stack of \"War Armor\" after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit and delaying their action. The ally unit that destroyed the \"War Armor\" will regenerate Energy. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
-      "type": "Other",
-      "statusName": "War Armor",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2419,6 +2397,15 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__965106610\">Monster_W4_Nikadory_Passive</a>",
+      "stackData": [
+        "MDF_DamageResistance_PerLayer",
+        "MDF_ActionDelayRatio",
+        "MDF_CrackedDamage",
+        "MDF_CrackedDamageAfter",
+        "MDF_SPAddedRatio",
+        "MDF_EnhanceSPAddedRatio",
+        "MDF_MaxLayer"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -2740,21 +2727,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageResistance_PerLayer",
-        "MDF_ActionDelayRatio",
-        "MDF_CrackedDamage",
-        "MDF_CrackedDamageAfter",
-        "MDF_SPAddedRatio",
-        "MDF_EnhanceSPAddedRatio",
-        "MDF_MaxLayer"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-762548766\">Monster_W4_Nikadory_ShieldReduce</a>",
+      "latentQueue": [
+        "MDF_ReduceLayer"
+      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: End",
@@ -2773,10 +2753,6 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "MDF_ReduceLayer"
       ]
     },
     {
@@ -2846,6 +2822,12 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1471859507\">Monster_W4_Nikadory_Charge</a>",
+      "stackData": [
+        "MDF_DamageUpRatio"
+      ],
+      "latentQueue": [
+        "Tutorial_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -3133,12 +3115,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio"
-      ],
-      "latentQueue": [
-        "Tutorial_Flag"
       ]
     },
     {
@@ -3417,6 +3393,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2087329841\">Monster_W4_Nikadory_Charge_UnselectableCheck</a>",
+      "latentQueue": [
+        "Tutorial_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "Unselectable Adjustment [Owner]: Start",
@@ -3471,10 +3450,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Tutorial_Flag"
       ]
     },
     {
@@ -3689,9 +3664,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3709,9 +3682,7 @@ const configAbility = {
         {
           "eventTrigger": "Locked HP Floor Reached [Owner]"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3785,9 +3756,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3866,15 +3835,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1781350564\">Monster_W4_Nikadory_Ability11Already</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1781350564\">Monster_W4_Nikadory_Ability11Already</a>"
     },
     {
       "name": "Modifier Construction",
@@ -3892,26 +3857,26 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1849683412\">Monster_W4_Nikadory_WeaponEffect</a>",
+      "latentQueue": [
+        "Tutorial_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Tutorial_Flag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1307575812\">Monster_W4_Nikadory_ChargeEffect</a>",
+      "latentQueue": [
+        "Tutorial_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -3929,10 +3894,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Tutorial_Flag"
       ]
     },
     {
@@ -3942,9 +3903,7 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4224,9 +4183,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4528,9 +4485,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

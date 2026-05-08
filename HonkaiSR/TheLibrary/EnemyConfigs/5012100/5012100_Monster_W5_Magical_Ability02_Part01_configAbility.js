@@ -177,6 +177,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-813387797\">Enemy_W5_Magical_DeathRattle_Rain</a>[<span class=\"descriptionNumberColor\">SPD Reduction</span>]",
       "stackType": "Replace",
+      "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "SPD Reduction",
+      "statusName": "SPD Reduction",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -199,11 +203,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "SPD Reduction",
-      "statusName": "SPD Reduction"
+      ]
     }
   ]
 }

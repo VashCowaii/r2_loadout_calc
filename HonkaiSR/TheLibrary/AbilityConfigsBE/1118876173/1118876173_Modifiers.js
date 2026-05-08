@@ -15,6 +15,9 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
+      "description": "For each enemy target hit after an attack, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2165_ADF_3</span> Grit Value for allies.",
+      "type": "Buff",
+      "statusName": "Cinnabar Inscription",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -132,22 +135,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "For each enemy target hit after an attack, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2165_ADF_3</span> Grit Value for allies.",
-      "type": "Buff",
-      "statusName": "Cinnabar Inscription"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1986033123\">Modifier_FantasticStory_BaseAbility_2160_Plus5AddOn</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2165",
-        "DV_FantasticStory_PlusAbility_2162",
-        "DV_FantasticStory_PlusAbility_2163",
-        "DV_FantasticStory_PlusAbility_2164"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -172,6 +165,17 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1797276940\">Modifier_FantasticStory_BaseAbility_2160_Plus4AddOn</a>",
       "stackType": "ReplaceByCaster",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-354244179\">Modifier_FantasticStory_BaseAbility_2160_Plus4AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Torn Fabric</span>]",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Attack Start [Anyone]",
@@ -388,24 +392,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2165",
-        "DV_FantasticStory_PlusAbility_2162",
-        "DV_FantasticStory_PlusAbility_2163",
-        "DV_FantasticStory_PlusAbility_2164"
-      ],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-354244179\">Modifier_FantasticStory_BaseAbility_2160_Plus4AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Torn Fabric</span>]",
-          "haloStatus": true
-        }
       ]
     },
     {
@@ -417,6 +403,20 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-273250865\">Modifier_FantasticStory_BaseAbility_2160_Plus3AddOn</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Misplacement</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "After being defeated, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2163_ADF_3</span> Grit Value for allies.",
+      "type": "Debuff",
+      "statusName": "Grit Mechanics: Misplacement",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-490455822\">Modifier_FantasticStory_BaseAbility_2160_Plus3AddOn_ForShow</a>",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -526,26 +526,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2165",
-        "DV_FantasticStory_PlusAbility_2162",
-        "DV_FantasticStory_PlusAbility_2163"
-      ],
-      "description": "After being defeated, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2163_ADF_3</span> Grit Value for allies.",
-      "type": "Debuff",
-      "statusName": "Grit Mechanics: Misplacement",
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-490455822\">Modifier_FantasticStory_BaseAbility_2160_Plus3AddOn_ForShow</a>",
-          "haloStatus": true
-        }
       ]
     },
     {
@@ -557,6 +537,20 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__596697214\">Modifier_FantasticStory_BaseAbility_2160_Plus2AddOn</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Intertextuality</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "For each enemy target hit with Skill, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2162_ADF_3</span> Grit Value for allies.",
+      "type": "Buff",
+      "statusName": "Grit Mechanics: Intertextuality",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1386471387\">Modifier_FantasticStory_BaseAbility_2160_Plus2AddOn_ForShow</a>",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -678,35 +672,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2165",
-        "DV_FantasticStory_PlusAbility_2162"
-      ],
-      "description": "For each enemy target hit with Skill, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2162_ADF_3</span> Grit Value for allies.",
-      "type": "Buff",
-      "statusName": "Grit Mechanics: Intertextuality",
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1386471387\">Modifier_FantasticStory_BaseAbility_2160_Plus2AddOn_ForShow</a>",
-          "haloStatus": true
-        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1172490940\">Modifier_FantasticStory_BaseAbility_2160_Plus5_ForShow</a>[<span class=\"descriptionNumberColor\">Cinnabar Inscription</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2165"
-      ],
       "description": "Each stack of \"Echo Enigma\" increases DMG taken by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2165_ADF_1</span>.",
       "type": "Debuff",
       "statusName": "Cinnabar Inscription"
@@ -715,6 +686,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1127959511\">Modifier_FantasticStory_BaseAbility_2160_Plus5_Servant</a>[<span class=\"descriptionNumberColor\">Cinnabar Inscription</span>]",
       "stackType": "Replace",
+      "description": "After attacking, inflicts <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2165_ADF_2</span> stacks of \"Echo Enigma\" on the target.",
+      "type": "Buff",
+      "statusName": "Cinnabar Inscription",
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -780,15 +754,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "After attacking, inflicts <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2165_ADF_2</span> stacks of \"Echo Enigma\" on the target.",
-      "type": "Buff",
-      "statusName": "Cinnabar Inscription"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2135566331\">Modifier_FantasticStory_BaseAbility_2160_Plus4_Sub</a>[<span class=\"descriptionNumberColor\">Torn Fabric</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "When dealing DMG to targets afflicted with \"Echo Enigma,\" each stack of \"Echo Enigma\" increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2164_ADF_1</span>.",
+      "type": "Buff",
+      "statusName": "Torn Fabric",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -829,10 +803,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "When dealing DMG to targets afflicted with \"Echo Enigma,\" each stack of \"Echo Enigma\" increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2164_ADF_1</span>.",
-      "type": "Buff",
-      "statusName": "Torn Fabric"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -846,6 +817,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1668876339\">Modifier_FantasticStory_BaseAbility_2160_Plus2_Sub</a>[<span class=\"descriptionNumberColor\">Intertextuality</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases Skill DMG dealt by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2162_ADF_1</span>. When attacking targets with \"Echo Enigma,\" each stack of \"Echo Enigma\" additionally increases Skill DMG by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2162_ADF_2</span>.",
+      "type": "Buff",
+      "statusName": "Intertextuality",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -909,15 +883,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases Skill DMG dealt by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2162_ADF_1</span>. When attacking targets with \"Echo Enigma,\" each stack of \"Echo Enigma\" additionally increases Skill DMG by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2162_ADF_2</span>.",
-      "type": "Buff",
-      "statusName": "Intertextuality"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-397579384\">Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub_PLY</a>[<span class=\"descriptionNumberColor\">DoT Boost</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases DoT dealt by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2161_ADF_2</span>.",
+      "type": "Buff",
+      "statusName": "DoT Boost",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -951,11 +926,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each stack increases DoT dealt by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2161_ADF_2</span>.",
-      "type": "Buff",
-      "statusName": "DoT Boost",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1004,6 +975,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__871276272\">Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub</a>[<span class=\"descriptionNumberColor\">Exposition</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DoT dealt ignores <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2161_ADF_1</span> of the target's All-Type RES.",
+      "type": "Buff",
+      "statusName": "Exposition",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -1035,19 +1009,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DoT dealt ignores <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2161_ADF_1</span> of the target's All-Type RES.",
-      "type": "Buff",
-      "statusName": "Exposition"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1418148626\">Modifier_FantasticStory_BaseAbility_2160_BaseAddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value"
-      ],
-      "latentQueue": [],
       "description": "After receiving DoT, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value</span> Grit Value for allies.",
       "type": "Debuff",
       "statusName": "Grit Mechanics"
@@ -1056,8 +1023,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1710887068\">Modifier_FantasticStory_BaseAbility_2160_BeforeFever_ForShow</a>[<span class=\"descriptionNumberColor\">Concordant Truce</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "description": "Upon entering combat, becomes afflicted with <span class=\"descriptionNumberColor\">DV_FantasticStory_BaseAbility_2160_BeforeFever_P1_EnterLayer</span> stack(s) of \"Echo Enigma.\" After taking action, becomes afflicted with <span class=\"descriptionNumberColor\">DV_FantasticStory_BaseAbility_2160_BeforeFever_P2_ActionLayer</span> stack(s) of \"Echo Enigma.\"",
       "type": "Debuff",
       "statusName": "Concordant Truce"
@@ -1066,6 +1031,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__297114355\">Modifier_FantasticStory_BaseAbility_2160_EnterFever_Sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio</span>, decreases DMG dealt by <span class=\"descriptionNumberColor\">DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio</span>, and increases SPD by <span class=\"descriptionNumberColor\">DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio</span>.",
+      "type": "Debuff",
+      "statusName": "Surging Grit",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1120,83 +1088,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio</span>, decreases DMG dealt by <span class=\"descriptionNumberColor\">DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio</span>, and increases SPD by <span class=\"descriptionNumberColor\">DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio</span>.",
-      "type": "Debuff",
-      "statusName": "Surging Grit"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-898765267\">Modifier_FantasticStory_BaseAbility_2160_Aura</a>",
       "stackType": "ReplaceByCaster",
-      "execute": [
-        {
-          "eventTrigger": "When Modifier Destroyed/Removed",
-          "execute": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-397579384\">Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub_PLY</a>[<span class=\"descriptionNumberColor\">DoT Boost</span>]"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "DV_FantasticStory_BaseAbility_CountSum",
-              "value": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTemp) || RETURN",
-                "displayLines": "DV_FantasticStory_BaseAbility_CountSumTemp",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_CountSumTemp"
-                ]
-              }
-            },
-            {
-              "name": "Update Surging Grit[PF]",
-              "current": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_CountSum"
-                ]
-              },
-              "max": {
-                "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
-                "displayLines": "DV_EnterFeverValue",
-                "constants": [],
-                "variables": [
-                  "DV_EnterFeverValue"
-                ]
-              },
-              "delta": {
-                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
-                "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
-                "constants": [],
-                "variables": [
-                  "DV_FantasticStory_BaseAbility_CountSum"
-                ]
-              },
-              "type": "FeverBack"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp",
-              "value": 0
-            }
-          ]
-        }
-      ],
-      "stackData": [
-        "DV_FantasticStory_BaseAbility_2160_EnterFever_P2_AllDamageTakenRatio",
-        "DV_FantasticStory_BaseAbility_2160_EnterFever_P3_DamageDownRatio",
-        "DV_FantasticStory_BaseAbility_2160_EnterFever_P4_SpeedUPRatio"
-      ],
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_TriggerFlag"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -1323,6 +1220,66 @@ const configAbility = {
             "value2": 1
           }
         }
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-397579384\">Modifier_FantasticStory_BaseAbility_2160_Plus1_Sub_PLY</a>[<span class=\"descriptionNumberColor\">DoT Boost</span>]"
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "DV_FantasticStory_BaseAbility_CountSum",
+              "value": {
+                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTemp) || RETURN",
+                "displayLines": "DV_FantasticStory_BaseAbility_CountSumTemp",
+                "constants": [],
+                "variables": [
+                  "DV_FantasticStory_BaseAbility_CountSumTemp"
+                ]
+              }
+            },
+            {
+              "name": "Update Surging Grit[PF]",
+              "current": {
+                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
+                "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
+                "constants": [],
+                "variables": [
+                  "DV_FantasticStory_BaseAbility_CountSum"
+                ]
+              },
+              "max": {
+                "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
+                "displayLines": "DV_EnterFeverValue",
+                "constants": [],
+                "variables": [
+                  "DV_EnterFeverValue"
+                ]
+              },
+              "delta": {
+                "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
+                "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
+                "constants": [],
+                "variables": [
+                  "DV_FantasticStory_BaseAbility_CountSum"
+                ]
+              },
+              "type": "FeverBack"
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp",
+              "value": 0
+            }
+          ]
+        }
       ]
     },
     {
@@ -1334,6 +1291,16 @@ const configAbility = {
         "STAT_DOT",
         "STAT_DOT_Poison"
       ],
+      "useEntitySnapshot": true,
+      "stackData": [
+        "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
+        "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage"
+      ],
+      "description": "Takes Wind DMG at the start of each turn for a certain number of turns. This effect has a limit of <span class=\"descriptionNumberColor\">DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer</span> stack(s).",
+      "type": "Debuff",
+      "effectName": "Echo Enigma",
+      "statusName": "Echo Enigma",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1623,18 +1590,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "stackData": [
-        "DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer",
-        "Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage"
-      ],
-      "latentQueue": [],
-      "description": "Takes Wind DMG at the start of each turn for a certain number of turns. This effect has a limit of <span class=\"descriptionNumberColor\">DV_FantasticStory_BaseAbility_2160_BeforeFever_P3_MaxLayer</span> stack(s).",
-      "type": "Debuff",
-      "effectName": "Echo Enigma",
-      "statusName": "Echo Enigma",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1737,9 +1693,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

@@ -21,6 +21,9 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
+      "description": "After each time an attack is received, reduces the attacker's Energy by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0005_ADF_1</span> points. The attacker's Energy will not be reduced if it is maxed. When defeated, regenerates <span class=\"descriptionNumberColor\">ChallengePeakBattle_0005_ADF_2</span> Energy for the attacker.",
+      "type": "Other",
+      "statusName": "Energy Absorption+",
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -136,10 +139,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "After each time an attack is received, reduces the attacker's Energy by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0005_ADF_1</span> points. The attacker's Energy will not be reduced if it is maxed. When defeated, regenerates <span class=\"descriptionNumberColor\">ChallengePeakBattle_0005_ADF_2</span> Energy for the attacker.",
-      "type": "Other",
-      "statusName": "Energy Absorption+"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -189,9 +189,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

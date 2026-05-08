@@ -3,6 +3,10 @@ const compositeAbilityObject = {
   "fullCharacterName": "Sunday",
   "trimCharacterName": "Sunday",
   "abilityList": [
+    "Sunday_Modifiers",
+    "Sunday_LocalPlayer_StandardAbility_AttackBreak",
+    "Sunday_LocalPlayer_Sunday_TechniqueUsage",
+    "Sunday_LocalPlayer_Sunday_NormalAtk01",
     "Sunday_Sunday_10_TechniqueInLevel",
     "Sunday_Sunday_10_PassiveAbility01",
     "Sunday_Sunday_10_Ability03_Part02",
@@ -11,10 +15,1320 @@ const compositeAbilityObject = {
     "Sunday_Sunday_10_Ability02_Part02",
     "Sunday_Sunday_10_Ability02_Part01",
     "Sunday_Sunday_10_Ability01_Part02",
-    "Sunday_Sunday_10_Ability01_Part01",
-    "Sunday_Modifiers"
+    "Sunday_Sunday_10_Ability01_Part01"
   ],
   "abilityObject": {
+    "Sunday_Modifiers": {
+      "fileName": "Sunday_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1130386500\">ADV_StageAbility_Maze_Sunday</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">_CritialDamage_Add</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "Dawn of Sidereal Cacophony",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "_CritialChance",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_CritialChance",
+                    "compareType": ">",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_CritialDamage_Add",
+                      "value": {
+                        "operator": "Variables[0] (_CritialChance) || Constants[0] (1) || SUB || RETURN",
+                        "displayLines": "(_CritialChance - 1)",
+                        "constants": [
+                          1
+                        ],
+                        "variables": [
+                          "_CritialChance"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_CritialDamage_Add",
+                      "value": {
+                        "operator": "Variables[0] (_CritialDamage_Add) || Constants[0] (2) || MUL || RETURN",
+                        "displayLines": "(_CritialDamage_Add * 2)",
+                        "constants": [
+                          2
+                        ],
+                        "variables": [
+                          "_CritialDamage_Add"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (_CritialDamage_Add) || RETURN",
+                        "displayLines": "_CritialDamage_Add",
+                        "constants": [],
+                        "variables": [
+                          "_CritialDamage_Add"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-213785338\">Sunday_10_CriticalChanceConvertListen</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "_CritialChance",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_CritialChance",
+                    "compareType": ">",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Change in Crit RATE [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "_CritialChance",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_CritialChance",
+                    "compareType": ">",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT Rate Boost",
+          "statusName": "The Sorrowing Body",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 6
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-213785338\">Sunday_10_CriticalChanceConvertListen</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "multiplier": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 6
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_PropertyValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_CritValue) || MUL || RETURN",
+                        "displayLines": "(MDF_Layer * MDF_CritValue)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Layer",
+                          "MDF_CritValue"
+                        ]
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_PropertyValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_CritValue) || RETURN",
+                        "displayLines": "MDF_CritValue",
+                        "constants": [],
+                        "variables": [
+                          "MDF_CritValue"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 6
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-213785338\">Sunday_10_CriticalChanceConvertListen</a>",
+                      "valuePerStack": {
+                        "_CritialChance": 0
+                      },
+                      "casterAssign": "TargetSelf"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-376848843\">Sunday_10_Ability02_PreshowForSummonUnit</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player's Aim Target List}}.[[removeMemosprite]].[[getMemoAndSummon]].[[removeBattleEventsFromOthers]]"
+            },
+            "skillType": [
+              "Skill"
+            ],
+            "conditions": {
+              "name": "Target is Pathstrider",
+              "path": [
+                "Harmony"
+              ],
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player's Aim Target List}}"
+              },
+              "invertCondition": true
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": "0(Set AV)"
+            }
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1403569034\">Sunday_10_Ability02_PreshowForLongling</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player's Aim Target List}}.[[removeMemosprite]].[[getMemoAndSummon]] - {{Player's Aim Target List}}.[[removeMemosprite]].[[getMemoAndSummon]].[[removeBattleEventsFromOthers]]"
+            },
+            "skillType": [
+              "Skill"
+            ],
+            "conditions": {
+              "name": "Target is Pathstrider",
+              "path": [
+                "Harmony"
+              ],
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player's Aim Target List}}"
+              },
+              "invertCondition": true
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": "0(Set AV)"
+            }
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1534107855\">Sunday_10_Ability02_Preshow</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player's Aim Target List}} - {{Player's Aim Target List}}.[[getMemosprite]]"
+            },
+            "skillType": [
+              "Skill"
+            ],
+            "conditions": {
+              "name": "Target is Pathstrider",
+              "path": [
+                "Harmony"
+              ],
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player's Aim Target List}}"
+              },
+              "invertCondition": true
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": "0(Set AV)"
+            }
+          },
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Owner]: Start",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}} + {{Player Team All(with Unselectable)V2}}.[[getAttachedSummon]]"
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ultimate Prep-Phase [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "invertCondition": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}} + {{Player Team All(with Unselectable)V2}}.[[getAttachedSummon]]"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Update Target Selected(UI) [Owner]",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}} + {{Player Team All(with Unselectable)V2}}.[[getAttachedSummon]]"
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target Count",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Target List}}.[[getMemoAndSummon]]"
+                    },
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player's Aim Target List}}.[[getAttachedSummon]] + {{Player's Aim Target List}}.[[getMemosprite]]"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1698887691\">Sunday_10_Eidolon1_SuperBonusForServant</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF.",
+          "type": "Buff",
+          "effectName": "Millennium's Quietus",
+          "statusName": "Millennium's Quietus",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "Adjust Target Stats",
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "(0 - MDF_PropertyRatio)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-817980433\">Sunday_10_Eidolon1_SuperBonus</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF.",
+          "type": "Buff",
+          "effectName": "Millennium's Quietus",
+          "statusName": "Millennium's Quietus",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Damage Tags",
+                        "damageTag": [
+                          "Summon-Tag DMG"
+                        ]
+                      },
+                      {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "type": "Memosprite"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                          "value": "(0 - MDF_PropertyRatio02)"
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                          "value": "(0 - MDF_PropertyRatio)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Character ID",
+                        "ID": 1204,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "characterName": "Jing Yuan"
+                      },
+                      {
+                        "name": "Character ID",
+                        "ID": 1222,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "characterName": "Lingsha"
+                      },
+                      {
+                        "name": "Character ID",
+                        "ID": 1112,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "characterName": "Topaz & Numby"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Modifier Description",
+                      "popUpText": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF. When a summon deals DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio02</span> of the enemy targets' DEF."
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+                      },
+                      {
+                        "name": "Compare: Target Count",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}.[[getAttachedSummon]]"
+                        },
+                        "compareType": ">",
+                        "value2": 0,
+                        "livingTargets": true
+                      },
+                      {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Character ID",
+                            "ID": 1204,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "characterName": "Jing Yuan"
+                          },
+                          {
+                            "name": "Character ID",
+                            "ID": 1222,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "characterName": "Lingsha"
+                          },
+                          {
+                            "name": "Character ID",
+                            "ID": 1112,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "characterName": "Topaz & Numby"
+                          }
+                        ],
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Modifier Description",
+                      "popUpText": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF. When a summon deals DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio02</span> of the enemy targets' DEF."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier is Added [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Character ID",
+                            "ID": 1204,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "characterName": "Jing Yuan"
+                          },
+                          {
+                            "name": "Character ID",
+                            "ID": 1222,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "characterName": "Lingsha"
+                          },
+                          {
+                            "name": "Character ID",
+                            "ID": 1112,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "characterName": "Topaz & Numby"
+                          }
+                        ],
+                        "invertCondition": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Update Modifier Description",
+                          "popUpText": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF. When a summon deals DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio02</span> of the enemy targets' DEF."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Character ID",
+                            "ID": 1204,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "characterName": "Jing Yuan"
+                          },
+                          {
+                            "name": "Character ID",
+                            "ID": 1222,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "characterName": "Lingsha"
+                          },
+                          {
+                            "name": "Character ID",
+                            "ID": 1112,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "characterName": "Topaz & Numby"
+                          }
+                        ],
+                        "invertCondition": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Update Modifier Description",
+                          "popUpText": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2041266105\">Sunday_10_MazeBonus</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "The Glorious Mysteries",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyFinal</span>.",
+          "type": "Buff",
+          "effectName": "The Beatified",
+          "statusName": "The Beatified",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_CheckAllLinkerDie",
+                  "value": 0
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}} - {{Modifier Holder}}"
+                  },
+                  "searchRandom": true,
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "MDF_CheckAllLinkerDie",
+                      "value": 1
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_CheckAllLinkerDie",
+                    "compareType": "=",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Living State",
+                        "state": "Mask_AliveOnly",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "invertCondition": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"762667758\">Sunday_10_Ability03_Link_ForCaster</a>"
+                        },
+                        {
+                          "name": "Update Displayed Energy Bar",
+                          "value": 0,
+                          "priorState": "Normal"
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "_lifeTime",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "_ownerCritDamage",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_PropertyFinal",
+                  "value": {
+                    "operator": "Variables[0] (_ownerCritDamage) || Variables[1] (MDF_PropertyRatio) || MUL || Variables[2] (MDF_PropertyBase) || ADD || RETURN",
+                    "displayLines": "((_ownerCritDamage * MDF_PropertyRatio) + MDF_PropertyBase)",
+                    "constants": [],
+                    "variables": [
+                      "_ownerCritDamage",
+                      "MDF_PropertyRatio",
+                      "MDF_PropertyBase"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyFinal) || RETURN",
+                    "displayLines": "MDF_PropertyFinal",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyFinal"
+                    ]
+                  },
+                  "isRefresh": true
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Modifier Description",
+                      "popUpText": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyFinal</span>. DMG dealt increases by <span class=\"descriptionNumberColor\">#SkillRank_Rank02_P1_AddDamage</span>."
+                    },
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (0.3) || RETURN",
+                        "displayLines": "0.3",
+                        "constants": [],
+                        "variables": [
+                          0.3
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "MDF_PropertyFinal",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "maxValue": 99999,
+                  "includeMaxValueInRange": true,
+                  "whenValueChanges": [
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyFinal) || RETURN",
+                        "displayLines": "MDF_PropertyFinal",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyFinal"
+                        ]
+                      },
+                      "isRefresh": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "Sunday_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Sunday_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Sunday_LocalPlayer_Sunday_TechniqueUsage": {
+      "fileName": "Sunday_LocalPlayer_Sunday_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "131301(SkillMaze)",
+          "duration": -1
+        },
+        "Submit Technique Use"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Sunday_LocalPlayer_Sunday_NormalAtk01": {
+      "fileName": "Sunday_LocalPlayer_Sunday_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
     "Sunday_Sunday_10_TechniqueInLevel": {
       "fileName": "Sunday_Sunday_10_TechniqueInLevel",
       "childAbilityList": [
@@ -75,9 +1389,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -225,13 +1537,13 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Constants[0] (0) || Variables[0] ([object Object]) || SUB || RETURN",
-                "displayLines": "(0 - [object Object])",
+                "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_4329) || SUB || RETURN",
+                "displayLines": "(0 - UnusedUnderThisBase_4329)",
                 "constants": [
                   0
                 ],
                 "variables": [
-                  {}
+                  "UnusedUnderThisBase_4329"
                 ]
               }
             }
@@ -262,9 +1574,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -493,16 +1803,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2623025\">Sunday_TempAddAITag</a>",
-          "stackType": "ReplaceByCaster",
-          "stackData": [],
-          "latentQueue": []
+          "stackType": "ReplaceByCaster"
         }
       ],
       "targetObjectData": {
@@ -1189,9 +2495,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1865,6 +3169,13 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2015662270\">Sunday_10_Ability02_Property</a>[<span class=\"descriptionNumberColor\">Benison of Paper and Rites</span>]",
           "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_PropertyRatio"
+          ],
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Benison of Paper and Rites",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1887,15 +3198,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Benison of Paper and Rites"
+          ]
         }
       ],
       "targetObjectData": {
@@ -2096,1058 +3399,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Sunday_Modifiers": {
-      "fileName": "Sunday_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "_CritialChance",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "_CritialChance",
-                    "compareType": ">",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_CritialDamage_Add",
-                      "value": {
-                        "operator": "Variables[0] (_CritialChance) || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "(_CritialChance - 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "_CritialChance"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_CritialDamage_Add",
-                      "value": {
-                        "operator": "Variables[0] (_CritialDamage_Add) || Constants[0] (2) || MUL || RETURN",
-                        "displayLines": "(_CritialDamage_Add * 2)",
-                        "constants": [
-                          2
-                        ],
-                        "variables": [
-                          "_CritialDamage_Add"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Stack Target Stat Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (_CritialDamage_Add) || RETURN",
-                        "displayLines": "_CritialDamage_Add",
-                        "constants": [],
-                        "variables": [
-                          "_CritialDamage_Add"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">_CritialDamage_Add</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "Dawn of Sidereal Cacophony"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-213785338\">Sunday_10_CriticalChanceConvertListen</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "_CritialChance",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "_CritialChance",
-                    "compareType": ">",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Change in Crit RATE [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "_CritialChance",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "_CritialChance",
-                    "compareType": ">",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-680299003\">Sunday_10_CriticalChanceConvert</a>[<span class=\"descriptionNumberColor\">Dawn of Sidereal Cacophony</span>]"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 6
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-213785338\">Sunday_10_CriticalChanceConvertListen</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "MDF_Layer",
-                  "multiplier": 1
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 6
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue",
-                      "value": {
-                        "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_CritValue) || MUL || RETURN",
-                        "displayLines": "(MDF_Layer * MDF_CritValue)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Layer",
-                          "MDF_CritValue"
-                        ]
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue",
-                      "value": {
-                        "operator": "Variables[0] (MDF_CritValue) || RETURN",
-                        "displayLines": "MDF_CritValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_CritValue"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 6
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-213785338\">Sunday_10_CriticalChanceConvertListen</a>",
-                      "valuePerStack": {
-                        "_CritialChance": 0
-                      },
-                      "casterAssign": "TargetSelf"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_CritValue"
-          ],
-          "latentQueue": [],
-          "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT Rate Boost",
-          "statusName": "The Sorrowing Body"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-376848843\">Sunday_10_Ability02_PreshowForSummonUnit</a>",
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Player's Aim Target List}}.[[removeMemosprite]].[[getMemoAndSummon]].[[removeBattleEventsFromOthers]]"
-            },
-            "skillType": [
-              "Skill"
-            ],
-            "conditions": {
-              "name": "Target is Pathstrider",
-              "path": [
-                "Harmony"
-              ],
-              "target": {
-                "name": "Target Name",
-                "target": "{{Player's Aim Target List}}"
-              },
-              "invertCondition": true
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": "0(Set AV)"
-            }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1403569034\">Sunday_10_Ability02_PreshowForLongling</a>",
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Player's Aim Target List}}.[[removeMemosprite]].[[getMemoAndSummon]] - {{Player's Aim Target List}}.[[removeMemosprite]].[[getMemoAndSummon]].[[removeBattleEventsFromOthers]]"
-            },
-            "skillType": [
-              "Skill"
-            ],
-            "conditions": {
-              "name": "Target is Pathstrider",
-              "path": [
-                "Harmony"
-              ],
-              "target": {
-                "name": "Target Name",
-                "target": "{{Player's Aim Target List}}"
-              },
-              "invertCondition": true
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": "0(Set AV)"
-            }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1534107855\">Sunday_10_Ability02_Preshow</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}} + {{Player Team All(with Unselectable)V2}}.[[getAttachedSummon]]"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ultimate Prep-Phase [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "invertCondition": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All(with Unselectable)V2}} + {{Player Team All(with Unselectable)V2}}.[[getAttachedSummon]]"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Update Target Selected(UI) [Owner]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}} + {{Player Team All(with Unselectable)V2}}.[[getAttachedSummon]]"
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target Count",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Player's Aim Target List}}.[[getMemoAndSummon]]"
-                    },
-                    "compareType": ">",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player's Aim Target List}}.[[getAttachedSummon]] + {{Player's Aim Target List}}.[[getMemosprite]]"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Player's Aim Target List}} - {{Player's Aim Target List}}.[[getMemosprite]]"
-            },
-            "skillType": [
-              "Skill"
-            ],
-            "conditions": {
-              "name": "Target is Pathstrider",
-              "path": [
-                "Harmony"
-              ],
-              "target": {
-                "name": "Target Name",
-                "target": "{{Player's Aim Target List}}"
-              },
-              "invertCondition": true
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": "0(Set AV)"
-            }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1698887691\">Sunday_10_Eidolon1_SuperBonusForServant</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "Adjust Target Stats",
-                  "modifiedValuesArray": [
-                    {
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                      "value": "(0 - MDF_PropertyRatio)"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio"
-          ],
-          "latentQueue": [],
-          "description": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF.",
-          "type": "Buff",
-          "effectName": "Millennium's Quietus",
-          "statusName": "Millennium's Quietus"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-817980433\">Sunday_10_Eidolon1_SuperBonus</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Damage Tags",
-                        "damageTag": [
-                          "Summon-Tag DMG"
-                        ]
-                      },
-                      {
-                        "name": "Is Entity Type",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "type": "Memosprite"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Defender",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                          "value": "(0 - MDF_PropertyRatio02)"
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Defender",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                          "value": "(0 - MDF_PropertyRatio)"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Character ID",
-                        "ID": 1204,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "characterName": "Jing Yuan"
-                      },
-                      {
-                        "name": "Character ID",
-                        "ID": 1222,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "characterName": "Lingsha"
-                      },
-                      {
-                        "name": "Character ID",
-                        "ID": 1112,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "characterName": "Topaz & Numby"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Modifier Description",
-                      "popUpText": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF. When a summon deals DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio02</span> of the enemy targets' DEF."
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
-                      },
-                      {
-                        "name": "Compare: Target Count",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}.[[getAttachedSummon]]"
-                        },
-                        "compareType": ">",
-                        "value2": 0,
-                        "livingTargets": true
-                      },
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Character ID",
-                            "ID": 1204,
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "characterName": "Jing Yuan"
-                          },
-                          {
-                            "name": "Character ID",
-                            "ID": 1222,
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "characterName": "Lingsha"
-                          },
-                          {
-                            "name": "Character ID",
-                            "ID": 1112,
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "characterName": "Topaz & Numby"
-                          }
-                        ],
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Modifier Description",
-                      "popUpText": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF. When a summon deals DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio02</span> of the enemy targets' DEF."
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Character ID",
-                            "ID": 1204,
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "characterName": "Jing Yuan"
-                          },
-                          {
-                            "name": "Character ID",
-                            "ID": 1222,
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "characterName": "Lingsha"
-                          },
-                          {
-                            "name": "Character ID",
-                            "ID": 1112,
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "characterName": "Topaz & Numby"
-                          }
-                        ],
-                        "invertCondition": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Update Modifier Description",
-                          "popUpText": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF. When a summon deals DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio02</span> of the enemy targets' DEF."
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Character ID",
-                            "ID": 1204,
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "characterName": "Jing Yuan"
-                          },
-                          {
-                            "name": "Character ID",
-                            "ID": 1222,
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "characterName": "Lingsha"
-                          },
-                          {
-                            "name": "Character ID",
-                            "ID": 1112,
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "characterName": "Topaz & Numby"
-                          }
-                        ],
-                        "invertCondition": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Update Modifier Description",
-                          "popUpText": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF."
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio",
-            "MDF_PropertyRatio02"
-          ],
-          "latentQueue": [],
-          "description": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF.",
-          "type": "Buff",
-          "effectName": "Millennium's Quietus",
-          "statusName": "Millennium's Quietus"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2041266105\">Sunday_10_MazeBonus</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "The Glorious Mysteries"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_CheckAllLinkerDie",
-                  "value": 0
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}} - {{Modifier Holder}}"
-                  },
-                  "searchRandom": true,
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_CheckAllLinkerDie",
-                      "value": 1
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_CheckAllLinkerDie",
-                    "compareType": "=",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Living State",
-                        "state": "Mask_AliveOnly",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "invertCondition": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"762667758\">Sunday_10_Ability03_Link_ForCaster</a>"
-                        },
-                        {
-                          "name": "Update Displayed Energy Bar",
-                          "value": 0,
-                          "priorState": "Normal"
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "_lifeTime",
-                          "value": 0
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "_ownerCritDamage",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyFinal",
-                  "value": {
-                    "operator": "Variables[0] (_ownerCritDamage) || Variables[1] (MDF_PropertyRatio) || MUL || Variables[2] (MDF_PropertyBase) || ADD || RETURN",
-                    "displayLines": "((_ownerCritDamage * MDF_PropertyRatio) + MDF_PropertyBase)",
-                    "constants": [],
-                    "variables": [
-                      "_ownerCritDamage",
-                      "MDF_PropertyRatio",
-                      "MDF_PropertyBase"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyFinal) || RETURN",
-                    "displayLines": "MDF_PropertyFinal",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyFinal"
-                    ]
-                  },
-                  "isRefresh": true
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 2
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Modifier Description",
-                      "popUpText": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyFinal</span>. DMG dealt increases by <span class=\"descriptionNumberColor\">#SkillRank_Rank02_P1_AddDamage</span>."
-                    },
-                    {
-                      "name": "Stack Target Stat Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.3) || RETURN",
-                        "displayLines": "0.3",
-                        "constants": [],
-                        "variables": [
-                          0.3
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "MDF_PropertyFinal",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "maxValue": 99999,
-                  "includeMaxValueInRange": true,
-                  "whenValueChanges": [
-                    {
-                      "name": "Stack Target Stat Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyFinal) || RETURN",
-                        "displayLines": "MDF_PropertyFinal",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyFinal"
-                        ]
-                      },
-                      "isRefresh": true
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyRatio",
-            "MDF_PropertyBase"
-          ],
-          "latentQueue": [],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyFinal</span>.",
-          "type": "Buff",
-          "effectName": "The Beatified",
-          "statusName": "The Beatified"
-        }
-      ],
-      "references": []
     }
   }
 }

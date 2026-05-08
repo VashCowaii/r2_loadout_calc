@@ -41,6 +41,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-924806619\">Enemy_W2_Xuanlu_02_Bonus</a>[<span class=\"descriptionNumberColor\">Engender</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_AttackAddedRatio_PerLayer"
+      ],
+      "description": "Increases ATK.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Engender",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -63,15 +70,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AttackAddedRatio_PerLayer"
-      ],
-      "latentQueue": [],
-      "description": "Increases ATK.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Engender"
+      ]
     }
   ]
 }

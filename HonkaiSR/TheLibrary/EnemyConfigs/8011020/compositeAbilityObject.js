@@ -3,78 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": 8011020,
   "trimCharacterName": 8011020,
   "abilityList": [
+    "8011020_Monster_AML_Minion01_01_PassiveAbilityInitiate",
     "8011020_Monster_AML_Minion01_01_Ability01_Part02",
-    "8011020_Monster_AML_Minion01_01_Ability01_Part01",
-    "8011020_Monster_AML_Minion01_01_PassiveAbilityInitiate"
+    "8011020_Monster_AML_Minion01_01_Ability01_Part01"
   ],
   "abilityObject": {
-    "8011020_Monster_AML_Minion01_01_Ability01_Part02": {
-      "fileName": "8011020_Monster_AML_Minion01_01_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8011020_Monster_AML_Minion01_01_Ability01_Part01": {
-      "fileName": "8011020_Monster_AML_Minion01_01_Ability01_Part01",
-      "childAbilityList": [
-        "8011020_Monster_AML_Minion01_01_Ability01_Part01",
-        "8011020_Monster_AML_Minion01_01_Ability01_Part02",
-        "8011020_Monster_AML_Minion01_01_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Minion01_01_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "8011020_Monster_AML_Minion01_01_PassiveAbilityInitiate": {
       "fileName": "8011020_Monster_AML_Minion01_01_PassiveAbilityInitiate",
       "skillTrigger": "Monster_AML_Minion01_01_PassiveSkillInitiate",
@@ -326,11 +259,76 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
+    },
+    "8011020_Monster_AML_Minion01_01_Ability01_Part02": {
+      "fileName": "8011020_Monster_AML_Minion01_01_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "8011020_Monster_AML_Minion01_01_Ability01_Part01": {
+      "fileName": "8011020_Monster_AML_Minion01_01_Ability01_Part01",
+      "childAbilityList": [
+        "8011020_Monster_AML_Minion01_01_Ability01_Part01",
+        "8011020_Monster_AML_Minion01_01_Ability01_Part02",
+        "8011020_Monster_AML_Minion01_01_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_AML_Minion01_01_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
     }
   }
 }

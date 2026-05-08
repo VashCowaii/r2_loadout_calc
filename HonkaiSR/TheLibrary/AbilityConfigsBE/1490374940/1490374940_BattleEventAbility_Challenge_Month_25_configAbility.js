@@ -116,6 +116,9 @@ const configAbility = {
         "Deathrattle",
         "RemoveWhenCasterDead"
       ],
+      "description": "Takes <span class=\"descriptionNumberColor\">BattleEvent_P1_ADF</span> increased DMG from Basic ATKs and DoT effects. When this unit is defeated, if any enemies are in Bleed, Shock, Burn, or Wind Shear state, immediately deals DMG equal to <span class=\"descriptionNumberColor\">BattleEvent_P5_ADF</span> of the original DoT to all other enemies with a high chance to inflict Bleed, Shock, Burn, or Wind Shear on them for <span class=\"descriptionNumberColor\">BattleEvent_P3_ADF</span> turn(s).",
+      "type": "Debuff",
+      "statusName": "Memory Imprint",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -287,10 +290,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Takes <span class=\"descriptionNumberColor\">BattleEvent_P1_ADF</span> increased DMG from Basic ATKs and DoT effects. When this unit is defeated, if any enemies are in Bleed, Shock, Burn, or Wind Shear state, immediately deals DMG equal to <span class=\"descriptionNumberColor\">BattleEvent_P5_ADF</span> of the original DoT to all other enemies with a high chance to inflict Bleed, Shock, Burn, or Wind Shear on them for <span class=\"descriptionNumberColor\">BattleEvent_P3_ADF</span> turn(s).",
-      "type": "Debuff",
-      "statusName": "Memory Imprint"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -510,9 +510,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

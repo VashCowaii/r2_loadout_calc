@@ -3,46 +3,16 @@ const compositeAbilityObject = {
   "fullCharacterName": 4032023,
   "trimCharacterName": 4032023,
   "abilityList": [
-    "4032023_Monster_W4_FireProwler_01_NoDeathRattle",
     "4032023_Monster_W4_FireProwler_01_Ability02_Assist",
     "4032023_Monster_W4_FireProwler_01_Ability01_Assist",
+    "4032023_Monster_W4_FireProwler_01_NoDeathRattle",
     "4032023_Monster_W4_FireProwler_01_Ability02_Part02_FantasticStory",
     "4032023_Monster_W4_FireProwler_01_Ability02_Part01_FantasticStory",
     "4032023_Monster_W4_FireProwler_01_Ability01_Part02_FantasticStory",
     "4032023_Monster_W4_FireProwler_01_Ability01_Part01_FantasticStory",
-    "4032023_Monster_W4_FireProwler_01_PassiveAbilityInitiate_FantasticStory",
-    "4032023_Monster_W4_FireProwler_01_PassiveAbilityInitiate",
     "4032023_Modifiers"
   ],
   "abilityObject": {
-    "4032023_Monster_W4_FireProwler_01_NoDeathRattle": {
-      "fileName": "4032023_Monster_W4_FireProwler_01_NoDeathRattle",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Mark Entity For Immediate Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "onAbort": [
-        {
-          "name": "Mark Entity For Immediate Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4032023_Monster_W4_FireProwler_01_Ability02_Assist": {
       "fileName": "4032023_Monster_W4_FireProwler_01_Ability02_Assist",
       "abilityType": null,
@@ -507,6 +477,34 @@ const compositeAbilityObject = {
       },
       "references": []
     },
+    "4032023_Monster_W4_FireProwler_01_NoDeathRattle": {
+      "fileName": "4032023_Monster_W4_FireProwler_01_NoDeathRattle",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Mark Entity For Immediate Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        }
+      ],
+      "onAbort": [
+        {
+          "name": "Mark Entity For Immediate Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "4032023_Monster_W4_FireProwler_01_Ability02_Part02_FantasticStory": {
       "fileName": "4032023_Monster_W4_FireProwler_01_Ability02_Part02_FantasticStory",
       "abilityType": null,
@@ -700,216 +698,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4032023_Monster_W4_FireProwler_01_PassiveAbilityInitiate_FantasticStory": {
-      "fileName": "4032023_Monster_W4_FireProwler_01_PassiveAbilityInitiate_FantasticStory",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-881069101\">Enemy_W4_FireProwler_01_Repeat_FantasticStory</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2020453285\">Enemy_W4_FireProwler_01_DamageValue</a>",
-          "valuePerStack": {
-            "MDF_Ability01": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "MDF_Ability01_Adjoin": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "MDF_Ability02": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            }
-          },
-          "casterAssign": "TargetSelf"
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4032023_Monster_W4_FireProwler_01_PassiveAbilityInitiate": {
-      "fileName": "4032023_Monster_W4_FireProwler_01_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-104101548\">Enemy_W4_FireProwler_01_Repeat</a>[<span class=\"descriptionNumberColor\">Futility</span>]"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1169574682\">Enemy_W4_FireProwler_Charge</a>[<span class=\"descriptionNumberColor\">Silent Sorrow</span>]"
-          },
-          "failed": [
-            {
-              "name": "Define Custom Variable with Copy",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "variable": "CurrentHPRatio",
-              "target2": null,
-              "variable2": "CurrentHPRatio"
-            },
-            {
-              "name": "Consume",
-              "consumeFrom": "MaxHP",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "consumePercent": {
-                "operator": "Variables[0] ({[PassiveSkill01[1]]}) || Variables[1] (CurrentHPRatio) || MUL || RETURN",
-                "displayLines": "({[PassiveSkill01[1]]} * CurrentHPRatio)",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[1]]}",
-                  "CurrentHPRatio"
-                ]
-              },
-              "consumeFloor": 1,
-              "attackType": "Unknown",
-              "DamageType": {
-                "name": "Damage Type Source",
-                "sourceType": "Physical"
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1577610826\">Enemy_W4_FireProwler_RallyHP_Mark</a>",
-              "valuePerStack": {
-                "MDF_RallyHP": {
-                  "operator": "Variables[0] ({[PassiveSkill01[1]]}) || Variables[1] (CurrentHPRatio) || MUL || RETURN",
-                  "displayLines": "({[PassiveSkill01[1]]} * CurrentHPRatio)",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkill01[1]]}",
-                    "CurrentHPRatio"
-                  ]
-                }
-              },
-              "casterAssign": "CasterSelf"
-            },
-            {
-              "name": "UI Display Event (On Entity)",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "popUpText": "Entangled By Agony"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1207820325\">Enemy_W4_FireProwler_01_DeathRattle</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2020453285\">Enemy_W4_FireProwler_01_DamageValue</a>",
-          "valuePerStack": {
-            "MDF_Ability01": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "MDF_Ability01_Adjoin": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "MDF_Ability02": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            }
-          },
-          "casterAssign": "TargetSelf"
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4032023_Modifiers": {
       "fileName": "4032023_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -922,13 +710,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2020453285\">Enemy_W4_FireProwler_01_DamageValue</a>",
-          "stackData": [
-            "MDF_Skill01",
-            "MDF_Skill01_Adjoin",
-            "MDF_Skill02"
-          ],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-2020453285\">Enemy_W4_FireProwler_01_DamageValue</a>"
         },
         {
           "name": "Modifier Construction",
@@ -1205,9 +987,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1306,9 +1086,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1317,6 +1095,9 @@ const compositeAbilityObject = {
             "KeepOnDeathrattle",
             "MuteSpeed"
           ],
+          "description": "Resists Crowd Control debuffs. When \"%DynamicTargetName\" uses \"Demise's Storm\" or \"Fading Fate\" again, if this unit was summoned by this attack and is in the \"Mutual Sacrifice\" state, then this unit will attack together with \"%DynamicTargetName\".",
+          "type": "Other",
+          "statusName": "Futility",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1399,12 +1180,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Resists Crowd Control debuffs. When \"%DynamicTargetName\" uses \"Demise's Storm\" or \"Fading Fate\" again, if this unit was summoned by this attack and is in the \"Mutual Sacrifice\" state, then this unit will attack together with \"%DynamicTargetName\".",
-          "type": "Other",
-          "statusName": "Futility"
+          ]
         }
       ],
       "references": []

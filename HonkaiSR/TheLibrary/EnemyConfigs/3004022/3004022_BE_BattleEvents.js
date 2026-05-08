@@ -23,22 +23,6 @@ const configAbility = {
         }
       ],
       "hardLevelEvent": true
-    },
-    {
-      "name": "Battle Event Construction",
-      "ID": 20025,
-      "team": "Enemy Team",
-      "eventType": "Assist",
-      "abilityList": [
-        "Monster_W3_Theater_BattleEvent"
-      ],
-      "overridesArray": [
-        {
-          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
-          "value": 100
-        }
-      ],
-      "hardLevelEvent": true
     }
   ],
   "references": []

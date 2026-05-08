@@ -4,10 +4,6 @@ const compositeAbilityObject = {
   "trimCharacterName": 1023010,
   "abilityList": [
     "1023010_Monster_W1_Mecha_Fire_PassiveAbility_Initiate",
-    "1023010_Monster_W1_Mecha_Fire_Ability09_Part02",
-    "1023010_Monster_W1_Mecha_Fire_Ability09_Part01",
-    "1023010_Monster_W1_Mecha_Fire_Ability08_Part02",
-    "1023010_Monster_W1_Mecha_Fire_Ability08_Part01",
     "1023010_Monster_W1_Mecha_Fire_Ability07_Part02",
     "1023010_Monster_W1_Mecha_Fire_Ability07_Part01",
     "1023010_Monster_W1_Mecha_Fire_Ability06_Part02",
@@ -73,9 +69,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1525735107\">Monster_W1_Mecha04_01_MuteHitFly</a>",
           "modifierFlags": [
             "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -180,9 +174,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -194,221 +186,9 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Choice Window [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
-    },
-    "1023010_Monster_W1_Mecha_Fire_Ability09_Part02": {
-      "fileName": "1023010_Monster_W1_Mecha_Fire_Ability09_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1466752435\">Monster_W1_Mecha04_01_HeadEffect</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1023010_Monster_W1_Mecha_Fire_Ability09_Part01": {
-      "fileName": "1023010_Monster_W1_Mecha_Fire_Ability09_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W1_Mecha_Fire_Ability09_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "1023010_Monster_W1_Mecha_Fire_Ability08_Part02": {
-      "fileName": "1023010_Monster_W1_Mecha_Fire_Ability08_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_30) || RETURN",
-              "displayLines": "UnusedUnderThisBase_30",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_30"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "LightTeam_Count"
-        },
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "variableName": "LightTeam_Count",
-          "livingTargets": true
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": {
-            "operator": "Variables[0] (LightTeam_Count) || RETURN",
-            "displayLines": "LightTeam_Count",
-            "constants": [],
-            "variables": [
-              "LightTeam_Count"
-            ]
-          },
-          "Event": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]"
-              },
-              "ifTargetFound": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_31) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_31",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_31"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK"
-                  }
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Targets Adjacent to Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_32) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_32",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_32"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK"
-                  }
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]"
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1466752435\">Monster_W1_Mecha04_01_HeadEffect</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "1023010_Monster_W1_Mecha_Fire_Ability08_Part01": {
-      "fileName": "1023010_Monster_W1_Mecha_Fire_Ability08_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W1_Mecha_Fire_Ability08_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
     },
     "1023010_Monster_W1_Mecha_Fire_Ability07_Part02": {
       "fileName": "1023010_Monster_W1_Mecha_Fire_Ability07_Part02",
@@ -944,6 +724,14 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
+          "stackData": [
+            "Modifier_AttackAddedRatio",
+            "Modifier_SpeedDelta"
+          ],
+          "description": "Increases ATK by <span class=\"descriptionNumberColor\">Modifier_AttackAddedRatio</span> and SPD by <span class=\"descriptionNumberColor\">Modifier_SpeedDelta</span> pts.",
+          "type": "Buff",
+          "effectName": "Mania",
+          "statusName": "Mania",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -1004,21 +792,31 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "Modifier_AttackAddedRatio",
-            "Modifier_SpeedDelta"
-          ],
-          "latentQueue": [],
-          "description": "Increases ATK by <span class=\"descriptionNumberColor\">Modifier_AttackAddedRatio</span> and SPD by <span class=\"descriptionNumberColor\">Modifier_SpeedDelta</span> pts.",
-          "type": "Buff",
-          "effectName": "Mania",
-          "statusName": "Mania"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1848655652\">Monster_W1_Mecha_Fire_Passive</a>[<span class=\"descriptionNumberColor\">Out of Control</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "ModifierCriticalChanceRatio_PerLayer"
+          ],
+          "latentQueue": [
+            "Monster_W1_Mecha_Fire_PassiveCounter_01"
+          ],
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">ModifierCriticalChanceRatio</span>. Stack up to 5 times.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Out of Control",
+          "stackLimit": 5,
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+            "displayLines": "ModifierStackLayer",
+            "constants": [],
+            "variables": [
+              "ModifierStackLayer"
+            ]
+          },
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1066,26 +864,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [
-            "ModifierCriticalChanceRatio_PerLayer"
-          ],
-          "latentQueue": [
-            "Monster_W1_Mecha_Fire_PassiveCounter_01"
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">ModifierCriticalChanceRatio</span>. Stack up to 5 times.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Out of Control",
-          "stackLimit": 5,
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
-          }
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1100,9 +879,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

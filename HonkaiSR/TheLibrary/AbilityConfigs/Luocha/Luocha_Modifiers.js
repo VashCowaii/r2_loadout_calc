@@ -10,8 +10,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1327928354\">ADV_StageAbility_Maze_Luocha</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-470154310\">Luocha_Eidolon6_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Reunion With the Dust</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "All-Type DMG RES -<span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Debuff",
+      "effectName": "All-Type RES Reduction",
+      "statusName": "Reunion With the Dust",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -36,20 +46,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [],
-      "description": "All-Type DMG RES -<span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Debuff",
-      "effectName": "All-Type RES Reduction",
-      "statusName": "Reunion With the Dust"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1394916865\">Luocha_Eidolon1_ATKUp</a>[<span class=\"descriptionNumberColor\">Ablution of the Quick</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
+      "type": "Buff",
+      "effectName": "ATK Boost",
+      "statusName": "Ablution of the Quick",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -72,17 +78,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [
-        "_insertCheck_"
-      ],
-      "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
-      "type": "Buff",
-      "effectName": "ATK Boost",
-      "statusName": "Ablution of the Quick"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -187,6 +183,11 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-390780291\">Luocha_Passive01Modifier</a>[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "When the Abyss Flower is fully stacked, Luocha can consume all the stacks to deploy a Zone against the enemy.",
+      "type": "Other",
+      "statusName": "Abyss Flower",
+      "stackLimit": 2,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -239,25 +240,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PassiveLayer"
-      ],
-      "latentQueue": [],
-      "description": "When the Abyss Flower is fully stacked, Luocha can consume all the stacks to deploy a Zone against the enemy.",
-      "type": "Other",
-      "statusName": "Abyss Flower",
-      "stackLimit": 2,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1468187936\">Luocha_Passive01_HealHPCD</a>[<span class=\"descriptionNumberColor\">Prayer of Abyss Flower</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [],
-      "latentQueue": [
-        "IsInserAbilityTrigger"
-      ],
       "description": "Skill effect auto-trigger is on cooldown.",
       "type": "Other",
       "statusName": "Prayer of Abyss Flower",
@@ -270,6 +258,10 @@ const configAbility = {
       "modifierFlags": [
         "Shield"
       ],
+      "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
+      "type": "Buff",
+      "effectName": "Shield",
+      "statusName": "Shield",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -324,16 +316,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ShieldPercentage",
-        "MDF_ShieldValue"
-      ],
-      "latentQueue": [],
-      "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
-      "type": "Buff",
-      "effectName": "Shield",
-      "statusName": "Shield"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -359,11 +342,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AddHealRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -424,10 +403,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "IsInserAbilityTrigger"
       ]
     }
   ],

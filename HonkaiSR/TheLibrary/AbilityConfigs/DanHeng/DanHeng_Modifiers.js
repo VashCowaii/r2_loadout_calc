@@ -10,7 +10,17 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1679198139\">ADV_StageAbility_Maze_DanHeng</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1350798035\">DanHeng_Passive_SelfBeingTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
+      "description": "Wind RES PEN +<span class=\"descriptionNumberColor\">DanHeng_PassivePene</span>.",
+      "type": "Buff",
+      "effectName": "Wind RES PEN",
+      "statusName": "Superiority of Reach",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -257,20 +267,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "DanHeng_PassivePene"
-      ],
-      "latentQueue": [],
-      "description": "Wind RES PEN +<span class=\"descriptionNumberColor\">DanHeng_PassivePene</span>.",
-      "type": "Buff",
-      "effectName": "Wind RES PEN",
-      "statusName": "Superiority of Reach"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1284468000\">DanHeng_Passive_BeginTargetEnhanceCD</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "The effect of Talent \"Superiority of Reach\" cannot be triggered.",
+      "type": "Other",
+      "statusName": "Superiority of Reach",
+      "duration": 2,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -329,20 +335,12 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [],
-      "description": "The effect of Talent \"Superiority of Reach\" cannot be triggered.",
-      "type": "Other",
-      "statusName": "Superiority of Reach",
-      "duration": 2
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-997779121\">DanHeng_Passive_BeginTargetEnhance</a>[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [],
-      "latentQueue": [],
       "description": "The effect of Talent \"Superiority of Reach\" can now be triggered.",
       "type": "Other",
       "statusName": "Superiority of Reach"

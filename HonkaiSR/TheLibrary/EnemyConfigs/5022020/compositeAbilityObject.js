@@ -3,14 +3,12 @@ const compositeAbilityObject = {
   "fullCharacterName": 5022020,
   "trimCharacterName": 5022020,
   "abilityList": [
+    "5022020_Monster_XP_Elite02_03_PassiveAbility03_Part01_LV2",
+    "5022020_Monster_XP_Elite02_03_Deathrattle_ForceKill",
     "5022020_Monster_XP_Elite02_03_Deathrattle_LV2",
     "5022020_Monster_XP_Elite02_03_Deathrattle_LV1",
-    "5022020_Monster_XP_Elite02_03_PassiveAbility03_Part01_LV2",
-    "5022020_Monster_XP_Elite02_03_PassiveAbility03_Part01_LV1",
-    "5022020_Monster_XP_Elite02_03_Deathrattle_ForceKill",
     "5022020_Monster_XP_Elite02_03_PassiveAbility01_Part02",
     "5022020_Monster_XP_Elite02_03_PassiveAbility01_Part01",
-    "5022020_Monster_XP_Elite02_03_PassiveAbility_ScoreAssign",
     "5022020_Monster_XP_Elite02_03_Ability04_Part02",
     "5022020_Monster_XP_Elite02_03_Ability04_Part01",
     "5022020_Monster_XP_Elite02_03_Ability03_Part02",
@@ -27,6 +25,96 @@ const compositeAbilityObject = {
     "5022020_Modifiers"
   ],
   "abilityObject": {
+    "5022020_Monster_XP_Elite02_03_PassiveAbility03_Part01_LV2": {
+      "fileName": "5022020_Monster_XP_Elite02_03_PassiveAbility03_Part01_LV2",
+      "childAbilityList": [
+        "5022020_Monster_XP_Elite02_03_PassiveAbility03_Part01_LV2"
+      ],
+      "skillTrigger": "PassiveSkill03",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"904098519\">Modifier_Monster_XP_Elite02_03_Deathrattle</a>",
+          "stackLimit": 3
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"904098519\">Modifier_Monster_XP_Elite02_03_Deathrattle</a>",
+          "stackLimit": 3
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5022020_Monster_XP_Elite02_03_Deathrattle_ForceKill": {
+      "fileName": "5022020_Monster_XP_Elite02_03_Deathrattle_ForceKill",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "searchRandom": true,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1851176516\">Modifier_Monster_XP_Elite02_03_ForceKill</a>"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"904098519\">Modifier_Monster_XP_Elite02_03_Deathrattle</a>"
+            },
+            {
+              "name": "Force Entity Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "WAIT FOR",
+          "condition": {
+            "name": "Death Animation Completed",
+            "team": "Enemy Team",
+            "type": "Team Characters"
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "5022020_Monster_XP_Elite02_03_Deathrattle_LV2": {
       "fileName": "5022020_Monster_XP_Elite02_03_Deathrattle_LV2",
       "abilityType": null,
@@ -649,117 +737,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "5022020_Monster_XP_Elite02_03_PassiveAbility03_Part01_LV2": {
-      "fileName": "5022020_Monster_XP_Elite02_03_PassiveAbility03_Part01_LV2",
-      "childAbilityList": [
-        "5022020_Monster_XP_Elite02_03_PassiveAbility03_Part01_LV2"
-      ],
-      "skillTrigger": "PassiveSkill03",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"904098519\">Modifier_Monster_XP_Elite02_03_Deathrattle</a>",
-          "stackLimit": 3
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"904098519\">Modifier_Monster_XP_Elite02_03_Deathrattle</a>",
-          "stackLimit": 3
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5022020_Monster_XP_Elite02_03_PassiveAbility03_Part01_LV1": {
-      "fileName": "5022020_Monster_XP_Elite02_03_PassiveAbility03_Part01_LV1",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"904098519\">Modifier_Monster_XP_Elite02_03_Deathrattle</a>",
-          "stackLimit": 3
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5022020_Monster_XP_Elite02_03_Deathrattle_ForceKill": {
-      "fileName": "5022020_Monster_XP_Elite02_03_Deathrattle_ForceKill",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1851176516\">Modifier_Monster_XP_Elite02_03_ForceKill</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"904098519\">Modifier_Monster_XP_Elite02_03_Deathrattle</a>"
-            },
-            {
-              "name": "Force Entity Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "WAIT FOR",
-          "condition": {
-            "name": "Death Animation Completed",
-            "team": "Enemy Team",
-            "type": "Team Characters"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "5022020_Monster_XP_Elite02_03_PassiveAbility01_Part02": {
       "fileName": "5022020_Monster_XP_Elite02_03_PassiveAbility01_Part02",
       "abilityType": null,
@@ -909,23 +886,9 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
-    },
-    "5022020_Monster_XP_Elite02_03_PassiveAbility_ScoreAssign": {
-      "fileName": "5022020_Monster_XP_Elite02_03_PassiveAbility_ScoreAssign",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
     },
     "5022020_Monster_XP_Elite02_03_Ability04_Part02": {
       "fileName": "5022020_Monster_XP_Elite02_03_Ability04_Part02",
@@ -4099,9 +4062,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4202,9 +4163,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4213,6 +4172,13 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1061041544\">Monster_XP_Elite02_03_InitHP_LV2</a>",
+          "stackData": [
+            "MDF_InitHP_LV2",
+            "MDF_InitStance_LV2"
+          ],
+          "latentQueue": [
+            "SummonMonsterNum"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4264,18 +4230,18 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_InitHP_LV2",
-            "MDF_InitStance_LV2"
-          ],
-          "latentQueue": [
-            "SummonMonsterNum"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1111374401\">Monster_XP_Elite02_03_InitHP_LV1</a>",
+          "stackData": [
+            "MDF_InitHP_LV1",
+            "MDF_InitStance_LV1"
+          ],
+          "latentQueue": [
+            "SummonMonsterNum"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4327,13 +4293,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_InitHP_LV1",
-            "MDF_InitStance_LV1"
-          ],
-          "latentQueue": [
-            "SummonMonsterNum"
           ]
         },
         {
@@ -4360,15 +4319,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2030183935\">Monster_XP_Elite02_03_Charge</a>[<span class=\"descriptionNumberColor\">Budding</span>]",
-          "stackData": [],
-          "latentQueue": [],
           "description": "Uses \"Euphoric Spiral\" in the next action.",
           "type": "Other",
           "effectName": "Budding",
@@ -4377,7 +4332,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1982460961\">Monster_XP_Elite02_03_PassiveAbility_Target</a>",
-          "stackData": [],
           "latentQueue": [
             "SummonMonsterNum"
           ]
@@ -4389,7 +4343,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1803637769\">Modifier_Monster_XP_Elite02_03_MainTarget</a>",
-          "stackData": [],
           "latentQueue": [
             "SameMonsterNum",
             "Skill02_AssistCount"
@@ -4403,6 +4356,7 @@ const compositeAbilityObject = {
             "Deathrattle",
             "KeepOnDeathrattle"
           ],
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Was Killed (Queued) [Owner]",
@@ -4493,10 +4447,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4504,6 +4455,17 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "Skill02_P4_BuffChance"
+          ],
+          "latentQueue": [
+            "SameMonsterNum",
+            "Skill02_AssistCount"
+          ],
+          "description": "Action delayed and loses Skill Point(s) if attacked by Joy Ascendant's ability \"Euphoric Spiral\" while possessing this effect. This effect is removed after using Basic ATK once, and has a high chance to gain additional Skill Point(s).",
+          "type": "Other",
+          "effectName": "Paramount Bliss",
+          "statusName": "Paramount Bliss",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -4553,18 +4515,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "Skill02_P4_BuffChance"
-          ],
-          "latentQueue": [
-            "SameMonsterNum",
-            "Skill02_AssistCount"
-          ],
-          "description": "Action delayed and loses Skill Point(s) if attacked by Joy Ascendant's ability \"Euphoric Spiral\" while possessing this effect. This effect is removed after using Basic ATK once, and has a high chance to gain additional Skill Point(s).",
-          "type": "Other",
-          "effectName": "Paramount Bliss",
-          "statusName": "Paramount Bliss"
+          ]
         }
       ],
       "references": []

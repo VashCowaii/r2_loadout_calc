@@ -3,415 +3,17 @@ const compositeAbilityObject = {
   "fullCharacterName": 4012040,
   "trimCharacterName": 4012040,
   "abilityList": [
-    "4012040_Monster_AML_Minion03_01_Ability02_Part02",
-    "4012040_Monster_AML_Minion03_01_Ability02_Part01",
+    "4012040_Monster_AML_Minion03_01_PassiveAbilityInitiate",
     "4012040_Monster_AML_Minion03_01_Ability03_Part02",
     "4012040_Monster_AML_Minion03_01_Ability03_Part01",
+    "4012040_Monster_AML_Minion03_01_Ability02_Part02",
+    "4012040_Monster_AML_Minion03_01_Ability02_Part01",
     "4012040_Monster_AML_Minion03_01_Ability01_Part02",
     "4012040_Monster_AML_Minion03_01_Ability01_Part01",
     "4012040_Monster_AML_Minion03_01_Ability01_PassiveSkillInitiate",
-    "4012040_Monster_AML_Minion03_01_PassiveAbilityInitiate",
     "4012040_Modifiers"
   ],
   "abilityObject": {
-    "4012040_Monster_AML_Minion03_01_Ability02_Part02": {
-      "fileName": "4012040_Monster_AML_Minion03_01_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4012040_Monster_AML_Minion03_01_Ability02_Part01": {
-      "fileName": "4012040_Monster_AML_Minion03_01_Ability02_Part01",
-      "childAbilityList": [
-        "4012040_Monster_AML_Minion03_01_Ability02_Camera",
-        "4012040_Monster_AML_Minion03_01_Ability02_Part01",
-        "4012040_Monster_AML_Minion03_01_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "from": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "to": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "value1": "Distance_Between_Entities",
-            "compareType": ">",
-            "value2": 8.5
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "from": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "to": {
-                  "name": "Target Name",
-                  "target": "{{Ability Target(ST)}}"
-                },
-                "value1": "Distance_Between_Entities",
-                "compareType": ">",
-                "value2": 9
-              },
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "from": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "to": {
-                      "name": "Target Name",
-                      "target": "{{Ability Target(ST)}}"
-                    },
-                    "value1": "Distance_Between_Entities",
-                    "compareType": ">",
-                    "value2": 9.5
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Minion03_01_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "subTarget": "Blast Targets"
-      },
-      "references": []
-    },
-    "4012040_Monster_AML_Minion03_01_Ability03_Part02": {
-      "fileName": "4012040_Monster_AML_Minion03_01_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "AND",
-                  "conditionList": [
-                    {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>"
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          "searchRandom": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1735610792\">MModifier_Monster_AML_Minion03_01_Halo</a>[<span class=\"descriptionNumberColor\">War Song</span>]",
-          "valuePerStack": {
-            "MDF_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            },
-            "MDF_AddMaxLayer": {
-              "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-              "displayLines": "{[Skill03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[1]]}"
-              ]
-            },
-            "MDF_SetMaxLayer": {
-              "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-              "displayLines": "{[Skill03[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[2]]}"
-              ]
-            }
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012040_Monster_AML_Minion03_01_Ability03_Part01": {
-      "fileName": "4012040_Monster_AML_Minion03_01_Ability03_Part01",
-      "childAbilityList": [
-        "4012040_Monster_AML_Minion03_01_Ability03_Camera",
-        "4012040_Monster_AML_Minion03_01_Ability03_Part01",
-        "4012040_Monster_AML_Minion03_01_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_AML_Minion03_01_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012040_Monster_AML_Minion03_01_Ability01_Part02": {
-      "fileName": "4012040_Monster_AML_Minion03_01_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Praise Nikador"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "AND",
-                  "conditionList": [
-                    {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>"
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          "searchRandom": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1735610792\">MModifier_Monster_AML_Minion03_01_Halo</a>[<span class=\"descriptionNumberColor\">War Song</span>]",
-          "valuePerStack": {
-            "MDF_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            },
-            "MDF_AddMaxLayer": {
-              "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-              "displayLines": "{[Skill03[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[1]]}"
-              ]
-            },
-            "MDF_SetMaxLayer": {
-              "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-              "displayLines": "{[Skill03[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[2]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "4012040_Monster_AML_Minion03_01_Ability01_Part01": {
-      "fileName": "4012040_Monster_AML_Minion03_01_Ability01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_AML_Minion03_01_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "4012040_Monster_AML_Minion03_01_Ability01_PassiveSkillInitiate": {
-      "fileName": "4012040_Monster_AML_Minion03_01_Ability01_PassiveSkillInitiate",
-      "childAbilityList": [
-        "4012040_Monster_AML_Minion03_01_Ability01_PassiveSkillInitiate",
-        "4012040_Monster_AML_Minion03_01_Ability01_Camera",
-        "4012040_Monster_AML_Minion03_01_Ability01_Part01",
-        "4012040_Monster_AML_Minion03_01_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Reconstruct Modifier",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "counter": 1,
-          "modifier": "<a class=\"gModGreen\" id=\"-2121778884\">MModifier_Monster_AML_Minion03_01_BattleCry</a>",
-          "execute": [],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2121778884\">MModifier_Monster_AML_Minion03_01_BattleCry</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4012040_Monster_AML_Minion03_01_PassiveAbilityInitiate": {
       "fileName": "4012040_Monster_AML_Minion03_01_PassiveAbilityInitiate",
       "skillTrigger": "PassiveSkillInitiate",
@@ -660,11 +262,407 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
+    },
+    "4012040_Monster_AML_Minion03_01_Ability03_Part02": {
+      "fileName": "4012040_Monster_AML_Minion03_01_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "AND",
+                  "conditionList": [
+                    {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "searchRandom": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1735610792\">MModifier_Monster_AML_Minion03_01_Halo</a>[<span class=\"descriptionNumberColor\">War Song</span>]",
+          "valuePerStack": {
+            "MDF_DamagePercentage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+              "displayLines": "{[Skill03[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "MDF_AddMaxLayer": {
+              "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
+              "displayLines": "{[Skill03[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill03[1]]}"
+              ]
+            },
+            "MDF_SetMaxLayer": {
+              "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
+              "displayLines": "{[Skill03[2]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill03[2]]}"
+              ]
+            }
+          }
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4012040_Monster_AML_Minion03_01_Ability03_Part01": {
+      "fileName": "4012040_Monster_AML_Minion03_01_Ability03_Part01",
+      "childAbilityList": [
+        "4012040_Monster_AML_Minion03_01_Ability03_Camera",
+        "4012040_Monster_AML_Minion03_01_Ability03_Part01",
+        "4012040_Monster_AML_Minion03_01_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_AML_Minion03_01_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4012040_Monster_AML_Minion03_01_Ability02_Part02": {
+      "fileName": "4012040_Monster_AML_Minion03_01_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+              "displayLines": "{[Skill02[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[1]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4012040_Monster_AML_Minion03_01_Ability02_Part01": {
+      "fileName": "4012040_Monster_AML_Minion03_01_Ability02_Part01",
+      "childAbilityList": [
+        "4012040_Monster_AML_Minion03_01_Ability02_Camera",
+        "4012040_Monster_AML_Minion03_01_Ability02_Part01",
+        "4012040_Monster_AML_Minion03_01_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "from": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "to": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "value1": "Distance_Between_Entities",
+            "compareType": ">",
+            "value2": 8.5
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "from": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "to": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
+                "value1": "Distance_Between_Entities",
+                "compareType": ">",
+                "value2": 9
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "from": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "to": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
+                    "value1": "Distance_Between_Entities",
+                    "compareType": ">",
+                    "value2": 9.5
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_AML_Minion03_01_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
+      "references": []
+    },
+    "4012040_Monster_AML_Minion03_01_Ability01_Part02": {
+      "fileName": "4012040_Monster_AML_Minion03_01_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Praise Nikador"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "AND",
+                  "conditionList": [
+                    {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "searchRandom": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1735610792\">MModifier_Monster_AML_Minion03_01_Halo</a>[<span class=\"descriptionNumberColor\">War Song</span>]",
+          "valuePerStack": {
+            "MDF_DamagePercentage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+              "displayLines": "{[Skill03[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "MDF_AddMaxLayer": {
+              "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
+              "displayLines": "{[Skill03[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill03[1]]}"
+              ]
+            },
+            "MDF_SetMaxLayer": {
+              "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
+              "displayLines": "{[Skill03[2]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill03[2]]}"
+              ]
+            }
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "4012040_Monster_AML_Minion03_01_Ability01_Part01": {
+      "fileName": "4012040_Monster_AML_Minion03_01_Ability01_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_AML_Minion03_01_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "4012040_Monster_AML_Minion03_01_Ability01_PassiveSkillInitiate": {
+      "fileName": "4012040_Monster_AML_Minion03_01_Ability01_PassiveSkillInitiate",
+      "childAbilityList": [
+        "4012040_Monster_AML_Minion03_01_Ability01_PassiveSkillInitiate",
+        "4012040_Monster_AML_Minion03_01_Ability01_Camera",
+        "4012040_Monster_AML_Minion03_01_Ability01_Part01",
+        "4012040_Monster_AML_Minion03_01_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Reconstruct Modifier",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "counter": 1,
+          "modifier": "<a class=\"gModGreen\" id=\"-2121778884\">MModifier_Monster_AML_Minion03_01_BattleCry</a>",
+          "execute": [],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-2121778884\">MModifier_Monster_AML_Minion03_01_BattleCry</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
     },
     "4012040_Modifiers": {
       "fileName": "4012040_Modifiers",
@@ -734,6 +732,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1276555812\">MModifier_Monster_AML_Minion03_01_StoneShieldEnhance</a>[<span class=\"descriptionNumberColor\">Indomitable</span>]",
+          "description": "Increases max \"War Armor\" stacks. Dispelled when %CasterName's \"War Armor\" is broken.",
+          "type": "Buff",
+          "effectName": "Max \"War Armor\" Boost",
+          "statusName": "Indomitable",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -866,80 +868,17 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Increases max \"War Armor\" stacks. Dispelled when %CasterName's \"War Armor\" is broken.",
-          "type": "Buff",
-          "effectName": "Max \"War Armor\" Boost",
-          "statusName": "Indomitable"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1735610792\">MModifier_Monster_AML_Minion03_01_Halo</a>[<span class=\"descriptionNumberColor\">War Song</span>]",
           "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "Being Attacked Completed [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-                        "compareType": "=",
-                        "value2": 0,
-                        "valueType": "Layer"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
           "stackData": [
             "MDF_DamagePercentage",
             "MDF_AddMaxLayer",
             "MDF_SetMaxLayer"
           ],
-          "latentQueue": [],
           "description": "Increases max \"War Armor\" stacks for enemy units aside from this unit. Dispelled when this unit's \"Armor\" is destroyed.",
           "type": "Buff",
           "effectName": "The Warsong Begins",
@@ -1071,6 +1010,64 @@ const compositeAbilityObject = {
                 }
               }
             }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "Being Attacked Completed [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
+                        "compareType": "=",
+                        "value2": 0,
+                        "valueType": "Layer"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -1124,9 +1121,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -45
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

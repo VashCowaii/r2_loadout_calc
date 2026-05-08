@@ -3,8 +3,12 @@ const compositeAbilityObject = {
   "fullCharacterName": "Dan Heng • Imbibitor Lunae",
   "trimCharacterName": "DanHengIL",
   "abilityList": [
+    "DanHengIL_Modifiers",
     "DanHengIL_DanHengIL_Trace03",
     "DanHengIL_DanHengIL_Trace02",
+    "DanHengIL_LocalPlayer_StandardAbility_AttackBreak",
+    "DanHengIL_LocalPlayer_DanHengIL_TechniqueUsage",
+    "DanHengIL_LocalPlayer_DanHengIL_NormalAtk01",
     "DanHengIL_DanHengIL_TechniqueInLevel",
     "DanHengIL_DanHengIL_PassiveAbility01",
     "DanHengIL_DanHengIL_Ability03_Part02",
@@ -21,10 +25,386 @@ const compositeAbilityObject = {
     "DanHengIL_DanHengIL_Ability11_Part02",
     "DanHengIL_DanHengIL_Ability11_Part01",
     "DanHengIL_DanHengIL_Ability01_Part02",
-    "DanHengIL_DanHengIL_Ability01_Part01",
-    "DanHengIL_Modifiers"
+    "DanHengIL_DanHengIL_Ability01_Part01"
   ],
   "abilityObject": {
+    "DanHengIL_Modifiers": {
+      "fileName": "DanHengIL_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__983817284\">M_ADV_Maze_DanHengIL_StopSprintFlag</a>",
+          "counter": 1,
+          "stackType": "Refresh"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__888002889\">ADV_Modifier_Maze_DanHengIL_HolyShield</a>",
+          "counter": 1,
+          "stackType": "Merge",
+          "modifierFlags": [
+            "HolyShield"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-748629763\">ADV_Modifier_Maze_DanHengIL</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "duration": 20,
+          "onStageExit": [
+            "Modifier Deletes Itself"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1981106226\">ADV_StageAbility_Maze_DanHengIL</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-807307973\">DanHengIL_CancelCamera</a>",
+          "modifierFlags": [
+            "ListenBattleEventSkill"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Active Ability Chosen [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-345032011\">DanHengIL_CancelCameraFlag</a>"
+                      },
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-330148584\">DanHengIL_Eidolon6_ImaginaryPenetrate</a>[<span class=\"descriptionNumberColor\">Reign, Returned</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increase Imaginary RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> for this character's next Fulgurant Leap attack.",
+          "type": "Buff",
+          "effectName": "Imaginary RES PEN",
+          "statusName": "Reign, Returned",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Name",
+                    "skillName": "Skill13"
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceImaginaryPEN</span>&nbsp;",
+                          "value": "(MDF_PropertyValue * MDF_Layer)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "multiplier": 1
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Name",
+                    "skillName": "Skill13"
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1339168225\">DanHengIL_Eidolon6</a>",
+          "modifierFlags": [
+            "ListenBattleEventSkill"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Anyone]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Ultimate"
+                      },
+                      {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "mustBeAlive2": true,
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Is Teammate",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-330148584\">DanHengIL_Eidolon6_ImaginaryPenetrate</a>[<span class=\"descriptionNumberColor\">Reign, Returned</span>]",
+                      "stackLimit": {
+                        "operator": "Variables[0] (3) || RETURN",
+                        "displayLines": "3",
+                        "constants": [],
+                        "variables": [
+                          3
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.2) || RETURN",
+                          "displayLines": "0.2",
+                          "constants": [],
+                          "variables": [
+                            0.2
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1468527103\">DanHengIL_BPDisable</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Disable Abilities",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "abilityTypes": null,
+                  "extraText": "Insufficient Skill Points. Cannot Enhance",
+                  "controlTypes": [
+                    "ControlSkill02"
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Skill Point Changes",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "BPNeed",
+                  "value": {
+                    "operator": "Variables[0] (EXSkill01) || RETURN",
+                    "displayLines": "EXSkill01",
+                    "constants": [],
+                    "variables": [
+                      "EXSkill01"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "CurrentSkillPoints",
+                    "compareType": ">",
+                    "value2": {
+                      "operator": "Variables[0] (BPNeed) || RETURN",
+                      "displayLines": "BPNeed",
+                      "constants": [],
+                      "variables": [
+                        "BPNeed"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Extra Action/Turn [Owner]: Start ",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "BPNeed",
+                  "value": {
+                    "operator": "Variables[0] (EXSkill01) || RETURN",
+                    "displayLines": "EXSkill01",
+                    "constants": [],
+                    "variables": [
+                      "EXSkill01"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "CurrentSkillPoints",
+                    "compareType": ">",
+                    "value2": {
+                      "operator": "Variables[0] (BPNeed) || RETURN",
+                      "displayLines": "BPNeed",
+                      "constants": [],
+                      "variables": [
+                        "BPNeed"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1955464894\">DanHengIL_Ability02_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Outroar</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Each stack increases CRIT DMG dealt by <span class=\"descriptionNumberColor\">MDF_AddCriticalDamage</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
+          "type": "Buff",
+          "statusName": "Outroar",
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "CurrentLayer",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AddCriticalDamage) || Variables[1] (CurrentLayer) || MUL || RETURN",
+                    "displayLines": "(MDF_AddCriticalDamage * CurrentLayer)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AddCriticalDamage",
+                      "CurrentLayer"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+          "description": "Can be used to offset Dan Heng • Imbibitor Lunae's consumption of skill points. A maximum of <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> Squama Sacrosancta can be possessed at any given time. Consuming Squama Sacrosancta is considered equivalent to consuming Skill Points.",
+          "type": "Other",
+          "statusName": "Squama Sacrosancta",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "DanHengIL_DanHengIL_Trace03": {
       "fileName": "DanHengIL_DanHengIL_Trace03",
       "abilityType": null,
@@ -73,9 +453,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -111,6 +489,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-223874388\">DanHengIL_Trace02_Resistance</a>",
+          "stackData": [
+            "MDF_Resistance"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -133,15 +514,606 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Resistance"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "DanHengIL_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "DanHengIL_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "DanHengIL_LocalPlayer_DanHengIL_TechniqueUsage": {
+      "fileName": "DanHengIL_LocalPlayer_DanHengIL_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "121302()",
+          "duration": {
+            "operator": "Variables[0] (20) || RETURN",
+            "displayLines": "20",
+            "constants": [],
+            "variables": [
+              20
+            ]
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Is_First_Sprint",
+          "value": 1
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "DanHengIL_LocalPlayer_DanHengIL_NormalAtk01": {
+      "fileName": "DanHengIL_LocalPlayer_DanHengIL_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier (OVERWORLD)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-748629763\">ADV_Modifier_Maze_DanHengIL</a>"
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Is_First_Sprint",
+                "compareType": ">=",
+                "value2": 1,
+                "contextScope": "ContextOwner"
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Is_First_Sprint",
+              "value": 0
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "SprintModifiedSteerSpeed",
+              "value": {
+                "operator": "Variables[0] (SprintModifiedSteerSpeed) || RETURN",
+                "displayLines": "SprintModifiedSteerSpeed",
+                "constants": [],
+                "variables": [
+                  "SprintModifiedSteerSpeed"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "SprintModifiedSpeed",
+              "value": {
+                "operator": "Variables[0] (SprintModifiedSpeed) || RETURN",
+                "displayLines": "SprintModifiedSpeed",
+                "constants": [],
+                "variables": [
+                  "SprintModifiedSpeed"
+                ]
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": "Ability Has a Target",
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Move Input Active (Overworld)",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Variable",
+                            "from": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "to": {
+                              "name": "Target Name",
+                              "target": "{{Ability Target(ST)}}"
+                            },
+                            "value1": "Distance_Between_Entities",
+                            "compareType": "<",
+                            "value2": 2
+                          }
+                        ]
+                      },
+                      {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Variable",
+                            "from": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "to": {
+                              "name": "Target Name",
+                              "target": "{{Ability Target(ST)}}"
+                            },
+                            "value1": "Distance_Between_Entities",
+                            "compareType": "<",
+                            "value2": 6
+                          }
+                        ]
+                      },
+                      {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Variable",
+                            "from": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "to": {
+                              "name": "Target Name",
+                              "target": "{{Ability Target(ST)}}"
+                            },
+                            "value1": "Distance_Between_Entities",
+                            "compareType": ">=",
+                            "value2": 6
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "SprintModifiedSteerSpeed",
+                      "value": 1
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "from": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "to": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target(ST)}}"
+                        },
+                        "value1": "Distance_Between_Entities",
+                        "compareType": "<",
+                        "value2": 6
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "SprintModifiedSpeed",
+                          "value": 14
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "SprintModifiedSpeed",
+                          "value": 20
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "Deleted bullshit",
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"888002889\">ADV_Modifier_Maze_DanHengIL_HolyShield</a>",
+                  "duration": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "SprintModifiedSteerSpeed",
+                    "compareType": "<=",
+                    "value2": {
+                      "operator": "Constants[0] (1) || RETURN",
+                      "displayLines": "1",
+                      "constants": [
+                        1
+                      ],
+                      "variables": []
+                    },
+                    "contextScope": "ContextAbility"
+                  }
+                },
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "121301(SkillMaze)"
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"888002889\">ADV_Modifier_Maze_DanHengIL_HolyShield</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"983817284\">M_ADV_Maze_DanHengIL_StopSprintFlag</a>",
+                  "duration": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Move Input Active (Overworld)"
+                  }
+                }
+              ],
+              "failed": [
+                "Deleted bullshit",
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"888002889\">ADV_Modifier_Maze_DanHengIL_HolyShield</a>",
+                  "duration": 1
+                },
+                {
+                  "name": "Overworld Attack Instance",
+                  "onBattle": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": null,
+                      "ID": "121301(SkillMaze)"
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"888002889\">ADV_Modifier_Maze_DanHengIL_HolyShield</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"983817284\">M_ADV_Maze_DanHengIL_StopSprintFlag</a>",
+                  "duration": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Move Input Active (Overworld)"
+                  }
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": "Ability Has a Target",
+              "passed": [
+                "Deleted bullshit",
+                {
+                  "name": "Shot Fired"
+                },
+                {
+                  "name": "Shot Fired",
+                  "projectileFinished": [
+                    {
+                      "name": "Overworld Attack Instance"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier (OVERWORLD)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"983817284\">M_ADV_Maze_DanHengIL_StopSprintFlag</a>",
+                    "invertCondition": true
+                  },
+                  "passed": [
+                    "Deleted bullshit",
+                    {
+                      "name": "Shot Fired"
+                    },
+                    {
+                      "name": "Shot Fired",
+                      "projectileFinished": [
+                        {
+                          "name": "Overworld Attack Instance"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"888002889\">ADV_Modifier_Maze_DanHengIL_HolyShield</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "DanHengIL_DanHengIL_TechniqueInLevel": {
@@ -229,9 +1201,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -60
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -368,9 +1338,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -497,6 +1465,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1587455609\">DanHengIL_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
+          "type": "Buff",
+          "statusName": "Righteous Heart",
+          "duration": 1,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "Turn [Action-End Phase]",
@@ -537,12 +1510,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
-          "type": "Buff",
-          "statusName": "Righteous Heart",
-          "duration": 1,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -866,15 +1834,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-247396096\">Ability03PreShowModifier</a>",
-          "stackData": [],
-          "latentQueue": [],
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
@@ -1464,9 +2428,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1340732042\">DanHengIL_Ability03Target</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-1340732042\">DanHengIL_Ability03Target</a>"
         }
       ],
       "targetObjectData": {
@@ -1787,9 +2749,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1877,9 +2837,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1955,9 +2913,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2033,9 +2989,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -3549,9 +4503,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-216777096\">DanHengIL_Ability12Target</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-216777096\">DanHengIL_Ability12Target</a>"
         }
       ],
       "targetObjectData": {
@@ -4045,366 +4997,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "DanHengIL_Modifiers": {
-      "fileName": "DanHengIL_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-807307973\">DanHengIL_CancelCamera</a>",
-          "modifierFlags": [
-            "ListenBattleEventSkill"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Active Ability Chosen [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-345032011\">DanHengIL_CancelCameraFlag</a>"
-                      },
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        }
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-330148584\">DanHengIL_Eidolon6_ImaginaryPenetrate</a>[<span class=\"descriptionNumberColor\">Reign, Returned</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Name",
-                    "skillName": "Skill13"
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceImaginaryPEN</span>&nbsp;",
-                          "value": "(MDF_PropertyValue * MDF_Layer)"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "MDF_Layer",
-                  "multiplier": 1
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Name",
-                    "skillName": "Skill13"
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
-          "description": "Increase Imaginary RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> for this character's next Fulgurant Leap attack.",
-          "type": "Buff",
-          "effectName": "Imaginary RES PEN",
-          "statusName": "Reign, Returned",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1339168225\">DanHengIL_Eidolon6</a>",
-          "modifierFlags": [
-            "ListenBattleEventSkill"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Anyone]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Ultimate"
-                      },
-                      {
-                        "name": "Is Part Of",
-                        "of": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "mustBeAlive2": true,
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Is Teammate",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        }
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-330148584\">DanHengIL_Eidolon6_ImaginaryPenetrate</a>[<span class=\"descriptionNumberColor\">Reign, Returned</span>]",
-                      "stackLimit": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1468527103\">DanHengIL_BPDisable</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Disable Abilities",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "abilityTypes": null,
-                  "extraText": "Insufficient Skill Points. Cannot Enhance",
-                  "controlTypes": [
-                    "ControlSkill02"
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Skill Point Changes",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "BPNeed",
-                  "value": {
-                    "operator": "Variables[0] (EXSkill01) || RETURN",
-                    "displayLines": "EXSkill01",
-                    "constants": [],
-                    "variables": [
-                      "EXSkill01"
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "CurrentSkillPoints",
-                    "compareType": ">",
-                    "value2": {
-                      "operator": "Variables[0] (BPNeed) || RETURN",
-                      "displayLines": "BPNeed",
-                      "constants": [],
-                      "variables": [
-                        "BPNeed"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Extra Action/Turn [Owner]: Start ",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "BPNeed",
-                  "value": {
-                    "operator": "Variables[0] (EXSkill01) || RETURN",
-                    "displayLines": "EXSkill01",
-                    "constants": [],
-                    "variables": [
-                      "EXSkill01"
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "CurrentSkillPoints",
-                    "compareType": ">",
-                    "value2": {
-                      "operator": "Variables[0] (BPNeed) || RETURN",
-                      "displayLines": "BPNeed",
-                      "constants": [],
-                      "variables": [
-                        "BPNeed"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1955464894\">DanHengIL_Ability02_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Outroar</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "CurrentLayer",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AddCriticalDamage) || Variables[1] (CurrentLayer) || MUL || RETURN",
-                    "displayLines": "(MDF_AddCriticalDamage * CurrentLayer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AddCriticalDamage",
-                      "CurrentLayer"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_AddCriticalDamage",
-            "MDF_MaxLayer"
-          ],
-          "latentQueue": [],
-          "description": "Each stack increases CRIT DMG dealt by <span class=\"descriptionNumberColor\">MDF_AddCriticalDamage</span>, up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s).",
-          "type": "Buff",
-          "statusName": "Outroar",
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [
-            "MDF_BPExChange",
-            "MDF_MaxLayer"
-          ],
-          "latentQueue": [],
-          "description": "Can be used to offset Dan Heng • Imbibitor Lunae's consumption of skill points. A maximum of <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> Squama Sacrosancta can be possessed at any given time. Consuming Squama Sacrosancta is considered equivalent to consuming Skill Points.",
-          "type": "Other",
-          "statusName": "Squama Sacrosancta"
-        }
-      ],
-      "references": []
     }
   }
 }

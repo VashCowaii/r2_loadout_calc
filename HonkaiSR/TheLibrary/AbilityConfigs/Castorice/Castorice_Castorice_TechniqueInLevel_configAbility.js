@@ -324,6 +324,13 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__689500868\">StageAbility_Maze_Castorice_Modifier</a>",
+      "stackData": [
+        "MDF_LoseHP"
+      ],
+      "latentQueue": [
+        "Castorice_SkillMaze_Flag",
+        "EnterBattlePlayTimes"
+      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -369,13 +376,6 @@ const configAbility = {
           ],
           "priorityLevel": -81
         }
-      ],
-      "stackData": [
-        "MDF_LoseHP"
-      ],
-      "latentQueue": [
-        "Castorice_SkillMaze_Flag",
-        "EnterBattlePlayTimes"
       ]
     }
   ],

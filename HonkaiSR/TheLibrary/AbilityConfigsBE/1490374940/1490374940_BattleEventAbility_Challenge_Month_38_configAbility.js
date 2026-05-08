@@ -139,6 +139,13 @@ const configAbility = {
         "STAT_DOT_Burn",
         "RemoveWhenCasterDead"
       ],
+      "useEntitySnapshot": true,
+      "description": "Takes Fire DMG at the beginning of each turn for a certain number of turns. After being attacked by a Skill, this unit and adjacent targets additionally take DMG.",
+      "type": "Debuff",
+      "effectName": "Memory Imprint",
+      "statusName": "Memory Imprint",
+      "stackLimit": 1,
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -208,18 +215,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Takes Fire DMG at the beginning of each turn for a certain number of turns. After being attacked by a Skill, this unit and adjacent targets additionally take DMG.",
-      "type": "Debuff",
-      "effectName": "Memory Imprint",
-      "statusName": "Memory Imprint",
-      "stackLimit": 1,
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1052717956\">Modifier_BattleEventAbility_Challenge_Month_38</a>",
+      "stackData": [
+        "MDF_PursuedDamageRatio",
+        "MDF_DotDmgRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -655,12 +659,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [
-        "MDF_PursuedDamageRatio",
-        "MDF_DotDmgRatio"
-      ],
-      "latentQueue": []
+      ]
     }
   ]
 }

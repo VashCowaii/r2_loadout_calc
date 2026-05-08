@@ -10,6 +10,43 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1133976141\">ADV_StageAbility_Fugue_BeforeBattleStunListener</a>",
+      "onBattlePrep": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Parameter Target List}}"
+          },
+          "modifier": null,
+          "ID": "122501(SkillMaze)",
+          "counter": 1,
+          "duration": {
+            "operator": "Variables[0] (10) || RETURN",
+            "displayLines": "10",
+            "constants": [],
+            "variables": [
+              10
+            ]
+          },
+          "conditions": {
+            "name": "Has Flag",
+            "flagName": "Stun"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-2046983228\">ADV_StageAbility_Maze_Fugue</a>",
+      "counter": 1,
+      "stackType": "Replace",
+      "modifierFlags": [
+        "Stun"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-74108309\">Fugue_PassiveAbility_ElementDamage</a>",
       "stackType": "Replace",
       "modifierFlags": [
@@ -82,11 +119,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_SuperBreakDamagePercentage"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -122,11 +155,7 @@ const configAbility = {
           ],
           "priorityLevel": 100
         }
-      ],
-      "stackData": [
-        "MDF_PassiveDamage2"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -157,15 +186,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__873674204\">Fugue_StancePreview</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -188,6 +213,10 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
+      "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>.",
+      "type": "Debuff",
+      "effectName": "DEF Reduction",
+      "statusName": "Virtue Beckons Bliss",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -204,21 +233,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DefenceDownRatio"
-      ],
-      "latentQueue": [],
-      "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>.",
-      "type": "Debuff",
-      "effectName": "DEF Reduction",
-      "statusName": "Virtue Beckons Bliss"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__915939939\">Fugue_Eidolon2_PreShow</a>",
-      "stackData": [],
-      "latentQueue": [],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -245,8 +264,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__696396442\">Fugue_Eidolon6_Listen</a>",
-      "stackData": [],
-      "latentQueue": [],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -325,6 +342,10 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "When initial Toughness is reduced to 0, \"Cloudflame Luster\" can continue to be reduced. When \"Cloudflame Luster\" is reduced to 0, the enemy will receive Weakness Break DMG again.",
+      "type": "Other",
+      "effectName": "Cloudflame Luster",
+      "statusName": "Cloudflame Luster",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -449,17 +470,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PassiveDamage2",
-        "MDF_RedStanceRatio",
-        "MDF_MinStance"
-      ],
-      "latentQueue": [],
-      "description": "When initial Toughness is reduced to 0, \"Cloudflame Luster\" can continue to be reduced. When \"Cloudflame Luster\" is reduced to 0, the enemy will receive Weakness Break DMG again.",
-      "type": "Other",
-      "effectName": "Cloudflame Luster",
-      "statusName": "Cloudflame Luster"
+      ]
     }
   ],
   "references": []

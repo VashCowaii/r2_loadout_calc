@@ -25,6 +25,10 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__149540788\">Relic_125_Bonus2</a>[<span class=\"descriptionNumberColor\">Warrior Goddess of Sun and Thunder</span>]",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">SkillRelic_125_4_P2_DamageAddRatio</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "Warrior Goddess of Sun and Thunder",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -47,11 +51,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">SkillRelic_125_4_P2_DamageAddRatio</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "Warrior Goddess of Sun and Thunder"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -59,6 +59,31 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_SpeedUp"
+          ],
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">SkillRelic_125_4_P1_SpeedAddRatio</span>.",
+          "type": "Buff",
+          "effectName": "Gentle Rain",
+          "statusName": "Gentle Rain",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"149540788\">Relic_125_Bonus2</a>[<span class=\"descriptionNumberColor\">Warrior Goddess of Sun and Thunder</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "AbilityRelic_125_4_P2_DamageAddRatio": {
+                  "operator": "Variables[0] (0.15) || RETURN",
+                  "displayLines": "0.15",
+                  "constants": [],
+                  "variables": [
+                    0.15
+                  ]
+                }
+              }
+            }
           ],
           "execute": [
             {
@@ -127,31 +152,6 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
-            }
-          ],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">SkillRelic_125_4_P1_SpeedAddRatio</span>.",
-          "type": "Buff",
-          "effectName": "Gentle Rain",
-          "statusName": "Gentle Rain",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"149540788\">Relic_125_Bonus2</a>[<span class=\"descriptionNumberColor\">Warrior Goddess of Sun and Thunder</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "AbilityRelic_125_4_P2_DamageAddRatio": {
-                  "operator": "Variables[0] (0.15) || RETURN",
-                  "displayLines": "0.15",
-                  "constants": [],
-                  "variables": [
-                    0.15
-                  ]
-                }
-              }
             }
           ]
         },
@@ -333,9 +333,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__563355405\">Relic_125_Flag</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__563355405\">Relic_125_Flag</a>"
         },
         {
           "name": "Modifier Construction",
@@ -391,9 +389,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

@@ -27,6 +27,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1558938344\">M_Gepard_AttackConvert</a>",
+      "stackData": [
+        "MDF_ConvertRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -114,11 +117,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ConvertRatio"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

@@ -17,6 +17,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-374895026\">LC_23010_Sub</a>[<span class=\"descriptionNumberColor\">Somnus Corpus</span>]",
+      "description": "Increases DMG dealt by the next Follow-Up ATK by <span class=\"descriptionNumberColor\">#SkillEquip_P3_InsertDamageAddedRatio</span>.",
+      "type": "Buff",
+      "statusName": "Somnus Corpus",
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -71,10 +74,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG dealt by the next Follow-Up ATK by <span class=\"descriptionNumberColor\">#SkillEquip_P3_InsertDamageAddedRatio</span>.",
-      "type": "Buff",
-      "statusName": "Somnus Corpus"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -138,9 +138,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

@@ -18,6 +18,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__887329270\">LC_24006_Sub</a>[<span class=\"descriptionNumberColor\">Elation Boost</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Elation stat increases by <span class=\"descriptionNumberColor\">#SkillEquip_P2_ElationAddedRatio</span>.",
+      "type": "Buff",
+      "effectName": "Elation Boost",
+      "statusName": "Elation Boost",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -40,11 +44,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Elation stat increases by <span class=\"descriptionNumberColor\">#SkillEquip_P2_ElationAddedRatio</span>.",
-      "type": "Buff",
-      "effectName": "Elation Boost",
-      "statusName": "Elation Boost"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -143,9 +143,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "isLightcone": true,

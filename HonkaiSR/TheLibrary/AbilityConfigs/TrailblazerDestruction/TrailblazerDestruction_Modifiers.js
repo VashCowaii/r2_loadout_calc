@@ -15,6 +15,7 @@ const configAbility = {
       "modifierFlags": [
         "STAT_Burst"
       ],
+      "duration": 2,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -46,8 +47,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "duration": 2
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -68,9 +68,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -120,9 +118,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

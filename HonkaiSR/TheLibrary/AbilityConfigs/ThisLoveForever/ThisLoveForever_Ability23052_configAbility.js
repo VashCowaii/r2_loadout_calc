@@ -52,6 +52,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__951721622\">LC_23052_Halo2</a>[<span class=\"descriptionNumberColor\">Blank</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_DamageRatio</span>.",
+      "type": "Debuff",
+      "statusName": "Blank",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -74,15 +77,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_DamageRatio</span>.",
-      "type": "Debuff",
-      "statusName": "Blank"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2050514144\">LC_23052_Halo</a>[<span class=\"descriptionNumberColor\">Verse</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_CritDmg</span>.",
+      "type": "Buff",
+      "statusName": "Verse",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -105,14 +108,25 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_CritDmg</span>.",
-      "type": "Buff",
-      "statusName": "Verse"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1610136410\">LC_23052_Sub2</a>[<span class=\"descriptionNumberColor\">Blank</span>]",
+      "description": "DMG received by all enemies increases by <span class=\"descriptionNumberColor\">MDF_DamageRatio</span>.",
+      "type": "Other",
+      "statusName": "Blank",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951721622\">LC_23052_Halo2</a>[<span class=\"descriptionNumberColor\">Blank</span>]",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier is Added [Owner]",
@@ -166,25 +180,25 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG received by all enemies increases by <span class=\"descriptionNumberColor\">MDF_DamageRatio</span>.",
-      "type": "Other",
-      "statusName": "Blank",
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"951721622\">LC_23052_Halo2</a>[<span class=\"descriptionNumberColor\">Blank</span>]",
-          "haloStatus": true
-        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-97167540\">LC_23052_Sub</a>[<span class=\"descriptionNumberColor\">Verse</span>]",
+      "description": "CRIT DMG dealt by all allies increases by <span class=\"descriptionNumberColor\">MDF_CritDmg</span>.",
+      "type": "Other",
+      "statusName": "Verse",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2050514144\">LC_23052_Halo</a>[<span class=\"descriptionNumberColor\">Verse</span>]",
+          "haloStatus": true
+        }
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier is Added [Owner]",
@@ -238,25 +252,18 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "CRIT DMG dealt by all allies increases by <span class=\"descriptionNumberColor\">MDF_CritDmg</span>.",
-      "type": "Other",
-      "statusName": "Verse",
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2050514144\">LC_23052_Halo</a>[<span class=\"descriptionNumberColor\">Verse</span>]",
-          "haloStatus": true
-        }
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-442867401\">LC_23052_Main</a>",
+      "stackData": [
+        "MDF_ExtraRatio"
+      ],
+      "latentQueue": [
+        "MDF_CritDmg",
+        "MDF_DamageRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: Start",
@@ -337,13 +344,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ExtraRatio"
-      ],
-      "latentQueue": [
-        "MDF_CritDmg",
-        "MDF_DamageRatio"
       ]
     }
   ],

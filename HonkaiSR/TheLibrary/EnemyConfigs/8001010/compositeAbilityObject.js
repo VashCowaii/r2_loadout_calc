@@ -3,11 +3,51 @@ const compositeAbilityObject = {
   "fullCharacterName": 8001010,
   "trimCharacterName": 8001010,
   "abilityList": [
+    "8001010_Monster_XP_Minion01_PassiveAbilityInitiate",
     "8001010_WMonster_Element_Slime_01_Fire_Ability01_Part02",
-    "8001010_WMonster_Element_Slime_01_Fire_Ability01_Part01",
-    "8001010_Monster_XP_Minion01_PassiveAbilityInitiate"
+    "8001010_WMonster_Element_Slime_01_Fire_Ability01_Part01"
   ],
   "abilityObject": {
+    "8001010_Monster_XP_Minion01_PassiveAbilityInitiate": {
+      "fileName": "8001010_Monster_XP_Minion01_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1878716990\">Enemy_XP_Minion01_EffectController</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1878716990\">Enemy_XP_Minion01_EffectController</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]"
+            },
+            {
+              "eventTrigger": "End Broken State [Owner]"
+            }
+          ]
+        }
+      ]
+    },
     "8001010_WMonster_Element_Slime_01_Fire_Ability01_Part02": {
       "fileName": "8001010_WMonster_Element_Slime_01_Fire_Ability01_Part02",
       "abilityType": null,
@@ -72,48 +112,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       },
       "references": []
-    },
-    "8001010_Monster_XP_Minion01_PassiveAbilityInitiate": {
-      "fileName": "8001010_Monster_XP_Minion01_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1878716990\">Enemy_XP_Minion01_EffectController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1878716990\">Enemy_XP_Minion01_EffectController</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]"
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
     }
   }
 }

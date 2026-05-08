@@ -66,6 +66,52 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1341714257\">MStrongChallengeEX_Talent_StageAbility_PLY_074</a>",
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "conditions": {
+          "name": "AND",
+          "conditionList": [
+            {
+              "name": "Is Weak to Attacker",
+              "weakTo": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            },
+            {
+              "name": "Compare: Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "value1": "StageAbility_MST_074_DotCount",
+              "compareType": ">=",
+              "value2": {
+                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                "displayLines": "MDF_PropertyValue",
+                "constants": [],
+                "variables": [
+                  "MDF_PropertyValue"
+                ]
+              },
+              "contextScope": "ContextCaster"
+            }
+          ]
+        },
+        "toughnessReductionPreview": {
+          "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
+          "displayLines": "MDF_PropertyValue2",
+          "constants": [],
+          "variables": [
+            "MDF_PropertyValue2"
+          ]
+        }
+      },
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -115,53 +161,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "conditions": {
-          "name": "AND",
-          "conditionList": [
-            {
-              "name": "Is Weak to Attacker",
-              "weakTo": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            {
-              "name": "Compare: Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "value1": "StageAbility_MST_074_DotCount",
-              "compareType": ">=",
-              "value2": {
-                "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                "displayLines": "MDF_PropertyValue",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue"
-                ]
-              },
-              "contextScope": "ContextCaster"
-            }
-          ]
-        },
-        "toughnessReductionPreview": {
-          "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-          "displayLines": "MDF_PropertyValue2",
-          "constants": [],
-          "variables": [
-            "MDF_PropertyValue2"
-          ]
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -243,9 +243,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

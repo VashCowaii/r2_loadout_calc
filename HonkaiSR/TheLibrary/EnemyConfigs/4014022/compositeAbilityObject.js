@@ -3,7 +3,15 @@ const compositeAbilityObject = {
   "fullCharacterName": 4014022,
   "trimCharacterName": 4014022,
   "abilityList": [
+    "4014022_Monster_Fuyan_Die",
+    "4014022_Monster_Fuyan_Hit_Part02",
+    "4014022_Monster_Fuyan_Hit_Part01",
+    "4014022_Monster_Fuyan_Born_Part02",
+    "4014022_Monster_Fuyan_Born_Part01",
+    "4014022_Monster_W4_Hearse_Born_Part02",
+    "4014022_Monster_W4_Hearse_Passive01",
     "4014022_Monster_W4_Hearse_PassiveAbility_Insert",
+    "4014022_Monster_W4_Hearse_PassiveAbility_BGM",
     "4014022_Monster_W4_Hearse_Ability04_Part02",
     "4014022_Monster_W4_Hearse_Ability04_Part01",
     "4014022_Monster_W4_Hearse_Ability03_Part02",
@@ -12,12 +20,560 @@ const compositeAbilityObject = {
     "4014022_Monster_W4_Hearse_Ability02_Part01",
     "4014022_Monster_W4_Hearse_Ability01_Part02",
     "4014022_Monster_W4_Hearse_Ability01_Part01",
-    "4014022_Monster_W4_Hearse_Born_Part02",
-    "4014022_Monster_W4_Hearse_Passive01",
-    "4014022_Monster_W4_Hearse_PassiveAbility_BGM",
     "4014022_Modifiers"
   ],
   "abilityObject": {
+    "4014022_Monster_Fuyan_Die": {
+      "fileName": "4014022_Monster_Fuyan_Die",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014022_Monster_Fuyan_Hit_Part02": {
+      "fileName": "4014022_Monster_Fuyan_Hit_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "value1": "CurrentHP%",
+            "compareType": ">",
+            "value2": 0
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014022_Monster_Fuyan_Hit_Part01": {
+      "fileName": "4014022_Monster_Fuyan_Hit_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_Fuyan_Hit_Part02"
+        },
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "ADF_MaxHPValue",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "ADF_HPDamageRatioValue",
+          "value": {
+            "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.000010000076) || ADD || RETURN",
+            "displayLines": "((1 / MonsterCount) + 0.000010000076)",
+            "constants": [
+              1,
+              0.000010000076
+            ],
+            "variables": [
+              "MonsterCount"
+            ]
+          }
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": {
+            "operator": "Variables[0] (DeathCount) || RETURN",
+            "displayLines": "DeathCount",
+            "constants": [],
+            "variables": [
+              "DeathCount"
+            ]
+          },
+          "Event": [
+            {
+              "name": "Define Custom Variable with Stat",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "variableName": "ADF_CurrentHPValue",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "ADF_CurrentHPValue",
+                "compareType": "<=",
+                "value2": {
+                  "operator": "Variables[0] (ADF_MaxHPValue) || Variables[1] (ADF_HPDamageRatioValue) || MUL || RETURN",
+                  "displayLines": "(ADF_MaxHPValue * ADF_HPDamageRatioValue)",
+                  "constants": [],
+                  "variables": [
+                    "ADF_MaxHPValue",
+                    "ADF_HPDamageRatioValue"
+                  ]
+                }
+              },
+              "passed": [
+                {
+                  "name": "Force Entity Death",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Consume",
+                  "consumeFrom": "MaxHP",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "consumePercent": {
+                    "operator": "Variables[0] (ADF_HPDamageRatioValue) || RETURN",
+                    "displayLines": "ADF_HPDamageRatioValue",
+                    "constants": [],
+                    "variables": [
+                      "ADF_HPDamageRatioValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "CurrentHP%",
+                        "compareType": "<",
+                        "value2": 0.1
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "MonsterCount",
+                        "compareType": "=",
+                        "value2": 3
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Force Entity Death",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "variableName": "DeathCount",
+          "value": 0
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014022_Monster_Fuyan_Born_Part02": {
+      "fileName": "4014022_Monster_Fuyan_Born_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1642513753\">Enemy_Fuyan_EffectController</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014022_Monster_Fuyan_Born_Part01": {
+      "fileName": "4014022_Monster_Fuyan_Born_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_Fuyan_Born_Part02",
+          "isTrigger": true
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014022_Monster_W4_Hearse_Born_Part02": {
+      "fileName": "4014022_Monster_W4_Hearse_Born_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014022_Monster_W4_Hearse_Passive01": {
+      "fileName": "4014022_Monster_W4_Hearse_Passive01",
+      "skillTrigger": "Passive01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 401402020,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": null
+          },
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Wave Count",
+                "compareType": "=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1296909781\">Monster_W4_Hearse_Effect</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 4014023,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "Mydeimos, Lance of Fury",
+            "isBaseCompare": true
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-191666641\">Monster_W4_Hearse_FullPhase1</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1810020186\">Monster_W4_Hearse_Part2Effect</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-778914885\">Monster_W4_Hearse_Part2EffectMaterial</a>"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Nikador: Self}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"810487295\">Monster_W4_Nikadory_Part2Effect</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Nikador: Self}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"55627111\">Monster_W4_Nikadory_Part2EffectWithHearse</a>"
+            },
+            {
+              "name": "Define Modifier-Specific Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifierName": "<a class=\"gModGreen\" id=\"276604905\">Monster_W4_Hearse_Passive</a>",
+              "variableName": "MDF_TurnCount",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1753098254\">W4_Hearse_BattleScore1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1769875873\">W4_Hearse_BattleScore2</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"276604905\">Monster_W4_Hearse_Passive</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 4014022,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "The Giver, Master of Legions, Lance of Fury (Complete)",
+            "isBaseCompare": true
+          },
+          "passed": [
+            {
+              "name": "Set Enemy Phase",
+              "phase": 2
+            },
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "variableName": "Nikadory_Speed"
+            },
+            {
+              "name": "Define Custom Variable with Stat",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Nikador: Self}}"
+              },
+              "variableName": "Nikadory_Speed",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1169900751\">Monster_W4_Hearse_SetSpeed</a>",
+              "valuePerStack": {
+                "MDF_Speed": {
+                  "operator": "Variables[0] (Nikadory_Speed) || Constants[0] (0) || MUL || RETURN",
+                  "displayLines": "(Nikadory_Speed * 0)",
+                  "constants": [
+                    0
+                  ],
+                  "variables": [
+                    "Nikadory_Speed"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Create AV Link",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Nikador: Self}}"
+              },
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "linkOrder": 1,
+              "isStart": true
+            },
+            {
+              "name": "Create Shared HP Group",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "subTarget": {
+                "name": "Target Name",
+                "target": "{{Nikador: Self}}"
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Create Enemies",
+              "enemyList": [
+                {
+                  "name": "Create Enemy from Custom",
+                  "value": "SummonID0",
+                  "summonLocation": "AfterCaster"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1746079700\">Monster_W4_Hearse_EffectPrepare</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"126121466\">Monster_W4_Hearse_LeaveTeam</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 4014023,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "Mydeimos, Lance of Fury",
+            "isBaseCompare": true,
+            "invertCondition": true
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-580159473\">Monster_W4_Hearse_PartController</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-51927245\">Enemy_Fuyan_Unselectable</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
     "4014022_Monster_W4_Hearse_PassiveAbility_Insert": {
       "fileName": "4014022_Monster_W4_Hearse_PassiveAbility_Insert",
       "abilityType": null,
@@ -560,6 +1116,114 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       },
       "references": []
+    },
+    "4014022_Monster_W4_Hearse_PassiveAbility_BGM": {
+      "fileName": "4014022_Monster_W4_Hearse_PassiveAbility_BGM",
+      "childAbilityList": [
+        "4014022_Monster_W4_Hearse_PassiveAbility_BGM"
+      ],
+      "skillTrigger": "Passive_BGM",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage Type",
+                "stageType": "Challenge"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "VerseSimulation"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "StrongChallengeActivity"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "RogueRelic"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "GridFightActivity"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1447120194\">Enemy_W4_Hearse_ResetStageBGM</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1447120194\">Enemy_W4_Hearse_ResetStageBGM</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Varying Data",
+                  "target": null,
+                  "variableName": "MDF_WaveIndex",
+                  "value": "CurWaveIndex"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "New Enemy Wave: Start",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Varying Data",
+                  "target": null,
+                  "variableName": "MDF_WaveIndex2",
+                  "value": "CurWaveIndex"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_WaveIndex",
+                    "compareType": "NOT=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
+                      "displayLines": "MDF_WaveIndex2",
+                      "constants": [],
+                      "variables": [
+                        "MDF_WaveIndex2"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     "4014022_Monster_W4_Hearse_Ability04_Part02": {
       "fileName": "4014022_Monster_W4_Hearse_Ability04_Part02",
@@ -3294,431 +3958,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4014022_Monster_W4_Hearse_Born_Part02": {
-      "fileName": "4014022_Monster_W4_Hearse_Born_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014022_Monster_W4_Hearse_Passive01": {
-      "fileName": "4014022_Monster_W4_Hearse_Passive01",
-      "skillTrigger": "Passive01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 401402020,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": null
-          },
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "Wave Count",
-                "compareType": "=",
-                "value2": 1
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1296909781\">Monster_W4_Hearse_Effect</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 4014023,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Mydeimos, Lance of Fury",
-            "isBaseCompare": true
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-191666641\">Monster_W4_Hearse_FullPhase1</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1810020186\">Monster_W4_Hearse_Part2Effect</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-778914885\">Monster_W4_Hearse_Part2EffectMaterial</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Nikador: Self}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"810487295\">Monster_W4_Nikadory_Part2Effect</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Nikador: Self}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"55627111\">Monster_W4_Nikadory_Part2EffectWithHearse</a>"
-            },
-            {
-              "name": "Define Modifier-Specific Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifierName": "<a class=\"gModGreen\" id=\"276604905\">Monster_W4_Hearse_Passive</a>",
-              "variableName": "MDF_TurnCount",
-              "value": 2
-            }
-          ]
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1753098254\">W4_Hearse_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1769875873\">W4_Hearse_BattleScore2</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"276604905\">Monster_W4_Hearse_Passive</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 4014022,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "The Giver, Master of Legions, Lance of Fury (Complete)",
-            "isBaseCompare": true
-          },
-          "passed": [
-            {
-              "name": "Set Enemy Phase",
-              "phase": 2
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variableName": "Nikadory_Speed"
-            },
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Nikador: Self}}"
-              },
-              "variableName": "Nikadory_Speed",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1169900751\">Monster_W4_Hearse_SetSpeed</a>",
-              "valuePerStack": {
-                "MDF_Speed": {
-                  "operator": "Variables[0] (Nikadory_Speed) || Constants[0] (0) || MUL || RETURN",
-                  "displayLines": "(Nikadory_Speed * 0)",
-                  "constants": [
-                    0
-                  ],
-                  "variables": [
-                    "Nikadory_Speed"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Create AV Link",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Nikador: Self}}"
-              },
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "linkOrder": 1,
-              "isStart": true
-            },
-            {
-              "name": "Create Shared HP Group",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "subTarget": {
-                "name": "Target Name",
-                "target": "{{Nikador: Self}}"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Create Enemies",
-              "enemyList": [
-                {
-                  "name": "Create Enemy from Custom",
-                  "value": "SummonID0",
-                  "summonLocation": "AfterCaster"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1746079700\">Monster_W4_Hearse_EffectPrepare</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"126121466\">Monster_W4_Hearse_LeaveTeam</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 4014023,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Mydeimos, Lance of Fury",
-            "isBaseCompare": true,
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-580159473\">Monster_W4_Hearse_PartController</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-51927245\">Enemy_Fuyan_Unselectable</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014022_Monster_W4_Hearse_PassiveAbility_BGM": {
-      "fileName": "4014022_Monster_W4_Hearse_PassiveAbility_BGM",
-      "childAbilityList": [
-        "4014022_Monster_W4_Hearse_PassiveAbility_BGM"
-      ],
-      "skillTrigger": "Passive_BGM",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage Type",
-                "stageType": "Challenge"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "VerseSimulation"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "StrongChallengeActivity"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "RogueRelic"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "GridFightActivity"
-              }
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1447120194\">Enemy_W4_Hearse_ResetStageBGM</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1447120194\">Enemy_W4_Hearse_ResetStageBGM</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex",
-                  "value": "CurWaveIndex"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave: Start",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex2",
-                  "value": "CurWaveIndex"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_WaveIndex",
-                    "compareType": "NOT=",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
-                      "displayLines": "MDF_WaveIndex2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_WaveIndex2"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "4014022_Modifiers": {
       "fileName": "4014022_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -3729,6 +3968,424 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__288555768\">Monster_Fuyan_LockHP</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Lock HP",
+                  "threshold": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1940788756\">Enemy_Fuyan_MonsterDieListener</a>",
+          "modifierFlags": [
+            "KeepOnDeathrattle",
+            "Deathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"288555768\">Monster_Fuyan_LockHP</a>"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]",
+                        "invertCondition": true,
+                        "includePreDeath": true
+                      },
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "DeathCount",
+                      "value": {
+                        "operator": "Variables[0] (DeathCount) || Constants[0] (1) || ADD || RETURN",
+                        "displayLines": "(DeathCount + 1)",
+                        "constants": [
+                          1
+                        ],
+                        "variables": [
+                          "DeathCount"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "variableName": "ADF_MaxHPValue",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "ADF_HPDamageRatioValue",
+                      "value": {
+                        "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
+                        "displayLines": "((1 / MonsterCount) + 0.0009999999)",
+                        "constants": [
+                          1,
+                          0.0009999999
+                        ],
+                        "variables": [
+                          "MonsterCount"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "variableName": "ADF_CurrentHPValue",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "ADF_CurrentHPValue",
+                        "compareType": "<=",
+                        "value2": {
+                          "operator": "Variables[0] (ADF_MaxHPValue) || Variables[1] (ADF_HPDamageRatioValue) || MUL || Variables[2] (DeathCount) || MUL || RETURN",
+                          "displayLines": "((ADF_MaxHPValue * ADF_HPDamageRatioValue) * DeathCount)",
+                          "constants": [],
+                          "variables": [
+                            "ADF_MaxHPValue",
+                            "ADF_HPDamageRatioValue",
+                            "DeathCount"
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Inject Ability Use",
+                          "abilityName": "Monster_Fuyan_Hit_Part01",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "priorityTag": "CharacterAttackFromSelf",
+                          "canHitNonTargets": true,
+                          "allowAbilityTriggers": false
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Trigger Ability",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "ability": "Monster_Fuyan_Hit_Part01"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "AchievementCount",
+                  "value": 0
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "searchRandom": true,
+                  "ifTargetFound": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Enemy ID",
+                        "ID": 8001010,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "characterName": "Flamespawn"
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "AchievementCount",
+                          "value": {
+                            "operator": "Variables[0] (AchievementCount) || Constants[0] (1) || ADD || RETURN",
+                            "displayLines": "(AchievementCount + 1)",
+                            "constants": [
+                              1
+                            ],
+                            "variables": [
+                              "AchievementCount"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "AchievementCount",
+                    "compareType": ">",
+                    "value2": 3
+                  },
+                  "passed": [
+                    {
+                      "name": "Achievement",
+                      "relatedAchievements": [
+                        {
+                          "title": "Inferno",
+                          "desc": "Have #1[i] Flamespawns simultaneously on the field during the \"Illusory Maze: Cirrus\" challenge",
+                          "rarity": "Low",
+                          "type": "Hidden until Completion",
+                          "params": [
+                            4
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Was Killed (Queued) [Owner]",
+              "execute": [
+                {
+                  "name": "Mark Entity For Immediate Death"
+                },
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_Fuyan_Die",
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "priorityTag": "EnemyDeathEffect",
+                  "ownerState": "Mask_AliveOrLimbo",
+                  "targetState": "Mask_AliveOrLimbo",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Enemy Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "mustBeAlive2": true,
+                        "invertCondition": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Find New Target",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target's Attack Targets}}"
+                          },
+                          "searchRandom": true,
+                          "maxTargets": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-51927245\">Enemy_Fuyan_Unselectable</a>",
+          "modifierFlags": [
+            "ImmuneDebuff"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                "Mark Entity as Non-Target(Unselectable)",
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+                  "value": 0
+                },
+                {
+                  "name": "Boss Bar Display",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "display": true
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"429388357\">Modifier_Heliobus_Suiyang_Ability_StealBP_Enemy</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1278953211\">Modifier_Heliobus_Suiyang_Ability_ActionBonus_Enemy</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-210455569\">Modifier_Heliobus_Suiyang_Ability_DeathBonus_Enemy</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"87920602\">Modifier_Heliobus_Suiyang_Ability_DamageBurn_Enemy</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1274529835\">Modifier_Heliobus_Suiyang_Ability_AttackUp_Enemy</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1988405555\">Enemy_Fuyan_Born</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Trigger Ability",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "ability": "Monster_Fuyan_Born_Part02",
+                  "isTrigger": true
+                }
+              ],
+              "priorityLevel": -90
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1642513753\">Enemy_Fuyan_EffectController</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            }
+          ]
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1769875873\">W4_Hearse_BattleScore2</a>",
@@ -3787,9 +4444,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3833,21 +4488,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-191666641\">Monster_W4_Hearse_FullPhase1</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-191666641\">Monster_W4_Hearse_FullPhase1</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-516776989\">Monster_W4_Hearse_ForceAutoLock</a>",
           "modifierFlags": [
             "TauntForAutoLock"
+          ],
+          "latentQueue": [
+            "Tutorial_Flag",
+            "MDF_KillByHearse"
           ],
           "execute": [
             {
@@ -3869,16 +4524,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "Tutorial_Flag",
-            "MDF_KillByHearse"
           ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__126121466\">Monster_W4_Hearse_LeaveTeam</a>",
+          "latentQueue": [
+            "AIFlag",
+            "InsertCheck"
+          ],
           "execute": [
             {
               "eventTrigger": "Action Choice Window [Anyone]",
@@ -3950,9 +4604,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -3963,9 +4615,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1663613862\">Monster_W4_Hearse_BattleScore1Count</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1663613862\">Monster_W4_Hearse_BattleScore1Count</a>"
         },
         {
           "name": "Modifier Construction",
@@ -3995,9 +4645,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4048,6 +4696,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1169900751\">Monster_W4_Hearse_SetSpeed</a>",
+          "stackData": [
+            "MDF_Speed"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4080,11 +4731,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Speed"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4108,9 +4755,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4119,9 +4764,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4139,9 +4782,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4153,9 +4794,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4164,9 +4803,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Constructing Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4260,9 +4897,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4279,9 +4914,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2101563151\">Monster_W4_Hearse_Ability04_Mark</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__2101563151\">Monster_W4_Hearse_Ability04_Mark</a>"
         },
         {
           "name": "Modifier Construction",
@@ -4290,14 +4923,11 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1178549218\">Monster_W4_Hearse_Ability01_Mark</a>",
-          "stackData": [],
           "latentQueue": [
             "Tutorial_Flag",
             "MDF_KillByHearse"
@@ -4616,9 +5246,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -90
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4626,6 +5254,14 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_DamageTakenUpRatio",
+            "MDF_ConfineChance"
+          ],
+          "description": "Increases received damage by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span>. When receiving attacks, there is a chance to be inflicted with Imprisonment. Defeat the corresponding \"Conquer or Be Conquered\" to dispel this effect.",
+          "type": "Other",
+          "effectName": "Drowning in Terror",
+          "statusName": "Drowning in Terror",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -4684,16 +5320,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageTakenUpRatio",
-            "MDF_ConfineChance"
-          ],
-          "latentQueue": [],
-          "description": "Increases received damage by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span>. When receiving attacks, there is a chance to be inflicted with Imprisonment. Defeat the corresponding \"Conquer or Be Conquered\" to dispel this effect.",
-          "type": "Other",
-          "effectName": "Drowning in Terror",
-          "statusName": "Drowning in Terror"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4701,6 +5328,13 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_DamageTakenUpRatio"
+          ],
+          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span>. This effect can be dispelled by defeating the \"Conquer or Be Conquered\" corresponding to this unit.",
+          "type": "Other",
+          "effectName": "Fear",
+          "statusName": "Strife-Granted Fear",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier"
@@ -4726,21 +5360,11 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DamageTakenUpRatio"
-          ],
-          "latentQueue": [],
-          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span>. This effect can be dispelled by defeating the \"Conquer or Be Conquered\" corresponding to this unit.",
-          "type": "Other",
-          "effectName": "Fear",
-          "statusName": "Strife-Granted Fear"
+          ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-689985018\">Monster_W4_Hearse_ActionBarHint</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__-689985018\">Monster_W4_Hearse_ActionBarHint</a>"
         },
         {
           "name": "Modifier Construction",
@@ -5323,9 +5947,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5344,14 +5966,20 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1275245570\">Monster_W4_Hearse_InChangePhase</a>",
-          "stackData": [],
-          "latentQueue": []
+          "for": "<a class=\"gModGreen\" id=\"mod__1275245570\">Monster_W4_Hearse_InChangePhase</a>"
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__985676222\">Monster_W4_Hearse_Enhance</a>[<span class=\"descriptionNumberColor\">Strife-Granted Valiance</span>]",
           "stackType": "Replace",
+          "latentQueue": [
+            "MDF_KillByHearse"
+          ],
+          "description": "Each stack increases DMG dealt for the next attack.",
+          "type": "Buff",
+          "effectName": "Valiance",
+          "statusName": "Strife-Granted Valiance",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5364,16 +5992,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "MDF_KillByHearse"
-          ],
-          "description": "Each stack increases DMG dealt for the next attack.",
-          "type": "Buff",
-          "effectName": "Valiance",
-          "statusName": "Strife-Granted Valiance",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",

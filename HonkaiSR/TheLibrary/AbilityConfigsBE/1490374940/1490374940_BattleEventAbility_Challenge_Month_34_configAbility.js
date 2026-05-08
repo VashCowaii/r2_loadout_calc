@@ -351,6 +351,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1616150794\">Modifier_BattleEventAbility_Challenge_Month_34_InsertAction</a>[<span class=\"descriptionNumberColor\">Extra Action</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "You will have an extra action after taking an action.",
+      "type": "Buff",
+      "statusName": "Extra Action",
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -363,14 +366,14 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "description": "You will have an extra action after taking an action.",
-      "type": "Buff",
-      "statusName": "Extra Action"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__851386528\">Modifier_BattleEventAbility_Challenge_Month_34</a>",
+      "stackData": [
+        "BattleEvent_P1_ADF"
+      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -434,11 +437,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "BattleEvent_P1_ADF"
-      ],
-      "latentQueue": []
+      ]
     }
   ]
 }

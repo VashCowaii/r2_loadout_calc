@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-501590050\">ADV_StageAbility_Maze_Kafka</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1654241048\">Advanced_Kafka_Eidolon4_Sub</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
@@ -119,18 +125,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Kafka_Listen_Rank1",
-        "Kafka_Listen_Rank2",
-        "Kafka_Listen_Rank6"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1537350177\">Advanced_Kafka_PassiveDotDamage_Eidolon1</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "DoT taken increases by <span class=\"descriptionNumberColor\">MDF_DotRatio</span>.",
+      "type": "Debuff",
+      "effectName": "DoT Vulnerability",
+      "statusName": "DoT Vulnerability",
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -162,15 +166,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DotRatio"
-      ],
-      "latentQueue": [],
-      "description": "DoT taken increases by <span class=\"descriptionNumberColor\">MDF_DotRatio</span>.",
-      "type": "Debuff",
-      "effectName": "DoT Vulnerability",
-      "statusName": "DoT Vulnerability"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -220,11 +216,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Kafka_Listen_Rank1",
-        "Kafka_Listen_Rank6"
       ]
     }
   ],

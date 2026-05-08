@@ -24,6 +24,11 @@ const configAbility = {
         "STAT_CTRL_Frozen",
         "STAT_CTRL"
       ],
+      "useEntitySnapshot": true,
+      "description": "Targets are considered as Frozen and cannot take action for a certain number of turns. When this effect is dispelled, the targets will receive Ice Additional DMG based on their respective Max HP.",
+      "type": "Debuff",
+      "effectName": "Dissociation",
+      "statusName": "Dissociation",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -156,12 +161,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "useEntitySnapshot": true,
-      "description": "Targets are considered as Frozen and cannot take action for a certain number of turns. When this effect is dispelled, the targets will receive Ice Additional DMG based on their respective Max HP.",
-      "type": "Debuff",
-      "effectName": "Dissociation",
-      "statusName": "Dissociation"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -170,6 +170,11 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
+      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">#BattleEvent_P3_ADF</span>. After using an attack, every stack of Memory Imprint has a <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span> fixed chance of applying Dissociation to the target.",
+      "type": "Buff",
+      "effectName": "Memory Imprint",
+      "statusName": "Memory Imprint",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -243,12 +248,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">#BattleEvent_P3_ADF</span>. After using an attack, every stack of Memory Imprint has a <span class=\"descriptionNumberColor\">#BattleEvent_P1_ADF</span> fixed chance of applying Dissociation to the target.",
-      "type": "Buff",
-      "effectName": "Memory Imprint",
-      "statusName": "Memory Imprint",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -362,9 +362,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

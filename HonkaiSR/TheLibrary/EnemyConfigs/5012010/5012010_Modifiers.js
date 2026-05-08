@@ -18,6 +18,13 @@ const configAbility = {
         "IdleStun",
         "STAT_Stun_Effect"
       ],
+      "stackData": [
+        "MDF_ActionDelayRatio"
+      ],
+      "description": "Action delayed. Cannot take actions for a certain number of turns.",
+      "type": "Debuff",
+      "effectName": "Strong Reverberation",
+      "statusName": "Strong Reverberation",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -119,15 +126,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [
-        "MDF_ActionDelayRatio"
-      ],
-      "latentQueue": [],
-      "description": "Action delayed. Cannot take actions for a certain number of turns.",
-      "type": "Debuff",
-      "effectName": "Strong Reverberation",
-      "statusName": "Strong Reverberation"
+      ]
     }
   ],
   "references": []

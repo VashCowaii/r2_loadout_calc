@@ -3,116 +3,78 @@ const compositeAbilityObject = {
   "fullCharacterName": 3002010,
   "trimCharacterName": 3002010,
   "abilityList": [
-    "3002010_BattleEventAbility_Monster_W3_TV_PuzzleAbility",
-    "3002010_Monster_W3_TV_PuzzleGamePassive",
+    "3002010_Monster_W3_TV_PassiveAbilityInitiate",
     "3002010_Monster_W3_TV_Ability03_Part02",
     "3002010_Monster_W3_TV_Ability03_Part01",
     "3002010_Monster_W3_TV_Ability02_Part02",
     "3002010_Monster_W3_TV_Ability02_Part01",
     "3002010_Monster_W3_TV_Ability01_Part02",
     "3002010_Monster_W3_TV_Ability01_Part01",
-    "3002010_Monster_W3_TV_PassiveAbilityInitiate",
     "3002010_Modifiers"
   ],
   "abilityObject": {
-    "3002010_BattleEventAbility_Monster_W3_TV_PuzzleAbility": {
-      "fileName": "3002010_BattleEventAbility_Monster_W3_TV_PuzzleAbility",
-      "abilityType": null,
+    "3002010_Monster_W3_TV_PassiveAbilityInitiate": {
+      "fileName": "3002010_Monster_W3_TV_PassiveAbilityInitiate",
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
       "energy": null,
       "toughnessList": null,
       "parse": [
         {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"127034680\">Monster_W3_TV_FlopHandler</a>"
+        },
+        {
           "name": "IF",
           "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Level Entity}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"230893383\">Modifier_BattleEventAbility_ActivityTelevision_EliteWaveMark</a>",
-            "invertCondition": true
+            "name": "Compare: Variable",
+            "value1": "FlopSide",
+            "compareType": "=",
+            "value2": 1,
+            "contextScope": "TargetEntity"
           },
           "passed": [
             {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Name",
-                "target": "{{Level Entity}}"
+                "target": "{{Caster}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-246025832\">MModifier_Monster_W3_TV_InsertMark</a>"
+              "modifier": "<a class=\"gModGreen\" id=\"-516989914\">MModifier_Monster_W3_TV_Side1</a>[<span class=\"descriptionNumberColor\">Surprise Channel</span>]"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-823586997\">Enemy_W3_TV_Flop</a>"
             },
             {
               "name": "IF",
               "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Level Entity}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"198044353\">StageAbility_RogueDLCTVLevel_Modifier</a>"
+                "name": "Compare: Animator Variable",
+                "paramType": "Int",
+                "paramName": "Side",
+                "compareType": "=",
+                "compareValue": 1
               }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"951989121\">MModifier_Monster_W3_TV_RemoveMark</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Force Entity Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-246025832\">MModifier_Monster_W3_TV_InsertMark</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn End [Anyone]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
             }
           ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "3002010_Monster_W3_TV_PuzzleGamePassive": {
-      "fileName": "3002010_Monster_W3_TV_PuzzleGamePassive",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1430956299\">MModifier_Monster_W3_TV_SideCheck</a>"
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-533767533\">MModifier_Monster_W3_TV_Side2</a>[<span class=\"descriptionNumberColor\">Fright Channel</span>]"
+            }
+          ]
         },
         {
           "name": "Add Events/Bonuses",
@@ -120,402 +82,297 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1233820232\">MModifier_Monster_W3_TV_ATMark</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-541813617\">W3_TV_BattleScore1</a>"
         },
         {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "Theater_Rogue"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1754480095\">Monster_Standard_WeakControl</a>[<span class=\"descriptionNumberColor\">Toughness Protection</span>]"
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1105160976\">Monster_W3_TV_SoundController</a>"
+            }
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__951989121\">MModifier_Monster_W3_TV_RemoveMark</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1105160976\">Monster_W3_TV_SoundController</a>",
           "execute": [
             {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "BattleEventAbility_Monster_W3_TV_PuzzleAbility",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Level Entity}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "priorityTag": "EnemyChangeState",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
             }
           ]
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1430956299\">MModifier_Monster_W3_TV_SideCheck</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__127034680\">Monster_W3_TV_FlopHandler</a>",
+          "modifierFlags": [
+            "KeepOnDeathrattle"
+          ],
           "execute": [
             {
-              "eventTrigger": "When Stacking/Receiving Modifier",
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "Take Damage End [Owner]: Hit"
+            },
+            {
+              "eventTrigger": "Being Attacked Start [Owner]",
               "execute": [
                 {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "flagName": "STAT_CTRL"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "flagName": "STAT_CTRL_Stun"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "flagName": "STAT_CTRL_Frozen"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "flagName": "STAT_Confine"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "flagName": "Break"
+                      }
+                    ]
                   },
-                  "variableName": "MonsterIDSelf",
-                  "value": "TargetCharacterID"
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "scope": "TargetEntity",
+                      "variableName": "FlopSide",
+                      "value": -1
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "scope": "TargetEntity",
+                      "variableName": "FlopSide",
+                      "value": {
+                        "operator": "Variables[0] (FlopSide) || INVERT || RETURN",
+                        "displayLines": "-FlopSide",
+                        "constants": [],
+                        "variables": [
+                          "FlopSide"
+                        ]
+                      }
+                    }
+                  ]
                 },
                 {
-                  "name": "Add Stage Ability",
-                  "abilityName": "BattleEventAbility_Monster_W3_TV_PuzzleAbility",
-                  "parameters": {}
+                  "name": "Define Custom Variable",
+                  "variableName": "FaceChangeFlag",
+                  "value": 1
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-823586997\">Enemy_W3_TV_Flop</a>"
                 }
               ]
             },
             {
-              "eventTrigger": "Entity Death [Anyone]",
+              "eventTrigger": "Being Attacked End [Owner]",
               "execute": [
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team"
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_Confine"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_CTRL_Frozen"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "FaceChangeFlag",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Modifier Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "flagName": "STAT_CTRL"
+                      },
+                      {
+                        "name": "Modifier Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "flagName": "Break"
+                      }
+                    ]
                   },
                   "passed": [
                     {
                       "name": "IF",
                       "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-516989914\">MModifier_Monster_W3_TV_Side1</a>[<span class=\"descriptionNumberColor\">Surprise Channel</span>]"
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Target Right of Caster}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"-516989914\">MModifier_Monster_W3_TV_Side1</a>[<span class=\"descriptionNumberColor\">Surprise Channel</span>]"
-                              },
-                              {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Target Left of Caster}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"-516989914\">MModifier_Monster_W3_TV_Side1</a>[<span class=\"descriptionNumberColor\">Surprise Channel</span>]"
-                              }
-                            ]
-                          },
-                          "passed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder and Adjacent Targets}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"951989121\">MModifier_Monster_W3_TV_RemoveMark</a>"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value": "MonsterType_W3_TV_00"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-516989914\">MModifier_Monster_W3_TV_Side1</a>[<span class=\"descriptionNumberColor\">Surprise Channel</span>]"
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Target Right of Caster}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"-516989914\">MModifier_Monster_W3_TV_Side1</a>[<span class=\"descriptionNumberColor\">Surprise Channel</span>]"
-                              },
-                              {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Target Left of Caster}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"-516989914\">MModifier_Monster_W3_TV_Side1</a>[<span class=\"descriptionNumberColor\">Surprise Channel</span>]"
-                              }
-                            ]
-                          },
-                          "passed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder and Adjacent Targets}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"951989121\">MModifier_Monster_W3_TV_RemoveMark</a>"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
+                        "name": "OR",
                         "conditionList": [
                           {
-                            "name": "Enemy ID",
-                            "ID": {
-                              "operator": "Variables[0] (MonsterIDSelf) || RETURN",
-                              "displayLines": "MonsterIDSelf",
-                              "constants": [],
-                              "variables": [
-                                "MonsterIDSelf"
-                              ]
-                            },
+                            "name": "Has Flag",
                             "target": {
                               "name": "Target Name",
-                              "target": "{{Target Right of Caster}}"
+                              "target": "{{Modifier Holder}}"
                             },
-                            "characterName": null
+                            "flagName": "STAT_CTRL"
                           },
                           {
-                            "name": "Enemy ID",
-                            "ID": {
-                              "operator": "Variables[0] (MonsterIDSelf) || RETURN",
-                              "displayLines": "MonsterIDSelf",
-                              "constants": [],
-                              "variables": [
-                                "MonsterIDSelf"
-                              ]
-                            },
+                            "name": "Has Flag",
                             "target": {
                               "name": "Target Name",
-                              "target": "{{Target Left of Caster}}"
+                              "target": "{{Modifier Holder}}"
                             },
-                            "characterName": null
+                            "flagName": "Break"
                           }
                         ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder and Adjacent Targets}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"951989121\">MModifier_Monster_W3_TV_RemoveMark</a>"
-                        }
-                      ]
+                      }
                     }
                   ]
                 }
               ]
             },
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "When Stacking Modifier Instance [Owner]",
               "execute": [
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"951989121\">MModifier_Monster_W3_TV_RemoveMark</a>"
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Modifier Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "flagName": "STAT_CTRL"
+                      },
+                      {
+                        "name": "Modifier Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "flagName": "Break"
+                      }
+                    ]
                   },
                   "passed": [
                     {
-                      "name": "Set HP Value",
-                      "target": {
+                      "name": "Define Custom Variable",
+                      "scope": "TargetEntity",
+                      "variableName": "FlopSide",
+                      "value": -1
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
                         "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
+                        "target": "{{Caster}}"
                       },
-                      "setValue": 1
+                      "modifier": "<a class=\"gModGreen\" id=\"-823586997\">Enemy_W3_TV_Flop</a>"
                     },
-                    {
-                      "name": "Lock HP",
-                      "threshold": 0.000010000076
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value": "MonsterType_W3_TV_00"
-                  },
-                  "passed": [
                     {
                       "name": "IF",
                       "conditions": {
-                        "name": "Has Modifier",
+                        "name": "Modifier Has Flag",
                         "target": {
                           "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
+                          "target": "{{Parameter Target}}"
                         },
-                        "modifier": "<a class=\"gModGreen\" id=\"-516989914\">MModifier_Monster_W3_TV_Side1</a>[<span class=\"descriptionNumberColor\">Surprise Channel</span>]"
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Target Right of Caster}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"-516989914\">MModifier_Monster_W3_TV_Side1</a>[<span class=\"descriptionNumberColor\">Surprise Channel</span>]"
-                              },
-                              {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Target Left of Caster}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"-516989914\">MModifier_Monster_W3_TV_Side1</a>[<span class=\"descriptionNumberColor\">Surprise Channel</span>]"
-                              }
-                            ]
-                          },
-                          "passed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder and Adjacent Targets}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"951989121\">MModifier_Monster_W3_TV_RemoveMark</a>"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Enemy ID",
-                            "ID": {
-                              "operator": "Variables[0] (MonsterIDSelf) || RETURN",
-                              "displayLines": "MonsterIDSelf",
-                              "constants": [],
-                              "variables": [
-                                "MonsterIDSelf"
-                              ]
-                            },
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Target Right of Caster}}"
-                            },
-                            "characterName": null
-                          },
-                          {
-                            "name": "Enemy ID",
-                            "ID": {
-                              "operator": "Variables[0] (MonsterIDSelf) || RETURN",
-                              "displayLines": "MonsterIDSelf",
-                              "constants": [],
-                              "variables": [
-                                "MonsterIDSelf"
-                              ]
-                            },
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Target Left of Caster}}"
-                            },
-                            "characterName": null
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder and Adjacent Targets}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"951989121\">MModifier_Monster_W3_TV_RemoveMark</a>"
-                        }
-                      ]
+                        "flagName": "Break"
+                      }
                     }
                   ]
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -798,373 +655,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "3002010_Monster_W3_TV_PassiveAbilityInitiate": {
-      "fileName": "3002010_Monster_W3_TV_PassiveAbilityInitiate",
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"127034680\">Monster_W3_TV_FlopHandler</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "FlopSide",
-            "compareType": "=",
-            "value2": 1,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-516989914\">MModifier_Monster_W3_TV_Side1</a>[<span class=\"descriptionNumberColor\">Surprise Channel</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-823586997\">Enemy_W3_TV_Flop</a>"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Animator Variable",
-                "paramType": "Int",
-                "paramName": "Side",
-                "compareType": "=",
-                "compareValue": 1
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-533767533\">MModifier_Monster_W3_TV_Side2</a>[<span class=\"descriptionNumberColor\">Fright Channel</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-541813617\">W3_TV_BattleScore1</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "value": "Theater_Rogue"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1105160976\">Monster_W3_TV_SoundController</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1105160976\">Monster_W3_TV_SoundController</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__127034680\">Monster_W3_TV_FlopHandler</a>",
-          "modifierFlags": [
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "Take Damage End [Owner]: Hit"
-            },
-            {
-              "eventTrigger": "Being Attacked Start [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "STAT_CTRL"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "STAT_CTRL_Stun"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "STAT_CTRL_Frozen"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "STAT_Confine"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "Break"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
-                      "variableName": "FlopSide",
-                      "value": -1
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
-                      "variableName": "FlopSide",
-                      "value": {
-                        "operator": "Variables[0] (FlopSide) || INVERT || RETURN",
-                        "displayLines": "-FlopSide",
-                        "constants": [],
-                        "variables": [
-                          "FlopSide"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "FaceChangeFlag",
-                  "value": 1
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-823586997\">Enemy_W3_TV_Flop</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Attacked End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_Confine"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_CTRL_Frozen"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "FaceChangeFlag",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "flagName": "STAT_CTRL"
-                      },
-                      {
-                        "name": "Modifier Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "flagName": "Break"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "flagName": "STAT_CTRL"
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "flagName": "Break"
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking Modifier Instance [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "flagName": "STAT_CTRL"
-                      },
-                      {
-                        "name": "Modifier Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "flagName": "Break"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
-                      "variableName": "FlopSide",
-                      "value": -1
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-823586997\">Enemy_W3_TV_Flop</a>"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Modifier Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "flagName": "Break"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "3002010_Modifiers": {
       "fileName": "3002010_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1377,14 +867,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-449226911\">Rogue_Scoring_Event_TV_Count_Modifier</a>",
           "stackType": "Replace",
+          "stackLimit": 15,
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1416,9 +906,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackLimit": 15,
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1437,6 +925,12 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-533767533\">MModifier_Monster_W3_TV_Side2</a>[<span class=\"descriptionNumberColor\">Fright Channel</span>]",
+          "latentQueue": [
+            "AIFlag"
+          ],
+          "description": "Mr. Domescreen can use the \"Startling Broadcast\" ability. After it has been attacked, switches to the Surprise Channel state.",
+          "type": "Other",
+          "statusName": "Fright Channel",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1497,16 +991,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Mr. Domescreen can use the \"Startling Broadcast\" ability. After it has been attacked, switches to the Surprise Channel state.",
-          "type": "Other",
-          "statusName": "Fright Channel"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-516989914\">MModifier_Monster_W3_TV_Side1</a>[<span class=\"descriptionNumberColor\">Surprise Channel</span>]",
+          "description": "Mr. Domescreen can use the \"Surprise Variety Show\" ability. After it has been attacked, switches to the Fright Channel state.",
+          "type": "Other",
+          "statusName": "Surprise Channel",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1567,12 +1059,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Mr. Domescreen can use the \"Surprise Variety Show\" ability. After it has been attacked, switches to the Fright Channel state.",
-          "type": "Other",
-          "statusName": "Surprise Channel"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1582,9 +1069,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1593,14 +1078,15 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-823586997\">Enemy_W3_TV_Flop</a>",
           "stackType": "Replace",
+          "latentQueue": [
+            "FaceChangeFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1696,10 +1182,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "FaceChangeFlag"
           ]
         }
       ],

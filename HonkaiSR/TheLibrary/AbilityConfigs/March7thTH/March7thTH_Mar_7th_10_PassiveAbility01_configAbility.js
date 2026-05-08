@@ -420,6 +420,50 @@ const configAbility = {
           ]
         }
       ],
+      "modifierFunctions": [
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__1630889366\">Mar_7th_10_GetEnhance</a>",
+          "parse": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "EnergyBar_CurEnergy",
+                "compareType": ">=",
+                "value2": {
+                  "operator": "Variables[0] (EnergyBar_MaxEnergy) || RETURN",
+                  "displayLines": "EnergyBar_MaxEnergy",
+                  "constants": [],
+                  "variables": [
+                    "EnergyBar_MaxEnergy"
+                  ]
+                }
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
+                  "valuePerStack": {
+                    "MDF_PropertyRatio": {
+                      "operator": "Variables[0] (0.8) || RETURN",
+                      "displayLines": "0.8",
+                      "constants": [],
+                      "variables": [
+                        0.8
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "variableValueChange": [
         {
           "name": "Variable Value Changes",
@@ -486,53 +530,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "modifierFunctions": [
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__1630889366\">Mar_7th_10_GetEnhance</a>",
-          "parse": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "EnergyBar_CurEnergy",
-                "compareType": ">=",
-                "value2": {
-                  "operator": "Variables[0] (EnergyBar_MaxEnergy) || RETURN",
-                  "displayLines": "EnergyBar_MaxEnergy",
-                  "constants": [],
-                  "variables": [
-                    "EnergyBar_MaxEnergy"
-                  ]
-                }
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"2055743569\">Mar_7th_10_Enhance</a>",
-                  "valuePerStack": {
-                    "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (0.8) || RETURN",
-                      "displayLines": "0.8",
-                      "constants": [],
-                      "variables": [
-                        0.8
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

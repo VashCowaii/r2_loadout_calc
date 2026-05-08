@@ -361,9 +361,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -687,9 +685,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -697,9 +693,7 @@ const configAbility = {
       "modifierFlags": [
         "EnduranceLogicOnly",
         500
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -841,13 +835,14 @@ const configAbility = {
           ],
           "priorityLevel": -92
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1315509793\">Evernight_PointB2_EnterBattle</a>",
+      "latentQueue": [
+        "_Evernight_PL_Layer"
+      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -916,15 +911,14 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_Evernight_PL_Layer"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__531716506\">Evernight_Eidolon1_ListenDamage</a>",
+      "latentQueue": [
+        "_Evernight_PL_Layer"
+      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Anyone]: Any",
@@ -1103,16 +1097,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_Evernight_PL_Layer"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1433121158\">Evernight_Eidolon4_Aura</a>",
-      "stackData": [],
       "latentQueue": [
         "_Evernight_PL_Layer"
       ],
@@ -1149,7 +1138,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1327507720\">Evernight_Eidolon6_Aura</a>",
-      "stackData": [],
       "latentQueue": [
         "_Evernight_PL_Layer"
       ],
@@ -1178,6 +1166,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1224536114\">Evernight_ViewMode_Control</a>",
+      "latentQueue": [
+        "_Evernight_PL_Layer"
+      ],
       "execute": [
         {
           "eventTrigger": "Enter View-Mode [Anyone]",
@@ -1207,10 +1198,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "_Evernight_PL_Layer"
       ]
     },
     {
@@ -1268,9 +1255,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "targetObjectData": {

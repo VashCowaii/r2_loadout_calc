@@ -157,6 +157,13 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-615106680\">Modifier_Monster_W5_PamPart_DefenceDown</a>[<span class=\"descriptionNumberColor\">Sloppy</span>]",
       "stackType": "Replace",
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "DEF Reduction",
+      "statusName": "Sloppy",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -179,15 +186,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [],
-      "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-      "type": "Debuff",
-      "effectName": "DEF Reduction",
-      "statusName": "Sloppy"
+      ]
     }
   ]
 }

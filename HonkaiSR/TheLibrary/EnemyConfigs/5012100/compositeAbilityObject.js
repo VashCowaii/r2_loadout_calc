@@ -3,435 +3,15 @@ const compositeAbilityObject = {
   "fullCharacterName": 5012100,
   "trimCharacterName": 5012100,
   "abilityList": [
-    "5012100_Monster_W5_Magical_Ability01_Part02",
-    "5012100_Monster_W5_Magical_Ability01_Part01",
-    "5012100_Monster_W5_Magical_Ability03_Part01",
-    "5012100_Monster_W5_Magical_Ability02_Part01",
     "5012100_Monster_W5_Magical_ChangeToSun",
     "5012100_Monster_W5_Magical_Passive01",
+    "5012100_Monster_W5_Magical_Ability03_Part01",
+    "5012100_Monster_W5_Magical_Ability02_Part01",
+    "5012100_Monster_W5_Magical_Ability01_Part02",
+    "5012100_Monster_W5_Magical_Ability01_Part01",
     "5012100_Modifiers"
   ],
   "abilityObject": {
-    "5012100_Monster_W5_Magical_Ability01_Part02": {
-      "fileName": "5012100_Monster_W5_Magical_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Looped Event",
-          "maxLoops": 6,
-          "Event": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
-                },
-                "HitSplit": 0.1,
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Thunder",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "HitSplit": 0.4,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "5012100_Monster_W5_Magical_Ability01_Part01": {
-      "fileName": "5012100_Monster_W5_Magical_Ability01_Part01",
-      "childAbilityList": [
-        "5012100_Monster_W5_Magical_Ability01_Camera",
-        "5012100_Monster_W5_Magical_Ability01_Part01",
-        "5012100_Monster_W5_Magical_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Magical_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "Animation Event",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "state": "Skill01",
-          "passed": [
-            {
-              "name": "Animation Task"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "5012100_Monster_W5_Magical_Ability03_Part01": {
-      "fileName": "5012100_Monster_W5_Magical_Ability03_Part01",
-      "childAbilityList": [
-        "5012100_Monster_W5_Magical_Ability03_Camera",
-        "5012100_Monster_W5_Magical_Ability03_Part01"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "First Kiss ❤ Sunny Skies"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Deathrattle",
-          "value": 1
-        },
-        "Deleted bullshit",
-        {
-          "name": "Update Displayed Energy Bar",
-          "entityClass": "Enemy",
-          "trigger": "SpEff_Trigger"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"815099001\">Enemy_W5_Magical_DeathRattle_Sun</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            }
-          },
-          "casterAssign": "TargetSelf"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__815099001\">Enemy_W5_Magical_DeathRattle_Sun</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
-          "stackType": "Replace",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "Deathrattle"
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "CRIT DMG Boost"
-        }
-      ]
-    },
-    "5012100_Monster_W5_Magical_Ability02_Part01": {
-      "fileName": "5012100_Monster_W5_Magical_Ability02_Part01",
-      "childAbilityList": [
-        "5012100_Monster_W5_Magical_Ability02_Camera",
-        "5012100_Monster_W5_Magical_Ability02_Part01"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Gentle Rains ❤ How I Miss You"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Deathrattle",
-          "value": 1
-        },
-        "Deleted bullshit",
-        {
-          "name": "Update Displayed Energy Bar",
-          "entityClass": "Enemy",
-          "trigger": "SpEff_Trigger"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemies by Aggro OR Random}}"
-          },
-          "maxTargets": 1,
-          "ifTargetFound": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Thunder",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                  "displayLines": "{[Skill02[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[3]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
-              "duration": {
-                "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                "displayLines": "{[Skill02[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[1]]}"
-                ]
-              },
-              "baseChance": {
-                "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                "displayLines": "{[Skill02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill02[2]]}"
-                ]
-              },
-              "valuePerStack": {
-                "Modifier_Electric_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                  "displayLines": "{[Skill02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill02[0]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": 4,
-          "Event": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "ifTargetFound": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Thunder",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-                      "displayLines": "{[Skill02[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[3]]}"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
-                  "duration": {
-                    "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                    "displayLines": "{[Skill02[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[1]]}"
-                    ]
-                  },
-                  "baseChance": {
-                    "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-                    "displayLines": "{[Skill02[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill02[2]]}"
-                    ]
-                  },
-                  "valuePerStack": {
-                    "Modifier_Electric_DamagePercentage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "targetIsVariable": true
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-813387797\">Enemy_W5_Magical_DeathRattle_Rain</a>[<span class=\"descriptionNumberColor\">SPD Reduction</span>]",
-          "stackType": "Replace",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || INVERT || RETURN",
-                    "displayLines": "-MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "SPD Reduction",
-          "statusName": "SPD Reduction"
-        }
-      ]
-    },
     "5012100_Monster_W5_Magical_ChangeToSun": {
       "fileName": "5012100_Monster_W5_Magical_ChangeToSun",
       "abilityType": null,
@@ -686,11 +266,429 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
+    },
+    "5012100_Monster_W5_Magical_Ability03_Part01": {
+      "fileName": "5012100_Monster_W5_Magical_Ability03_Part01",
+      "childAbilityList": [
+        "5012100_Monster_W5_Magical_Ability03_Camera",
+        "5012100_Monster_W5_Magical_Ability03_Part01"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "First Kiss ❤ Sunny Skies"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Deathrattle",
+          "value": 1
+        },
+        "Deleted bullshit",
+        {
+          "name": "Update Displayed Energy Bar",
+          "entityClass": "Enemy",
+          "trigger": "SpEff_Trigger"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"815099001\">Enemy_W5_Magical_DeathRattle_Sun</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
+            "displayLines": "{[Skill03[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill03[1]]}"
+            ]
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+              "displayLines": "{[Skill03[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            }
+          },
+          "casterAssign": "TargetSelf"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__815099001\">Enemy_W5_Magical_DeathRattle_Sun</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
+          "stackType": "Replace",
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "Deathrattle"
+          ],
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "CRIT DMG Boost",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "5012100_Monster_W5_Magical_Ability02_Part01": {
+      "fileName": "5012100_Monster_W5_Magical_Ability02_Part01",
+      "childAbilityList": [
+        "5012100_Monster_W5_Magical_Ability02_Camera",
+        "5012100_Monster_W5_Magical_Ability02_Part01"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Gentle Rains ❤ How I Miss You"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Deathrattle",
+          "value": 1
+        },
+        "Deleted bullshit",
+        {
+          "name": "Update Displayed Energy Bar",
+          "entityClass": "Enemy",
+          "trigger": "SpEff_Trigger"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemies by Aggro OR Random}}"
+          },
+          "maxTargets": 1,
+          "ifTargetFound": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
+                  "displayLines": "{[Skill02[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill02[3]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
+              "duration": {
+                "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+                "displayLines": "{[Skill02[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill02[1]]}"
+                ]
+              },
+              "baseChance": {
+                "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
+                "displayLines": "{[Skill02[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill02[2]]}"
+                ]
+              },
+              "valuePerStack": {
+                "Modifier_Electric_DamagePercentage": {
+                  "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                  "displayLines": "{[Skill02[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill02[0]]}"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": 4,
+          "Event": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 1,
+              "ifTargetFound": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Thunder",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
+                      "displayLines": "{[Skill02[3]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill02[3]]}"
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1935319413\">Standard_DOT_Electric</a>[<span class=\"descriptionNumberColor\">Shock</span>]",
+                  "duration": {
+                    "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+                    "displayLines": "{[Skill02[1]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill02[1]]}"
+                    ]
+                  },
+                  "baseChance": {
+                    "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
+                    "displayLines": "{[Skill02[2]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill02[2]]}"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "Modifier_Electric_DamagePercentage": {
+                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                      "displayLines": "{[Skill02[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill02[0]]}"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Attack End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "targetIsVariable": true
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-813387797\">Enemy_W5_Magical_DeathRattle_Rain</a>[<span class=\"descriptionNumberColor\">SPD Reduction</span>]",
+          "stackType": "Replace",
+          "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "SPD Reduction",
+          "statusName": "SPD Reduction",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || INVERT || RETURN",
+                    "displayLines": "-MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "5012100_Monster_W5_Magical_Ability01_Part02": {
+      "fileName": "5012100_Monster_W5_Magical_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Looped Event",
+          "maxLoops": 6,
+          "Event": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                  "displayLines": "{[Skill01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill01[0]]}"
+                  ]
+                },
+                "HitSplit": 0.1,
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "HitSplit": 0.4,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "5012100_Monster_W5_Magical_Ability01_Part01": {
+      "fileName": "5012100_Monster_W5_Magical_Ability01_Part01",
+      "childAbilityList": [
+        "5012100_Monster_W5_Magical_Ability01_Camera",
+        "5012100_Monster_W5_Magical_Ability01_Part01",
+        "5012100_Monster_W5_Magical_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W5_Magical_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        {
+          "name": "Animation Event",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "state": "Skill01",
+          "passed": [
+            {
+              "name": "Animation Task"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
     },
     "5012100_Modifiers": {
       "fileName": "5012100_Modifiers",
@@ -756,9 +754,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": 100
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -792,6 +788,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "description": "When receiving a killing blow, uses \"First Kiss ❤ Sunny Skies.\" At the start of the turn, enters the \"Rainy Day\" state.",
+          "type": "Other",
+          "effectName": "Sunny Day",
+          "statusName": "Sunny Day",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -803,11 +803,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "When receiving a killing blow, uses \"First Kiss ❤ Sunny Skies.\" At the start of the turn, enters the \"Rainy Day\" state.",
-          "type": "Other",
-          "effectName": "Sunny Day",
-          "statusName": "Sunny Day"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -815,6 +811,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
+          "description": "Uses \"Gentle Rains ❤ How I Miss You\" when receiving a killing blow.",
+          "type": "Other",
+          "effectName": "Rainy Day",
+          "statusName": "Rainy Day",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -835,13 +835,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Uses \"Gentle Rains ❤ How I Miss You\" when receiving a killing blow.",
-          "type": "Other",
-          "effectName": "Rainy Day",
-          "statusName": "Rainy Day"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1069,9 +1063,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Enter Battle"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

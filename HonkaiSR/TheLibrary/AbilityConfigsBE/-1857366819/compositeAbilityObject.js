@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": -1857366819,
   "trimCharacterName": -1857366819,
   "abilityList": [
+    "-1857366819_Modifiers",
     "-1857366819_TrialPlayer_1101212_Jingliu_Ability",
     "-1857366819_TrialPlayer_1101208_FuXuan_Ability",
     "-1857366819_TrialPlayer_1021111_Luka_TalkAbility_Battle2_Final",
@@ -23,10 +24,120 @@ const compositeAbilityObject = {
     "-1857366819_TrialPlayer_AggroUP_Ability",
     "-1857366819_TrialPlayer_NoBP_Ability",
     "-1857366819_TrialPlayer_CTRLResist",
-    "-1857366819_TrialPlayer_SpeedUp_Ability",
-    "-1857366819_Modifiers"
+    "-1857366819_TrialPlayer_SpeedUp_Ability"
   ],
   "abilityObject": {
+    "-1857366819_Modifiers": {
+      "fileName": "-1857366819_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-934258987\">TrialPlayer_DanHengIL_20231052_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "Adjust Variable Value",
+                  "adjustmentType": "Add to Value (Default)",
+                  "variableName": "BPExChange",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "value": 3
+                },
+                {
+                  "name": "Modify Skill-Point Extras",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "function": "Set",
+                  "value": {
+                    "operator": "Variables[0] (BPExChange) || RETURN",
+                    "displayLines": "BPExChange",
+                    "constants": [],
+                    "variables": [
+                      "BPExChange"
+                    ]
+                  },
+                  "silentChange": true
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": 3,
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "maximum": 3
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1738340073\">DanHengIL_BPCost_3_Special</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Switch to Action/Ability Context",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
+                },
+                {
+                  "name": "Update Energy Value",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "value": 0,
+                  "adjustment": "Set",
+                  "ignoreBlock": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1597361272\">TrialPlayer_Standard_Disable_Ultimate_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Disable Abilities",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTypes": [
+                    "Ultimate"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "-1857366819_TrialPlayer_1101212_Jingliu_Ability": {
       "fileName": "-1857366819_TrialPlayer_1101212_Jingliu_Ability",
       "abilityType": null,
@@ -49,6 +160,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-800068298\">MTrialPlayer_1101212_Jingliu_Ability</a>",
+          "stackData": [
+            "MDF_ActionTime"
+          ],
           "execute": [
             {
               "eventTrigger": "Action End [Owner]",
@@ -79,11 +193,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_ActionTime"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -124,9 +234,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -195,9 +303,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Being Attacked End [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -284,6 +390,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__535355805\">TrialPlayer_101111_Luka_LimboAddAttack2</a>",
+          "stackData": [
+            "MDF_AttackRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Any",
@@ -412,11 +521,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AttackRatio"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -471,6 +576,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__714755645\">TrialPlayer_101111_Luka_LimboAddAttack</a>",
+          "stackData": [
+            "MDF_AttackRatio"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -502,11 +610,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_AttackRatio"
-          ],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -965,9 +1069,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1041,11 +1143,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_138) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_138",
+                    "operator": "Variables[0] (UnusedUnderThisBase_5164) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_5164",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_138"
+                      "UnusedUnderThisBase_5164"
                     ]
                   },
                   "addStacksPerTrigger": 7
@@ -1069,11 +1171,11 @@ const compositeAbilityObject = {
                     "variables": []
                   },
                   "maximum": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_138) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_138",
+                    "operator": "Variables[0] (UnusedUnderThisBase_5164) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_5164",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_138"
+                      "UnusedUnderThisBase_5164"
                     ]
                   },
                   "assignState": "True",
@@ -1150,9 +1252,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1294,9 +1394,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1620,9 +1718,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1805,9 +1901,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1850,9 +1944,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2037,9 +2129,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2087,9 +2177,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2131,9 +2219,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -2175,127 +2261,12 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
-    },
-    "-1857366819_Modifiers": {
-      "fileName": "-1857366819_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-934258987\">TrialPlayer_DanHengIL_20231052_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Adjust Variable Value",
-                  "adjustmentType": "Add to Value (Default)",
-                  "variableName": "BPExChange",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "value": 3
-                },
-                {
-                  "name": "Modify Skill-Point Extras",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "function": "Set",
-                  "value": {
-                    "operator": "Variables[0] (BPExChange) || RETURN",
-                    "displayLines": "BPExChange",
-                    "constants": [],
-                    "variables": [
-                      "BPExChange"
-                    ]
-                  },
-                  "silentChange": true
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": 3,
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "maximum": 3
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1738340073\">DanHengIL_BPCost_3_Special</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Switch to Action/Ability Context",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  }
-                },
-                {
-                  "name": "Update Energy Value",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "value": 0,
-                  "adjustment": "Set",
-                  "ignoreBlock": true
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1597361272\">TrialPlayer_Standard_Disable_Ultimate_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Disable Abilities",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTypes": [
-                    "Ultimate"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": []
     }
   }
 }

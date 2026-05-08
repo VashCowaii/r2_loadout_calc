@@ -3,10 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": "Aventurine",
   "trimCharacterName": "Aventurine",
   "abilityList": [
+    "Aventurine_Modifiers",
     "Aventurine_Aventurine_Trace02",
-    "Aventurine_Aventurine_TechniqueInLevel_02",
     "Aventurine_Aventurine_TechniqueInLevel_01",
     "Aventurine_Aventurine_TechniqueInLevel_00",
+    "Aventurine_LocalPlayer_StandardAbility_AttackBreak",
+    "Aventurine_LocalPlayer_Aventurine_TechniqueUsage",
+    "Aventurine_LocalPlayer_Aventurine_NormalAtk01",
     "Aventurine_Aventurine_TechniqueInLevel",
     "Aventurine_Aventurine_PassiveAbility01_InsertAbilityPhase02",
     "Aventurine_Aventurine_PassiveAbility01_InsertAbility",
@@ -18,10 +21,3138 @@ const compositeAbilityObject = {
     "Aventurine_Aventurine_Ability02_Part01",
     "Aventurine_Aventurine_Ability01_Part02",
     "Aventurine_Aventurine_Ability01_Part01",
-    "Aventurine_Modifiers",
+    "Aventurine_Aventurine_TechniqueInLevel_02",
     "Aventurine_Functions"
   ],
   "abilityObject": {
+    "Aventurine_Modifiers": {
+      "fileName": "Aventurine_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1828815823\">ADV_StageAbility_Maze_Aventurine_SSR_2</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-343712064\">ADV_StageAbility_Maze_Aventurine_SR_2</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-492169293\">ADV_StageAbility_Maze_Aventurine_R_2</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-172812292\">ADV_StageAbility_Maze_Aventurine_SSR</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__543061849\">ADV_StageAbility_Maze_Aventurine_SR</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-685644514\">ADV_StageAbility_Maze_Aventurine_R</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-314126453\">Aventurine_Maze_Defence</a>[<span class=\"descriptionNumberColor\">The Red or the Black</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>",
+          "type": "Buff",
+          "effectName": "DEF Boost",
+          "statusName": "The Red or the Black",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "MDF_CurrentDefence2",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__462082235\">Aventurine_ResistCtrlCD</a>[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "The Talent's Crowd Control debuff resist effect cannot be triggered yet.",
+          "type": "Other",
+          "statusName": "Shot Loaded Right",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-2133893396\">Aventurine_ResistCtrl</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2133893396\">Aventurine_ResistCtrl</a>",
+          "modifierFlags": [
+            "Endurance"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Debuff Immunity[?]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Modifier Has Flag",
+                        "flagName": "STAT_CTRL"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"462082235\">Aventurine_ResistCtrlCD</a>[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"462082235\">Aventurine_ResistCtrlCD</a>[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (2) || RETURN",
+                        "displayLines": "2",
+                        "constants": [],
+                        "variables": [
+                          2
+                        ]
+                      }
+                    },
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-545204368\">Aventurine_PointB3_ShieldMark</a>",
+          "stackType": "ReplaceByCaster"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2007691702\">Aventurine_Eidolon1_Status</a>[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]",
+          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "CRIT DMG Boost",
+          "statusName": "Prisoner's Dilemma",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "After a teammate with \"Fortified Wager\" uses Follow-Up ATK, Aventurine gains 1 \"Blind Bet.\" This effect can be triggered <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> more time(s).",
+          "type": "Other",
+          "statusName": "Bingo!",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1822642729\">Aventurine_Trace03_AddShield</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1927939151\">Aventurine_Trace03_Trigger</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "Attack Action Completed [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "MDF_CurrentDefence2",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "flagName": "Shield",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Target Has Lowest/Highest Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "partOf": {
+                              "name": "Target Sequence",
+                              "Sequence": [
+                                {
+                                  "name": "Target Name",
+                                  "target": "{{Player Team All}}"
+                                },
+                                {
+                                  "name": "Target Filter",
+                                  "conditions": {
+                                    "name": "Has Flag",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Parameter Target}}"
+                                    },
+                                    "flagName": "Shield",
+                                    "invertCondition": true
+                                  }
+                                }
+                              ]
+                            },
+                            "compareValue": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                            "minOrMax": "Min"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "flagName": "Shield"
+                          },
+                          {
+                            "name": "Target Has Lowest/Highest Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "partOf": {
+                              "name": "Target Name",
+                              "target": "{{Player Team All}}"
+                            },
+                            "compareValue": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;",
+                            "minOrMax": "Min"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-545204368\">Aventurine_PointB3_ShieldMark</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-969049614\">Aventurine_RecordCurrentShield</a>"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                      "duration": {
+                        "operator": "Variables[0] (3) || RETURN",
+                        "displayLines": "3",
+                        "constants": [],
+                        "variables": [
+                          3
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_InitShieldValue": {
+                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.072) || MUL || Variables[2] (96) || ADD || RETURN",
+                          "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)",
+                          "constants": [],
+                          "variables": [
+                            "MDF_CurrentDefence2",
+                            0.072,
+                            96
+                          ]
+                        },
+                        "MDF_MaxShieldRatio": {
+                          "operator": "Variables[0] (2) || RETURN",
+                          "displayLines": "2",
+                          "constants": [],
+                          "variables": [
+                            2
+                          ]
+                        },
+                        "MDF_ForceShield": {
+                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
+                          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
+                          "constants": [],
+                          "variables": [
+                            "MDF_CurrentDefence2",
+                            0.24,
+                            320
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                      "duration": 3,
+                      "valuePerStack": {
+                        "MDF_InitShieldValue": {
+                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.072) || MUL || Variables[2] (96) || ADD || RETURN",
+                          "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)",
+                          "constants": [],
+                          "variables": [
+                            "MDF_CurrentDefence2",
+                            0.072,
+                            96
+                          ]
+                        },
+                        "MDF_MaxShieldRatio": {
+                          "operator": "Variables[0] (2) || RETURN",
+                          "displayLines": "2",
+                          "constants": [],
+                          "variables": [
+                            2
+                          ]
+                        },
+                        "MDF_ForceShield": {
+                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
+                          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
+                          "constants": [],
+                          "variables": [
+                            "MDF_CurrentDefence2",
+                            0.24,
+                            320
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-545204368\">Aventurine_PointB3_ShieldMark</a>"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-969049614\">Aventurine_RecordCurrentShield</a>"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                      "duration": 3,
+                      "valuePerStack": {
+                        "MDF_InitShieldValue": {
+                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.072) || MUL || Variables[2] (96) || ADD || RETURN",
+                          "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)",
+                          "constants": [],
+                          "variables": [
+                            "MDF_CurrentDefence2",
+                            0.072,
+                            96
+                          ]
+                        },
+                        "MDF_MaxShieldRatio": {
+                          "operator": "Variables[0] (2) || RETURN",
+                          "displayLines": "2",
+                          "constants": [],
+                          "variables": [
+                            2
+                          ]
+                        },
+                        "MDF_ForceShield": {
+                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
+                          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
+                          "constants": [],
+                          "variables": [
+                            "MDF_CurrentDefence2",
+                            0.24,
+                            320
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "searchRandom": true,
+                  "ifTargetFound": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-545204368\">Aventurine_PointB3_ShieldMark</a>"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
+                        "invertCondition": true
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Is Part Of",
+                            "of": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "mustBeAlive2": true
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "MDF_TeammateCount1",
+                              "value": 1
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Random Event",
+                              "odds": [
+                                0.2,
+                                0.2,
+                                0.2
+                              ],
+                              "execute": [
+                                {
+                                  "name": "Define Custom Variable",
+                                  "variableName": "MDF_TeammateCount1",
+                                  "value": 2
+                                },
+                                {
+                                  "name": "Define Custom Variable",
+                                  "variableName": "MDF_TeammateCount1",
+                                  "value": 3
+                                },
+                                {
+                                  "name": "Define Custom Variable",
+                                  "variableName": "MDF_TeammateCount1",
+                                  "value": 4
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
+                      "valuePerStack": {
+                        "MDF_CanTriggerShieldEffect": 0,
+                        "MDF_ResistanceRatio": {
+                          "operator": "Variables[0] (0.5) || RETURN",
+                          "displayLines": "0.5",
+                          "constants": [],
+                          "variables": [
+                            0.5
+                          ]
+                        },
+                        "MDF_TeammateCount": {
+                          "operator": "Variables[0] (MDF_TeammateCount1) || RETURN",
+                          "displayLines": "MDF_TeammateCount1",
+                          "constants": [],
+                          "variables": [
+                            "MDF_TeammateCount1"
+                          ]
+                        },
+                        "MDF_CritDmg1": {
+                          "operator": "Variables[0] (0.2) || RETURN",
+                          "displayLines": "0.2",
+                          "constants": [],
+                          "variables": [
+                            0.2
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Owner]: End",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1211629419\">Aventurine_StackableShield</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "Shield"
+          ],
+          "stackData": [
+            "MDF_InitShieldValue",
+            "MDF_MaxShieldRatio",
+            "MDF_ForceShield"
+          ],
+          "type": "Buff",
+          "effectName": "Shield",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Shield",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2007691702\">Aventurine_Eidolon1_Status</a>[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2127014376\">Aventurine_Ability02_ShieldEffect3</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2133893396\">Aventurine_ResistCtrl</a>"
+                },
+                {
+                  "name": "Set Hit-Class",
+                  "reset": true
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Set Hit-Class"
+                },
+                {
+                  "name": "Stack Shield",
+                  "stackValue": {
+                    "operator": "Variables[0] (MDF_InitShieldValue) || RETURN",
+                    "displayLines": "MDF_InitShieldValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_InitShieldValue"
+                    ]
+                  },
+                  "stackLimit": {
+                    "operator": "Variables[0] (MDF_ForceShield) || Variables[1] (MDF_MaxShieldRatio) || MUL || RETURN",
+                    "displayLines": "(MDF_ForceShield * MDF_MaxShieldRatio)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_ForceShield",
+                      "MDF_MaxShieldRatio"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (0.5) || RETURN",
+                    "displayLines": "0.5",
+                    "constants": [],
+                    "variables": [
+                      0.5
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "mustBeAlive2": true
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"462082235\">Aventurine_ResistCtrlCD</a>[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-2133893396\">Aventurine_ResistCtrl</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_InsertLeftValue",
+                  "value": {
+                    "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
+                    "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_InsertLeftValue",
+                      "MDF_InsertAttackCount"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Trace Activated",
+                        "conditionList": "Bingo!"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_InsertLeftValue",
+                        "compareType": ">",
+                        "value2": 0
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
+                          "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)",
+                          "constants": [],
+                          "variables": [
+                            "MDF_InsertLeftValue",
+                            "MDF_InsertAttackCount"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "mustBeAlive2": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Override Modifier Name",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Override Modifier Name",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1240934840\">Aventurine_RemoveAttackValue</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_Fatigue"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>.",
+          "type": "Buff",
+          "statusName": "Stag Hunt Game",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AttackAddRatio) || RETURN",
+                    "displayLines": "MDF_AttackAddRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AttackAddRatio"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1670112654\">Aventurine_Eidolon6</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier is Added [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Modifier Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "flagName": "Shield"
+                      },
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_ShieldCount",
+                      "value": 0
+                    },
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                      },
+                      "searchRandom": true,
+                      "ifTargetFound": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "flagName": "Shield"
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "MDF_ShieldCount",
+                              "value": {
+                                "operator": "Variables[0] (MDF_ShieldCount) || Constants[0] (1) || ADD || RETURN",
+                                "displayLines": "(MDF_ShieldCount + 1)",
+                                "constants": [
+                                  1
+                                ],
+                                "variables": [
+                                  "MDF_ShieldCount"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_ShieldCount",
+                        "compareType": ">",
+                        "value2": 0,
+                        "contextScope": "ContextModifier"
+                      },
+                      "passed": [
+                        {
+                          "name": "Declare Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "variableName": "_AttackAddedRatio",
+                          "value": {
+                            "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
+                            "displayLines": "(MDF_ShieldCount * 0.5)",
+                            "constants": [],
+                            "variables": [
+                              "MDF_ShieldCount",
+                              0.5
+                            ]
+                          }
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "_AttackAddedRatio",
+                            "compareType": ">=",
+                            "value2": {
+                              "operator": "Variables[0] (1.5) || RETURN",
+                              "displayLines": "1.5",
+                              "constants": [],
+                              "variables": [
+                                1.5
+                              ]
+                            }
+                          },
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
+                              "valuePerStack": {
+                                "MDF_AttackAddRatio": {
+                                  "operator": "Variables[0] (1.5) || RETURN",
+                                  "displayLines": "1.5",
+                                  "constants": [],
+                                  "variables": [
+                                    1.5
+                                  ]
+                                }
+                              }
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
+                              "valuePerStack": {
+                                "MDF_AttackAddRatio": {
+                                  "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
+                                  "displayLines": "(MDF_ShieldCount * 0.5)",
+                                  "constants": [],
+                                  "variables": [
+                                    "MDF_ShieldCount",
+                                    0.5
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Modifier Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "flagName": "Shield"
+                      },
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_ShieldCount",
+                      "value": 0
+                    },
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                      },
+                      "searchRandom": true,
+                      "ifTargetFound": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "flagName": "Shield"
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "MDF_ShieldCount",
+                              "value": {
+                                "operator": "Variables[0] (MDF_ShieldCount) || Constants[0] (1) || ADD || RETURN",
+                                "displayLines": "(MDF_ShieldCount + 1)",
+                                "constants": [
+                                  1
+                                ],
+                                "variables": [
+                                  "MDF_ShieldCount"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_ShieldCount",
+                        "compareType": ">",
+                        "value2": 0,
+                        "contextScope": "ContextModifier"
+                      },
+                      "passed": [
+                        {
+                          "name": "Declare Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "variableName": "_AttackAddedRatio",
+                          "value": {
+                            "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
+                            "displayLines": "(MDF_ShieldCount * 0.5)",
+                            "constants": [],
+                            "variables": [
+                              "MDF_ShieldCount",
+                              0.5
+                            ]
+                          }
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "_AttackAddedRatio",
+                            "compareType": ">=",
+                            "value2": {
+                              "operator": "Variables[0] (1.5) || RETURN",
+                              "displayLines": "1.5",
+                              "constants": [],
+                              "variables": [
+                                1.5
+                              ]
+                            }
+                          },
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
+                              "valuePerStack": {
+                                "MDF_AttackAddRatio": {
+                                  "operator": "Variables[0] (1.5) || RETURN",
+                                  "displayLines": "1.5",
+                                  "constants": [],
+                                  "variables": [
+                                    1.5
+                                  ]
+                                }
+                              }
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
+                              "valuePerStack": {
+                                "MDF_AttackAddRatio": {
+                                  "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
+                                  "displayLines": "(MDF_ShieldCount * 0.5)",
+                                  "constants": [],
+                                  "variables": [
+                                    "MDF_ShieldCount",
+                                    0.5
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1728845008\">Aventurine_Eidolon4_CountDown</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1636557416\">Aventurine_Eidolon4</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1636557416\">Aventurine_Eidolon4</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1245057354\">Aventurine_Eidolon2_Mark</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1438365222\">Aventurine_Eidolon2_ResistanceDown</a>[<span class=\"descriptionNumberColor\">Bounded Rationality</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "All-Type RES Reduction",
+          "statusName": "Bounded Rationality",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
+          "type": "Buff",
+          "statusName": "Leverage",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Multipler",
+                  "value": {
+                    "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_PropertyValue) || Constants[0] (0.01) || MUL || PARAM_1 || FUNCTION || RETURN",
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_PropertyValue * 0.01))",
+                    "constants": [
+                      0.01
+                    ],
+                    "variables": [
+                      "FLOOR",
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_PropertyValue2",
+                  "value": {
+                    "operator": "Variables[0] (MDF_Multipler) || Variables[1] (0.02) || MUL || RETURN",
+                    "displayLines": "(MDF_Multipler * 0.02)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_Multipler",
+                      0.02
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_PropertyValue2",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (0.48) || RETURN",
+                      "displayLines": "0.48",
+                      "constants": [],
+                      "variables": [
+                        0.48
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_PropertyValue2",
+                      "value": {
+                        "operator": "Variables[0] (0.48) || RETURN",
+                        "displayLines": "0.48",
+                        "constants": [],
+                        "variables": [
+                          0.48
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateConverted</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
+                    "displayLines": "MDF_PropertyValue2",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue2"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1167695204\">Aventurine_Trace01</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-741151706\">Aventurine_Trace01_Sub</a>"
+                }
+              ]
+            }
+          ],
+          "modifierFunctions": [
+            {
+              "name": "CharacterFunctions",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-741151706\">Aventurine_Trace01_Sub</a>",
+              "parse": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_CurrentDefence",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_CurrentDefenceConvert",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFConverted</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_CurrentDefence2",
+                  "value": {
+                    "operator": "Variables[0] (MDF_CurrentDefence) || Variables[1] (MDF_CurrentDefenceConvert) || SUB || RETURN",
+                    "displayLines": "(MDF_CurrentDefence - MDF_CurrentDefenceConvert)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_CurrentDefence",
+                      "MDF_CurrentDefenceConvert"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_CurrentDefence2",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (1600) || Constants[0] (100) || ADD || RETURN",
+                      "displayLines": "(1600 + 100)",
+                      "constants": [
+                        100
+                      ],
+                      "variables": [
+                        1600
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]",
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (1600) || SUB || RETURN",
+                              "displayLines": "(MDF_CurrentDefence2 - 1600)",
+                              "constants": [],
+                              "variables": [
+                                "MDF_CurrentDefence2",
+                                1600
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]",
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (1600) || SUB || RETURN",
+                              "displayLines": "(MDF_CurrentDefence2 - 1600)",
+                              "constants": [],
+                              "variables": [
+                                "MDF_CurrentDefence2",
+                                1600
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-741151706\">Aventurine_Trace01_Sub</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__674084232\">Aventurine_Passive_AddDefence</a>[<span class=\"descriptionNumberColor\">Unexpected Hanging Paradox</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_DefencePercentage</span>",
+          "type": "Buff",
+          "effectName": "DEF Boost",
+          "statusName": "Unexpected Hanging Paradox",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "MDF_BaseDefence",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFBase</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_DefencePercentage",
+                  "value": {
+                    "operator": "Variables[0] (0.4) || RETURN",
+                    "displayLines": "0.4",
+                    "constants": [],
+                    "variables": [
+                      0.4
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (0.4) || RETURN",
+                    "displayLines": "0.4",
+                    "constants": [],
+                    "variables": [
+                      0.4
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-839248266\">Aventurine_Ability03_CritDmgIncrease</a>[<span class=\"descriptionNumberColor\">Unnerved</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increase the CRIT DMG dealt by allies to this unit by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "The received CRIT DMG increases",
+          "statusName": "Unnerved",
+          "execute": [
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-989533278\">Aventurine_Ability03_CoinAdd</a>",
+          "type": "Buff",
+          "effectName": "Blind Bet received: <unbreak>#1[i]</unbreak> Point(s)",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Variable with Random Value",
+                  "scope": "ContextModifier",
+                  "integer": true,
+                  "variableName": "MDF_Coin",
+                  "min": 1,
+                  "max": {
+                    "operator": "Variables[0] (7) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(7 + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      7
+                    ]
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>",
+                  "addStacksPerTrigger": {
+                    "operator": "Variables[0] (MDF_Coin) || RETURN",
+                    "displayLines": "MDF_Coin",
+                    "constants": [],
+                    "variables": [
+                      "MDF_Coin"
+                    ]
+                  }
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Gains a Shield that absorbs DMG and increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. While the Shield persists or before the effect disappears, enemy attacks will not reduce the Shielded characters' HP. After these characters receive DMG, Aventurine receives 1 point of Blind Bet.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Fortified Wager: Clubs",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2127014376\">Aventurine_Ability02_ShieldEffect3</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Gains a Shield that absorbs DMG and increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. While the Shield persists or before the effect disappears, enemy attacks will not reduce the Shielded characters' HP. After these characters receive DMG, Aventurine receives 1 point of Blind Bet.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Fortified Wager: Diamonds",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Gains a Shield that absorbs DMG and increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. While the Shield persists or before the effect disappears, enemy attacks will not reduce the Shielded characters' HP. After these characters receive DMG, Aventurine receives 1 point of Blind Bet.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Fortified Wager: Hearts",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Gains a Shield that absorbs DMG and increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. While the Shield persists or before the effect disappears, enemy attacks will not reduce the Shielded characters' HP. After these characters receive DMG, Aventurine receives 2 points of Blind Bet.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Fortified Wager: Spades",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1566932811\">Aventurine_Ability02_ShieldEffect</a>",
+          "stackType": "ReplaceByCaster",
+          "stackData": [
+            "MDF_CanTriggerShieldEffect",
+            "MDF_ResistanceRatio",
+            "MDF_TeammateCount",
+            "MDF_CritDmg1"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_TeammateCount",
+                    "compareType": "=",
+                    "value2": 1,
+                    "contextScope": "ContextModifier"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "MDF_CanTriggerShieldEffect",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    },
+                    {
+                      "name": "Define Modifier-Specific Variable",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                      "variableName": "MDF_PropertyValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
+                        "displayLines": "MDF_ResistanceRatio",
+                        "constants": [],
+                        "variables": [
+                          "MDF_ResistanceRatio"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Override Modifier Name",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"2127014376\">Aventurine_Ability02_ShieldEffect3</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Eidolon Activated",
+                        "eidolon": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "Stack Target Stat Value",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                          "value": {
+                            "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
+                            "displayLines": "MDF_CritDmg1",
+                            "constants": [],
+                            "variables": [
+                              "MDF_CritDmg1"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-2007691702\">Aventurine_Eidolon1_Status</a>[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]",
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
+                              "displayLines": "MDF_CritDmg1",
+                              "constants": [],
+                              "variables": [
+                                "MDF_CritDmg1"
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Eidolon Activated",
+                        "eidolon": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "Stack Target Stat Value",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                          "value": {
+                            "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
+                            "displayLines": "MDF_CritDmg1",
+                            "constants": [],
+                            "variables": [
+                              "MDF_CritDmg1"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-2007691702\">Aventurine_Eidolon1_Status</a>[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]",
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
+                              "displayLines": "MDF_CritDmg1",
+                              "constants": [],
+                              "variables": [
+                                "MDF_CritDmg1"
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "MDF_TeammateCount",
+                        "compareType": "=",
+                        "value2": 2,
+                        "contextScope": "ContextModifier"
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value1": "MDF_CanTriggerShieldEffect",
+                            "compareType": "=",
+                            "value2": 1
+                          }
+                        },
+                        {
+                          "name": "Define Modifier-Specific Variable",
+                          "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                          "variableName": "MDF_PropertyValue",
+                          "value": {
+                            "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
+                            "displayLines": "MDF_ResistanceRatio",
+                            "constants": [],
+                            "variables": [
+                              "MDF_ResistanceRatio"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Override Modifier Name",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                          "modifierNameUpdate": "<a class=\"gModGreen\" id=\"2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"2127014376\">Aventurine_Ability02_ShieldEffect3</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]"
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value1": "MDF_TeammateCount",
+                            "compareType": "=",
+                            "value2": 3,
+                            "contextScope": "ContextModifier"
+                          },
+                          "passed": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Compare: Variable",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
+                                "value1": "MDF_CanTriggerShieldEffect",
+                                "compareType": "=",
+                                "value2": 1
+                              }
+                            },
+                            {
+                              "name": "Define Modifier-Specific Variable",
+                              "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                              "variableName": "MDF_PropertyValue",
+                              "value": {
+                                "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
+                                "displayLines": "MDF_ResistanceRatio",
+                                "constants": [],
+                                "variables": [
+                                  "MDF_ResistanceRatio"
+                                ]
+                              }
+                            },
+                            {
+                              "name": "Override Modifier Name",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                              "modifierNameUpdate": "<a class=\"gModGreen\" id=\"2127014376\">Aventurine_Ability02_ShieldEffect3</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]"
+                            },
+                            {
+                              "name": "Remove Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
+                            },
+                            {
+                              "name": "Remove Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
+                            },
+                            {
+                              "name": "Remove Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Compare: Variable",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
+                                "value1": "MDF_CanTriggerShieldEffect",
+                                "compareType": "=",
+                                "value2": 1
+                              }
+                            },
+                            {
+                              "name": "Define Modifier-Specific Variable",
+                              "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                              "variableName": "MDF_PropertyValue",
+                              "value": {
+                                "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
+                                "displayLines": "MDF_ResistanceRatio",
+                                "constants": [],
+                                "variables": [
+                                  "MDF_ResistanceRatio"
+                                ]
+                              }
+                            },
+                            {
+                              "name": "Override Modifier Name",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                              "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1192823436\">Aventurine_Ability02_ForceContrlShield</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-346814527\">Aventurine_Passive_ShieldEnergy</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "CustomEvent_InfiniteRefresh"
+          ],
+          "stackLimit": 10,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "multiplier": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_Layer",
+                    "compareType": ">=",
+                    "value2": 7,
+                    "contextScope": "ContextModifier"
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (MDF_Layer) || RETURN",
+                        "displayLines": "MDF_Layer",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Layer"
+                        ]
+                      },
+                      "maximum": 7,
+                      "assignState": "True",
+                      "priorState": "Active",
+                      "bar#": 2,
+                      "cooldown": 0
+                    },
+                    {
+                      "name": "Inject Ability Use",
+                      "condition": {
+                        "name": "Insert Ability Condition",
+                        "type": "AbilityOwnerInsertUnusedCount",
+                        "typeValue": 1
+                      },
+                      "abilityName": "Aventurine_PassiveAbility01_InsertAbility",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "priorityTag": "CharacterAttackFromSelf",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "abortFlags": [
+                        "DisableAction",
+                        "STAT_CTRL"
+                      ],
+                      "allowAbilityTriggers": false
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (MDF_Layer) || RETURN",
+                        "displayLines": "MDF_Layer",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Layer"
+                        ]
+                      },
+                      "maximum": 7,
+                      "assignState": "True",
+                      "priorState": "Normal",
+                      "bar#": 2,
+                      "cooldown": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Custom Event",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_Layer",
+                        "compareType": ">=",
+                        "value2": 7,
+                        "contextScope": "ContextModifier"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "flagName": "STAT_CTRL",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "flagName": "DisableAction",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Inject Ability Use",
+                      "condition": {
+                        "name": "Insert Ability Condition",
+                        "type": "AbilityOwnerInsertUnusedCount",
+                        "typeValue": 1
+                      },
+                      "abilityName": "Aventurine_PassiveAbility01_InsertAbility",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "priorityTag": "CharacterAttackFromSelf",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "abortFlags": [
+                        "DisableAction",
+                        "STAT_CTRL"
+                      ],
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_Layer",
+                        "compareType": ">=",
+                        "value2": 7,
+                        "contextScope": "ContextModifier"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "flagName": "STAT_CTRL",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "flagName": "DisableAction",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Modifier Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "flagName": "STAT_CTRL"
+                          },
+                          {
+                            "name": "Modifier Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "flagName": "DisableAction"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Inject Ability Use",
+                      "condition": {
+                        "name": "Insert Ability Condition",
+                        "type": "AbilityOwnerInsertUnusedCount",
+                        "typeValue": 1
+                      },
+                      "abilityName": "Aventurine_PassiveAbility01_InsertAbility",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "priorityTag": "CharacterAttackFromSelf",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "abortFlags": [
+                        "DisableAction",
+                        "STAT_CTRL"
+                      ],
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "New Enemy Wave",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_Layer",
+                        "compareType": ">=",
+                        "value2": 7,
+                        "contextScope": "ContextModifier"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "flagName": "STAT_CTRL",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "flagName": "DisableAction",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Inject Ability Use",
+                      "condition": {
+                        "name": "Insert Ability Condition",
+                        "type": "AbilityOwnerInsertUnusedCount",
+                        "typeValue": 1
+                      },
+                      "abilityName": "Aventurine_PassiveAbility01_InsertAbility",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "priorityTag": "CharacterAttackFromSelf",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "abortFlags": [
+                        "DisableAction",
+                        "STAT_CTRL"
+                      ],
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1431725730\">Aventurine_Passive_AddEnergyMark</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__890966085\">Aventurine_Passive_OnAfterBeingAttacked</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage End [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Trace Activated",
+                        "conditionList": "Bingo!"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Variable",
+                            "value1": "MDF_InsertAttackCount",
+                            "compareType": "<",
+                            "value2": {
+                              "operator": "Variables[0] (3) || RETURN",
+                              "displayLines": "3",
+                              "constants": [],
+                              "variables": [
+                                3
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Attack Type",
+                            "attackTypes": [
+                              "Follow-up"
+                            ]
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "MDF_IsInsert",
+                              "value": 1
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Attacked Start [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "mustBeAlive2": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1431725730\">Aventurine_Passive_AddEnergyMark</a>",
+                          "addStacksPerTrigger": {
+                            "operator": "Variables[0] (MDF_BlackJackEnergy) || Constants[0] (1) || ADD || RETURN",
+                            "displayLines": "(MDF_BlackJackEnergy + 1)",
+                            "constants": [
+                              1
+                            ],
+                            "variables": [
+                              "MDF_BlackJackEnergy"
+                            ]
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1431725730\">Aventurine_Passive_AddEnergyMark</a>",
+                          "addStacksPerTrigger": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack Start [Anyone]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_IsInsert",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "MDF_IsInsert",
+                        "compareType": "=",
+                        "value2": 1
+                      },
+                      {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "mustBeAlive2": true,
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_InsertAttackCount",
+                      "value": {
+                        "operator": "Variables[0] (MDF_InsertAttackCount) || Constants[0] (1) || ADD || RETURN",
+                        "displayLines": "(MDF_InsertAttackCount + 1)",
+                        "constants": [
+                          1
+                        ],
+                        "variables": [
+                          "MDF_InsertAttackCount"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
+                          "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)",
+                          "constants": [],
+                          "variables": [
+                            "MDF_InsertLeftValue",
+                            "MDF_InsertAttackCount"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>",
+                      "addStacksPerTrigger": 1
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_InsertAttackCount",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (3) || RETURN",
+                          "displayLines": "3",
+                          "constants": [],
+                          "variables": [
+                            3
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]"
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -100
+            },
+            {
+              "eventTrigger": "Being Attacked End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1431725730\">Aventurine_Passive_AddEnergyMark</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Modifier Values",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "valueType": "Layer",
+                      "variableName": "MDF_Layer2",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1431725730\">Aventurine_Passive_AddEnergyMark</a>",
+                      "multiplier": 1
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>",
+                      "addStacksPerTrigger": {
+                        "operator": "Variables[0] (MDF_Layer2) || RETURN",
+                        "displayLines": "MDF_Layer2",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Layer2"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1431725730\">Aventurine_Passive_AddEnergyMark</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-106868585\">Aventurine_Passive</a>",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_InsertAttackCount",
+                  "value": 0
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Trace Activated",
+                    "conditionList": "Bingo!"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
+                          "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)",
+                          "constants": [],
+                          "variables": [
+                            "MDF_InsertLeftValue",
+                            "MDF_InsertAttackCount"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1245057354\">Aventurine_Eidolon2_Mark</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_InsertAttackLimit",
+                  "value": {
+                    "operator": "Variables[0] (3) || RETURN",
+                    "displayLines": "3",
+                    "constants": [],
+                    "variables": [
+                      3
+                    ]
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"890966085\">Aventurine_Passive_OnAfterBeingAttacked</a>",
+                  "valuePerStack": {
+                    "MDF_BlackJackEnergy": {
+                      "operator": "Variables[0] (1) || RETURN",
+                      "displayLines": "1",
+                      "constants": [],
+                      "variables": [
+                        1
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 6
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1670112654\">Aventurine_Eidolon6</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"890966085\">Aventurine_Passive_OnAfterBeingAttacked</a>",
+                      "valuePerStack": {
+                        "MDF_BlackJackEnergy": {
+                          "operator": "Variables[0] (1) || RETURN",
+                          "displayLines": "1",
+                          "constants": [],
+                          "variables": [
+                            1
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Trace Activated",
+                        "conditionList": "Hot Hand"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Wave Count",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "variableName": "MDF_CurrentDefence2",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
+                    },
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-969049614\">Aventurine_RecordCurrentShield</a>"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
+                      "duration": {
+                        "operator": "Variables[0] (3) || RETURN",
+                        "displayLines": "3",
+                        "constants": [],
+                        "variables": [
+                          3
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_InitShieldValue": {
+                          "operator": "Variables[0] (1) || Variables[1] (MDF_CurrentDefence2) || Variables[2] (0.24) || MUL || Variables[3] (320) || ADD || MUL || RETURN",
+                          "displayLines": "(1 * ((MDF_CurrentDefence2 * 0.24) + 320))",
+                          "constants": [],
+                          "variables": [
+                            1,
+                            "MDF_CurrentDefence2",
+                            0.24,
+                            320
+                          ]
+                        },
+                        "MDF_MaxShieldRatio": {
+                          "operator": "Variables[0] (2) || RETURN",
+                          "displayLines": "2",
+                          "constants": [],
+                          "variables": [
+                            2
+                          ]
+                        },
+                        "MDF_ForceShield": {
+                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
+                          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
+                          "constants": [],
+                          "variables": [
+                            "MDF_CurrentDefence2",
+                            0.24,
+                            320
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      "searchRandom": true,
+                      "ifTargetFound": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
+                            "invertCondition": true
+                          },
+                          "passed": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Is Part Of",
+                                "of": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "mustBeAlive2": true
+                              },
+                              "passed": [
+                                {
+                                  "name": "Define Custom Variable",
+                                  "variableName": "MDF_TeammateCount1",
+                                  "value": 1
+                                }
+                              ],
+                              "failed": [
+                                {
+                                  "name": "Random Event",
+                                  "odds": [
+                                    0.2,
+                                    0.2,
+                                    0.2
+                                  ],
+                                  "execute": [
+                                    {
+                                      "name": "Define Custom Variable",
+                                      "variableName": "MDF_TeammateCount1",
+                                      "value": 2
+                                    },
+                                    {
+                                      "name": "Define Custom Variable",
+                                      "variableName": "MDF_TeammateCount1",
+                                      "value": 3
+                                    },
+                                    {
+                                      "name": "Define Custom Variable",
+                                      "variableName": "MDF_TeammateCount1",
+                                      "value": 4
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
+                              "valuePerStack": {
+                                "MDF_ResistanceRatio": {
+                                  "operator": "Variables[0] (0.5) || RETURN",
+                                  "displayLines": "0.5",
+                                  "constants": [],
+                                  "variables": [
+                                    0.5
+                                  ]
+                                },
+                                "MDF_TeammateCount": {
+                                  "operator": "Variables[0] (MDF_TeammateCount1) || RETURN",
+                                  "displayLines": "MDF_TeammateCount1",
+                                  "constants": [],
+                                  "variables": [
+                                    "MDF_TeammateCount1"
+                                  ]
+                                },
+                                "MDF_CritDmg1": {
+                                  "operator": "Variables[0] (0.2) || RETURN",
+                                  "displayLines": "0.2",
+                                  "constants": [],
+                                  "variables": [
+                                    0.2
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -79
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "Aventurine_Aventurine_Trace02": {
       "fileName": "Aventurine_Aventurine_Trace02",
       "abilityType": null,
@@ -29,69 +3160,6 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [],
       "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Aventurine_Aventurine_TechniqueInLevel_02": {
-      "fileName": "Aventurine_Aventurine_TechniqueInLevel_02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-707900921\">Aventurine_Maze_Modifier_02</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-707900921\">Aventurine_Maze_Modifier_02</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-314126453\">Aventurine_Maze_Defence</a>[<span class=\"descriptionNumberColor\">The Red or the Black</span>]",
-                  "duration": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_PropertyValue": {
-                      "operator": "Variables[0] (0.6) || RETURN",
-                      "displayLines": "0.6",
-                      "constants": [],
-                      "variables": [
-                        0.6
-                      ]
-                    }
-                  }
-                },
-                "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -80
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       }
@@ -150,9 +3218,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -213,13 +3279,627 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Aventurine_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Aventurine_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Aventurine_LocalPlayer_Aventurine_TechniqueUsage": {
+      "fileName": "Aventurine_LocalPlayer_Aventurine_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_no_ssr_times",
+            "compareType": ">=",
+            "value2": {
+              "operator": "Variables[0] (UNKNOWN_PITY_OBJECT) || Constants[0] (1) || SUB || RETURN",
+              "displayLines": "(UNKNOWN_PITY_OBJECT - 1)",
+              "constants": [
+                1
+              ],
+              "variables": [
+                "UNKNOWN_PITY_OBJECT"
+              ]
+            },
+            "contextScope": "ContextCaster"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "scope": "ContextAbility",
+              "variableName": "_random",
+              "value": 100
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Variable with Random Value",
+              "scope": "ContextAbility",
+              "integer": true,
+              "variableName": "_random",
+              "min": 0,
+              "max": 100
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_sum_probability",
+          "value": {
+            "operator": "Variables[0] (UNKNOWN_ODDS_1) || Variables[1] (UNKNOWN_ODDS_2) || ADD || Variables[2] (UNKNOWN_ODDS_3) || ADD || RETURN",
+            "displayLines": "((UNKNOWN_ODDS_1 + UNKNOWN_ODDS_2) + UNKNOWN_ODDS_3)",
+            "constants": [],
+            "variables": [
+              "UNKNOWN_ODDS_1",
+              "UNKNOWN_ODDS_2",
+              "UNKNOWN_ODDS_3"
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_random",
+            "compareType": "<",
+            "value2": {
+              "operator": "Variables[0] (UNKNOWN_ODDS_1) || Variables[1] (_sum_probability) || DIV || Constants[0] (100) || MUL || RETURN",
+              "displayLines": "((UNKNOWN_ODDS_1 / _sum_probability) * 100)",
+              "constants": [
+                100
+              ],
+              "variables": [
+                "UNKNOWN_ODDS_1",
+                "_sum_probability"
+              ]
+            },
+            "contextScope": "ContextAbility"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_result",
+              "value": 0
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "_random",
+                "compareType": ">=",
+                "value2": {
+                  "operator": "Constants[0] (100) || Variables[0] (UNKNOWN_ODDS_3) || Variables[1] (_sum_probability) || DIV || Constants[0] (100) || MUL || SUB || RETURN",
+                  "displayLines": "(100 - ((UNKNOWN_ODDS_3 / _sum_probability) * 100))",
+                  "constants": [
+                    100
+                  ],
+                  "variables": [
+                    "UNKNOWN_ODDS_3",
+                    "_sum_probability"
+                  ]
+                },
+                "contextScope": "ContextAbility"
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_result",
+                  "value": 2
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_result",
+                  "value": 1
+                },
+                {
+                  "name": "Define Variable with Random Value",
+                  "scope": "ContextAbility",
+                  "integer": true,
+                  "variableName": "_random",
+                  "min": 0,
+                  "max": 3
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_random",
+                    "compareType": "=",
+                    "value2": 0,
+                    "contextScope": "ContextAbility"
+                  },
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "_random",
+                        "compareType": "=",
+                        "value2": 1,
+                        "contextScope": "ContextAbility"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_result",
+            "compareType": "=",
+            "value2": 2
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "scope": "ContextCaster",
+              "variableName": "_no_ssr_times",
+              "value": 0
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "scope": "ContextCaster",
+              "variableName": "_no_ssr_times",
+              "value": {
+                "operator": "Variables[0] (_no_ssr_times) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(_no_ssr_times + 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "_no_ssr_times"
+                ]
+              }
+            }
+          ]
+        },
+        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_result",
+            "compareType": "=",
+            "value2": 2
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_result",
+            "compareType": "=",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": null,
+              "ID": "130401(Avatar_Aventurine_00_SkillMazeInLevel_00)",
+              "duration": -1,
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier (OVERWORLD)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "buffID": 130402,
+                    "modifier": null,
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Has Modifier (OVERWORLD)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "buffID": 130403,
+                    "modifier": null,
+                    "invertCondition": true
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": null,
+              "ID": "130404()",
+              "duration": -1,
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier (OVERWORLD)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "buffID": 130402,
+                    "modifier": null
+                  },
+                  {
+                    "name": "Has Modifier (OVERWORLD)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "buffID": 130403,
+                    "modifier": null
+                  }
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "_result",
+                "compareType": "=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": null,
+                  "ID": "130402(Avatar_Aventurine_00_SkillMazeInLevel_01)",
+                  "duration": -1,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier (OVERWORLD)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "buffID": 130403,
+                        "modifier": null,
+                        "invertCondition": true
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": null,
+                  "ID": "130405()",
+                  "duration": -1,
+                  "conditions": {
+                    "name": "Has Modifier (OVERWORLD)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "buffID": 130403,
+                    "modifier": null
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": null,
+                  "ID": "130403(Avatar_Aventurine_00_SkillMazeInLevel_02)",
+                  "duration": -1
+                }
+              ]
+            }
+          ]
+        },
+        "Submit Technique Use"
+      ],
+      "whenAdded": [
+        {
+          "name": "Define Custom Variable",
+          "scope": "ContextCaster",
+          "variableName": "_no_ssr_times",
+          "value": 0
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Aventurine_LocalPlayer_Aventurine_NormalAtk01": {
+      "fileName": "Aventurine_LocalPlayer_Aventurine_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            },
+            {
+              "name": "Shot Fired"
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            },
+            {
+              "name": "Shot Fired"
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
       }
     },
     "Aventurine_Aventurine_TechniqueInLevel": {
@@ -1261,3127 +4941,66 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       }
     },
-    "Aventurine_Modifiers": {
-      "fileName": "Aventurine_Modifiers",
-      "abilityType": "Char. Modifiers",
+    "Aventurine_Aventurine_TechniqueInLevel_02": {
+      "fileName": "Aventurine_Aventurine_TechniqueInLevel_02",
+      "abilityType": null,
       "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-707900921\">Aventurine_Maze_Modifier_02</a>"
+        }
       ],
-      "parse": [
+      "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-314126453\">Aventurine_Maze_Defence</a>[<span class=\"descriptionNumberColor\">The Red or the Black</span>]",
-          "stackType": "ReplaceByCaster",
+          "for": "<a class=\"gModGreen\" id=\"mod__-707900921\">Aventurine_Maze_Modifier_02</a>",
           "execute": [
             {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "MDF_CurrentDefence2",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>",
-          "type": "Buff",
-          "effectName": "DEF Boost",
-          "statusName": "The Red or the Black"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__462082235\">Aventurine_ResistCtrlCD</a>[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-2133893396\">Aventurine_ResistCtrl</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "description": "The Talent's Crowd Control debuff resist effect cannot be triggered yet.",
-          "type": "Other",
-          "statusName": "Shot Loaded Right"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2133893396\">Aventurine_ResistCtrl</a>",
-          "modifierFlags": [
-            "Endurance"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Debuff Immunity[?]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Has Flag",
-                        "flagName": "STAT_CTRL"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"462082235\">Aventurine_ResistCtrlCD</a>[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"462082235\">Aventurine_ResistCtrlCD</a>[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
-                      }
-                    },
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-545204368\">Aventurine_PointB3_ShieldMark</a>",
-          "stackType": "ReplaceByCaster"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2007691702\">Aventurine_Eidolon1_Status</a>[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "CRIT DMG Boost",
-          "statusName": "Prisoner's Dilemma"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "description": "After a teammate with \"Fortified Wager\" uses Follow-Up ATK, Aventurine gains 1 \"Blind Bet.\" This effect can be triggered <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> more time(s).",
-          "type": "Other",
-          "statusName": "Bingo!"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1822642729\">Aventurine_Trace03_AddShield</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1927939151\">Aventurine_Trace03_Trigger</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Attack Action Completed [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "MDF_CurrentDefence2",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "Shield",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Target Has Lowest/Highest Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "partOf": {
-                              "name": "Target Sequence",
-                              "Sequence": [
-                                {
-                                  "name": "Target Name",
-                                  "target": "{{Player Team All}}"
-                                },
-                                {
-                                  "name": "Target Filter",
-                                  "conditions": {
-                                    "name": "Has Flag",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "flagName": "Shield",
-                                    "invertCondition": true
-                                  }
-                                }
-                              ]
-                            },
-                            "compareValue": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                            "minOrMax": "Min"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "Shield"
-                          },
-                          {
-                            "name": "Target Has Lowest/Highest Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "partOf": {
-                              "name": "Target Name",
-                              "target": "{{Player Team All}}"
-                            },
-                            "compareValue": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;",
-                            "minOrMax": "Min"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-545204368\">Aventurine_PointB3_ShieldMark</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-969049614\">Aventurine_RecordCurrentShield</a>"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
-                      "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_InitShieldValue": {
-                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.072) || MUL || Variables[2] (96) || ADD || RETURN",
-                          "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDefence2",
-                            0.072,
-                            96
-                          ]
-                        },
-                        "MDF_MaxShieldRatio": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
-                        },
-                        "MDF_ForceShield": {
-                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
-                          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDefence2",
-                            0.24,
-                            320
-                          ]
-                        }
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
-                      "duration": 3,
-                      "valuePerStack": {
-                        "MDF_InitShieldValue": {
-                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.072) || MUL || Variables[2] (96) || ADD || RETURN",
-                          "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDefence2",
-                            0.072,
-                            96
-                          ]
-                        },
-                        "MDF_MaxShieldRatio": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
-                        },
-                        "MDF_ForceShield": {
-                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
-                          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDefence2",
-                            0.24,
-                            320
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-545204368\">Aventurine_PointB3_ShieldMark</a>"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-969049614\">Aventurine_RecordCurrentShield</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
-                      "duration": 3,
-                      "valuePerStack": {
-                        "MDF_InitShieldValue": {
-                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.072) || MUL || Variables[2] (96) || ADD || RETURN",
-                          "displayLines": "((MDF_CurrentDefence2 * 0.072) + 96)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDefence2",
-                            0.072,
-                            96
-                          ]
-                        },
-                        "MDF_MaxShieldRatio": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
-                        },
-                        "MDF_ForceShield": {
-                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
-                          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDefence2",
-                            0.24,
-                            320
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "searchRandom": true,
-                  "ifTargetFound": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-545204368\">Aventurine_PointB3_ShieldMark</a>"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
-                        "invertCondition": true
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Is Part Of",
-                            "of": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "mustBeAlive2": true
-                          },
-                          "passed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "MDF_TeammateCount1",
-                              "value": 1
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Random Event",
-                              "odds": [
-                                0.2,
-                                0.2,
-                                0.2
-                              ],
-                              "execute": [
-                                {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "MDF_TeammateCount1",
-                                  "value": 2
-                                },
-                                {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "MDF_TeammateCount1",
-                                  "value": 3
-                                },
-                                {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "MDF_TeammateCount1",
-                                  "value": 4
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
-                      "valuePerStack": {
-                        "MDF_CanTriggerShieldEffect": 0,
-                        "MDF_ResistanceRatio": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
-                        },
-                        "MDF_TeammateCount": {
-                          "operator": "Variables[0] (MDF_TeammateCount1) || RETURN",
-                          "displayLines": "MDF_TeammateCount1",
-                          "constants": [],
-                          "variables": [
-                            "MDF_TeammateCount1"
-                          ]
-                        },
-                        "MDF_CritDmg1": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Owner]: End",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1211629419\">Aventurine_StackableShield</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "Shield"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Shield",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  }
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2007691702\">Aventurine_Eidolon1_Status</a>[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"2127014376\">Aventurine_Ability02_ShieldEffect3</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2133893396\">Aventurine_ResistCtrl</a>"
-                },
-                {
-                  "name": "Set Hit-Class",
-                  "reset": true
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Set Hit-Class"
-                },
-                {
-                  "name": "Stack Shield",
-                  "stackValue": {
-                    "operator": "Variables[0] (MDF_InitShieldValue) || RETURN",
-                    "displayLines": "MDF_InitShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_InitShieldValue"
-                    ]
-                  },
-                  "stackLimit": {
-                    "operator": "Variables[0] (MDF_ForceShield) || Variables[1] (MDF_MaxShieldRatio) || MUL || RETURN",
-                    "displayLines": "(MDF_ForceShield * MDF_MaxShieldRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ForceShield",
-                      "MDF_MaxShieldRatio"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (0.5) || RETURN",
-                    "displayLines": "0.5",
-                    "constants": [],
-                    "variables": [
-                      0.5
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of",
-                        "of": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "mustBeAlive2": true
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"462082235\">Aventurine_ResistCtrlCD</a>[<span class=\"descriptionNumberColor\">Shot Loaded Right</span>]",
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-2133893396\">Aventurine_ResistCtrl</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_InsertLeftValue",
-                  "value": {
-                    "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
-                    "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_InsertLeftValue",
-                      "MDF_InsertAttackCount"
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Trace Activated",
-                        "conditionList": "Bingo!"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "MDF_InsertLeftValue",
-                        "compareType": ">",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
-                          "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_InsertLeftValue",
-                            "MDF_InsertAttackCount"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of",
-                    "of": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "mustBeAlive2": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Override Modifier Name",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
-                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Override Modifier Name",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
-                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_InitShieldValue",
-            "MDF_MaxShieldRatio",
-            "MDF_ForceShield"
-          ],
-          "latentQueue": [],
-          "type": "Buff",
-          "effectName": "Shield"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1240934840\">Aventurine_RemoveAttackValue</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_Fatigue"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AttackAddRatio) || RETURN",
-                    "displayLines": "MDF_AttackAddRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddRatio"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>.",
-          "type": "Buff",
-          "statusName": "Stag Hunt Game"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1670112654\">Aventurine_Eidolon6</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier is Added [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "flagName": "Shield"
-                      },
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_ShieldCount",
-                      "value": 0
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
-                      },
-                      "searchRandom": true,
-                      "ifTargetFound": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "Shield"
-                          },
-                          "passed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "MDF_ShieldCount",
-                              "value": {
-                                "operator": "Variables[0] (MDF_ShieldCount) || Constants[0] (1) || ADD || RETURN",
-                                "displayLines": "(MDF_ShieldCount + 1)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "MDF_ShieldCount"
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "MDF_ShieldCount",
-                        "compareType": ">",
-                        "value2": 0,
-                        "contextScope": "ContextModifier"
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "variableName": "_AttackAddedRatio",
-                          "value": {
-                            "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
-                            "displayLines": "(MDF_ShieldCount * 0.5)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_ShieldCount",
-                              0.5
-                            ]
-                          }
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "value1": "_AttackAddedRatio",
-                            "compareType": ">=",
-                            "value2": {
-                              "operator": "Variables[0] (1.5) || RETURN",
-                              "displayLines": "1.5",
-                              "constants": [],
-                              "variables": [
-                                1.5
-                              ]
-                            }
-                          },
-                          "passed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
-                              "valuePerStack": {
-                                "MDF_AttackAddRatio": {
-                                  "operator": "Variables[0] (1.5) || RETURN",
-                                  "displayLines": "1.5",
-                                  "constants": [],
-                                  "variables": [
-                                    1.5
-                                  ]
-                                }
-                              }
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
-                              "valuePerStack": {
-                                "MDF_AttackAddRatio": {
-                                  "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
-                                  "displayLines": "(MDF_ShieldCount * 0.5)",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_ShieldCount",
-                                    0.5
-                                  ]
-                                }
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "flagName": "Shield"
-                      },
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_ShieldCount",
-                      "value": 0
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
-                      },
-                      "searchRandom": true,
-                      "ifTargetFound": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "flagName": "Shield"
-                          },
-                          "passed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "MDF_ShieldCount",
-                              "value": {
-                                "operator": "Variables[0] (MDF_ShieldCount) || Constants[0] (1) || ADD || RETURN",
-                                "displayLines": "(MDF_ShieldCount + 1)",
-                                "constants": [
-                                  1
-                                ],
-                                "variables": [
-                                  "MDF_ShieldCount"
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "MDF_ShieldCount",
-                        "compareType": ">",
-                        "value2": 0,
-                        "contextScope": "ContextModifier"
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "variableName": "_AttackAddedRatio",
-                          "value": {
-                            "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
-                            "displayLines": "(MDF_ShieldCount * 0.5)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_ShieldCount",
-                              0.5
-                            ]
-                          }
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "value1": "_AttackAddedRatio",
-                            "compareType": ">=",
-                            "value2": {
-                              "operator": "Variables[0] (1.5) || RETURN",
-                              "displayLines": "1.5",
-                              "constants": [],
-                              "variables": [
-                                1.5
-                              ]
-                            }
-                          },
-                          "passed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
-                              "valuePerStack": {
-                                "MDF_AttackAddRatio": {
-                                  "operator": "Variables[0] (1.5) || RETURN",
-                                  "displayLines": "1.5",
-                                  "constants": [],
-                                  "variables": [
-                                    1.5
-                                  ]
-                                }
-                              }
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]",
-                              "valuePerStack": {
-                                "MDF_AttackAddRatio": {
-                                  "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
-                                  "displayLines": "(MDF_ShieldCount * 0.5)",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_ShieldCount",
-                                    0.5
-                                  ]
-                                }
-                              }
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1071693817\">Aventurine_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Stag Hunt Game</span>]"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1728845008\">Aventurine_Eidolon4_CountDown</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
+              "eventTrigger": "Enter Battle",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Name",
-                    "target": "{{Caster}}"
+                    "target": "{{Player Team All}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"1636557416\">Aventurine_Eidolon4</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1636557416\">Aventurine_Eidolon4</a>",
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1245057354\">Aventurine_Eidolon2_Mark</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1438365222\">Aventurine_Eidolon2_ResistanceDown</a>[<span class=\"descriptionNumberColor\">Bounded Rationality</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "All-Type RES Reduction",
-          "statusName": "Bounded Rationality"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_Multipler",
-                  "value": {
-                    "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_PropertyValue) || Constants[0] (0.01) || MUL || PARAM_1 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_PropertyValue * 0.01))",
-                    "constants": [
-                      0.01
-                    ],
-                    "variables": [
-                      "FLOOR",
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue2",
-                  "value": {
-                    "operator": "Variables[0] (MDF_Multipler) || Variables[1] (0.02) || MUL || RETURN",
-                    "displayLines": "(MDF_Multipler * 0.02)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Multipler",
-                      0.02
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_PropertyValue2",
-                    "compareType": ">=",
-                    "value2": {
-                      "operator": "Variables[0] (0.48) || RETURN",
-                      "displayLines": "0.48",
-                      "constants": [],
-                      "variables": [
-                        0.48
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue2",
-                      "value": {
-                        "operator": "Variables[0] (0.48) || RETURN",
-                        "displayLines": "0.48",
-                        "constants": [],
-                        "variables": [
-                          0.48
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateConverted</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                    "displayLines": "MDF_PropertyValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "description": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
-          "type": "Buff",
-          "statusName": "Leverage"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1167695204\">Aventurine_Trace01</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-741151706\">Aventurine_Trace01_Sub</a>"
-                }
-              ]
-            }
-          ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-741151706\">Aventurine_Trace01_Sub</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "modifierFunctions": [
-            {
-              "name": "CharacterFunctions",
-              "functionName": "<a class=\"gTempYellow\" id=\"fun__-741151706\">Aventurine_Trace01_Sub</a>",
-              "parse": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_CurrentDefence",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
-                },
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_CurrentDefenceConvert",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFConverted</span>&nbsp;"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentDefence2",
-                  "value": {
-                    "operator": "Variables[0] (MDF_CurrentDefence) || Variables[1] (MDF_CurrentDefenceConvert) || SUB || RETURN",
-                    "displayLines": "(MDF_CurrentDefence - MDF_CurrentDefenceConvert)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CurrentDefence",
-                      "MDF_CurrentDefenceConvert"
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_CurrentDefence2",
-                    "compareType": ">=",
-                    "value2": {
-                      "operator": "Variables[0] (1600) || Constants[0] (100) || ADD || RETURN",
-                      "displayLines": "(1600 + 100)",
-                      "constants": [
-                        100
-                      ],
-                      "variables": [
-                        1600
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]"
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (1600) || SUB || RETURN",
-                              "displayLines": "(MDF_CurrentDefence2 - 1600)",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CurrentDefence2",
-                                1600
-                              ]
-                            }
-                          }
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (1600) || SUB || RETURN",
-                              "displayLines": "(MDF_CurrentDefence2 - 1600)",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CurrentDefence2",
-                                1600
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-422728063\">Aventurine_Trace01_Sub</a>[<span class=\"descriptionNumberColor\">Leverage</span>]"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__674084232\">Aventurine_Passive_AddDefence</a>[<span class=\"descriptionNumberColor\">Unexpected Hanging Paradox</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "MDF_BaseDefence",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFBase</span>&nbsp;"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_DefencePercentage",
-                  "value": {
-                    "operator": "Variables[0] (0.4) || RETURN",
-                    "displayLines": "0.4",
-                    "constants": [],
-                    "variables": [
-                      0.4
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (0.4) || RETURN",
-                    "displayLines": "0.4",
-                    "constants": [],
-                    "variables": [
-                      0.4
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_DefencePercentage</span>",
-          "type": "Buff",
-          "effectName": "DEF Boost",
-          "statusName": "Unexpected Hanging Paradox"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-839248266\">Aventurine_Ability03_CritDmgIncrease</a>[<span class=\"descriptionNumberColor\">Unnerved</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Player Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                          "value": "MDF_PropertyValue"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "Increase the CRIT DMG dealt by allies to this unit by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "The received CRIT DMG increases",
-          "statusName": "Unnerved"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-989533278\">Aventurine_Ability03_CoinAdd</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Variable with Random Value",
-                  "scope": "ContextModifier",
-                  "integer": true,
-                  "variableName": "MDF_Coin",
-                  "min": 1,
-                  "max": {
-                    "operator": "Variables[0] (7) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(7 + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      7
-                    ]
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>",
-                  "addStacksPerTrigger": {
-                    "operator": "Variables[0] (MDF_Coin) || RETURN",
-                    "displayLines": "MDF_Coin",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Coin"
-                    ]
-                  }
-                },
-                "Modifier Deletes Itself"
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "type": "Buff",
-          "effectName": "Blind Bet received: <unbreak>#1[i]</unbreak> Point(s)"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "description": "Gains a Shield that absorbs DMG and increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. While the Shield persists or before the effect disappears, enemy attacks will not reduce the Shielded characters' HP. After these characters receive DMG, Aventurine receives 1 point of Blind Bet.",
-          "type": "Buff",
-          "effectName": "Shield",
-          "statusName": "Fortified Wager: Clubs"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2127014376\">Aventurine_Ability02_ShieldEffect3</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "description": "Gains a Shield that absorbs DMG and increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. While the Shield persists or before the effect disappears, enemy attacks will not reduce the Shielded characters' HP. After these characters receive DMG, Aventurine receives 1 point of Blind Bet.",
-          "type": "Buff",
-          "effectName": "Shield",
-          "statusName": "Fortified Wager: Diamonds"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "description": "Gains a Shield that absorbs DMG and increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. While the Shield persists or before the effect disappears, enemy attacks will not reduce the Shielded characters' HP. After these characters receive DMG, Aventurine receives 1 point of Blind Bet.",
-          "type": "Buff",
-          "effectName": "Shield",
-          "statusName": "Fortified Wager: Hearts"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "description": "Gains a Shield that absorbs DMG and increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. While the Shield persists or before the effect disappears, enemy attacks will not reduce the Shielded characters' HP. After these characters receive DMG, Aventurine receives 2 points of Blind Bet.",
-          "type": "Buff",
-          "effectName": "Shield",
-          "statusName": "Fortified Wager: Spades"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1566932811\">Aventurine_Ability02_ShieldEffect</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_TeammateCount",
-                    "compareType": "=",
-                    "value2": 1,
-                    "contextScope": "ContextModifier"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "MDF_CanTriggerShieldEffect",
-                        "compareType": "=",
-                        "value2": 1
-                      }
-                    },
-                    {
-                      "name": "Define Modifier-Specific Variable",
-                      "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
-                      "variableName": "MDF_PropertyValue",
-                      "value": {
-                        "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
-                        "displayLines": "MDF_ResistanceRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ResistanceRatio"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Override Modifier Name",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
-                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2127014376\">Aventurine_Ability02_ShieldEffect3</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Eidolon Activated",
-                        "eidolon": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Stack Target Stat Value",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
-                            "displayLines": "MDF_CritDmg1",
-                            "constants": [],
-                            "variables": [
-                              "MDF_CritDmg1"
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-2007691702\">Aventurine_Eidolon1_Status</a>[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
-                              "displayLines": "MDF_CritDmg1",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CritDmg1"
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Eidolon Activated",
-                        "eidolon": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Stack Target Stat Value",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
-                            "displayLines": "MDF_CritDmg1",
-                            "constants": [],
-                            "variables": [
-                              "MDF_CritDmg1"
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-2007691702\">Aventurine_Eidolon1_Status</a>[<span class=\"descriptionNumberColor\">Prisoner's Dilemma</span>]",
-                          "valuePerStack": {
-                            "MDF_PropertyValue": {
-                              "operator": "Variables[0] (MDF_CritDmg1) || RETURN",
-                              "displayLines": "MDF_CritDmg1",
-                              "constants": [],
-                              "variables": [
-                                "MDF_CritDmg1"
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "MDF_TeammateCount",
-                        "compareType": "=",
-                        "value2": 2,
-                        "contextScope": "ContextModifier"
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "MDF_CanTriggerShieldEffect",
-                            "compareType": "=",
-                            "value2": 1
-                          }
-                        },
-                        {
-                          "name": "Define Modifier-Specific Variable",
-                          "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
-                          "variableName": "MDF_PropertyValue",
-                          "value": {
-                            "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
-                            "displayLines": "MDF_ResistanceRatio",
-                            "constants": [],
-                            "variables": [
-                              "MDF_ResistanceRatio"
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Override Modifier Name",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
-                          "modifierNameUpdate": "<a class=\"gModGreen\" id=\"2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"2127014376\">Aventurine_Ability02_ShieldEffect3</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]"
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
-                        },
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "MDF_TeammateCount",
-                            "compareType": "=",
-                            "value2": 3,
-                            "contextScope": "ContextModifier"
-                          },
-                          "passed": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Variable",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Modifier Holder}}"
-                                },
-                                "value1": "MDF_CanTriggerShieldEffect",
-                                "compareType": "=",
-                                "value2": 1
-                              }
-                            },
-                            {
-                              "name": "Define Modifier-Specific Variable",
-                              "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
-                              "variableName": "MDF_PropertyValue",
-                              "value": {
-                                "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
-                                "displayLines": "MDF_ResistanceRatio",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_ResistanceRatio"
-                                ]
-                              }
-                            },
-                            {
-                              "name": "Override Modifier Name",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
-                              "modifierNameUpdate": "<a class=\"gModGreen\" id=\"2127014376\">Aventurine_Ability02_ShieldEffect3</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Diamonds</span>]"
-                            },
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"2143791995\">Aventurine_Ability02_ShieldEffect2</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Hearts</span>]"
-                            },
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
-                            },
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-447417403\">Aventurine_Ability02_BlackJack</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Spades</span>]"
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Variable",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Modifier Holder}}"
-                                },
-                                "value1": "MDF_CanTriggerShieldEffect",
-                                "compareType": "=",
-                                "value2": 1
-                              }
-                            },
-                            {
-                              "name": "Define Modifier-Specific Variable",
-                              "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
-                              "variableName": "MDF_PropertyValue",
-                              "value": {
-                                "operator": "Variables[0] (MDF_ResistanceRatio) || RETURN",
-                                "displayLines": "MDF_ResistanceRatio",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_ResistanceRatio"
-                                ]
-                              }
-                            },
-                            {
-                              "name": "Override Modifier Name",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifierName": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
-                              "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-2050509587\">Aventurine_Ability02_ShieldEffect4</a>[<span class=\"descriptionNumberColor\">Fortified Wager: Clubs</span>]"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_CanTriggerShieldEffect",
-            "MDF_ResistanceRatio",
-            "MDF_TeammateCount",
-            "MDF_CritDmg1"
-          ],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1192823436\">Aventurine_Ability02_ForceContrlShield</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-346814527\">Aventurine_Passive_ShieldEnergy</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "CustomEvent_InfiniteRefresh"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "MDF_Layer",
-                  "multiplier": 1
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_Layer",
-                    "compareType": ">=",
-                    "value2": 7,
-                    "contextScope": "ContextModifier"
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (MDF_Layer) || RETURN",
-                        "displayLines": "MDF_Layer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Layer"
-                        ]
-                      },
-                      "maximum": 7,
-                      "assignState": "True",
-                      "priorState": "Active",
-                      "bar#": 2,
-                      "cooldown": 0
-                    },
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "Aventurine_PassiveAbility01_InsertAbility",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "priorityTag": "CharacterAttackFromSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "abortFlags": [
-                        "DisableAction",
-                        "STAT_CTRL"
-                      ],
-                      "allowAbilityTriggers": false
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (MDF_Layer) || RETURN",
-                        "displayLines": "MDF_Layer",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Layer"
-                        ]
-                      },
-                      "maximum": 7,
-                      "assignState": "True",
-                      "priorState": "Normal",
-                      "bar#": 2,
-                      "cooldown": 0
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Custom Event",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "MDF_Layer",
-                        "compareType": ">=",
-                        "value2": 7,
-                        "contextScope": "ContextModifier"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "STAT_CTRL",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "DisableAction",
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "Aventurine_PassiveAbility01_InsertAbility",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "priorityTag": "CharacterAttackFromSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "abortFlags": [
-                        "DisableAction",
-                        "STAT_CTRL"
-                      ],
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "MDF_Layer",
-                        "compareType": ">=",
-                        "value2": 7,
-                        "contextScope": "ContextModifier"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "STAT_CTRL",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "DisableAction",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Modifier Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            "flagName": "STAT_CTRL"
-                          },
-                          {
-                            "name": "Modifier Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            "flagName": "DisableAction"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "Aventurine_PassiveAbility01_InsertAbility",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "priorityTag": "CharacterAttackFromSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "abortFlags": [
-                        "DisableAction",
-                        "STAT_CTRL"
-                      ],
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "MDF_Layer",
-                        "compareType": ">=",
-                        "value2": 7,
-                        "contextScope": "ContextModifier"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "STAT_CTRL",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "flagName": "DisableAction",
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "Aventurine_PassiveAbility01_InsertAbility",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "priorityTag": "CharacterAttackFromSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "abortFlags": [
-                        "DisableAction",
-                        "STAT_CTRL"
-                      ],
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "stackLimit": 10
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1431725730\">Aventurine_Passive_AddEnergyMark</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__890966085\">Aventurine_Passive_OnAfterBeingAttacked</a>",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage End [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Trace Activated",
-                        "conditionList": "Bingo!"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Compare: Variable",
-                            "value1": "MDF_InsertAttackCount",
-                            "compareType": "<",
-                            "value2": {
-                              "operator": "Variables[0] (3) || RETURN",
-                              "displayLines": "3",
-                              "constants": [],
-                              "variables": [
-                                3
-                              ]
-                            }
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Attack Type",
-                            "attackTypes": [
-                              "Follow-up"
-                            ]
-                          },
-                          "passed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "MDF_IsInsert",
-                              "value": 1
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Attacked Start [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Is Part Of",
-                        "of": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "mustBeAlive2": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1431725730\">Aventurine_Passive_AddEnergyMark</a>",
-                          "addStacksPerTrigger": {
-                            "operator": "Variables[0] (MDF_BlackJackEnergy) || Constants[0] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_BlackJackEnergy + 1)",
-                            "constants": [
-                              1
-                            ],
-                            "variables": [
-                              "MDF_BlackJackEnergy"
-                            ]
-                          }
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"1431725730\">Aventurine_Passive_AddEnergyMark</a>",
-                          "addStacksPerTrigger": 1
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack Start [Anyone]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_IsInsert",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "MDF_IsInsert",
-                        "compareType": "=",
-                        "value2": 1
-                      },
-                      {
-                        "name": "Is Part Of",
-                        "of": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "mustBeAlive2": true,
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_InsertAttackCount",
-                      "value": {
-                        "operator": "Variables[0] (MDF_InsertAttackCount) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_InsertAttackCount + 1)",
-                        "constants": [
-                          1
-                        ],
-                        "variables": [
-                          "MDF_InsertAttackCount"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
-                          "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_InsertLeftValue",
-                            "MDF_InsertAttackCount"
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>",
-                      "addStacksPerTrigger": 1
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "MDF_InsertAttackCount",
-                        "compareType": ">=",
-                        "value2": {
-                          "operator": "Variables[0] (3) || RETURN",
-                          "displayLines": "3",
-                          "constants": [],
-                          "variables": [
-                            3
-                          ]
-                        }
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]"
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -100
-            },
-            {
-              "eventTrigger": "Being Attacked End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1431725730\">Aventurine_Passive_AddEnergyMark</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Modifier Values",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "valueType": "Layer",
-                      "variableName": "MDF_Layer2",
-                      "modifierName": "<a class=\"gModGreen\" id=\"1431725730\">Aventurine_Passive_AddEnergyMark</a>",
-                      "multiplier": 1
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-346814527\">Aventurine_Passive_ShieldEnergy</a>",
-                      "addStacksPerTrigger": {
-                        "operator": "Variables[0] (MDF_Layer2) || RETURN",
-                        "displayLines": "MDF_Layer2",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Layer2"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1431725730\">Aventurine_Passive_AddEnergyMark</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-106868585\">Aventurine_Passive</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_InsertAttackCount",
-                  "value": 0
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Trace Activated",
-                    "conditionList": "Bingo!"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1024856711\">Aventurine_Trace03_Status</a>[<span class=\"descriptionNumberColor\">Bingo!</span>]",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
-                          "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_InsertLeftValue",
-                            "MDF_InsertAttackCount"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 2
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1245057354\">Aventurine_Eidolon2_Mark</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_InsertAttackLimit",
-                  "value": {
+                  "modifier": "<a class=\"gModGreen\" id=\"-314126453\">Aventurine_Maze_Defence</a>[<span class=\"descriptionNumberColor\">The Red or the Black</span>]",
+                  "duration": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
                     "constants": [],
                     "variables": [
                       3
                     ]
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"890966085\">Aventurine_Passive_OnAfterBeingAttacked</a>",
                   "valuePerStack": {
-                    "MDF_BlackJackEnergy": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (0.6) || RETURN",
+                      "displayLines": "0.6",
                       "constants": [],
                       "variables": [
-                        1
+                        0.6
                       ]
                     }
                   }
                 },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 6
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1670112654\">Aventurine_Eidolon6</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Player Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"890966085\">Aventurine_Passive_OnAfterBeingAttacked</a>",
-                      "valuePerStack": {
-                        "MDF_BlackJackEnergy": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Trace Activated",
-                        "conditionList": "Hot Hand"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Wave Count",
-                        "compareType": "=",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "MDF_CurrentDefence2",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
-                    },
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-969049614\">Aventurine_RecordCurrentShield</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1211629419\">Aventurine_StackableShield</a>",
-                      "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_InitShieldValue": {
-                          "operator": "Variables[0] (1) || Variables[1] (MDF_CurrentDefence2) || Variables[2] (0.24) || MUL || Variables[3] (320) || ADD || MUL || RETURN",
-                          "displayLines": "(1 * ((MDF_CurrentDefence2 * 0.24) + 320))",
-                          "constants": [],
-                          "variables": [
-                            1,
-                            "MDF_CurrentDefence2",
-                            0.24,
-                            320
-                          ]
-                        },
-                        "MDF_MaxShieldRatio": {
-                          "operator": "Variables[0] (2) || RETURN",
-                          "displayLines": "2",
-                          "constants": [],
-                          "variables": [
-                            2
-                          ]
-                        },
-                        "MDF_ForceShield": {
-                          "operator": "Variables[0] (MDF_CurrentDefence2) || Variables[1] (0.24) || MUL || Variables[2] (320) || ADD || RETURN",
-                          "displayLines": "((MDF_CurrentDefence2 * 0.24) + 320)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDefence2",
-                            0.24,
-                            320
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "searchRandom": true,
-                      "ifTargetFound": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
-                            "invertCondition": true
-                          },
-                          "passed": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Is Part Of",
-                                "of": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                },
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "mustBeAlive2": true
-                              },
-                              "passed": [
-                                {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "MDF_TeammateCount1",
-                                  "value": 1
-                                }
-                              ],
-                              "failed": [
-                                {
-                                  "name": "Random Event",
-                                  "odds": [
-                                    0.2,
-                                    0.2,
-                                    0.2
-                                  ],
-                                  "execute": [
-                                    {
-                                      "name": "Define Custom Variable",
-                                      "variableName": "MDF_TeammateCount1",
-                                      "value": 2
-                                    },
-                                    {
-                                      "name": "Define Custom Variable",
-                                      "variableName": "MDF_TeammateCount1",
-                                      "value": 3
-                                    },
-                                    {
-                                      "name": "Define Custom Variable",
-                                      "variableName": "MDF_TeammateCount1",
-                                      "value": 4
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1566932811\">Aventurine_Ability02_ShieldEffect</a>",
-                              "valuePerStack": {
-                                "MDF_ResistanceRatio": {
-                                  "operator": "Variables[0] (0.5) || RETURN",
-                                  "displayLines": "0.5",
-                                  "constants": [],
-                                  "variables": [
-                                    0.5
-                                  ]
-                                },
-                                "MDF_TeammateCount": {
-                                  "operator": "Variables[0] (MDF_TeammateCount1) || RETURN",
-                                  "displayLines": "MDF_TeammateCount1",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_TeammateCount1"
-                                  ]
-                                },
-                                "MDF_CritDmg1": {
-                                  "operator": "Variables[0] (0.2) || RETURN",
-                                  "displayLines": "0.2",
-                                  "constants": [],
-                                  "variables": [
-                                    0.2
-                                  ]
-                                }
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
+                "Modifier Deletes Itself"
               ],
-              "priorityLevel": -79
+              "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
-      "references": []
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     },
     "Aventurine_Functions": {
       "fileName": "Aventurine_Functions",

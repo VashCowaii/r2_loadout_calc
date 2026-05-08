@@ -3,8 +3,12 @@ const compositeAbilityObject = {
   "fullCharacterName": "Tribbie",
   "trimCharacterName": "Tribbie",
   "abilityList": [
-    "Tribbie_Tribbie_Insert",
+    "Tribbie_Modifiers",
+    "Tribbie_LocalPlayer_StandardAbility_AttackBreak",
+    "Tribbie_LocalPlayer_Tribbie_TechniqueUsage",
+    "Tribbie_LocalPlayer_Tribbie_NormalAtk01",
     "Tribbie_Tribbie_TechniqueInLevel",
+    "Tribbie_Tribbie_Insert",
     "Tribbie_Tribbie_PassiveAbility01",
     "Tribbie_Tribbie_Ability03_Part02",
     "Tribbie_Tribbie_Ability03_Part01",
@@ -12,10 +16,1782 @@ const compositeAbilityObject = {
     "Tribbie_Tribbie_Ability02_Part02",
     "Tribbie_Tribbie_Ability02_Part01",
     "Tribbie_Tribbie_Ability01_Part02",
-    "Tribbie_Tribbie_Ability01_Part01",
-    "Tribbie_Modifiers"
+    "Tribbie_Tribbie_Ability01_Part01"
   ],
   "abilityObject": {
+    "Tribbie_Modifiers": {
+      "fileName": "Tribbie_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1461237391\">ADV_StageAbility_Maze_Tribbie</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1724674064\">Tribbie_CanTriggerInsertTag</a>[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "description": "After using Ultimate, Tribbie can launch Follow-Up ATK.",
+          "type": "Other",
+          "statusName": "Busy as Tribbie"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1508822063\">Tribbie_SKL03_Bonus_Debuff</a>[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
+          "description": "Received DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Guess Who Lives Here",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2033842878\">Tribbie_SKL03_Bonus_Buff</a>",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Hit",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1926771974\">Tribbie_SKL03_Bonus_Mark</a>",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Attacked",
+                      "value": 1
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1926771974\">Tribbie_SKL03_Bonus_Mark</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack Start [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Count",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Attacked",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "PERF_CNT",
+                  "value": 0
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1926771974\">Tribbie_SKL03_Bonus_Mark</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"890101932\">Tribbie_SKL03_Bonus_HighestHPMark</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_Attacked",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Attack Targets",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "MDF_Count"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Eidolon Activated",
+                        "eidolon": 2
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_Count",
+                          "value": {
+                            "operator": "Variables[0] (MDF_Count) || Variables[1] (1) || ADD || RETURN",
+                            "displayLines": "(MDF_Count + 1)",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Count",
+                              1
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Count",
+                      "value": {
+                        "operator": "Variables[0] (MDF_Count) || Variables[1] (MDF_ExtraLoopCount) || ADD || RETURN",
+                        "displayLines": "(MDF_Count + MDF_ExtraLoopCount)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Count",
+                          "MDF_ExtraLoopCount"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Sequence",
+                        "Sequence": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{Enemy Team All(with Unselectable)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Has Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1926771974\">Tribbie_SKL03_Bonus_Mark</a>",
+                              "justAddedOrActive": true
+                            }
+                          },
+                          "Shuffle Targets",
+                          {
+                            "name": "Sort by Stat",
+                            "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                            "living": true,
+                            "sortByHighest": true
+                          },
+                          {
+                            "name": "Return Target",
+                            "value": 1
+                          }
+                        ]
+                      },
+                      "searchRandom": true,
+                      "includeDyingTargets": true,
+                      "maxTargets": 1,
+                      "ifTargetFound": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"890101932\">Tribbie_SKL03_Bonus_HighestHPMark</a>"
+                        },
+                        {
+                          "name": "Use Custom Character Function",
+                          "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Attack Targets of Modifier Holder}}"
+                          }
+                        },
+                        {
+                          "name": "Find New Target",
+                          "from": {
+                            "name": "Target Sequence",
+                            "Sequence": [
+                              {
+                                "name": "Target Name",
+                                "target": "{{Enemy Team All(with Unselectable)}}"
+                              },
+                              {
+                                "name": "Target Filter",
+                                "conditions": {
+                                  "name": "Has Modifier",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "modifier": "<a class=\"gModGreen\" id=\"1926771974\">Tribbie_SKL03_Bonus_Mark</a>",
+                                  "justAddedOrActive": true
+                                }
+                              }
+                            ]
+                          },
+                          "searchRandom": true,
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"890101932\">Tribbie_SKL03_Bonus_HighestHPMark</a>",
+                            "invertCondition": true
+                          },
+                          "ifTargetFound": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Compare: Target",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "target2": {
+                                  "name": "Target Name",
+                                  "target": "{{Tribbie's Highest HP Target}}"
+                                }
+                              },
+                              "passed": [
+                                {
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "Eidolon Activated",
+                                    "eidolon": 2
+                                  },
+                                  "passed": [
+                                    {
+                                      "name": "Shot Fired"
+                                    },
+                                    {
+                                      "name": "Shot Fired"
+                                    }
+                                  ],
+                                  "failed": [
+                                    {
+                                      "name": "Shot Fired"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "failed": [
+                                {
+                                  "name": "Shot Fired"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Looped Event",
+                          "maxLoops": {
+                            "operator": "Variables[0] (MDF_Count) || RETURN",
+                            "displayLines": "MDF_Count",
+                            "constants": [],
+                            "variables": [
+                              "MDF_Count"
+                            ]
+                          },
+                          "Event": [
+                            {
+                              "name": "ATK Scaling DMG",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "canPhase": true,
+                              "AttackScaling": {
+                                "DamageType": "Quantum",
+                                "Damage": {
+                                  "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
+                                  "displayLines": "MDF_PropertyValue2",
+                                  "constants": [],
+                                  "variables": [
+                                    "MDF_PropertyValue2"
+                                  ]
+                                },
+                                "dmgFormula": "Max HP Scaling",
+                                "Toughness": null,
+                                "Tags": null,
+                                "attackType": "Additional DMG"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1144541934\">Tribbie_SKL03_Eidolon1Listener</a>",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage End [Anyone]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "type": "Battle Event",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Damage Data",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "MDF_TempDamage",
+                      "value": "Result_FinalDamageBase",
+                      "context": "ContextCaster"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "scope": "ContextCaster",
+                      "variableName": "MDF_Rank01ExtraDamage",
+                      "value": {
+                        "operator": "Variables[0] (MDF_Rank01ExtraDamage) || Variables[1] (MDF_TempDamage) || ADD || RETURN",
+                        "displayLines": "(MDF_Rank01ExtraDamage + MDF_TempDamage)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Rank01ExtraDamage",
+                          "MDF_TempDamage"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack Start [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "type": "Battle Event",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "scope": "ContextCaster",
+                      "variableName": "MDF_Rank01ExtraDamage",
+                      "value": 0
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "scope": "ContextCaster",
+                      "variableName": "MDF_TempDamage",
+                      "value": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "type": "Battle Event",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "scope": "ContextCaster",
+                      "variableName": "MDF_Rank01ExtraDamage",
+                      "value": {
+                        "operator": "Variables[0] (MDF_Rank01ExtraDamage) || Variables[1] (0.24) || MUL || RETURN",
+                        "displayLines": "(MDF_Rank01ExtraDamage * 0.24)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Rank01ExtraDamage",
+                          0.24
+                        ]
+                      }
+                    },
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Tribbie's Highest HP Target}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Physical",
+                        "DamageFlat": {
+                          "operator": "Variables[0] (MDF_Rank01ExtraDamage) || RETURN",
+                          "displayLines": "MDF_Rank01ExtraDamage",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Rank01ExtraDamage"
+                          ]
+                        },
+                        "dmgFormulaFinal": "Converted DMG Base",
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "True DMG"
+                      },
+                      "isConvertedDMG": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1275056390\">Tribbie_SKL03_Bonus_AttackCount</a>",
+          "counter": 1
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__890101932\">Tribbie_SKL03_Bonus_HighestHPMark</a>",
+          "latentQueue": [
+            "MDF_Attacked",
+            "PERF_CNT"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1926771974\">Tribbie_SKL03_Bonus_Mark</a>",
+          "latentQueue": [
+            "MDF_Attacked"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1046659157\">Tribbie_SKL03_PointB2</a>[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
+          "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "Max HP Boost",
+          "statusName": "Glass Ball with Wings!",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"781452723\">Tribbie_SKL03_PointB2_ListenHPChange</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"781452723\">Tribbie_SKL03_PointB2_ListenHPChange</a>"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_TotalBaseHP",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_MaxHP",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_HPConvert",
+                  "value": 0
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}"
+                  },
+                  "conditions": {
+                    "name": "Is Entity Type",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "type": "Character"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "MDF_MaxHP",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "MDF_HPConvert",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_TotalBaseHP",
+                      "value": {
+                        "operator": "Variables[0] (MDF_TotalBaseHP) || Variables[1] (MDF_MaxHP) || ADD || Variables[2] (MDF_HPConvert) || SUB || RETURN",
+                        "displayLines": "((MDF_TotalBaseHP + MDF_MaxHP) - MDF_HPConvert)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_TotalBaseHP",
+                          "MDF_MaxHP",
+                          "MDF_HPConvert"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_PropertyValue",
+                  "value": {
+                    "operator": "Variables[0] (MDF_TotalBaseHP) || Variables[1] (0.09) || MUL || RETURN",
+                    "displayLines": "(MDF_TotalBaseHP * 0.09)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_TotalBaseHP",
+                      0.09
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  },
+                  "isRefresh": true
+                }
+              ]
+            }
+          ],
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "MDF_PropertyValue",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "maxValue": 1000000000,
+                  "includeMaxValueInRange": true,
+                  "whenValueChanges": [
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                        "displayLines": "MDF_PropertyValue",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyValue"
+                        ]
+                      },
+                      "isRefresh": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__781452723\">Tribbie_SKL03_PointB2_ListenHPChange</a>",
+          "modifierFlags": [
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Pre-Death [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_TotalHPChange",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_MaxHP",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_HPConvert",
+                  "value": 0
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]  - {{Modifier Holder}}"
+                  },
+                  "conditions": {
+                    "name": "Is Entity Type",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "type": "Character"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "MDF_MaxHP",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "MDF_HPConvert",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_TotalHPChange",
+                      "value": {
+                        "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (MDF_MaxHP) || ADD || Variables[2] (MDF_HPConvert) || SUB || RETURN",
+                        "displayLines": "((MDF_TotalHPChange + MDF_MaxHP) - MDF_HPConvert)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_TotalHPChange",
+                          "MDF_MaxHP",
+                          "MDF_HPConvert"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_PropertyValue",
+                  "value": {
+                    "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (0.09) || MUL || RETURN",
+                    "displayLines": "(MDF_TotalHPChange * 0.09)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_TotalHPChange",
+                      0.09
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Modifier-Specific Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1046659157\">Tribbie_SKL03_PointB2</a>[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
+                  "variableName": "MDF_PropertyValue",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "maxValue": 1000000000,
+                  "whenValueChanges": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_TotalHPChange",
+                      "value": 0
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_MaxHP",
+                      "value": 0
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_HPConvert",
+                      "value": 0
+                    },
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}"
+                      },
+                      "conditions": {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "type": "Character"
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "Define Custom Variable with Stat",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "variableName": "MDF_MaxHP",
+                          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                        },
+                        {
+                          "name": "Define Custom Variable with Stat",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "variableName": "MDF_HPConvert",
+                          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_TotalHPChange",
+                          "value": {
+                            "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (MDF_MaxHP) || ADD || Variables[2] (MDF_HPConvert) || SUB || RETURN",
+                            "displayLines": "((MDF_TotalHPChange + MDF_MaxHP) - MDF_HPConvert)",
+                            "constants": [],
+                            "variables": [
+                              "MDF_TotalHPChange",
+                              "MDF_MaxHP",
+                              "MDF_HPConvert"
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_PropertyValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (0.09) || MUL || RETURN",
+                        "displayLines": "(MDF_TotalHPChange * 0.09)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_TotalHPChange",
+                          0.09
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Modifier-Specific Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1046659157\">Tribbie_SKL03_PointB2</a>[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
+                      "variableName": "MDF_PropertyValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                        "displayLines": "MDF_PropertyValue",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyValue"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "maxValue": 1000000000,
+                  "whenValueChanges": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_TotalHPChange",
+                      "value": 0
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_MaxHP",
+                      "value": 0
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_HPConvert",
+                      "value": 0
+                    },
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}"
+                      },
+                      "conditions": {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "type": "Character"
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "Define Custom Variable with Stat",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "variableName": "MDF_MaxHP",
+                          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                        },
+                        {
+                          "name": "Define Custom Variable with Stat",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "variableName": "MDF_HPConvert",
+                          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_TotalHPChange",
+                          "value": {
+                            "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (MDF_MaxHP) || ADD || Variables[2] (MDF_HPConvert) || SUB || RETURN",
+                            "displayLines": "((MDF_TotalHPChange + MDF_MaxHP) - MDF_HPConvert)",
+                            "constants": [],
+                            "variables": [
+                              "MDF_TotalHPChange",
+                              "MDF_MaxHP",
+                              "MDF_HPConvert"
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_PropertyValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (0.09) || MUL || RETURN",
+                        "displayLines": "(MDF_TotalHPChange * 0.09)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_TotalHPChange",
+                          0.09
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Modifier-Specific Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1046659157\">Tribbie_SKL03_PointB2</a>[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
+                      "variableName": "MDF_PropertyValue",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                        "displayLines": "MDF_PropertyValue",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyValue"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1351986018\">Tribbie_SKL03_Bonus</a>[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "While the Zone exists, increases all enemies' DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, and all allies deal Additional DMG when attacking enemies.",
+          "type": "Other",
+          "effectName": "Guess Who Lives Here",
+          "statusName": "Guess Who Lives Here",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1508822063\">Tribbie_SKL03_Bonus_Debuff</a>[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                  "displayLines": "MDF_PropertyValue",
+                  "constants": [],
+                  "variables": [
+                    "MDF_PropertyValue"
+                  ]
+                },
+                "MDF_PropertyValue2": {
+                  "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
+                  "displayLines": "MDF_PropertyValue2",
+                  "constants": [],
+                  "variables": [
+                    "MDF_PropertyValue2"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"2033842878\">Tribbie_SKL03_Bonus_Buff</a>",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue2": {
+                  "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
+                  "displayLines": "MDF_PropertyValue2",
+                  "constants": [],
+                  "variables": [
+                    "MDF_PropertyValue2"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1144541934\">Tribbie_SKL03_Eidolon1Listener</a>",
+              "haloStatus": true,
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 1
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1046659157\">Tribbie_SKL03_PointB2</a>[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
+              "haloStatus": true,
+              "conditions": {
+                "name": "Trace Activated",
+                "conditionList": "Glass Ball with Wings!"
+              }
+            }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1699792479\">Tribbie_SKL02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "All-Type RES PEN Boost",
+          "statusName": "Numinosity",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__357538519\">Tribbie_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">Peace of Empathy Bond</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the enemy target's DEF.",
+          "type": "Buff",
+          "effectName": "Peace of Empathy Bond",
+          "statusName": "Peace of Empathy Bond",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "Adjust Target Stats",
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "(0 - MDF_PropertyValue)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1664293665\">Tribbie_SKL02_Bonus</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "All-Type RES PEN Boost",
+          "statusName": "Numinosity",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}-{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1699792479\">Tribbie_SKL02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
+              "haloStatus": true,
+              "includeBattleEvent": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                  "displayLines": "MDF_PropertyValue",
+                  "constants": [],
+                  "variables": [
+                    "MDF_PropertyValue"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"357538519\">Tribbie_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">Peace of Empathy Bond</span>]",
+              "haloStatus": true,
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 4
+              },
+              "includeBattleEvent": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.18) || RETURN",
+                  "displayLines": "0.18",
+                  "constants": [],
+                  "variables": [
+                    0.18
+                  ]
+                }
+              }
+            }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__361990450\">Tribbie_PointB1_DamageUpModifier</a>[<span class=\"descriptionNumberColor\">Lamb Outside the Wall...</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">#SkillTree_PointB1_P1_Ratio</span>. This effect stacks up to <span class=\"descriptionNumberColor\">#SkillTree_PointB1_P2_MaxLayer</span> time(s).",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Lamb Outside the Wall...",
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "_Layer",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_PropertyValue",
+                  "value": {
+                    "operator": "Variables[0] (_Layer) || Variables[1] (0.72) || MUL || RETURN",
+                    "displayLines": "(_Layer * 0.72)",
+                    "constants": [],
+                    "variables": [
+                      "_Layer",
+                      0.72
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1011992176\">Tribbie_Eidolon6_Bonus_Active</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Follow-up"
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__559634045\">Tribbie_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">Morrow of Star Shine</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "The DMG dealt by Talent's Follow-Up ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Morrow of Star Shine"
+        }
+      ],
+      "references": []
+    },
+    "Tribbie_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Tribbie_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Tribbie_LocalPlayer_Tribbie_TechniqueUsage": {
+      "fileName": "Tribbie_LocalPlayer_Tribbie_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "140301(SkillMaze)",
+          "duration": -1
+        },
+        "Submit Technique Use"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Tribbie_LocalPlayer_Tribbie_NormalAtk01": {
+      "fileName": "Tribbie_LocalPlayer_Tribbie_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Tribbie_Tribbie_TechniqueInLevel": {
+      "fileName": "Tribbie_Tribbie_TechniqueInLevel",
+      "childAbilityList": [
+        "Tribbie_Tribbie_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
+      "abilityType": "Technique",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-888581137\">Tribbie_Maze_Modifier</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-888581137\">Tribbie_Maze_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Wave Count",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1664293665\">Tribbie_SKL02_Bonus</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (3) || RETURN",
+                        "displayLines": "3",
+                        "constants": [],
+                        "variables": [
+                          3
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.24) || RETURN",
+                          "displayLines": "0.24",
+                          "constants": [],
+                          "variables": [
+                            0.24
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "Energy_Layer",
+                      "value": {
+                        "operator": "Variables[0] (3) || RETURN",
+                        "displayLines": "3",
+                        "constants": [],
+                        "variables": [
+                          3
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (Energy_Layer) || RETURN",
+                        "displayLines": "Energy_Layer",
+                        "constants": [],
+                        "variables": [
+                          "Energy_Layer"
+                        ]
+                      },
+                      "priorState": "Active"
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
+    },
     "Tribbie_Tribbie_Insert": {
       "fileName": "Tribbie_Tribbie_Insert",
       "abilityType": null,
@@ -231,113 +2007,6 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
-      }
-    },
-    "Tribbie_Tribbie_TechniqueInLevel": {
-      "fileName": "Tribbie_Tribbie_TechniqueInLevel",
-      "childAbilityList": [
-        "Tribbie_Tribbie_TechniqueInLevel"
-      ],
-      "skillTrigger": "SkillMaze",
-      "abilityType": "Technique",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-888581137\">Tribbie_Maze_Modifier</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-888581137\">Tribbie_Maze_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Wave Count",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1664293665\">Tribbie_SKL02_Bonus</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (0.24) || RETURN",
-                          "displayLines": "0.24",
-                          "constants": [],
-                          "variables": [
-                            0.24
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Energy_Layer",
-                      "value": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (Energy_Layer) || RETURN",
-                        "displayLines": "Energy_Layer",
-                        "constants": [],
-                        "variables": [
-                          "Energy_Layer"
-                        ]
-                      },
-                      "priorState": "Active"
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{All Team Members}}"
       }
     },
     "Tribbie_Tribbie_PassiveAbility01": {
@@ -1000,9 +2669,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1043,6 +2710,27 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-249880334\">Tribbie_PointB3_AddSpModifier</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]  - {{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-421970928\">Tribbie_PointB3_AddSpAura</a>",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (1.5) || RETURN",
+                  "displayLines": "1.5",
+                  "constants": [],
+                  "variables": [
+                    1.5
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -1076,29 +2764,6 @@ const compositeAbilityObject = {
                 }
               ],
               "priorityLevel": -80
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]  - {{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-421970928\">Tribbie_PointB3_AddSpAura</a>",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (1.5) || RETURN",
-                  "displayLines": "1.5",
-                  "constants": [],
-                  "variables": [
-                    1.5
-                  ]
-                }
-              }
             }
           ]
         }
@@ -1562,1410 +3227,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target",
         "subTarget": "Blast Targets"
       }
-    },
-    "Tribbie_Modifiers": {
-      "fileName": "Tribbie_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1724674064\">Tribbie_CanTriggerInsertTag</a>[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "After using Ultimate, Tribbie can launch Follow-Up ATK.",
-          "type": "Other",
-          "statusName": "Busy as Tribbie"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1508822063\">Tribbie_SKL03_Bonus_Debuff</a>[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "description": "Received DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Guess Who Lives Here"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2033842878\">Tribbie_SKL03_Bonus_Buff</a>",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1926771974\">Tribbie_SKL03_Bonus_Mark</a>",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_Attacked",
-                      "value": 1
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1926771974\">Tribbie_SKL03_Bonus_Mark</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack Start [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
-                  "value": 0
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_Attacked",
-                  "value": 0
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "PERF_CNT",
-                  "value": 0
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All(with Unselectable)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1926771974\">Tribbie_SKL03_Bonus_Mark</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All(with Unselectable)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"890101932\">Tribbie_SKL03_Bonus_HighestHPMark</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_Attacked",
-                    "compareType": ">",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Attack Targets",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_Count"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Eidolon Activated",
-                        "eidolon": 2
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "MDF_Count",
-                          "value": {
-                            "operator": "Variables[0] (MDF_Count) || Variables[1] (1) || ADD || RETURN",
-                            "displayLines": "(MDF_Count + 1)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Count",
-                              1
-                            ]
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
-                      "value": {
-                        "operator": "Variables[0] (MDF_Count) || Variables[1] (MDF_ExtraLoopCount) || ADD || RETURN",
-                        "displayLines": "(MDF_Count + MDF_ExtraLoopCount)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Count",
-                          "MDF_ExtraLoopCount"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Sequence",
-                        "Sequence": [
-                          {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All(with Unselectable)}}"
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Has Modifier",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1926771974\">Tribbie_SKL03_Bonus_Mark</a>",
-                              "justAddedOrActive": true
-                            }
-                          },
-                          "Shuffle Targets",
-                          {
-                            "name": "Sort by Stat",
-                            "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                            "living": true,
-                            "sortByHighest": true
-                          },
-                          {
-                            "name": "Return Target",
-                            "value": 1
-                          }
-                        ]
-                      },
-                      "searchRandom": true,
-                      "includeDyingTargets": true,
-                      "maxTargets": 1,
-                      "ifTargetFound": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"890101932\">Tribbie_SKL03_Bonus_HighestHPMark</a>"
-                        },
-                        {
-                          "name": "Use Custom Character Function",
-                          "functionName": "<a class=\"gTempYellow\" id=\"1466558420\">PursuedDamage_PerformanceDelay</a>",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Attack Targets of Modifier Holder}}"
-                          }
-                        },
-                        {
-                          "name": "Find New Target",
-                          "from": {
-                            "name": "Target Sequence",
-                            "Sequence": [
-                              {
-                                "name": "Target Name",
-                                "target": "{{Enemy Team All(with Unselectable)}}"
-                              },
-                              {
-                                "name": "Target Filter",
-                                "conditions": {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"1926771974\">Tribbie_SKL03_Bonus_Mark</a>",
-                                  "justAddedOrActive": true
-                                }
-                              }
-                            ]
-                          },
-                          "searchRandom": true,
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"890101932\">Tribbie_SKL03_Bonus_HighestHPMark</a>",
-                            "invertCondition": true
-                          },
-                          "ifTargetFound": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Target",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "target2": {
-                                  "name": "Target Name",
-                                  "target": "{{Tribbie's Highest HP Target}}"
-                                }
-                              },
-                              "passed": [
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Eidolon Activated",
-                                    "eidolon": 2
-                                  },
-                                  "passed": [
-                                    {
-                                      "name": "Shot Fired"
-                                    },
-                                    {
-                                      "name": "Shot Fired"
-                                    }
-                                  ],
-                                  "failed": [
-                                    {
-                                      "name": "Shot Fired"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "failed": [
-                                {
-                                  "name": "Shot Fired"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "name": "Looped Event",
-                          "maxLoops": {
-                            "operator": "Variables[0] (MDF_Count) || RETURN",
-                            "displayLines": "MDF_Count",
-                            "constants": [],
-                            "variables": [
-                              "MDF_Count"
-                            ]
-                          },
-                          "Event": [
-                            {
-                              "name": "ATK Scaling DMG",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "canPhase": true,
-                              "AttackScaling": {
-                                "DamageType": "Quantum",
-                                "Damage": {
-                                  "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                                  "displayLines": "MDF_PropertyValue2",
-                                  "constants": [],
-                                  "variables": [
-                                    "MDF_PropertyValue2"
-                                  ]
-                                },
-                                "dmgFormula": "Max HP Scaling",
-                                "Toughness": null,
-                                "Tags": null,
-                                "attackType": "Additional DMG"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1144541934\">Tribbie_SKL03_Eidolon1Listener</a>",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage End [Anyone]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      },
-                      {
-                        "name": "Is Entity Type",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "type": "Battle Event",
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Damage Data",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "MDF_TempDamage",
-                      "value": "Result_FinalDamageBase",
-                      "context": "ContextCaster"
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "ContextCaster",
-                      "variableName": "MDF_Rank01ExtraDamage",
-                      "value": {
-                        "operator": "Variables[0] (MDF_Rank01ExtraDamage) || Variables[1] (MDF_TempDamage) || ADD || RETURN",
-                        "displayLines": "(MDF_Rank01ExtraDamage + MDF_TempDamage)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Rank01ExtraDamage",
-                          "MDF_TempDamage"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack Start [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      },
-                      {
-                        "name": "Is Entity Type",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "type": "Battle Event",
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "ContextCaster",
-                      "variableName": "MDF_Rank01ExtraDamage",
-                      "value": 0
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "ContextCaster",
-                      "variableName": "MDF_TempDamage",
-                      "value": 0
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      },
-                      {
-                        "name": "Is Entity Type",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "type": "Battle Event",
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "ContextCaster",
-                      "variableName": "MDF_Rank01ExtraDamage",
-                      "value": {
-                        "operator": "Variables[0] (MDF_Rank01ExtraDamage) || Variables[1] (0.24) || MUL || RETURN",
-                        "displayLines": "(MDF_Rank01ExtraDamage * 0.24)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Rank01ExtraDamage",
-                          0.24
-                        ]
-                      }
-                    },
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Tribbie's Highest HP Target}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Physical",
-                        "DamageFlat": {
-                          "operator": "Variables[0] (MDF_Rank01ExtraDamage) || RETURN",
-                          "displayLines": "MDF_Rank01ExtraDamage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rank01ExtraDamage"
-                          ]
-                        },
-                        "dmgFormulaFinal": "Converted DMG Base",
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "True DMG"
-                      },
-                      "isConvertedDMG": true
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1275056390\">Tribbie_SKL03_Bonus_AttackCount</a>",
-          "counter": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__890101932\">Tribbie_SKL03_Bonus_HighestHPMark</a>",
-          "stackData": [],
-          "latentQueue": [
-            "MDF_Attacked",
-            "PERF_CNT"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1926771974\">Tribbie_SKL03_Bonus_Mark</a>",
-          "stackData": [],
-          "latentQueue": [
-            "MDF_Attacked"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1046659157\">Tribbie_SKL03_PointB2</a>[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"781452723\">Tribbie_SKL03_PointB2_ListenHPChange</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"781452723\">Tribbie_SKL03_PointB2_ListenHPChange</a>"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalBaseHP",
-                  "value": 0
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_MaxHP",
-                  "value": 0
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_HPConvert",
-                  "value": 0
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}}"
-                  },
-                  "conditions": {
-                    "name": "Is Entity Type",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "type": "Character"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "MDF_MaxHP",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                    },
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "MDF_HPConvert",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalBaseHP",
-                      "value": {
-                        "operator": "Variables[0] (MDF_TotalBaseHP) || Variables[1] (MDF_MaxHP) || ADD || Variables[2] (MDF_HPConvert) || SUB || RETURN",
-                        "displayLines": "((MDF_TotalBaseHP + MDF_MaxHP) - MDF_HPConvert)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TotalBaseHP",
-                          "MDF_MaxHP",
-                          "MDF_HPConvert"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
-                  "value": {
-                    "operator": "Variables[0] (MDF_TotalBaseHP) || Variables[1] (0.09) || MUL || RETURN",
-                    "displayLines": "(MDF_TotalBaseHP * 0.09)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TotalBaseHP",
-                      0.09
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  },
-                  "isRefresh": true
-                }
-              ]
-            }
-          ],
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "MDF_PropertyValue",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "maxValue": 1000000000,
-                  "includeMaxValueInRange": true,
-                  "whenValueChanges": [
-                    {
-                      "name": "Stack Target Stat Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      },
-                      "isRefresh": true
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "Max HP Boost",
-          "statusName": "Glass Ball with Wings!"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__781452723\">Tribbie_SKL03_PointB2_ListenHPChange</a>",
-          "modifierFlags": [
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Pre-Death [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalHPChange",
-                  "value": 0
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_MaxHP",
-                  "value": 0
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_HPConvert",
-                  "value": 0
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]  - {{Modifier Holder}}"
-                  },
-                  "conditions": {
-                    "name": "Is Entity Type",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "type": "Character"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "MDF_MaxHP",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                    },
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "MDF_HPConvert",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalHPChange",
-                      "value": {
-                        "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (MDF_MaxHP) || ADD || Variables[2] (MDF_HPConvert) || SUB || RETURN",
-                        "displayLines": "((MDF_TotalHPChange + MDF_MaxHP) - MDF_HPConvert)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TotalHPChange",
-                          "MDF_MaxHP",
-                          "MDF_HPConvert"
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
-                  "value": {
-                    "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (0.09) || MUL || RETURN",
-                    "displayLines": "(MDF_TotalHPChange * 0.09)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TotalHPChange",
-                      0.09
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Modifier-Specific Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifierName": "<a class=\"gModGreen\" id=\"-1046659157\">Tribbie_SKL03_PointB2</a>[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
-                  "variableName": "MDF_PropertyValue",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "maxValue": 1000000000,
-                  "whenValueChanges": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalHPChange",
-                      "value": 0
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_MaxHP",
-                      "value": 0
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_HPConvert",
-                      "value": 0
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All(with Unselectable)V2}}"
-                      },
-                      "conditions": {
-                        "name": "Is Entity Type",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "type": "Character"
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Define Custom Variable with Stat",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "variableName": "MDF_MaxHP",
-                          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                        },
-                        {
-                          "name": "Define Custom Variable with Stat",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "variableName": "MDF_HPConvert",
-                          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "MDF_TotalHPChange",
-                          "value": {
-                            "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (MDF_MaxHP) || ADD || Variables[2] (MDF_HPConvert) || SUB || RETURN",
-                            "displayLines": "((MDF_TotalHPChange + MDF_MaxHP) - MDF_HPConvert)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_TotalHPChange",
-                              "MDF_MaxHP",
-                              "MDF_HPConvert"
-                            ]
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue",
-                      "value": {
-                        "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (0.09) || MUL || RETURN",
-                        "displayLines": "(MDF_TotalHPChange * 0.09)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TotalHPChange",
-                          0.09
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Define Modifier-Specific Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifierName": "<a class=\"gModGreen\" id=\"-1046659157\">Tribbie_SKL03_PointB2</a>[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
-                      "variableName": "MDF_PropertyValue",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "maxValue": 1000000000,
-                  "whenValueChanges": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalHPChange",
-                      "value": 0
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_MaxHP",
-                      "value": 0
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_HPConvert",
-                      "value": 0
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All(with Unselectable)V2}}"
-                      },
-                      "conditions": {
-                        "name": "Is Entity Type",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "type": "Character"
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Define Custom Variable with Stat",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "variableName": "MDF_MaxHP",
-                          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                        },
-                        {
-                          "name": "Define Custom Variable with Stat",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "variableName": "MDF_HPConvert",
-                          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "MDF_TotalHPChange",
-                          "value": {
-                            "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (MDF_MaxHP) || ADD || Variables[2] (MDF_HPConvert) || SUB || RETURN",
-                            "displayLines": "((MDF_TotalHPChange + MDF_MaxHP) - MDF_HPConvert)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_TotalHPChange",
-                              "MDF_MaxHP",
-                              "MDF_HPConvert"
-                            ]
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue",
-                      "value": {
-                        "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (0.09) || MUL || RETURN",
-                        "displayLines": "(MDF_TotalHPChange * 0.09)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TotalHPChange",
-                          0.09
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Define Modifier-Specific Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifierName": "<a class=\"gModGreen\" id=\"-1046659157\">Tribbie_SKL03_PointB2</a>[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
-                      "variableName": "MDF_PropertyValue",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1351986018\">Tribbie_SKL03_Bonus</a>[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_PropertyValue2",
-            "MDF_PointB2_Value"
-          ],
-          "latentQueue": [],
-          "description": "While the Zone exists, increases all enemies' DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, and all allies deal Additional DMG when attacking enemies.",
-          "type": "Other",
-          "effectName": "Guess Who Lives Here",
-          "statusName": "Guess Who Lives Here",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1508822063\">Tribbie_SKL03_Bonus_Debuff</a>[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
-                },
-                "MDF_PropertyValue2": {
-                  "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                  "displayLines": "MDF_PropertyValue2",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue2"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectables}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"2033842878\">Tribbie_SKL03_Bonus_Buff</a>",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_PropertyValue2": {
-                  "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                  "displayLines": "MDF_PropertyValue2",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue2"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1144541934\">Tribbie_SKL03_Eidolon1Listener</a>",
-              "haloStatus": true,
-              "conditions": {
-                "name": "Eidolon Activated",
-                "eidolon": 1
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1046659157\">Tribbie_SKL03_PointB2</a>[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
-              "haloStatus": true,
-              "conditions": {
-                "name": "Trace Activated",
-                "conditionList": "Glass Ball with Wings!"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1699792479\">Tribbie_SKL02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "All-Type RES PEN Boost",
-          "statusName": "Numinosity"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__357538519\">Tribbie_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">Peace of Empathy Bond</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "Adjust Target Stats",
-                  "modifiedValuesArray": [
-                    {
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                      "value": "(0 - MDF_PropertyValue)"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the enemy target's DEF.",
-          "type": "Buff",
-          "effectName": "Peace of Empathy Bond",
-          "statusName": "Peace of Empathy Bond"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1664293665\">Tribbie_SKL02_Bonus</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "All-Type RES PEN Boost",
-          "statusName": "Numinosity",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}-{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1699792479\">Tribbie_SKL02_Bonus_Buff</a>[<span class=\"descriptionNumberColor\">Numinosity</span>]",
-              "haloStatus": true,
-              "includeBattleEvent": true,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                  "displayLines": "MDF_PropertyValue",
-                  "constants": [],
-                  "variables": [
-                    "MDF_PropertyValue"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"357538519\">Tribbie_Eidolon4_Bonus</a>[<span class=\"descriptionNumberColor\">Peace of Empathy Bond</span>]",
-              "haloStatus": true,
-              "conditions": {
-                "name": "Eidolon Activated",
-                "eidolon": 4
-              },
-              "includeBattleEvent": true,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.18) || RETURN",
-                  "displayLines": "0.18",
-                  "constants": [],
-                  "variables": [
-                    0.18
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__361990450\">Tribbie_PointB1_DamageUpModifier</a>[<span class=\"descriptionNumberColor\">Lamb Outside the Wall...</span>]",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "_Layer",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
-                  "value": {
-                    "operator": "Variables[0] (_Layer) || Variables[1] (0.72) || MUL || RETURN",
-                    "displayLines": "(_Layer * 0.72)",
-                    "constants": [],
-                    "variables": [
-                      "_Layer",
-                      0.72
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "OnInsertAbort_Flg"
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">#SkillTree_PointB1_P1_Ratio</span>. This effect stacks up to <span class=\"descriptionNumberColor\">#SkillTree_PointB1_P2_MaxLayer</span> time(s).",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Lamb Outside the Wall...",
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1011992176\">Tribbie_Eidolon6_Bonus_Active</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Attack Type",
-                    "attackTypes": [
-                      "Follow-up"
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                          "value": "MDF_PropertyValue"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__559634045\">Tribbie_Eidolon6_Bonus</a>[<span class=\"descriptionNumberColor\">Morrow of Star Shine</span>]",
-          "stackType": "ReplaceByCaster",
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [],
-          "description": "The DMG dealt by Talent's Follow-Up ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Morrow of Star Shine"
-        }
-      ],
-      "references": []
     }
   }
 }

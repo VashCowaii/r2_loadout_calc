@@ -33,6 +33,9 @@ const configAbility = {
         "Deathrattle",
         "KeepOnDeathrattle"
       ],
+      "latentQueue": [
+        "Insert_Flag"
+      ],
       "execute": [
         {
           "eventTrigger": "Was Killed (Queued) [Owner]",
@@ -51,10 +54,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "Insert_Flag"
       ]
     }
   ]

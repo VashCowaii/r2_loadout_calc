@@ -389,107 +389,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
-          "nameTarget": "DHPT Player Team Living",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Player Team All}}"
-                },
-                {
-                  "name": "Filter by Life-State",
-                  "state": "Mask_AliveOnly"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "DHPT",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{All Team Members with Unselectables}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"292748857\">DanHengPT_PassiveModifier</a>"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "Souldragon",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Battle Event List}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-516529797\">DanHengPT_BEModifier</a>"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "Bondmate",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{All Team Members with Unselectables}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
           "nameTarget": "Evernight's Passive Group",
           "isTargetOperator": false,
           "execute": [
@@ -752,61 +651,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
-          "nameTarget": "Phainon's Forced-Action Teammates",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Player Team Entity}}"
-                },
-                "Adjust Relative to Target, Get Team",
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "flagName": "STAT_ForceActionable"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "Khaslana(Battle Event Cluster)",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Battle Event List}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
           "nameTarget": "Anaxa's Ult Target List",
           "isTargetOperator": false,
           "execute": [
@@ -890,117 +734,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
-          "nameTarget": "Aglaea, Garmentmaker, +ST and Blast",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Join Targets",
-              "TargetList": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                {
-                  "name": "Target Name",
-                  "target": "{{Garmentmaker}}"
-                },
-                {
-                  "name": "Target Name",
-                  "target": "{{ST and Blast}}"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "Aglaea and All Hostile Entities",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Join Targets",
-              "TargetList": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                {
-                  "name": "Target Name",
-                  "target": "{{Garmentmaker}}"
-                },
-                {
-                  "name": "Target Name",
-                  "target": "{{Hostile Entities(AOE)}}"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "Aglaea and Garmentmaker",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Join Targets",
-              "TargetList": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                {
-                  "name": "Target Name",
-                  "target": "{{Caster's Memosprite}}"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "Garmentmaker",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Join Targets",
-              "TargetList": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Caster's Memosprite}}"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "Aglaea's Battle Event",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Battle Event List}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1428154352\">MWAglaea_Summon_Passive</a>"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
           "nameTarget": "Dahlia's Dance Partners",
           "isTargetOperator": false,
           "execute": [
@@ -1020,33 +753,6 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"890706455\">Constance_Dancer</a>[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "Robin's Countdown Battle Event",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Battle Event List}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"594877276\">Robin_PassiveAbility01_BattleEvent</a>"
                   }
                 }
               ]
@@ -1494,33 +1200,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
-          "nameTarget": "Fuyuan",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Battle Event List}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1795719445\">Lingsha_BPAbility_BattleEvent</a>"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
           "nameTarget": "Feixiao Ult Target",
           "isTargetOperator": false,
           "execute": [
@@ -1567,53 +1246,6 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"-1617821492\">Yukong_Flower</a>"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "Topaz with Numby",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Join Targets",
-              "TargetList": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                {
-                  "name": "Target Name",
-                  "target": "{{Numby}}"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "Numby",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Battle Event List}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1529971415\">Topaz_BETag</a>"
                   }
                 }
               ]
@@ -1676,6 +1308,107 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "DHPT Player Team Living",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All}}"
+                },
+                {
+                  "name": "Filter by Life-State",
+                  "state": "Mask_AliveOnly"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "DHPT",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{All Team Members with Unselectables}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"292748857\">DanHengPT_PassiveModifier</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Souldragon",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Battle Event List}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-516529797\">DanHengPT_BEModifier</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Bondmate",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{All Team Members with Unselectables}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"309103337\">DanHengPT_LongLing</a>[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "Mydeimos",
           "isTargetOperator": false,
           "execute": [
@@ -1696,6 +1429,273 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "characterName": "Mydei"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Phainon's Forced-Action Teammates",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team Entity}}"
+                },
+                "Adjust Relative to Target, Get Team",
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "STAT_ForceActionable"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Khaslana(Battle Event Cluster)",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Battle Event List}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"320399697\">Phainon_Ability03_BattleEvent_BaseSpeed</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Aglaea, Garmentmaker, +ST and Blast",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Join Targets",
+              "TargetList": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                {
+                  "name": "Target Name",
+                  "target": "{{Garmentmaker}}"
+                },
+                {
+                  "name": "Target Name",
+                  "target": "{{ST and Blast}}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Aglaea and All Hostile Entities",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Join Targets",
+              "TargetList": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                {
+                  "name": "Target Name",
+                  "target": "{{Garmentmaker}}"
+                },
+                {
+                  "name": "Target Name",
+                  "target": "{{Hostile Entities(AOE)}}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Aglaea and Garmentmaker",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Join Targets",
+              "TargetList": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                {
+                  "name": "Target Name",
+                  "target": "{{Caster's Memosprite}}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Garmentmaker",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Join Targets",
+              "TargetList": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Caster's Memosprite}}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Aglaea's Battle Event",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Battle Event List}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1428154352\">MWAglaea_Summon_Passive</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Robin's Countdown Battle Event",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Battle Event List}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"594877276\">Robin_PassiveAbility01_BattleEvent</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Fuyuan",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Battle Event List}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1795719445\">Lingsha_BPAbility_BattleEvent</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Topaz with Numby",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Join Targets",
+              "TargetList": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                {
+                  "name": "Target Name",
+                  "target": "{{Numby}}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Numby",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Battle Event List}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1529971415\">Topaz_BETag</a>"
                   }
                 }
               ]
@@ -3243,333 +3243,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
-          "nameTarget": "BattleEvent20034",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Battle Event List}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Battle Event ID",
-                    "ID": 20034,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "EVENT[RoT] Light Praetor: Light Characters",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Player Team All}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-609521180\">Enemy_W4_Claymore_01_LocalLegend_WhiteCurse</a>"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1216174202\">Enemy_W4_Claymore_01_LocalLegend_AllCurse</a>"
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "EVENT[RoT] Dark Praetor: Dark Characters",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Player Team All}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1216174202\">Enemy_W4_Claymore_01_LocalLegend_AllCurse</a>"
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "EVENT[RoT] Light Praetor: Light Summons",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Every Battle Entity}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1733208615\">Enemy_W4_Claymore_01_LocalLegend_WhiteSummon</a>"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "EVENT[RoT] Light Praetor: Light Targets",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Every Battle Entity}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"263808079\">Enemy_W4_Claymore_01_LocalLegend_WhiteMonst</a>"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1386282109\">Enemy_W4_Claymore_01_LocalLegend_AllMonst</a>[<span class=\"descriptionNumberColor\">Fight in Unity</span>]"
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "EVENT[RoT] Dark Praetor: Dark Summons",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Every Battle Entity}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1813832219\">Enemy_W4_Claymore_01_LocalLegend_BlackSummon</a>"
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "EVENT[RoT] Dark Praetor: Dark Targets",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Every Battle Entity}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"735008645\">Enemy_W4_Claymore_01_LocalLegend_BlackMonst</a>"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1386282109\">Enemy_W4_Claymore_01_LocalLegend_AllMonst</a>[<span class=\"descriptionNumberColor\">Fight in Unity</span>]"
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "EVENT[RoT] Light Praetor: 3",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Every Battle Entity}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"2062098307\">Enemy_Heaven_ModelController_Claymore</a>"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "EVENT[RoT] Dark Praetor: Self",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Every Battle Entity}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-23920605\">Enemy_W4_Claymore_01_LocalLegend_Status</a>"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "EVENT[RoT] Dark Praetor: Selected Target",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Player Team All}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1375461160\">BattleEvent_W4_Claymore_01_SelectTarget</a>"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
           "nameTarget": "Praetor: Skill03 Target",
           "isTargetOperator": false,
           "execute": [
@@ -4712,6 +4385,333 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "BattleEvent20034",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Battle Event List}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Battle Event ID",
+                    "ID": 20034,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "EVENT[RoT] Light Praetor: Light Characters",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-609521180\">Enemy_W4_Claymore_01_LocalLegend_WhiteCurse</a>"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1216174202\">Enemy_W4_Claymore_01_LocalLegend_AllCurse</a>"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "EVENT[RoT] Dark Praetor: Dark Characters",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1216174202\">Enemy_W4_Claymore_01_LocalLegend_AllCurse</a>"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "EVENT[RoT] Light Praetor: Light Summons",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Every Battle Entity}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1733208615\">Enemy_W4_Claymore_01_LocalLegend_WhiteSummon</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "EVENT[RoT] Light Praetor: Light Targets",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Every Battle Entity}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"263808079\">Enemy_W4_Claymore_01_LocalLegend_WhiteMonst</a>"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1386282109\">Enemy_W4_Claymore_01_LocalLegend_AllMonst</a>[<span class=\"descriptionNumberColor\">Fight in Unity</span>]"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "EVENT[RoT] Dark Praetor: Dark Summons",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Every Battle Entity}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1813832219\">Enemy_W4_Claymore_01_LocalLegend_BlackSummon</a>"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "EVENT[RoT] Dark Praetor: Dark Targets",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Every Battle Entity}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"735008645\">Enemy_W4_Claymore_01_LocalLegend_BlackMonst</a>"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1386282109\">Enemy_W4_Claymore_01_LocalLegend_AllMonst</a>[<span class=\"descriptionNumberColor\">Fight in Unity</span>]"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "EVENT[RoT] Light Praetor: 3",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Every Battle Entity}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"2062098307\">Enemy_Heaven_ModelController_Claymore</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "EVENT[RoT] Dark Praetor: Self",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Every Battle Entity}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-23920605\">Enemy_W4_Claymore_01_LocalLegend_Status</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "EVENT[RoT] Dark Praetor: Selected Target",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1375461160\">BattleEvent_W4_Claymore_01_SelectTarget</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "EVENT[RoT] Light Praetor: Self",
           "isTargetOperator": false,
           "execute": [
@@ -5471,28 +5471,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
-          "nameTarget": "Trial: Blade",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Add Target by CharacterID",
-              "characterID": 7205
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "Trial: Dan Heng IL",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Add Target by CharacterID",
-              "characterID": 7213
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
           "nameTarget": "Enemy Kafka Skill4 Other Targets",
           "isTargetOperator": false,
           "execute": [
@@ -5529,6 +5507,28 @@ const compositeAbilityObject = {
                   }
                 }
               ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Trial: Blade",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Add Target by CharacterID",
+              "characterID": 7205
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Trial: Dan Heng IL",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Add Target by CharacterID",
+              "characterID": 7213
             }
           ]
         },

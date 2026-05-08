@@ -3,7 +3,16 @@ const compositeAbilityObject = {
   "fullCharacterName": 4015020,
   "trimCharacterName": 4015020,
   "abilityList": [
-    "4015020_BattleEventAbility_Monster_DawnEye_01_Rognarok",
+    "4015020_Monster_W4_DawnsEye_01_MainStoryUseBE",
+    "4015020_Monster_W4_DawnsEye_01_MainStoryEnd",
+    "4015020_Monster_W4_DawnsEye_01_MainStoryUnlockBE",
+    "4015020_Monster_W4_DawnsEye_01_MainStoryOpeningPhase01",
+    "4015020_Monster_W4_DawnsEye_01_PassiveAbility_Insert",
+    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate5",
+    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate4",
+    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate3",
+    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate2",
+    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate",
     "4015020_BattleEventAbility_Monster_DawnEye_01_RognarokTrigger",
     "4015020_Monster_W4_DawnsEye_01_Ability04_Part02",
     "4015020_Monster_W4_DawnsEye_01_Ability04_Part01",
@@ -13,89 +22,1738 @@ const compositeAbilityObject = {
     "4015020_Monster_W4_DawnsEye_01_Ability02_Part01",
     "4015020_Monster_W4_DawnsEye_01_Ability01_Part02",
     "4015020_Monster_W4_DawnsEye_01_Ability01_Part01",
-    "4015020_Monster_W4_DawnsEye_01_PassiveAbility_Insert",
-    "4015020_Monster_W4_DawnsEye_01_MainStoryEnd",
-    "4015020_Monster_W4_DawnsEye_01_MainStoryUseBE",
-    "4015020_Monster_W4_DawnsEye_01_MainStoryUnlockBE",
-    "4015020_Monster_W4_DawnsEye_01_MainStoryOpeningPhase01",
-    "4015020_Monster_W4_DawnsEye_01_MainStory",
-    "4015020_Monster_W4_DawnsEyePart_06_PassiveAbilityInitiate",
-    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate5",
-    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate4",
-    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate3",
-    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate2",
-    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate",
     "4015020_Modifiers",
     "4015020_Functions",
     "4015020_BE_BattleEvents"
   ],
   "abilityObject": {
-    "4015020_BattleEventAbility_Monster_DawnEye_01_Rognarok": {
-      "fileName": "4015020_BattleEventAbility_Monster_DawnEye_01_Rognarok",
+    "4015020_Monster_W4_DawnsEye_01_MainStoryUseBE": {
+      "fileName": "4015020_Monster_W4_DawnsEye_01_MainStoryUseBE",
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1488863445\">Modifier_Monster_W4_DawnsEye_01_MuteSpeed</a>[<span class=\"descriptionNumberColor\">Tide-Corrosion</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-633741031\">Enemy_W4_DawnsEye_01_HyacineStun</a>"
+        },
+        {
+          "name": "Inject Ability Use",
+          "condition": {
+            "name": "Insert Ability Condition",
+            "type": "AbilityOwnerInsertUnusedCount",
+            "typeValue": 1
+          },
+          "abilityName": "MissionBattleEvent60024_Ability03_Insert_Part01",
+          "abilitySource": {
+            "name": "Add Target by Unique Identifier",
+            "identifier": "HealBattleEvent"
+          },
+          "priorityTag": "STAGE_Enemy",
+          "canHitNonTargets": true,
+          "allowAbilityTriggers": false
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4015020_Monster_W4_DawnsEye_01_MainStoryEnd": {
+      "fileName": "4015020_Monster_W4_DawnsEye_01_MainStoryEnd",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "silent": true
+        },
+        {
+          "name": "Reset Toughness",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "value": "MonsterType_W4_BossPart"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-985067601\">Enemy_W4_DawnsEye_01_BreakMuteSpeed</a>"
+            },
+            {
+              "name": "Remove Modifier Behavior Flag(s)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "flagNames": []
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "flagName": "Break"
+              },
+              "passed": [
+                {
+                  "name": "Reset Toughness",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
+                },
+                {
+                  "name": "Exit Broken-State",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1128353279\">Enemy_W4_DawnsEye_PartBlock</a>[<span class=\"descriptionNumberColor\">Marine Layer</span>]",
+                "invertCondition": true
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "MonsterType_W4_BossPartRight"
+                  },
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value": "MonsterType_W4_BossPartLeft"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
         {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-446760993\">Modifier_BattleEventAbility_WMonster_DawnEye_01_Rognarok</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-459185506\">Enemy_W4_DawnsEye_01_StandbyEffect</a>"
+        },
+        {
+          "name": "Remove Modifier Behavior Flag(s)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "flagNames": []
+        },
+        {
+          "name": "Set HP Value",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "setValue": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1766662793\">Enemy_W4_DawnsEye_01_LockHP</a>"
         }
       ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-446760993\">Modifier_BattleEventAbility_WMonster_DawnEye_01_Rognarok</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__1766662793\">Enemy_W4_DawnsEye_01_LockHP</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
-                  "name": "Inject Ability Use",
-                  "condition": {
-                    "name": "Insert Ability Condition",
-                    "type": "AbilityOwnerInsertUnusedCount",
-                    "typeValue": 1
-                  },
-                  "conditionActive": {
-                    "name": "Target Exists",
-                    "target": {
-                      "name": "Add Target by Unique Identifier",
-                      "identifier": "RagBattleEvent"
-                    }
-                  },
-                  "abilityName": "BattleEventAbility_Monster_DawnEye_01_RognarokTrigger",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Level Entity}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "priorityTag": "EnemyChangeState",
-                  "canHitNonTargets": true,
-                  "valuePerStack": {
-                    "BaseAttack": {
-                      "operator": "Variables[0] (BaseAttack) || RETURN",
-                      "displayLines": "BaseAttack",
-                      "constants": [],
-                      "variables": [
-                        "BaseAttack"
-                      ]
-                    }
-                  },
-                  "allowAbilityTriggers": false
+                  "name": "Lock HP",
+                  "threshold": 0.00010000006
                 }
               ]
             }
+          ]
+        }
+      ]
+    },
+    "4015020_Monster_W4_DawnsEye_01_MainStoryUnlockBE": {
+      "fileName": "4015020_Monster_W4_DawnsEye_01_MainStoryUnlockBE",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Character ID",
+                  "ID": 1409,
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "characterName": "Hyacine",
+                  "invertCondition": true
+                }
+              }
+            ]
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-508563078\">Enemy_W4_DawnsEye_01_MainStoryDisableAction</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Character ID",
+                  "ID": 1409,
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "characterName": "Hyacine"
+                }
+              }
+            ]
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-633741031\">Enemy_W4_DawnsEye_01_HyacineStun</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-539111731\">Enemy_W4_DawnsEye_BEAdd</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1194820093\">Enemy_W4_DawnsEye_HyacineLockHP</a>"
+        },
+        {
+          "name": "Add Battle Event",
+          "teamName": "Player Team",
+          "eventID": 60029,
+          "variables": {
+            "BaseAttack": {
+              "operator": "Variables[0] (BaseAttack) || RETURN",
+              "displayLines": "BaseAttack",
+              "constants": [],
+              "variables": [
+                "BaseAttack"
+              ]
+            }
+          },
+          "whenCreated": [
+            {
+              "name": "Update Energy",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "value": -200,
+              "isFixed": "* ERR"
+            },
+            {
+              "name": "Assign Unique Name",
+              "uniqueName": "HealBattleEvent",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            },
+            {
+              "name": "Update Energy",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "value": 100,
+              "isFixed": "* ERR",
+              "isSetToValue": true
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1028939151\">Enemy_W4_DawnsEye_StateGroupChange</a>"
+            }
+          ]
+        },
+        {
+          "name": "Inject Ability Use",
+          "condition": {
+            "name": "Insert Ability Condition",
+            "type": "AbilityOwnerInsertUnusedCount",
+            "typeValue": 1
+          },
+          "abilityName": "Monster_W4_DawnsEye_01_MainStoryUseBE",
+          "abilitySource": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "abilityTarget": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "priorityTag": "STAGE_Enemy",
+          "canHitNonTargets": true,
+          "allowAbilityTriggers": false
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1028939151\">Enemy_W4_DawnsEye_StateGroupChange</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        }
+      ]
+    },
+    "4015020_Monster_W4_DawnsEye_01_MainStoryOpeningPhase01": {
+      "fileName": "4015020_Monster_W4_DawnsEye_01_MainStoryOpeningPhase01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Character ID",
+            "ID": 1409,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "characterName": "Hyacine"
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4015020_Monster_W4_DawnsEye_01_PassiveAbility_Insert": {
+      "fileName": "4015020_Monster_W4_DawnsEye_01_PassiveAbility_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-752624700\">Enemy_W4_DawnsEye_01_MainStory</a>"
+          }
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Compare: Target",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
+              },
+              {
+                "name": "Compare: Target",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster's Minions}}"
+                }
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Dispel Debuffs",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "silent": true
+            }
+          ]
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "multiBase": 0
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1151172141\">MWMonster_W4_Boss_MainBlock</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "target": {
+            "name": "Add Target by Unique Identifier",
+            "identifier": "HealBattleEvent"
+          },
+          "variableName": "W4_DawnsEye_01_HPRatio",
+          "value": 1
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "<=",
+            "value2": 2
+          },
+          "passed": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "AIFlag",
+              "value": 1
+            },
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster's Minions}}"
+              },
+              "searchRandom": true,
+              "ifTargetFound": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1902031976\">Monster_ChangePhase_ParamEntity</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-178728122\">MWMonster_W4_DawnsEye_01_DamageTakenUp</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1909659856\">MWMonster_W4_Boss_PartHP</a>",
+                  "casterAssign": "CasterSelf"
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Add Target by Unique Identifier",
+                "identifier": "RagBattleEvent"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"428140510\">Enemy_W4_DawnsEye_01_BESpeed</a>",
+              "valuePerStack": {
+                "MDF_Speed": {
+                  "operator": "Variables[0] ({[SkillP07[5]]}) || RETURN",
+                  "displayLines": "{[SkillP07[5]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP07[5]]}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All(with Unselectable)}}"
+              },
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": {
+                  "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
+                  "displayLines": "PartEntity1_MonsterID",
+                  "constants": [],
+                  "variables": [
+                    "PartEntity1_MonsterID"
+                  ]
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": null
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1128353279\">Enemy_W4_DawnsEye_PartBlock</a>[<span class=\"descriptionNumberColor\">Marine Layer</span>]"
+                }
+              ],
+              "noTargetFound": [
+                {
+                  "name": "Create Enemy as Body Part",
+                  "partName": "Head_R",
+                  "value": {
+                    "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
+                    "displayLines": "PartEntity1_MonsterID",
+                    "constants": [],
+                    "variables": [
+                      "PartEntity1_MonsterID"
+                    ]
+                  },
+                  "offset": -2,
+                  "linkHitByPart": true
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "maxTargets": 1,
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": {
+                      "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
+                      "displayLines": "PartEntity1_MonsterID",
+                      "constants": [],
+                      "variables": [
+                        "PartEntity1_MonsterID"
+                      ]
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": null
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1807935838\">Enemy_W4_DawnsEye_PartController</a>",
+                      "valuePerStack": {},
+                      "casterAssign": "CasterSelf"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Enemy ID",
+                        "ID": 4015021,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "characterName": "Hyacinthia, Eye of Twilight",
+                        "isBaseCompare": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1459512555\">Enemy_W4_DawnsEye_B_PartHP</a>[<span class=\"descriptionNumberColor\">All As One</span>]",
+                          "casterAssign": "CasterSelf"
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1716068014\">Enemy_W4_DawnsEye_PartHP</a>[<span class=\"descriptionNumberColor\">All As One</span>]",
+                          "casterAssign": "CasterSelf"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1128353279\">Enemy_W4_DawnsEye_PartBlock</a>[<span class=\"descriptionNumberColor\">Marine Layer</span>]"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
+                      "valuePerStack": {
+                        "MDF_TotalDamageRatioAdd": 0,
+                        "MDF_TotalDamageRatioCut": {
+                          "operator": "Variables[0] ({[SkillP09[3]]}) || RETURN",
+                          "displayLines": "{[SkillP09[3]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[SkillP09[3]]}"
+                          ]
+                        }
+                      },
+                      "casterAssign": "CasterSelf"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All(with Unselectable)}}"
+              },
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": {
+                  "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
+                  "displayLines": "PartEntity3_MonsterID",
+                  "constants": [],
+                  "variables": [
+                    "PartEntity3_MonsterID"
+                  ]
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": null
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1128353279\">Enemy_W4_DawnsEye_PartBlock</a>[<span class=\"descriptionNumberColor\">Marine Layer</span>]"
+                }
+              ],
+              "noTargetFound": [
+                {
+                  "name": "Create Enemy as Body Part",
+                  "partName": "Head_L",
+                  "value": {
+                    "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
+                    "displayLines": "PartEntity3_MonsterID",
+                    "constants": [],
+                    "variables": [
+                      "PartEntity3_MonsterID"
+                    ]
+                  },
+                  "offset": 2,
+                  "type": 3,
+                  "linkHitByPart": true
+                },
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "maxTargets": 1,
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": {
+                      "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
+                      "displayLines": "PartEntity3_MonsterID",
+                      "constants": [],
+                      "variables": [
+                        "PartEntity3_MonsterID"
+                      ]
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": null
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1807935838\">Enemy_W4_DawnsEye_PartController</a>",
+                      "valuePerStack": {},
+                      "casterAssign": "CasterSelf"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Enemy ID",
+                        "ID": 4015021,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "characterName": "Hyacinthia, Eye of Twilight",
+                        "isBaseCompare": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1459512555\">Enemy_W4_DawnsEye_B_PartHP</a>[<span class=\"descriptionNumberColor\">All As One</span>]",
+                          "casterAssign": "CasterSelf"
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1716068014\">Enemy_W4_DawnsEye_PartHP</a>[<span class=\"descriptionNumberColor\">All As One</span>]",
+                          "casterAssign": "CasterSelf"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1128353279\">Enemy_W4_DawnsEye_PartBlock</a>[<span class=\"descriptionNumberColor\">Marine Layer</span>]"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
+                      "valuePerStack": {
+                        "MDF_TotalDamageRatioAdd": 0,
+                        "MDF_TotalDamageRatioCut": {
+                          "operator": "Variables[0] ({[SkillP09[3]]}) || RETURN",
+                          "displayLines": "{[SkillP09[3]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[SkillP09[3]]}"
+                          ]
+                        }
+                      },
+                      "casterAssign": "CasterSelf"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1646746780\">MWMonster_W4_DawnsEye_01_PartController</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "scope": "TargetEntity",
+          "variableName": "ChangePhase_InsertController",
+          "value": 0
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate5": {
+      "fileName": "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate5",
+      "skillTrigger": "SkillP10",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate4": {
+      "fileName": "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate4",
+      "skillTrigger": "SkillP09",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate3": {
+      "fileName": "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate3",
+      "skillTrigger": "SkillP08",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate2": {
+      "fileName": "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate2",
+      "skillTrigger": "SkillP07",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate": {
+      "fileName": "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate",
+      "skillTrigger": "SkillP06",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-459185506\">Enemy_W4_DawnsEye_01_StandbyEffect</a>"
+        },
+        {
+          "name": "Create Enemy as Body Part",
+          "partName": "Head_R",
+          "value": {
+            "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
+            "displayLines": "PartEntity1_MonsterID",
+            "constants": [],
+            "variables": [
+              "PartEntity1_MonsterID"
+            ]
+          },
+          "offset": -2,
+          "linkHitByPart": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1480712068\">W4_DawnsEye_BattleScore3</a>"
+        },
+        {
+          "name": "Create Enemy as Body Part",
+          "partName": "Head_L",
+          "value": {
+            "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
+            "displayLines": "PartEntity3_MonsterID",
+            "constants": [],
+            "variables": [
+              "PartEntity3_MonsterID"
+            ]
+          },
+          "offset": 2,
+          "type": 3,
+          "linkHitByPart": true
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Stage ID",
+            "ID": 2148,
+            "compareType": "=",
+            "characterName": null
+          },
+          "passed": [
+            {
+              "name": "Action Advance/Delay",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "advanceType": "Delay",
+              "multiAdd": 1
+            },
+            {
+              "name": "Action Advance/Delay",
+              "target": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              "advanceType": "Delay",
+              "multiAdd": 99
+            }
           ],
-          "stackData": [],
-          "latentQueue": []
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 401502000,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": null
+              },
+              "passed": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "AIFlag",
+                  "value": 7
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-752624700\">Enemy_W4_DawnsEye_01_MainStory</a>"
+          },
+          "failed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1186573263\">W4_DawnsEye_01_TargetChange</a>"
+            }
+          ]
+        },
+        {
+          "name": "Preload Battle Event(s)",
+          "eventID": [
+            20015,
+            60029
+          ]
+        },
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "BaseAttack",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
+        },
+        {
+          "name": "Add Battle Event",
+          "teamName": "Enemy Team",
+          "eventID": 20015,
+          "variables": {
+            "BaseAttack": {
+              "operator": "Variables[0] (BaseAttack) || RETURN",
+              "displayLines": "BaseAttack",
+              "constants": [],
+              "variables": [
+                "BaseAttack"
+              ]
+            }
+          },
+          "whenCreated": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"428140510\">Enemy_W4_DawnsEye_01_BESpeed</a>",
+              "valuePerStack": {
+                "MDF_Speed": {
+                  "operator": "Variables[0] ({[SkillP07[4]]}) || RETURN",
+                  "displayLines": "{[SkillP07[4]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP07[4]]}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Action Advance/Delay",
+              "advanceType": "Set",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "multiBase": {
+                "operator": "Variables[0] ({[SkillP07[3]]}) || RETURN",
+                "displayLines": "{[SkillP07[3]]}",
+                "constants": [],
+                "variables": [
+                  "{[SkillP07[3]]}"
+                ]
+              }
+            },
+            {
+              "name": "Assign Unique Name",
+              "uniqueName": "RagBattleEvent",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
+              "valuePerStack": {
+                "MDF_TotalDamageRatioAdd": {
+                  "operator": "Variables[0] ({[SkillP09[2]]}) || RETURN",
+                  "displayLines": "{[SkillP09[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP09[2]]}"
+                  ]
+                },
+                "MDF_TotalDamageRatioCut": 0
+              },
+              "casterAssign": "CasterSelf"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 401502000,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": null
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-2100215981\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamage</a>[<span class=\"descriptionNumberColor\">Black Tide Sync Rate</span>]",
+              "valuePerStack": {
+                "MDF_TotalDamageRatio": {
+                  "operator": "Variables[0] ({[SkillP09[0]]}) || Variables[1] ({[SkillP09[5]]}) || ADD || RETURN",
+                  "displayLines": "({[SkillP09[0]]} + {[SkillP09[5]]})",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP09[0]]}",
+                    "{[SkillP09[5]]}"
+                  ]
+                },
+                "MDF_TotalDamageRatioMin": {
+                  "operator": "Variables[0] ({[SkillP09[0]]}) || RETURN",
+                  "displayLines": "{[SkillP09[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP09[0]]}"
+                  ]
+                },
+                "MDF_TotalDamageRatioMax": {
+                  "operator": "Variables[0] ({[SkillP09[1]]}) || RETURN",
+                  "displayLines": "{[SkillP09[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP09[1]]}"
+                  ]
+                },
+                "MDF_BaseAttack": {
+                  "operator": "Variables[0] (BaseAttack) || RETURN",
+                  "displayLines": "BaseAttack",
+                  "constants": [],
+                  "variables": [
+                    "BaseAttack"
+                  ]
+                }
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-2100215981\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamage</a>[<span class=\"descriptionNumberColor\">Black Tide Sync Rate</span>]",
+              "valuePerStack": {
+                "MDF_TotalDamageRatio": {
+                  "operator": "Variables[0] ({[SkillP09[0]]}) || RETURN",
+                  "displayLines": "{[SkillP09[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP09[0]]}"
+                  ]
+                },
+                "MDF_TotalDamageRatioMin": {
+                  "operator": "Variables[0] ({[SkillP09[0]]}) || RETURN",
+                  "displayLines": "{[SkillP09[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP09[0]]}"
+                  ]
+                },
+                "MDF_TotalDamageRatioMax": {
+                  "operator": "Variables[0] ({[SkillP09[1]]}) || RETURN",
+                  "displayLines": "{[SkillP09[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP09[1]]}"
+                  ]
+                },
+                "MDF_BaseAttack": {
+                  "operator": "Variables[0] (BaseAttack) || RETURN",
+                  "displayLines": "BaseAttack",
+                  "constants": [],
+                  "variables": [
+                    "BaseAttack"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
+          "valuePerStack": {
+            "MDF_TotalDamageRatioAdd": {
+              "operator": "Variables[0] ({[SkillP09[2]]}) || RETURN",
+              "displayLines": "{[SkillP09[2]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP09[2]]}"
+              ]
+            },
+            "MDF_TotalDamageRatioCut": 0
+          }
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "value": "MonsterType_W4_BossPart"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1807935838\">Enemy_W4_DawnsEye_PartController</a>",
+              "casterAssign": "CasterSelf"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1128353279\">Enemy_W4_DawnsEye_PartBlock</a>[<span class=\"descriptionNumberColor\">Marine Layer</span>]"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 4015021,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Hyacinthia, Eye of Twilight",
+                "isBaseCompare": true
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1459512555\">Enemy_W4_DawnsEye_B_PartHP</a>[<span class=\"descriptionNumberColor\">All As One</span>]",
+                  "casterAssign": "CasterSelf"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1716068014\">Enemy_W4_DawnsEye_PartHP</a>[<span class=\"descriptionNumberColor\">All As One</span>]",
+                  "casterAssign": "CasterSelf"
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
+              "valuePerStack": {
+                "MDF_TotalDamageRatioAdd": 0,
+                "MDF_TotalDamageRatioCut": {
+                  "operator": "Variables[0] ({[SkillP09[3]]}) || RETURN",
+                  "displayLines": "{[SkillP09[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP09[3]]}"
+                  ]
+                }
+              },
+              "casterAssign": "CasterSelf"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 401502000,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": null,
+                "invertCondition": true
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 4015021,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Hyacinthia, Eye of Twilight",
+                "invertCondition": true
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Add Battle Event",
+              "teamName": "Player Team",
+              "eventID": 60029,
+              "variables": {
+                "BaseAttack": {
+                  "operator": "Variables[0] (BaseAttack) || RETURN",
+                  "displayLines": "BaseAttack",
+                  "constants": [],
+                  "variables": [
+                    "BaseAttack"
+                  ]
+                }
+              },
+              "whenCreated": [
+                {
+                  "name": "Assign Unique Name",
+                  "uniqueName": "HealBattleEvent",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
+                },
+                {
+                  "name": "Update Energy",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "value": {
+                    "operator": "Variables[0] ({[SkillP10[5]]}) || RETURN",
+                    "displayLines": "{[SkillP10[5]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[SkillP10[5]]}"
+                    ]
+                  },
+                  "isFixed": "* ERR"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1313380500\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarok</a>",
+          "valuePerStack": {
+            "MDF_DirtyHPBase": {
+              "operator": "Variables[0] ({[SkillP07[0]]}) || RETURN",
+              "displayLines": "{[SkillP07[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP07[0]]}"
+              ]
+            },
+            "MDF_BaseAttack": {
+              "operator": "Variables[0] (BaseAttack) || RETURN",
+              "displayLines": "BaseAttack",
+              "constants": [],
+              "variables": [
+                "BaseAttack"
+              ]
+            },
+            "MDF_DeathSPAdd": {
+              "operator": "Variables[0] ({[SkillP07[2]]}) || RETURN",
+              "displayLines": "{[SkillP07[2]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP07[2]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Stage Ability",
+          "abilityName": "BattleEventAbility_Monster_DawnEye_01_RognarokTrigger"
+        },
+        {
+          "name": "Add Stage Ability",
+          "abilityName": "Monster_W4_DawnsEye_01_Rognarok_Camera"
+        },
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1259657295\">Enemy_W4_DawnsEye_01_BreakController</a>",
+          "valuePerStack": {
+            "StanceDamage": {
+              "operator": "Variables[0] ({[SkillP06[2]]}) || RETURN",
+              "displayLines": "{[SkillP06[2]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP06[2]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-105944791\">Enemy_W4_DawnsEye_01_SoundController</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-105944791\">Enemy_W4_DawnsEye_01_SoundController</a>",
+          "latentQueue": [
+            "AIFlag"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle"
+            },
+            {
+              "eventTrigger": "Leave Battle"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1646746780\">MWMonster_W4_DawnsEye_01_PartController</a>",
+          "counter": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "ChangePhase_InsertController"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Waiting for Healing in Limbo",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "MonsterType_W4_BossPart"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Force Entity Death",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "ChangePhase_InsertController",
+                    "compareType": "=",
+                    "value2": 0,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "CurrentHP",
+                        "compareType": "<=",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Declare Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "scope": "TargetEntity",
+                          "variableName": "ChangePhase_InsertController",
+                          "value": 1
+                        },
+                        {
+                          "name": "Dispel Debuffs",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "silent": true
+                        },
+                        {
+                          "name": "Set Enemy Phase",
+                          "mode": "Inc"
+                        },
+                        {
+                          "name": "Inject Ability Use",
+                          "abilityName": "Monster_W4_DawnsEye_01_PassiveAbility_Insert",
+                          "priorityTag": "EnemyPhaseChange",
+                          "ownerState": "Mask_AliveOrLimbo",
+                          "targetState": "Mask_AliveOrLimbo",
+                          "canHitNonTargets": true,
+                          "showInActionOrder": true,
+                          "allowAbilityTriggers": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -90
+            }
+          ]
         }
       ]
     },
@@ -771,9 +2429,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ]
     },
@@ -1023,23 +2679,19 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-439718905\">Enemy_W4_DawnsEye_01_Ability03_Charge</a>[<span class=\"descriptionNumberColor\">The Dark Tides Cometh</span>]",
+          "description": "The next attack will inflict \"Unmaking Ashes: Godsfall\" on all allies.",
+          "type": "Other",
+          "statusName": "The Dark Tides Cometh",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "The next attack will inflict \"Unmaking Ashes: Godsfall\" on all allies.",
-          "type": "Other",
-          "statusName": "The Dark Tides Cometh"
+          ]
         }
       ]
     },
@@ -1605,2425 +3257,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "4015020_Monster_W4_DawnsEye_01_PassiveAbility_Insert": {
-      "fileName": "4015020_Monster_W4_DawnsEye_01_PassiveAbility_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-752624700\">Enemy_W4_DawnsEye_01_MainStory</a>"
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Compare: Target",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "target2": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                }
-              },
-              {
-                "name": "Compare: Target",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "target2": {
-                  "name": "Target Name",
-                  "target": "{{Caster's Minions}}"
-                }
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Dispel Debuffs",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "silent": true
-            }
-          ]
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 0
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1151172141\">MWMonster_W4_Boss_MainBlock</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Add Target by Unique Identifier",
-            "identifier": "HealBattleEvent"
-          },
-          "variableName": "W4_DawnsEye_01_HPRatio",
-          "value": 1
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "<=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "AIFlag",
-              "value": 1
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "searchRandom": true,
-              "ifTargetFound": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-1902031976\">Monster_ChangePhase_ParamEntity</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-178728122\">MWMonster_W4_DawnsEye_01_DamageTakenUp</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1909659856\">MWMonster_W4_Boss_PartHP</a>",
-                  "casterAssign": "CasterSelf"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Add Target by Unique Identifier",
-                "identifier": "RagBattleEvent"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"428140510\">Enemy_W4_DawnsEye_01_BESpeed</a>",
-              "valuePerStack": {
-                "MDF_Speed": {
-                  "operator": "Variables[0] ({[SkillP07[5]]}) || RETURN",
-                  "displayLines": "{[SkillP07[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP07[5]]}"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All(with Unselectable)}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": {
-                  "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-                  "displayLines": "PartEntity1_MonsterID",
-                  "constants": [],
-                  "variables": [
-                    "PartEntity1_MonsterID"
-                  ]
-                },
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": null
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1128353279\">Enemy_W4_DawnsEye_PartBlock</a>[<span class=\"descriptionNumberColor\">Marine Layer</span>]"
-                }
-              ],
-              "noTargetFound": [
-                {
-                  "name": "Create Enemy as Body Part",
-                  "partName": "Head_R",
-                  "value": {
-                    "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-                    "displayLines": "PartEntity1_MonsterID",
-                    "constants": [],
-                    "variables": [
-                      "PartEntity1_MonsterID"
-                    ]
-                  },
-                  "offset": -2,
-                  "linkHitByPart": true
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-                      "displayLines": "PartEntity1_MonsterID",
-                      "constants": [],
-                      "variables": [
-                        "PartEntity1_MonsterID"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1807935838\">Enemy_W4_DawnsEye_PartController</a>",
-                      "valuePerStack": {},
-                      "casterAssign": "CasterSelf"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": 4015021,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "characterName": "Hyacinthia, Eye of Twilight",
-                        "isBaseCompare": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1459512555\">Enemy_W4_DawnsEye_B_PartHP</a>[<span class=\"descriptionNumberColor\">All As One</span>]",
-                          "casterAssign": "CasterSelf"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1716068014\">Enemy_W4_DawnsEye_PartHP</a>[<span class=\"descriptionNumberColor\">All As One</span>]",
-                          "casterAssign": "CasterSelf"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1128353279\">Enemy_W4_DawnsEye_PartBlock</a>[<span class=\"descriptionNumberColor\">Marine Layer</span>]"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
-                      "valuePerStack": {
-                        "MDF_TotalDamageRatioAdd": 0,
-                        "MDF_TotalDamageRatioCut": {
-                          "operator": "Variables[0] ({[SkillP09[3]]}) || RETURN",
-                          "displayLines": "{[SkillP09[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP09[3]]}"
-                          ]
-                        }
-                      },
-                      "casterAssign": "CasterSelf"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All(with Unselectable)}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": {
-                  "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-                  "displayLines": "PartEntity3_MonsterID",
-                  "constants": [],
-                  "variables": [
-                    "PartEntity3_MonsterID"
-                  ]
-                },
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": null
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1128353279\">Enemy_W4_DawnsEye_PartBlock</a>[<span class=\"descriptionNumberColor\">Marine Layer</span>]"
-                }
-              ],
-              "noTargetFound": [
-                {
-                  "name": "Create Enemy as Body Part",
-                  "partName": "Head_L",
-                  "value": {
-                    "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-                    "displayLines": "PartEntity3_MonsterID",
-                    "constants": [],
-                    "variables": [
-                      "PartEntity3_MonsterID"
-                    ]
-                  },
-                  "offset": 2,
-                  "type": 3,
-                  "linkHitByPart": true
-                },
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-                      "displayLines": "PartEntity3_MonsterID",
-                      "constants": [],
-                      "variables": [
-                        "PartEntity3_MonsterID"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1807935838\">Enemy_W4_DawnsEye_PartController</a>",
-                      "valuePerStack": {},
-                      "casterAssign": "CasterSelf"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": 4015021,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "characterName": "Hyacinthia, Eye of Twilight",
-                        "isBaseCompare": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1459512555\">Enemy_W4_DawnsEye_B_PartHP</a>[<span class=\"descriptionNumberColor\">All As One</span>]",
-                          "casterAssign": "CasterSelf"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1716068014\">Enemy_W4_DawnsEye_PartHP</a>[<span class=\"descriptionNumberColor\">All As One</span>]",
-                          "casterAssign": "CasterSelf"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1128353279\">Enemy_W4_DawnsEye_PartBlock</a>[<span class=\"descriptionNumberColor\">Marine Layer</span>]"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
-                      "valuePerStack": {
-                        "MDF_TotalDamageRatioAdd": 0,
-                        "MDF_TotalDamageRatioCut": {
-                          "operator": "Variables[0] ({[SkillP09[3]]}) || RETURN",
-                          "displayLines": "{[SkillP09[3]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[SkillP09[3]]}"
-                          ]
-                        }
-                      },
-                      "casterAssign": "CasterSelf"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1646746780\">MWMonster_W4_DawnsEye_01_PartController</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "scope": "TargetEntity",
-          "variableName": "ChangePhase_InsertController",
-          "value": 0
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4015020_Monster_W4_DawnsEye_01_MainStoryEnd": {
-      "fileName": "4015020_Monster_W4_DawnsEye_01_MainStoryEnd",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Reset Toughness",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "value": "MonsterType_W4_BossPart"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-985067601\">Enemy_W4_DawnsEye_01_BreakMuteSpeed</a>"
-            },
-            {
-              "name": "Remove Modifier Behavior Flag(s)",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "flagName": "Break"
-              },
-              "passed": [
-                {
-                  "name": "Reset Toughness",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  }
-                },
-                {
-                  "name": "Exit Broken-State",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1128353279\">Enemy_W4_DawnsEye_PartBlock</a>[<span class=\"descriptionNumberColor\">Marine Layer</span>]",
-                "invertCondition": true
-              },
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "MonsterType_W4_BossPartRight"
-                  },
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "MonsterType_W4_BossPartLeft"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-459185506\">Enemy_W4_DawnsEye_01_StandbyEffect</a>"
-        },
-        {
-          "name": "Remove Modifier Behavior Flag(s)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "flagNames": []
-        },
-        {
-          "name": "Set HP Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "setValue": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1766662793\">Enemy_W4_DawnsEye_01_LockHP</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1766662793\">Enemy_W4_DawnsEye_01_LockHP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.00010000006
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "4015020_Monster_W4_DawnsEye_01_MainStoryUseBE": {
-      "fileName": "4015020_Monster_W4_DawnsEye_01_MainStoryUseBE",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1488863445\">Modifier_Monster_W4_DawnsEye_01_MuteSpeed</a>[<span class=\"descriptionNumberColor\">Tide-Corrosion</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-633741031\">Enemy_W4_DawnsEye_01_HyacineStun</a>"
-        },
-        {
-          "name": "Inject Ability Use",
-          "condition": {
-            "name": "Insert Ability Condition",
-            "type": "AbilityOwnerInsertUnusedCount",
-            "typeValue": 1
-          },
-          "abilityName": "MissionBattleEvent60024_Ability03_Insert_Part01",
-          "abilitySource": {
-            "name": "Add Target by Unique Identifier",
-            "identifier": "HealBattleEvent"
-          },
-          "priorityTag": "STAGE_Enemy",
-          "canHitNonTargets": true,
-          "allowAbilityTriggers": false
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4015020_Monster_W4_DawnsEye_01_MainStoryUnlockBE": {
-      "fileName": "4015020_Monster_W4_DawnsEye_01_MainStoryUnlockBE",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Character ID",
-                  "ID": 1409,
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "characterName": "Hyacine",
-                  "invertCondition": true
-                }
-              }
-            ]
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-508563078\">Enemy_W4_DawnsEye_01_MainStoryDisableAction</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Character ID",
-                  "ID": 1409,
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "characterName": "Hyacine"
-                }
-              }
-            ]
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-633741031\">Enemy_W4_DawnsEye_01_HyacineStun</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-539111731\">Enemy_W4_DawnsEye_BEAdd</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1194820093\">Enemy_W4_DawnsEye_HyacineLockHP</a>"
-        },
-        {
-          "name": "Add Battle Event",
-          "teamName": "Player Team",
-          "eventID": 60029,
-          "variables": {
-            "BaseAttack": {
-              "operator": "Variables[0] (BaseAttack) || RETURN",
-              "displayLines": "BaseAttack",
-              "constants": [],
-              "variables": [
-                "BaseAttack"
-              ]
-            }
-          },
-          "whenCreated": [
-            {
-              "name": "Update Energy",
-              "on": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "value": -200,
-              "isFixed": "* ERR"
-            },
-            {
-              "name": "Assign Unique Name",
-              "uniqueName": "HealBattleEvent",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            {
-              "name": "Update Energy",
-              "on": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "value": 100,
-              "isFixed": "* ERR",
-              "isSetToValue": true
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1028939151\">Enemy_W4_DawnsEye_StateGroupChange</a>"
-            }
-          ]
-        },
-        {
-          "name": "Inject Ability Use",
-          "condition": {
-            "name": "Insert Ability Condition",
-            "type": "AbilityOwnerInsertUnusedCount",
-            "typeValue": 1
-          },
-          "abilityName": "Monster_W4_DawnsEye_01_MainStoryUseBE",
-          "abilitySource": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "abilityTarget": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "priorityTag": "STAGE_Enemy",
-          "canHitNonTargets": true,
-          "allowAbilityTriggers": false
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1028939151\">Enemy_W4_DawnsEye_StateGroupChange</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "4015020_Monster_W4_DawnsEye_01_MainStoryOpeningPhase01": {
-      "fileName": "4015020_Monster_W4_DawnsEye_01_MainStoryOpeningPhase01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Character ID",
-            "ID": 1409,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": "Hyacine"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4015020_Monster_W4_DawnsEye_01_MainStory": {
-      "fileName": "4015020_Monster_W4_DawnsEye_01_MainStory",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-752624700\">Enemy_W4_DawnsEye_01_MainStory</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-539111731\">Enemy_W4_DawnsEye_BEAdd</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "conditions": {
-            "name": "Character ID",
-            "ID": 1409,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "characterName": "Hyacine"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1194820093\">Enemy_W4_DawnsEye_HyacineLockHP</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1472423733\">Enemy_W4_DawnsEye_01_Break</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2042518236\">Enemy_W4_DawnsEye_01_LowHP</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"506771112\">Enemy_W4_DawnsEye_01_Tutorial</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__506771112\">Enemy_W4_DawnsEye_01_Tutorial</a>",
-          "stackType": "Replace",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Level Entity}}"
-                    },
-                    "value1": "WeatherPhase01Flag",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "WeatherPhase01Flag"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Action Phase Start [Anyone][?]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Level Entity}}"
-                        },
-                        "value1": "WeatherPhase01Flag",
-                        "compareType": "=",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "variableName": "WeatherPhase01Flag",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2042518236\">Enemy_W4_DawnsEye_01_LowHP</a>",
-          "execute": [
-            {
-              "eventTrigger": "HP Change [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": "<",
-                        "value2": 0.3
-                      }
-                    ]
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1472423733\">Enemy_W4_DawnsEye_01_Break</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-539111731\">Enemy_W4_DawnsEye_BEAdd</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_isLockHPThresholdReached",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-882985814\">RuanMei_PassiveArea_EnemyCD</a>"
-                    },
-                    {
-                      "name": "Remove Modifier Behavior Flag(s)",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "flagNames": []
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "Break"
-                      },
-                      "passed": [
-                        {
-                          "name": "Reset Toughness",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          }
-                        },
-                        {
-                          "name": "Exit Broken-State",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.3
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Locked HP Floor Reached [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 5
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"352501027\">Enemy_W4_DawnsEye_01_Ability01isAiming</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1769824945\">Enemy_Monster_W4_DawnsEye_01_AimTarget</a>"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_isLockHPThresholdReached",
-                  "value": 1
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Current Turn Is",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-                      },
-                      "failed": [
-                        {
-                          "name": "Assign Advance/Delay to Current Ability Use",
-                          "adjustmentValue": 0,
-                          "adjustmentType": "="
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "advanceType": "Set",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "set": 0
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking Modifier Instance [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Was",
-                        "modifier": "<a class=\"gModGreen\" id=\"-1488863445\">Modifier_Monster_W4_DawnsEye_01_MuteSpeed</a>[<span class=\"descriptionNumberColor\">Tide-Corrosion</span>]"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-                      },
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1488863445\">Modifier_Monster_W4_DawnsEye_01_MuteSpeed</a>[<span class=\"descriptionNumberColor\">Tide-Corrosion</span>]"
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Compare: Target Count",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target List}}"
-                                },
-                                "compareType": ">=",
-                                "value2": 3
-                              },
-                              {
-                                "name": "Target Exists",
-                                "target": {
-                                  "name": "Add Target by Unique Identifier",
-                                  "identifier": "HealBattleEvent"
-                                },
-                                "invertCondition": true
-                              }
-                            ]
-                          },
-                          "passed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Sequence",
-                                "Sequence": [
-                                  {
-                                    "name": "Target Name",
-                                    "target": "{{Player Team All(with Unselectable)V2}}"
-                                  },
-                                  {
-                                    "name": "Target Filter",
-                                    "conditions": {
-                                      "name": "Character ID",
-                                      "ID": 1409,
-                                      "target": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "characterName": "Hyacine",
-                                      "invertCondition": true
-                                    }
-                                  }
-                                ]
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-508563078\">Enemy_W4_DawnsEye_01_MainStoryDisableAction</a>"
-                            },
-                            {
-                              "name": "Inject Ability Use",
-                              "condition": {
-                                "name": "Insert Ability Condition",
-                                "type": "AbilityOwnerInsertUnusedCount",
-                                "typeValue": 1
-                              },
-                              "abilityName": "Monster_W4_DawnsEye_01_MainStoryUnlockBE",
-                              "abilitySource": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "abilityTarget": {
-                                "name": "Target Sequence",
-                                "Sequence": [
-                                  {
-                                    "name": "Target Name",
-                                    "target": "{{Player Team All(with Unselectable)V2}}"
-                                  },
-                                  {
-                                    "name": "Target Filter",
-                                    "conditions": {
-                                      "name": "Character ID",
-                                      "ID": 1409,
-                                      "target": {
-                                        "name": "Target Name",
-                                        "target": "{{Parameter Target}}"
-                                      },
-                                      "characterName": "Hyacine"
-                                    }
-                                  }
-                                ]
-                              },
-                              "priorityTag": "STAGE_Enemy",
-                              "targetState": "Anyone",
-                              "canHitNonTargets": true,
-                              "allowAbilityTriggers": false
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1194820093\">Enemy_W4_DawnsEye_HyacineLockHP</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking Modifier Instance [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1488863445\">Modifier_Monster_W4_DawnsEye_01_MuteSpeed</a>[<span class=\"descriptionNumberColor\">Tide-Corrosion</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Target Exists",
-                        "target": {
-                          "name": "Add Target by Unique Identifier",
-                          "identifier": "HealBattleEvent"
-                        },
-                        "invertCondition": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-508563078\">Enemy_W4_DawnsEye_01_MainStoryDisableAction</a>"
-                        },
-                        {
-                          "name": "Inject Ability Use",
-                          "condition": {
-                            "name": "Insert Ability Condition",
-                            "type": "AbilityOwnerInsertUnusedCount",
-                            "typeValue": 1
-                          },
-                          "abilityName": "Monster_W4_DawnsEye_01_MainStoryUnlockBE",
-                          "abilitySource": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "abilityTarget": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "priorityTag": "STAGE_Enemy",
-                          "targetState": "Anyone",
-                          "canHitNonTargets": true,
-                          "allowAbilityTriggers": false
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-752624700\">Enemy_W4_DawnsEye_01_MainStory</a>",
-          "execute": [
-            {
-              "eventTrigger": "Waiting for Healing in Limbo",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "ChangePhase_InsertController",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": "<=",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "ChangePhase_InsertController",
-                          "value": 1
-                        },
-                        {
-                          "name": "Dispel Debuffs",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "silent": true
-                        },
-                        {
-                          "name": "Inject Ability Use",
-                          "abilityName": "Monster_W4_DawnsEye_01_MainStoryEnd",
-                          "priorityTag": "EnemyPhaseChange",
-                          "ownerState": "Mask_AliveOrLimbo",
-                          "targetState": "Mask_AliveOrLimbo",
-                          "canHitNonTargets": true,
-                          "showInActionOrder": true,
-                          "allowAbilityTriggers": false
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -90
-            },
-            {
-              "eventTrigger": "Enter Battle"
-            },
-            {
-              "eventTrigger": "Leave Battle"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "4015020_Monster_W4_DawnsEyePart_06_PassiveAbilityInitiate": {
-      "fileName": "4015020_Monster_W4_DawnsEyePart_06_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1639987176\">Enemy_W4_DawnsEyePart_06_MuteSpeed</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1639987176\">Enemy_W4_DawnsEyePart_06_MuteSpeed</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
-    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate5": {
-      "fileName": "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate5",
-      "skillTrigger": "SkillP10",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate4": {
-      "fileName": "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate4",
-      "skillTrigger": "SkillP09",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate3": {
-      "fileName": "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate3",
-      "skillTrigger": "SkillP08",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate2": {
-      "fileName": "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate2",
-      "skillTrigger": "SkillP07",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate": {
-      "fileName": "4015020_Monster_W4_DawnsEye_01_PassiveAbilityInitiate",
-      "skillTrigger": "SkillP06",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-459185506\">Enemy_W4_DawnsEye_01_StandbyEffect</a>"
-        },
-        {
-          "name": "Create Enemy as Body Part",
-          "partName": "Head_R",
-          "value": {
-            "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-            "displayLines": "PartEntity1_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity1_MonsterID"
-            ]
-          },
-          "offset": -2,
-          "linkHitByPart": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1480712068\">W4_DawnsEye_BattleScore3</a>"
-        },
-        {
-          "name": "Create Enemy as Body Part",
-          "partName": "Head_L",
-          "value": {
-            "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-            "displayLines": "PartEntity3_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity3_MonsterID"
-            ]
-          },
-          "offset": 2,
-          "type": 3,
-          "linkHitByPart": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Stage ID",
-            "ID": 2148,
-            "compareType": "=",
-            "characterName": null
-          },
-          "passed": [
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "advanceType": "Delay",
-              "multiAdd": 1
-            },
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              "advanceType": "Delay",
-              "multiAdd": 99
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": 401502000,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": null
-              },
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 7
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-752624700\">Enemy_W4_DawnsEye_01_MainStory</a>"
-          },
-          "failed": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1186573263\">W4_DawnsEye_01_TargetChange</a>"
-            }
-          ]
-        },
-        {
-          "name": "Preload Battle Event(s)",
-          "eventID": [
-            20015,
-            60029
-          ]
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "BaseAttack",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
-        },
-        {
-          "name": "Add Battle Event",
-          "teamName": "Enemy Team",
-          "eventID": 20015,
-          "variables": {
-            "BaseAttack": {
-              "operator": "Variables[0] (BaseAttack) || RETURN",
-              "displayLines": "BaseAttack",
-              "constants": [],
-              "variables": [
-                "BaseAttack"
-              ]
-            }
-          },
-          "whenCreated": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"428140510\">Enemy_W4_DawnsEye_01_BESpeed</a>",
-              "valuePerStack": {
-                "MDF_Speed": {
-                  "operator": "Variables[0] ({[SkillP07[4]]}) || RETURN",
-                  "displayLines": "{[SkillP07[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP07[4]]}"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Action Advance/Delay",
-              "advanceType": "Set",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "multiBase": {
-                "operator": "Variables[0] ({[SkillP07[3]]}) || RETURN",
-                "displayLines": "{[SkillP07[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP07[3]]}"
-                ]
-              }
-            },
-            {
-              "name": "Assign Unique Name",
-              "uniqueName": "RagBattleEvent",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
-              "valuePerStack": {
-                "MDF_TotalDamageRatioAdd": {
-                  "operator": "Variables[0] ({[SkillP09[2]]}) || RETURN",
-                  "displayLines": "{[SkillP09[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP09[2]]}"
-                  ]
-                },
-                "MDF_TotalDamageRatioCut": 0
-              },
-              "casterAssign": "CasterSelf"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 401502000,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": null
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2100215981\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamage</a>[<span class=\"descriptionNumberColor\">Black Tide Sync Rate</span>]",
-              "valuePerStack": {
-                "MDF_TotalDamageRatio": {
-                  "operator": "Variables[0] ({[SkillP09[0]]}) || Variables[1] ({[SkillP09[5]]}) || ADD || RETURN",
-                  "displayLines": "({[SkillP09[0]]} + {[SkillP09[5]]})",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP09[0]]}",
-                    "{[SkillP09[5]]}"
-                  ]
-                },
-                "MDF_TotalDamageRatioMin": {
-                  "operator": "Variables[0] ({[SkillP09[0]]}) || RETURN",
-                  "displayLines": "{[SkillP09[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP09[0]]}"
-                  ]
-                },
-                "MDF_TotalDamageRatioMax": {
-                  "operator": "Variables[0] ({[SkillP09[1]]}) || RETURN",
-                  "displayLines": "{[SkillP09[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP09[1]]}"
-                  ]
-                },
-                "MDF_BaseAttack": {
-                  "operator": "Variables[0] (BaseAttack) || RETURN",
-                  "displayLines": "BaseAttack",
-                  "constants": [],
-                  "variables": [
-                    "BaseAttack"
-                  ]
-                }
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-2100215981\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamage</a>[<span class=\"descriptionNumberColor\">Black Tide Sync Rate</span>]",
-              "valuePerStack": {
-                "MDF_TotalDamageRatio": {
-                  "operator": "Variables[0] ({[SkillP09[0]]}) || RETURN",
-                  "displayLines": "{[SkillP09[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP09[0]]}"
-                  ]
-                },
-                "MDF_TotalDamageRatioMin": {
-                  "operator": "Variables[0] ({[SkillP09[0]]}) || RETURN",
-                  "displayLines": "{[SkillP09[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP09[0]]}"
-                  ]
-                },
-                "MDF_TotalDamageRatioMax": {
-                  "operator": "Variables[0] ({[SkillP09[1]]}) || RETURN",
-                  "displayLines": "{[SkillP09[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP09[1]]}"
-                  ]
-                },
-                "MDF_BaseAttack": {
-                  "operator": "Variables[0] (BaseAttack) || RETURN",
-                  "displayLines": "BaseAttack",
-                  "constants": [],
-                  "variables": [
-                    "BaseAttack"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
-          "valuePerStack": {
-            "MDF_TotalDamageRatioAdd": {
-              "operator": "Variables[0] ({[SkillP09[2]]}) || RETURN",
-              "displayLines": "{[SkillP09[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP09[2]]}"
-              ]
-            },
-            "MDF_TotalDamageRatioCut": 0
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All(with Unselectable)}}"
-          },
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "value": "MonsterType_W4_BossPart"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1807935838\">Enemy_W4_DawnsEye_PartController</a>",
-              "casterAssign": "CasterSelf"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1128353279\">Enemy_W4_DawnsEye_PartBlock</a>[<span class=\"descriptionNumberColor\">Marine Layer</span>]"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": 4015021,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Hyacinthia, Eye of Twilight",
-                "isBaseCompare": true
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1459512555\">Enemy_W4_DawnsEye_B_PartHP</a>[<span class=\"descriptionNumberColor\">All As One</span>]",
-                  "casterAssign": "CasterSelf"
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1716068014\">Enemy_W4_DawnsEye_PartHP</a>[<span class=\"descriptionNumberColor\">All As One</span>]",
-                  "casterAssign": "CasterSelf"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
-              "valuePerStack": {
-                "MDF_TotalDamageRatioAdd": 0,
-                "MDF_TotalDamageRatioCut": {
-                  "operator": "Variables[0] ({[SkillP09[3]]}) || RETURN",
-                  "displayLines": "{[SkillP09[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP09[3]]}"
-                  ]
-                }
-              },
-              "casterAssign": "CasterSelf"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 401502000,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": null,
-                "invertCondition": true
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 4015021,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Hyacinthia, Eye of Twilight",
-                "invertCondition": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Battle Event",
-              "teamName": "Player Team",
-              "eventID": 60029,
-              "variables": {
-                "BaseAttack": {
-                  "operator": "Variables[0] (BaseAttack) || RETURN",
-                  "displayLines": "BaseAttack",
-                  "constants": [],
-                  "variables": [
-                    "BaseAttack"
-                  ]
-                }
-              },
-              "whenCreated": [
-                {
-                  "name": "Assign Unique Name",
-                  "uniqueName": "HealBattleEvent",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  }
-                },
-                {
-                  "name": "Update Energy",
-                  "on": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "value": {
-                    "operator": "Variables[0] ({[SkillP10[5]]}) || RETURN",
-                    "displayLines": "{[SkillP10[5]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[SkillP10[5]]}"
-                    ]
-                  },
-                  "isFixed": "* ERR"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1313380500\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarok</a>",
-          "valuePerStack": {
-            "MDF_DirtyHPBase": {
-              "operator": "Variables[0] ({[SkillP07[0]]}) || RETURN",
-              "displayLines": "{[SkillP07[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP07[0]]}"
-              ]
-            },
-            "MDF_BaseAttack": {
-              "operator": "Variables[0] (BaseAttack) || RETURN",
-              "displayLines": "BaseAttack",
-              "constants": [],
-              "variables": [
-                "BaseAttack"
-              ]
-            },
-            "MDF_DeathSPAdd": {
-              "operator": "Variables[0] ({[SkillP07[2]]}) || RETURN",
-              "displayLines": "{[SkillP07[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP07[2]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "BattleEventAbility_Monster_DawnEye_01_RognarokTrigger"
-        },
-        {
-          "name": "Add Stage Ability",
-          "abilityName": "Monster_W4_DawnsEye_01_Rognarok_Camera"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1259657295\">Enemy_W4_DawnsEye_01_BreakController</a>",
-          "valuePerStack": {
-            "StanceDamage": {
-              "operator": "Variables[0] ({[SkillP06[2]]}) || RETURN",
-              "displayLines": "{[SkillP06[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP06[2]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-105944791\">Enemy_W4_DawnsEye_01_SoundController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-105944791\">Enemy_W4_DawnsEye_01_SoundController</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle"
-            },
-            {
-              "eventTrigger": "Leave Battle"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "AIFlag"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1646746780\">MWMonster_W4_DawnsEye_01_PartController</a>",
-          "counter": 1,
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "ChangePhase_InsertController"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Waiting for Healing in Limbo",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All(with Unselectable)}}"
-                  },
-                  "conditions": {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "MonsterType_W4_BossPart"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Force Entity Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "ChangePhase_InsertController",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "CurrentHP",
-                        "compareType": "<=",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "ChangePhase_InsertController",
-                          "value": 1
-                        },
-                        {
-                          "name": "Dispel Debuffs",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "silent": true
-                        },
-                        {
-                          "name": "Set Enemy Phase",
-                          "mode": "Inc"
-                        },
-                        {
-                          "name": "Inject Ability Use",
-                          "abilityName": "Monster_W4_DawnsEye_01_PassiveAbility_Insert",
-                          "priorityTag": "EnemyPhaseChange",
-                          "ownerState": "Mask_AliveOrLimbo",
-                          "targetState": "Mask_AliveOrLimbo",
-                          "canHitNonTargets": true,
-                          "showInActionOrder": true,
-                          "allowAbilityTriggers": false
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -90
-            }
-          ]
-        }
-      ]
-    },
     "4015020_Modifiers": {
       "fileName": "4015020_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -4130,6 +3363,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__196132555\">Enemy_W4_DawnsEye_01_MainStoryLockHP</a>",
+          "stackData": [
+            "MDF_DeathSPAdd"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4163,29 +3399,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DeathSPAdd"
-          ],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-508563078\">Enemy_W4_DawnsEye_01_MainStoryDisableAction</a>",
           "modifierFlags": [
             "DisableAction"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-633741031\">Enemy_W4_DawnsEye_01_HyacineStun</a>",
           "modifierFlags": [
             "STAT_CTRL_UnOperable"
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4200,14 +3428,18 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__428140510\">Enemy_W4_DawnsEye_01_BESpeed</a>",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_Speed"
+          ],
+          "latentQueue": [
+            "AIFlag"
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4230,12 +3462,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_Speed"
-          ],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
@@ -4290,9 +3516,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4311,6 +3535,13 @@ const compositeAbilityObject = {
             "STAT_CTRL_UnOperable",
             "RemoveWhenCasterDead"
           ],
+          "stackData": [
+            "MDF_DeathSPAdd"
+          ],
+          "description": "Cannot be selected, cannot take action.",
+          "type": "Debuff",
+          "effectName": "Tide-Corrosion",
+          "statusName": "Tide-Corrosion",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4466,15 +3697,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_DeathSPAdd"
-          ],
-          "latentQueue": [],
-          "description": "Cannot be selected, cannot take action.",
-          "type": "Debuff",
-          "effectName": "Tide-Corrosion",
-          "statusName": "Tide-Corrosion"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4490,6 +3713,11 @@ const compositeAbilityObject = {
             "CanBeAddedToServant",
             "CanListenServantCallback"
           ],
+          "useEntitySnapshot": true,
+          "description": "Restores this unit's HP by <span class=\"descriptionNumberColor\">MDF_HPDelta</span> at the start of every turn, and increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddRatio</span>.",
+          "type": "Buff",
+          "effectName": "Eagerness",
+          "statusName": "Eagerness",
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]",
@@ -4533,12 +3761,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "useEntitySnapshot": true,
-          "description": "Restores this unit's HP by <span class=\"descriptionNumberColor\">MDF_HPDelta</span> at the start of every turn, and increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddRatio</span>.",
-          "type": "Buff",
-          "effectName": "Eagerness",
-          "statusName": "Eagerness"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4594,6 +3817,10 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "CanBeAddedToServant"
           ],
+          "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_HPDelta</span>.",
+          "type": "Buff",
+          "effectName": "Flame-Chase",
+          "statusName": "Flame-Chase",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4657,11 +3884,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_HPDelta</span>.",
-          "type": "Buff",
-          "effectName": "Flame-Chase",
-          "statusName": "Flame-Chase"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4802,9 +4025,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -4846,6 +4067,14 @@ const compositeAbilityObject = {
             "CanBeAddedToServant",
             "RemoveWhenCasterDead"
           ],
+          "useEntitySnapshot": true,
+          "stackData": [
+            "MDF_DamageValue"
+          ],
+          "description": "Maximum Restorable HP decreases by <span class=\"descriptionNumberColor\">MDF_DamageValueFinal</span>.",
+          "type": "Debuff",
+          "effectName": "Rot",
+          "statusName": "Rot",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5051,16 +4280,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -50
             }
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_DamageValue"
-          ],
-          "latentQueue": [],
-          "description": "Maximum Restorable HP decreases by <span class=\"descriptionNumberColor\">MDF_DamageValueFinal</span>.",
-          "type": "Debuff",
-          "effectName": "Rot",
-          "statusName": "Rot"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -5068,6 +4288,13 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [
             "RemoveWhenCasterDead"
+          ],
+          "stackData": [
+            "MDF_TotalDamageRatioAdd",
+            "MDF_TotalDamageRatioCut"
+          ],
+          "latentQueue": [
+            "AIFlag"
           ],
           "execute": [
             {
@@ -5127,13 +4354,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_TotalDamageRatioAdd",
-            "MDF_TotalDamageRatioCut"
-          ],
-          "latentQueue": [
-            "AIFlag"
           ]
         },
         {
@@ -5155,6 +4375,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__74735154\">Modifier_Monster_W4_DawnsEye_WheaterRognarokTrueDamage</a>[<span class=\"descriptionNumberColor\">Skygash</span>]",
+          "description": "After targets attack, deals True DMG based on \"Black Tide Sync Rate.\" This DMG is \"Non-fatal.\"",
+          "type": "Buff",
+          "statusName": "Skygash",
           "execute": [
             {
               "eventTrigger": "Deal Damage End [Owner]: Hit",
@@ -5272,15 +4495,21 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "After targets attack, deals True DMG based on \"Black Tide Sync Rate.\" This DMG is \"Non-fatal.\"",
-          "type": "Buff",
-          "statusName": "Skygash"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2100215981\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamage</a>[<span class=\"descriptionNumberColor\">Black Tide Sync Rate</span>]",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_TotalDamageRatioAdd"
+          ],
+          "latentQueue": [
+            "AIFlag"
+          ],
+          "description": "The current Charge ratio of \"Eye of Twilight\" is <span class=\"descriptionNumberColor\">MDF_ChargePercentage</span>.",
+          "type": "Other",
+          "statusName": "Black Tide Sync Rate",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5373,21 +4602,80 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "MDF_TotalDamageRatioAdd"
-          ],
-          "latentQueue": [
-            "AIFlag"
-          ],
-          "description": "The current Charge ratio of \"Eye of Twilight\" is <span class=\"descriptionNumberColor\">MDF_ChargePercentage</span>.",
-          "type": "Other",
-          "statusName": "Black Tide Sync Rate"
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1313380500\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarok</a>",
           "stackType": "Replace",
+          "stackData": [
+            "MDF_DamageValue"
+          ],
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[Remove Backup Memosprite]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1789818614\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokSub</a>[<span class=\"descriptionNumberColor\">Rot</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_RecoverRatioAttack": {
+                  "operator": "Variables[0] (MDF_DirtyHPBase) || RETURN",
+                  "displayLines": "MDF_DirtyHPBase",
+                  "constants": [],
+                  "variables": [
+                    "MDF_DirtyHPBase"
+                  ]
+                },
+                "MDF_BaseAttack": {
+                  "operator": "Variables[0] (MDF_BaseAttack) || RETURN",
+                  "displayLines": "MDF_BaseAttack",
+                  "constants": [],
+                  "variables": [
+                    "MDF_BaseAttack"
+                  ]
+                },
+                "MDF_DamageRatioAdd": 0,
+                "MDF_DamageValueFinal": {
+                  "operator": "Variables[0] (MDF_DamageValueFinal) || RETURN",
+                  "displayLines": "MDF_DamageValueFinal",
+                  "constants": [],
+                  "variables": [
+                    "MDF_DamageValueFinal"
+                  ]
+                },
+                "MDF_DeathSPAdd": {
+                  "operator": "Variables[0] (MDF_DeathSPAdd) || RETURN",
+                  "displayLines": "MDF_DeathSPAdd",
+                  "constants": [],
+                  "variables": [
+                    "MDF_DeathSPAdd"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"74735154\">Modifier_Monster_W4_DawnsEye_WheaterRognarokTrueDamage</a>[<span class=\"descriptionNumberColor\">Skygash</span>]",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_DamagePercentage": {
+                  "operator": "Variables[0] ({[SkillP09[4]]}) || RETURN",
+                  "displayLines": "{[SkillP09[4]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP09[4]]}"
+                  ]
+                }
+              }
+            }
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -5466,75 +4754,6 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
             }
-          ],
-          "stackData": [
-            "MDF_DamageValue"
-          ],
-          "latentQueue": [],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[Remove Backup Memosprite]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1789818614\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokSub</a>[<span class=\"descriptionNumberColor\">Rot</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_RecoverRatioAttack": {
-                  "operator": "Variables[0] (MDF_DirtyHPBase) || RETURN",
-                  "displayLines": "MDF_DirtyHPBase",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DirtyHPBase"
-                  ]
-                },
-                "MDF_BaseAttack": {
-                  "operator": "Variables[0] (MDF_BaseAttack) || RETURN",
-                  "displayLines": "MDF_BaseAttack",
-                  "constants": [],
-                  "variables": [
-                    "MDF_BaseAttack"
-                  ]
-                },
-                "MDF_DamageRatioAdd": 0,
-                "MDF_DamageValueFinal": {
-                  "operator": "Variables[0] (MDF_DamageValueFinal) || RETURN",
-                  "displayLines": "MDF_DamageValueFinal",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DamageValueFinal"
-                  ]
-                },
-                "MDF_DeathSPAdd": {
-                  "operator": "Variables[0] (MDF_DeathSPAdd) || RETURN",
-                  "displayLines": "MDF_DeathSPAdd",
-                  "constants": [],
-                  "variables": [
-                    "MDF_DeathSPAdd"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"74735154\">Modifier_Monster_W4_DawnsEye_WheaterRognarokTrueDamage</a>[<span class=\"descriptionNumberColor\">Skygash</span>]",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_DamagePercentage": {
-                  "operator": "Variables[0] ({[SkillP09[4]]}) || RETURN",
-                  "displayLines": "{[SkillP09[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP09[4]]}"
-                  ]
-                }
-              }
-            }
           ]
         },
         {
@@ -5575,6 +4794,12 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1259657295\">Enemy_W4_DawnsEye_01_BreakController</a>",
           "modifierFlags": [
             "ForceHitH"
+          ],
+          "stackData": [
+            "StanceDamage"
+          ],
+          "latentQueue": [
+            "AIFlag"
           ],
           "execute": [
             {
@@ -5945,12 +5170,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [
-            "StanceDamage"
-          ],
-          "latentQueue": [
-            "AIFlag"
           ]
         }
       ],

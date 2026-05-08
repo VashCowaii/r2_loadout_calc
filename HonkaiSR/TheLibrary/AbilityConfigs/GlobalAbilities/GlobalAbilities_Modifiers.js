@@ -17,6 +17,14 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1136407126\">Standard_Departed_Sub</a>",
       "stackType": "ReplaceByCaster",
+      "removalDependencies": {
+        "name": "Removal Dependency",
+        "dependancyName": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
+        "casterFilter": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        }
+      },
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -44,15 +52,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "removalDependencies": {
-        "name": "Removal Dependency",
-        "dependancyName": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
-        "casterFilter": {
-          "name": "Target Name",
-          "target": "{{Caster}}"
-        }
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -60,6 +60,19 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "Stealth"
+      ],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}.[[addBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>",
+          "aliveOnly": "False",
+          "haloStatus": true,
+          "includeBattleEvent": true
+        }
       ],
       "execute": [
         {
@@ -186,19 +199,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "subModList": [
-        {
-          "name": "Add Sub-Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}.[[addBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1136407126\">Standard_Departed_Sub</a>",
-          "aliveOnly": "False",
-          "haloStatus": true,
-          "includeBattleEvent": true
-        }
       ]
     },
     {
@@ -231,9 +231,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -922,9 +920,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -967,11 +963,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_AddValue"
-      ],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

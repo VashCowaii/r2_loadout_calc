@@ -609,8 +609,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1271809030\">Enemy_W1_CocoliaP2_IF_TargetLock02</a>[<span class=\"descriptionNumberColor\">Nowhere to Escape</span>]",
       "stackType": "Multiple",
-      "stackData": [],
-      "latentQueue": [],
       "description": "Locked on by Lance of the Eternal Freeze, and will be considered as an additional target for the Annihilator of Desolation Mistral: Mother of Deception's single-target ability.",
       "type": "Other",
       "effectName": "Lock On",
@@ -620,8 +618,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1288586649\">Enemy_W1_CocoliaP2_IF_TargetLock01</a>[<span class=\"descriptionNumberColor\">Nowhere to Escape</span>]",
       "stackType": "Multiple",
-      "stackData": [],
-      "latentQueue": [],
       "description": "Locked on by Lance of the Eternal Freeze, and will be considered as an additional target for the Annihilator of Desolation Mistral: Mother of Deception's single-target ability.",
       "type": "Other",
       "effectName": "Lock On",
@@ -634,15 +630,15 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "AttackSign"
       ],
+      "description": "Locked on by the Ice Edge, and will be considered as an additional target for the Annihilator of Desolation Mistral's single-target ability.",
+      "type": "Other",
+      "effectName": "Lock On",
+      "statusName": "Nowhere to Escape",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "description": "Locked on by the Ice Edge, and will be considered as an additional target for the Annihilator of Desolation Mistral's single-target ability.",
-      "type": "Other",
-      "effectName": "Lock On",
-      "statusName": "Nowhere to Escape"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -651,15 +647,15 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "AttackSign"
       ],
+      "description": "Locked on by the Ice Edge, and will be considered as an additional target for the Annihilator of Desolation Mistral's single-target ability.",
+      "type": "Other",
+      "effectName": "Lock On",
+      "statusName": "Nowhere to Escape",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
         }
-      ],
-      "description": "Locked on by the Ice Edge, and will be considered as an additional target for the Annihilator of Desolation Mistral's single-target ability.",
-      "type": "Other",
-      "effectName": "Lock On",
-      "statusName": "Nowhere to Escape"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -971,9 +967,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1285,9 +1279,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1599,9 +1591,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -1913,9 +1903,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2151,9 +2139,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2207,9 +2193,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2459,9 +2443,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2515,9 +2497,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2681,9 +2661,7 @@ const configAbility = {
         {
           "eventTrigger": "Enter Battle"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2692,9 +2670,7 @@ const configAbility = {
         {
           "eventTrigger": "Leave Battle"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -2721,15 +2697,16 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__920837138\">Monster_W1_CocoliaP1_RL_Endurance</a>",
       "modifierFlags": [
         "Endurance"
+      ],
+      "latentQueue": [
+        "InsertCheck"
       ],
       "execute": [
         {
@@ -2746,16 +2723,17 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "InsertCheck"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__946339673\">Monster_W1_CocoliaP1_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "Replace",
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2785,17 +2763,21 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost",
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1606994047\">Monster_W1_CocoliaP1_RL_Frost</a>",
       "stackType": "Replace",
+      "stackLimit": 5,
+      "addStacksPerTrigger": {
+        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+        "displayLines": "ModifierStackLayer",
+        "constants": [],
+        "variables": [
+          "ModifierStackLayer"
+        ]
+      },
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2884,22 +2866,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackLimit": 5,
-      "addStacksPerTrigger": {
-        "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-        "displayLines": "ModifierStackLayer",
-        "constants": [],
-        "variables": [
-          "ModifierStackLayer"
-        ]
-      }
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1827853653\">Monster_W1_CocoliaP1_RL_IcePower_Summon</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
+      ],
+      "stackData": [
+        "MDF_DamageUpRatio_PerLayer"
+      ],
+      "latentQueue": [
+        "InsertCheck"
       ],
       "execute": [
         {
@@ -3053,11 +3032,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3230,15 +3205,19 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-883410937\">Monster_W1_CocoliaP1_RL_Ability05_Bonus</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+      "stackData": [
+        "ModifierDamageUpValue"
+      ],
+      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">ModifierDamageUpValue</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3267,16 +3246,7 @@ const configAbility = {
             "Modifier Deletes Itself"
           ]
         }
-      ],
-      "stackData": [
-        "ModifierDamageUpValue"
-      ],
-      "latentQueue": [],
-      "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">ModifierDamageUpValue</span>.",
-      "type": "Buff",
-      "effectName": "DMG Boost",
-      "statusName": "DMG Boost",
-      "duration": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3425,9 +3395,7 @@ const configAbility = {
           ],
           "priorityLevel": -90
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3533,9 +3501,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -3731,13 +3697,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-691854564\">Enemy_W2_Cocolia_IF_WeaknessCount_Sub02</a>[<span class=\"descriptionNumberColor\">Tenacious Resolve</span>]",
+      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_TokenDamageAddRatio</span>.",
+      "type": "Debuff",
+      "statusName": "Tenacious Resolve",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3762,14 +3729,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_TokenDamageAddRatio</span>.",
-      "type": "Debuff",
-      "statusName": "Tenacious Resolve"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-641521707\">Enemy_W2_Cocolia_IF_WeaknessCount_Sub01</a>[<span class=\"descriptionNumberColor\">Tenacious Resolve</span>]",
+      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_TokenDamageReduceRatio</span>.",
+      "type": "Buff",
+      "statusName": "Tenacious Resolve",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3792,14 +3759,15 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_TokenDamageReduceRatio</span>.",
-      "type": "Buff",
-      "statusName": "Tenacious Resolve"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-146543153\">Enemy_W2_Cocolia_IF_WeaknessCount</a>",
+      "stackData": [
+        "MDF_TokenDamageReduceRatio",
+        "MDF_TokenDamageAddRatioPerlayer"
+      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -4153,12 +4121,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_TokenDamageReduceRatio",
-        "MDF_TokenDamageAddRatioPerlayer"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4430,9 +4393,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4646,15 +4607,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-822615197\">Enemy_W1_CocoliaP2_IF_SplitWeakness_ShowSub</a>[<span class=\"descriptionNumberColor\">Scapegoat of Sins</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "A Weakness Type has been transferred from Annihilator of Desolation Mistral: Mother of Deception to this unit. The Weakness Type will be returned when this unit is defeated.",
       "type": "Other",
       "statusName": "Scapegoat of Sins"
@@ -4662,8 +4619,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-426543761\">Enemy_W1_CocoliaP2_IF_SplitWeakness_Show</a>[<span class=\"descriptionNumberColor\">Devious Metamorphosis</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "The Weakness Type has been transferred to Lance of the Eternal Freeze.",
       "type": "Other",
       "statusName": "Devious Metamorphosis"
@@ -4671,8 +4626,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-145483550\">Enemy_W1_CocoliaP1_IF_SplitWeakness_ShowSub</a>[<span class=\"descriptionNumberColor\">Scapegoat of Sins</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "A Weakness Type has been transferred from Annihilator of Desolation Mistral to this unit. The Weakness Type will be returned when this unit is defeated.",
       "type": "Other",
       "statusName": "Scapegoat of Sins"
@@ -4680,8 +4633,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1094163808\">Enemy_W1_CocoliaP1_IF_SplitWeakness_Show</a>[<span class=\"descriptionNumberColor\">Devious Metamorphosis</span>]",
-      "stackData": [],
-      "latentQueue": [],
       "description": "The Weakness Type has been transferred to Ice Edge.",
       "type": "Other",
       "statusName": "Devious Metamorphosis"
@@ -4705,9 +4656,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4728,9 +4677,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4751,9 +4698,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4774,63 +4719,49 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1623684616\">Enemy_W2_CocoliaP2_IF_SummonDieD</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1741127949\">Enemy_W2_CocoliaP2_IF_SummonDieC</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1724350330\">Enemy_W2_CocoliaP2_IF_SummonDieB</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1707572711\">Enemy_W2_CocoliaP2_IF_SummonDieA</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1230378224\">Enemy_W2_Cocolia_IF_SummonDieB</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1280711081\">Enemy_W2_Cocolia_IF_SummonDieA</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4890,14 +4821,13 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__515238365\">Enemy_W2_Cocolia_IF_ReduceHealTakenRatio_PLY</a>",
       "stackType": "Replace",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -4931,8 +4861,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "addStacksPerTrigger": 1
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -4974,6 +4903,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__222390491\">Enemy_W2_Cocolia_IF_ExtraStance</a>",
+      "stackData": [
+        "MDF_ExtraStanceRatio",
+        "MDF_StanceDMGPerTeamMate"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5065,18 +4998,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ExtraStanceRatio",
-        "MDF_StanceDMGPerTeamMate"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1225888494\">Enemy_W2_Cocolia_IF_SummonDie</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-1225888494\">Enemy_W2_Cocolia_IF_SummonDie</a>"
     },
     {
       "name": "Modifier Construction",
@@ -5085,13 +5011,14 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1783900265\">Enemy_W2_Cocolia_IF_ExtraFrozenDamageRatio</a>",
+      "stackData": [
+        "MDF_ExtraFrozenDamageRatio"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5160,11 +5087,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ExtraFrozenDamageRatio"
-      ],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -5483,15 +5406,11 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__2038881084\">Monster_W1_CocoliaP1_IF_02_AccumulatePower</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__2038881084\">Monster_W1_CocoliaP1_IF_02_AccumulatePower</a>"
     },
     {
       "name": "Modifier Construction",
@@ -5500,9 +5419,7 @@ const configAbility = {
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -5522,9 +5439,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ],
   "references": []

@@ -14,7 +14,6 @@ const compositeAbilityObject = {
     "1013010_WMonster_W1_Mecha_02_Ability02_Part01",
     "1013010_WMonster_W1_Mecha_02_Ability01_Part02",
     "1013010_WMonster_W1_Mecha_02_Ability01_Part01",
-    "1013010_WMonster_Mecha_02_PassiveAbilityInitiate",
     "1013010_Modifiers"
   ],
   "abilityObject": {
@@ -176,9 +175,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -186,7 +183,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "MuteHitFly"
           ],
-          "stackData": [],
           "latentQueue": [
             "SummonSequence"
           ]
@@ -194,6 +190,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
+          "latentQueue": [
+            "SummonSequence"
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Pre-action Phase]"
@@ -201,10 +200,6 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "Action Choice Window [Owner]"
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "SummonSequence"
           ]
         }
       ]
@@ -1582,11 +1577,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"118150896\">Monster_W1_Mecha03_RL_Ability03_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_46) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_46",
+                  "operator": "Variables[0] (UnusedUnderThisBase_7955) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_7955",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_46"
+                    "UnusedUnderThisBase_7955"
                   ]
                 }
               }
@@ -1799,122 +1794,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "1013010_WMonster_Mecha_02_PassiveAbilityInitiate": {
-      "fileName": "1013010_WMonster_Mecha_02_PassiveAbilityInitiate",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ActivationCountDown",
-          "value": 2
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "ActivationMode"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "BeingDamageFlag",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"639506044\">WMonster_Mecha_02_Activation_Controller</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__639506044\">WMonster_Mecha_02_Activation_Controller</a>",
-          "execute": [
-            {
-              "eventTrigger": "Take Damage End [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "BeingDamageFlag",
-                        "compareType": "=",
-                        "value2": 1,
-                        "contextScope": "TargetEntity"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "ActivationMode",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "BeingDamageFlag"
-                    },
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "WMonster_Mecha_02_Ability10_InsertAbility",
-                      "priorityTag": "EnemyAttackFromSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "ActivationCountDown",
-            "ActivationMode",
-            "BeingDamageFlag"
-          ]
-        }
-      ]
-    },
     "1013010_Modifiers": {
       "fileName": "1013010_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -2010,9 +1889,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

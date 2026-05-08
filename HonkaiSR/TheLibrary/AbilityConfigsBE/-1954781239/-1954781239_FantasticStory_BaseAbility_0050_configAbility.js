@@ -207,6 +207,18 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2041839191\">Modifier_FantasticStory_BaseAbility_0050</a>",
       "stackType": "ReplaceByCaster",
+      "stackData": [
+        "ADF_1",
+        "ADF_2",
+        "ADF_3",
+        "TempHP"
+      ],
+      "latentQueue": [
+        "DV_FantasticStory_PlusAbility_0051",
+        "DV_FantasticStory_PlusAbility_0052",
+        "DV_FantasticStory_PlusAbility_0053",
+        "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag"
+      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -971,18 +983,6 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "ADF_1",
-        "ADF_2",
-        "ADF_3",
-        "TempHP"
-      ],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_0051",
-        "DV_FantasticStory_PlusAbility_0052",
-        "DV_FantasticStory_PlusAbility_0053",
-        "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag"
       ]
     }
   ]

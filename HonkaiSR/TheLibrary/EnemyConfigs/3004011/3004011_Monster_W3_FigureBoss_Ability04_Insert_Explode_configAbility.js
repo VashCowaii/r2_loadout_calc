@@ -211,6 +211,14 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-558855282\">Enemy_W3_FigureBoss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+      "stackData": [
+        "MDF_ExploreDamageUpRatio"
+      ],
+      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_ExploreDamageUpRatio</span>.",
+      "type": "Debuff",
+      "effectName": "Vulnerability",
+      "statusName": "Vulnerability",
+      "duration": 1,
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -233,16 +241,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [
-        "MDF_ExploreDamageUpRatio"
-      ],
-      "latentQueue": [],
-      "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_ExploreDamageUpRatio</span>.",
-      "type": "Debuff",
-      "effectName": "Vulnerability",
-      "statusName": "Vulnerability",
-      "duration": 1
+      ]
     }
   ]
 }

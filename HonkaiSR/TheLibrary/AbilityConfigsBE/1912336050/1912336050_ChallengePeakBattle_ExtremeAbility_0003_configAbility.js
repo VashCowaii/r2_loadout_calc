@@ -18,6 +18,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-577906191\">Modifier_ChallengePeakBattle_ExtremeAbility_0003_02</a>[<span class=\"descriptionNumberColor\">Inversion++</span>]",
+      "description": "Each time after being attacked, the attacker will lose HP equal to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0003_ADF_1</span> of their own Max HP. This effect is Non-fatal.",
+      "type": "Other",
+      "statusName": "Inversion++",
       "execute": [
         {
           "eventTrigger": "Being Attacked End [Owner]",
@@ -51,10 +54,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "Each time after being attacked, the attacker will lose HP equal to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0003_ADF_1</span> of their own Max HP. This effect is Non-fatal.",
-      "type": "Other",
-      "statusName": "Inversion++"
+      ]
     },
     {
       "name": "Modifier Construction",
@@ -97,9 +97,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "stackData": [],
-      "latentQueue": []
+      ]
     }
   ]
 }

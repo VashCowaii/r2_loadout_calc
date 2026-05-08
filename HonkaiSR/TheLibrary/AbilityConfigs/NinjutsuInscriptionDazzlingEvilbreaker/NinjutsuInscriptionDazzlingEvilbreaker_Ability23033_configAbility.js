@@ -81,6 +81,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1465262419\">LC_23033_Sub</a>[<span class=\"descriptionNumberColor\">Raiton</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "After using Basic Attacks <span class=\"descriptionNumberColor\">DV_CastSkill01CountLeft</span> time(s), advances the next action by <span class=\"descriptionNumberColor\">#SkillEquip_P3_ActionDelayAdv</span>.",
+      "type": "Other",
+      "statusName": "Raiton",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -184,14 +187,14 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "description": "After using Basic Attacks <span class=\"descriptionNumberColor\">DV_CastSkill01CountLeft</span> time(s), advances the next action by <span class=\"descriptionNumberColor\">#SkillEquip_P3_ActionDelayAdv</span>.",
-      "type": "Other",
-      "statusName": "Raiton"
+      ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-933070016\">LC_23033_Main</a>",
+      "latentQueue": [
+        "DV_CastSkill01Count"
+      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -256,10 +259,6 @@ const configAbility = {
           ],
           "priorityLevel": -80
         }
-      ],
-      "stackData": [],
-      "latentQueue": [
-        "DV_CastSkill01Count"
       ]
     }
   ],

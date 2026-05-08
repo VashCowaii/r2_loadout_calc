@@ -3,16 +3,58 @@ const compositeAbilityObject = {
   "fullCharacterName": 3002040,
   "trimCharacterName": 3002040,
   "abilityList": [
+    "3002040_Monster_W3_Clock_PassiveAbilityInitiate",
     "3002040_Monster_W3_Clock_Ability03_Part02",
     "3002040_Monster_W3_Clock_Ability03_Part01",
     "3002040_Monster_W3_Clock_Ability02_Part02",
     "3002040_Monster_W3_Clock_Ability02_Part01",
     "3002040_Monster_W3_Clock_Ability01_Part02",
     "3002040_Monster_W3_Clock_Ability01_Part01",
-    "3002040_Monster_W3_Clock_PassiveAbilityInitiate",
     "3002040_Modifiers"
   ],
   "abilityObject": {
+    "3002040_Monster_W3_Clock_PassiveAbilityInitiate": {
+      "fileName": "3002040_Monster_W3_Clock_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1952577261\">Enemy_W3_Clock_RemoveOneMore</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1206431544\">Enemy_W3_Clock_WatchHandController</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1206431544\">Enemy_W3_Clock_WatchHandController</a>",
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]"
+            }
+          ]
+        }
+      ]
+    },
     "3002040_Monster_W3_Clock_Ability03_Part02": {
       "fileName": "3002040_Monster_W3_Clock_Ability03_Part02",
       "abilityType": null,
@@ -258,50 +300,6 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "3002040_Monster_W3_Clock_PassiveAbilityInitiate": {
-      "fileName": "3002040_Monster_W3_Clock_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1952577261\">Enemy_W3_Clock_RemoveOneMore</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1206431544\">Enemy_W3_Clock_WatchHandController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1206431544\">Enemy_W3_Clock_WatchHandController</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]"
-            }
-          ],
-          "stackData": [],
-          "latentQueue": []
-        }
-      ]
-    },
     "3002040_Modifiers": {
       "fileName": "3002040_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -325,13 +323,15 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2064893309\">Enemy_W3_Clock_Ability01_Charge</a>[<span class=\"descriptionNumberColor\">Set Alarm</span>]",
+          "description": "Uses Wake-Up Alarm for the next action.",
+          "type": "Other",
+          "effectName": "Set Alarm",
+          "statusName": "Set Alarm",
           "execute": [
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -339,13 +339,7 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [],
-          "description": "Uses Wake-Up Alarm for the next action.",
-          "type": "Other",
-          "effectName": "Set Alarm",
-          "statusName": "Set Alarm"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -399,9 +393,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []

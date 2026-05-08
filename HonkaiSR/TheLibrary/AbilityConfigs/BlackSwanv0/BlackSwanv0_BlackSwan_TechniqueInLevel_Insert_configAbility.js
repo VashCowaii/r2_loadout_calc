@@ -311,7 +311,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1849837561\">M_BlackSwan_Maze_Flag</a>",
-      "stackData": [],
       "latentQueue": [
         "MazeSkill_Triggered",
         "_can_continue"

@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 70001,
   "trimCharacterName": 70001,
   "abilityList": [
+    "70001_Modifiers",
     "70001_BattleEventAbility_Elation_Passive",
     "70001_BattleEventAbility_Elation_Ability43_RestartElationTime",
     "70001_BattleEventAbility_Elation_Ability42_EndElationTime",
@@ -11,839 +12,9 @@ const compositeAbilityObject = {
     "70001_BattleEventAbility_Elation_Ability04_02",
     "70001_BattleEventAbility_Elation_Ability04_01",
     "70001_BattleEventAbility_Elation_Ability03_Entry",
-    "70001_StageAbility_Elation",
-    "70001_Modifiers",
     "70001_BE_BattleEvents"
   ],
   "abilityObject": {
-    "70001_BattleEventAbility_Elation_Passive": {
-      "fileName": "70001_BattleEventAbility_Elation_Passive",
-      "childAbilityList": [
-        "70001_Activity_ElationBattle_BEStart_ForShowOnly",
-        "70001_BattleEventAbility_Elation_Passive"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"112407337\">MBattleEvent_Elation_Passive</a>"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "70001_BattleEventAbility_Elation_Ability43_RestartElationTime": {
-      "fileName": "70001_BattleEventAbility_Elation_Ability43_RestartElationTime",
-      "childAbilityList": [
-        "70001_BattleEventAbility_Elation_Ability43_RestartElationTime"
-      ],
-      "skillTrigger": "Skill43",
-      "abilityType": "Elation",
-      "toughnessList": null,
-      "parse": [
-        "Unknown EventType (Not always an error)",
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "All Player Team"
-      }
-    },
-    "70001_BattleEventAbility_Elation_Ability42_EndElationTime": {
-      "fileName": "70001_BattleEventAbility_Elation_Ability42_EndElationTime",
-      "childAbilityList": [
-        "70001_BattleEventAbility_Elation_Ability42_EndElationTime"
-      ],
-      "skillTrigger": "Skill42",
-      "abilityType": "Elation",
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Lock Battle Actions"
-        },
-        "Unknown EventType2 (Not always an error)[1 false]",
-        "Unknown EventType3 (Not always an error)",
-        "Unknown EventType3 (Not always an error)[1 false]",
-        "Unknown EventType1 (Not always an error)[1 false][2 true]",
-        {
-          "name": "Lock Battle Actions",
-          "isLock": false
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "70001_BattleEventAbility_Elation_Ability41_Part2": {
-      "fileName": "70001_BattleEventAbility_Elation_Ability41_Part2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Looped Event",
-          "maxLoops": 10,
-          "Event": [
-            {
-              "name": "Random Event",
-              "odds": [
-                {
-                  "operator": "Variables[0] ({[Skill41[2]]}) || RETURN",
-                  "displayLines": "{[Skill41[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill41[2]]}"
-                  ]
-                },
-                {
-                  "operator": "Variables[0] ({[Skill41[3]]}) || RETURN",
-                  "displayLines": "{[Skill41[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill41[3]]}"
-                  ]
-                }
-              ],
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "paramSequence": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Quantum",
-                        "DamageFlat": {
-                          "displayLines": 1
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Elation DMG"
-                      }
-                    },
-                    {
-                      "name": "Update Energy",
-                      "on": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": {
-                        "operator": "Variables[0] ({[Skill41[4]]}) || RETURN",
-                        "displayLines": "{[Skill41[4]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill41[4]]}"
-                        ]
-                      },
-                      "isFixed": "* ERR"
-                    }
-                  ]
-                },
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "paramSequence": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Quantum",
-                        "DamageElation": {
-                          "operator": "Variables[0] ({[Skill41[1]]}) || RETURN",
-                          "displayLines": "{[Skill41[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill41[1]]}"
-                          ]
-                        },
-                        "dmgFormula": "Elation Scaling",
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Elation DMG"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Aha Instant: Aha Battle Event}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"211849600\">MLevel_ElationBE_ActionStateFalse_02</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Aha Instant: Aha Battle Event}}"
-            },
-            "value1": "ElationTime_IsNoConsume",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Aha Instant: Aha Battle Event}}"
-              },
-              "variableName": "ElationTime_IsNoConsume",
-              "value": 0
-            }
-          ],
-          "failed": [
-            {
-              "name": "Adjust Team Punchline Value",
-              "value": 0,
-              "adjustment": "Set"
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: Currency Wars Gear2012}}"
-          },
-          "variableName": "Elation_Character_Num",
-          "livingTargets": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "Elation_Character_Num",
-            "compareType": ">",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "Adjust Team Punchline Value",
-              "value": {
-                "operator": "Variables[0] (Elation_Character_Num) || Constants[0] (1) || MUL || RETURN",
-                "displayLines": "(Elation_Character_Num * 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Elation_Character_Num"
-                ]
-              },
-              "adjustment": "Add"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "70001_BattleEventAbility_Elation_Ability41_Part1": {
-      "fileName": "70001_BattleEventAbility_Elation_Ability41_Part1",
-      "childAbilityList": [
-        "70001_BattleEventAbility_Elation_Ability41_Part1",
-        "70001_BattleEventAbility_Elation_Ability41_Camera",
-        "70001_BattleEventAbility_Elation_Ability41_Part2"
-      ],
-      "skillTrigger": "Skill41",
-      "abilityType": "Elation",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "BattleEventAbility_Elation_Ability41_Part2",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "70001_BattleEventAbility_Elation_Ability04_02": {
-      "fileName": "70001_BattleEventAbility_Elation_Ability04_02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Unbind Unique Name",
-          "uniqueName": "Target_Elation"
-        },
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "Target_Elation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "ElationTime_SkillCount",
-            "compareType": ">",
-            "value2": 4
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "ElationTime_SkillCount",
-            "compareType": ">",
-            "value2": 4
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "70001_BattleEventAbility_Elation_Ability04_01": {
-      "fileName": "70001_BattleEventAbility_Elation_Ability04_01",
-      "childAbilityList": [
-        "70001_BattleEventAbility_Elation_Ability04_01",
-        "70001_BattleEventAbility_Elation_Ability04_02",
-        "70001_BattleEventAbility_Elation_Ability04_02_Camera"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Elation",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Elation: Player Team with Unselectables}}"
-          },
-          "toRemove": [
-            "STAT_CTRL"
-          ]
-        },
-        {
-          "name": "Inject Extra-Turn",
-          "actionTag": "ElationTime_CustomTag",
-          "forcedPunchline": {
-            "operator": "Variables[0] (ElationTime_OverrideElationPoint) || RETURN",
-            "displayLines": "ElationTime_OverrideElationPoint",
-            "constants": [],
-            "variables": [
-              "ElationTime_OverrideElationPoint"
-            ]
-          },
-          "sourceOverride": "Add Target by Current Extra-Turn Source",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Elation: Elation Entities}}"
-          },
-          "afterInjection": [],
-          "abortFlags": [
-            "STAT_CTRL"
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "scope": "ContextCaster",
-          "variableName": "ElationTime_OverrideElationPointForEcho",
-          "value": {
-            "operator": "Variables[0] (ElationTime_OverrideElationPoint) || RETURN",
-            "displayLines": "ElationTime_OverrideElationPoint",
-            "constants": [],
-            "variables": [
-              "ElationTime_OverrideElationPoint"
-            ]
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "scope": "ContextAbility",
-          "variableName": "ElationTime_OverrideElationPoint",
-          "value": -1
-        },
-        {
-          "name": "Define Custom String with Value",
-          "value": {},
-          "scope": "ContextAbility",
-          "variableName": "ElationTime_CustomTag"
-        },
-        {
-          "name": "Define Custom Variable",
-          "scope": "ContextCaster",
-          "variableName": "ElationTime_IsNoConsume",
-          "value": {
-            "operator": "Variables[0] (ElationTime_IsNoConsume) || RETURN",
-            "displayLines": "ElationTime_IsNoConsume",
-            "constants": [],
-            "variables": [
-              "ElationTime_IsNoConsume"
-            ]
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "scope": "ContextAbility",
-          "variableName": "ElationTime_IsNoConsumeTemp2",
-          "value": 0
-        },
-        {
-          "name": "Lock Battle Actions"
-        },
-        {
-          "name": "Lock Battle Actions",
-          "isLock": false
-        },
-        {
-          "name": "Define Variable with Elation Skill Count",
-          "variableName": "ElationTime_SkillCount"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "ElationTime_SkillCount",
-            "compareType": ">",
-            "value2": 4
-          }
-        },
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "BattleEventAbility_Elation_Ability04_02",
-          "isTrigger": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "ElationTime_SkillCount",
-            "compareType": ">",
-            "value2": 4
-          }
-        },
-        "Unknown EventType2 (Not always an error)",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "ElationTime_SkillCount",
-            "compareType": ">",
-            "value2": 4
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              "Unknown CONDITON2 [inverse: true]",
-              {
-                "name": "Is Entity a Battle Event/Summon",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Aha Instant: All Targets}}.[[index0]]"
-                }
-              }
-            ]
-          }
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "dynamicStringsArray": [
-        {
-          "name": "ElationTime_CustomTag",
-          "value": "-1"
-        }
-      ]
-    },
-    "70001_BattleEventAbility_Elation_Ability03_Entry": {
-      "fileName": "70001_BattleEventAbility_Elation_Ability03_Entry",
-      "childAbilityList": [
-        "70001_BattleEventAbility_Elation_Ability03_Entry"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Elation",
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "ElationTime_CanStartElationTime",
-          "value": 0
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: All Battle Events}} + {{Elation: Currency Wars Gear2012}}"
-          },
-          "maxTargets": 1,
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "ElationTime_CanStartElationTime",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Elation: Player Team with Unselectables with Elation Skills}}"
-          },
-          "conditions": {
-            "name": "Living State",
-            "state": "Mask_AliveOnly",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            }
-          },
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "flagName": "STAT_CTRL",
-                    "invertCondition": true
-                  },
-                  {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "flagName": "DisableAction",
-                    "invertCondition": true
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "ElationTime_CanStartElationTime",
-                  "value": 1
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "ElationTime_CanStartElationTimeTemp",
-                  "value": 1
-                },
-                {
-                  "name": "Reconstruct Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      "Unknown CONDITION3 (Not always an error)[1: true]"
-                    ]
-                  },
-                  "flagFilter": [
-                    "STAT_CTRL",
-                    "DisableAction"
-                  ],
-                  "execute": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "ElationTime_CanStartElationTimeTemp",
-                      "value": 0
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "ElationTime_CanStartElationTimeTemp",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "ElationTime_CanStartElationTime",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "ElationTime_CanStartElationTime",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-2114512619\">MGridFight_Origin_2012_LE_ElationBE_Bonus</a>"
-              },
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Current Turn Owner}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "StageAbility_GridFight_Origin_2012_ElationBE_Insert",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "priorityTag": "CharacterAttackFromSelf",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Inject Extra-Turn",
-              "actionTag": null,
-              "skillIndex": 1,
-              "valuePerStack": {
-                "ElationTime_OverrideElationPoint": {
-                  "operator": "Variables[0] (ElationTime_OverrideElationPointTemp) || RETURN",
-                  "displayLines": "ElationTime_OverrideElationPointTemp",
-                  "constants": [],
-                  "variables": [
-                    "ElationTime_OverrideElationPointTemp"
-                  ]
-                },
-                "ElationTime_IsNoConsumeTemp2": {
-                  "operator": "Variables[0] (ElationTime_IsNoConsumeTemp) || RETURN",
-                  "displayLines": "ElationTime_IsNoConsumeTemp",
-                  "constants": [],
-                  "variables": [
-                    "ElationTime_IsNoConsumeTemp"
-                  ]
-                }
-              },
-              "sourceOverride": "Add Target by Current Extra-Turn Source",
-              "dynamicStringsArray": [
-                {
-                  "name": "ElationTime_CustomTag",
-                  "value": {
-                    "Custom": true,
-                    "Key": "ElationTime_CustomTagTemp"
-                  }
-                }
-              ],
-              "afterInjection": [],
-              "priorityTag": "AhaInstantStart",
-              "priorityTagPending": "Highest"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Inject Extra-Turn",
-              "actionTag": "ElationTime_CustomTagTemp",
-              "forcedPunchline": {
-                "operator": "Variables[0] (ElationTime_OverrideElationPointTemp) || RETURN",
-                "displayLines": "ElationTime_OverrideElationPointTemp",
-                "constants": [],
-                "variables": [
-                  "ElationTime_OverrideElationPointTemp"
-                ]
-              },
-              "skillIndex": 2,
-              "afterInjection": []
-            },
-            {
-              "name": "Define Custom Variable",
-              "scope": "ContextCaster",
-              "variableName": "ElationTime_IsNoConsume",
-              "value": {
-                "operator": "Variables[0] (ElationTime_IsNoConsumeTemp) || RETURN",
-                "displayLines": "ElationTime_IsNoConsumeTemp",
-                "constants": [],
-                "variables": [
-                  "ElationTime_IsNoConsumeTemp"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "scope": "ContextAbility",
-          "variableName": "ElationTime_IsNoConsumeTemp",
-          "value": 0
-        },
-        {
-          "name": "Define Custom Variable",
-          "scope": "ContextAbility",
-          "variableName": "ElationTime_OverrideElationPointTemp",
-          "value": -1
-        },
-        {
-          "name": "Define Custom String with Value",
-          "value": {},
-          "scope": "ContextAbility",
-          "variableName": "ElationTime_CustomTagTemp"
-        },
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "dynamicStringsArray": [
-        {
-          "name": "ElationTime_CustomTagTemp",
-          "value": "-1"
-        }
-      ]
-    },
-    "70001_StageAbility_Elation": {
-      "fileName": "70001_StageAbility_Elation",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Preload Battle Event(s)",
-          "eventID": [
-            70001
-          ]
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"994071549\">MLevel_Elation_Standard</a>"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
     "70001_Modifiers": {
       "fileName": "70001_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1197,6 +368,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ElationEchoPoint"
           ],
+          "description": "Missing Description",
+          "type": "Buff",
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1219,10 +393,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Missing Description",
-          "type": "Buff",
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -1231,6 +402,9 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ElationEchoPoint"
           ],
+          "description": "Missing Description",
+          "type": "Buff",
+          "duration": 2,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1253,10 +427,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Missing Description",
-          "type": "Buff",
-          "duration": 2
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2535,14 +1706,61 @@ const compositeAbilityObject = {
               "eventTrigger": "Aha Instant: Start",
               "execute": [
                 "Unknown EventType1 (Not always an error)",
-                "Override Priority Tags (true) [OBJECT WIP]"
+                {
+                  "name": "Override Priority Tags",
+                  "dynamicStringsArray": [
+                    {
+                      "name": "MonsterReviveSelf",
+                      "value": "DuringElationTime_MonsterReviveSelf"
+                    },
+                    {
+                      "name": "MonsterHealSelf",
+                      "value": "DuringElationTime_MonsterHealSelf"
+                    },
+                    {
+                      "name": "MonsterReviveOthers",
+                      "value": "DuringElationTime_MonsterReviveOthers"
+                    },
+                    {
+                      "name": "MonsterHealOthers",
+                      "value": "DuringElationTime_MonsterHealOthers"
+                    },
+                    {
+                      "name": "MonsterDeathRattleByLevel",
+                      "value": "DuringElationTime_MonsterDeathRattleByLevel"
+                    },
+                    {
+                      "name": "MonsterDeathRattle",
+                      "value": "DuringElationTime_MonsterDeathRattle"
+                    },
+                    {
+                      "name": "MonsterSummon",
+                      "value": "DuringElationTime_MonsterSummon"
+                    },
+                    {
+                      "name": "MonsterBuffSelf_Elation",
+                      "value": "DuringElationTime_MonsterBuffSelf_Elation"
+                    },
+                    {
+                      "name": "MonsterBuffOthers_Elation",
+                      "value": "DuringElationTime_MonsterBuffOthers_Elation"
+                    },
+                    {
+                      "name": "UseElationSkill",
+                      "value": "DuringElationTime_UseElationSkill"
+                    }
+                  ]
+                }
               ],
               "priorityLevel": 100
             },
             {
               "eventTrigger": "Aha Instant: End",
               "execute": [
-                "Override Priority Tags (false) [OBJECT WIP]",
+                {
+                  "name": "Override Priority Tags",
+                  "reset": true
+                },
                 "Unknown EventType2 (Not always an error)[1 false]",
                 "Unknown EventType1 (Not always an error)[1 false][2 true]",
                 {
@@ -2708,9 +1926,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -2737,13 +1953,14 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-881220179\">MLevel_ElationBE_ActionStateFalse</a>",
+          "latentQueue": [
+            "ElationTime_IsNoConsume"
+          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2766,10 +1983,6 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": [
-            "ElationTime_IsNoConsume"
           ]
         },
         {
@@ -2899,12 +2112,810 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "references": []
+    },
+    "70001_BattleEventAbility_Elation_Passive": {
+      "fileName": "70001_BattleEventAbility_Elation_Passive",
+      "childAbilityList": [
+        "70001_Activity_ElationBattle_BEStart_ForShowOnly",
+        "70001_BattleEventAbility_Elation_Passive"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"112407337\">MBattleEvent_Elation_Passive</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "70001_BattleEventAbility_Elation_Ability43_RestartElationTime": {
+      "fileName": "70001_BattleEventAbility_Elation_Ability43_RestartElationTime",
+      "childAbilityList": [
+        "70001_BattleEventAbility_Elation_Ability43_RestartElationTime"
+      ],
+      "skillTrigger": "Skill43",
+      "abilityType": "Elation",
+      "toughnessList": null,
+      "parse": [
+        "Unknown EventType (Not always an error)",
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "All Player Team"
+      }
+    },
+    "70001_BattleEventAbility_Elation_Ability42_EndElationTime": {
+      "fileName": "70001_BattleEventAbility_Elation_Ability42_EndElationTime",
+      "childAbilityList": [
+        "70001_BattleEventAbility_Elation_Ability42_EndElationTime"
+      ],
+      "skillTrigger": "Skill42",
+      "abilityType": "Elation",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Lock Battle Actions"
+        },
+        "Unknown EventType2 (Not always an error)[1 false]",
+        "Unknown EventType3 (Not always an error)",
+        "Unknown EventType3 (Not always an error)[1 false]",
+        "Unknown EventType1 (Not always an error)[1 false][2 true]",
+        {
+          "name": "Lock Battle Actions",
+          "isLock": false
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "70001_BattleEventAbility_Elation_Ability41_Part2": {
+      "fileName": "70001_BattleEventAbility_Elation_Ability41_Part2",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Looped Event",
+          "maxLoops": 10,
+          "Event": [
+            {
+              "name": "Random Event",
+              "odds": [
+                {
+                  "operator": "Variables[0] ({[Skill41[2]]}) || RETURN",
+                  "displayLines": "{[Skill41[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill41[2]]}"
+                  ]
+                },
+                {
+                  "operator": "Variables[0] ({[Skill41[3]]}) || RETURN",
+                  "displayLines": "{[Skill41[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill41[3]]}"
+                  ]
+                }
+              ],
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "paramSequence": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "AttackScaling": {
+                        "DamageType": "Quantum",
+                        "DamageFlat": {
+                          "displayLines": 1
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Elation DMG"
+                      }
+                    },
+                    {
+                      "name": "Update Energy",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "value": {
+                        "operator": "Variables[0] ({[Skill41[4]]}) || RETURN",
+                        "displayLines": "{[Skill41[4]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[Skill41[4]]}"
+                        ]
+                      },
+                      "isFixed": "* ERR"
+                    }
+                  ]
+                },
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "paramSequence": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "AttackScaling": {
+                        "DamageType": "Quantum",
+                        "DamageElation": {
+                          "operator": "Variables[0] ({[Skill41[1]]}) || RETURN",
+                          "displayLines": "{[Skill41[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[Skill41[1]]}"
+                          ]
+                        },
+                        "dmgFormula": "Elation Scaling",
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Elation DMG"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Aha Instant: Aha Battle Event}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"211849600\">MLevel_ElationBE_ActionStateFalse_02</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Aha Instant: Aha Battle Event}}"
+            },
+            "value1": "ElationTime_IsNoConsume",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Aha Instant: Aha Battle Event}}"
+              },
+              "variableName": "ElationTime_IsNoConsume",
+              "value": 0
+            }
+          ],
+          "failed": [
+            {
+              "name": "Adjust Team Punchline Value",
+              "value": 0,
+              "adjustment": "Set"
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable with Team Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: Currency Wars Gear2012}}"
+          },
+          "variableName": "Elation_Character_Num",
+          "livingTargets": true
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Elation_Character_Num",
+            "compareType": ">",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "name": "Adjust Team Punchline Value",
+              "value": {
+                "operator": "Variables[0] (Elation_Character_Num) || Constants[0] (1) || MUL || RETURN",
+                "displayLines": "(Elation_Character_Num * 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "Elation_Character_Num"
+                ]
+              },
+              "adjustment": "Add"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "70001_BattleEventAbility_Elation_Ability41_Part1": {
+      "fileName": "70001_BattleEventAbility_Elation_Ability41_Part1",
+      "childAbilityList": [
+        "70001_BattleEventAbility_Elation_Ability41_Part1",
+        "70001_BattleEventAbility_Elation_Ability41_Camera",
+        "70001_BattleEventAbility_Elation_Ability41_Part2"
+      ],
+      "skillTrigger": "Skill41",
+      "abilityType": "Elation",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "BattleEventAbility_Elation_Ability41_Part2",
+          "isTrigger": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "70001_BattleEventAbility_Elation_Ability04_02": {
+      "fileName": "70001_BattleEventAbility_Elation_Ability04_02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Unbind Unique Name",
+          "uniqueName": "Target_Elation"
+        },
+        {
+          "name": "Assign Unique Name",
+          "uniqueName": "Target_Elation",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "ElationTime_SkillCount",
+            "compareType": ">",
+            "value2": 4
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "ElationTime_SkillCount",
+            "compareType": ">",
+            "value2": 4
+          }
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "70001_BattleEventAbility_Elation_Ability04_01": {
+      "fileName": "70001_BattleEventAbility_Elation_Ability04_01",
+      "childAbilityList": [
+        "70001_BattleEventAbility_Elation_Ability04_01",
+        "70001_BattleEventAbility_Elation_Ability04_02",
+        "70001_BattleEventAbility_Elation_Ability04_02_Camera"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Elation",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Elation: Player Team with Unselectables}}"
+          },
+          "toRemove": [
+            "STAT_CTRL"
+          ]
+        },
+        {
+          "name": "Inject Extra-Turn",
+          "actionTag": "ElationTime_CustomTag",
+          "forcedPunchline": {
+            "operator": "Variables[0] (ElationTime_OverrideElationPoint) || RETURN",
+            "displayLines": "ElationTime_OverrideElationPoint",
+            "constants": [],
+            "variables": [
+              "ElationTime_OverrideElationPoint"
+            ]
+          },
+          "sourceOverride": "Add Target by Current Extra-Turn Source",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Elation: Elation Entities}}"
+          },
+          "afterInjection": [],
+          "abortFlags": [
+            "STAT_CTRL"
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "scope": "ContextCaster",
+          "variableName": "ElationTime_OverrideElationPointForEcho",
+          "value": {
+            "operator": "Variables[0] (ElationTime_OverrideElationPoint) || RETURN",
+            "displayLines": "ElationTime_OverrideElationPoint",
+            "constants": [],
+            "variables": [
+              "ElationTime_OverrideElationPoint"
+            ]
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "scope": "ContextAbility",
+          "variableName": "ElationTime_OverrideElationPoint",
+          "value": -1
+        },
+        {
+          "name": "Define Custom String with Value",
+          "value": {},
+          "scope": "ContextAbility",
+          "variableName": "ElationTime_CustomTag"
+        },
+        {
+          "name": "Define Custom Variable",
+          "scope": "ContextCaster",
+          "variableName": "ElationTime_IsNoConsume",
+          "value": {
+            "operator": "Variables[0] (ElationTime_IsNoConsume) || RETURN",
+            "displayLines": "ElationTime_IsNoConsume",
+            "constants": [],
+            "variables": [
+              "ElationTime_IsNoConsume"
+            ]
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "scope": "ContextAbility",
+          "variableName": "ElationTime_IsNoConsumeTemp2",
+          "value": 0
+        },
+        {
+          "name": "Lock Battle Actions"
+        },
+        {
+          "name": "Lock Battle Actions",
+          "isLock": false
+        },
+        {
+          "name": "Define Variable with Elation Skill Count",
+          "variableName": "ElationTime_SkillCount"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "ElationTime_SkillCount",
+            "compareType": ">",
+            "value2": 4
+          }
+        },
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "BattleEventAbility_Elation_Ability04_02",
+          "isTrigger": true
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "ElationTime_SkillCount",
+            "compareType": ">",
+            "value2": 4
+          }
+        },
+        "Unknown EventType2 (Not always an error)",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "ElationTime_SkillCount",
+            "compareType": ">",
+            "value2": 4
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              "Unknown CONDITON2 [inverse: true]",
+              {
+                "name": "Is Entity a Battle Event/Summon",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Aha Instant: All Targets}}.[[index0]]"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "dynamicStringsArray": [
+        {
+          "name": "ElationTime_CustomTag",
+          "value": "-1"
+        }
+      ]
+    },
+    "70001_BattleEventAbility_Elation_Ability03_Entry": {
+      "fileName": "70001_BattleEventAbility_Elation_Ability03_Entry",
+      "childAbilityList": [
+        "70001_BattleEventAbility_Elation_Ability03_Entry"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Elation",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "ElationTime_CanStartElationTime",
+          "value": 0
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: All Battle Events}} + {{Elation: Currency Wars Gear2012}}"
+          },
+          "maxTargets": 1,
+          "ifTargetFound": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "ElationTime_CanStartElationTime",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Elation: Player Team with Unselectables with Elation Skills}}"
+          },
+          "conditions": {
+            "name": "Living State",
+            "state": "Mask_AliveOnly",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            }
+          },
+          "ifTargetFound": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "STAT_CTRL",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "flagName": "DisableAction",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "ElationTime_CanStartElationTime",
+                  "value": 1
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "ElationTime_CanStartElationTimeTemp",
+                  "value": 1
+                },
+                {
+                  "name": "Reconstruct Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      "Unknown CONDITION3 (Not always an error)[1: true]"
+                    ]
+                  },
+                  "flagFilter": [
+                    "STAT_CTRL",
+                    "DisableAction"
+                  ],
+                  "execute": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "ElationTime_CanStartElationTimeTemp",
+                      "value": 0
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "ElationTime_CanStartElationTimeTemp",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "ElationTime_CanStartElationTime",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "ElationTime_CanStartElationTime",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-2114512619\">MGridFight_Origin_2012_LE_ElationBE_Bonus</a>"
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Current Turn Owner}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Inject Ability Use",
+                      "abilityName": "StageAbility_GridFight_Origin_2012_ElationBE_Insert",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "priorityTag": "CharacterAttackFromSelf",
+                      "canHitNonTargets": true,
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Inject Extra-Turn",
+              "actionTag": null,
+              "skillIndex": 1,
+              "valuePerStack": {
+                "ElationTime_OverrideElationPoint": {
+                  "operator": "Variables[0] (ElationTime_OverrideElationPointTemp) || RETURN",
+                  "displayLines": "ElationTime_OverrideElationPointTemp",
+                  "constants": [],
+                  "variables": [
+                    "ElationTime_OverrideElationPointTemp"
+                  ]
+                },
+                "ElationTime_IsNoConsumeTemp2": {
+                  "operator": "Variables[0] (ElationTime_IsNoConsumeTemp) || RETURN",
+                  "displayLines": "ElationTime_IsNoConsumeTemp",
+                  "constants": [],
+                  "variables": [
+                    "ElationTime_IsNoConsumeTemp"
+                  ]
+                }
+              },
+              "sourceOverride": "Add Target by Current Extra-Turn Source",
+              "dynamicStringsArray": [
+                {
+                  "name": "ElationTime_CustomTag",
+                  "value": {
+                    "Custom": true,
+                    "Key": "ElationTime_CustomTagTemp"
+                  }
+                }
+              ],
+              "afterInjection": [],
+              "priorityTag": "AhaInstantStart",
+              "priorityTagPending": "Highest"
+            }
+          ],
+          "failed": [
+            {
+              "name": "Inject Extra-Turn",
+              "actionTag": "ElationTime_CustomTagTemp",
+              "forcedPunchline": {
+                "operator": "Variables[0] (ElationTime_OverrideElationPointTemp) || RETURN",
+                "displayLines": "ElationTime_OverrideElationPointTemp",
+                "constants": [],
+                "variables": [
+                  "ElationTime_OverrideElationPointTemp"
+                ]
+              },
+              "skillIndex": 2,
+              "afterInjection": []
+            },
+            {
+              "name": "Define Custom Variable",
+              "scope": "ContextCaster",
+              "variableName": "ElationTime_IsNoConsume",
+              "value": {
+                "operator": "Variables[0] (ElationTime_IsNoConsumeTemp) || RETURN",
+                "displayLines": "ElationTime_IsNoConsumeTemp",
+                "constants": [],
+                "variables": [
+                  "ElationTime_IsNoConsumeTemp"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "scope": "ContextAbility",
+          "variableName": "ElationTime_IsNoConsumeTemp",
+          "value": 0
+        },
+        {
+          "name": "Define Custom Variable",
+          "scope": "ContextAbility",
+          "variableName": "ElationTime_OverrideElationPointTemp",
+          "value": -1
+        },
+        {
+          "name": "Define Custom String with Value",
+          "value": {},
+          "scope": "ContextAbility",
+          "variableName": "ElationTime_CustomTagTemp"
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "dynamicStringsArray": [
+        {
+          "name": "ElationTime_CustomTagTemp",
+          "value": "-1"
+        }
+      ]
     },
     "70001_BE_BattleEvents": {
       "fileName": "70001_BE_BattleEvents",

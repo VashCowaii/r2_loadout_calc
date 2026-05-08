@@ -43,6 +43,11 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-598797650\">LC_23046_Bonus02</a>[<span class=\"descriptionNumberColor\">Hrunting</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect stacks up to <span class=\"descriptionNumberColor\">#SkillEquip_P5_MaxLayer</span> time(s).",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Hrunting",
+          "addStacksPerTrigger": 1,
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -76,17 +81,15 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect stacks up to <span class=\"descriptionNumberColor\">#SkillEquip_P5_MaxLayer</span> time(s).",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Hrunting",
-          "addStacksPerTrigger": 1
+          ]
         },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__840145864\">LC_23046_Bonus</a>[<span class=\"descriptionNumberColor\">Hrunting</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Hrunting",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -109,10 +112,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Hrunting"
+          ]
         },
         {
           "name": "Modifier Construction",
@@ -215,9 +215,7 @@ const compositeAbilityObject = {
               ],
               "priorityLevel": -80
             }
-          ],
-          "stackData": [],
-          "latentQueue": []
+          ]
         }
       ],
       "isLightcone": true,

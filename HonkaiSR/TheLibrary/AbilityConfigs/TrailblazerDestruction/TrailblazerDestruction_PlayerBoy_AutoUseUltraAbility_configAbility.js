@@ -16,9 +16,7 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-707210254\">M_Player_AutoUseUltraAbility</a>",
-      "stackData": [],
-      "latentQueue": []
+      "for": "<a class=\"gModGreen\" id=\"mod__-707210254\">M_Player_AutoUseUltraAbility</a>"
     }
   ],
   "targetObjectData": {
