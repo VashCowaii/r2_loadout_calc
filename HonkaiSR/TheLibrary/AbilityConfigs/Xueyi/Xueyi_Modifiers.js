@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__212393484\">ADV_StageAbility_Maze_Xueyi</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__900132102\">Xueyi_AbilityEidolon1_InserteDamageRatio</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
