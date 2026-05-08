@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1758196772\">ADV_StageAbility_Maze_PlayerBoy_20</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1210211185\">PlayerBoy_20_Eidolon2</a>[<span class=\"descriptionNumberColor\">Jailbreaking Rainbowwalk</span>]",
       "description": "Increases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
