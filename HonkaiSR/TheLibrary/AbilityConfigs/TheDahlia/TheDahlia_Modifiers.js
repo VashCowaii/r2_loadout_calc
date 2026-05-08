@@ -369,9 +369,6 @@ const configAbility = {
         "STAT_AttachWeakness",
         "STAT_DefenceDown"
       ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
       "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. Gains Weaknesses of all Dance Partners' Types.",
       "type": "Debuff",
       "effectName": "Wilt",
@@ -639,9 +636,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-2139860773\">Constance_Aura</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Toughness Reduction taken by enemy targets that are not Weakness Broken can also be converted to Super Break DMG.",
       "type": "Buff",
       "statusName": "Lick... Enkindled Betrayal",

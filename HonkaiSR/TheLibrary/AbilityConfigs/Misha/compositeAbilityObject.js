@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": "Misha",
   "trimCharacterName": "Misha",
   "abilityList": [
+    "Misha_Modifiers",
     "Misha_Misha_Trace03",
     "Misha_Misha_Eidolon6",
     "Misha_Misha_Eidolon2",
@@ -14,10 +15,21 @@ const compositeAbilityObject = {
     "Misha_Misha_Ability02_Part02",
     "Misha_Misha_Ability02_Part01",
     "Misha_Misha_Ability01_Part02",
-    "Misha_Misha_Ability01_Part01",
-    "Misha_Modifiers"
+    "Misha_Misha_Ability01_Part01"
   ],
   "abilityObject": {
+    "Misha_Modifiers": {
+      "fileName": "Misha_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [],
+      "references": []
+    },
     "Misha_Misha_Trace03": {
       "fileName": "Misha_Misha_Trace03",
       "abilityType": null,
@@ -1469,18 +1481,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Misha_Modifiers": {
-      "fileName": "Misha_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [],
-      "references": []
     }
   }
 }

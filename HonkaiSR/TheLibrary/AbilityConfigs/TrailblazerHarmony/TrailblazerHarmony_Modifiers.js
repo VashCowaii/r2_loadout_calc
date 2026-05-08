@@ -11,9 +11,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1210211185\">PlayerBoy_20_Eidolon2</a>[<span class=\"descriptionNumberColor\">Jailbreaking Rainbowwalk</span>]",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Increases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "statusName": "Jailbreaking Rainbowwalk",
@@ -77,9 +74,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1588077472\">PlayerBoy_20_PointB3_Bonus</a>",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1016,9 +1010,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_LifeTime"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -1441,9 +1432,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1971132539\">PlayerBoy_20_TechniqueUsage_Bonus</a>[<span class=\"descriptionNumberColor\">Now! I'm the Band!</span>]",
       "stackType": "ReplaceByCaster",
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_BreakDamageAddedRatio"
-      ],
       "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_BreakDamageAddedRatio</span>.",
       "type": "Buff",
       "effectName": "Break Effect Boost",

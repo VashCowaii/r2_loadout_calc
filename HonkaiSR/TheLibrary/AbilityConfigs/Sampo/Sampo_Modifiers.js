@@ -12,9 +12,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2131103330\">Sampo_Ultimate_DOTTakenUp</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "DoT taken +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
       "effectName": "DoT Vulnerability",

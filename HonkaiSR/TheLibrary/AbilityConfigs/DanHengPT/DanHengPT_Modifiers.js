@@ -84,9 +84,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "latentQueue": [
-        "DanHengPT_IsFreeAction"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -252,12 +249,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2035403394\">DanHengPT_Eidolon1</a>[<span class=\"descriptionNumberColor\">Shed Scales of Old</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "DanHengPT_IsFreeAction"
-      ],
       "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "All-Type RES PEN Boost",
@@ -372,12 +363,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_AttackDelta"
-      ],
-      "latentQueue": [
-        "DanHengPT_Skill02_Flag"
-      ],
       "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackDelta</span>.",
       "type": "Buff",
       "effectName": "ATK Boost",
@@ -412,16 +397,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_PointB2_P3_DelayUp",
-        "MDF_PointB2_P2_AddSP",
-        "MDF_Rank04_AllDamageReduceRatio",
-        "MDF_Rank06_AllDamageTypeTakenRatio",
-        "MDF_Rank06_DefPentRatio"
-      ],
-      "latentQueue": [
-        "DanHengPT_Skill02_Flag"
       ],
       "description": "\"Souldragon\" holder.",
       "type": "Other",
@@ -742,9 +717,6 @@ const configAbility = {
       "stackType": "Replace",
       "stackData": [
         "MDF_IsStack"
-      ],
-      "latentQueue": [
-        "DanHengPT_IsFreeAction"
       ],
       "execute": [
         {

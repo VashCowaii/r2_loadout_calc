@@ -10,102 +10,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1651606625\">MDF_RogueDLCAchievementListener</a>",
-      "execute": [
-        {
-          "eventTrigger": "Turn [Pre-action Phase]",
-          "execute": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "count",
-              "value": {
-                "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(count + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "count"
-                ]
-              }
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "count",
-                "compareType": "=",
-                "value2": 10
-              },
-              "passed": [
-                {
-                  "name": "Achievement",
-                  "relatedAchievements": [
-                    {
-                      "title": "All Watched Over By Machines of Loving Grace",
-                      "desc": "In Simulated Universe: Gold and Gears, endure #1[i] or more Resonance Extrapolation(s) in a single battle",
-                      "rarity": "Low",
-                      "type": "Hidden until Completion",
-                      "params": [
-                        10
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1651606625\">MDF_RogueDLCAchievementListener</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1216668349\">Challenge_Camera_AllTeam_Temp_2</a>",
-      "execute": [
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier",
-          "execute": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1216668349\">Challenge_Camera_AllTeam_Temp_2</a>"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1166335492\">Challenge_Camera_AllTeam_Temp_1</a>",
-      "execute": [
-        {
-          "eventTrigger": "When Stacking/Receiving Modifier",
-          "execute": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1166335492\">Challenge_Camera_AllTeam_Temp_1</a>"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1189881261\">BAttleEventAbility_Weakness_Imaginary</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
@@ -757,9 +661,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-14605930\">Modifier_BattleEventAbility_Challenge_Month_34_ExceedSP</a>[<span class=\"descriptionNumberColor\">Energy Overflow</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "EntityStockSPForShow"
-      ],
       "description": "<span class=\"descriptionNumberColor\">EntityStockSPForShow</span> extra Energy. This will be consumed first when unleashing Ultimate.",
       "type": "Other",
       "effectName": "Energy Overflow",
@@ -901,9 +802,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__639115186\">Modifier_BattleEventAbility_Challenge_Month_28_Sub2</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "_ActionDelayRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "Got a Queued Kill [Owner]",
@@ -1168,9 +1066,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__63496923\">BossInfiniteWave_Modifier</a>",
-      "stackData": [
-        "Monster_Number"
-      ],
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -1236,9 +1131,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__389361840\">Modifier_BattleEventAbility_Challenge_Month_31_Sub2</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "ActionDelayRatio"
-      ],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -1275,10 +1167,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1231239842\">Modifier_BattleEventAbility_Challenge_Month_31_Sub</a>[<span class=\"descriptionNumberColor\">Exo-Toughness</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_RedStanceRatio",
-        "MDF_MinStance"
       ],
       "description": "Triggers Weakness Break when the enemy's initial Weakness is reduced to 0. Then, their temporary Weakness can continue to be reduced. When temporary Weakness is reduced to 0, Weakness Break will be triggered again. The effect will be removed after this occurs.",
       "type": "Other",
@@ -1364,12 +1252,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1682404281\">Modifier_BattleEventAbility_Challenge_Month_30_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "_DmgUp_Ratio_get"
-      ],
-      "latentQueue": [
-        "_Trigger_Effect_Flag"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">_DmgUp_Ratio_get</span>. After attacking, increases stacks by 1. When <span class=\"descriptionNumberColor\">_Init_Layer</span> stack(s) are reached, deals 1 instance of DMG to all enemies based on a certain percentage of their respective Max HP.",
       "type": "Buff",
       "effectName": "Memory Imprint",
@@ -1429,9 +1311,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1567305749\">Modifier_BattleEventAbility_Challenge_Month_27_Sub4</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "_Trigger_Effect_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -1562,12 +1441,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1483417654\">Modifier_BattleEventAbility_Challenge_Month_27_Sub3</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "_SP_Ratio_get"
-      ],
-      "latentQueue": [
-        "_Trigger_Effect_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1746,12 +1619,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1232252899\">Modifier_BattleEventAbility_Challenge_Month_27_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "_DmgUp_Ratio_get"
-      ],
-      "latentQueue": [
-        "_Trigger_Effect_Flag"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">_DmgUp_Ratio_get</span>. After attacking, increases stacks by 1. When <span class=\"descriptionNumberColor\">_Init_Layer</span> stacks are reached, all allies regenerate Energy.",
       "type": "Buff",
       "effectName": "Memory Imprint",
@@ -1797,10 +1664,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__701462759\">Modifier_BattleEventAbility_Challenge_Month_28_Insert</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "DV_DmgUpRatio_Get",
-        "DV_AtkUpRatio_Get"
-      ],
       "description": "Increases ATK by <span class=\"descriptionNumberColor\">DV_AtkUpRatio_Get</span> and Break Effect by <span class=\"descriptionNumberColor\">DV_DmgUpRatio_Get</span>.",
       "type": "Buff",
       "effectName": "Memory Imprint",
@@ -1881,9 +1744,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-595048974\">Modifier_BattleEventAbility_Challenge_Month_28_preshow</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "ActionDelayRatio"
-      ],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -1987,9 +1847,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1736106961\">Modifier_BattleEventAbility_Challenge_Month_30_sub2</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "_Trigger_Effect_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -2108,9 +1965,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__319313068\">Modifier_BattleEventAbility_Challenge_Month_26_sub2</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "_Trigger_Damage_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -2229,9 +2083,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-245828586\">Modifier_BattleEventAbility_Challenge_Month_26_sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "_Trigger_Damage_Flag"
-      ],
       "description": "Receive <span class=\"descriptionNumberColor\">_DamageUp_Ratio_Sum</span> more DMG. Increase 1 stack every time this unit receives an attack. Receive additional DMG when stacks reach <span class=\"descriptionNumberColor\">_Init_Layer</span>.",
       "type": "Debuff",
       "effectName": "Memory Imprint",
@@ -2549,12 +2400,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-691475768\">Modifier_BattleEventAbility_Challenge_Month_25_Insert_pre</a>",
       "stackType": "Replace",
-      "stackData": [
-        "BattleEvent_P2_ADF_Chance",
-        "BattleEvent_P3_ADF_LifeTime",
-        "BattleEvent_P4_ADF_DamagePercentage",
-        "BattleEvent_P5_ADF_DotTriggerRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2609,9 +2454,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1260413696\">Modifier_BattleEventAbility_Challenge_Month_24_sub</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "BattleEvent_P1_ADF_Get"
-      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -2646,9 +2488,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1571276631\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff5</a>[<span class=\"descriptionNumberColor\">Follow-Up ATK Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "BattleEvent_P5_ADF_Get"
-      ],
       "description": "Follow-Up ATK DMG taken increases by <span class=\"descriptionNumberColor\">BattleEvent_P5_ADF_Get</span>.",
       "type": "Debuff",
       "effectName": "Follow-Up ATK Vulnerability",
@@ -2718,9 +2557,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1554499012\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff4</a>[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "BattleEvent_P2_ADF_Get"
-      ],
       "description": "Effect RES decreases by <span class=\"descriptionNumberColor\">BattleEvent_P2_ADF_Get</span>.",
       "type": "Debuff",
       "effectName": "Effect RES Reduction",
@@ -2780,9 +2616,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedDown"
-      ],
-      "stackData": [
-        "BattleEvent_P2_ADF_Get"
       ],
       "description": "Decreases SPD by <span class=\"descriptionNumberColor\">BattleEvent_P2_ADF_Get</span>.",
       "type": "Debuff",
@@ -2844,9 +2677,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
-      "stackData": [
-        "BattleEvent_P2_ADF_Get"
-      ],
       "description": "Reduces DEF by <span class=\"descriptionNumberColor\">BattleEvent_P2_ADF_Get</span>.",
       "type": "Debuff",
       "effectName": "DEF Reduction",
@@ -2906,9 +2736,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_AttackDown"
-      ],
-      "stackData": [
-        "BattleEvent_P2_ADF_Get"
       ],
       "description": "ATK decreases by <span class=\"descriptionNumberColor\">BattleEvent_P2_ADF_Get</span>.",
       "type": "Debuff",

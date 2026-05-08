@@ -2081,9 +2081,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "statusName": "Solitude, Drifting, In Murk",
@@ -2116,10 +2113,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-2040095871\">Memosprite_EvernightServant_DeathRattle_Speed</a>[<span class=\"descriptionNumberColor\">You, Parting, Beyond Reach</span>]",
       "modifierFlags": [
         "STAT_SpeedUp"
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_PropertyValue_2"
       ],
       "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_Show</span>.",
       "type": "Buff",

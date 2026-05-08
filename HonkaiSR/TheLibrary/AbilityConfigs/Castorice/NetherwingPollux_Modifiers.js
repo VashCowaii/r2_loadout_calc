@@ -89,20 +89,12 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1420894416\">Memosprite_CastoriceServant_Ability23Check</a>",
-      "latentQueue": [
-        "CL_PlayTimes",
-        "CL_EnterBattlePlayTimes"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__1420894416\">Memosprite_CastoriceServant_Ability23Check</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-256072391\">Memosprite_CastoriceServant_BP_Explode</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "CL_PlayTimes",
-        "CL_EnterBattlePlayTimes"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -210,8 +202,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1341939671\">Memosprite_CastoriceServant_Disable</a>",
       "stackType": "ReplaceByCaster",
       "latentQueue": [
-        "CL_EnterBattlePlayTimes",
-        "CL_PlayTimes",
         "CastoriceServant_BPSkill_Level"
       ],
       "execute": [
@@ -339,9 +329,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__148040455\">Memosprite_CastoriceServant_BPCost_2</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "CastoriceServant_BPSkill_Level"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -367,9 +354,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__164818074\">Memosprite_CastoriceServant_BPCost_1</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "CastoriceServant_BPSkill_Level"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -791,9 +775,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-509656395\">Memosprite_CastoriceServant_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "DMG Boost",

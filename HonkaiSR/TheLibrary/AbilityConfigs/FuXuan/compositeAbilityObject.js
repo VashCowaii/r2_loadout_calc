@@ -3,1133 +3,20 @@ const compositeAbilityObject = {
   "fullCharacterName": "Fu Xuan",
   "trimCharacterName": "FuXuan",
   "abilityList": [
-    "FuXuan_FuXuan_Eidolon2_Insert",
+    "FuXuan_Modifiers",
     "FuXuan_FuXuan_TechniqueInLevel",
     "FuXuan_FuXuan_Passive_Ability",
     "FuXuan_FuXuan_PassiveAbility01",
+    "FuXuan_FuXuan_Ability03_EnterReady",
     "FuXuan_FuXuan_Ability03_Part02",
     "FuXuan_FuXuan_Ability03_Part01",
-    "FuXuan_FuXuan_Ability03_EnterReady",
     "FuXuan_FuXuan_Ability02_Part02",
     "FuXuan_FuXuan_Ability02_Part01",
     "FuXuan_FuXuan_Ability01_Part02",
     "FuXuan_FuXuan_Ability01_Part01",
-    "FuXuan_Modifiers"
+    "FuXuan_FuXuan_Eidolon2_Insert"
   ],
   "abilityObject": {
-    "FuXuan_FuXuan_Eidolon2_Insert": {
-      "fileName": "FuXuan_FuXuan_Eidolon2_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Join Targets",
-            "TargetList": [
-              {
-                "name": "Target Name",
-                "target": "{{All Team Members}}"
-              },
-              {
-                "name": "Target Name",
-                "target": "{{All Unselectable Targets}}"
-              }
-            ]
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Heal",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "healPercent": {
-            "operator": "Variables[0] (AADF_1) || RETURN",
-            "displayLines": "AADF_1",
-            "constants": [],
-            "variables": [
-              "AADF_1"
-            ]
-          },
-          "formula": "Heal from Target MaxHP"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "FuXuan_FuXuan_TechniqueInLevel": {
-      "fileName": "FuXuan_FuXuan_TechniqueInLevel",
-      "childAbilityList": [
-        "FuXuan_FuXuan_TechniqueInLevel"
-      ],
-      "skillTrigger": "SkillMaze",
-      "abilityType": "Technique",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-642485039\">StageAbility_Maze_FuXuan_Modifier</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-642485039\">StageAbility_Maze_FuXuan_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Technique Modifies Current Wave"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Wave Count",
-                        "compareType": "=",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
-                      },
-                      "valuePerStack": {
-                        "Ability02_P2_DamageResistance": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_4762) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_4762",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_4762"
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1553530097\">FuXuan_HitDamageSplit</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
-                      "valuePerStack": {
-                        "MDF_SplitPercentage": {
-                          "operator": "Variables[0] (0.65) || RETURN",
-                          "displayLines": "0.65",
-                          "constants": [],
-                          "variables": [
-                            0.65
-                          ]
-                        },
-                        "Ability02_P2_DamageResistance": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_4762) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_4762",
-                          "constants": [],
-                          "variables": [
-                            "UnusedUnderThisBase_4762"
-                          ]
-                        },
-                        "AddSP": {
-                          "operator": "Variables[0] (5) || RETURN",
-                          "displayLines": "5",
-                          "constants": [],
-                          "variables": [
-                            5
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Trace Activated",
-                        "conditionList": "Liuren, the Sexagenary"
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{All Team Members with Unselectables}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "FuXuan_FuXuan_Passive_Ability": {
-      "fileName": "FuXuan_FuXuan_Passive_Ability",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "value1": "CurrentHP%",
-            "compareType": ">",
-            "value2": 0.5
-          },
-          "failed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "GDF_ExChangeHPCount",
-              "value": {
-                "operator": "Variables[0] (GDF_ExChangeHPCount) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(GDF_ExChangeHPCount - 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "GDF_ExChangeHPCount"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "GDF_LimboHPChangeFlag",
-              "value": 0
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "GDF_ExChangeHPCount",
-                "compareType": "<=",
-                "value2": 0
-              },
-              "passed": [
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (GDF_ExChangeHPCount) || RETURN",
-                    "displayLines": "GDF_ExChangeHPCount",
-                    "constants": [],
-                    "variables": [
-                      "GDF_ExChangeHPCount"
-                    ]
-                  },
-                  "maximum": 2,
-                  "assignState": "True",
-                  "priorState": "Disable",
-                  "bar#": 3
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (GDF_ExChangeHPCount) || RETURN",
-                    "displayLines": "GDF_ExChangeHPCount",
-                    "constants": [],
-                    "variables": [
-                      "GDF_ExChangeHPCount"
-                    ]
-                  },
-                  "maximum": 2,
-                  "assignState": "True",
-                  "priorState": "Active",
-                  "bar#": 3
-                }
-              ]
-            },
-            {
-              "name": "UI Display Event",
-              "popUpText": "Bleak Breeds Bliss"
-            },
-            "Deleted bullshit",
-            {
-              "name": "Heal",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "healPercent": {
-                "operator": "Variables[0] (0.9) || RETURN",
-                "displayLines": "0.9",
-                "constants": [],
-                "variables": [
-                  0.9
-                ]
-              },
-              "formula": "Heal from Target's MissingHP"
-            }
-          ]
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "FuXuan_FuXuan_PassiveAbility01": {
-      "fileName": "FuXuan_FuXuan_PassiveAbility01",
-      "childAbilityList": [
-        "FuXuan_FuXuan_PassiveAbility01",
-        "FuXuan_FuXuan_Passive_Ability",
-        "FuXuan_FuXuan_PassiveAbility01_Camera"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"302655931\">FuXuan_PassiveAbility</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2001636468\">FuXuan_ExChangeHP</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 6
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1862182829\">FuXuan_Eidolon6</a>[<span class=\"descriptionNumberColor\">Total HP lost</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": {
-            "operator": "Variables[0] (GDF_ExChangeHPCount) || RETURN",
-            "displayLines": "GDF_ExChangeHPCount",
-            "constants": [],
-            "variables": [
-              "GDF_ExChangeHPCount"
-            ]
-          },
-          "maximum": 2,
-          "assignState": "True",
-          "priorState": "Active",
-          "bar#": 3,
-          "cooldown": 0
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__302655931\">FuXuan_PassiveAbility</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Join Targets",
-                    "TargetList": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{All Team Members}}"
-                      },
-                      {
-                        "name": "Target Name",
-                        "target": "{{All Unselectable Targets}}"
-                      }
-                    ]
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Action-End Phase]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "HitFlag",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
-                  "valuePerStack": {
-                    "MDF_DamageResistanceRatio": {
-                      "operator": "Variables[0] (0.18) || RETURN",
-                      "displayLines": "0.18",
-                      "constants": [],
-                      "variables": [
-                        0.18
-                      ]
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Player Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
-                      "valuePerStack": {
-                        "MDF_DamageResistanceRatio": {
-                          "operator": "Variables[0] (0.18) || RETURN",
-                          "displayLines": "0.18",
-                          "constants": [],
-                          "variables": [
-                            0.18
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Anyone]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "HitFlag",
-                  "value": 0
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "FuXuan_FuXuan_Ability03_Part02": {
-      "fileName": "FuXuan_FuXuan_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Trace Activated",
-            "conditionList": "Dunjia, the Metamystic"
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variableName": "MaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "HealHPValue",
-              "value": {
-                "operator": "Variables[0] (MaxHP) || Variables[1] (0.05) || MUL || Variables[2] (133) || ADD || RETURN",
-                "displayLines": "((MaxHP * 0.05) + 133)",
-                "constants": [],
-                "variables": [
-                  "MaxHP",
-                  0.05,
-                  133
-                ]
-              }
-            },
-            {
-              "name": "Heal",
-              "target": {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              "healFlat": {
-                "operator": "Variables[0] (HealHPValue) || RETURN",
-                "displayLines": "HealHPValue",
-                "constants": [],
-                "variables": [
-                  "HealHPValue"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 6
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variableName": "CasterMaxHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "GDF_AllTeamMemberLoseHPValue",
-                "compareType": "<=",
-                "value2": {
-                  "operator": "Variables[0] (CasterMaxHP) || Variables[1] (1.2) || MUL || RETURN",
-                  "displayLines": "(CasterMaxHP * 1.2)",
-                  "constants": [],
-                  "variables": [
-                    "CasterMaxHP",
-                    1.2
-                  ]
-                }
-              },
-              "failed": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "GDF_AllTeamMemberLoseHPValue",
-                  "value": {
-                    "operator": "Variables[0] (CasterMaxHP) || Variables[1] (1.2) || MUL || RETURN",
-                    "displayLines": "(CasterMaxHP * 1.2)",
-                    "constants": [],
-                    "variables": [
-                      "CasterMaxHP",
-                      1.2
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "canPhase": true,
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
-                },
-                "DamageFlat": {
-                  "operator": "Variables[0] (GDF_AllTeamMemberLoseHPValue) || Variables[1] (2) || MUL || RETURN",
-                  "displayLines": "(GDF_AllTeamMemberLoseHPValue * 2)",
-                  "constants": [],
-                  "variables": [
-                    "GDF_AllTeamMemberLoseHPValue",
-                    2
-                  ]
-                },
-                "dmgFormula": "Max HP Scaling",
-                "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
-                },
-                "ToughnessDMGType": {
-                  "DamageType": "Quantum"
-                },
-                "Tags": null,
-                "attackType": "Ultimate",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "canPhase": true,
-              "AttackScaling": {
-                "DamageType": "Quantum",
-                "Damage": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
-                },
-                "dmgFormula": "Max HP Scaling",
-                "Toughness": {
-                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-                  "displayLines": "AOE Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "AOE Toughness Value"
-                  ]
-                },
-                "ToughnessDMGType": {
-                  "DamageType": "Quantum"
-                },
-                "Tags": null,
-                "attackType": "Ultimate",
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Define Custom Variable",
-          "variableName": "GDF_AllTeamMemberLoseHPValue",
-          "value": 0
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "GDF_ExChangeHPCount",
-          "value": {
-            "operator": "Variables[0] (GDF_ExChangeHPCount) || Constants[0] (1) || ADD || RETURN",
-            "displayLines": "(GDF_ExChangeHPCount + 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "GDF_ExChangeHPCount"
-            ]
-          }
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": {
-            "operator": "Variables[0] (GDF_ExChangeHPCount) || RETURN",
-            "displayLines": "GDF_ExChangeHPCount",
-            "constants": [],
-            "variables": [
-              "GDF_ExChangeHPCount"
-            ]
-          },
-          "maximum": 2,
-          "assignState": "True",
-          "priorState": "Active",
-          "bar#": 3,
-          "cooldown": 0
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "value1": "CurrentHP",
-            "compareType": ">",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "value1": "CurrentHP%",
-                    "compareType": "<=",
-                    "value2": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
-                    }
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "GDF_LimboHPChangeFlag",
-                    "compareType": "=",
-                    "value2": 0
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "GDF_ExChangeHPCount",
-                    "compareType": ">",
-                    "value2": 0
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Inject Ability Use",
-                  "condition": {
-                    "name": "Insert Ability Condition",
-                    "type": "AbilityOwnerInsertUnusedCount",
-                    "typeValue": 1
-                  },
-                  "abilityName": "FuXuan_Passive_Ability",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "priorityTag": "CharacterHealSelf",
-                  "canHitNonTargets": true,
-                  "showInActionOrder": true,
-                  "abortFlags": [
-                    "STAT_CTRL",
-                    "DisableAction"
-                  ],
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Skip Death Handling",
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "FuXuan_FuXuan_Ability03_Part01": {
-      "fileName": "FuXuan_FuXuan_Ability03_Part01",
-      "childAbilityList": [
-        "FuXuan_FuXuan_Ability03_Part01",
-        "FuXuan_FuXuan_Ability03_Part02",
-        "FuXuan_FuXuan_Ability03_Camera",
-        "FuXuan_FuXuan_Ability03_EnterReady"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Ultimate",
-      "energy": 5,
-      "toughnessList": [
-        0,
-        20,
-        0
-      ],
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "FuXuan_Ability03_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "FuXuan_FuXuan_Ability03_EnterReady": {
-      "fileName": "FuXuan_FuXuan_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      }
-    },
-    "FuXuan_FuXuan_Ability02_Part02": {
-      "fileName": "FuXuan_FuXuan_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Trace Activated",
-                "conditionList": "Taiyi, the Macrocosmic"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Update Energy",
-              "on": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "value": {
-                "operator": "Variables[0] (20) || RETURN",
-                "displayLines": "20",
-                "constants": [],
-                "variables": [
-                  20
-                ]
-              },
-              "isFixed": "* ERR"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
-          }
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "MaxHP",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
-          "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
-          },
-          "valuePerStack": {
-            "Ability02_P2_DamageResistance": {
-              "operator": "Variables[0] (UnusedUnderThisBase_4762) || RETURN",
-              "displayLines": "UnusedUnderThisBase_4762",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_4762"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1553530097\">FuXuan_HitDamageSplit</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
-          "valuePerStack": {
-            "MDF_SplitPercentage": {
-              "operator": "Variables[0] (0.65) || RETURN",
-              "displayLines": "0.65",
-              "constants": [],
-              "variables": [
-                0.65
-              ]
-            },
-            "Ability02_P2_DamageResistance": {
-              "operator": "Variables[0] (UnusedUnderThisBase_4762) || RETURN",
-              "displayLines": "UnusedUnderThisBase_4762",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_4762"
-              ]
-            },
-            "AddSP": {
-              "operator": "Variables[0] (5) || RETURN",
-              "displayLines": "5",
-              "constants": [],
-              "variables": [
-                5
-              ]
-            }
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Trace Activated",
-            "conditionList": "Liuren, the Sexagenary"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectables}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "valuePercent": 1,
-          "ofAbilitySplit": true,
-          "isFixed": "* ERR"
-        },
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "FuXuan_FuXuan_Ability02_Part01": {
-      "fileName": "FuXuan_FuXuan_Ability02_Part01",
-      "childAbilityList": [
-        "FuXuan_FuXuan_Ability02_Part01",
-        "FuXuan_FuXuan_Ability02_Part02",
-        "FuXuan_FuXuan_Ability02_Camera"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": 30,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "FuXuan_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{All Team Members}}"
-      }
-    },
-    "FuXuan_FuXuan_Ability01_Part02": {
-      "fileName": "FuXuan_FuXuan_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Variables[0] (0.5) || RETURN",
-              "displayLines": "0.5",
-              "constants": [],
-              "variables": [
-                0.5
-              ]
-            },
-            "dmgFormula": "Max HP Scaling",
-            "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
-            },
-            "ToughnessDMGType": {
-              "DamageType": "Quantum"
-            },
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "FuXuan_FuXuan_Ability01_Part01": {
-      "fileName": "FuXuan_FuXuan_Ability01_Part01",
-      "childAbilityList": [
-        "FuXuan_FuXuan_Ability01_Part01",
-        "FuXuan_FuXuan_Ability01_Part02",
-        "FuXuan_FuXuan_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": 20,
-      "toughnessList": [
-        10,
-        0,
-        0
-      ],
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "FuXuan_Ability01_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      }
-    },
     "FuXuan_Modifiers": {
       "fileName": "FuXuan_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1730,9 +617,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
           "stackType": "ReplaceByCaster",
-          "stackData": [
-            "Skill02_P2_DamageResistance"
-          ],
           "description": "Receive DMG distributed by other teammates.",
           "type": "Buff",
           "statusName": "Matrix of Prescience",
@@ -2765,12 +1649,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
           "stackType": "ReplaceByCaster",
-          "stackData": [
-            "MDF_DamageResistanceRatio"
-          ],
-          "latentQueue": [
-            "HitFlag"
-          ],
           "description": "Reduces DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageResistanceRatio</span>.",
           "type": "Buff",
           "statusName": "Misfortune Avoidance",
@@ -2945,6 +1823,1119 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "FuXuan_FuXuan_TechniqueInLevel": {
+      "fileName": "FuXuan_FuXuan_TechniqueInLevel",
+      "childAbilityList": [
+        "FuXuan_FuXuan_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
+      "abilityType": "Technique",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-642485039\">StageAbility_Maze_FuXuan_Modifier</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-642485039\">StageAbility_Maze_FuXuan_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Technique Modifies Current Wave"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Wave Count",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (2) || RETURN",
+                        "displayLines": "2",
+                        "constants": [],
+                        "variables": [
+                          2
+                        ]
+                      },
+                      "valuePerStack": {
+                        "Ability02_P2_DamageResistance": {
+                          "operator": "Variables[0] (UnusedUnderThisBase_4762) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_4762",
+                          "constants": [],
+                          "variables": [
+                            "UnusedUnderThisBase_4762"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1553530097\">FuXuan_HitDamageSplit</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
+                      "valuePerStack": {
+                        "MDF_SplitPercentage": {
+                          "operator": "Variables[0] (0.65) || RETURN",
+                          "displayLines": "0.65",
+                          "constants": [],
+                          "variables": [
+                            0.65
+                          ]
+                        },
+                        "Ability02_P2_DamageResistance": {
+                          "operator": "Variables[0] (UnusedUnderThisBase_4762) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_4762",
+                          "constants": [],
+                          "variables": [
+                            "UnusedUnderThisBase_4762"
+                          ]
+                        },
+                        "AddSP": {
+                          "operator": "Variables[0] (5) || RETURN",
+                          "displayLines": "5",
+                          "constants": [],
+                          "variables": [
+                            5
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Trace Activated",
+                        "conditionList": "Liuren, the Sexagenary"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members with Unselectables}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "FuXuan_FuXuan_Passive_Ability": {
+      "fileName": "FuXuan_FuXuan_Passive_Ability",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value1": "CurrentHP%",
+            "compareType": ">",
+            "value2": 0.5
+          },
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "GDF_ExChangeHPCount",
+              "value": {
+                "operator": "Variables[0] (GDF_ExChangeHPCount) || Constants[0] (1) || SUB || RETURN",
+                "displayLines": "(GDF_ExChangeHPCount - 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "GDF_ExChangeHPCount"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "GDF_LimboHPChangeFlag",
+              "value": 0
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "GDF_ExChangeHPCount",
+                "compareType": "<=",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (GDF_ExChangeHPCount) || RETURN",
+                    "displayLines": "GDF_ExChangeHPCount",
+                    "constants": [],
+                    "variables": [
+                      "GDF_ExChangeHPCount"
+                    ]
+                  },
+                  "maximum": 2,
+                  "assignState": "True",
+                  "priorState": "Disable",
+                  "bar#": 3
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (GDF_ExChangeHPCount) || RETURN",
+                    "displayLines": "GDF_ExChangeHPCount",
+                    "constants": [],
+                    "variables": [
+                      "GDF_ExChangeHPCount"
+                    ]
+                  },
+                  "maximum": 2,
+                  "assignState": "True",
+                  "priorState": "Active",
+                  "bar#": 3
+                }
+              ]
+            },
+            {
+              "name": "UI Display Event",
+              "popUpText": "Bleak Breeds Bliss"
+            },
+            "Deleted bullshit",
+            {
+              "name": "Heal",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "healPercent": {
+                "operator": "Variables[0] (0.9) || RETURN",
+                "displayLines": "0.9",
+                "constants": [],
+                "variables": [
+                  0.9
+                ]
+              },
+              "formula": "Heal from Target's MissingHP"
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "FuXuan_FuXuan_PassiveAbility01": {
+      "fileName": "FuXuan_FuXuan_PassiveAbility01",
+      "childAbilityList": [
+        "FuXuan_FuXuan_PassiveAbility01",
+        "FuXuan_FuXuan_Passive_Ability",
+        "FuXuan_FuXuan_PassiveAbility01_Camera"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"302655931\">FuXuan_PassiveAbility</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2001636468\">FuXuan_ExChangeHP</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1862182829\">FuXuan_Eidolon6</a>[<span class=\"descriptionNumberColor\">Total HP lost</span>]"
+            }
+          ]
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": {
+            "operator": "Variables[0] (GDF_ExChangeHPCount) || RETURN",
+            "displayLines": "GDF_ExChangeHPCount",
+            "constants": [],
+            "variables": [
+              "GDF_ExChangeHPCount"
+            ]
+          },
+          "maximum": 2,
+          "assignState": "True",
+          "priorState": "Active",
+          "bar#": 3,
+          "cooldown": 0
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__302655931\">FuXuan_PassiveAbility</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Join Targets",
+                    "TargetList": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Unselectable Targets}}"
+                      }
+                    ]
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Turn [Action-End Phase]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "HitFlag",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
+                  "valuePerStack": {
+                    "MDF_DamageResistanceRatio": {
+                      "operator": "Variables[0] (0.18) || RETURN",
+                      "displayLines": "0.18",
+                      "constants": [],
+                      "variables": [
+                        0.18
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
+                      "valuePerStack": {
+                        "MDF_DamageResistanceRatio": {
+                          "operator": "Variables[0] (0.18) || RETURN",
+                          "displayLines": "0.18",
+                          "constants": [],
+                          "variables": [
+                            0.18
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "HitFlag",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "FuXuan_FuXuan_Ability03_EnterReady": {
+      "fileName": "FuXuan_FuXuan_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      }
+    },
+    "FuXuan_FuXuan_Ability03_Part02": {
+      "fileName": "FuXuan_FuXuan_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Dunjia, the Metamystic"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable with Stat",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "variableName": "MaxHP",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "HealHPValue",
+              "value": {
+                "operator": "Variables[0] (MaxHP) || Variables[1] (0.05) || MUL || Variables[2] (133) || ADD || RETURN",
+                "displayLines": "((MaxHP * 0.05) + 133)",
+                "constants": [],
+                "variables": [
+                  "MaxHP",
+                  0.05,
+                  133
+                ]
+              }
+            },
+            {
+              "name": "Heal",
+              "target": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              "healFlat": {
+                "operator": "Variables[0] (HealHPValue) || RETURN",
+                "displayLines": "HealHPValue",
+                "constants": [],
+                "variables": [
+                  "HealHPValue"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable with Stat",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "variableName": "CasterMaxHP",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "GDF_AllTeamMemberLoseHPValue",
+                "compareType": "<=",
+                "value2": {
+                  "operator": "Variables[0] (CasterMaxHP) || Variables[1] (1.2) || MUL || RETURN",
+                  "displayLines": "(CasterMaxHP * 1.2)",
+                  "constants": [],
+                  "variables": [
+                    "CasterMaxHP",
+                    1.2
+                  ]
+                }
+              },
+              "failed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "GDF_AllTeamMemberLoseHPValue",
+                  "value": {
+                    "operator": "Variables[0] (CasterMaxHP) || Variables[1] (1.2) || MUL || RETURN",
+                    "displayLines": "(CasterMaxHP * 1.2)",
+                    "constants": [],
+                    "variables": [
+                      "CasterMaxHP",
+                      1.2
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Quantum",
+                "Damage": {
+                  "operator": "Variables[0] (1) || RETURN",
+                  "displayLines": "1",
+                  "constants": [],
+                  "variables": [
+                    1
+                  ]
+                },
+                "DamageFlat": {
+                  "operator": "Variables[0] (GDF_AllTeamMemberLoseHPValue) || Variables[1] (2) || MUL || RETURN",
+                  "displayLines": "(GDF_AllTeamMemberLoseHPValue * 2)",
+                  "constants": [],
+                  "variables": [
+                    "GDF_AllTeamMemberLoseHPValue",
+                    2
+                  ]
+                },
+                "dmgFormula": "Max HP Scaling",
+                "Toughness": {
+                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
+                  "displayLines": "AOE Toughness Value",
+                  "constants": [],
+                  "variables": [
+                    "AOE Toughness Value"
+                  ]
+                },
+                "ToughnessDMGType": {
+                  "DamageType": "Quantum"
+                },
+                "Tags": null,
+                "attackType": "Ultimate",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Quantum",
+                "Damage": {
+                  "operator": "Variables[0] (1) || RETURN",
+                  "displayLines": "1",
+                  "constants": [],
+                  "variables": [
+                    1
+                  ]
+                },
+                "dmgFormula": "Max HP Scaling",
+                "Toughness": {
+                  "operator": "Variables[0] (AOE Toughness Value) || RETURN",
+                  "displayLines": "AOE Toughness Value",
+                  "constants": [],
+                  "variables": [
+                    "AOE Toughness Value"
+                  ]
+                },
+                "ToughnessDMGType": {
+                  "DamageType": "Quantum"
+                },
+                "Tags": null,
+                "attackType": "Ultimate",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Define Custom Variable",
+          "variableName": "GDF_AllTeamMemberLoseHPValue",
+          "value": 0
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "GDF_ExChangeHPCount",
+          "value": {
+            "operator": "Variables[0] (GDF_ExChangeHPCount) || Constants[0] (1) || ADD || RETURN",
+            "displayLines": "(GDF_ExChangeHPCount + 1)",
+            "constants": [
+              1
+            ],
+            "variables": [
+              "GDF_ExChangeHPCount"
+            ]
+          }
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": {
+            "operator": "Variables[0] (GDF_ExChangeHPCount) || RETURN",
+            "displayLines": "GDF_ExChangeHPCount",
+            "constants": [],
+            "variables": [
+              "GDF_ExChangeHPCount"
+            ]
+          },
+          "maximum": 2,
+          "assignState": "True",
+          "priorState": "Active",
+          "bar#": 3,
+          "cooldown": 0
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value1": "CurrentHP",
+            "compareType": ">",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "value1": "CurrentHP%",
+                    "compareType": "<=",
+                    "value2": {
+                      "operator": "Variables[0] (0.5) || RETURN",
+                      "displayLines": "0.5",
+                      "constants": [],
+                      "variables": [
+                        0.5
+                      ]
+                    }
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "GDF_LimboHPChangeFlag",
+                    "compareType": "=",
+                    "value2": 0
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "GDF_ExChangeHPCount",
+                    "compareType": ">",
+                    "value2": 0
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Inject Ability Use",
+                  "condition": {
+                    "name": "Insert Ability Condition",
+                    "type": "AbilityOwnerInsertUnusedCount",
+                    "typeValue": 1
+                  },
+                  "abilityName": "FuXuan_Passive_Ability",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "priorityTag": "CharacterHealSelf",
+                  "canHitNonTargets": true,
+                  "showInActionOrder": true,
+                  "abortFlags": [
+                    "STAT_CTRL",
+                    "DisableAction"
+                  ],
+                  "allowAbilityTriggers": false
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Skip Death Handling",
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "FuXuan_FuXuan_Ability03_Part01": {
+      "fileName": "FuXuan_FuXuan_Ability03_Part01",
+      "childAbilityList": [
+        "FuXuan_FuXuan_Ability03_Part01",
+        "FuXuan_FuXuan_Ability03_Part02",
+        "FuXuan_FuXuan_Ability03_Camera",
+        "FuXuan_FuXuan_Ability03_EnterReady"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Ultimate",
+      "energy": 5,
+      "toughnessList": [
+        0,
+        20,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "FuXuan_Ability03_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "FuXuan_FuXuan_Ability02_Part02": {
+      "fileName": "FuXuan_FuXuan_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Trace Activated",
+                "conditionList": "Taiyi, the Macrocosmic"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Update Energy",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "value": {
+                "operator": "Variables[0] (20) || RETURN",
+                "displayLines": "20",
+                "constants": [],
+                "variables": [
+                  20
+                ]
+              },
+              "isFixed": "* ERR"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]"
+          }
+        },
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "MaxHP",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
+          "duration": {
+            "operator": "Variables[0] (3) || RETURN",
+            "displayLines": "3",
+            "constants": [],
+            "variables": [
+              3
+            ]
+          },
+          "valuePerStack": {
+            "Ability02_P2_DamageResistance": {
+              "operator": "Variables[0] (UnusedUnderThisBase_4762) || RETURN",
+              "displayLines": "UnusedUnderThisBase_4762",
+              "constants": [],
+              "variables": [
+                "UnusedUnderThisBase_4762"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1553530097\">FuXuan_HitDamageSplit</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
+          "valuePerStack": {
+            "MDF_SplitPercentage": {
+              "operator": "Variables[0] (0.65) || RETURN",
+              "displayLines": "0.65",
+              "constants": [],
+              "variables": [
+                0.65
+              ]
+            },
+            "Ability02_P2_DamageResistance": {
+              "operator": "Variables[0] (UnusedUnderThisBase_4762) || RETURN",
+              "displayLines": "UnusedUnderThisBase_4762",
+              "constants": [],
+              "variables": [
+                "UnusedUnderThisBase_4762"
+              ]
+            },
+            "AddSP": {
+              "operator": "Variables[0] (5) || RETURN",
+              "displayLines": "5",
+              "constants": [],
+              "variables": [
+                5
+              ]
+            }
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Liuren, the Sexagenary"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-72044013\">FuXuan_Tree02</a>[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
+            }
+          ]
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "valuePercent": 1,
+          "ofAbilitySplit": true,
+          "isFixed": "* ERR"
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "FuXuan_FuXuan_Ability02_Part01": {
+      "fileName": "FuXuan_FuXuan_Ability02_Part01",
+      "childAbilityList": [
+        "FuXuan_FuXuan_Ability02_Part01",
+        "FuXuan_FuXuan_Ability02_Part02",
+        "FuXuan_FuXuan_Ability02_Camera"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": 30,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "FuXuan_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
+    },
+    "FuXuan_FuXuan_Ability01_Part02": {
+      "fileName": "FuXuan_FuXuan_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] (0.5) || RETURN",
+              "displayLines": "0.5",
+              "constants": [],
+              "variables": [
+                0.5
+              ]
+            },
+            "dmgFormula": "Max HP Scaling",
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "ToughnessDMGType": {
+              "DamageType": "Quantum"
+            },
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "FuXuan_FuXuan_Ability01_Part01": {
+      "fileName": "FuXuan_FuXuan_Ability01_Part01",
+      "childAbilityList": [
+        "FuXuan_FuXuan_Ability01_Part01",
+        "FuXuan_FuXuan_Ability01_Part02",
+        "FuXuan_FuXuan_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": 20,
+      "toughnessList": [
+        10,
+        0,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "FuXuan_Ability01_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "FuXuan_FuXuan_Eidolon2_Insert": {
+      "fileName": "FuXuan_FuXuan_Eidolon2_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Join Targets",
+            "TargetList": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members}}"
+              },
+              {
+                "name": "Target Name",
+                "target": "{{All Unselectable Targets}}"
+              }
+            ]
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1795072353\">FuXuan_Eidolon2</a>[<span class=\"descriptionNumberColor\">Optimus Felix</span>]"
+        },
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        {
+          "name": "Heal",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "healPercent": {
+            "operator": "Variables[0] (AADF_1) || RETURN",
+            "displayLines": "AADF_1",
+            "constants": [],
+            "variables": [
+              "AADF_1"
+            ]
+          },
+          "formula": "Heal from Target MaxHP"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
     }
   }
 }

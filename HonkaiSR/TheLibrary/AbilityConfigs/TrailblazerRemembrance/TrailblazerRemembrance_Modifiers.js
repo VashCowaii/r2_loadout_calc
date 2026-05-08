@@ -285,9 +285,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__409195494\">M_PlayerBoy_30_CreateServantPreshow</a>",
-      "stackData": [
-        "ServantID"
-      ],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",

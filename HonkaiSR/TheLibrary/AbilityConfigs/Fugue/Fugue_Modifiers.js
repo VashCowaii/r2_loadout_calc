@@ -15,9 +15,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_SuperBreakDamagePercentage"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -94,9 +91,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "STAT_SuperBreakBuff"
-      ],
-      "stackData": [
-        "MDF_PassiveDamage2"
       ],
       "execute": [
         {
@@ -181,9 +175,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_DefenceDown"
-      ],
-      "stackData": [
-        "MDF_DefenceDownRatio"
       ],
       "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>.",
       "type": "Debuff",
@@ -313,11 +304,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_PassiveDamage2",
-        "MDF_RedStanceRatio",
-        "MDF_MinStance"
       ],
       "description": "When initial Toughness is reduced to 0, \"Cloudflame Luster\" can continue to be reduced. When \"Cloudflame Luster\" is reduced to 0, the enemy will receive Weakness Break DMG again.",
       "type": "Other",

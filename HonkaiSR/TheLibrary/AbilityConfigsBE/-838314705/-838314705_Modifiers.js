@@ -2242,9 +2242,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__51921734\">MStrongChallengeEX_BEMark_ExtraElationBE</a>",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

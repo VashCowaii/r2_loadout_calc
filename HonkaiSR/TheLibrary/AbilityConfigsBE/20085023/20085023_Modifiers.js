@@ -67,10 +67,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-858410577\">Standard_EliteField_Elite</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
-      "stackData": [
-        "MDF_AllDamageReduce",
-        "MDF_DamageByRatio"
-      ],
       "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Causes other enemy targets to obtain \"Fate's Convergence.\"",
       "type": "Buff",
       "effectName": "Binding Obligation",

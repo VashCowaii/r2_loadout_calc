@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": "Cipher",
   "trimCharacterName": "Cipher",
   "abilityList": [
+    "Cipher_Modifiers",
     "Cipher_Cipher_TechniqueInLevel_Insert",
     "Cipher_Cipher_TechniqueInLevel",
     "Cipher_Cipher_PassiveAbility01_Insert_Part02",
@@ -15,10 +16,1649 @@ const compositeAbilityObject = {
     "Cipher_Cipher_Ability02_Part02",
     "Cipher_Cipher_Ability02_Part01",
     "Cipher_Cipher_Ability01_Part02",
-    "Cipher_Cipher_Ability01_Part01",
-    "Cipher_Modifiers"
+    "Cipher_Cipher_Ability01_Part01"
   ],
   "abilityObject": {
+    "Cipher_Modifiers": {
+      "fileName": "Cipher_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__825609644\">Cipher_SpecialMark01</a>",
+          "stackType": "Replace",
+          "modifierFlags": [
+            "RemoveWhenCasterDead",
+            "ListenBattleEventSkill"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 10,
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "invertCondition": true
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"825609644\">Cipher_SpecialMark01</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Update Target Selected(UI) [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Current Action Owner}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Toggle Skill Mark"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Toggle Skill Mark",
+                      "toggle": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__875942501\">Cipher_SpecialMark02</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead",
+            "ListenBattleEventSkill"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Update Target Selected(UI) [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Current Action Owner}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Primary-Target}}"
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
+                          },
+                          "passed": [
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Basic ATK",
+                                "Skill",
+                                "Ultimate"
+                              ]
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Skill",
+                                "Ultimate"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
+                          },
+                          "passed": [
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Basic ATK"
+                              ]
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Toggle Skill Mark"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Toggle Skill Mark"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Active Ability Chosen [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Current Action Owner}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Primary-Target}}"
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
+                          },
+                          "passed": [
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Basic ATK",
+                                "Skill",
+                                "Ultimate"
+                              ]
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Skill",
+                                "Ultimate"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
+                          },
+                          "passed": [
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Basic ATK"
+                              ]
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Toggle Skill Mark"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Toggle Skill Mark"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__838995685\">Cipher_Ability03_Force_Preshow</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "skillType": "Ultimate",
+            "toughnessForcedReductionPreview": 1,
+            "showAsForcedReduction": true
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1154380754\">Cipher_Ability03_Force</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "ForceStanceDamage"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-315567514\">Cipher_BpKuoSan_Insert_Bonuser</a>",
+          "modifierFlags": [
+            "CustomEvent_InfiniteRefresh"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Action Choice Window [Anyone]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
+                }
+              ],
+              "priorityLevel": -55
+            },
+            {
+              "eventTrigger": "Custom Event",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "New Enemy Wave",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Living State",
+                        "state": "Mask_AliveOrRevivable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "modifierFunctions": [
+            {
+              "name": "CharacterFunctions",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-2003903269\">Cipher_InsertRetargetSelf</a>",
+              "parse": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "conditions": {
+                    "name": "Target Exists",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "living": true
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Inject Ability Use",
+                      "condition": {
+                        "name": "Insert Ability Condition",
+                        "type": "AbilityOwnerInsertUnusedCount",
+                        "typeValue": 1
+                      },
+                      "abilityName": "Cipher_PassiveAbility01_Insert_Bonuser",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "priorityTag": "CharacterAttackFromSelf",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "abortFlags": [
+                        "STAT_CTRL",
+                        "DisableAction"
+                      ],
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__4491835\">Cipher_BpKuoSan_Insert_CD</a>[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]",
+          "description": "Talent's Follow-Up ATK cannot yet be triggered.",
+          "type": "Other",
+          "statusName": "The Hospitable Dolosian",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Passive_Trigger_Count",
+                  "value": 0
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1385569030\">Cipher_PointB2_CD</a>",
+          "duration": 1
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
+          "modifierFlags": [
+            "KeepOnDeathrattle",
+            "STAT_AITargetHigherPriority",
+            "RemoveWhenCasterDead"
+          ],
+          "description": "While the \"Patron\" state is active, a tally of the DMG dealt by ally targets will be kept by Cipher. And Cipher's Ultimate will deal True DMG based on this tally.",
+          "type": "Debuff",
+          "effectName": "Become a Patron",
+          "statusName": "Patron",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 10,
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "invertCondition": true
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"825609644\">Cipher_SpecialMark01</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"825609644\">Cipher_SpecialMark01</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"825609644\">Cipher_SpecialMark01</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Take Damage End [Owner]: Hit",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-556818185\">Cipher_Insert_Listen</a>",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"232969841\">Cipher_BpKuoSan_Insert_Hit</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Is Part Of Team",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "team": "Player Team"
+                          },
+                          {
+                            "name": "Is Part Of Team",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}.[[getSourceCreator]]"
+                            },
+                            "team": "Player Team"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Is Entity Type",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "type": "Character",
+                            "livingState": "Mask_NotDestroyed"
+                          },
+                          {
+                            "name": "Is Entity Type",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "type": "Memosprite"
+                          },
+                          {
+                            "name": "Is Entity Type",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}.[[getSourceCreator]]"
+                            },
+                            "type": "Character",
+                            "livingState": "Mask_NotDestroyed"
+                          },
+                          {
+                            "name": "Is Entity Type",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}.[[getSourceCreator]]"
+                            },
+                            "type": "Memosprite"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Attack Type",
+                        "attackTypes": [
+                          "True DMG"
+                        ],
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Damage Data",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "_TMP_Damage",
+                      "value": "Result_FinalDamageBase",
+                      "context": "ContextModifier"
+                    },
+                    {
+                      "name": "Define Custom Variable with Damage Data",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "_TMP_OverflowDamage",
+                      "value": "Result_OverflowHPDamage",
+                      "context": "ContextModifier"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_TMP_Damage",
+                      "value": {
+                        "operator": "Variables[0] (_TMP_Damage) || Variables[1] (_TMP_OverflowDamage) || SUB || RETURN",
+                        "displayLines": "(_TMP_Damage - _TMP_OverflowDamage)",
+                        "constants": [],
+                        "variables": [
+                          "_TMP_Damage",
+                          "_TMP_OverflowDamage"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_TMP_Rate",
+                      "value": {
+                        "operator": "Variables[0] (0.12) || RETURN",
+                        "displayLines": "0.12",
+                        "constants": [],
+                        "variables": [
+                          0.12
+                        ]
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Has Damage Tags",
+                            "damageTag": [
+                              "Cipher's Insert"
+                            ]
+                          },
+                          {
+                            "name": "Compare: Target",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
+                          },
+                          {
+                            "name": "Eidolon Activated",
+                            "eidolon": 6
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "_TMP_Rate",
+                          "value": {
+                            "operator": "Variables[0] (_TMP_Rate) || Variables[1] (0.16) || ADD || RETURN",
+                            "displayLines": "(_TMP_Rate + 0.16)",
+                            "constants": [],
+                            "variables": [
+                              "_TMP_Rate",
+                              0.16
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "_TMP_Damage",
+                        "compareType": ">",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "SkillP01_CurrentDamge",
+                          "value": {
+                            "operator": "Constants[0] (0) || Variables[0] (_TMP_Damage) || SUB || RETURN",
+                            "displayLines": "(0 - _TMP_Damage)",
+                            "constants": [
+                              0
+                            ],
+                            "variables": [
+                              "_TMP_Damage"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "SkillP01_FinalDamage",
+                          "value": {
+                            "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (_TMP_Rate) || MUL || Variables[3] (0.12) || DIV || Variables[3] (0.12) || Variables[4] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
+                            "displayLines": "(SkillP01_FinalDamage + (((-SkillP01_CurrentDamge * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))",
+                            "constants": [],
+                            "variables": [
+                              "SkillP01_FinalDamage",
+                              "SkillP01_CurrentDamge",
+                              "_TMP_Rate",
+                              0.12,
+                              "Rank01_FinalRatio"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Trace Activated",
+                                "conditionList": "Empyrean Strides"
+                              }
+                            ]
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable with Stat",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "variableName": "PointB1_Speed",
+                              "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
+                            },
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Compare: Variable",
+                                "value1": "PointB1_Speed",
+                                "compareType": ">=",
+                                "value2": {
+                                  "operator": "Variables[0] (OBJECT_[170]) || RETURN",
+                                  "displayLines": "OBJECT_[170]",
+                                  "constants": [],
+                                  "variables": [
+                                    "OBJECT_[170]"
+                                  ]
+                                }
+                              },
+                              "passed": [
+                                {
+                                  "name": "Define Custom Variable",
+                                  "variableName": "PointB1_Ratio",
+                                  "value": {
+                                    "operator": "Variables[0] (PointB1_Add_2) || RETURN",
+                                    "displayLines": "PointB1_Add_2",
+                                    "constants": [],
+                                    "variables": [
+                                      "PointB1_Add_2"
+                                    ]
+                                  }
+                                }
+                              ],
+                              "failed": [
+                                {
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "Compare: Variable",
+                                    "value1": "PointB1_Speed",
+                                    "compareType": ">=",
+                                    "value2": {
+                                      "operator": "Variables[0] (OBJECT_[140]) || RETURN",
+                                      "displayLines": "OBJECT_[140]",
+                                      "constants": [],
+                                      "variables": [
+                                        "OBJECT_[140]"
+                                      ]
+                                    }
+                                  },
+                                  "passed": [
+                                    {
+                                      "name": "Define Custom Variable",
+                                      "variableName": "PointB1_Ratio",
+                                      "value": {
+                                        "operator": "Variables[0] (PointB1_Add_1) || RETURN",
+                                        "displayLines": "PointB1_Add_1",
+                                        "constants": [],
+                                        "variables": [
+                                          "PointB1_Add_1"
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "failed": [
+                                    {
+                                      "name": "Define Custom Variable",
+                                      "variableName": "PointB1_Ratio",
+                                      "value": 0
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "SkillP01_FinalDamage",
+                              "value": {
+                                "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (PointB1_Ratio) || MUL || Variables[3] (_TMP_Rate) || MUL || Variables[4] (0.12) || DIV || Variables[4] (0.12) || Variables[5] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
+                                "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * PointB1_Ratio) * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))",
+                                "constants": [],
+                                "variables": [
+                                  "SkillP01_FinalDamage",
+                                  "SkillP01_CurrentDamge",
+                                  "PointB1_Ratio",
+                                  "_TMP_Rate",
+                                  0.12,
+                                  "Rank01_FinalRatio"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Compare: Target",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "target2": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                }
+                              },
+                              {
+                                "name": "Attack Type",
+                                "attackTypes": [
+                                  "Technique"
+                                ],
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                }
+                              }
+                            ]
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "SkillP01_FinalDamage",
+                              "value": {
+                                "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (2) || MUL || Variables[3] (_TMP_Rate) || MUL || Variables[4] (0.12) || DIV || Variables[4] (0.12) || Variables[5] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
+                                "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * 2) * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))",
+                                "constants": [],
+                                "variables": [
+                                  "SkillP01_FinalDamage",
+                                  "SkillP01_CurrentDamge",
+                                  2,
+                                  "_TMP_Rate",
+                                  0.12,
+                                  "Rank01_FinalRatio"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (1000) || DIV || RETURN",
+                        "displayLines": "(SkillP01_FinalDamage / 1000)",
+                        "constants": [
+                          1000
+                        ],
+                        "variables": [
+                          "SkillP01_FinalDamage"
+                        ]
+                      },
+                      "maximum": {
+                        "operator": "Constants[0] (99999) || RETURN",
+                        "displayLines": "99999",
+                        "constants": [
+                          99999
+                        ],
+                        "variables": []
+                      },
+                      "assignState": "True",
+                      "priorState": "Normal",
+                      "bar#": 4,
+                      "cooldown": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Entity Left Battle [Owner]",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Sequence",
+                    "Sequence": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}.[[livingOrLimbo]]"
+                      },
+                      {
+                        "name": "Target Filter",
+                        "conditions": {
+                          "name": "Compare: Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "value1": "CurrentHP%",
+                          "compareType": ">",
+                          "value2": 0
+                        }
+                      },
+                      "Shuffle Targets",
+                      {
+                        "name": "Sort by Stat",
+                        "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
+                        "sortByHighest": true
+                      },
+                      {
+                        "name": "Return Target",
+                        "value": 1
+                      }
+                    ]
+                  },
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
+                      "valuePerStack": {}
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Attacked End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Is Entity a Battle Event/Summon",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Eidolon Activated",
+                        "eidolon": 4
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Quantum",
+                        "Damage": {
+                          "operator": "Variables[0] (Rank04_DamagePercentage) || RETURN",
+                          "displayLines": "Rank04_DamagePercentage",
+                          "constants": [],
+                          "variables": [
+                            "Rank04_DamagePercentage"
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Additional DMG"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Unselectable Adjustment [Owner]: Start",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Sequence",
+                    "Sequence": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}.[[livingOrLimbo]]"
+                      },
+                      {
+                        "name": "Target Filter",
+                        "conditions": {
+                          "name": "Compare: Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "value1": "CurrentHP%",
+                          "compareType": ">",
+                          "value2": 0
+                        }
+                      },
+                      "Shuffle Targets",
+                      {
+                        "name": "Sort by Stat",
+                        "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
+                        "sortByHighest": true
+                      },
+                      {
+                        "name": "Return Target",
+                        "value": 1
+                      }
+                    ]
+                  },
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
+                      "valuePerStack": {}
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__31554455\">Cipher_BpKuoSan_Adj</a>",
+          "modifierFlags": [
+            "KeepOnDeathrattle",
+            "RemoveWhenCasterDead"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Update Target Selected(UI) [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
+                        },
+                        "target": {
+                          "name": "Target Sequence",
+                          "Sequence": [
+                            {
+                              "name": "Target Name",
+                              "target": "{{Enemy Team All}}"
+                            },
+                            {
+                              "name": "Target Filter",
+                              "conditions": {
+                                "name": "Has Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
+                              }
+                            }
+                          ]
+                        },
+                        "mustBeAlive2": true
+                      },
+                      {
+                        "name": "Trace Activated",
+                        "conditionList": "300 Rogues"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Toggle Skill Mark",
+                      "toggle": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Active Ability Chosen [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
+                        },
+                        "target": {
+                          "name": "Target Sequence",
+                          "Sequence": [
+                            {
+                              "name": "Target Name",
+                              "target": "{{Enemy Team All}}"
+                            },
+                            {
+                              "name": "Target Filter",
+                              "conditions": {
+                                "name": "Has Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
+                              }
+                            }
+                          ]
+                        },
+                        "mustBeAlive2": true
+                      },
+                      {
+                        "name": "Trace Activated",
+                        "conditionList": "300 Rogues"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Toggle Skill Mark",
+                      "toggle": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-989192431\">Cipher_BpKuoSan_Insert_Hit_PointB1</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__232969841\">Cipher_BpKuoSan_Insert_Hit</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1369337828\">Cipher_PointB1_Debuff</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Skill"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__116163492\">Cipher_BP_Bonus</a>[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Hey, Jackpot for the Taking",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1685549745\">Cipher_BP_Debuff</a>[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_Fatigue"
+          ],
+          "description": "DMG dealt to allies decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Weaken",
+          "statusName": "Hey, Jackpot for the Taking",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1113671218\">Cipher_PointB3_Debuff</a>[<span class=\"descriptionNumberColor\">Sleight of Sky</span>]",
+          "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Sleight of Sky",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-235690437\">Cipher_PointB1_InsertBonus</a>",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Follow-up"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1912968422\">Cipher_Eidolon6_Debuff</a>",
+          "execute": [
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "Adjust Target Stats",
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
+                      "value": "(0 - MDF_PropertyValue)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1467539794\">Cipher_Eidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Read the Room, Seek the Glee</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Read the Room, Seek the Glee",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-309291538\">Cipher_Eidolon2_Debuff</a>[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "In the Fray, Nab On a Spree",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "Cipher_Cipher_TechniqueInLevel_Insert": {
       "fileName": "Cipher_Cipher_TechniqueInLevel_Insert",
       "abilityType": null,
@@ -3384,1661 +5024,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Cipher_Modifiers": {
-      "fileName": "Cipher_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__825609644\">Cipher_SpecialMark01</a>",
-          "stackType": "Replace",
-          "modifierFlags": [
-            "RemoveWhenCasterDead",
-            "ListenBattleEventSkill"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All(with Unselectable)}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 10,
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "invertCondition": true
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"825609644\">Cipher_SpecialMark01</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "Toggle Skill Mark"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "Toggle Skill Mark"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Update Target Selected(UI) [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Current Action Owner}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Toggle Skill Mark"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Toggle Skill Mark",
-                      "toggle": true
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__875942501\">Cipher_SpecialMark02</a>",
-          "modifierFlags": [
-            "RemoveWhenCasterDead",
-            "ListenBattleEventSkill"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "Toggle Skill Mark"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "Toggle Skill Mark"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Update Target Selected(UI) [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Current Action Owner}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Player's Aim Primary-Target}}"
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
-                          },
-                          "passed": [
-                            {
-                              "name": "Toggle Skill Mark",
-                              "toggle": true,
-                              "skillTypesAllow": [
-                                "Basic ATK",
-                                "Skill",
-                                "Ultimate"
-                              ]
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Toggle Skill Mark",
-                              "toggle": true,
-                              "skillTypesAllow": [
-                                "Skill",
-                                "Ultimate"
-                              ]
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
-                          },
-                          "passed": [
-                            {
-                              "name": "Toggle Skill Mark",
-                              "toggle": true,
-                              "skillTypesAllow": [
-                                "Basic ATK"
-                              ]
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Toggle Skill Mark"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Toggle Skill Mark"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Active Ability Chosen [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Current Action Owner}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Player's Aim Primary-Target}}"
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
-                          },
-                          "passed": [
-                            {
-                              "name": "Toggle Skill Mark",
-                              "toggle": true,
-                              "skillTypesAllow": [
-                                "Basic ATK",
-                                "Skill",
-                                "Ultimate"
-                              ]
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Toggle Skill Mark",
-                              "toggle": true,
-                              "skillTypesAllow": [
-                                "Skill",
-                                "Ultimate"
-                              ]
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
-                          },
-                          "passed": [
-                            {
-                              "name": "Toggle Skill Mark",
-                              "toggle": true,
-                              "skillTypesAllow": [
-                                "Basic ATK"
-                              ]
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Toggle Skill Mark"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Toggle Skill Mark"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__838995685\">Cipher_Ability03_Force_Preshow</a>",
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "skillType": "Ultimate",
-            "toughnessForcedReductionPreview": 1,
-            "showAsForcedReduction": true
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1154380754\">Cipher_Ability03_Force</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "ForceStanceDamage"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-315567514\">Cipher_BpKuoSan_Insert_Bonuser</a>",
-          "modifierFlags": [
-            "CustomEvent_InfiniteRefresh"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Action Choice Window [Anyone]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
-                }
-              ],
-              "priorityLevel": -55
-            },
-            {
-              "eventTrigger": "Custom Event",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave",
-              "execute": [
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Anyone]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Living State",
-                        "state": "Mask_AliveOrRevivable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        }
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "modifierFunctions": [
-            {
-              "name": "CharacterFunctions",
-              "functionName": "<a class=\"gTempYellow\" id=\"fun__-2003903269\">Cipher_InsertRetargetSelf</a>",
-              "parse": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Target Exists",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "living": true
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Inject Ability Use",
-                      "condition": {
-                        "name": "Insert Ability Condition",
-                        "type": "AbilityOwnerInsertUnusedCount",
-                        "typeValue": 1
-                      },
-                      "abilityName": "Cipher_PassiveAbility01_Insert_Bonuser",
-                      "abilitySource": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Hostile Entities(AOE)}}"
-                      },
-                      "priorityTag": "CharacterAttackFromSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "abortFlags": [
-                        "STAT_CTRL",
-                        "DisableAction"
-                      ],
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__4491835\">Cipher_BpKuoSan_Insert_CD</a>[<span class=\"descriptionNumberColor\">The Hospitable Dolosian</span>]",
-          "description": "Talent's Follow-Up ATK cannot yet be triggered.",
-          "type": "Other",
-          "statusName": "The Hospitable Dolosian",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "Passive_Trigger_Count",
-                  "value": 0
-                },
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1385569030\">Cipher_PointB2_CD</a>",
-          "duration": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
-          "modifierFlags": [
-            "KeepOnDeathrattle",
-            "STAT_AITargetHigherPriority",
-            "RemoveWhenCasterDead"
-          ],
-          "description": "While the \"Patron\" state is active, a tally of the DMG dealt by ally targets will be kept by Cipher. And Cipher's Ultimate will deal True DMG based on this tally.",
-          "type": "Debuff",
-          "effectName": "Become a Patron",
-          "statusName": "Patron",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All(with Unselectable)}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 10,
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "invertCondition": true
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"825609644\">Cipher_SpecialMark01</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"825609644\">Cipher_SpecialMark01</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"825609644\">Cipher_SpecialMark01</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Take Damage End [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-556818185\">Cipher_Insert_Listen</a>",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"232969841\">Cipher_BpKuoSan_Insert_Hit</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Is Part Of Team",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "team": "Player Team"
-                          },
-                          {
-                            "name": "Is Part Of Team",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}.[[getSourceCreator]]"
-                            },
-                            "team": "Player Team"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Is Entity Type",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "type": "Character",
-                            "livingState": "Mask_NotDestroyed"
-                          },
-                          {
-                            "name": "Is Entity Type",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "type": "Memosprite"
-                          },
-                          {
-                            "name": "Is Entity Type",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}.[[getSourceCreator]]"
-                            },
-                            "type": "Character",
-                            "livingState": "Mask_NotDestroyed"
-                          },
-                          {
-                            "name": "Is Entity Type",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}.[[getSourceCreator]]"
-                            },
-                            "type": "Memosprite"
-                          }
-                        ]
-                      },
-                      {
-                        "name": "Attack Type",
-                        "attackTypes": [
-                          "True DMG"
-                        ],
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Damage Data",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "_TMP_Damage",
-                      "value": "Result_FinalDamageBase",
-                      "context": "ContextModifier"
-                    },
-                    {
-                      "name": "Define Custom Variable with Damage Data",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "_TMP_OverflowDamage",
-                      "value": "Result_OverflowHPDamage",
-                      "context": "ContextModifier"
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_TMP_Damage",
-                      "value": {
-                        "operator": "Variables[0] (_TMP_Damage) || Variables[1] (_TMP_OverflowDamage) || SUB || RETURN",
-                        "displayLines": "(_TMP_Damage - _TMP_OverflowDamage)",
-                        "constants": [],
-                        "variables": [
-                          "_TMP_Damage",
-                          "_TMP_OverflowDamage"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_TMP_Rate",
-                      "value": {
-                        "operator": "Variables[0] (0.12) || RETURN",
-                        "displayLines": "0.12",
-                        "constants": [],
-                        "variables": [
-                          0.12
-                        ]
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Has Damage Tags",
-                            "damageTag": [
-                              "Cipher's Insert"
-                            ]
-                          },
-                          {
-                            "name": "Compare: Target",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "target2": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            }
-                          },
-                          {
-                            "name": "Eidolon Activated",
-                            "eidolon": 6
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "_TMP_Rate",
-                          "value": {
-                            "operator": "Variables[0] (_TMP_Rate) || Variables[1] (0.16) || ADD || RETURN",
-                            "displayLines": "(_TMP_Rate + 0.16)",
-                            "constants": [],
-                            "variables": [
-                              "_TMP_Rate",
-                              0.16
-                            ]
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "_TMP_Damage",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "SkillP01_CurrentDamge",
-                          "value": {
-                            "operator": "Constants[0] (0) || Variables[0] (_TMP_Damage) || SUB || RETURN",
-                            "displayLines": "(0 - _TMP_Damage)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "_TMP_Damage"
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "SkillP01_FinalDamage",
-                          "value": {
-                            "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (_TMP_Rate) || MUL || Variables[3] (0.12) || DIV || Variables[3] (0.12) || Variables[4] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
-                            "displayLines": "(SkillP01_FinalDamage + (((-SkillP01_CurrentDamge * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))",
-                            "constants": [],
-                            "variables": [
-                              "SkillP01_FinalDamage",
-                              "SkillP01_CurrentDamge",
-                              "_TMP_Rate",
-                              0.12,
-                              "Rank01_FinalRatio"
-                            ]
-                          }
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Trace Activated",
-                                "conditionList": "Empyrean Strides"
-                              }
-                            ]
-                          },
-                          "passed": [
-                            {
-                              "name": "Define Custom Variable with Stat",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "variableName": "PointB1_Speed",
-                              "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
-                            },
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Variable",
-                                "value1": "PointB1_Speed",
-                                "compareType": ">=",
-                                "value2": {
-                                  "operator": "Variables[0] (OBJECT_[170]) || RETURN",
-                                  "displayLines": "OBJECT_[170]",
-                                  "constants": [],
-                                  "variables": [
-                                    "OBJECT_[170]"
-                                  ]
-                                }
-                              },
-                              "passed": [
-                                {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "PointB1_Ratio",
-                                  "value": {
-                                    "operator": "Variables[0] (PointB1_Add_2) || RETURN",
-                                    "displayLines": "PointB1_Add_2",
-                                    "constants": [],
-                                    "variables": [
-                                      "PointB1_Add_2"
-                                    ]
-                                  }
-                                }
-                              ],
-                              "failed": [
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Compare: Variable",
-                                    "value1": "PointB1_Speed",
-                                    "compareType": ">=",
-                                    "value2": {
-                                      "operator": "Variables[0] (OBJECT_[140]) || RETURN",
-                                      "displayLines": "OBJECT_[140]",
-                                      "constants": [],
-                                      "variables": [
-                                        "OBJECT_[140]"
-                                      ]
-                                    }
-                                  },
-                                  "passed": [
-                                    {
-                                      "name": "Define Custom Variable",
-                                      "variableName": "PointB1_Ratio",
-                                      "value": {
-                                        "operator": "Variables[0] (PointB1_Add_1) || RETURN",
-                                        "displayLines": "PointB1_Add_1",
-                                        "constants": [],
-                                        "variables": [
-                                          "PointB1_Add_1"
-                                        ]
-                                      }
-                                    }
-                                  ],
-                                  "failed": [
-                                    {
-                                      "name": "Define Custom Variable",
-                                      "variableName": "PointB1_Ratio",
-                                      "value": 0
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "SkillP01_FinalDamage",
-                              "value": {
-                                "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (PointB1_Ratio) || MUL || Variables[3] (_TMP_Rate) || MUL || Variables[4] (0.12) || DIV || Variables[4] (0.12) || Variables[5] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
-                                "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * PointB1_Ratio) * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))",
-                                "constants": [],
-                                "variables": [
-                                  "SkillP01_FinalDamage",
-                                  "SkillP01_CurrentDamge",
-                                  "PointB1_Ratio",
-                                  "_TMP_Rate",
-                                  0.12,
-                                  "Rank01_FinalRatio"
-                                ]
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Compare: Target",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "target2": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                }
-                              },
-                              {
-                                "name": "Attack Type",
-                                "attackTypes": [
-                                  "Technique"
-                                ],
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                }
-                              }
-                            ]
-                          },
-                          "passed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "SkillP01_FinalDamage",
-                              "value": {
-                                "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (2) || MUL || Variables[3] (_TMP_Rate) || MUL || Variables[4] (0.12) || DIV || Variables[4] (0.12) || Variables[5] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
-                                "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * 2) * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))",
-                                "constants": [],
-                                "variables": [
-                                  "SkillP01_FinalDamage",
-                                  "SkillP01_CurrentDamge",
-                                  2,
-                                  "_TMP_Rate",
-                                  0.12,
-                                  "Rank01_FinalRatio"
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (1000) || DIV || RETURN",
-                        "displayLines": "(SkillP01_FinalDamage / 1000)",
-                        "constants": [
-                          1000
-                        ],
-                        "variables": [
-                          "SkillP01_FinalDamage"
-                        ]
-                      },
-                      "maximum": {
-                        "operator": "Constants[0] (99999) || RETURN",
-                        "displayLines": "99999",
-                        "constants": [
-                          99999
-                        ],
-                        "variables": []
-                      },
-                      "assignState": "True",
-                      "priorState": "Normal",
-                      "bar#": 4,
-                      "cooldown": 0
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Entity Left Battle [Owner]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}.[[livingOrLimbo]]"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Compare: Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "value1": "CurrentHP%",
-                          "compareType": ">",
-                          "value2": 0
-                        }
-                      },
-                      "Shuffle Targets",
-                      {
-                        "name": "Sort by Stat",
-                        "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
-                        "sortByHighest": true
-                      },
-                      {
-                        "name": "Return Target",
-                        "value": 1
-                      }
-                    ]
-                  },
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
-                      "valuePerStack": {}
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Attacked End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      },
-                      {
-                        "name": "Is Entity a Battle Event/Summon",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Eidolon Activated",
-                        "eidolon": 4
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Quantum",
-                        "Damage": {
-                          "operator": "Variables[0] (Rank04_DamagePercentage) || RETURN",
-                          "displayLines": "Rank04_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "Rank04_DamagePercentage"
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Additional DMG"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Unselectable Adjustment [Owner]: Start",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Sequence",
-                    "Sequence": [
-                      {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}.[[livingOrLimbo]]"
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Compare: Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "value1": "CurrentHP%",
-                          "compareType": ">",
-                          "value2": 0
-                        }
-                      },
-                      "Shuffle Targets",
-                      {
-                        "name": "Sort by Stat",
-                        "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
-                        "sortByHighest": true
-                      },
-                      {
-                        "name": "Return Target",
-                        "value": 1
-                      }
-                    ]
-                  },
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]",
-                      "valuePerStack": {}
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__31554455\">Cipher_BpKuoSan_Adj</a>",
-          "modifierFlags": [
-            "KeepOnDeathrattle",
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "Toggle Skill Mark"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "Toggle Skill Mark"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Update Target Selected(UI) [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of",
-                        "of": {
-                          "name": "Target Name",
-                          "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
-                        },
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{Enemy Team All}}"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
-                              }
-                            }
-                          ]
-                        },
-                        "mustBeAlive2": true
-                      },
-                      {
-                        "name": "Trace Activated",
-                        "conditionList": "300 Rogues"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Toggle Skill Mark",
-                      "toggle": true
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Active Ability Chosen [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of",
-                        "of": {
-                          "name": "Target Name",
-                          "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
-                        },
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{Enemy Team All}}"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"291142985\">Cipher_BpKuoSan</a>[<span class=\"descriptionNumberColor\">Patron</span>]"
-                              }
-                            }
-                          ]
-                        },
-                        "mustBeAlive2": true
-                      },
-                      {
-                        "name": "Trace Activated",
-                        "conditionList": "300 Rogues"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Toggle Skill Mark",
-                      "toggle": true
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-989192431\">Cipher_BpKuoSan_Insert_Hit_PointB1</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__232969841\">Cipher_BpKuoSan_Insert_Hit</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1369337828\">Cipher_PointB1_Debuff</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Attack Type",
-                    "attackTypes": [
-                      "Skill"
-                    ],
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Defender",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                          "value": "MDF_PropertyValue"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__116163492\">Cipher_BP_Bonus</a>[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
-          "stackType": "ReplaceByCaster",
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Hey, Jackpot for the Taking",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1685549745\">Cipher_BP_Debuff</a>[<span class=\"descriptionNumberColor\">Hey, Jackpot for the Taking</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_Fatigue"
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "description": "DMG dealt to allies decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Weaken",
-          "statusName": "Hey, Jackpot for the Taking",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1113671218\">Cipher_PointB3_Debuff</a>[<span class=\"descriptionNumberColor\">Sleight of Sky</span>]",
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Sleight of Sky",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-235690437\">Cipher_PointB1_InsertBonus</a>",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Attack Type",
-                    "attackTypes": [
-                      "Follow-up"
-                    ],
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                          "value": "MDF_PropertyValue"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1912968422\">Cipher_Eidolon6_Debuff</a>",
-          "execute": [
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "Adjust Target Stats",
-                  "modifiedValuesArray": [
-                    {
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
-                      "value": "(0 - MDF_PropertyValue)"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1467539794\">Cipher_Eidolon1_Bonus</a>[<span class=\"descriptionNumberColor\">Read the Room, Seek the Glee</span>]",
-          "stackType": "ReplaceByCaster",
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Read the Room, Seek the Glee",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-309291538\">Cipher_Eidolon2_Debuff</a>[<span class=\"descriptionNumberColor\">In the Fray, Nab On a Spree</span>]",
-          "stackType": "ReplaceByCaster",
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "In the Fray, Nab On a Spree",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": []
     }
   }
 }

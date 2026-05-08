@@ -61,10 +61,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1203634791\">Yukong_Passive_BonusCD</a>",
-      "stackData": [
-        "MDF_AddDamagePercentage",
-        "MDF_StanceBreakAddedRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -146,11 +142,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1097783562\">Yukong_Flower_ATK_Crit</a>[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_RealAttack",
-        "MDF_CritChanceUp",
-        "MDF_CritDamageUpRatio"
-      ],
       "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_RealAttack</span>, CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CritChanceUp</span>, and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CritDamageUpRatio</span>.",
       "type": "Buff",
       "effectName": "ATK, CRIT Rate, and CRIT DMG Boost",
@@ -255,12 +246,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1617821492\">Yukong_Flower</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_AttackAddedRatio",
-        "MDF_Rank04AddedRatio",
-        "MDF_PointB3Amount",
-        "MDF_FromUltraMark"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

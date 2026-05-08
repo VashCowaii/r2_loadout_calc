@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": "Trailblazer - Preservation",
   "trimCharacterName": "TrailblazerPreservation",
   "abilityList": [
+    "TrailblazerPreservation_Modifiers",
     "TrailblazerPreservation_PlayerBoy_10_TechniqueInLevel",
     "TrailblazerPreservation_PlayerBoy_10_PassiveAbility01",
     "TrailblazerPreservation_PlayerBoy_10_Ability03_Part02",
@@ -13,10 +14,431 @@ const compositeAbilityObject = {
     "TrailblazerPreservation_PlayerBoy_10_Ability11_Part02",
     "TrailblazerPreservation_PlayerBoy_10_Ability11_Part01",
     "TrailblazerPreservation_PlayerBoy_10_Ability01_Part02",
-    "TrailblazerPreservation_PlayerBoy_10_Ability01_Part01",
-    "TrailblazerPreservation_Modifiers"
+    "TrailblazerPreservation_PlayerBoy_10_Ability01_Part01"
   ],
   "abilityObject": {
+    "TrailblazerPreservation_Modifiers": {
+      "fileName": "TrailblazerPreservation_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2059998112\">PlayerBoy_Weapon_Effect</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
+                    "compareType": ">=",
+                    "value2": 4
+                  },
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
+                        "compareType": ">=",
+                        "value2": 3
+                      },
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
+                            "compareType": ">=",
+                            "value2": 2
+                          },
+                          "failed": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Compare: Variable",
+                                "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
+                                "compareType": ">=",
+                                "value2": 1
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1196656931\">PlayerBoy_10_WeaponCharge_Free</a>[<span class=\"descriptionNumberColor\">War-Flaming Lance</span>]"
+                  },
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
+                        "compareType": ">=",
+                        "value2": 2
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
+                        "compareType": ">=",
+                        "value2": 3
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
+                        "compareType": ">=",
+                        "value2": 4
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Pre-Death [Owner]"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1400516150\">MWPlayerBoy_10_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
+          "stackType": "Replace",
+          "modifierFlags": [
+            "Shield"
+          ],
+          "useEntitySnapshot": true,
+          "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Shield",
+          "duration": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Set Hit-Class"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Shield",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
+                },
+                {
+                  "name": "Set Hit-Class",
+                  "reset": true
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Create Shield",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "value": {
+                    "operator": "Variables[0] (MWAvatar_PlayerBoy_10_Shield_Value01) || RETURN",
+                    "displayLines": "MWAvatar_PlayerBoy_10_Shield_Value01",
+                    "constants": [],
+                    "variables": [
+                      "MWAvatar_PlayerBoy_10_Shield_Value01"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-670613406\">PlayerBoy_10_DamageResistance_Team</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "DMG taken -<span class=\"descriptionNumberColor\">MAvatar_PlayerBoy_10_DamageResistance_Team_Value01</span>.",
+          "type": "Buff",
+          "effectName": "DMG Mitigation",
+          "statusName": "DMG Mitigation",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MAvatar_PlayerBoy_10_DamageResistance_Team_Value01) || RETURN",
+                    "displayLines": "MAvatar_PlayerBoy_10_DamageResistance_Team_Value01",
+                    "constants": [],
+                    "variables": [
+                      "MAvatar_PlayerBoy_10_DamageResistance_Team_Value01"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-356032349\">MWPlayerBoy_10_DamageResistance</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "DMG taken -<span class=\"descriptionNumberColor\">MWAvatar_PlayerBoy_10_DamageResistance_Value01</span>.",
+          "type": "Buff",
+          "effectName": "DMG Mitigation",
+          "statusName": "DMG Mitigation",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "phase": "Phase1"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any"
+            },
+            {
+              "eventTrigger": "When Put in Deathstate Limbo",
+              "execute": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "phase": "Phase1"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (PlayerBoy_10_DamageResistance_Value01) || RETURN",
+                    "displayLines": "PlayerBoy_10_DamageResistance_Value01",
+                    "constants": [],
+                    "variables": [
+                      "PlayerBoy_10_DamageResistance_Value01"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Pre-Death [Owner]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier is Added [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "flagName": "AvatarBreak"
+                  },
+                  "passed": [
+                    {
+                      "name": "Change Character Transformation",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "phase": "Phase1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
+          "counter": 1,
+          "description": "When there are 4 or more stacks of Magma Will, Enhances Basic ATK.",
+          "type": "Other",
+          "statusName": "Magma Will",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Pre-Death [Owner]"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1462404810\">PlayerBoy_10_ChangeAttack</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityName": "Skill01",
+                  "skillSlot": "Basic ATK"
+                },
+                {
+                  "name": "Update Ability Enhance Button",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "display": "Hide",
+                  "abilityName": "Basic ATK"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityName": "Skill11",
+                  "skillSlot": "Basic ATK"
+                },
+                {
+                  "name": "Update Ability Enhance Button",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "display": "Show",
+                  "abilityName": "Basic ATK"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1196656931\">PlayerBoy_10_WeaponCharge_Free</a>[<span class=\"descriptionNumberColor\">War-Flaming Lance</span>]",
+          "description": "The next Basic ATK will become an Enhanced Basic ATK and will not consume Magma Will.",
+          "type": "Other",
+          "effectName": "Enhanced Basic ATK",
+          "statusName": "War-Flaming Lance"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1564952013\">PlayerBoy_10_Eidolon6_Stack</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Each stack increases DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>, up to <span class=\"descriptionNumberColor\">Rank06_Max_Layer</span> stack(s).",
+          "type": "Buff",
+          "effectName": "DEF Boost",
+          "statusName": "DEF Boost",
+          "stackLimit": 4,
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_DefenceAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
+                    "displayLines": "(MDF_DefenceAddedRatio * MDF_Layer)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_DefenceAddedRatio",
+                      "MDF_Layer"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "TrailblazerPreservation_PlayerBoy_10_TechniqueInLevel": {
       "fileName": "TrailblazerPreservation_PlayerBoy_10_TechniqueInLevel",
       "childAbilityList": [
@@ -2335,440 +2757,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "TrailblazerPreservation_Modifiers": {
-      "fileName": "TrailblazerPreservation_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2059998112\">PlayerBoy_Weapon_Effect</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
-                    "compareType": ">=",
-                    "value2": 4
-                  },
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
-                        "compareType": ">=",
-                        "value2": 3
-                      },
-                      "failed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
-                            "compareType": ">=",
-                            "value2": 2
-                          },
-                          "failed": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Variable",
-                                "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
-                                "compareType": ">=",
-                                "value2": 1
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1196656931\">PlayerBoy_10_WeaponCharge_Free</a>[<span class=\"descriptionNumberColor\">War-Flaming Lance</span>]"
-                  },
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
-                        "compareType": ">=",
-                        "value2": 2
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
-                        "compareType": ">=",
-                        "value2": 3
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "<a class=\"gModGreen\" id=\"-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
-                        "compareType": ">=",
-                        "value2": 4
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Pre-Death [Owner]"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1400516150\">MWPlayerBoy_10_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
-          "stackType": "Replace",
-          "modifierFlags": [
-            "Shield"
-          ],
-          "useEntitySnapshot": true,
-          "stackData": [
-            "MWAvatar_PlayerBoy_10_Shield_Value01"
-          ],
-          "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
-          "type": "Buff",
-          "effectName": "Shield",
-          "statusName": "Shield",
-          "duration": 1,
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Set Hit-Class"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Shield",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  }
-                },
-                {
-                  "name": "Set Hit-Class",
-                  "reset": true
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Create Shield",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "value": {
-                    "operator": "Variables[0] (MWAvatar_PlayerBoy_10_Shield_Value01) || RETURN",
-                    "displayLines": "MWAvatar_PlayerBoy_10_Shield_Value01",
-                    "constants": [],
-                    "variables": [
-                      "MWAvatar_PlayerBoy_10_Shield_Value01"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-670613406\">PlayerBoy_10_DamageResistance_Team</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
-          "stackType": "ReplaceByCaster",
-          "stackData": [
-            "MAvatar_PlayerBoy_10_DamageResistance_Team_Value01"
-          ],
-          "description": "DMG taken -<span class=\"descriptionNumberColor\">MAvatar_PlayerBoy_10_DamageResistance_Team_Value01</span>.",
-          "type": "Buff",
-          "effectName": "DMG Mitigation",
-          "statusName": "DMG Mitigation",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MAvatar_PlayerBoy_10_DamageResistance_Team_Value01) || RETURN",
-                    "displayLines": "MAvatar_PlayerBoy_10_DamageResistance_Team_Value01",
-                    "constants": [],
-                    "variables": [
-                      "MAvatar_PlayerBoy_10_DamageResistance_Team_Value01"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-356032349\">MWPlayerBoy_10_DamageResistance</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
-          "stackType": "ReplaceByCaster",
-          "stackData": [
-            "MWAvatar_PlayerBoy_10_DamageResistance_Value01"
-          ],
-          "description": "DMG taken -<span class=\"descriptionNumberColor\">MWAvatar_PlayerBoy_10_DamageResistance_Value01</span>.",
-          "type": "Buff",
-          "effectName": "DMG Mitigation",
-          "statusName": "DMG Mitigation",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "phase": "Phase1"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any"
-            },
-            {
-              "eventTrigger": "When Put in Deathstate Limbo",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "phase": "Phase1"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MWAvatar_PlayerBoy_10_DamageResistance_Value01) || RETURN",
-                    "displayLines": "MWAvatar_PlayerBoy_10_DamageResistance_Value01",
-                    "constants": [],
-                    "variables": [
-                      "MWAvatar_PlayerBoy_10_DamageResistance_Value01"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Pre-Death [Owner]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "flagName": "AvatarBreak"
-                  },
-                  "passed": [
-                    {
-                      "name": "Change Character Transformation",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "phase": "Phase1"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1043486589\">MWPlayerBoy_10_WeaponCharge</a>[<span class=\"descriptionNumberColor\">Magma Will</span>]",
-          "counter": 1,
-          "description": "When there are 4 or more stacks of Magma Will, Enhances Basic ATK.",
-          "type": "Other",
-          "statusName": "Magma Will",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Pre-Death [Owner]"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1462404810\">PlayerBoy_10_ChangeAttack</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityName": "Skill01",
-                  "skillSlot": "Basic ATK"
-                },
-                {
-                  "name": "Update Ability Enhance Button",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "display": "Hide",
-                  "abilityName": "Basic ATK"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityName": "Skill11",
-                  "skillSlot": "Basic ATK"
-                },
-                {
-                  "name": "Update Ability Enhance Button",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "display": "Show",
-                  "abilityName": "Basic ATK"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1196656931\">PlayerBoy_10_WeaponCharge_Free</a>[<span class=\"descriptionNumberColor\">War-Flaming Lance</span>]",
-          "description": "The next Basic ATK will become an Enhanced Basic ATK and will not consume Magma Will.",
-          "type": "Other",
-          "effectName": "Enhanced Basic ATK",
-          "statusName": "War-Flaming Lance"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1564952013\">PlayerBoy_10_Eidolon6_Stack</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
-          "stackType": "ReplaceByCaster",
-          "stackData": [
-            "MDF_DefenceAddedRatio"
-          ],
-          "description": "Each stack increases DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>, up to <span class=\"descriptionNumberColor\">Rank06_Max_Layer</span> stack(s).",
-          "type": "Buff",
-          "effectName": "DEF Boost",
-          "statusName": "DEF Boost",
-          "stackLimit": 4,
-          "addStacksPerTrigger": 1,
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "MDF_Layer",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_DefenceAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_DefenceAddedRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DefenceAddedRatio",
-                      "MDF_Layer"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": []
     }
   }
 }

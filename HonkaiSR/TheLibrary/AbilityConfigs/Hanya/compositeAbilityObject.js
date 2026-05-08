@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": "Hanya",
   "trimCharacterName": "Hanya",
   "abilityList": [
+    "Hanya_Modifiers",
     "Hanya_Hanya_TechniqueInLevel",
     "Hanya_Hanya_PassiveAbility01",
     "Hanya_Hanya_Ability03_Part02",
@@ -11,849 +12,9 @@ const compositeAbilityObject = {
     "Hanya_Hanya_Ability02_Part02",
     "Hanya_Hanya_Ability02_Part01",
     "Hanya_Hanya_Ability01_Part02",
-    "Hanya_Hanya_Ability01_Part01",
-    "Hanya_Modifiers"
+    "Hanya_Hanya_Ability01_Part01"
   ],
   "abilityObject": {
-    "Hanya_Hanya_TechniqueInLevel": {
-      "fileName": "Hanya_Hanya_TechniqueInLevel",
-      "childAbilityList": [
-        "Hanya_Hanya_TechniqueInLevel"
-      ],
-      "skillTrigger": "SkillMaze",
-      "abilityType": "Technique",
-      "energy": null,
-      "toughnessList": [
-        20,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-429927791\">StageAbility_Maze_Hanya_Modifier</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-429927791\">StageAbility_Maze_Hanya_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Technique Modifies Current Wave"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Wave Count",
-                        "compareType": "=",
-                        "value2": 1
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "ifTargetFound": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Ability Value",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                            "compareType": ">",
-                            "value2": 0
-                          },
-                          "passed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "ZhanYinCount",
-                              "value": {
-                                "operator": "Variables[0] (2) || RETURN",
-                                "displayLines": "2",
-                                "constants": [],
-                                "variables": [
-                                  2
-                                ]
-                              }
-                            },
-                            {
-                              "name": "Update Displayed Energy Bar",
-                              "value": {
-                                "operator": "Variables[0] (ZhanYinCount) || RETURN",
-                                "displayLines": "ZhanYinCount",
-                                "constants": [],
-                                "variables": [
-                                  "ZhanYinCount"
-                                ]
-                              },
-                              "maximum": {
-                                "operator": "Variables[0] (2) || RETURN",
-                                "displayLines": "2",
-                                "constants": [],
-                                "variables": [
-                                  2
-                                ]
-                              },
-                              "assignState": "True",
-                              "priorState": "Active",
-                              "bar#": 3,
-                              "cooldown": 0
-                            },
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1376832164\">WHanya_BpZhanYin</a>[<span class=\"descriptionNumberColor\">Burden</span>]",
-                              "valuePerStack": {
-                                "MDF_Lifetime": {
-                                  "operator": "Variables[0] (2) || RETURN",
-                                  "displayLines": "2",
-                                  "constants": [],
-                                  "variables": [
-                                    2
-                                  ]
-                                },
-                                "MDF_DamageUp": {
-                                  "operator": "Variables[0] (0.3) || RETURN",
-                                  "displayLines": "0.3",
-                                  "constants": [],
-                                  "variables": [
-                                    0.3
-                                  ]
-                                },
-                                "MDF_DamageUpExtra": {
-                                  "operator": "Variables[0] (0.1) || RETURN",
-                                  "displayLines": "0.1",
-                                  "constants": [],
-                                  "variables": [
-                                    0.1
-                                  ]
-                                },
-                                "MDF_RecoverCount": {
-                                  "operator": "Variables[0] (1) || RETURN",
-                                  "displayLines": "1",
-                                  "constants": [],
-                                  "variables": [
-                                    1
-                                  ]
-                                },
-                                "MDF_BPRecover": {
-                                  "operator": "Variables[0] (1) || RETURN",
-                                  "displayLines": "1",
-                                  "constants": [],
-                                  "variables": [
-                                    1
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"1118030779\">WHanya_BpZhanYin_Self</a>"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
-    "Hanya_Hanya_PassiveAbility01": {
-      "fileName": "Hanya_Hanya_PassiveAbility01",
-      "childAbilityList": [
-        "Hanya_Hanya_PassiveAbility01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "variableName": "ZhanYinCount",
-          "value": 0
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "variableName": "ZhanYinCount_01",
-          "value": 0
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": {
-            "operator": "Variables[0] (ZhanYinCount) || RETURN",
-            "displayLines": "ZhanYinCount",
-            "constants": [],
-            "variables": [
-              "ZhanYinCount"
-            ]
-          },
-          "maximum": {
-            "operator": "Variables[0] (2) || RETURN",
-            "displayLines": "2",
-            "constants": [],
-            "variables": [
-              2
-            ]
-          },
-          "assignState": "True",
-          "bar#": 3,
-          "cooldown": 0
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-255935213\">Hanya_AbilityPreShowModifier</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 2
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-888545750\">Hanya_Eidolon2_Pre</a>"
-            }
-          ]
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-255935213\">Hanya_AbilityPreShowModifier</a>",
-          "stackType": "ReplaceByCaster",
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Player's Aim Target List}}"
-            },
-            "skillType": [
-              "Ultimate"
-            ],
-            "conditions": {
-              "name": "Has Modifier",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1743228292\">WHanya_Ability03Bonus</a>[<span class=\"descriptionNumberColor\">Edict</span>]",
-              "invertCondition": true
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": "(0.2 * MDF_Skill03_Speed)(SPD Change)"
-            }
-          },
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "MDF_Skill03_Speed",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
-                },
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "MDF_Skill03_Speed_Convert",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_Skill03_Speed",
-                  "value": {
-                    "operator": "Variables[0] (MDF_Skill03_Speed) || Variables[1] (MDF_Skill03_Speed_Convert) || SUB || RETURN",
-                    "displayLines": "(MDF_Skill03_Speed - MDF_Skill03_Speed_Convert)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Skill03_Speed",
-                      "MDF_Skill03_Speed_Convert"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Hanya_Hanya_Ability03_Part02": {
-      "fileName": "Hanya_Hanya_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "MDF_Skill03_Speed",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "MDF_Skill03_Speed_Convert",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "MDF_Skill03_Speed",
-          "value": {
-            "operator": "Variables[0] (MDF_Skill03_Speed) || Variables[1] (MDF_Skill03_Speed_Convert) || SUB || RETURN",
-            "displayLines": "(MDF_Skill03_Speed - MDF_Skill03_Speed_Convert)",
-            "constants": [],
-            "variables": [
-              "MDF_Skill03_Speed",
-              "MDF_Skill03_Speed_Convert"
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 4
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "MDF_Skill03_LifeTime",
-              "value": {
-                "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
-                "displayLines": "(2 + 1)",
-                "constants": [],
-                "variables": [
-                  2,
-                  1
-                ]
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "MDF_Skill03_LifeTime",
-              "value": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1743228292\">WHanya_Ability03Bonus</a>[<span class=\"descriptionNumberColor\">Edict</span>]",
-          "duration": {
-            "operator": "Variables[0] (MDF_Skill03_LifeTime) || RETURN",
-            "displayLines": "MDF_Skill03_LifeTime",
-            "constants": [],
-            "variables": [
-              "MDF_Skill03_LifeTime"
-            ]
-          },
-          "valuePerStack": {
-            "Ability03_P1_ATKRatio": {
-              "operator": "Variables[0] (0.6) || RETURN",
-              "displayLines": "0.6",
-              "constants": [],
-              "variables": [
-                0.6
-              ]
-            },
-            "Ability03_P3_Speed": {
-              "operator": "Variables[0] (0.2) || RETURN",
-              "displayLines": "0.2",
-              "constants": [],
-              "variables": [
-                0.2
-              ]
-            },
-            "MDF_Ability03_Speed": {
-              "operator": "Variables[0] (MDF_Skill03_Speed) || RETURN",
-              "displayLines": "MDF_Skill03_Speed",
-              "constants": [],
-              "variables": [
-                "MDF_Skill03_Speed"
-              ]
-            }
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1742049492\">Hanya_Eidolon1_Other</a>",
-              "duration": {
-                "operator": "Variables[0] (MDF_Skill03_LifeTime) || RETURN",
-                "displayLines": "MDF_Skill03_LifeTime",
-                "constants": [],
-                "variables": [
-                  "MDF_Skill03_LifeTime"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-154421851\">Hanya_Eidolon1</a>"
-            }
-          ]
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "valuePercent": 1,
-          "ofAbilitySplit": true,
-          "isFixed": "* ERR"
-        },
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "Hanya_Hanya_Ability03_Part01": {
-      "fileName": "Hanya_Hanya_Ability03_Part01",
-      "childAbilityList": [
-        "Hanya_Hanya_Ability03_EnterReady",
-        "Hanya_Hanya_Ability03_Part01",
-        "Hanya_Hanya_Ability03_Part02",
-        "Hanya_Hanya_Ability03_Camera"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Ultimate",
-      "energy": 5,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Hanya_Ability03_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Ally Target"
-      }
-    },
-    "Hanya_Hanya_Ability03_EnterReady": {
-      "fileName": "Hanya_Hanya_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        "Deleted bullshit",
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-844871622\">FaceDirOffsetConfigByFormationIndex</a>",
-          "isGlobal": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "Hanya_Hanya_Ability02_Part02": {
-      "fileName": "Hanya_Hanya_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Shot Fired"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (2.4) || RETURN",
-              "displayLines": "2.4",
-              "constants": [],
-              "variables": [
-                2.4
-              ]
-            },
-            "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
-            },
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Ability Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-            "compareType": ">",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "ZhanYinCount",
-              "value": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "ZhanYinCount_01",
-              "value": 0
-            },
-            {
-              "name": "Update Displayed Energy Bar",
-              "value": {
-                "operator": "Variables[0] (ZhanYinCount) || RETURN",
-                "displayLines": "ZhanYinCount",
-                "constants": [],
-                "variables": [
-                  "ZhanYinCount"
-                ]
-              },
-              "maximum": {
-                "operator": "Variables[0] (2) || RETURN",
-                "displayLines": "2",
-                "constants": [],
-                "variables": [
-                  2
-                ]
-              },
-              "assignState": "True",
-              "priorState": "Active",
-              "bar#": 3,
-              "cooldown": 0
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1376832164\">WHanya_BpZhanYin</a>[<span class=\"descriptionNumberColor\">Burden</span>]",
-              "valuePerStack": {
-                "MDF_Lifetime": {
-                  "operator": "Variables[0] (2) || RETURN",
-                  "displayLines": "2",
-                  "constants": [],
-                  "variables": [
-                    2
-                  ]
-                },
-                "MDF_DamageUp": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
-                },
-                "MDF_DamageUpExtra": {
-                  "operator": "Variables[0] (0.1) || RETURN",
-                  "displayLines": "0.1",
-                  "constants": [],
-                  "variables": [
-                    0.1
-                  ]
-                },
-                "MDF_RecoverCount": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
-                },
-                "MDF_BPRecover": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1118030779\">WHanya_BpZhanYin_Self</a>"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "Hanya_Hanya_Ability02_Part01": {
-      "fileName": "Hanya_Hanya_Ability02_Part01",
-      "childAbilityList": [
-        "Hanya_Hanya_Ability02_Part01",
-        "Hanya_Hanya_Ability02_Camera",
-        "Hanya_Hanya_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": 30,
-      "toughnessList": [
-        20,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Hanya_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      }
-    },
-    "Hanya_Hanya_Ability01_Part02": {
-      "fileName": "Hanya_Hanya_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
-            },
-            "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
-            },
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "Hanya_Hanya_Ability01_Part01": {
-      "fileName": "Hanya_Hanya_Ability01_Part01",
-      "childAbilityList": [
-        "Hanya_Hanya_Ability01_Part01",
-        "Hanya_Hanya_Ability01_Camera",
-        "Hanya_Hanya_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": 20,
-      "toughnessList": [
-        10,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Hanya_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      }
-    },
     "Hanya_Modifiers": {
       "fileName": "Hanya_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1535,13 +696,6 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1376832164\">WHanya_BpZhanYin</a>[<span class=\"descriptionNumberColor\">Burden</span>]",
           "modifierFlags": [
             "KeepOnDeathrattle"
-          ],
-          "stackData": [
-            "MDF_Lifetime",
-            "MDF_DamageUp",
-            "MDF_DamageUpExtra",
-            "MDF_RecoverCount",
-            "MDF_BPRecover"
           ],
           "description": "For every 2 Basic Attacks, Skills, or Ultimates allies use on an enemy with Burden, recover 1 Skill Point.",
           "type": "Other",
@@ -2414,11 +1568,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedUp"
           ],
-          "stackData": [
-            "Skill03_P1_ATKRatio",
-            "Skill03_P3_Speed",
-            "MDF_Skill03_Speed"
-          ],
           "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackDelta</span> and SPD by <span class=\"descriptionNumberColor\">MDF_Speed</span> points.",
           "type": "Buff",
           "effectName": "ATK & SPD Boost",
@@ -2518,6 +1667,845 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "Hanya_Hanya_TechniqueInLevel": {
+      "fileName": "Hanya_Hanya_TechniqueInLevel",
+      "childAbilityList": [
+        "Hanya_Hanya_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
+      "abilityType": "Technique",
+      "energy": null,
+      "toughnessList": [
+        20,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-429927791\">StageAbility_Maze_Hanya_Modifier</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-429927791\">StageAbility_Maze_Hanya_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Technique Modifies Current Wave"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Wave Count",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
+                      "searchRandom": true,
+                      "maxTargets": 1,
+                      "ifTargetFound": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Ability Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                            "compareType": ">",
+                            "value2": 0
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "ZhanYinCount",
+                              "value": {
+                                "operator": "Variables[0] (2) || RETURN",
+                                "displayLines": "2",
+                                "constants": [],
+                                "variables": [
+                                  2
+                                ]
+                              }
+                            },
+                            {
+                              "name": "Update Displayed Energy Bar",
+                              "value": {
+                                "operator": "Variables[0] (ZhanYinCount) || RETURN",
+                                "displayLines": "ZhanYinCount",
+                                "constants": [],
+                                "variables": [
+                                  "ZhanYinCount"
+                                ]
+                              },
+                              "maximum": {
+                                "operator": "Variables[0] (2) || RETURN",
+                                "displayLines": "2",
+                                "constants": [],
+                                "variables": [
+                                  2
+                                ]
+                              },
+                              "assignState": "True",
+                              "priorState": "Active",
+                              "bar#": 3,
+                              "cooldown": 0
+                            },
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1376832164\">WHanya_BpZhanYin</a>[<span class=\"descriptionNumberColor\">Burden</span>]",
+                              "valuePerStack": {
+                                "MDF_Lifetime": {
+                                  "operator": "Variables[0] (2) || RETURN",
+                                  "displayLines": "2",
+                                  "constants": [],
+                                  "variables": [
+                                    2
+                                  ]
+                                },
+                                "MDF_DamageUp": {
+                                  "operator": "Variables[0] (0.3) || RETURN",
+                                  "displayLines": "0.3",
+                                  "constants": [],
+                                  "variables": [
+                                    0.3
+                                  ]
+                                },
+                                "MDF_DamageUpExtra": {
+                                  "operator": "Variables[0] (0.1) || RETURN",
+                                  "displayLines": "0.1",
+                                  "constants": [],
+                                  "variables": [
+                                    0.1
+                                  ]
+                                },
+                                "MDF_RecoverCount": {
+                                  "operator": "Variables[0] (1) || RETURN",
+                                  "displayLines": "1",
+                                  "constants": [],
+                                  "variables": [
+                                    1
+                                  ]
+                                },
+                                "MDF_BPRecover": {
+                                  "operator": "Variables[0] (1) || RETURN",
+                                  "displayLines": "1",
+                                  "constants": [],
+                                  "variables": [
+                                    1
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1118030779\">WHanya_BpZhanYin_Self</a>"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
+    },
+    "Hanya_Hanya_PassiveAbility01": {
+      "fileName": "Hanya_Hanya_PassiveAbility01",
+      "childAbilityList": [
+        "Hanya_Hanya_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "variableName": "ZhanYinCount",
+          "value": 0
+        },
+        {
+          "name": "Define Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "variableName": "ZhanYinCount_01",
+          "value": 0
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": {
+            "operator": "Variables[0] (ZhanYinCount) || RETURN",
+            "displayLines": "ZhanYinCount",
+            "constants": [],
+            "variables": [
+              "ZhanYinCount"
+            ]
+          },
+          "maximum": {
+            "operator": "Variables[0] (2) || RETURN",
+            "displayLines": "2",
+            "constants": [],
+            "variables": [
+              2
+            ]
+          },
+          "assignState": "True",
+          "bar#": 3,
+          "cooldown": 0
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-255935213\">Hanya_AbilityPreShowModifier</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 2
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-888545750\">Hanya_Eidolon2_Pre</a>"
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-255935213\">Hanya_AbilityPreShowModifier</a>",
+          "stackType": "ReplaceByCaster",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player's Aim Target List}}"
+            },
+            "skillType": [
+              "Ultimate"
+            ],
+            "conditions": {
+              "name": "Has Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1743228292\">WHanya_Ability03Bonus</a>[<span class=\"descriptionNumberColor\">Edict</span>]",
+              "invertCondition": true
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": "(0.2 * MDF_Skill03_Speed)(SPD Change)"
+            }
+          },
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "MDF_Skill03_Speed",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "MDF_Skill03_Speed_Convert",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Skill03_Speed",
+                  "value": {
+                    "operator": "Variables[0] (MDF_Skill03_Speed) || Variables[1] (MDF_Skill03_Speed_Convert) || SUB || RETURN",
+                    "displayLines": "(MDF_Skill03_Speed - MDF_Skill03_Speed_Convert)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_Skill03_Speed",
+                      "MDF_Skill03_Speed_Convert"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Hanya_Hanya_Ability03_Part02": {
+      "fileName": "Hanya_Hanya_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "MDF_Skill03_Speed",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
+        },
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "MDF_Skill03_Speed_Convert",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "MDF_Skill03_Speed",
+          "value": {
+            "operator": "Variables[0] (MDF_Skill03_Speed) || Variables[1] (MDF_Skill03_Speed_Convert) || SUB || RETURN",
+            "displayLines": "(MDF_Skill03_Speed - MDF_Skill03_Speed_Convert)",
+            "constants": [],
+            "variables": [
+              "MDF_Skill03_Speed",
+              "MDF_Skill03_Speed_Convert"
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 4
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_Skill03_LifeTime",
+              "value": {
+                "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
+                "displayLines": "(2 + 1)",
+                "constants": [],
+                "variables": [
+                  2,
+                  1
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_Skill03_LifeTime",
+              "value": {
+                "operator": "Variables[0] (2) || RETURN",
+                "displayLines": "2",
+                "constants": [],
+                "variables": [
+                  2
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1743228292\">WHanya_Ability03Bonus</a>[<span class=\"descriptionNumberColor\">Edict</span>]",
+          "duration": {
+            "operator": "Variables[0] (MDF_Skill03_LifeTime) || RETURN",
+            "displayLines": "MDF_Skill03_LifeTime",
+            "constants": [],
+            "variables": [
+              "MDF_Skill03_LifeTime"
+            ]
+          },
+          "valuePerStack": {
+            "Ability03_P1_ATKRatio": {
+              "operator": "Variables[0] (0.6) || RETURN",
+              "displayLines": "0.6",
+              "constants": [],
+              "variables": [
+                0.6
+              ]
+            },
+            "Ability03_P3_Speed": {
+              "operator": "Variables[0] (0.2) || RETURN",
+              "displayLines": "0.2",
+              "constants": [],
+              "variables": [
+                0.2
+              ]
+            },
+            "MDF_Ability03_Speed": {
+              "operator": "Variables[0] (MDF_Skill03_Speed) || RETURN",
+              "displayLines": "MDF_Skill03_Speed",
+              "constants": [],
+              "variables": [
+                "MDF_Skill03_Speed"
+              ]
+            }
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1742049492\">Hanya_Eidolon1_Other</a>",
+              "duration": {
+                "operator": "Variables[0] (MDF_Skill03_LifeTime) || RETURN",
+                "displayLines": "MDF_Skill03_LifeTime",
+                "constants": [],
+                "variables": [
+                  "MDF_Skill03_LifeTime"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-154421851\">Hanya_Eidolon1</a>"
+            }
+          ]
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "valuePercent": 1,
+          "ofAbilitySplit": true,
+          "isFixed": "* ERR"
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "Hanya_Hanya_Ability03_Part01": {
+      "fileName": "Hanya_Hanya_Ability03_Part01",
+      "childAbilityList": [
+        "Hanya_Hanya_Ability03_EnterReady",
+        "Hanya_Hanya_Ability03_Part01",
+        "Hanya_Hanya_Ability03_Part02",
+        "Hanya_Hanya_Ability03_Camera"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Ultimate",
+      "energy": 5,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Hanya_Ability03_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target"
+      }
+    },
+    "Hanya_Hanya_Ability03_EnterReady": {
+      "fileName": "Hanya_Hanya_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        "Deleted bullshit",
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-844871622\">FaceDirOffsetConfigByFormationIndex</a>",
+          "isGlobal": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Hanya_Hanya_Ability02_Part02": {
+      "fileName": "Hanya_Hanya_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Shot Fired"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] (2.4) || RETURN",
+              "displayLines": "2.4",
+              "constants": [],
+              "variables": [
+                2.4
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Ability Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+            "compareType": ">",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "ZhanYinCount",
+              "value": {
+                "operator": "Variables[0] (2) || RETURN",
+                "displayLines": "2",
+                "constants": [],
+                "variables": [
+                  2
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "ZhanYinCount_01",
+              "value": 0
+            },
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": {
+                "operator": "Variables[0] (ZhanYinCount) || RETURN",
+                "displayLines": "ZhanYinCount",
+                "constants": [],
+                "variables": [
+                  "ZhanYinCount"
+                ]
+              },
+              "maximum": {
+                "operator": "Variables[0] (2) || RETURN",
+                "displayLines": "2",
+                "constants": [],
+                "variables": [
+                  2
+                ]
+              },
+              "assignState": "True",
+              "priorState": "Active",
+              "bar#": 3,
+              "cooldown": 0
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1376832164\">WHanya_BpZhanYin</a>[<span class=\"descriptionNumberColor\">Burden</span>]",
+              "valuePerStack": {
+                "MDF_Lifetime": {
+                  "operator": "Variables[0] (2) || RETURN",
+                  "displayLines": "2",
+                  "constants": [],
+                  "variables": [
+                    2
+                  ]
+                },
+                "MDF_DamageUp": {
+                  "operator": "Variables[0] (0.3) || RETURN",
+                  "displayLines": "0.3",
+                  "constants": [],
+                  "variables": [
+                    0.3
+                  ]
+                },
+                "MDF_DamageUpExtra": {
+                  "operator": "Variables[0] (0.1) || RETURN",
+                  "displayLines": "0.1",
+                  "constants": [],
+                  "variables": [
+                    0.1
+                  ]
+                },
+                "MDF_RecoverCount": {
+                  "operator": "Variables[0] (1) || RETURN",
+                  "displayLines": "1",
+                  "constants": [],
+                  "variables": [
+                    1
+                  ]
+                },
+                "MDF_BPRecover": {
+                  "operator": "Variables[0] (1) || RETURN",
+                  "displayLines": "1",
+                  "constants": [],
+                  "variables": [
+                    1
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1118030779\">WHanya_BpZhanYin_Self</a>"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "Hanya_Hanya_Ability02_Part01": {
+      "fileName": "Hanya_Hanya_Ability02_Part01",
+      "childAbilityList": [
+        "Hanya_Hanya_Ability02_Part01",
+        "Hanya_Hanya_Ability02_Camera",
+        "Hanya_Hanya_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": 30,
+      "toughnessList": [
+        20,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Hanya_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Hanya_Hanya_Ability01_Part02": {
+      "fileName": "Hanya_Hanya_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] (1) || RETURN",
+              "displayLines": "1",
+              "constants": [],
+              "variables": [
+                1
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "Hanya_Hanya_Ability01_Part01": {
+      "fileName": "Hanya_Hanya_Ability01_Part01",
+      "childAbilityList": [
+        "Hanya_Hanya_Ability01_Part01",
+        "Hanya_Hanya_Ability01_Camera",
+        "Hanya_Hanya_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": 20,
+      "toughnessList": [
+        10,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Hanya_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     }
   }
 }

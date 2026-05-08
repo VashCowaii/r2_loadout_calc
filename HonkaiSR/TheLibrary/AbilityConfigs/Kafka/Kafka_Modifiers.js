@@ -92,11 +92,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1764225041\">Advanced_Kafka_Eidolon4</a>",
-      "latentQueue": [
-        "Kafka_Listen_Rank1",
-        "Kafka_Listen_Rank2",
-        "Kafka_Listen_Rank6"
-      ],
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -130,9 +125,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1537350177\">Advanced_Kafka_PassiveDotDamage_Eidolon1</a>[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_DotRatio"
-      ],
       "description": "DoT taken increases by <span class=\"descriptionNumberColor\">MDF_DotRatio</span>.",
       "type": "Debuff",
       "effectName": "DoT Vulnerability",
@@ -176,10 +168,6 @@ const configAbility = {
       "stackType": "RetainGlobalLatestUnique",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "latentQueue": [
-        "Kafka_Listen_Rank1",
-        "Kafka_Listen_Rank6"
       ],
       "execute": [
         {

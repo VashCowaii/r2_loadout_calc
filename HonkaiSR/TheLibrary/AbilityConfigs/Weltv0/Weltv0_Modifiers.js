@@ -12,9 +12,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1040154561\">Welt_Trace01_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
       "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
       "type": "Debuff",
       "effectName": "Vulnerability",
@@ -49,9 +46,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedDown"
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
       ],
       "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
       "type": "Debuff",

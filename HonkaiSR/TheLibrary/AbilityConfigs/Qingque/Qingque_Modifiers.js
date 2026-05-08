@@ -212,9 +212,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__134656141\">QingQue_Eidolon4_ATK</a>[<span class=\"descriptionNumberColor\">Self-Sufficer</span>]",
-      "latentQueue": [
-        "QingQue_BPCoolDown"
-      ],
       "description": "Launches 1 Follow-Up ATK immediately after using Basic ATK or Enhanced Basic ATK on an enemy, dealing Quantum DMG equal to 100% of Basic ATK DMG or Enhanced Basic ATK DMG.",
       "type": "Buff",
       "statusName": "Self-Sufficer",
@@ -351,9 +348,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
-      "stackData": [
-        "MDF_SpeedUp"
-      ],
       "description": "SPD +<span class=\"descriptionNumberColor\">MDF_SpeedUp</span>.",
       "type": "Buff",
       "effectName": "SPD Boost",
@@ -392,24 +386,15 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__757701155\">QingQue_Passive_Hu_Flag_Tiao</a>",
-      "latentQueue": [
-        "QingQue_BPCoolDown"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__757701155\">QingQue_Passive_Hu_Flag_Tiao</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1600165622\">QingQue_Passive_Hu_Flag_Tong</a>",
-      "latentQueue": [
-        "QingQue_BPCoolDown"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-1600165622\">QingQue_Passive_Hu_Flag_Tong</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-797865006\">QingQue_Passive_Hu_Flag_Wan</a>",
-      "latentQueue": [
-        "QingQue_BPCoolDown"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-797865006\">QingQue_Passive_Hu_Flag_Wan</a>"
     },
     {
       "name": "Modifier Construction",
@@ -608,12 +593,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1424511139\">QingQue_PassiveCount</a>",
-      "stackData": [
-        "MDF_PropertyValue01"
-      ],
-      "latentQueue": [
-        "QingQue_BPCoolDown"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -990,9 +969,6 @@ const configAbility = {
       "stackData": [
         "QingQue_CardCount_Teammate"
       ],
-      "latentQueue": [
-        "QingQue_BPCoolDown"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -1041,8 +1017,7 @@ const configAbility = {
         "SkillRank_Rank02_P1_SPAdd"
       ],
       "latentQueue": [
-        "QingQue_CardCount_Teammate",
-        "QingQue_BPCoolDown"
+        "QingQue_CardCount_Teammate"
       ],
       "execute": [
         {
@@ -2349,9 +2324,6 @@ const configAbility = {
       "stackData": [
         "MDF_PropertyValue"
       ],
-      "latentQueue": [
-        "QingQue_BPCoolDown"
-      ],
       "description": "Basic ATK is Enhanced and increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "statusName": "Hidden Hand",
@@ -2396,12 +2368,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-954959718\">QingQue_BPAbility_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_DamageAddedRatio"
-      ],
-      "latentQueue": [
-        "QingQue_BPCoolDown"
-      ],
       "description": "Each stack increases DMG by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>, up to 4 stacks.",
       "type": "Buff",
       "statusName": "DMG Boost",
@@ -2459,9 +2425,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__823901022\">QingQue_Ability11PreShowModifier</a>",
-      "latentQueue": [
-        "QingQue_BPCoolDown"
-      ],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",

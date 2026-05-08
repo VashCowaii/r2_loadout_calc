@@ -5,6 +5,7 @@ const compositeAbilityObject = {
   "summonName": "Netherwing: Pollux",
   "trimSummonName": "NetherwingPollux",
   "abilityList": [
+    "Castorice_Modifiers",
     "Castorice_Castorice_TechniqueInLevel",
     "Castorice_Castorice_PassiveAbility_1",
     "Castorice_Castorice_Ability03_Part02",
@@ -16,8 +17,8 @@ const compositeAbilityObject = {
     "Castorice_Castorice_Ability02_Part01",
     "Castorice_Castorice_Ability01_Part02",
     "Castorice_Castorice_Ability01_Part01",
-    "Castorice_Modifiers",
     "Castorice_Functions",
+    "NetherwingPollux_Modifiers",
     "NetherwingPollux_Servant_CastoriceServant_PassiveInsertAbility_Part02",
     "NetherwingPollux_Servant_CastoriceServant_PassiveInsertAbility_Part01",
     "NetherwingPollux_Servant_CastoriceServant_DeathRattle",
@@ -35,10 +36,975 @@ const compositeAbilityObject = {
     "NetherwingPollux_Servant_CastoriceServant_Ability01_Ready",
     "NetherwingPollux_Servant_CastoriceServant_Ability01_Part02",
     "NetherwingPollux_Servant_CastoriceServant_Ability01_Part01",
-    "NetherwingPollux_Modifiers",
     "NetherwingPollux_Functions"
   ],
   "abilityObject": {
+    "Castorice_Modifiers": {
+      "fileName": "Castorice_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-459849199\">Castorice_Eidolon6_QuantumPenetrate</a>[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
+          "description": "When dealing DMG, increases Quantum RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "statusName": "Await for Years to Loom",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "Adjust Target Stats",
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumPEN</span>&nbsp;",
+                      "value": "MDF_PropertyValue"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1861384440\">Castorice_Eidolon4_HealTakenRatio</a>[<span class=\"descriptionNumberColor\">Rest in Songs of Gloom</span>]",
+          "description": "The HP restored when receiving healing increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "HP Restoration Boost",
+          "statusName": "Rest in Songs of Gloom",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Can be used to offset the HP cost of Netherwing's Memosprite Skill, \"Breath Scorches the Shadow.\" A maximum of <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> \"Ardent Will\" can be possessed at any given time.",
+          "type": "Other",
+          "effectName": "Ardent Will",
+          "statusName": "Ardent Will",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_PropertyValue",
+                  "multiplier": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2083586529\">Castorice_Eidolon2_OnListenValueChange</a>",
+          "stackType": "ReplaceByCaster",
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "Castorice_Rank02_Count",
+              "from": "ContextOwner",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "maxValue": 9999999,
+                  "whenValueChanges": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]"
+                      },
+                      "passed": [
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "Castorice_Rank02_Count",
+                        "compareType": ">",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]",
+                          "counter": {
+                            "operator": "Variables[0] (Castorice_Rank02_Count) || RETURN",
+                            "displayLines": "Castorice_Rank02_Count",
+                            "constants": [],
+                            "variables": [
+                              "Castorice_Rank02_Count"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_MaxLayer": {
+                              "operator": "Variables[0] (2) || RETURN",
+                              "displayLines": "2",
+                              "constants": [],
+                              "variables": [
+                                2
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__176252830\">Castorice_Eidolon2_Check</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Where The West Wind Dwells</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Every stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, lasting until the end of this turn.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Where The West Wind Dwells",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Action-End Phase]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue",
+                      "MDF_Layer"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2144053419\">Castorice_PointB1_HealTaxesListen</a>",
+          "execute": [
+            {
+              "eventTrigger": "Receiving Heal End [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Healing",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "variableName": "Castorice_BeingHealValue"
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "Castorice_MaxSpecialSP",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "skipWhenMindControlled": false,
+                  "variableName": "Castorice_MaxSpecialSP",
+                  "value": {
+                    "operator": "Variables[0] (Castorice_MaxSpecialSP) || Variables[1] (Castorice_PointB1_HealRatioDown) || MUL || RETURN",
+                    "displayLines": "(Castorice_MaxSpecialSP * Castorice_PointB1_HealRatioDown)",
+                    "constants": [],
+                    "variables": [
+                      "Castorice_MaxSpecialSP",
+                      "Castorice_PointB1_HealRatioDown"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "skipWhenMindControlled": false,
+                  "variableName": "HealAmount_CasterAdd",
+                  "value": {
+                    "operator": "Variables[0] (MIN) || Variables[1] (Castorice_BeingHealValue) || Variables[2] (Castorice_PointB1_HPPercent) || MUL || Variables[3] (Castorice_MaxSpecialSP) || Variables[4] (Castorice_SumBeingHealValue) || SUB || PARAM_2 || FUNCTION || RETURN",
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Castorice_BeingHealValue * Castorice_PointB1_HPPercent), (Castorice_MaxSpecialSP - Castorice_SumBeingHealValue))",
+                    "constants": [],
+                    "variables": [
+                      "MIN",
+                      "Castorice_BeingHealValue",
+                      "Castorice_PointB1_HPPercent",
+                      "Castorice_MaxSpecialSP",
+                      "Castorice_SumBeingHealValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "HealAmount_CasterAdd",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "skipWhenMindControlled": false,
+                      "variableName": "Castorice_SumBeingHealValue",
+                      "value": {
+                        "operator": "Variables[0] (Castorice_SumBeingHealValue) || Variables[1] (HealAmount_CasterAdd) || ADD || RETURN",
+                        "displayLines": "(Castorice_SumBeingHealValue + HealAmount_CasterAdd)",
+                        "constants": [],
+                        "variables": [
+                          "Castorice_SumBeingHealValue",
+                          "HealAmount_CasterAdd"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster's Memosprite}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1159652346\">Memosprite_CastoriceServant_Passive</a>"
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "skipWhenMindControlled": false,
+                          "variableName": "HealAmount_ServantAdd",
+                          "value": {
+                            "operator": "Variables[0] (HealAmount_CasterAdd) || RETURN",
+                            "displayLines": "HealAmount_CasterAdd",
+                            "constants": [],
+                            "variables": [
+                              "HealAmount_CasterAdd"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Define Custom Variable with Stat",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster's Memosprite}}"
+                          },
+                          "variableName": "CastoriceServant_CurrentHP",
+                          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster's Memosprite}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"1793501095\">Memosprite_CastoriceServant_GoDie</a>"
+                          },
+                          "failed": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Living State",
+                                "state": "Mask_AliveOnly",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster's Memosprite}}"
+                                }
+                              },
+                              "passed": [
+                                {
+                                  "name": "Set HP Value",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster's Memosprite}}"
+                                  },
+                                  "setValue": {
+                                    "operator": "Variables[0] (CastoriceServant_CurrentHP) || Variables[1] (HealAmount_ServantAdd) || ADD || RETURN",
+                                    "displayLines": "(CastoriceServant_CurrentHP + HealAmount_ServantAdd)",
+                                    "constants": [],
+                                    "variables": [
+                                      "CastoriceServant_CurrentHP",
+                                      "HealAmount_ServantAdd"
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Use Custom Character Function",
+                          "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
+                          "variables": {
+                            "_FixedAddValue": {
+                              "operator": "Variables[0] (HealAmount_CasterAdd) || RETURN",
+                              "displayLines": "HealAmount_CasterAdd",
+                              "constants": [],
+                              "variables": [
+                                "HealAmount_CasterAdd"
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: End",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "skipWhenMindControlled": false,
+                  "variableName": "Castorice_SumBeingHealValue",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "skipWhenMindControlled": false,
+                  "variableName": "Castorice_MaxFlag",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: End",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "skipWhenMindControlled": false,
+                  "variableName": "Castorice_SumBeingHealValue",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "skipWhenMindControlled": false,
+                  "variableName": "Castorice_MaxFlag",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__950021136\">Castorice_PointB1_HealTaxes</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}} - {{Caster}}.[[getMemosprite]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"2144053419\">Castorice_PointB1_HealTaxesListen</a>",
+              "haloStatus": true,
+              "valuePerStack": {
+                "Castorice_PointB1_HPPercent": {
+                  "operator": "Variables[0] (1) || RETURN",
+                  "displayLines": "1",
+                  "constants": [],
+                  "variables": [
+                    1
+                  ]
+                },
+                "Castorice_PointB1_HealRatioDown": {
+                  "operator": "Variables[0] (0.12) || RETURN",
+                  "displayLines": "0.12",
+                  "constants": [],
+                  "variables": [
+                    0.12
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_SpeedUp"
+          ],
+          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "Inverted Torch",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__115720497\">Memosprite_Castorice_PointB2_OnListen</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "CurrentHP%",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (Castorice_PointB2_HPRatio) || RETURN",
+                      "displayLines": "Castorice_PointB2_HPRatio",
+                      "constants": [],
+                      "variables": [
+                        "Castorice_PointB2_HPRatio"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (Castorice_PointB2_SpeedRatio) || RETURN",
+                          "displayLines": "Castorice_PointB2_SpeedRatio",
+                          "constants": [],
+                          "variables": [
+                            "Castorice_PointB2_SpeedRatio"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "whenValueChanges": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "CurrentHP%",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (Castorice_PointB2_HPRatio) || RETURN",
+                          "displayLines": "Castorice_PointB2_HPRatio",
+                          "constants": [],
+                          "variables": [
+                            "Castorice_PointB2_HPRatio"
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
+                            "invertCondition": true
+                          },
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] (Castorice_PointB2_SpeedRatio) || RETURN",
+                                  "displayLines": "Castorice_PointB2_SpeedRatio",
+                                  "constants": [],
+                                  "variables": [
+                                    "Castorice_PointB2_SpeedRatio"
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]"
+                          },
+                          "passed": [
+                            {
+                              "name": "Remove Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
+                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue",
+                      "MDF_Layer"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-658097441\">Castorice_Ability03_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, lasting until the Territory ends.",
+          "type": "Debuff",
+          "effectName": "All-Type RES Reduction",
+          "statusName": "All-Type RES Reduction",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-604294216\">Castorice_Ability03_Field</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "SpecialBattleArea"
+          ],
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-658097441\">Castorice_Ability03_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+              "aliveOnly": "False",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.2) || RETURN",
+                  "displayLines": "0.2",
+                  "constants": [],
+                  "variables": [
+                    0.2
+                  ]
+                }
+              }
+            }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "scope": "AITag",
+                  "variableName": "DamageCarry",
+                  "value": 100
+                },
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityName": "Skill02",
+                  "skillSlot": "Skill",
+                  "enableSecondaryType": "ControlSkill02"
+                },
+                {
+                  "name": "Update Ability Enhance Button",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "display": "Hide",
+                  "abilityName": "Skill"
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (Castorice_Passive_Count) || RETURN",
+                    "displayLines": "Castorice_Passive_Count",
+                    "constants": [],
+                    "variables": [
+                      "Castorice_Passive_Count"
+                    ]
+                  },
+                  "displaySubType": "Percent",
+                  "displayShowIcon": "False",
+                  "maximum": {
+                    "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
+                    "displayLines": "Castorice_Passive_MaxCount",
+                    "constants": [],
+                    "variables": [
+                      "Castorice_Passive_MaxCount"
+                    ]
+                  },
+                  "assignState": "True",
+                  "bar#": "Number"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "scope": "AITag",
+                  "variableName": "DamageCarry",
+                  "value": 10
+                },
+                {
+                  "name": "Disable Abilities",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "abilityTypes": [
+                    "Ultimate"
+                  ]
+                },
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityName": "Skill21",
+                  "skillSlot": "Skill",
+                  "enableSecondaryType": "ControlSkill02"
+                },
+                {
+                  "name": "Update Ability Enhance Button",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "display": "Show",
+                  "abilityName": "Skill"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__445281600\">Castorice_LoseHPPreShow</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Update Target Selected(UI) [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Target is Unselectable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
+                      },
+                      "failed": [
+                        {
+                          "name": "Define Custom Variable with Stat",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "variableName": "MDF_PreShowCurrentHP",
+                          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>"
+                          },
+                          "passed": [
+                            {
+                              "name": "Update UI Preview",
+                              "show": "Show",
+                              "skillType": [
+                                "Skill"
+                              ],
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "previewType": null,
+                              "previewValue": {
+                                "operator": "Variables[0] (MDF_PreShowCurrentHP) || Variables[1] (MDF_LoseHPRatio02) || MUL || RETURN",
+                                "displayLines": "(MDF_PreShowCurrentHP * MDF_LoseHPRatio02)",
+                                "constants": [],
+                                "variables": [
+                                  "MDF_PreShowCurrentHP",
+                                  "MDF_LoseHPRatio02"
+                                ]
+                              }
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Update UI Preview",
+                              "show": "Show",
+                              "skillType": [
+                                "Skill"
+                              ],
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "previewType": null,
+                              "previewValue": {
+                                "operator": "Variables[0] (MDF_PreShowCurrentHP) || Variables[1] (MDF_LoseHPRatio01) || MUL || RETURN",
+                                "displayLines": "(MDF_PreShowCurrentHP * MDF_LoseHPRatio01)",
+                                "constants": [],
+                                "variables": [
+                                  "MDF_PreShowCurrentHP",
+                                  "MDF_LoseHPRatio01"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "Castorice_Castorice_TechniqueInLevel": {
       "fileName": "Castorice_Castorice_TechniqueInLevel",
       "childAbilityList": [
@@ -2458,1010 +3424,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       }
     },
-    "Castorice_Modifiers": {
-      "fileName": "Castorice_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-459849199\">Castorice_Eidolon6_QuantumPenetrate</a>[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "OverHeal"
-          ],
-          "description": "When dealing DMG, increases Quantum RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "statusName": "Await for Years to Loom",
-          "execute": [
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "Adjust Target Stats",
-                  "modifiedValuesArray": [
-                    {
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumPEN</span>&nbsp;",
-                      "value": "MDF_PropertyValue"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1861384440\">Castorice_Eidolon4_HealTakenRatio</a>[<span class=\"descriptionNumberColor\">Rest in Songs of Gloom</span>]",
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "OverHeal"
-          ],
-          "description": "The HP restored when receiving healing increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "HP Restoration Boost",
-          "statusName": "Rest in Songs of Gloom",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]",
-          "stackType": "ReplaceByCaster",
-          "description": "Can be used to offset the HP cost of Netherwing's Memosprite Skill, \"Breath Scorches the Shadow.\" A maximum of <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> \"Ardent Will\" can be possessed at any given time.",
-          "type": "Other",
-          "effectName": "Ardent Will",
-          "statusName": "Ardent Will",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_PropertyValue",
-                  "multiplier": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2083586529\">Castorice_Eidolon2_OnListenValueChange</a>",
-          "stackType": "ReplaceByCaster",
-          "latentQueue": [
-            "OverHeal"
-          ],
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "Castorice_Rank02_Count",
-              "from": "ContextOwner",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "maxValue": 9999999,
-                  "whenValueChanges": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]"
-                      },
-                      "passed": [
-                        {
-                          "name": "Remove Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "Castorice_Rank02_Count",
-                        "compareType": ">",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"555330029\">Castorice_Eidolon2_Count</a>[<span class=\"descriptionNumberColor\">Ardent Will</span>]",
-                          "counter": {
-                            "operator": "Variables[0] (Castorice_Rank02_Count) || RETURN",
-                            "displayLines": "Castorice_Rank02_Count",
-                            "constants": [],
-                            "variables": [
-                              "Castorice_Rank02_Count"
-                            ]
-                          },
-                          "valuePerStack": {
-                            "MDF_MaxLayer": {
-                              "operator": "Variables[0] (2) || RETURN",
-                              "displayLines": "2",
-                              "constants": [],
-                              "variables": [
-                                2
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__176252830\">Castorice_Eidolon2_Check</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Where The West Wind Dwells</span>]",
-          "stackType": "ReplaceByCaster",
-          "description": "Every stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, lasting until the end of this turn.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Where The West Wind Dwells",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Action-End Phase]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "MDF_Layer",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2144053419\">Castorice_PointB1_HealTaxesListen</a>",
-          "execute": [
-            {
-              "eventTrigger": "Receiving Heal End [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Healing",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "variableName": "Castorice_BeingHealValue"
-                },
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "Castorice_MaxSpecialSP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "skipWhenMindControlled": false,
-                  "variableName": "Castorice_MaxSpecialSP",
-                  "value": {
-                    "operator": "Variables[0] (Castorice_MaxSpecialSP) || Variables[1] (Castorice_PointB1_HealRatioDown) || MUL || RETURN",
-                    "displayLines": "(Castorice_MaxSpecialSP * Castorice_PointB1_HealRatioDown)",
-                    "constants": [],
-                    "variables": [
-                      "Castorice_MaxSpecialSP",
-                      "Castorice_PointB1_HealRatioDown"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "skipWhenMindControlled": false,
-                  "variableName": "HealAmount_CasterAdd",
-                  "value": {
-                    "operator": "Variables[0] (MIN) || Variables[1] (Castorice_BeingHealValue) || Variables[2] (Castorice_PointB1_HPPercent) || MUL || Variables[3] (Castorice_MaxSpecialSP) || Variables[4] (Castorice_SumBeingHealValue) || SUB || PARAM_2 || FUNCTION || RETURN",
-                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Castorice_BeingHealValue * Castorice_PointB1_HPPercent), (Castorice_MaxSpecialSP - Castorice_SumBeingHealValue))",
-                    "constants": [],
-                    "variables": [
-                      "MIN",
-                      "Castorice_BeingHealValue",
-                      "Castorice_PointB1_HPPercent",
-                      "Castorice_MaxSpecialSP",
-                      "Castorice_SumBeingHealValue"
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "HealAmount_CasterAdd",
-                    "compareType": ">",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "skipWhenMindControlled": false,
-                      "variableName": "Castorice_SumBeingHealValue",
-                      "value": {
-                        "operator": "Variables[0] (Castorice_SumBeingHealValue) || Variables[1] (HealAmount_CasterAdd) || ADD || RETURN",
-                        "displayLines": "(Castorice_SumBeingHealValue + HealAmount_CasterAdd)",
-                        "constants": [],
-                        "variables": [
-                          "Castorice_SumBeingHealValue",
-                          "HealAmount_CasterAdd"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster's Memosprite}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1159652346\">Memosprite_CastoriceServant_Passive</a>"
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "skipWhenMindControlled": false,
-                          "variableName": "HealAmount_ServantAdd",
-                          "value": {
-                            "operator": "Variables[0] (HealAmount_CasterAdd) || RETURN",
-                            "displayLines": "HealAmount_CasterAdd",
-                            "constants": [],
-                            "variables": [
-                              "HealAmount_CasterAdd"
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Define Custom Variable with Stat",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster's Memosprite}}"
-                          },
-                          "variableName": "CastoriceServant_CurrentHP",
-                          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster's Memosprite}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"1793501095\">Memosprite_CastoriceServant_GoDie</a>"
-                          },
-                          "failed": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Living State",
-                                "state": "Mask_AliveOnly",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster's Memosprite}}"
-                                }
-                              },
-                              "passed": [
-                                {
-                                  "name": "Set HP Value",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Caster's Memosprite}}"
-                                  },
-                                  "setValue": {
-                                    "operator": "Variables[0] (CastoriceServant_CurrentHP) || Variables[1] (HealAmount_ServantAdd) || ADD || RETURN",
-                                    "displayLines": "(CastoriceServant_CurrentHP + HealAmount_ServantAdd)",
-                                    "constants": [],
-                                    "variables": [
-                                      "CastoriceServant_CurrentHP",
-                                      "HealAmount_ServantAdd"
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Custom Character Function",
-                          "functionName": "<a class=\"gTempYellow\" id=\"-1401999190\">Castorice_AddSpecialSP</a>",
-                          "variables": {
-                            "_FixedAddValue": {
-                              "operator": "Variables[0] (HealAmount_CasterAdd) || RETURN",
-                              "displayLines": "HealAmount_CasterAdd",
-                              "constants": [],
-                              "variables": [
-                                "HealAmount_CasterAdd"
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: End",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "skipWhenMindControlled": false,
-                  "variableName": "Castorice_SumBeingHealValue",
-                  "value": 0
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "skipWhenMindControlled": false,
-                  "variableName": "Castorice_MaxFlag",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Anyone]: End",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "skipWhenMindControlled": false,
-                  "variableName": "Castorice_SumBeingHealValue",
-                  "value": 0
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "skipWhenMindControlled": false,
-                  "variableName": "Castorice_MaxFlag",
-                  "value": 0
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__950021136\">Castorice_PointB1_HealTaxes</a>",
-          "latentQueue": [
-            "OverHeal"
-          ],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectables}} - {{Caster}}.[[getMemosprite]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"2144053419\">Castorice_PointB1_HealTaxesListen</a>",
-              "haloStatus": true,
-              "valuePerStack": {
-                "Castorice_PointB1_HPPercent": {
-                  "operator": "Variables[0] (1) || RETURN",
-                  "displayLines": "1",
-                  "constants": [],
-                  "variables": [
-                    1
-                  ]
-                },
-                "Castorice_PointB1_HealRatioDown": {
-                  "operator": "Variables[0] (0.12) || RETURN",
-                  "displayLines": "0.12",
-                  "constants": [],
-                  "variables": [
-                    0.12
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_SpeedUp"
-          ],
-          "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "Inverted Torch",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__115720497\">Memosprite_Castorice_PointB2_OnListen</a>",
-          "stackType": "ReplaceByCaster",
-          "stackData": [
-            "Castorice_PointB2_HPRatio",
-            "Castorice_PointB2_SpeedRatio"
-          ],
-          "latentQueue": [
-            "OverHeal"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "CurrentHP%",
-                    "compareType": ">=",
-                    "value2": {
-                      "operator": "Variables[0] (Castorice_PointB2_HPRatio) || RETURN",
-                      "displayLines": "Castorice_PointB2_HPRatio",
-                      "constants": [],
-                      "variables": [
-                        "Castorice_PointB2_HPRatio"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (Castorice_PointB2_SpeedRatio) || RETURN",
-                          "displayLines": "Castorice_PointB2_SpeedRatio",
-                          "constants": [],
-                          "variables": [
-                            "Castorice_PointB2_SpeedRatio"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "whenValueChanges": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": ">=",
-                        "value2": {
-                          "operator": "Variables[0] (Castorice_PointB2_HPRatio) || RETURN",
-                          "displayLines": "Castorice_PointB2_HPRatio",
-                          "constants": [],
-                          "variables": [
-                            "Castorice_PointB2_HPRatio"
-                          ]
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
-                            "invertCondition": true
-                          },
-                          "passed": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
-                              "valuePerStack": {
-                                "MDF_PropertyValue": {
-                                  "operator": "Variables[0] (Castorice_PointB2_SpeedRatio) || RETURN",
-                                  "displayLines": "Castorice_PointB2_SpeedRatio",
-                                  "constants": [],
-                                  "variables": [
-                                    "Castorice_PointB2_SpeedRatio"
-                                  ]
-                                }
-                              }
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]"
-                          },
-                          "passed": [
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-          "stackType": "ReplaceByCaster",
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_MaxLayer"
-          ],
-          "latentQueue": [
-            "MDF_Castorice_AttackFlag"
-          ],
-          "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "MDF_Layer",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-658097441\">Castorice_Ability03_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
-          "stackType": "ReplaceByCaster",
-          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, lasting until the Territory ends.",
-          "type": "Debuff",
-          "effectName": "All-Type RES Reduction",
-          "statusName": "All-Type RES Reduction",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-604294216\">Castorice_Ability03_Field</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "SpecialBattleArea"
-          ],
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-658097441\">Castorice_Ability03_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
-              "aliveOnly": "False",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
-                }
-              }
-            }
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "AITag",
-                  "variableName": "DamageCarry",
-                  "value": 100
-                },
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityName": "Skill02",
-                  "skillSlot": "Skill",
-                  "enableSecondaryType": "ControlSkill02"
-                },
-                {
-                  "name": "Update Ability Enhance Button",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "display": "Hide",
-                  "abilityName": "Skill"
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (Castorice_Passive_Count) || RETURN",
-                    "displayLines": "Castorice_Passive_Count",
-                    "constants": [],
-                    "variables": [
-                      "Castorice_Passive_Count"
-                    ]
-                  },
-                  "displaySubType": "Percent",
-                  "displayShowIcon": "False",
-                  "maximum": {
-                    "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
-                    "displayLines": "Castorice_Passive_MaxCount",
-                    "constants": [],
-                    "variables": [
-                      "Castorice_Passive_MaxCount"
-                    ]
-                  },
-                  "assignState": "True",
-                  "bar#": "Number"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "AITag",
-                  "variableName": "DamageCarry",
-                  "value": 10
-                },
-                {
-                  "name": "Disable Abilities",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "abilityTypes": [
-                    "Ultimate"
-                  ]
-                },
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityName": "Skill21",
-                  "skillSlot": "Skill",
-                  "enableSecondaryType": "ControlSkill02"
-                },
-                {
-                  "name": "Update Ability Enhance Button",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "display": "Show",
-                  "abilityName": "Skill"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__445281600\">Castorice_LoseHPPreShow</a>",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "stackData": [
-            "MDF_PreShowMaxHP",
-            "MDF_PreShowCurrentHP",
-            "MDF_LoseHPRatio01",
-            "MDF_LoseHPRatio02"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Update Target Selected(UI) [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Target is Unselectable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        }
-                      },
-                      "failed": [
-                        {
-                          "name": "Define Custom Variable with Stat",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "variableName": "MDF_PreShowCurrentHP",
-                          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-604294216\">Castorice_Ability03_Field</a>"
-                          },
-                          "passed": [
-                            {
-                              "name": "Update UI Preview",
-                              "show": "Show",
-                              "skillType": [
-                                "Skill"
-                              ],
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "previewType": null,
-                              "previewValue": {
-                                "operator": "Variables[0] (MDF_PreShowCurrentHP) || Variables[1] (MDF_LoseHPRatio02) || MUL || RETURN",
-                                "displayLines": "(MDF_PreShowCurrentHP * MDF_LoseHPRatio02)",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_PreShowCurrentHP",
-                                  "MDF_LoseHPRatio02"
-                                ]
-                              }
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Update UI Preview",
-                              "show": "Show",
-                              "skillType": [
-                                "Skill"
-                              ],
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "previewType": null,
-                              "previewValue": {
-                                "operator": "Variables[0] (MDF_PreShowCurrentHP) || Variables[1] (MDF_LoseHPRatio01) || MUL || RETURN",
-                                "displayLines": "(MDF_PreShowCurrentHP * MDF_LoseHPRatio01)",
-                                "constants": [],
-                                "variables": [
-                                  "MDF_PreShowCurrentHP",
-                                  "MDF_LoseHPRatio01"
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": []
-    },
     "Castorice_Functions": {
       "fileName": "Castorice_Functions",
       "abilityType": "Char. Functions",
@@ -3725,6 +3687,814 @@ const compositeAbilityObject = {
               "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;",
               "value": 0,
               "function": "="
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "NetherwingPollux_Modifiers": {
+      "fileName": "NetherwingPollux_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__313910489\">Memosprite_CastoriceServant_Eidolon6_StancePreview</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "skillType": "Memosprite",
+            "toughnessForcedReductionPreview": {
+              "operator": "Variables[0] (CASTORICE_OBJECT_UNUSED_8) || RETURN",
+              "displayLines": "CASTORICE_OBJECT_UNUSED_8",
+              "constants": [],
+              "variables": [
+                "CASTORICE_OBJECT_UNUSED_8"
+              ]
+            },
+            "showAsForcedReduction": true
+          },
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "whenValueChanges": [
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (CASTORICE_OBJECT_UNUSED_8) || RETURN",
+                        "displayLines": "CASTORICE_OBJECT_UNUSED_8",
+                        "constants": [],
+                        "variables": [
+                          "CASTORICE_OBJECT_UNUSED_8"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "ForceStanceDamage"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (CASTORICE_OBJECT_UNUSED_8) || RETURN",
+                    "displayLines": "CASTORICE_OBJECT_UNUSED_8",
+                    "constants": [],
+                    "variables": [
+                      "CASTORICE_OBJECT_UNUSED_8"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1420894416\">Memosprite_CastoriceServant_Ability23Check</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-256072391\">Memosprite_CastoriceServant_BP_Explode</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "CastoriceServant_BPSkill_Level",
+                    "compareType": ">=",
+                    "value2": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Ability Binding",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityName": "Skill22",
+                      "skillSlot": "Memosprite",
+                      "enableSecondaryType": "ControlSkill02"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "CastoriceServant_BPSkill_Level",
+                    "compareType": "<=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Ability Binding",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityName": "Skill21",
+                      "skillSlot": "Memosprite",
+                      "enableSecondaryType": "ControlSkill02"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "CastoriceServant_BPSkill_Level",
+                    "compareType": "<",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Ability Binding",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityName": "Skill02",
+                      "skillSlot": "Memosprite",
+                      "enableSecondaryType": "ControlSkill02"
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1341939671\">Memosprite_CastoriceServant_Disable</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1341939671\">Memosprite_CastoriceServant_Disable</a>"
+                },
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityName": "Skill23",
+                  "skillSlot": "Memosprite",
+                  "enableSecondaryType": "ControlSkill02"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1341939671\">Memosprite_CastoriceServant_Disable</a>",
+          "stackType": "ReplaceByCaster",
+          "latentQueue": [
+            "CastoriceServant_BPSkill_Level"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Disable Abilities",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "abilityTypes": null,
+                  "controlTypes": [
+                    "ControlSkill01"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__131262836\">Memosprite_CastoriceServant_BPCost_3</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "CastoriceServant_BPSkill_Level",
+                    "compareType": ">=",
+                    "value2": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "Set Netherwing Skill Phase",
+                      "level": 3
+                    },
+                    {
+                      "name": "Update Action Bar Display",
+                      "triggerName": "Level_3",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      }
+                    },
+                    {
+                      "name": "Update Ability Binding",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityName": "Skill22",
+                      "skillSlot": "Memosprite",
+                      "enableSecondaryType": "ControlSkill02"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "CastoriceServant_BPSkill_Level",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Set Netherwing Skill Phase",
+                      "level": 2
+                    },
+                    {
+                      "name": "Update Action Bar Display",
+                      "triggerName": "Level_2",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      }
+                    },
+                    {
+                      "name": "Update Ability Binding",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityName": "Skill21",
+                      "skillSlot": "Memosprite",
+                      "enableSecondaryType": "ControlSkill02"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "CastoriceServant_BPSkill_Level",
+                    "compareType": "<",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Ability Binding",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityName": "Skill02",
+                      "skillSlot": "Memosprite",
+                      "enableSecondaryType": "ControlSkill02"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__148040455\">Memosprite_CastoriceServant_BPCost_2</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityName": "Skill22",
+                  "skillSlot": "Memosprite",
+                  "enableSecondaryType": "ControlSkill02"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__164818074\">Memosprite_CastoriceServant_BPCost_1</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityName": "Skill21",
+                  "skillSlot": "Memosprite",
+                  "enableSecondaryType": "ControlSkill02"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__847472600\">Memosprite_CastoriceServant_Flag01</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2133723962\">Memosprite_CastoriceServant_InsideExplode</a>[<span class=\"descriptionNumberColor\">Back to the Black</span>]",
+          "description": "Triggers the Talent effect of \"Wings Sweep the Ruins\" the next time \"Breath Scorches the Shadow\" is used.",
+          "type": "Other",
+          "statusName": "Back to the Black",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1793501095\">Memosprite_CastoriceServant_GoDie</a>",
+          "modifierFlags": [
+            "DisableHPBarRefresh"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Lock HP",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Fatal Damage [Owner]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
+                    "invertCondition": true
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Target is HP-Locked",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "invertCondition": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Lock HP",
+                          "threshold": 0,
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Was Overhealed [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
+                    "invertCondition": true
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Variable",
+                            "value1": "ParameterValue",
+                            "compareType": "<",
+                            "value2": 0
+                          },
+                          {
+                            "name": "Target is HP-Locked",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable with Changes to Stats",
+                          "variableName": "MDF_OwnerDeltaHP"
+                        },
+                        {
+                          "name": "Consume",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "flatConsume": {
+                            "operator": "Variables[0] (MDF_OwnerDeltaHP) || INVERT || Variables[1] (5) || MUL || RETURN",
+                            "displayLines": "(-MDF_OwnerDeltaHP * 5)",
+                            "constants": [],
+                            "variables": [
+                              "MDF_OwnerDeltaHP",
+                              5
+                            ]
+                          },
+                          "attackType": "Unknown"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Lock HP",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Locked HP Floor Reached [Owner]",
+              "execute": [
+                {
+                  "name": "Lock HP",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1340712313\">Memosprite_CastoriceServant_OnListenHitDamageSplit</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]]"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>",
+              "haloStatus": true
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-858784788\">Memosprite_CastoriceServant_LoseHPPreShow</a>",
+          "execute": [
+            {
+              "eventTrigger": "Update Target Selected(UI) [Anyone]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_PreShowMaxHP",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster's Summoner}}"
+                        },
+                        "value1": "Castorice_Rank02_Count",
+                        "compareType": "<=",
+                        "value2": 0,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
+                        "invertCondition": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Update UI Preview",
+                          "show": "Show",
+                          "skillType": [
+                            "Memosprite"
+                          ],
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "previewType": null,
+                          "previewValue": {
+                            "operator": "Variables[0] (MDF_PreShowMaxHP) || RETURN",
+                            "displayLines": "MDF_PreShowMaxHP",
+                            "constants": [],
+                            "variables": [
+                              "MDF_PreShowMaxHP"
+                            ]
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Update UI Preview",
+                          "show": "Show",
+                          "skillType": [
+                            "Memosprite"
+                          ],
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "previewType": null,
+                          "previewValue": {
+                            "operator": "Variables[0] (MDF_PreShowMaxHP) || Variables[1] (0.25) || MUL || RETURN",
+                            "displayLines": "(MDF_PreShowMaxHP * 0.25)",
+                            "constants": [],
+                            "variables": [
+                              "MDF_PreShowMaxHP",
+                              0.25
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
+                        "invertCondition": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Update UI Preview",
+                          "show": "Show",
+                          "skillType": [
+                            "Memosprite"
+                          ],
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "previewType": null,
+                          "previewValue": {
+                            "operator": "Variables[0] (MDF_PreShowMaxHP) || RETURN",
+                            "displayLines": "MDF_PreShowMaxHP",
+                            "constants": [],
+                            "variables": [
+                              "MDF_PreShowMaxHP"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Eidolon Activated",
+                            "eidolon": 2
+                          },
+                          "passed": [
+                            {
+                              "name": "Set Netherwing's Ardent Will Stacks",
+                              "display": {
+                                "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
+                                "displayLines": "CastoriceServant_Rank02_Count",
+                                "constants": [],
+                                "variables": [
+                                  "CastoriceServant_Rank02_Count"
+                                ]
+                              },
+                              "preview": {
+                                "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
+                                "displayLines": "CastoriceServant_Rank02_Count",
+                                "constants": [],
+                                "variables": [
+                                  "CastoriceServant_Rank02_Count"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Eidolon Activated",
+                            "eidolon": 2
+                          },
+                          "passed": [
+                            {
+                              "name": "Set Netherwing's Ardent Will Stacks",
+                              "display": {
+                                "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
+                                "displayLines": "CastoriceServant_Rank02_Count",
+                                "constants": [],
+                                "variables": [
+                                  "CastoriceServant_Rank02_Count"
+                                ]
+                              },
+                              "preview": 1
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-509656395\">Memosprite_CastoriceServant_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
+          "stackType": "Replace",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Roar Rumbles the Realm",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
             }
           ]
         }
@@ -7657,833 +8427,6 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Hostile Entities(AOE)}}",
         "stateFilter": "AliveOrLimbo"
       }
-    },
-    "NetherwingPollux_Modifiers": {
-      "fileName": "NetherwingPollux_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__313910489\">Memosprite_CastoriceServant_Eidolon6_StancePreview</a>",
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "skillType": "Memosprite",
-            "toughnessForcedReductionPreview": {
-              "operator": "Variables[0] (CASTORICE_OBJECT_UNUSED_8) || RETURN",
-              "displayLines": "CASTORICE_OBJECT_UNUSED_8",
-              "constants": [],
-              "variables": [
-                "CASTORICE_OBJECT_UNUSED_8"
-              ]
-            },
-            "showAsForcedReduction": true
-          },
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "whenValueChanges": [
-                    {
-                      "name": "Stack Target Stat Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (CASTORICE_OBJECT_UNUSED_8) || RETURN",
-                        "displayLines": "CASTORICE_OBJECT_UNUSED_8",
-                        "constants": [],
-                        "variables": [
-                          "CASTORICE_OBJECT_UNUSED_8"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "ForceStanceDamage"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (CASTORICE_OBJECT_UNUSED_8) || RETURN",
-                    "displayLines": "CASTORICE_OBJECT_UNUSED_8",
-                    "constants": [],
-                    "variables": [
-                      "CASTORICE_OBJECT_UNUSED_8"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1420894416\">Memosprite_CastoriceServant_Ability23Check</a>",
-          "latentQueue": [
-            "CL_PlayTimes",
-            "CL_EnterBattlePlayTimes"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-256072391\">Memosprite_CastoriceServant_BP_Explode</a>",
-          "stackType": "ReplaceByCaster",
-          "latentQueue": [
-            "CL_PlayTimes",
-            "CL_EnterBattlePlayTimes"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "CastoriceServant_BPSkill_Level",
-                    "compareType": ">=",
-                    "value2": 2
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Ability Binding",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityName": "Skill22",
-                      "skillSlot": "Memosprite",
-                      "enableSecondaryType": "ControlSkill02"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "CastoriceServant_BPSkill_Level",
-                    "compareType": "<=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Ability Binding",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityName": "Skill21",
-                      "skillSlot": "Memosprite",
-                      "enableSecondaryType": "ControlSkill02"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "CastoriceServant_BPSkill_Level",
-                    "compareType": "<",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Ability Binding",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityName": "Skill02",
-                      "skillSlot": "Memosprite",
-                      "enableSecondaryType": "ControlSkill02"
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1341939671\">Memosprite_CastoriceServant_Disable</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1341939671\">Memosprite_CastoriceServant_Disable</a>"
-                },
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityName": "Skill23",
-                  "skillSlot": "Memosprite",
-                  "enableSecondaryType": "ControlSkill02"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1341939671\">Memosprite_CastoriceServant_Disable</a>",
-          "stackType": "ReplaceByCaster",
-          "latentQueue": [
-            "CL_EnterBattlePlayTimes",
-            "CL_PlayTimes",
-            "CastoriceServant_BPSkill_Level"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Disable Abilities",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "abilityTypes": null,
-                  "controlTypes": [
-                    "ControlSkill01"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__131262836\">Memosprite_CastoriceServant_BPCost_3</a>",
-          "stackType": "ReplaceByCaster",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "CastoriceServant_BPSkill_Level",
-                    "compareType": ">=",
-                    "value2": 2
-                  },
-                  "passed": [
-                    {
-                      "name": "Set Netherwing Skill Phase",
-                      "level": 3
-                    },
-                    {
-                      "name": "Update Action Bar Display",
-                      "triggerName": "Level_3",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      }
-                    },
-                    {
-                      "name": "Update Ability Binding",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityName": "Skill22",
-                      "skillSlot": "Memosprite",
-                      "enableSecondaryType": "ControlSkill02"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "CastoriceServant_BPSkill_Level",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Set Netherwing Skill Phase",
-                      "level": 2
-                    },
-                    {
-                      "name": "Update Action Bar Display",
-                      "triggerName": "Level_2",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      }
-                    },
-                    {
-                      "name": "Update Ability Binding",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityName": "Skill21",
-                      "skillSlot": "Memosprite",
-                      "enableSecondaryType": "ControlSkill02"
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "CastoriceServant_BPSkill_Level",
-                    "compareType": "<",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Ability Binding",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "abilityName": "Skill02",
-                      "skillSlot": "Memosprite",
-                      "enableSecondaryType": "ControlSkill02"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__148040455\">Memosprite_CastoriceServant_BPCost_2</a>",
-          "stackType": "ReplaceByCaster",
-          "latentQueue": [
-            "CastoriceServant_BPSkill_Level"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityName": "Skill22",
-                  "skillSlot": "Memosprite",
-                  "enableSecondaryType": "ControlSkill02"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__164818074\">Memosprite_CastoriceServant_BPCost_1</a>",
-          "stackType": "ReplaceByCaster",
-          "latentQueue": [
-            "CastoriceServant_BPSkill_Level"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityName": "Skill21",
-                  "skillSlot": "Memosprite",
-                  "enableSecondaryType": "ControlSkill02"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__847472600\">Memosprite_CastoriceServant_Flag01</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2133723962\">Memosprite_CastoriceServant_InsideExplode</a>[<span class=\"descriptionNumberColor\">Back to the Black</span>]",
-          "description": "Triggers the Talent effect of \"Wings Sweep the Ruins\" the next time \"Breath Scorches the Shadow\" is used.",
-          "type": "Other",
-          "statusName": "Back to the Black",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1793501095\">Memosprite_CastoriceServant_GoDie</a>",
-          "modifierFlags": [
-            "DisableHPBarRefresh"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Fatal Damage [Owner]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
-                    "invertCondition": true
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Target is HP-Locked",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "invertCondition": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Lock HP",
-                          "threshold": 0,
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Was Overhealed [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"123456163\">Standard_Departed</a>",
-                    "invertCondition": true
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Compare: Variable",
-                            "value1": "ParameterValue",
-                            "compareType": "<",
-                            "value2": 0
-                          },
-                          {
-                            "name": "Target is HP-Locked",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable with Changes to Stats",
-                          "variableName": "MDF_OwnerDeltaHP"
-                        },
-                        {
-                          "name": "Consume",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "flatConsume": {
-                            "operator": "Variables[0] (MDF_OwnerDeltaHP) || INVERT || Variables[1] (5) || MUL || RETURN",
-                            "displayLines": "(-MDF_OwnerDeltaHP * 5)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_OwnerDeltaHP",
-                              5
-                            ]
-                          },
-                          "attackType": "Unknown"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Lock HP",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Locked HP Floor Reached [Owner]",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "lockHolder": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1340712313\">Memosprite_CastoriceServant_OnListenHitDamageSplit</a>",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]]"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1387518623\">Memosprite_CastoriceServant_HitDamageSplit</a>",
-              "haloStatus": true
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-858784788\">Memosprite_CastoriceServant_LoseHPPreShow</a>",
-          "execute": [
-            {
-              "eventTrigger": "Update Target Selected(UI) [Anyone]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_PreShowMaxHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster's Summoner}}"
-                        },
-                        "value1": "Castorice_Rank02_Count",
-                        "compareType": "<=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      },
-                      {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        }
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
-                        "invertCondition": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Update UI Preview",
-                          "show": "Show",
-                          "skillType": [
-                            "Memosprite"
-                          ],
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "previewType": null,
-                          "previewValue": {
-                            "operator": "Variables[0] (MDF_PreShowMaxHP) || RETURN",
-                            "displayLines": "MDF_PreShowMaxHP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PreShowMaxHP"
-                            ]
-                          }
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Update UI Preview",
-                          "show": "Show",
-                          "skillType": [
-                            "Memosprite"
-                          ],
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "previewType": null,
-                          "previewValue": {
-                            "operator": "Variables[0] (MDF_PreShowMaxHP) || Variables[1] (0.25) || MUL || RETURN",
-                            "displayLines": "(MDF_PreShowMaxHP * 0.25)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PreShowMaxHP",
-                              0.25
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
-                        "invertCondition": true
-                      },
-                      "passed": [
-                        {
-                          "name": "Update UI Preview",
-                          "show": "Show",
-                          "skillType": [
-                            "Memosprite"
-                          ],
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "previewType": null,
-                          "previewValue": {
-                            "operator": "Variables[0] (MDF_PreShowMaxHP) || RETURN",
-                            "displayLines": "MDF_PreShowMaxHP",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PreShowMaxHP"
-                            ]
-                          }
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Eidolon Activated",
-                            "eidolon": 2
-                          },
-                          "passed": [
-                            {
-                              "name": "Set Netherwing's Ardent Will Stacks",
-                              "display": {
-                                "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
-                                "displayLines": "CastoriceServant_Rank02_Count",
-                                "constants": [],
-                                "variables": [
-                                  "CastoriceServant_Rank02_Count"
-                                ]
-                              },
-                              "preview": {
-                                "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
-                                "displayLines": "CastoriceServant_Rank02_Count",
-                                "constants": [],
-                                "variables": [
-                                  "CastoriceServant_Rank02_Count"
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Eidolon Activated",
-                            "eidolon": 2
-                          },
-                          "passed": [
-                            {
-                              "name": "Set Netherwing's Ardent Will Stacks",
-                              "display": {
-                                "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
-                                "displayLines": "CastoriceServant_Rank02_Count",
-                                "constants": [],
-                                "variables": [
-                                  "CastoriceServant_Rank02_Count"
-                                ]
-                              },
-                              "preview": 1
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-509656395\">Memosprite_CastoriceServant_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Roar Rumbles the Realm</span>]",
-          "stackType": "Replace",
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Roar Rumbles the Realm",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": []
     },
     "NetherwingPollux_Functions": {
       "fileName": "NetherwingPollux_Functions",

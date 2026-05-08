@@ -20,15 +20,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__508816016\">Modifier_FantasticStory_BaseAbility_2060_Plus10AddOn</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2065",
-        "DV_FantasticStory_PlusAbility_2061",
-        "DV_FantasticStory_PlusAbility_2062",
-        "DV_FantasticStory_PlusAbility_2067",
-        "DV_FantasticStory_PlusAbility_2068",
-        "DV_FantasticStory_PlusAbility_2069",
-        "DV_FantasticStory_PlusAbility_2070"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -192,14 +183,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-905270004\">Modifier_FantasticStory_BaseAbility_2060_Plus9AddOn</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2065",
-        "DV_FantasticStory_PlusAbility_2061",
-        "DV_FantasticStory_PlusAbility_2062",
-        "DV_FantasticStory_PlusAbility_2067",
-        "DV_FantasticStory_PlusAbility_2068",
-        "DV_FantasticStory_PlusAbility_2069"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -413,13 +396,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1135541973\">Modifier_FantasticStory_BaseAbility_2060_Plus8AddOn</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2065",
-        "DV_FantasticStory_PlusAbility_2061",
-        "DV_FantasticStory_PlusAbility_2062",
-        "DV_FantasticStory_PlusAbility_2067",
-        "DV_FantasticStory_PlusAbility_2068"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -578,12 +554,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1529724462\">Modifier_FantasticStory_BaseAbility_2060_Plus7AddOn</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2065",
-        "DV_FantasticStory_PlusAbility_2061",
-        "DV_FantasticStory_PlusAbility_2062",
-        "DV_FantasticStory_PlusAbility_2067"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -730,11 +700,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1835466532\">Modifier_FantasticStory_BaseAbility_2060_Plus2065</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2065",
-        "DV_FantasticStory_PlusAbility_2061",
-        "DV_FantasticStory_PlusAbility_2062"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -1248,11 +1213,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1465286557\">Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2065",
-        "DV_FantasticStory_PlusAbility_2061",
-        "DV_FantasticStory_PlusAbility_2062"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -1411,10 +1371,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1964611804\">Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2065",
-        "DV_FantasticStory_PlusAbility_2061"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -2018,12 +1974,6 @@ const configAbility = {
       "modifierFlags": [
         "ForceStanceDamage"
       ],
-      "stackData": [
-        "DV_FantasticStory_PlusAbility_2065_ADF_1"
-      ],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2065"
-      ],
       "description": "Can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2065_ADF_1</span> of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.",
       "type": "Buff",
       "statusName": "Paradox",
@@ -2512,11 +2462,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__906922784\">Modifier_FantasticStory_BaseAbility_2060_plus4_sub</a>[<span class=\"descriptionNumberColor\">Divine Score</span>]",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_TriggerFlag",
-        "DV_FantasticStory_PlusAbility_2062",
-        "DV_FantasticStory_PlusAbility_2064"
-      ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2064_ADF_1</span>.",
       "type": "Buff",
       "effectName": "DMG Boost",
@@ -2707,9 +2652,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-398018983\">Modifier_FantasticStory_BaseAbility_2060_BaseAddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "DV_Ratio"
-      ],
       "description": "After using Ultimate to attack enemy targets, every enemy target attacked additionally accumulates <span class=\"descriptionNumberColor\">DV_Ratio</span> Grit Value.",
       "type": "Buff",
       "statusName": "Grit Mechanics"
@@ -2727,12 +2669,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1981060014\">Modifier_FantasticStory_BaseAbility_2060_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "DV_Ratio_Get"
-      ],
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_2060_EnterFever_P1_Value"
-      ],
       "description": "DMG taken increases by <span class=\"descriptionNumberColor\">DV_Ratio_Get</span>. When defeated, additionally accumulate 1 stack of \"Resound.\"",
       "type": "Debuff",
       "effectName": "Vulnerability",
@@ -2764,9 +2700,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1478773776\">Modifier_FantasticStory_BaseAbility_2060_aura</a>",
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_TriggerFlag"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",

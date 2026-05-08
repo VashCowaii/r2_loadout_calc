@@ -13,17 +13,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1135719358\">MDF_NoScore</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_2010_TriggerFlag",
-        "DV_FantasticStory_PlusAbility_2018",
-        "DV_FantasticStory_PlusAbility_2017",
-        "DV_FantasticStory_PlusAbility_2016",
-        "DV_FantasticStory_PlusAbility_2015",
-        "DV_FantasticStory_PlusAbility_2014",
-        "DV_FantasticStory_PlusAbility_2013",
-        "DV_FantasticStory_PlusAbility_2012",
-        "DV_FantasticStory_PlusAbility_2011"
       ]
     },
     {
@@ -38,15 +27,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1238380036\">Modifier_FantasticStory_BaseAbility_2010_Plus8AddOn</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2011",
-        "DV_FantasticStory_PlusAbility_2012",
-        "DV_FantasticStory_PlusAbility_2013",
-        "DV_FantasticStory_PlusAbility_2014",
-        "DV_FantasticStory_PlusAbility_2015",
-        "DV_FantasticStory_PlusAbility_2016",
-        "DV_FantasticStory_PlusAbility_2018"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -305,14 +285,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1848051030\">Modifier_FantasticStory_BaseAbility_2010_Plus6AddOn</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2011",
-        "DV_FantasticStory_PlusAbility_2012",
-        "DV_FantasticStory_PlusAbility_2013",
-        "DV_FantasticStory_PlusAbility_2014",
-        "DV_FantasticStory_PlusAbility_2015",
-        "DV_FantasticStory_PlusAbility_2016"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -454,15 +426,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-454840159\">Modifier_FantasticStory_BaseAbility_2010_Plus5AddOn</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Ballad</span>]",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2011",
-        "DV_FantasticStory_PlusAbility_2012",
-        "DV_FantasticStory_PlusAbility_2013",
-        "DV_FantasticStory_PlusAbility_2014",
-        "DV_FantasticStory_PlusAbility_2015",
-        "DV_FantasticStory_PlusAbility_2016",
-        "DV_FantasticStory_PlusAbility_2018"
-      ],
       "description": "For each enemy target hit after an attack, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2015_ADF_3</span> Grit Value for allies.",
       "type": "Buff",
       "statusName": "Grit Mechanics: Ballad",
@@ -587,12 +550,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1827065640\">Modifier_FantasticStory_BaseAbility_2010_Plus4AddOn</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2011",
-        "DV_FantasticStory_PlusAbility_2012",
-        "DV_FantasticStory_PlusAbility_2013",
-        "DV_FantasticStory_PlusAbility_2014"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -828,11 +785,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1224313035\">Modifier_FantasticStory_BaseAbility_2010_Plus3AddOn</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2011",
-        "DV_FantasticStory_PlusAbility_2012",
-        "DV_FantasticStory_PlusAbility_2013"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -1091,10 +1043,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__406324874\">Modifier_FantasticStory_BaseAbility_2010_Plus2AddOn</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2011",
-        "DV_FantasticStory_PlusAbility_2012"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -1307,9 +1255,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2085135947\">Modifier_FantasticStory_BaseAbility_2010_Plus1AddOn</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_2011"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -2429,9 +2374,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-364255802\">Modifier_FantasticStory_BaseAbility_2010_BaseAddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "DV_Ratio"
-      ],
       "description": "After using Skill to attack enemy targets, every enemy target attacked additionally accumulates <span class=\"descriptionNumberColor\">DV_Ratio</span> Grit Value.",
       "type": "Buff",
       "statusName": "Grit Mechanics"
@@ -2456,9 +2398,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1762727873\">Modifier_FantasticStory_BaseAbility_2010_EnterFever_sub</a>[<span class=\"descriptionNumberColor\">Surging Grit</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "DV_Ratio_Get"
-      ],
       "description": "DMG taken increases by <span class=\"descriptionNumberColor\">DV_Ratio_Get</span>.",
       "type": "Debuff",
       "effectName": "Vulnerability",
@@ -2491,9 +2430,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-465768831\">Modifier_FantasticStory_BaseAbility_2010_aura</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_2010_TriggerFlag"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",

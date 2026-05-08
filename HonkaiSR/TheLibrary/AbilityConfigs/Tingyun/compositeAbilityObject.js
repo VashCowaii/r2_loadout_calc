@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": "Tingyun",
   "trimCharacterName": "Tingyun",
   "abilityList": [
+    "Tingyun_Modifiers",
     "Tingyun_Tingyun_Trace03",
     "Tingyun_TingYun_PassiveAbility01",
     "Tingyun_TingYun_Ability03_Part02",
@@ -11,10 +12,1503 @@ const compositeAbilityObject = {
     "Tingyun_TingYun_Ability02_Part02",
     "Tingyun_TingYun_Ability02_Part01",
     "Tingyun_TingYun_Ability01_Part02",
-    "Tingyun_TingYun_Ability01_Part01",
-    "Tingyun_Modifiers"
+    "Tingyun_TingYun_Ability01_Part01"
   ],
   "abilityObject": {
+    "Tingyun_Modifiers": {
+      "fileName": "Tingyun_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2044109918\">Tingyun_Eidolon2_CD</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1819337398\">Tingyun_Trace_B1_SpeedUp</a>[<span class=\"descriptionNumberColor\">Nourished Joviality</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "modifierFlags": [
+            "STAT_SpeedUp"
+          ],
+          "description": "SPD +<span class=\"descriptionNumberColor\">Tingyun_SpeedUP_Ratio</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "Nourished Joviality",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (Tingyun_SpeedUP_Ratio) || RETURN",
+                    "displayLines": "Tingyun_SpeedUP_Ratio",
+                    "constants": [],
+                    "variables": [
+                      "Tingyun_SpeedUP_Ratio"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "modifierFlags": [
+            "STAT_SpeedUp"
+          ],
+          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_Rank01_SpeedUp_01</span>.",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_Rank01_SpeedUp_01) || RETURN",
+                    "displayLines": "MDF_Rank01_SpeedUp_01",
+                    "constants": [],
+                    "variables": [
+                      "MDF_Rank01_SpeedUp_01"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__328360410\">TingYun_PassiveFlag</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1593929305\">TingYun_PassiveATK_Flag</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1429716226\">TingYun_ByIsTingYun</a>",
+          "execute": [
+            {
+              "eventTrigger": "Turn End [Anyone]",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable with Modifier Values",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "valueType": "LifeTime",
+                      "variableName": "TingYun_EnergyBarLayer",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
+                      "multiplier": 1
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "TingYun_EnergyBarLayer",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Update Displayed Energy Bar",
+                          "value": {
+                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
+                            "displayLines": "TingYun_EnergyBarLayer",
+                            "constants": [],
+                            "variables": [
+                              "TingYun_EnergyBarLayer"
+                            ]
+                          },
+                          "maximum": 3,
+                          "assignState": "True",
+                          "priorState": "Normal",
+                          "bar#": 3
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Update Displayed Energy Bar",
+                          "value": {
+                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
+                            "displayLines": "TingYun_EnergyBarLayer",
+                            "constants": [],
+                            "variables": [
+                              "TingYun_EnergyBarLayer"
+                            ]
+                          },
+                          "maximum": 3,
+                          "assignState": "True",
+                          "priorState": "Active",
+                          "bar#": 3
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier is Added [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1875583300\">MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1875583300\">MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark</a>"
+                    },
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      "searchRandom": true,
+                      "maxTargets": 1,
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "Define Custom Variable with Modifier Values",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "valueType": "LifeTime",
+                          "variableName": "TingYun_EnergyBarLayer",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
+                          "multiplier": 1
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "TingYun_EnergyBarLayer",
+                            "compareType": "=",
+                            "value2": 0
+                          },
+                          "passed": [
+                            {
+                              "name": "Update Displayed Energy Bar",
+                              "value": {
+                                "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
+                                "displayLines": "TingYun_EnergyBarLayer",
+                                "constants": [],
+                                "variables": [
+                                  "TingYun_EnergyBarLayer"
+                                ]
+                              },
+                              "maximum": 3,
+                              "assignState": "True",
+                              "priorState": "Normal",
+                              "bar#": 3
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Update Displayed Energy Bar",
+                              "value": {
+                                "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
+                                "displayLines": "TingYun_EnergyBarLayer",
+                                "constants": [],
+                                "variables": [
+                                  "TingYun_EnergyBarLayer"
+                                ]
+                              },
+                              "maximum": 3,
+                              "assignState": "True",
+                              "priorState": "Active",
+                              "bar#": 3
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable with Modifier Values",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "valueType": "LifeTime",
+                      "variableName": "TingYun_EnergyBarLayer",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
+                      "multiplier": 1
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "TingYun_EnergyBarLayer",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Update Displayed Energy Bar",
+                          "value": {
+                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
+                            "displayLines": "TingYun_EnergyBarLayer",
+                            "constants": [],
+                            "variables": [
+                              "TingYun_EnergyBarLayer"
+                            ]
+                          },
+                          "maximum": 3,
+                          "assignState": "True",
+                          "priorState": "Normal",
+                          "bar#": 3
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Update Displayed Energy Bar",
+                          "value": {
+                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
+                            "displayLines": "TingYun_EnergyBarLayer",
+                            "constants": [],
+                            "variables": [
+                              "TingYun_EnergyBarLayer"
+                            ]
+                          },
+                          "maximum": 3,
+                          "assignState": "True",
+                          "priorState": "Active",
+                          "bar#": 3
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Force Modifier Duration Decrement [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable with Modifier Values",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "valueType": "LifeTime",
+                      "variableName": "TingYun_EnergyBarLayer",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
+                      "multiplier": 1
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "TingYun_EnergyBarLayer",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Update Displayed Energy Bar",
+                          "value": {
+                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
+                            "displayLines": "TingYun_EnergyBarLayer",
+                            "constants": [],
+                            "variables": [
+                              "TingYun_EnergyBarLayer"
+                            ]
+                          },
+                          "maximum": 3,
+                          "assignState": "True",
+                          "priorState": "Normal",
+                          "bar#": 3
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Update Displayed Energy Bar",
+                          "value": {
+                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
+                            "displayLines": "TingYun_EnergyBarLayer",
+                            "constants": [],
+                            "variables": [
+                              "TingYun_EnergyBarLayer"
+                            ]
+                          },
+                          "maximum": 3,
+                          "assignState": "True",
+                          "priorState": "Active",
+                          "bar#": 3
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-888637681\">TingYun_Passive_LeiLing_Eidolon4</a>",
+          "modifierFlags": [
+            "ListenBattleEventSkill"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Action Choice Window [Owner]",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
+                    "displayLines": "MDF_AttackDelta",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AttackDelta"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Got a Kill [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
+                  },
+                  "failed": [
+                    {
+                      "name": "Update Energy",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "value": {
+                        "operator": "Variables[0] (MDF_Rank02_SPAdd) || RETURN",
+                        "displayLines": "MDF_Rank02_SPAdd",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Rank02_SPAdd"
+                        ]
+                      },
+                      "isFixed": "* ERR"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Attack Targets of Modifier Holder}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Thunder",
+                        "Damage": {
+                          "operator": "Variables[0] (MDF_Passive_DamagePercentage) || Variables[1] (MDF_Rank04_DamagePercentage) || ADD || RETURN",
+                          "displayLines": "(MDF_Passive_DamagePercentage + MDF_Rank04_DamagePercentage)",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Passive_DamagePercentage",
+                            "MDF_Rank04_DamagePercentage"
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Additional DMG"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"328360410\">TingYun_PassiveFlag</a>"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Current Action Target List}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Thunder",
+                        "Damage": {
+                          "operator": "Variables[0] (MDF_Passive_DamagePercentageSelf) || RETURN",
+                          "displayLines": "MDF_Passive_DamagePercentageSelf",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Passive_DamagePercentageSelf"
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Additional DMG"
+                      }
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Basic ATK"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                      "duration": 1,
+                      "valuePerStack": {
+                        "MDF_Eidolon1_SpeedUp_01": {
+                          "operator": "Variables[0] (MDF_Rank01_SpeedUp) || RETURN",
+                          "displayLines": "MDF_Rank01_SpeedUp",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Rank01_SpeedUp"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-922192919\">TingYun_Passive_LeiLing_Eidolon2</a>",
+          "modifierFlags": [
+            "ListenBattleEventSkill"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Action Choice Window [Owner]",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
+                    "displayLines": "MDF_AttackDelta",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AttackDelta"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Got a Kill [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
+                  },
+                  "failed": [
+                    {
+                      "name": "Update Energy",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "value": {
+                        "operator": "Variables[0] (MDF_Rank02_SPAdd) || RETURN",
+                        "displayLines": "MDF_Rank02_SPAdd",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Rank02_SPAdd"
+                        ]
+                      },
+                      "isFixed": "* ERR"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Attack Targets of Modifier Holder}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Thunder",
+                        "Damage": {
+                          "operator": "Variables[0] (MDF_Passive_DamagePercentage) || RETURN",
+                          "displayLines": "MDF_Passive_DamagePercentage",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Passive_DamagePercentage"
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Additional DMG"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"328360410\">TingYun_PassiveFlag</a>"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Current Action Target List}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Thunder",
+                        "Damage": {
+                          "operator": "Variables[0] (MDF_Passive_DamagePercentageSelf) || RETURN",
+                          "displayLines": "MDF_Passive_DamagePercentageSelf",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Passive_DamagePercentageSelf"
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Additional DMG"
+                      }
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Basic ATK"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                      "duration": 1,
+                      "valuePerStack": {
+                        "MDF_Eidolon1_SpeedUp_01": {
+                          "operator": "Variables[0] (MDF_Rank01_SpeedUp) || RETURN",
+                          "displayLines": "MDF_Rank01_SpeedUp",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Rank01_SpeedUp"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-972525776\">TingYun_Passive_LeiLing_Eidolon1</a>",
+          "modifierFlags": [
+            "ListenBattleEventSkill"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
+                    "displayLines": "MDF_AttackDelta",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AttackDelta"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Attack Targets of Modifier Holder}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Thunder",
+                        "Damage": {
+                          "operator": "Variables[0] (MDF_Passive_DamagePercentage) || RETURN",
+                          "displayLines": "MDF_Passive_DamagePercentage",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Passive_DamagePercentage"
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Additional DMG"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"328360410\">TingYun_PassiveFlag</a>"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Current Action Target List}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Thunder",
+                        "Damage": {
+                          "operator": "Variables[0] (MDF_Passive_DamagePercentageSelf) || RETURN",
+                          "displayLines": "MDF_Passive_DamagePercentageSelf",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Passive_DamagePercentageSelf"
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Additional DMG"
+                      }
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Basic ATK"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+                      "duration": 1,
+                      "valuePerStack": {
+                        "MDF_Eidolon1_SpeedUp_01": {
+                          "operator": "Variables[0] (MDF_Rank01_SpeedUp) || RETURN",
+                          "displayLines": "MDF_Rank01_SpeedUp",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Rank01_SpeedUp"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1351488572\">TingYun_Passive_LeiLing</a>",
+          "modifierFlags": [
+            "ListenBattleEventSkill"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
+                    "displayLines": "MDF_AttackDelta",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AttackDelta"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Attack Targets of Modifier Holder}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Thunder",
+                        "Damage": {
+                          "operator": "Variables[0] (MDF_Passive_DamagePercentage) || RETURN",
+                          "displayLines": "MDF_Passive_DamagePercentage",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Passive_DamagePercentage"
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Additional DMG"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"328360410\">TingYun_PassiveFlag</a>"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Current Action Target List}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Thunder",
+                        "Damage": {
+                          "operator": "Variables[0] (MDF_Passive_DamagePercentageSelf) || RETURN",
+                          "displayLines": "MDF_Passive_DamagePercentageSelf",
+                          "constants": [],
+                          "variables": [
+                            "MDF_Passive_DamagePercentageSelf"
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Additional DMG"
+                      }
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Basic ATK"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__979112594\">Tingyun_Eidolon1_Ability03PreShowModifier</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "skillType": [
+              "Ultimate"
+            ],
+            "conditions": {
+              "name": "NOT",
+              "condition": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
+              }
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": "0.2(SPD Change)"
+            }
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
+          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackDelta</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Benediction",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1351488572\">TingYun_Passive_LeiLing</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-972525776\">TingYun_Passive_LeiLing_Eidolon1</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-922192919\">TingYun_Passive_LeiLing_Eidolon2</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-888637681\">TingYun_Passive_LeiLing_Eidolon4</a>"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "TingYun_EnergyBarLayer",
+                  "value": 0
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
+                    "displayLines": "TingYun_EnergyBarLayer",
+                    "constants": [],
+                    "variables": [
+                      "TingYun_EnergyBarLayer"
+                    ]
+                  },
+                  "maximum": 3,
+                  "assignState": "True",
+                  "priorState": "Normal",
+                  "bar#": 3
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"979112594\">Tingyun_Eidolon1_Ability03PreShowModifier</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_Rank01_Count",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Modifier Description",
+                      "popUpText": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackDelta</span> points. Gains SPD Boost after using Ultimate."
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"979112594\">Tingyun_Eidolon1_Ability03PreShowModifier</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "MDF_LifeTime",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Living/Death State",
+                        "state": "Mask_AliveOnly"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1875583300\">MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark</a>",
+                          "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "Tingyun_Tingyun_Trace03": {
       "fileName": "Tingyun_Tingyun_Trace03",
       "abilityType": null,
@@ -1093,1534 +2587,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Tingyun_Modifiers": {
-      "fileName": "Tingyun_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2044109918\">Tingyun_Eidolon2_CD</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1819337398\">Tingyun_Trace_B1_SpeedUp</a>[<span class=\"descriptionNumberColor\">Nourished Joviality</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "modifierFlags": [
-            "STAT_SpeedUp"
-          ],
-          "stackData": [
-            "Tingyun_SpeedUP_Ratio"
-          ],
-          "description": "SPD +<span class=\"descriptionNumberColor\">Tingyun_SpeedUP_Ratio</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "Nourished Joviality",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (Tingyun_SpeedUP_Ratio) || RETURN",
-                    "displayLines": "Tingyun_SpeedUP_Ratio",
-                    "constants": [],
-                    "variables": [
-                      "Tingyun_SpeedUP_Ratio"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "modifierFlags": [
-            "STAT_SpeedUp"
-          ],
-          "description": "SPD +<span class=\"descriptionNumberColor\">MDF_Rank01_SpeedUp_01</span>.",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_Rank01_SpeedUp_01) || RETURN",
-                    "displayLines": "MDF_Rank01_SpeedUp_01",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Rank01_SpeedUp_01"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__328360410\">TingYun_PassiveFlag</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1593929305\">TingYun_PassiveATK_Flag</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1429716226\">TingYun_ByIsTingYun</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn End [Anyone]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable with Modifier Values",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "valueType": "LifeTime",
-                      "variableName": "TingYun_EnergyBarLayer",
-                      "modifierName": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
-                      "multiplier": 1
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "TingYun_EnergyBarLayer",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "Update Displayed Energy Bar",
-                          "value": {
-                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                            "displayLines": "TingYun_EnergyBarLayer",
-                            "constants": [],
-                            "variables": [
-                              "TingYun_EnergyBarLayer"
-                            ]
-                          },
-                          "maximum": 3,
-                          "assignState": "True",
-                          "priorState": "Normal",
-                          "bar#": 3
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Update Displayed Energy Bar",
-                          "value": {
-                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                            "displayLines": "TingYun_EnergyBarLayer",
-                            "constants": [],
-                            "variables": [
-                              "TingYun_EnergyBarLayer"
-                            ]
-                          },
-                          "maximum": 3,
-                          "assignState": "True",
-                          "priorState": "Active",
-                          "bar#": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1875583300\">MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1875583300\">MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark</a>"
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Define Custom Variable with Modifier Values",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "valueType": "LifeTime",
-                          "variableName": "TingYun_EnergyBarLayer",
-                          "modifierName": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
-                          "multiplier": 1
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Variable",
-                            "value1": "TingYun_EnergyBarLayer",
-                            "compareType": "=",
-                            "value2": 0
-                          },
-                          "passed": [
-                            {
-                              "name": "Update Displayed Energy Bar",
-                              "value": {
-                                "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                                "displayLines": "TingYun_EnergyBarLayer",
-                                "constants": [],
-                                "variables": [
-                                  "TingYun_EnergyBarLayer"
-                                ]
-                              },
-                              "maximum": 3,
-                              "assignState": "True",
-                              "priorState": "Normal",
-                              "bar#": 3
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Update Displayed Energy Bar",
-                              "value": {
-                                "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                                "displayLines": "TingYun_EnergyBarLayer",
-                                "constants": [],
-                                "variables": [
-                                  "TingYun_EnergyBarLayer"
-                                ]
-                              },
-                              "maximum": 3,
-                              "assignState": "True",
-                              "priorState": "Active",
-                              "bar#": 3
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Injected Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable with Modifier Values",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "valueType": "LifeTime",
-                      "variableName": "TingYun_EnergyBarLayer",
-                      "modifierName": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
-                      "multiplier": 1
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "TingYun_EnergyBarLayer",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "Update Displayed Energy Bar",
-                          "value": {
-                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                            "displayLines": "TingYun_EnergyBarLayer",
-                            "constants": [],
-                            "variables": [
-                              "TingYun_EnergyBarLayer"
-                            ]
-                          },
-                          "maximum": 3,
-                          "assignState": "True",
-                          "priorState": "Normal",
-                          "bar#": 3
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Update Displayed Energy Bar",
-                          "value": {
-                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                            "displayLines": "TingYun_EnergyBarLayer",
-                            "constants": [],
-                            "variables": [
-                              "TingYun_EnergyBarLayer"
-                            ]
-                          },
-                          "maximum": 3,
-                          "assignState": "True",
-                          "priorState": "Active",
-                          "bar#": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Force Modifier Duration Decrement [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Define Custom Variable with Modifier Values",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "valueType": "LifeTime",
-                      "variableName": "TingYun_EnergyBarLayer",
-                      "modifierName": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
-                      "multiplier": 1
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "TingYun_EnergyBarLayer",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "Update Displayed Energy Bar",
-                          "value": {
-                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                            "displayLines": "TingYun_EnergyBarLayer",
-                            "constants": [],
-                            "variables": [
-                              "TingYun_EnergyBarLayer"
-                            ]
-                          },
-                          "maximum": 3,
-                          "assignState": "True",
-                          "priorState": "Normal",
-                          "bar#": 3
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Update Displayed Energy Bar",
-                          "value": {
-                            "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                            "displayLines": "TingYun_EnergyBarLayer",
-                            "constants": [],
-                            "variables": [
-                              "TingYun_EnergyBarLayer"
-                            ]
-                          },
-                          "maximum": 3,
-                          "assignState": "True",
-                          "priorState": "Active",
-                          "bar#": 3
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-888637681\">TingYun_Passive_LeiLing_Eidolon4</a>",
-          "modifierFlags": [
-            "ListenBattleEventSkill"
-          ],
-          "stackData": [
-            "MDF_Passive_DamagePercentage",
-            "MDF_Passive_DamagePercentageSelf",
-            "MDF_Rank01_SpeedUp",
-            "MDF_Rank02_SPAdd",
-            "MDF_Rank04_DamagePercentage",
-            "MDF_AttackDelta"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Action Choice Window [Owner]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
-                    "displayLines": "MDF_AttackDelta",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackDelta"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Got a Kill [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
-                  },
-                  "failed": [
-                    {
-                      "name": "Update Energy",
-                      "on": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "value": {
-                        "operator": "Variables[0] (MDF_Rank02_SPAdd) || RETURN",
-                        "displayLines": "MDF_Rank02_SPAdd",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Rank02_SPAdd"
-                        ]
-                      },
-                      "isFixed": "* ERR"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Attack Targets of Modifier Holder}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Thunder",
-                        "Damage": {
-                          "operator": "Variables[0] (MDF_Passive_DamagePercentage) || Variables[1] (MDF_Rank04_DamagePercentage) || ADD || RETURN",
-                          "displayLines": "(MDF_Passive_DamagePercentage + MDF_Rank04_DamagePercentage)",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Passive_DamagePercentage",
-                            "MDF_Rank04_DamagePercentage"
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Additional DMG"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Anyone]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"328360410\">TingYun_PassiveFlag</a>"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Current Action Target List}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Thunder",
-                        "Damage": {
-                          "operator": "Variables[0] (MDF_Passive_DamagePercentageSelf) || RETURN",
-                          "displayLines": "MDF_Passive_DamagePercentageSelf",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Passive_DamagePercentageSelf"
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Additional DMG"
-                      }
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Basic ATK"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Current Action Owner}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-                      "duration": 1,
-                      "valuePerStack": {
-                        "MDF_Eidolon1_SpeedUp_01": {
-                          "operator": "Variables[0] (MDF_Rank01_SpeedUp) || RETURN",
-                          "displayLines": "MDF_Rank01_SpeedUp",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rank01_SpeedUp"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-922192919\">TingYun_Passive_LeiLing_Eidolon2</a>",
-          "modifierFlags": [
-            "ListenBattleEventSkill"
-          ],
-          "stackData": [
-            "MDF_Passive_DamagePercentage",
-            "MDF_Passive_DamagePercentageSelf",
-            "MDF_Rank01_SpeedUp",
-            "MDF_Rank02_SPAdd",
-            "MDF_AttackDelta"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Action Choice Window [Owner]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
-                    "displayLines": "MDF_AttackDelta",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackDelta"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Got a Kill [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
-                  },
-                  "failed": [
-                    {
-                      "name": "Update Energy",
-                      "on": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "value": {
-                        "operator": "Variables[0] (MDF_Rank02_SPAdd) || RETURN",
-                        "displayLines": "MDF_Rank02_SPAdd",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Rank02_SPAdd"
-                        ]
-                      },
-                      "isFixed": "* ERR"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-2044109918\">Tingyun_Eidolon2_CD</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Attack Targets of Modifier Holder}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Thunder",
-                        "Damage": {
-                          "operator": "Variables[0] (MDF_Passive_DamagePercentage) || RETURN",
-                          "displayLines": "MDF_Passive_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Passive_DamagePercentage"
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Additional DMG"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Anyone]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"328360410\">TingYun_PassiveFlag</a>"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Current Action Target List}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Thunder",
-                        "Damage": {
-                          "operator": "Variables[0] (MDF_Passive_DamagePercentageSelf) || RETURN",
-                          "displayLines": "MDF_Passive_DamagePercentageSelf",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Passive_DamagePercentageSelf"
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Additional DMG"
-                      }
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Basic ATK"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Current Action Owner}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-                      "duration": 1,
-                      "valuePerStack": {
-                        "MDF_Eidolon1_SpeedUp_01": {
-                          "operator": "Variables[0] (MDF_Rank01_SpeedUp) || RETURN",
-                          "displayLines": "MDF_Rank01_SpeedUp",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rank01_SpeedUp"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-972525776\">TingYun_Passive_LeiLing_Eidolon1</a>",
-          "modifierFlags": [
-            "ListenBattleEventSkill"
-          ],
-          "stackData": [
-            "MDF_Passive_DamagePercentage",
-            "MDF_Passive_DamagePercentageSelf",
-            "MDF_Rank01_SpeedUp",
-            "MDF_AttackDelta"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
-                    "displayLines": "MDF_AttackDelta",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackDelta"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Attack Targets of Modifier Holder}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Thunder",
-                        "Damage": {
-                          "operator": "Variables[0] (MDF_Passive_DamagePercentage) || RETURN",
-                          "displayLines": "MDF_Passive_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Passive_DamagePercentage"
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Additional DMG"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Anyone]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"328360410\">TingYun_PassiveFlag</a>"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Current Action Target List}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Thunder",
-                        "Damage": {
-                          "operator": "Variables[0] (MDF_Passive_DamagePercentageSelf) || RETURN",
-                          "displayLines": "MDF_Passive_DamagePercentageSelf",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Passive_DamagePercentageSelf"
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Additional DMG"
-                      }
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Basic ATK"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Current Action Owner}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-                      "duration": 1,
-                      "valuePerStack": {
-                        "MDF_Eidolon1_SpeedUp_01": {
-                          "operator": "Variables[0] (MDF_Rank01_SpeedUp) || RETURN",
-                          "displayLines": "MDF_Rank01_SpeedUp",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Rank01_SpeedUp"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1351488572\">TingYun_Passive_LeiLing</a>",
-          "modifierFlags": [
-            "ListenBattleEventSkill"
-          ],
-          "stackData": [
-            "MDF_Passive_DamagePercentage",
-            "MDF_Passive_DamagePercentageSelf",
-            "MDF_AttackDelta"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
-                    "displayLines": "MDF_AttackDelta",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackDelta"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Attack Targets of Modifier Holder}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Thunder",
-                        "Damage": {
-                          "operator": "Variables[0] (MDF_Passive_DamagePercentage) || RETURN",
-                          "displayLines": "MDF_Passive_DamagePercentage",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Passive_DamagePercentage"
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Additional DMG"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Anyone]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"328360410\">TingYun_PassiveFlag</a>"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Current Action Target List}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Thunder",
-                        "Damage": {
-                          "operator": "Variables[0] (MDF_Passive_DamagePercentageSelf) || RETURN",
-                          "displayLines": "MDF_Passive_DamagePercentageSelf",
-                          "constants": [],
-                          "variables": [
-                            "MDF_Passive_DamagePercentageSelf"
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Additional DMG"
-                      }
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Skill Type",
-                        "skillType": "Basic ATK"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Current Action Owner}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1429716226\">TingYun_ByIsTingYun</a>"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1593929305\">TingYun_PassiveATK_Flag</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__979112594\">Tingyun_Eidolon1_Ability03PreShowModifier</a>",
-          "previewValue": {
-            "name": "Modifier: UI Preview",
-            "show": "Hide",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "skillType": [
-              "Ultimate"
-            ],
-            "conditions": {
-              "name": "NOT",
-              "condition": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Modifier Holder}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"646248808\">Tingyun_Eidolon1_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
-              }
-            },
-            "delayAdvancePreview": {
-              "name": "Delay/Advance Preview",
-              "previewValue": "0.2(SPD Change)"
-            }
-          }
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
-          "stackData": [
-            "MDF_AttackDelta",
-            "MDF_Rank01_SpeedUp",
-            "MDF_Rank01_Count"
-          ],
-          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackDelta</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Benediction",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1351488572\">TingYun_Passive_LeiLing</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-972525776\">TingYun_Passive_LeiLing_Eidolon1</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-922192919\">TingYun_Passive_LeiLing_Eidolon2</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-888637681\">TingYun_Passive_LeiLing_Eidolon4</a>"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "TingYun_EnergyBarLayer",
-                  "value": 0
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (TingYun_EnergyBarLayer) || RETURN",
-                    "displayLines": "TingYun_EnergyBarLayer",
-                    "constants": [],
-                    "variables": [
-                      "TingYun_EnergyBarLayer"
-                    ]
-                  },
-                  "maximum": 3,
-                  "assignState": "True",
-                  "priorState": "Normal",
-                  "bar#": 3
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"979112594\">Tingyun_Eidolon1_Ability03PreShowModifier</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_Rank01_Count",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Modifier Description",
-                      "popUpText": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackDelta</span> points. Gains SPD Boost after using Ultimate."
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"979112594\">Tingyun_Eidolon1_Ability03PreShowModifier</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "MDF_LifeTime",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Living/Death State",
-                        "state": "Mask_AliveOnly"
-                      },
-                      "passed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1875583300\">MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark</a>",
-                          "referenceModifier": "<a class=\"gModGreen\" id=\"1832901043\">MReference_Empty</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": []
     }
   }
 }

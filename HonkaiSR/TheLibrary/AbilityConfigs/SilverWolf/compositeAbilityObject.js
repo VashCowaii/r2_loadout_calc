@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": "Silver Wolf",
   "trimCharacterName": "SilverWolf",
   "abilityList": [
+    "SilverWolf_Modifiers",
     "SilverWolf_Advanced_Silwolf_Trace01",
     "SilverWolf_Advanced_Silwolf_Eidolon6",
     "SilverWolf_Advanced_Silwolf_Eidolon2",
@@ -16,10 +17,1339 @@ const compositeAbilityObject = {
     "SilverWolf_Advanced_Silwolf_PassiveAbility_RandomBug",
     "SilverWolf_Advanced_Silwolf_Ability01_Part02",
     "SilverWolf_Advanced_Silwolf_Ability01_Part01",
-    "SilverWolf_Modifiers",
     "SilverWolf_Functions"
   ],
   "abilityObject": {
+    "SilverWolf_Modifiers": {
+      "fileName": "SilverWolf_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1388519324\">Advanced_Silwolf_Tree03_AttackUp</a>[<span class=\"descriptionNumberColor\">Side Note</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "Side Note",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1562790381\">Advanced_Silwolf_Tree03_StatusProbabilityShow</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFunctions": [
+            {
+              "name": "CharacterFunctions",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__-1211488535\">Silwolf_Tree03_Sub</a>",
+              "parse": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "_StatusProbability",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "_StatusProbabilityConvert",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateConverted</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "SkillTree_PointB3_StatusProbabilityValue",
+                  "value": {
+                    "operator": "Variables[0] (_StatusProbability) || Variables[1] (_StatusProbabilityConvert) || SUB || RETURN",
+                    "displayLines": "(_StatusProbability - _StatusProbabilityConvert)",
+                    "constants": [],
+                    "variables": [
+                      "_StatusProbability",
+                      "_StatusProbabilityConvert"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "SkillTree_PointB3_StatusProbabilityValue",
+                  "value": {
+                    "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB3_StatusProbabilityValue) || Variables[2] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.1) || MUL || RETURN",
+                    "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((SkillTree_PointB3_StatusProbabilityValue / 0.1)) * 0.1)",
+                    "constants": [],
+                    "variables": [
+                      "WHOLE",
+                      "SkillTree_PointB3_StatusProbabilityValue",
+                      0.1,
+                      0.1
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "SkillTree_PointB3_StatusProbabilityValue",
+                    "compareType": "<=",
+                    "value2": 0,
+                    "contextScope": "ContextCaster"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "SkillTree_PointB3_StatusProbabilityValue",
+                      "value": 0
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1388519324\">Advanced_Silwolf_Tree03_AttackUp</a>[<span class=\"descriptionNumberColor\">Side Note</span>]"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "SkillTree_PointB3_StatusProbabilityValue",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (0.5) || RETURN",
+                          "displayLines": "0.5",
+                          "constants": [],
+                          "variables": [
+                            0.5
+                          ]
+                        },
+                        "contextScope": "ContextCaster"
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "SkillTree_PointB3_StatusProbabilityValue",
+                          "value": {
+                            "operator": "Variables[0] (0.5) || RETURN",
+                            "displayLines": "0.5",
+                            "constants": [],
+                            "variables": [
+                              0.5
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1388519324\">Advanced_Silwolf_Tree03_AttackUp</a>[<span class=\"descriptionNumberColor\">Side Note</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (SkillTree_PointB3_StatusProbabilityValue) || RETURN",
+                          "displayLines": "SkillTree_PointB3_StatusProbabilityValue",
+                          "constants": [],
+                          "variables": [
+                            "SkillTree_PointB3_StatusProbabilityValue"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "maxValue": 1000000000,
+                  "whenEnteringRange": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1211488535\">Silwolf_Tree03_Sub</a>"
+                    }
+                  ],
+                  "whenValueChanges": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-1211488535\">Silwolf_Tree03_Sub</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-46466503\">Advanced_Silwolf_Ultimate_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "modifierFlags": [
+            "STAT_DefenceDown"
+          ],
+          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "DEF Reduction",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-860979758\">Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Vulnerability",
+          "statusName": "Vulnerability",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1155855512\">Advanced_Silwolf_BPAbility_AllDamageTypeResistanceDown</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "All-Type RES Reduction",
+          "statusName": "All-Type RES Reduction",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_SpeedDown"
+          ],
+          "description": "SPD decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Slow",
+          "statusName": "Type-3 Bug",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_DefenceDown"
+          ],
+          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "DEF Reduction",
+          "statusName": "Type-2 Bug",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_AttackDown"
+          ],
+          "description": "ATK decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "ATK Reduction",
+          "statusName": "Type-1 Bug",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1384846161\">Advanced_Silwolf_BPAbility_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
+          "stackType": "Replace",
+          "description": "Additionally implanted Imaginary Weakness. Imaginary RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Implant a Weakness",
+          "statusName": "Additional Imaginary Weakness"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1901191893\">Advanced_Silwolf_BPAbility_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
+          "stackType": "Replace",
+          "description": "Additionally implanted Quantum Weakness. Quantum RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Implant a Weakness",
+          "statusName": "Additional Quantum Weakness"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1824019324\">Advanced_Silwolf_BPAbility_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
+          "stackType": "Replace",
+          "description": "Additionally implanted Lightning Weakness. Lightning RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Implant a Weakness",
+          "statusName": "Additional Lightning Weakness"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1062446229\">Advanced_Silwolf_BPAbility_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
+          "stackType": "Replace",
+          "description": "Additionally implanted Physical Weakness. Physical RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Implant a Weakness",
+          "statusName": "Additional Physical Weakness"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1784823028\">Advanced_Silwolf_BPAbility_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
+          "stackType": "Replace",
+          "description": "Additionally implanted Wind Weakness. Wind RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Implant a Weakness",
+          "statusName": "Additional Wind Weakness"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1570756707\">Advanced_Silwolf_BPAbility_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
+          "stackType": "Replace",
+          "description": "Additionally implanted Ice Weakness. Ice RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Implant a Weakness",
+          "statusName": "Additional Ice Weakness"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__860600554\">Advanced_Silwolf_BPAbility_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
+          "stackType": "Replace",
+          "description": "Additionally implanted Fire Weakness. Fire RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Implant a Weakness",
+          "statusName": "Additional Fire Weakness"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1797889012\">Advanced_Silwolf_BPAbility_WeakType_Extra</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+          "stackType": "Replace",
+          "modifierFlags": [
+            "STAT_AttachWeakness"
+          ],
+          "description": "Additionally implanted Weakness. Corresponding RES is lowered by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Implant a Weakness",
+          "statusName": "Extra Weakness",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Implant Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "element": null,
+                  "resReduction": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  },
+                  "maxImplant": 1,
+                  "returnWeaknessVar": [
+                    "Advanced_Silwolf_BPAbility_WeakType_01",
+                    "Advanced_Silwolf_BPAbility_WeakType_02"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1084383828\">Advanced_Silwolf_Passive_Deathrattle_Sub</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Pre-Death [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Enemy Team",
+                    "invertCondition": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1273458995\">Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer</a>",
+                      "variables": {
+                        "_WeakType": {
+                          "operator": "Variables[0] (_WeakType) || RETURN",
+                          "displayLines": "_WeakType",
+                          "constants": [],
+                          "variables": [
+                            "_WeakType"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_AttachWeakness",
+            "KeepOnDeathrattle"
+          ],
+          "description": "Additionally implanted Weakness. Corresponding RES is lowered by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Implant a Weakness",
+          "statusName": "Extra Weakness",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_WeakType",
+                    "compareType": "=",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "SWITCH",
+                      "switchValue": {
+                        "operator": "Variables[0] (_TheFirstAvatarWeakType) || RETURN",
+                        "displayLines": "_TheFirstAvatarWeakType",
+                        "constants": [],
+                        "variables": [
+                          "_TheFirstAvatarWeakType"
+                        ]
+                      },
+                      "caseEvents": [
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": 1,
+                          "execute": [
+                            {
+                              "name": "Implant Weaknesses",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "element": null,
+                              "resReduction": {
+                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                                "displayLines": "(0 - MDF_PropertyValue)",
+                                "constants": [
+                                  0
+                                ],
+                                "variables": [
+                                  "MDF_PropertyValue"
+                                ]
+                              },
+                              "maxImplant": 1,
+                              "prefWeakness": "Physical",
+                              "returnWeaknessVar": [
+                                "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "Advanced_Silwolf_BPAbility_WeakType_02"
+                              ],
+                              "noNewWeaknesses": [
+                                "Modifier Deletes Itself"
+                              ]
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_WeakType",
+                              "value": {
+                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "constants": [],
+                                "variables": [
+                                  "Advanced_Silwolf_BPAbility_WeakType_01"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": 2,
+                          "execute": [
+                            {
+                              "name": "Implant Weaknesses",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "element": null,
+                              "resReduction": {
+                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                                "displayLines": "(0 - MDF_PropertyValue)",
+                                "constants": [
+                                  0
+                                ],
+                                "variables": [
+                                  "MDF_PropertyValue"
+                                ]
+                              },
+                              "maxImplant": 1,
+                              "prefWeakness": "Fire",
+                              "returnWeaknessVar": [
+                                "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "Advanced_Silwolf_BPAbility_WeakType_02"
+                              ],
+                              "noNewWeaknesses": [
+                                "Modifier Deletes Itself"
+                              ]
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_WeakType",
+                              "value": {
+                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "constants": [],
+                                "variables": [
+                                  "Advanced_Silwolf_BPAbility_WeakType_01"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": 4,
+                          "execute": [
+                            {
+                              "name": "Implant Weaknesses",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "element": null,
+                              "resReduction": {
+                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                                "displayLines": "(0 - MDF_PropertyValue)",
+                                "constants": [
+                                  0
+                                ],
+                                "variables": [
+                                  "MDF_PropertyValue"
+                                ]
+                              },
+                              "maxImplant": 1,
+                              "prefWeakness": "Ice",
+                              "returnWeaknessVar": [
+                                "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "Advanced_Silwolf_BPAbility_WeakType_02"
+                              ],
+                              "noNewWeaknesses": [
+                                "Modifier Deletes Itself"
+                              ]
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_WeakType",
+                              "value": {
+                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "constants": [],
+                                "variables": [
+                                  "Advanced_Silwolf_BPAbility_WeakType_01"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": 8,
+                          "execute": [
+                            {
+                              "name": "Implant Weaknesses",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "element": null,
+                              "resReduction": {
+                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                                "displayLines": "(0 - MDF_PropertyValue)",
+                                "constants": [
+                                  0
+                                ],
+                                "variables": [
+                                  "MDF_PropertyValue"
+                                ]
+                              },
+                              "maxImplant": 1,
+                              "prefWeakness": "Lightning",
+                              "returnWeaknessVar": [
+                                "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "Advanced_Silwolf_BPAbility_WeakType_02"
+                              ],
+                              "noNewWeaknesses": [
+                                "Modifier Deletes Itself"
+                              ]
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_WeakType",
+                              "value": {
+                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "constants": [],
+                                "variables": [
+                                  "Advanced_Silwolf_BPAbility_WeakType_01"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": 16,
+                          "execute": [
+                            {
+                              "name": "Implant Weaknesses",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "element": null,
+                              "resReduction": {
+                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                                "displayLines": "(0 - MDF_PropertyValue)",
+                                "constants": [
+                                  0
+                                ],
+                                "variables": [
+                                  "MDF_PropertyValue"
+                                ]
+                              },
+                              "maxImplant": 1,
+                              "prefWeakness": "Wind",
+                              "returnWeaknessVar": [
+                                "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "Advanced_Silwolf_BPAbility_WeakType_02"
+                              ],
+                              "noNewWeaknesses": [
+                                "Modifier Deletes Itself"
+                              ]
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_WeakType",
+                              "value": {
+                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "constants": [],
+                                "variables": [
+                                  "Advanced_Silwolf_BPAbility_WeakType_01"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": 32,
+                          "execute": [
+                            {
+                              "name": "Implant Weaknesses",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "element": null,
+                              "resReduction": {
+                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                                "displayLines": "(0 - MDF_PropertyValue)",
+                                "constants": [
+                                  0
+                                ],
+                                "variables": [
+                                  "MDF_PropertyValue"
+                                ]
+                              },
+                              "maxImplant": 1,
+                              "prefWeakness": "Quantum",
+                              "returnWeaknessVar": [
+                                "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "Advanced_Silwolf_BPAbility_WeakType_02"
+                              ],
+                              "noNewWeaknesses": [
+                                "Modifier Deletes Itself"
+                              ]
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_WeakType",
+                              "value": {
+                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "constants": [],
+                                "variables": [
+                                  "Advanced_Silwolf_BPAbility_WeakType_01"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": 64,
+                          "execute": [
+                            {
+                              "name": "Implant Weaknesses",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "element": null,
+                              "resReduction": {
+                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                                "displayLines": "(0 - MDF_PropertyValue)",
+                                "constants": [
+                                  0
+                                ],
+                                "variables": [
+                                  "MDF_PropertyValue"
+                                ]
+                              },
+                              "maxImplant": 1,
+                              "prefWeakness": "Imaginary",
+                              "returnWeaknessVar": [
+                                "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "Advanced_Silwolf_BPAbility_WeakType_02"
+                              ],
+                              "noNewWeaknesses": [
+                                "Modifier Deletes Itself"
+                              ]
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_WeakType",
+                              "value": {
+                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "constants": [],
+                                "variables": [
+                                  "Advanced_Silwolf_BPAbility_WeakType_01"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "defaultEvents": []
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "SWITCH",
+                      "switchValue": {
+                        "operator": "Variables[0] (_WeakType) || RETURN",
+                        "displayLines": "_WeakType",
+                        "constants": [],
+                        "variables": [
+                          "_WeakType"
+                        ]
+                      },
+                      "caseEvents": [
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": 1,
+                          "execute": [
+                            {
+                              "name": "Implant Weaknesses",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "element": null,
+                              "resReduction": {
+                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                                "displayLines": "(0 - MDF_PropertyValue)",
+                                "constants": [
+                                  0
+                                ],
+                                "variables": [
+                                  "MDF_PropertyValue"
+                                ]
+                              },
+                              "maxImplant": 1,
+                              "prefWeakness": "Physical",
+                              "returnWeaknessVar": [
+                                "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "Advanced_Silwolf_BPAbility_WeakType_02"
+                              ],
+                              "noNewWeaknesses": [
+                                "Modifier Deletes Itself"
+                              ]
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_WeakType",
+                              "value": {
+                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "constants": [],
+                                "variables": [
+                                  "Advanced_Silwolf_BPAbility_WeakType_01"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": 2,
+                          "execute": [
+                            {
+                              "name": "Implant Weaknesses",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "element": null,
+                              "resReduction": {
+                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                                "displayLines": "(0 - MDF_PropertyValue)",
+                                "constants": [
+                                  0
+                                ],
+                                "variables": [
+                                  "MDF_PropertyValue"
+                                ]
+                              },
+                              "maxImplant": 1,
+                              "prefWeakness": "Fire",
+                              "returnWeaknessVar": [
+                                "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "Advanced_Silwolf_BPAbility_WeakType_02"
+                              ],
+                              "noNewWeaknesses": [
+                                "Modifier Deletes Itself"
+                              ]
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_WeakType",
+                              "value": {
+                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "constants": [],
+                                "variables": [
+                                  "Advanced_Silwolf_BPAbility_WeakType_01"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": 4,
+                          "execute": [
+                            {
+                              "name": "Implant Weaknesses",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "element": null,
+                              "resReduction": {
+                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                                "displayLines": "(0 - MDF_PropertyValue)",
+                                "constants": [
+                                  0
+                                ],
+                                "variables": [
+                                  "MDF_PropertyValue"
+                                ]
+                              },
+                              "maxImplant": 1,
+                              "prefWeakness": "Ice",
+                              "returnWeaknessVar": [
+                                "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "Advanced_Silwolf_BPAbility_WeakType_02"
+                              ],
+                              "noNewWeaknesses": [
+                                "Modifier Deletes Itself"
+                              ]
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_WeakType",
+                              "value": {
+                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "constants": [],
+                                "variables": [
+                                  "Advanced_Silwolf_BPAbility_WeakType_01"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": 8,
+                          "execute": [
+                            {
+                              "name": "Implant Weaknesses",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "element": null,
+                              "resReduction": {
+                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                                "displayLines": "(0 - MDF_PropertyValue)",
+                                "constants": [
+                                  0
+                                ],
+                                "variables": [
+                                  "MDF_PropertyValue"
+                                ]
+                              },
+                              "maxImplant": 1,
+                              "prefWeakness": "Lightning",
+                              "returnWeaknessVar": [
+                                "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "Advanced_Silwolf_BPAbility_WeakType_02"
+                              ],
+                              "noNewWeaknesses": [
+                                "Modifier Deletes Itself"
+                              ]
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_WeakType",
+                              "value": {
+                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "constants": [],
+                                "variables": [
+                                  "Advanced_Silwolf_BPAbility_WeakType_01"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": 16,
+                          "execute": [
+                            {
+                              "name": "Implant Weaknesses",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "element": null,
+                              "resReduction": {
+                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                                "displayLines": "(0 - MDF_PropertyValue)",
+                                "constants": [
+                                  0
+                                ],
+                                "variables": [
+                                  "MDF_PropertyValue"
+                                ]
+                              },
+                              "maxImplant": 1,
+                              "prefWeakness": "Wind",
+                              "returnWeaknessVar": [
+                                "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "Advanced_Silwolf_BPAbility_WeakType_02"
+                              ],
+                              "noNewWeaknesses": [
+                                "Modifier Deletes Itself"
+                              ]
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_WeakType",
+                              "value": {
+                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "constants": [],
+                                "variables": [
+                                  "Advanced_Silwolf_BPAbility_WeakType_01"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": 32,
+                          "execute": [
+                            {
+                              "name": "Implant Weaknesses",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "element": null,
+                              "resReduction": {
+                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                                "displayLines": "(0 - MDF_PropertyValue)",
+                                "constants": [
+                                  0
+                                ],
+                                "variables": [
+                                  "MDF_PropertyValue"
+                                ]
+                              },
+                              "maxImplant": 1,
+                              "prefWeakness": "Quantum",
+                              "returnWeaknessVar": [
+                                "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "Advanced_Silwolf_BPAbility_WeakType_02"
+                              ],
+                              "noNewWeaknesses": [
+                                "Modifier Deletes Itself"
+                              ]
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_WeakType",
+                              "value": {
+                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "constants": [],
+                                "variables": [
+                                  "Advanced_Silwolf_BPAbility_WeakType_01"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "SWITCH CONDITON",
+                          "caseValueIs": 64,
+                          "execute": [
+                            {
+                              "name": "Implant Weaknesses",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "element": null,
+                              "resReduction": {
+                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                                "displayLines": "(0 - MDF_PropertyValue)",
+                                "constants": [
+                                  0
+                                ],
+                                "variables": [
+                                  "MDF_PropertyValue"
+                                ]
+                              },
+                              "maxImplant": 1,
+                              "prefWeakness": "Imaginary",
+                              "returnWeaknessVar": [
+                                "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "Advanced_Silwolf_BPAbility_WeakType_02"
+                              ],
+                              "noNewWeaknesses": [
+                                "Modifier Deletes Itself"
+                              ]
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_WeakType",
+                              "value": {
+                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
+                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
+                                "constants": [],
+                                "variables": [
+                                  "Advanced_Silwolf_BPAbility_WeakType_01"
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "defaultEvents": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-509776970\">Advanced_Silwolf_Ability02_OverrideNameForStatus</a>",
+                  "variables": {
+                    "DF_WeakType": {
+                      "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
+                      "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
+                      "constants": [],
+                      "variables": [
+                        "Advanced_Silwolf_BPAbility_WeakType_01"
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Pre-Death [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Enemy Team",
+                    "invertCondition": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"1273458995\">Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer</a>",
+                      "variables": {
+                        "_WeakType": {
+                          "operator": "Variables[0] (_WeakType) || RETURN",
+                          "displayLines": "_WeakType",
+                          "constants": [],
+                          "variables": [
+                            "_WeakType"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Before Killed (Queued) [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1084383828\">Advanced_Silwolf_Passive_Deathrattle_Sub</a>",
+                  "valuePerStack": {
+                    "_WeakType": {
+                      "operator": "Variables[0] (_WeakType) || RETURN",
+                      "displayLines": "_WeakType",
+                      "constants": [],
+                      "variables": [
+                        "_WeakType"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "SilverWolf_Advanced_Silwolf_Trace01": {
       "fileName": "SilverWolf_Advanced_Silwolf_Trace01",
       "abilityType": null,
@@ -2552,1359 +3882,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "SilverWolf_Modifiers": {
-      "fileName": "SilverWolf_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1388519324\">Advanced_Silwolf_Tree03_AttackUp</a>[<span class=\"descriptionNumberColor\">Side Note</span>]",
-          "stackType": "ReplaceByCaster",
-          "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "Side Note",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1562790381\">Advanced_Silwolf_Tree03_StatusProbabilityShow</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFunctions": [
-            {
-              "name": "CharacterFunctions",
-              "functionName": "<a class=\"gTempYellow\" id=\"fun__-1211488535\">Silwolf_Tree03_Sub</a>",
-              "parse": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "_StatusProbability",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;"
-                },
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "_StatusProbabilityConvert",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateConverted</span>&nbsp;"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "SkillTree_PointB3_StatusProbabilityValue",
-                  "value": {
-                    "operator": "Variables[0] (_StatusProbability) || Variables[1] (_StatusProbabilityConvert) || SUB || RETURN",
-                    "displayLines": "(_StatusProbability - _StatusProbabilityConvert)",
-                    "constants": [],
-                    "variables": [
-                      "_StatusProbability",
-                      "_StatusProbabilityConvert"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "SkillTree_PointB3_StatusProbabilityValue",
-                  "value": {
-                    "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB3_StatusProbabilityValue) || Variables[2] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.1) || MUL || RETURN",
-                    "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((SkillTree_PointB3_StatusProbabilityValue / 0.1)) * 0.1)",
-                    "constants": [],
-                    "variables": [
-                      "WHOLE",
-                      "SkillTree_PointB3_StatusProbabilityValue",
-                      0.1,
-                      0.1
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "SkillTree_PointB3_StatusProbabilityValue",
-                    "compareType": "<=",
-                    "value2": 0,
-                    "contextScope": "ContextCaster"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "SkillTree_PointB3_StatusProbabilityValue",
-                      "value": 0
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1388519324\">Advanced_Silwolf_Tree03_AttackUp</a>[<span class=\"descriptionNumberColor\">Side Note</span>]"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "SkillTree_PointB3_StatusProbabilityValue",
-                        "compareType": ">=",
-                        "value2": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
-                        },
-                        "contextScope": "ContextCaster"
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "SkillTree_PointB3_StatusProbabilityValue",
-                          "value": {
-                            "operator": "Variables[0] (0.5) || RETURN",
-                            "displayLines": "0.5",
-                            "constants": [],
-                            "variables": [
-                              0.5
-                            ]
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1388519324\">Advanced_Silwolf_Tree03_AttackUp</a>[<span class=\"descriptionNumberColor\">Side Note</span>]",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (SkillTree_PointB3_StatusProbabilityValue) || RETURN",
-                          "displayLines": "SkillTree_PointB3_StatusProbabilityValue",
-                          "constants": [],
-                          "variables": [
-                            "SkillTree_PointB3_StatusProbabilityValue"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "abilityValueChange": [
-            {
-              "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "maxValue": 1000000000,
-                  "whenEnteringRange": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-1211488535\">Silwolf_Tree03_Sub</a>"
-                    }
-                  ],
-                  "whenValueChanges": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"-1211488535\">Silwolf_Tree03_Sub</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-46466503\">Advanced_Silwolf_Ultimate_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "modifierFlags": [
-            "STAT_DefenceDown"
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "DEF Reduction",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-860979758\">Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Vulnerability",
-          "statusName": "Vulnerability",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1155855512\">Advanced_Silwolf_BPAbility_AllDamageTypeResistanceDown</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "description": "All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "All-Type RES Reduction",
-          "statusName": "All-Type RES Reduction",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_SpeedDown"
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "description": "SPD decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Slow",
-          "statusName": "Type-3 Bug",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1655419195\">Advanced_Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_DefenceDown"
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "DEF Reduction",
-          "statusName": "Type-2 Bug",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1672196814\">Advanced_Silwolf_Normal_Bug1</a>[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_AttackDown"
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "description": "ATK decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "ATK Reduction",
-          "statusName": "Type-1 Bug",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1384846161\">Advanced_Silwolf_BPAbility_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
-          "stackType": "Replace",
-          "description": "Additionally implanted Imaginary Weakness. Imaginary RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Implant a Weakness",
-          "statusName": "Additional Imaginary Weakness"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1901191893\">Advanced_Silwolf_BPAbility_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
-          "stackType": "Replace",
-          "description": "Additionally implanted Quantum Weakness. Quantum RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Implant a Weakness",
-          "statusName": "Additional Quantum Weakness"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1824019324\">Advanced_Silwolf_BPAbility_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
-          "stackType": "Replace",
-          "description": "Additionally implanted Lightning Weakness. Lightning RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Implant a Weakness",
-          "statusName": "Additional Lightning Weakness"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1062446229\">Advanced_Silwolf_BPAbility_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
-          "stackType": "Replace",
-          "description": "Additionally implanted Physical Weakness. Physical RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Implant a Weakness",
-          "statusName": "Additional Physical Weakness"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1784823028\">Advanced_Silwolf_BPAbility_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
-          "stackType": "Replace",
-          "description": "Additionally implanted Wind Weakness. Wind RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Implant a Weakness",
-          "statusName": "Additional Wind Weakness"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1570756707\">Advanced_Silwolf_BPAbility_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
-          "stackType": "Replace",
-          "description": "Additionally implanted Ice Weakness. Ice RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Implant a Weakness",
-          "statusName": "Additional Ice Weakness"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__860600554\">Advanced_Silwolf_BPAbility_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
-          "stackType": "Replace",
-          "description": "Additionally implanted Fire Weakness. Fire RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Implant a Weakness",
-          "statusName": "Additional Fire Weakness"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1797889012\">Advanced_Silwolf_BPAbility_WeakType_Extra</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-          "stackType": "Replace",
-          "modifierFlags": [
-            "STAT_AttachWeakness"
-          ],
-          "description": "Additionally implanted Weakness. Corresponding RES is lowered by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Implant a Weakness",
-          "statusName": "Extra Weakness",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Implant Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "element": null,
-                  "resReduction": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  },
-                  "maxImplant": 1,
-                  "returnWeaknessVar": [
-                    "Advanced_Silwolf_BPAbility_WeakType_01",
-                    "Advanced_Silwolf_BPAbility_WeakType_02"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1084383828\">Advanced_Silwolf_Passive_Deathrattle_Sub</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Pre-Death [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team",
-                    "invertCondition": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"1273458995\">Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer</a>",
-                      "variables": {
-                        "_WeakType": {
-                          "operator": "Variables[0] (_WeakType) || RETURN",
-                          "displayLines": "_WeakType",
-                          "constants": [],
-                          "variables": [
-                            "_WeakType"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-755062835\">Advanced_Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_AttachWeakness",
-            "KeepOnDeathrattle"
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "_WeakType",
-            "_TheFirstAvatarWeakType"
-          ],
-          "description": "Additionally implanted Weakness. Corresponding RES is lowered by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Implant a Weakness",
-          "statusName": "Extra Weakness",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "_WeakType",
-                    "compareType": "=",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "SWITCH",
-                      "switchValue": {
-                        "operator": "Variables[0] (_TheFirstAvatarWeakType) || RETURN",
-                        "displayLines": "_TheFirstAvatarWeakType",
-                        "constants": [],
-                        "variables": [
-                          "_TheFirstAvatarWeakType"
-                        ]
-                      },
-                      "caseEvents": [
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 1,
-                          "execute": [
-                            {
-                              "name": "Implant Weaknesses",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "element": null,
-                              "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
-                              },
-                              "maxImplant": 1,
-                              "prefWeakness": "Physical",
-                              "returnWeaknessVar": [
-                                "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "Advanced_Silwolf_BPAbility_WeakType_02"
-                              ],
-                              "noNewWeaknesses": [
-                                "Modifier Deletes Itself"
-                              ]
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
-                              "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 2,
-                          "execute": [
-                            {
-                              "name": "Implant Weaknesses",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "element": null,
-                              "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
-                              },
-                              "maxImplant": 1,
-                              "prefWeakness": "Fire",
-                              "returnWeaknessVar": [
-                                "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "Advanced_Silwolf_BPAbility_WeakType_02"
-                              ],
-                              "noNewWeaknesses": [
-                                "Modifier Deletes Itself"
-                              ]
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
-                              "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 4,
-                          "execute": [
-                            {
-                              "name": "Implant Weaknesses",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "element": null,
-                              "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
-                              },
-                              "maxImplant": 1,
-                              "prefWeakness": "Ice",
-                              "returnWeaknessVar": [
-                                "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "Advanced_Silwolf_BPAbility_WeakType_02"
-                              ],
-                              "noNewWeaknesses": [
-                                "Modifier Deletes Itself"
-                              ]
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
-                              "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 8,
-                          "execute": [
-                            {
-                              "name": "Implant Weaknesses",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "element": null,
-                              "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
-                              },
-                              "maxImplant": 1,
-                              "prefWeakness": "Lightning",
-                              "returnWeaknessVar": [
-                                "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "Advanced_Silwolf_BPAbility_WeakType_02"
-                              ],
-                              "noNewWeaknesses": [
-                                "Modifier Deletes Itself"
-                              ]
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
-                              "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 16,
-                          "execute": [
-                            {
-                              "name": "Implant Weaknesses",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "element": null,
-                              "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
-                              },
-                              "maxImplant": 1,
-                              "prefWeakness": "Wind",
-                              "returnWeaknessVar": [
-                                "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "Advanced_Silwolf_BPAbility_WeakType_02"
-                              ],
-                              "noNewWeaknesses": [
-                                "Modifier Deletes Itself"
-                              ]
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
-                              "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 32,
-                          "execute": [
-                            {
-                              "name": "Implant Weaknesses",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "element": null,
-                              "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
-                              },
-                              "maxImplant": 1,
-                              "prefWeakness": "Quantum",
-                              "returnWeaknessVar": [
-                                "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "Advanced_Silwolf_BPAbility_WeakType_02"
-                              ],
-                              "noNewWeaknesses": [
-                                "Modifier Deletes Itself"
-                              ]
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
-                              "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 64,
-                          "execute": [
-                            {
-                              "name": "Implant Weaknesses",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "element": null,
-                              "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
-                              },
-                              "maxImplant": 1,
-                              "prefWeakness": "Imaginary",
-                              "returnWeaknessVar": [
-                                "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "Advanced_Silwolf_BPAbility_WeakType_02"
-                              ],
-                              "noNewWeaknesses": [
-                                "Modifier Deletes Itself"
-                              ]
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
-                              "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      ],
-                      "defaultEvents": []
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "SWITCH",
-                      "switchValue": {
-                        "operator": "Variables[0] (_WeakType) || RETURN",
-                        "displayLines": "_WeakType",
-                        "constants": [],
-                        "variables": [
-                          "_WeakType"
-                        ]
-                      },
-                      "caseEvents": [
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 1,
-                          "execute": [
-                            {
-                              "name": "Implant Weaknesses",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "element": null,
-                              "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
-                              },
-                              "maxImplant": 1,
-                              "prefWeakness": "Physical",
-                              "returnWeaknessVar": [
-                                "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "Advanced_Silwolf_BPAbility_WeakType_02"
-                              ],
-                              "noNewWeaknesses": [
-                                "Modifier Deletes Itself"
-                              ]
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
-                              "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 2,
-                          "execute": [
-                            {
-                              "name": "Implant Weaknesses",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "element": null,
-                              "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
-                              },
-                              "maxImplant": 1,
-                              "prefWeakness": "Fire",
-                              "returnWeaknessVar": [
-                                "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "Advanced_Silwolf_BPAbility_WeakType_02"
-                              ],
-                              "noNewWeaknesses": [
-                                "Modifier Deletes Itself"
-                              ]
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
-                              "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 4,
-                          "execute": [
-                            {
-                              "name": "Implant Weaknesses",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "element": null,
-                              "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
-                              },
-                              "maxImplant": 1,
-                              "prefWeakness": "Ice",
-                              "returnWeaknessVar": [
-                                "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "Advanced_Silwolf_BPAbility_WeakType_02"
-                              ],
-                              "noNewWeaknesses": [
-                                "Modifier Deletes Itself"
-                              ]
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
-                              "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 8,
-                          "execute": [
-                            {
-                              "name": "Implant Weaknesses",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "element": null,
-                              "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
-                              },
-                              "maxImplant": 1,
-                              "prefWeakness": "Lightning",
-                              "returnWeaknessVar": [
-                                "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "Advanced_Silwolf_BPAbility_WeakType_02"
-                              ],
-                              "noNewWeaknesses": [
-                                "Modifier Deletes Itself"
-                              ]
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
-                              "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 16,
-                          "execute": [
-                            {
-                              "name": "Implant Weaknesses",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "element": null,
-                              "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
-                              },
-                              "maxImplant": 1,
-                              "prefWeakness": "Wind",
-                              "returnWeaknessVar": [
-                                "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "Advanced_Silwolf_BPAbility_WeakType_02"
-                              ],
-                              "noNewWeaknesses": [
-                                "Modifier Deletes Itself"
-                              ]
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
-                              "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 32,
-                          "execute": [
-                            {
-                              "name": "Implant Weaknesses",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "element": null,
-                              "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
-                              },
-                              "maxImplant": 1,
-                              "prefWeakness": "Quantum",
-                              "returnWeaknessVar": [
-                                "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "Advanced_Silwolf_BPAbility_WeakType_02"
-                              ],
-                              "noNewWeaknesses": [
-                                "Modifier Deletes Itself"
-                              ]
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
-                              "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 64,
-                          "execute": [
-                            {
-                              "name": "Implant Weaknesses",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "element": null,
-                              "resReduction": {
-                                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                                "displayLines": "(0 - MDF_PropertyValue)",
-                                "constants": [
-                                  0
-                                ],
-                                "variables": [
-                                  "MDF_PropertyValue"
-                                ]
-                              },
-                              "maxImplant": 1,
-                              "prefWeakness": "Imaginary",
-                              "returnWeaknessVar": [
-                                "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "Advanced_Silwolf_BPAbility_WeakType_02"
-                              ],
-                              "noNewWeaknesses": [
-                                "Modifier Deletes Itself"
-                              ]
-                            },
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
-                              "value": {
-                                "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                                "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                                "constants": [],
-                                "variables": [
-                                  "Advanced_Silwolf_BPAbility_WeakType_01"
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      ],
-                      "defaultEvents": []
-                    }
-                  ]
-                },
-                {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"-509776970\">Advanced_Silwolf_Ability02_OverrideNameForStatus</a>",
-                  "variables": {
-                    "DF_WeakType": {
-                      "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
-                      "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
-                      "constants": [],
-                      "variables": [
-                        "Advanced_Silwolf_BPAbility_WeakType_01"
-                      ]
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Pre-Death [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team",
-                    "invertCondition": true
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"1273458995\">Advanced_Silwolf_PassiveAbility01_WeakTypeTransfer</a>",
-                      "variables": {
-                        "_WeakType": {
-                          "operator": "Variables[0] (_WeakType) || RETURN",
-                          "displayLines": "_WeakType",
-                          "constants": [],
-                          "variables": [
-                            "_WeakType"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Before Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1084383828\">Advanced_Silwolf_Passive_Deathrattle_Sub</a>",
-                  "valuePerStack": {
-                    "_WeakType": {
-                      "operator": "Variables[0] (_WeakType) || RETURN",
-                      "displayLines": "_WeakType",
-                      "constants": [],
-                      "variables": [
-                        "_WeakType"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": []
     },
     "SilverWolf_Functions": {
       "fileName": "SilverWolf_Functions",

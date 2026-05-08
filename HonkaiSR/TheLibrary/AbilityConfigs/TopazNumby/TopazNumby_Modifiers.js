@@ -179,13 +179,7 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1361568506\">Topaz_BE_UltraEnhance_ShowText</a>",
-      "stackType": "ReplaceByCaster",
-      "stackData": [
-        "ATKCount"
-      ],
-      "latentQueue": [
-        "_damageStart"
-      ]
+      "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
@@ -488,12 +482,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1203060420\">Topaz_UltraEnhance</a>[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
       "counter": 1,
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "Skill03_P1_BEDamageRatio",
-        "Skill03_P2_CriticalChance",
-        "Skill03_P3_DelayRatio",
-        "Rank06_P2_PenRatio"
-      ],
       "description": "Numby's DMG multiplier increases by <span class=\"descriptionNumberColor\">Skill03_P1_BEDamageRatio</span>, CRIT DMG increases by <span class=\"descriptionNumberColor\">Skill03_P2_CriticalChance</span>. When enemies with Proof of Debt receive attacks from allies' Basic ATK, Skill, or Ultimate, Numby's action is Advanced Forward by <span class=\"descriptionNumberColor\">Skill03_P3_DelayRatio</span>.",
       "type": "Buff",
       "statusName": "Windfall Bonanza!",
@@ -537,9 +525,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1213282515\">Topaz_BE_CriticalChance</a>",
-      "latentQueue": [
-        "_damageStart"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -629,15 +614,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "ListenBattleEventSkill"
-      ],
-      "stackData": [
-        "MDF_PropertyValue1_DamageAdd",
-        "MDF_PropertyValue3_InsertCriticalDamageAddRatio",
-        "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
-        "MDF_PropertyValue5_InsertCriticalDamageAddMaxLayer"
-      ],
-      "latentQueue": [
-        "_damageStart"
       ],
       "description": "Increases Follow-Up ATK DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue1_DamageAdd</span>. Numby will target this unit as its attack target.",
       "type": "Debuff",

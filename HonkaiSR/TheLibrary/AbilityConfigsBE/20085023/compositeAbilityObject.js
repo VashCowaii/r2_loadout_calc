@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 20085023,
   "trimCharacterName": 20085023,
   "abilityList": [
+    "20085023_Modifiers",
     "20085023_FarmRelicAbility_104315",
     "20085023_FarmRelicAbility_104314",
     "20085023_FarmRelicAbility_104313",
@@ -17,10 +18,179 @@ const compositeAbilityObject = {
     "20085023_FarmRelicAbility_104304",
     "20085023_FarmRelicAbility_104303",
     "20085023_FarmRelicAbility_104302",
-    "20085023_FarmRelicAbility_104301",
-    "20085023_Modifiers"
+    "20085023_FarmRelicAbility_104301"
   ],
   "abilityObject": {
+    "20085023_Modifiers": {
+      "fileName": "20085023_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-299648287\">Standard_EliteField_Servant</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "description": "Reduces all DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Upon defeat, a certain percentage of %CasterName's Max HP will be lost.",
+          "type": "Buff",
+          "effectName": "Fate's Convergence",
+          "statusName": "Fate's Convergence",
+          "execute": [
+            {
+              "eventTrigger": "When Put in Deathstate Limbo",
+              "execute": [
+                {
+                  "name": "Consume",
+                  "consumeFrom": "MaxHP",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "consumePercent": {
+                    "operator": "Variables[0] (MDF_DamageByRatio) || RETURN",
+                    "displayLines": "MDF_DamageByRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_DamageByRatio"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
+                    "displayLines": "MDF_AllDamageReduce",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AllDamageReduce"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-858410577\">Standard_EliteField_Elite</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
+          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Causes other enemy targets to obtain \"Fate's Convergence.\"",
+          "type": "Buff",
+          "effectName": "Binding Obligation",
+          "statusName": "Binding Obligation",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
+                    "displayLines": "MDF_AllDamageReduce",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AllDamageReduce"
+                    ]
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-299648287\">Standard_EliteField_Servant</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
+                  "valuePerStack": {
+                    "MDF_AllDamageReduce": {
+                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
+                      "displayLines": "MDF_AllDamageReduce",
+                      "constants": [],
+                      "variables": [
+                        "MDF_AllDamageReduce"
+                      ]
+                    },
+                    "MDF_DamageByRatio": {
+                      "operator": "Variables[0] (MDF_DamageByRatio) || RETURN",
+                      "displayLines": "MDF_DamageByRatio",
+                      "constants": [],
+                      "variables": [
+                        "MDF_DamageByRatio"
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Enemy Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-299648287\">Standard_EliteField_Servant</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
+                      "valuePerStack": {
+                        "MDF_AllDamageReduce": {
+                          "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
+                          "displayLines": "MDF_AllDamageReduce",
+                          "constants": [],
+                          "variables": [
+                            "MDF_AllDamageReduce"
+                          ]
+                        },
+                        "MDF_DamageByRatio": {
+                          "operator": "Variables[0] (MDF_DamageByRatio) || RETURN",
+                          "displayLines": "MDF_DamageByRatio",
+                          "constants": [],
+                          "variables": [
+                            "MDF_DamageByRatio"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "20085023_FarmRelicAbility_104315": {
       "fileName": "20085023_FarmRelicAbility_104315",
       "abilityType": null,
@@ -2062,180 +2232,6 @@ const compositeAbilityObject = {
           ]
         }
       ]
-    },
-    "20085023_Modifiers": {
-      "fileName": "20085023_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-299648287\">Standard_EliteField_Servant</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "description": "Reduces all DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Upon defeat, a certain percentage of %CasterName's Max HP will be lost.",
-          "type": "Buff",
-          "effectName": "Fate's Convergence",
-          "statusName": "Fate's Convergence",
-          "execute": [
-            {
-              "eventTrigger": "When Put in Deathstate Limbo",
-              "execute": [
-                {
-                  "name": "Consume",
-                  "consumeFrom": "MaxHP",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "consumePercent": {
-                    "operator": "Variables[0] (MDF_DamageByRatio) || RETURN",
-                    "displayLines": "MDF_DamageByRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageByRatio"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                    "displayLines": "MDF_AllDamageReduce",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageReduce"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-858410577\">Standard_EliteField_Elite</a>[<span class=\"descriptionNumberColor\">Binding Obligation</span>]",
-          "stackData": [
-            "MDF_AllDamageReduce",
-            "MDF_DamageByRatio"
-          ],
-          "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Causes other enemy targets to obtain \"Fate's Convergence.\"",
-          "type": "Buff",
-          "effectName": "Binding Obligation",
-          "statusName": "Binding Obligation",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                    "displayLines": "MDF_AllDamageReduce",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageReduce"
-                    ]
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-299648287\">Standard_EliteField_Servant</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
-                  "valuePerStack": {
-                    "MDF_AllDamageReduce": {
-                      "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                      "displayLines": "MDF_AllDamageReduce",
-                      "constants": [],
-                      "variables": [
-                        "MDF_AllDamageReduce"
-                      ]
-                    },
-                    "MDF_DamageByRatio": {
-                      "operator": "Variables[0] (MDF_DamageByRatio) || RETURN",
-                      "displayLines": "MDF_DamageByRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_DamageByRatio"
-                      ]
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "team": "Enemy Team"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-299648287\">Standard_EliteField_Servant</a>[<span class=\"descriptionNumberColor\">Fate's Convergence</span>]",
-                      "valuePerStack": {
-                        "MDF_AllDamageReduce": {
-                          "operator": "Variables[0] (MDF_AllDamageReduce) || RETURN",
-                          "displayLines": "MDF_AllDamageReduce",
-                          "constants": [],
-                          "variables": [
-                            "MDF_AllDamageReduce"
-                          ]
-                        },
-                        "MDF_DamageByRatio": {
-                          "operator": "Variables[0] (MDF_DamageByRatio) || RETURN",
-                          "displayLines": "MDF_DamageByRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_DamageByRatio"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": []
     }
   }
 }

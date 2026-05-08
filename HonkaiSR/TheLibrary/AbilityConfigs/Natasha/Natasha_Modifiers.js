@@ -48,9 +48,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_Fatigue"
       ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Deals <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> less DMG to your team.",
       "type": "Debuff",
       "effectName": "Weaken",
@@ -85,10 +82,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_ShowValue1",
-        "MDF_ShowValue2"
-      ],
       "description": "Restores a certain amount of HP at the start of each turn.",
       "type": "Buff",
       "effectName": "Healing Over Time",

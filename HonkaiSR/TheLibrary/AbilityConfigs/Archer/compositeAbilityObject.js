@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": "Archer",
   "trimCharacterName": "Archer",
   "abilityList": [
+    "Archer_Modifiers",
     "Archer_Archer_Trace03",
     "Archer_Archer_Trace02",
     "Archer_Archer_Trace01",
@@ -19,10 +20,421 @@ const compositeAbilityObject = {
     "Archer_Archer_Ability02_Part02",
     "Archer_Archer_Ability02_Part01",
     "Archer_Archer_Ability01_Part02",
-    "Archer_Archer_Ability01_Part01",
-    "Archer_Modifiers"
+    "Archer_Archer_Ability01_Part01"
   ],
   "abilityObject": {
+    "Archer_Modifiers": {
+      "fileName": "Archer_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1612899858\">Archer_BonusTrigger</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
+          "description": "After using Skill, if there are sufficient Skill Points to use it again, the turn will not end.",
+          "type": "Other",
+          "effectName": "Circuit Connection",
+          "statusName": "Circuit Connection",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-130031811\">Archer_BonusAbility02Ready</a>"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Skill02UseCountInCaps",
+                  "value": 0
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"308886295\">Archer_BPAbility_AddDamagePercentage</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_InBonus",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Action Completed [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "QueuedUltimates",
+                        "compareType": "=",
+                        "value2": 0,
+                        "includeInjectedActions": true
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "QueuedActions",
+                        "compareType": "=",
+                        "value2": 0
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Flag_HaveOtherAction",
+                      "value": 0
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Flag_HaveOtherAction",
+                      "value": 1
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "CurrentSkillPoints",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_BPNeed) || RETURN",
+                          "displayLines": "MDF_BPNeed",
+                          "constants": [],
+                          "variables": [
+                            "MDF_BPNeed"
+                          ]
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_Skill02UseCountInCaps",
+                        "compareType": "<",
+                        "value2": {
+                          "operator": "Variables[0] (5) || RETURN",
+                          "displayLines": "5",
+                          "constants": [],
+                          "variables": [
+                            5
+                          ]
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_AlreadyInBonusAction",
+                        "compareType": "=",
+                        "value2": 0
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-130031811\">Archer_BonusAbility02Ready</a>"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_IsWindfurySkill",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Inject Extra-Turn",
+                          "actionTag": "Archer_Bonus",
+                          "skillType": "ControlSkill02",
+                          "canInjectUltimates": true,
+                          "followSameTagAsAction": true,
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "afterInjection": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "MDF_InBonus",
+                              "value": 0
+                            },
+                            "Modifier Deletes Itself"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_InBonus",
+                      "value": 1
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_AlreadyInBonusAction",
+                      "value": 1
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value1": "MDF_Flag_HaveOtherAction",
+                            "compareType": "=",
+                            "value2": 0
+                          },
+                          {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Next Extra Turn Is",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
+                                "actionType": "Normal"
+                              },
+                              {
+                                "name": "Next Extra Turn Is",
+                                "invertCondition": true,
+                                "tag": "Archer_Bonus"
+                              },
+                              {
+                                "name": "Next Extra Turn Is",
+                                "invertCondition": true,
+                                "tag": "ActionTag_Windfury"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Compare: Variable",
+                                "value1": "MDF_Skill02UseCountInCaps",
+                                "compareType": "=",
+                                "value2": {
+                                  "operator": "Variables[0] (5) || RETURN",
+                                  "displayLines": "5",
+                                  "constants": [],
+                                  "variables": [
+                                    5
+                                  ]
+                                }
+                              },
+                              {
+                                "name": "Compare: Variable",
+                                "value1": "MDF_IsWindfurySkill",
+                                "compareType": "=",
+                                "value2": 1
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "passed": [
+                        "Modifier Deletes Itself"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "New Enemy Wave",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-130031811\">Archer_BonusAbility02Ready</a>",
+          "latentQueue": [
+            "MDF_InBonus",
+            "MDF_Flag_HaveOtherAction",
+            "MDF_AlreadyInBonusAction",
+            "MDF_IsWindfurySkill"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "skillSlot": "Basic ATK",
+                  "enableSecondaryType": "ControlSkill04"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Disable Abilities",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "abilityTypes": [
+                    "Basic ATK"
+                  ]
+                },
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityName": "Skill21",
+                  "skillSlot": "Skill",
+                  "enableSecondaryType": "ControlSkill04"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Update Target Selected(UI) [Owner]"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__308886295\">Archer_BPAbility_AddDamagePercentage</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Each stack increases DMG dealt by Skill by <span class=\"descriptionNumberColor\">#Skill02_P2_ExtraDamage</span>.",
+          "type": "Buff",
+          "effectName": "Enhanced Skill",
+          "statusName": "Circuit Connection",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_Skill02ExtraCount",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Skill"
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "(MDF_Skill02ExtraCount * MDF_PropertyValue)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "valueType": "Layer",
+                  "variableName": "MDF_Skill02ExtraCount",
+                  "multiplier": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1473893661\">Archer_Eidolon2_AddWeak</a>[<span class=\"descriptionNumberColor\">The Unfulfilled Happiness</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_AttachWeakness"
+          ],
+          "description": "Additionally implanted Quantum Weakness. Quantum RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Implanted Quantum Weakness",
+          "statusName": "The Unfulfilled Happiness",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Implant Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "element": "Quantum",
+                  "resReduction": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || INVERT || RETURN",
+                    "displayLines": "-MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__496562314\">Archer_Insert_Target</a>"
+        }
+      ],
+      "references": []
+    },
     "Archer_Archer_Trace03": {
       "fileName": "Archer_Archer_Trace03",
       "abilityType": null,
@@ -3023,436 +3435,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Archer_Modifiers": {
-      "fileName": "Archer_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1612899858\">Archer_BonusTrigger</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
-          "latentQueue": [
-            "MDF_AlreadyInBonusAction"
-          ],
-          "description": "After using Skill, if there are sufficient Skill Points to use it again, the turn will not end.",
-          "type": "Other",
-          "effectName": "Circuit Connection",
-          "statusName": "Circuit Connection",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-130031811\">Archer_BonusAbility02Ready</a>"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_Skill02UseCountInCaps",
-                  "value": 0
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"308886295\">Archer_BPAbility_AddDamagePercentage</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_InBonus",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Action Completed [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "QueuedUltimates",
-                        "compareType": "=",
-                        "value2": 0,
-                        "includeInjectedActions": true
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "QueuedActions",
-                        "compareType": "=",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_Flag_HaveOtherAction",
-                      "value": 0
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_Flag_HaveOtherAction",
-                      "value": 1
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "CurrentSkillPoints",
-                        "compareType": ">=",
-                        "value2": {
-                          "operator": "Variables[0] (MDF_BPNeed) || RETURN",
-                          "displayLines": "MDF_BPNeed",
-                          "constants": [],
-                          "variables": [
-                            "MDF_BPNeed"
-                          ]
-                        }
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "MDF_Skill02UseCountInCaps",
-                        "compareType": "<",
-                        "value2": {
-                          "operator": "Variables[0] (5) || RETURN",
-                          "displayLines": "5",
-                          "constants": [],
-                          "variables": [
-                            5
-                          ]
-                        }
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "MDF_AlreadyInBonusAction",
-                        "compareType": "=",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-130031811\">Archer_BonusAbility02Ready</a>"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "MDF_IsWindfurySkill",
-                        "compareType": "=",
-                        "value2": 0
-                      },
-                      "passed": [
-                        {
-                          "name": "Inject Extra-Turn",
-                          "actionTag": "Archer_Bonus",
-                          "skillType": "ControlSkill02",
-                          "canInjectUltimates": true,
-                          "followSameTagAsAction": true,
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "afterInjection": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "MDF_InBonus",
-                              "value": 0
-                            },
-                            "Modifier Deletes Itself"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_InBonus",
-                      "value": 1
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_AlreadyInBonusAction",
-                      "value": 1
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "value1": "MDF_Flag_HaveOtherAction",
-                            "compareType": "=",
-                            "value2": 0
-                          },
-                          {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Next Extra Turn Is",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Modifier Holder}}"
-                                },
-                                "actionType": "Normal"
-                              },
-                              {
-                                "name": "Next Extra Turn Is",
-                                "invertCondition": true,
-                                "tag": "Archer_Bonus"
-                              },
-                              {
-                                "name": "Next Extra Turn Is",
-                                "invertCondition": true,
-                                "tag": "ActionTag_Windfury"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Compare: Variable",
-                                "value1": "MDF_Skill02UseCountInCaps",
-                                "compareType": "=",
-                                "value2": {
-                                  "operator": "Variables[0] (5) || RETURN",
-                                  "displayLines": "5",
-                                  "constants": [],
-                                  "variables": [
-                                    5
-                                  ]
-                                }
-                              },
-                              {
-                                "name": "Compare: Variable",
-                                "value1": "MDF_IsWindfurySkill",
-                                "compareType": "=",
-                                "value2": 1
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "passed": [
-                        "Modifier Deletes Itself"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-130031811\">Archer_BonusAbility02Ready</a>",
-          "latentQueue": [
-            "MDF_AlreadyInBonusAction",
-            "MDF_InBonus",
-            "MDF_Flag_HaveOtherAction",
-            "MDF_IsWindfurySkill"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "skillSlot": "Basic ATK",
-                  "enableSecondaryType": "ControlSkill04"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Disable Abilities",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "abilityTypes": [
-                    "Basic ATK"
-                  ]
-                },
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityName": "Skill21",
-                  "skillSlot": "Skill",
-                  "enableSecondaryType": "ControlSkill04"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Update Target Selected(UI) [Owner]"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__308886295\">Archer_BPAbility_AddDamagePercentage</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "MDF_AlreadyInBonusAction",
-            "MDF_IsWindfurySkill"
-          ],
-          "description": "Each stack increases DMG dealt by Skill by <span class=\"descriptionNumberColor\">#Skill02_P2_ExtraDamage</span>.",
-          "type": "Buff",
-          "effectName": "Enhanced Skill",
-          "statusName": "Circuit Connection",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_Skill02ExtraCount",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Deal Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Attack Type",
-                    "attackTypes": [
-                      "Skill"
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Stats",
-                      "modifiedValuesArray": [
-                        {
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                          "value": "(MDF_Skill02ExtraCount * MDF_PropertyValue)"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "valueType": "Layer",
-                  "variableName": "MDF_Skill02ExtraCount",
-                  "multiplier": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1473893661\">Archer_Eidolon2_AddWeak</a>[<span class=\"descriptionNumberColor\">The Unfulfilled Happiness</span>]",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_AttachWeakness"
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "description": "Additionally implanted Quantum Weakness. Quantum RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
-          "type": "Debuff",
-          "effectName": "Implanted Quantum Weakness",
-          "statusName": "The Unfulfilled Happiness",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Implant Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "element": "Quantum",
-                  "resReduction": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || INVERT || RETURN",
-                    "displayLines": "-MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__496562314\">Archer_Insert_Target</a>",
-          "latentQueue": [
-            "MDF_InsertUsed",
-            "MDF_HasMainTarget",
-            "OnInsertAbort_Flg"
-          ]
-        }
-      ],
-      "references": []
     }
   }
 }

@@ -680,13 +680,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "stackData": [
-        "MDF_Lifetime",
-        "MDF_DamageUp",
-        "MDF_DamageUpExtra",
-        "MDF_RecoverCount",
-        "MDF_BPRecover"
-      ],
       "description": "For every 2 Basic Attacks, Skills, or Ultimates allies use on an enemy with Burden, recover 1 Skill Point.",
       "type": "Other",
       "effectName": "Burden",
@@ -1557,11 +1550,6 @@ const configAbility = {
       "stackType": "Replace",
       "modifierFlags": [
         "STAT_SpeedUp"
-      ],
-      "stackData": [
-        "Skill03_P1_ATKRatio",
-        "Skill03_P3_Speed",
-        "MDF_Skill03_Speed"
       ],
       "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackDelta</span> and SPD by <span class=\"descriptionNumberColor\">MDF_Speed</span> points.",
       "type": "Buff",

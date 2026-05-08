@@ -36,12 +36,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-28797912\">Modifier_FantasticStory_BaseAbility_0050_plus3_sub</a>[<span class=\"descriptionNumberColor\">Free Writing</span>]",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag",
-        "DV_FantasticStory_PlusAbility_0053",
-        "DV_FantasticStory_PlusAbility_0052",
-        "DV_FantasticStory_PlusAbility_0051"
-      ],
       "description": "When attacking via using Ultimate, ignore the enemy targets' Weakness to deal Toughness Reduction.",
       "type": "Buff",
       "statusName": "Free Writing",
@@ -93,12 +87,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__805201127\">Modifier_FantasticStory_BaseAbility_0050_plus2_sub</a>[<span class=\"descriptionNumberColor\">Picturesque</span>]",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag",
-        "DV_FantasticStory_PlusAbility_0053",
-        "DV_FantasticStory_PlusAbility_0052",
-        "DV_FantasticStory_PlusAbility_0051"
-      ],
       "description": "Follow-Up ATK DMG dealt increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0052_ADF_1</span>. Follow-Up ATKs' Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0052_ADF_2</span>.",
       "type": "Buff",
       "statusName": "Picturesque",
@@ -140,12 +128,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__225763044\">Modifier_FantasticStory_BaseAbility_0050_plus1_sub2</a>[<span class=\"descriptionNumberColor\">Arioso</span>]",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag",
-        "DV_FantasticStory_PlusAbility_0053",
-        "DV_FantasticStory_PlusAbility_0052",
-        "DV_FantasticStory_PlusAbility_0051"
-      ],
       "description": "Break DMG taken increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0051_ADF_1</span>.",
       "type": "Debuff",
       "effectName": "Arioso",
@@ -187,12 +169,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__937919550\">Modifier_FantasticStory_BaseAbility_0050_plus1_sub</a>[<span class=\"descriptionNumberColor\">Arioso</span>]",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag",
-        "DV_FantasticStory_PlusAbility_0053",
-        "DV_FantasticStory_PlusAbility_0052",
-        "DV_FantasticStory_PlusAbility_0051"
-      ],
       "description": "If Super Break DMG is dealt to enemies after using an attack, additionally charges Whimsicality by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0051_ADF_2</span> points.",
       "type": "Buff",
       "statusName": "Arioso",
@@ -292,15 +268,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1558011426\">Modifier_FantasticStory_BaseAbility_0040_plus2_sub</a>[<span class=\"descriptionNumberColor\">Ultimate DMG Boost</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "_DamageUpRatio"
-      ],
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_0040_TriggerDamageFlag",
-        "DV_FantasticStory_PlusAbility_0043",
-        "DV_FantasticStory_PlusAbility_0042",
-        "DV_FantasticStory_PlusAbility_0041"
-      ],
       "description": "Increases DMG dealt by Ultimate by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0042_ADF_1</span>. After the Ultimate is cast, Whimsicality additionally gains <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_0042_ADF_2</span> point(s) of Charge.",
       "type": "Buff",
       "effectName": "Ultimate DMG Boost",
@@ -365,19 +332,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1083847243\">Modifier_FantasticStory_BaseAbility_0030_plus6_sub</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "_DamageSumRatio"
-      ],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_0031_TriggerDamageFlag",
-        "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
-        "DV_FantasticStory_PlusAbility_0036",
-        "DV_FantasticStory_PlusAbility_0035",
-        "DV_FantasticStory_PlusAbility_0034",
-        "DV_FantasticStory_PlusAbility_0033",
-        "DV_FantasticStory_PlusAbility_0032",
-        "DV_FantasticStory_PlusAbility_0031"
-      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage End [Owner]: Any",
@@ -434,11 +388,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1117415883\">Modifier_FantasticStory_BaseAbility_0030_plus5_AddStockedSP</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
-        "DV_FantasticStory_PlusAbility_0034",
-        "DV_FantasticStory_PlusAbility_0035"
-      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: End",
@@ -569,14 +518,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1329142430\">Modifier_FantasticStory_BaseAbility_0030_plus5_AddSP</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "_AddSP"
-      ],
-      "latentQueue": [
-        "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
-        "DV_FantasticStory_PlusAbility_0034",
-        "DV_FantasticStory_PlusAbility_0035"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -742,12 +683,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1737739841\">Modifier_FantasticStory_BaseAbility_0010_plus6_sub</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_0016",
-        "DV_FantasticStory_PlusAbility_0014",
-        "DV_FantasticStory_PlusAbility_0013",
-        "DV_FantasticStory_PlusAbility_0012"
-      ],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
@@ -840,12 +775,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1440555734\">Modifier_FantasticStory_BaseAbility_0010_plus5_sub</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_0016",
-        "DV_FantasticStory_PlusAbility_0014",
-        "DV_FantasticStory_PlusAbility_0013",
-        "DV_FantasticStory_PlusAbility_0012"
-      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: Start",
@@ -975,12 +904,6 @@ const configAbility = {
       "stackType": "Replace",
       "stackData": [
         "ReceiveDmgRatio"
-      ],
-      "latentQueue": [
-        "DV_FantasticStory_PlusAbility_0012",
-        "DV_FantasticStory_PlusAbility_0013",
-        "DV_FantasticStory_PlusAbility_0014",
-        "DV_FantasticStory_PlusAbility_0016"
       ],
       "description": "Increases DMG received by <span class=\"descriptionNumberColor\">TotalDmgRatio</span>.",
       "type": "Debuff",

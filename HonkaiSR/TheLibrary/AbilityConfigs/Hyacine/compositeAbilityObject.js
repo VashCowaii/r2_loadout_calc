@@ -5,6 +5,7 @@ const compositeAbilityObject = {
   "summonName": "Little Ica",
   "trimSummonName": "LittleIca",
   "abilityList": [
+    "Hyacine_Modifiers",
     "Hyacine_Hyacine_TechniqueInLevel",
     "Hyacine_Hyacine_PassiveAbility01",
     "Hyacine_Hyacine_Ability03_Part02",
@@ -14,15 +15,1054 @@ const compositeAbilityObject = {
     "Hyacine_Hyacine_Ability02_Part01",
     "Hyacine_Hyacine_Ability01_Part02",
     "Hyacine_Hyacine_Ability01_Part01",
-    "Hyacine_Modifiers",
+    "LittleIca_Modifiers",
     "LittleIca_Servant_HyacineServant_DeathRattle",
     "LittleIca_Servant_HyacineServant_BattleCry",
     "LittleIca_Servant_HyacineServant_PassiveAbility",
     "LittleIca_Servant_HyacineServant_Ability01_Part02",
-    "LittleIca_Servant_HyacineServant_Ability01_Part01",
-    "LittleIca_Modifiers"
+    "LittleIca_Servant_HyacineServant_Ability01_Part01"
   ],
   "abilityObject": {
+    "Hyacine_Modifiers": {
+      "fileName": "Hyacine_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__593318455\">Hyacine_Ability03_MaxHP_Grow</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
+          "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> plus <span class=\"descriptionNumberColor\">MDF_MaxHPValue</span>.",
+          "type": "Buff",
+          "statusName": "After Rain",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 1
+                  },
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_ExtraMaxHPRatio",
+                      "value": 0
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_PropertyValue",
+                  "value": {
+                    "operator": "Variables[0] (MDF_MaxHPRatio) || Variables[1] (MDF_ExtraMaxHPRatio) || ADD || RETURN",
+                    "displayLines": "(MDF_MaxHPRatio + MDF_ExtraMaxHPRatio)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_MaxHPRatio",
+                      "MDF_ExtraMaxHPRatio"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_MaxHPValue) || RETURN",
+                    "displayLines": "MDF_MaxHPValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_MaxHPValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1347756164\">Memosprite_HyacineServant_MuteSpeed</a>",
+          "modifierFlags": [
+            "MuteSpeed"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__290730475\">Hyacine_Eidolon2_Listen</a>",
+          "execute": [
+            {
+              "eventTrigger": "HP Change [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "mustBeAlive2": true
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Change_In_Current_Value",
+                        "compareType": "<",
+                        "value2": 0
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1897109390\">Memosprite_HyacineServant_Eidolon2SpeedUp</a>[<span class=\"descriptionNumberColor\">Come Sit in My Courtyard</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (2) || RETURN",
+                        "displayLines": "2",
+                        "constants": [],
+                        "variables": [
+                          2
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_SpeedUpRatio": {
+                          "operator": "Variables[0] (0.3) || RETURN",
+                          "displayLines": "0.3",
+                          "constants": [],
+                          "variables": [
+                            0.3
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
+          "stackType": "ReplaceByCaster",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> plus <span class=\"descriptionNumberColor\">MDF_HaloMaxHPValue</span>.",
+          "type": "Buff",
+          "effectName": "After Rain",
+          "statusName": "After Rain",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}} - {{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"593318455\">Hyacine_Ability03_MaxHP_Grow</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
+              "aliveOnly": "False",
+              "haloStatus": true,
+              "valuePerStack": {
+                "MDF_CurrentHP": {
+                  "operator": "Variables[0] (_CurrenMaxtHP) || RETURN",
+                  "displayLines": "_CurrenMaxtHP",
+                  "constants": [],
+                  "variables": [
+                    "_CurrenMaxtHP"
+                  ]
+                },
+                "MDF_MaxHPRatio": {
+                  "operator": "Variables[0] (0.3) || RETURN",
+                  "displayLines": "0.3",
+                  "constants": [],
+                  "variables": [
+                    0.3
+                  ]
+                },
+                "MDF_MaxHPValue": {
+                  "operator": "Variables[0] (600) || RETURN",
+                  "displayLines": "600",
+                  "constants": [],
+                  "variables": [
+                    600
+                  ]
+                },
+                "MDF_ExtraMaxHPRatio": {
+                  "operator": "Variables[0] (0.5) || RETURN",
+                  "displayLines": "0.5",
+                  "constants": [],
+                  "variables": [
+                    0.5
+                  ]
+                }
+              }
+            }
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_Energy",
+                  "value": 0
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (_Energy) || RETURN",
+                    "displayLines": "_Energy",
+                    "constants": [],
+                    "variables": [
+                      "_Energy"
+                    ]
+                  },
+                  "maximum": {
+                    "operator": "Variables[0] (3) || RETURN",
+                    "displayLines": "3",
+                    "constants": [],
+                    "variables": [
+                      3
+                    ]
+                  },
+                  "assignState": "True",
+                  "bar#": "Dot"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Action Phase Start [Owner][?]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "valueType": "LifeTime",
+                  "variableName": "_Energy",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (_Energy) || RETURN",
+                    "displayLines": "_Energy",
+                    "constants": [],
+                    "variables": [
+                      "_Energy"
+                    ]
+                  },
+                  "maximum": {
+                    "operator": "Variables[0] (3) || RETURN",
+                    "displayLines": "3",
+                    "constants": [],
+                    "variables": [
+                      3
+                    ]
+                  },
+                  "assignState": "True",
+                  "bar#": "Dot"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 1
+                  },
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_ExtraMaxHPRatio",
+                      "value": 0
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_PropertyValue",
+                  "value": {
+                    "operator": "Variables[0] (MDF_HaloMaxHPRatio) || Variables[1] (MDF_ExtraMaxHPRatio) || ADD || RETURN",
+                    "displayLines": "(MDF_HaloMaxHPRatio + MDF_ExtraMaxHPRatio)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_HaloMaxHPRatio",
+                      "MDF_ExtraMaxHPRatio"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_HaloMaxHPValue) || RETURN",
+                    "displayLines": "MDF_HaloMaxHPValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_HaloMaxHPValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "valueType": "LifeTime",
+                  "variableName": "_Energy",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (_Energy) || RETURN",
+                    "displayLines": "_Energy",
+                    "constants": [],
+                    "variables": [
+                      "_Energy"
+                    ]
+                  },
+                  "maximum": {
+                    "operator": "Variables[0] (3) || RETURN",
+                    "displayLines": "3",
+                    "constants": [],
+                    "variables": [
+                      3
+                    ]
+                  },
+                  "assignState": "True",
+                  "bar#": "Dot"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Eidolon Activated",
+                        "eidolon": 1
+                      },
+                      {
+                        "name": "Is Entity a Battle Event/Summon",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Heal",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "healPercent": {
+                        "operator": "Variables[0] (0.08) || RETURN",
+                        "displayLines": "0.08",
+                        "constants": [],
+                        "variables": [
+                          0.08
+                        ]
+                      },
+                      "formula": "Heal from Healer's MaxHP"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "Inject Extra-Turn",
+                  "actionTag": null,
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Memosprite}}"
+                  },
+                  "afterInjection": [],
+                  "priorityTag": "CharacterChainedSkill"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Memosprite}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Modifier Values",
+                      "valueType": "LifeTime",
+                      "variableName": "_Energy",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
+                      "multiplier": 1
+                    },
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (_Energy) || RETURN",
+                        "displayLines": "_Energy",
+                        "constants": [],
+                        "variables": [
+                          "_Energy"
+                        ]
+                      },
+                      "maximum": {
+                        "operator": "Variables[0] (3) || RETURN",
+                        "displayLines": "3",
+                        "constants": [],
+                        "variables": [
+                          3
+                        ]
+                      },
+                      "assignState": "True",
+                      "bar#": "Dot"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1132518124\">Hyacine_Passive_Effect</a>[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
+          "stackType": "Replace",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageAddRatioTotal</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "First Light Heals the World",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_DamageAddRatioTotal",
+                  "value": {
+                    "operator": "Variables[0] (MDF_DamageAddRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
+                    "displayLines": "(MDF_DamageAddRatio * MDF_Layer)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_DamageAddRatio",
+                      "MDF_Layer"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_DamageAddRatioTotal) || RETURN",
+                    "displayLines": "MDF_DamageAddRatioTotal",
+                    "constants": [],
+                    "variables": [
+                      "MDF_DamageAddRatioTotal"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__931141896\">Hyacine_PointB2</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__672502407\">Hyacine_PointB1_Effect</a>",
+          "execute": [
+            {
+              "eventTrigger": "Heal Target Start [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value1": "CurrentHP%",
+                    "compareType": "<=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
+                      "displayLines": "MDF_HPRatio",
+                      "constants": [],
+                      "variables": [
+                        "MDF_HPRatio"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Healing Stats",
+                      "on": "Healer",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingSUM</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (MDF_HealRatio) || RETURN",
+                        "displayLines": "MDF_HealRatio",
+                        "constants": [],
+                        "variables": [
+                          "MDF_HealRatio"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_CritChance) || RETURN",
+                    "displayLines": "MDF_CritChance",
+                    "constants": [],
+                    "variables": [
+                      "MDF_CritChance"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__981474753\">Hyacine_PointB1</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"672502407\">Hyacine_PointB1_Effect</a>",
+                  "valuePerStack": {
+                    "MDF_CritChance": {
+                      "operator": "Variables[0] (1) || RETURN",
+                      "displayLines": "1",
+                      "constants": [],
+                      "variables": [
+                        1
+                      ]
+                    },
+                    "MDF_HPRatio": {
+                      "operator": "Variables[0] (0.5) || RETURN",
+                      "displayLines": "0.5",
+                      "constants": [],
+                      "variables": [
+                        0.5
+                      ]
+                    },
+                    "MDF_HealRatio": {
+                      "operator": "Variables[0] (0.25) || RETURN",
+                      "displayLines": "0.25",
+                      "constants": [],
+                      "variables": [
+                        0.25
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}.[[getMemosprite]]"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"672502407\">Hyacine_PointB1_Effect</a>",
+                      "valuePerStack": {
+                        "MDF_CritChance": {
+                          "operator": "Variables[0] (1) || RETURN",
+                          "displayLines": "1",
+                          "constants": [],
+                          "variables": [
+                            1
+                          ]
+                        },
+                        "MDF_HPRatio": {
+                          "operator": "Variables[0] (0.5) || RETURN",
+                          "displayLines": "0.5",
+                          "constants": [],
+                          "variables": [
+                            0.5
+                          ]
+                        },
+                        "MDF_HealRatio": {
+                          "operator": "Variables[0] (0.25) || RETURN",
+                          "displayLines": "0.25",
+                          "constants": [],
+                          "variables": [
+                            0.25
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1110430040\">Hyacine_PointB3_Effect</a>[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]",
+          "stackType": "Replace",
+          "description": "Max HP increases by <span class=\"descriptionNumberColor\">_MaxHPAdd</span> and Outgoing Healing increases by <span class=\"descriptionNumberColor\">_HealHPRatioAdd</span>.",
+          "type": "Buff",
+          "statusName": "Tempestuous Halt",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (_MaxHPAdd) || RETURN",
+                    "displayLines": "_MaxHPAdd",
+                    "constants": [],
+                    "variables": [
+                      "_MaxHPAdd"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingConverted</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (_HealHPRatioAdd) || RETURN",
+                    "displayLines": "_HealHPRatioAdd",
+                    "constants": [],
+                    "variables": [
+                      "_HealHPRatioAdd"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Eidolon Activated",
+                        "eidolon": 4
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "_MaxCritDmgAdd",
+                        "compareType": ">",
+                        "value2": 0
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Modifier Description",
+                      "popUpText": "Max HP increases by <span class=\"descriptionNumberColor\">_MaxHPAdd</span>, Outgoing Healing increases by <span class=\"descriptionNumberColor\">_HealHPRatioAdd</span>, and CRIT DMG increases by <span class=\"descriptionNumberColor\">_MaxCritDmgAdd</span>."
+                    },
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (_MaxCritDmgAdd) || RETURN",
+                        "displayLines": "_MaxCritDmgAdd",
+                        "constants": [],
+                        "variables": [
+                          "_MaxCritDmgAdd"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1888501948\">Hyacine_PointB3</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "_CurrentSpeed",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "_CurrentSpeed",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (200) || RETURN",
+                      "displayLines": "200",
+                      "constants": [],
+                      "variables": [
+                        200
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "variableName": "_CurrentSpeedConvert",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_CurrentSpeed",
+                      "value": {
+                        "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (_CurrentSpeedConvert) || SUB || RETURN",
+                        "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)",
+                        "constants": [],
+                        "variables": [
+                          "_CurrentSpeed",
+                          "_CurrentSpeedConvert"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_OverCountSpeedValue",
+                      "value": {
+                        "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (200) || SUB || RETURN",
+                        "displayLines": "(_CurrentSpeed - 200)",
+                        "constants": [],
+                        "variables": [
+                          "_CurrentSpeed",
+                          200
+                        ]
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "_OverCountSpeedValue",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (200) || RETURN",
+                          "displayLines": "200",
+                          "constants": [],
+                          "variables": [
+                            200
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "_OverCountSpeedValue",
+                          "value": {
+                            "operator": "Variables[0] (200) || RETURN",
+                            "displayLines": "200",
+                            "constants": [],
+                            "variables": [
+                              200
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "_OverCountSpeedValue",
+                        "compareType": ">",
+                        "value2": {
+                          "operator": "Variables[0] (1) || RETURN",
+                          "displayLines": "1",
+                          "constants": [],
+                          "variables": [
+                            1
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "_HealHPRatioAdd",
+                          "value": {
+                            "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.01) || MUL || RETURN",
+                            "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.01)",
+                            "constants": [],
+                            "variables": [
+                              "FLOOR",
+                              "_OverCountSpeedValue",
+                              1,
+                              0.01
+                            ]
+                          }
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Eidolon Activated",
+                            "eidolon": 4
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_MaxCritDmgAdd",
+                              "value": {
+                                "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.02) || MUL || RETURN",
+                                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.02)",
+                                "constants": [],
+                                "variables": [
+                                  "FLOOR",
+                                  "_OverCountSpeedValue",
+                                  1,
+                                  0.02
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "_HealHPRatioAdd",
+                          "value": 0
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "_MaxCritDmgAdd",
+                          "value": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}+{{Caster's Memosprite}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1110430040\">Hyacine_PointB3_Effect</a>[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]",
+                      "valuePerStack": {
+                        "_MaxHPAdd": {
+                          "operator": "Variables[0] (0.2) || RETURN",
+                          "displayLines": "0.2",
+                          "constants": [],
+                          "variables": [
+                            0.2
+                          ]
+                        },
+                        "_HealHPRatioAdd": {
+                          "operator": "Variables[0] (_HealHPRatioAdd) || RETURN",
+                          "displayLines": "_HealHPRatioAdd",
+                          "constants": [],
+                          "variables": [
+                            "_HealHPRatioAdd"
+                          ]
+                        },
+                        "_MaxCritDmgAdd": {
+                          "operator": "Variables[0] (_MaxCritDmgAdd) || RETURN",
+                          "displayLines": "_MaxCritDmgAdd",
+                          "constants": [],
+                          "variables": [
+                            "_MaxCritDmgAdd"
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}+{{Caster's Memosprite}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1110430040\">Hyacine_PointB3_Effect</a>[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "Hyacine_Hyacine_TechniqueInLevel": {
       "fileName": "Hyacine_Hyacine_TechniqueInLevel",
       "childAbilityList": [
@@ -1241,1520 +2281,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target"
       }
     },
-    "Hyacine_Modifiers": {
-      "fileName": "Hyacine_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__593318455\">Hyacine_Ability03_MaxHP_Grow</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
-          "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> plus <span class=\"descriptionNumberColor\">MDF_MaxHPValue</span>.",
-          "type": "Buff",
-          "statusName": "After Rain",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 1
-                  },
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_ExtraMaxHPRatio",
-                      "value": 0
-                    }
-                  ]
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
-                  "value": {
-                    "operator": "Variables[0] (MDF_MaxHPRatio) || Variables[1] (MDF_ExtraMaxHPRatio) || ADD || RETURN",
-                    "displayLines": "(MDF_MaxHPRatio + MDF_ExtraMaxHPRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHPRatio",
-                      "MDF_ExtraMaxHPRatio"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_MaxHPValue) || RETURN",
-                    "displayLines": "MDF_MaxHPValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxHPValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1347756164\">Memosprite_HyacineServant_MuteSpeed</a>",
-          "modifierFlags": [
-            "MuteSpeed"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__290730475\">Hyacine_Eidolon2_Listen</a>",
-          "execute": [
-            {
-              "eventTrigger": "HP Change [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of",
-                        "of": {
-                          "name": "Target Name",
-                          "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "Change_In_Current_Value",
-                        "compareType": "<",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1897109390\">Memosprite_HyacineServant_Eidolon2SpeedUp</a>[<span class=\"descriptionNumberColor\">Come Sit in My Courtyard</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_SpeedUpRatio": {
-                          "operator": "Variables[0] (0.3) || RETURN",
-                          "displayLines": "0.3",
-                          "constants": [],
-                          "variables": [
-                            0.3
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
-          "stackType": "ReplaceByCaster",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "stackData": [
-            "MDF_HaloCurrentHP",
-            "MDF_HaloMaxHPRatio",
-            "MDF_HaloMaxHPValue",
-            "MDF_ExtraMaxHPRatio"
-          ],
-          "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> plus <span class=\"descriptionNumberColor\">MDF_HaloMaxHPValue</span>.",
-          "type": "Buff",
-          "effectName": "After Rain",
-          "statusName": "After Rain",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectables}} - {{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"593318455\">Hyacine_Ability03_MaxHP_Grow</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
-              "aliveOnly": "False",
-              "haloStatus": true,
-              "valuePerStack": {
-                "MDF_CurrentHP": {
-                  "operator": "Variables[0] (_CurrenMaxtHP) || RETURN",
-                  "displayLines": "_CurrenMaxtHP",
-                  "constants": [],
-                  "variables": [
-                    "_CurrenMaxtHP"
-                  ]
-                },
-                "MDF_MaxHPRatio": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
-                },
-                "MDF_MaxHPValue": {
-                  "operator": "Variables[0] (600) || RETURN",
-                  "displayLines": "600",
-                  "constants": [],
-                  "variables": [
-                    600
-                  ]
-                },
-                "MDF_ExtraMaxHPRatio": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
-                }
-              }
-            }
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_Energy",
-                  "value": 0
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (_Energy) || RETURN",
-                    "displayLines": "_Energy",
-                    "constants": [],
-                    "variables": [
-                      "_Energy"
-                    ]
-                  },
-                  "maximum": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
-                  },
-                  "assignState": "True",
-                  "bar#": "Dot"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Action Phase Start [Owner][?]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "valueType": "LifeTime",
-                  "variableName": "_Energy",
-                  "modifierName": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (_Energy) || RETURN",
-                    "displayLines": "_Energy",
-                    "constants": [],
-                    "variables": [
-                      "_Energy"
-                    ]
-                  },
-                  "maximum": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
-                  },
-                  "assignState": "True",
-                  "bar#": "Dot"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Eidolon Activated",
-                    "eidolon": 1
-                  },
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_ExtraMaxHPRatio",
-                      "value": 0
-                    }
-                  ]
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
-                  "value": {
-                    "operator": "Variables[0] (MDF_HaloMaxHPRatio) || Variables[1] (MDF_ExtraMaxHPRatio) || ADD || RETURN",
-                    "displayLines": "(MDF_HaloMaxHPRatio + MDF_ExtraMaxHPRatio)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HaloMaxHPRatio",
-                      "MDF_ExtraMaxHPRatio"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_HaloMaxHPValue) || RETURN",
-                    "displayLines": "MDF_HaloMaxHPValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HaloMaxHPValue"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "valueType": "LifeTime",
-                  "variableName": "_Energy",
-                  "modifierName": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Update Displayed Energy Bar",
-                  "value": {
-                    "operator": "Variables[0] (_Energy) || RETURN",
-                    "displayLines": "_Energy",
-                    "constants": [],
-                    "variables": [
-                      "_Energy"
-                    ]
-                  },
-                  "maximum": {
-                    "operator": "Variables[0] (3) || RETURN",
-                    "displayLines": "3",
-                    "constants": [],
-                    "variables": [
-                      3
-                    ]
-                  },
-                  "assignState": "True",
-                  "bar#": "Dot"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Attack DMG End [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      },
-                      {
-                        "name": "Eidolon Activated",
-                        "eidolon": 1
-                      },
-                      {
-                        "name": "Is Entity a Battle Event/Summon",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Heal",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "healPercent": {
-                        "operator": "Variables[0] (0.08) || RETURN",
-                        "displayLines": "0.08",
-                        "constants": [],
-                        "variables": [
-                          0.08
-                        ]
-                      },
-                      "formula": "Heal from Healer's MaxHP"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "Inject Extra-Turn",
-                  "actionTag": null,
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Memosprite}}"
-                  },
-                  "afterInjection": [],
-                  "priorityTag": "CharacterChainedSkill"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Caster's Memosprite}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Modifier Values",
-                      "valueType": "LifeTime",
-                      "variableName": "_Energy",
-                      "modifierName": "<a class=\"gModGreen\" id=\"-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
-                      "multiplier": 1
-                    },
-                    {
-                      "name": "Update Displayed Energy Bar",
-                      "value": {
-                        "operator": "Variables[0] (_Energy) || RETURN",
-                        "displayLines": "_Energy",
-                        "constants": [],
-                        "variables": [
-                          "_Energy"
-                        ]
-                      },
-                      "maximum": {
-                        "operator": "Variables[0] (3) || RETURN",
-                        "displayLines": "3",
-                        "constants": [],
-                        "variables": [
-                          3
-                        ]
-                      },
-                      "assignState": "True",
-                      "bar#": "Dot"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1132518124\">Hyacine_Passive_Effect</a>[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
-          "stackType": "Replace",
-          "stackData": [
-            "MDF_DamageAddRatio"
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageAddRatioTotal</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "First Light Heals the World",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "valueType": "Layer",
-                  "variableName": "MDF_Layer",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageAddRatioTotal",
-                  "value": {
-                    "operator": "Variables[0] (MDF_DamageAddRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(MDF_DamageAddRatio * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageAddRatio",
-                      "MDF_Layer"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_DamageAddRatioTotal) || RETURN",
-                    "displayLines": "MDF_DamageAddRatioTotal",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageAddRatioTotal"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__931141896\">Hyacine_PointB2</a>",
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__672502407\">Hyacine_PointB1_Effect</a>",
-          "execute": [
-            {
-              "eventTrigger": "Heal Target Start [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value1": "CurrentHP%",
-                    "compareType": "<=",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_HPRatio) || RETURN",
-                      "displayLines": "MDF_HPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_HPRatio"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Adjust Target Healing Stats",
-                      "on": "Healer",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingSUM</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_HealRatio) || RETURN",
-                        "displayLines": "MDF_HealRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HealRatio"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_CritChance) || RETURN",
-                    "displayLines": "MDF_CritChance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_CritChance"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__981474753\">Hyacine_PointB1</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"672502407\">Hyacine_PointB1_Effect</a>",
-                  "valuePerStack": {
-                    "MDF_CritChance": {
-                      "operator": "Variables[0] (1) || RETURN",
-                      "displayLines": "1",
-                      "constants": [],
-                      "variables": [
-                        1
-                      ]
-                    },
-                    "MDF_HPRatio": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
-                    },
-                    "MDF_HealRatio": {
-                      "operator": "Variables[0] (0.25) || RETURN",
-                      "displayLines": "0.25",
-                      "constants": [],
-                      "variables": [
-                        0.25
-                      ]
-                    }
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Target",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "target2": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}.[[getMemosprite]]"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"672502407\">Hyacine_PointB1_Effect</a>",
-                      "valuePerStack": {
-                        "MDF_CritChance": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
-                        },
-                        "MDF_HPRatio": {
-                          "operator": "Variables[0] (0.5) || RETURN",
-                          "displayLines": "0.5",
-                          "constants": [],
-                          "variables": [
-                            0.5
-                          ]
-                        },
-                        "MDF_HealRatio": {
-                          "operator": "Variables[0] (0.25) || RETURN",
-                          "displayLines": "0.25",
-                          "constants": [],
-                          "variables": [
-                            0.25
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1110430040\">Hyacine_PointB3_Effect</a>[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]",
-          "stackType": "Replace",
-          "description": "Max HP increases by <span class=\"descriptionNumberColor\">_MaxHPAdd</span> and Outgoing Healing increases by <span class=\"descriptionNumberColor\">_HealHPRatioAdd</span>.",
-          "type": "Buff",
-          "statusName": "Tempestuous Halt",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (_MaxHPAdd) || RETURN",
-                    "displayLines": "_MaxHPAdd",
-                    "constants": [],
-                    "variables": [
-                      "_MaxHPAdd"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingConverted</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (_HealHPRatioAdd) || RETURN",
-                    "displayLines": "_HealHPRatioAdd",
-                    "constants": [],
-                    "variables": [
-                      "_HealHPRatioAdd"
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Eidolon Activated",
-                        "eidolon": 4
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "value1": "_MaxCritDmgAdd",
-                        "compareType": ">",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Modifier Description",
-                      "popUpText": "Max HP increases by <span class=\"descriptionNumberColor\">_MaxHPAdd</span>, Outgoing Healing increases by <span class=\"descriptionNumberColor\">_HealHPRatioAdd</span>, and CRIT DMG increases by <span class=\"descriptionNumberColor\">_MaxCritDmgAdd</span>."
-                    },
-                    {
-                      "name": "Stack Target Stat Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (_MaxCritDmgAdd) || RETURN",
-                        "displayLines": "_MaxCritDmgAdd",
-                        "constants": [],
-                        "variables": [
-                          "_MaxCritDmgAdd"
-                        ]
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1888501948\">Hyacine_PointB3</a>",
-          "stackType": "ReplaceByCaster",
-          "latentQueue": [
-            "_SummonerHealCount"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "_CurrentSpeed",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "_CurrentSpeed",
-                    "compareType": ">=",
-                    "value2": {
-                      "operator": "Variables[0] (200) || RETURN",
-                      "displayLines": "200",
-                      "constants": [],
-                      "variables": [
-                        200
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "_CurrentSpeedConvert",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_CurrentSpeed",
-                      "value": {
-                        "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (_CurrentSpeedConvert) || SUB || RETURN",
-                        "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)",
-                        "constants": [],
-                        "variables": [
-                          "_CurrentSpeed",
-                          "_CurrentSpeedConvert"
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "_OverCountSpeedValue",
-                      "value": {
-                        "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (200) || SUB || RETURN",
-                        "displayLines": "(_CurrentSpeed - 200)",
-                        "constants": [],
-                        "variables": [
-                          "_CurrentSpeed",
-                          200
-                        ]
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "_OverCountSpeedValue",
-                        "compareType": ">=",
-                        "value2": {
-                          "operator": "Variables[0] (200) || RETURN",
-                          "displayLines": "200",
-                          "constants": [],
-                          "variables": [
-                            200
-                          ]
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "_OverCountSpeedValue",
-                          "value": {
-                            "operator": "Variables[0] (200) || RETURN",
-                            "displayLines": "200",
-                            "constants": [],
-                            "variables": [
-                              200
-                            ]
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "_OverCountSpeedValue",
-                        "compareType": ">",
-                        "value2": {
-                          "operator": "Variables[0] (1) || RETURN",
-                          "displayLines": "1",
-                          "constants": [],
-                          "variables": [
-                            1
-                          ]
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "_HealHPRatioAdd",
-                          "value": {
-                            "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.01) || MUL || RETURN",
-                            "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.01)",
-                            "constants": [],
-                            "variables": [
-                              "FLOOR",
-                              "_OverCountSpeedValue",
-                              1,
-                              0.01
-                            ]
-                          }
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Eidolon Activated",
-                            "eidolon": 4
-                          },
-                          "passed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "_MaxCritDmgAdd",
-                              "value": {
-                                "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.02) || MUL || RETURN",
-                                "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.02)",
-                                "constants": [],
-                                "variables": [
-                                  "FLOOR",
-                                  "_OverCountSpeedValue",
-                                  1,
-                                  0.02
-                                ]
-                              }
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "_HealHPRatioAdd",
-                          "value": 0
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "_MaxCritDmgAdd",
-                          "value": 0
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}+{{Caster's Memosprite}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1110430040\">Hyacine_PointB3_Effect</a>[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]",
-                      "valuePerStack": {
-                        "_MaxHPAdd": {
-                          "operator": "Variables[0] (0.2) || RETURN",
-                          "displayLines": "0.2",
-                          "constants": [],
-                          "variables": [
-                            0.2
-                          ]
-                        },
-                        "_HealHPRatioAdd": {
-                          "operator": "Variables[0] (_HealHPRatioAdd) || RETURN",
-                          "displayLines": "_HealHPRatioAdd",
-                          "constants": [],
-                          "variables": [
-                            "_HealHPRatioAdd"
-                          ]
-                        },
-                        "_MaxCritDmgAdd": {
-                          "operator": "Variables[0] (_MaxCritDmgAdd) || RETURN",
-                          "displayLines": "_MaxCritDmgAdd",
-                          "constants": [],
-                          "variables": [
-                            "_MaxCritDmgAdd"
-                          ]
-                        }
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}+{{Caster's Memosprite}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1110430040\">Hyacine_PointB3_Effect</a>[<span class=\"descriptionNumberColor\">Tempestuous Halt</span>]"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": []
-    },
-    "LittleIca_Servant_HyacineServant_DeathRattle": {
-      "fileName": "LittleIca_Servant_HyacineServant_DeathRattle",
-      "childAbilityList": [
-        "LittleIca_Servant_HyacineServant_DeathRattle"
-      ],
-      "skillTrigger": "SkillP04",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1268391312\">Memosprite_HyacineServant_DeathRattle</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1268391312\">Memosprite_HyacineServant_DeathRattle</a>",
-          "modifierFlags": [
-            "Deathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Was Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Action Advance/Delay",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "advanceType": "Set",
-                  "multiAdd": "(0 - 0.3)"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "LittleIca_Servant_HyacineServant_BattleCry": {
-      "fileName": "LittleIca_Servant_HyacineServant_BattleCry",
-      "childAbilityList": [
-        "LittleIca_Servant_HyacineServant_BattleCry"
-      ],
-      "skillTrigger": "SkillP03",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1846136142\">Memosprite_HyacineServant_BattleCry</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1846136142\">Memosprite_HyacineServant_BattleCry</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster's Summoner}}"
-                    },
-                    "value1": "_FirstTimeSummon",
-                    "compareType": "=",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Energy",
-                      "on": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Summoner}}"
-                      },
-                      "value": {
-                        "operator": "Variables[0] (15) || Variables[1] (30) || ADD || RETURN",
-                        "displayLines": "(15 + 30)",
-                        "constants": [],
-                        "variables": [
-                          15,
-                          30
-                        ]
-                      },
-                      "isFixed": "* ERR"
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Summoner}}"
-                      },
-                      "variableName": "_FirstTimeSummon",
-                      "value": 1
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Update Energy",
-                      "on": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Summoner}}"
-                      },
-                      "value": {
-                        "operator": "Variables[0] (15) || RETURN",
-                        "displayLines": "15",
-                        "constants": [],
-                        "variables": [
-                          15
-                        ]
-                      },
-                      "isFixed": "* ERR"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "LittleIca_Servant_HyacineServant_PassiveAbility": {
-      "fileName": "LittleIca_Servant_HyacineServant_PassiveAbility",
-      "childAbilityList": [
-        "LittleIca_Servant_HyacineServant_PassiveAbility"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1066684227\">Memosprite_HyacineServant_Passive</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1467878909\">Memosprite_HyacineServant_ChallangeScore</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"124089426\">Memosprite_HyacineServant_LoseHpPassive</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 6,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            }
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"3098173\">Memosprite_HyacineServant_Eidolon6_PenetrateRatio_Halo</a>",
-              "valuePerStack": {
-                "MDF_PenetrateRatio": {
-                  "operator": "Variables[0] (0.2) || RETURN",
-                  "displayLines": "0.2",
-                  "constants": [],
-                  "variables": [
-                    0.2
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__124089426\">Memosprite_HyacineServant_LoseHpPassive</a>",
-          "subModList": [
-            {
-              "name": "Add Sub-Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"889204199\">Memosprite_HyacineServant_LoseHpSet</a>",
-              "haloStatus": true
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "LittleIca_Servant_HyacineServant_Ability01_Part02": {
-      "fileName": "LittleIca_Servant_HyacineServant_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "scope": "SummonerEntity",
-          "variableName": "_HealCount",
-          "value": 0
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_ServantHealValueTotal",
-          "value": {
-            "operator": "Variables[0] (_ServantHealValueTotal) || Variables[1] (_SummonerHealValueTotal) || ADD || RETURN",
-            "displayLines": "(_ServantHealValueTotal + _SummonerHealValueTotal)",
-            "constants": [],
-            "variables": [
-              "_ServantHealValueTotal",
-              "_SummonerHealValueTotal"
-            ]
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_ServantHealValueTotalNew",
-          "value": {
-            "operator": "Variables[0] (_ServantHealValueTotal) || RETURN",
-            "displayLines": "_ServantHealValueTotal",
-            "constants": [],
-            "variables": [
-              "_ServantHealValueTotal"
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 6,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "invertCondition": true
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_ServantHealValueTotal",
-              "value": {
-                "operator": "Variables[0] (_ServantHealValueTotal) || Variables[0] (_ServantHealValueTotal) || Variables[1] (0.5) || MUL || SUB || RETURN",
-                "displayLines": "(_ServantHealValueTotal - (_ServantHealValueTotal * 0.5))",
-                "constants": [],
-                "variables": [
-                  "_ServantHealValueTotal",
-                  0.5
-                ]
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_ServantHealValueTotal",
-              "value": {
-                "operator": "Variables[0] (_ServantHealValueTotal) || Variables[0] (_ServantHealValueTotal) || Variables[1] (0.12) || MUL || SUB || RETURN",
-                "displayLines": "(_ServantHealValueTotal - (_ServantHealValueTotal * 0.12))",
-                "constants": [],
-                "variables": [
-                  "_ServantHealValueTotal",
-                  0.12
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "_ServantMaxHP",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_SummonerHealValueTotal",
-          "value": 0
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "variableName": "_HealValueTotal",
-          "value": 0
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"492819159\">Memosprite_HyacineServant_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "DamageFlat": {
-              "operator": "Variables[0] (_ServantHealValueTotalNew) || Variables[1] (0.2) || MUL || RETURN",
-              "displayLines": "(_ServantHealValueTotalNew * 0.2)",
-              "constants": [],
-              "variables": [
-                "_ServantHealValueTotalNew",
-                0.2
-              ]
-            },
-            "Toughness": {
-              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
-              "displayLines": "AOE Toughness Value",
-              "constants": [],
-              "variables": [
-                "AOE Toughness Value"
-              ]
-            },
-            "ToughnessDMGType": {
-              "DamageType": "Wind"
-            },
-            "Tags": null,
-            "attackType": "Memosprite",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "LittleIca_Servant_HyacineServant_Ability01_Part01": {
-      "fileName": "LittleIca_Servant_HyacineServant_Ability01_Part01",
-      "childAbilityList": [
-        "LittleIca_Servant_HyacineServant_Ability01_Part01",
-        "LittleIca_Servant_HyacineServant_Ability01_Part02",
-        "LittleIca_Servant_HyacineServant_Insert_Camera",
-        "LittleIca_Servant_HyacineServant_Insert_Camera_Charm"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Memosprite",
-      "energy": 20,
-      "toughnessList": [
-        10,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Servant_HyacineServant_Ability01_Part02",
-          "isTrigger": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "flagName": "Charm"
-          },
-          "passed": [
-            "Deleted bullshit"
-          ],
-          "failed": [
-            "Deleted bullshit"
-          ]
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      }
-    },
     "LittleIca_Modifiers": {
       "fileName": "LittleIca_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -2806,9 +2332,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__3098173\">Memosprite_HyacineServant_Eidolon6_PenetrateRatio_Halo</a>",
-          "stackData": [
-            "MDF_PenetrateRatio"
-          ],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -3742,6 +3265,465 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "LittleIca_Servant_HyacineServant_DeathRattle": {
+      "fileName": "LittleIca_Servant_HyacineServant_DeathRattle",
+      "childAbilityList": [
+        "LittleIca_Servant_HyacineServant_DeathRattle"
+      ],
+      "skillTrigger": "SkillP04",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1268391312\">Memosprite_HyacineServant_DeathRattle</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1268391312\">Memosprite_HyacineServant_DeathRattle</a>",
+          "modifierFlags": [
+            "Deathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Was Killed (Queued) [Owner]",
+              "execute": [
+                {
+                  "name": "Action Advance/Delay",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "advanceType": "Set",
+                  "multiAdd": "(0 - 0.3)"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "LittleIca_Servant_HyacineServant_BattleCry": {
+      "fileName": "LittleIca_Servant_HyacineServant_BattleCry",
+      "childAbilityList": [
+        "LittleIca_Servant_HyacineServant_BattleCry"
+      ],
+      "skillTrigger": "SkillP03",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1846136142\">Memosprite_HyacineServant_BattleCry</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1846136142\">Memosprite_HyacineServant_BattleCry</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Summoner}}"
+                    },
+                    "value1": "_FirstTimeSummon",
+                    "compareType": "=",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Energy",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Summoner}}"
+                      },
+                      "value": {
+                        "operator": "Variables[0] (15) || Variables[1] (30) || ADD || RETURN",
+                        "displayLines": "(15 + 30)",
+                        "constants": [],
+                        "variables": [
+                          15,
+                          30
+                        ]
+                      },
+                      "isFixed": "* ERR"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Summoner}}"
+                      },
+                      "variableName": "_FirstTimeSummon",
+                      "value": 1
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Update Energy",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Summoner}}"
+                      },
+                      "value": {
+                        "operator": "Variables[0] (15) || RETURN",
+                        "displayLines": "15",
+                        "constants": [],
+                        "variables": [
+                          15
+                        ]
+                      },
+                      "isFixed": "* ERR"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "LittleIca_Servant_HyacineServant_PassiveAbility": {
+      "fileName": "LittleIca_Servant_HyacineServant_PassiveAbility",
+      "childAbilityList": [
+        "LittleIca_Servant_HyacineServant_PassiveAbility"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1066684227\">Memosprite_HyacineServant_Passive</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1467878909\">Memosprite_HyacineServant_ChallangeScore</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"124089426\">Memosprite_HyacineServant_LoseHpPassive</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Summoner}}"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"3098173\">Memosprite_HyacineServant_Eidolon6_PenetrateRatio_Halo</a>",
+              "valuePerStack": {
+                "MDF_PenetrateRatio": {
+                  "operator": "Variables[0] (0.2) || RETURN",
+                  "displayLines": "0.2",
+                  "constants": [],
+                  "variables": [
+                    0.2
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__124089426\">Memosprite_HyacineServant_LoseHpPassive</a>",
+          "subModList": [
+            {
+              "name": "Add Sub-Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"889204199\">Memosprite_HyacineServant_LoseHpSet</a>",
+              "haloStatus": true
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "LittleIca_Servant_HyacineServant_Ability01_Part02": {
+      "fileName": "LittleIca_Servant_HyacineServant_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Summoner}}"
+          },
+          "scope": "SummonerEntity",
+          "variableName": "_HealCount",
+          "value": 0
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_ServantHealValueTotal",
+          "value": {
+            "operator": "Variables[0] (_ServantHealValueTotal) || Variables[1] (_SummonerHealValueTotal) || ADD || RETURN",
+            "displayLines": "(_ServantHealValueTotal + _SummonerHealValueTotal)",
+            "constants": [],
+            "variables": [
+              "_ServantHealValueTotal",
+              "_SummonerHealValueTotal"
+            ]
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_ServantHealValueTotalNew",
+          "value": {
+            "operator": "Variables[0] (_ServantHealValueTotal) || RETURN",
+            "displayLines": "_ServantHealValueTotal",
+            "constants": [],
+            "variables": [
+              "_ServantHealValueTotal"
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Summoner}}"
+            },
+            "invertCondition": true
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_ServantHealValueTotal",
+              "value": {
+                "operator": "Variables[0] (_ServantHealValueTotal) || Variables[0] (_ServantHealValueTotal) || Variables[1] (0.5) || MUL || SUB || RETURN",
+                "displayLines": "(_ServantHealValueTotal - (_ServantHealValueTotal * 0.5))",
+                "constants": [],
+                "variables": [
+                  "_ServantHealValueTotal",
+                  0.5
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_ServantHealValueTotal",
+              "value": {
+                "operator": "Variables[0] (_ServantHealValueTotal) || Variables[0] (_ServantHealValueTotal) || Variables[1] (0.12) || MUL || SUB || RETURN",
+                "displayLines": "(_ServantHealValueTotal - (_ServantHealValueTotal * 0.12))",
+                "constants": [],
+                "variables": [
+                  "_ServantHealValueTotal",
+                  0.12
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "_ServantMaxHP",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_SummonerHealValueTotal",
+          "value": 0
+        },
+        {
+          "name": "Define Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Summoner}}"
+          },
+          "variableName": "_HealValueTotal",
+          "value": 0
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"492819159\">Memosprite_HyacineServant_Passive_Mark</a>[<span class=\"descriptionNumberColor\">Rainclouds, Time to Go!</span>]"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Wind",
+            "DamageFlat": {
+              "operator": "Variables[0] (_ServantHealValueTotalNew) || Variables[1] (0.2) || MUL || RETURN",
+              "displayLines": "(_ServantHealValueTotalNew * 0.2)",
+              "constants": [],
+              "variables": [
+                "_ServantHealValueTotalNew",
+                0.2
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (AOE Toughness Value) || RETURN",
+              "displayLines": "AOE Toughness Value",
+              "constants": [],
+              "variables": [
+                "AOE Toughness Value"
+              ]
+            },
+            "ToughnessDMGType": {
+              "DamageType": "Wind"
+            },
+            "Tags": null,
+            "attackType": "Memosprite",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "LittleIca_Servant_HyacineServant_Ability01_Part01": {
+      "fileName": "LittleIca_Servant_HyacineServant_Ability01_Part01",
+      "childAbilityList": [
+        "LittleIca_Servant_HyacineServant_Ability01_Part01",
+        "LittleIca_Servant_HyacineServant_Ability01_Part02",
+        "LittleIca_Servant_HyacineServant_Insert_Camera",
+        "LittleIca_Servant_HyacineServant_Insert_Camera_Charm"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Memosprite",
+      "energy": 20,
+      "toughnessList": [
+        10,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Servant_HyacineServant_Ability01_Part02",
+          "isTrigger": true
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Flag",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "flagName": "Charm"
+          },
+          "passed": [
+            "Deleted bullshit"
+          ],
+          "failed": [
+            "Deleted bullshit"
+          ]
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      }
     }
   }
 }

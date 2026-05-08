@@ -118,9 +118,6 @@ const configAbility = {
         "Shield"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MWAvatar_PlayerBoy_10_Shield_Value01"
-      ],
       "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
       "type": "Buff",
       "effectName": "Shield",
@@ -177,9 +174,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-670613406\">PlayerBoy_10_DamageResistance_Team</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MAvatar_PlayerBoy_10_DamageResistance_Team_Value01"
-      ],
       "description": "DMG taken -<span class=\"descriptionNumberColor\">MAvatar_PlayerBoy_10_DamageResistance_Team_Value01</span>.",
       "type": "Buff",
       "effectName": "DMG Mitigation",
@@ -212,9 +206,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-356032349\">MWPlayerBoy_10_DamageResistance</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MWAvatar_PlayerBoy_10_DamageResistance_Value01"
-      ],
       "description": "DMG taken -<span class=\"descriptionNumberColor\">MWAvatar_PlayerBoy_10_DamageResistance_Value01</span>.",
       "type": "Buff",
       "effectName": "DMG Mitigation",
@@ -260,11 +251,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MWAvatar_PlayerBoy_10_DamageResistance_Value01) || RETURN",
-                "displayLines": "MWAvatar_PlayerBoy_10_DamageResistance_Value01",
+                "operator": "Variables[0] (PlayerBoy_10_DamageResistance_Value01) || RETURN",
+                "displayLines": "PlayerBoy_10_DamageResistance_Value01",
                 "constants": [],
                 "variables": [
-                  "MWAvatar_PlayerBoy_10_DamageResistance_Value01"
+                  "PlayerBoy_10_DamageResistance_Value01"
                 ]
               }
             }
@@ -385,9 +376,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1564952013\">PlayerBoy_10_Eidolon6_Stack</a>[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_DefenceAddedRatio"
-      ],
       "description": "Each stack increases DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>, up to <span class=\"descriptionNumberColor\">Rank06_Max_Layer</span> stack(s).",
       "type": "Buff",
       "effectName": "DEF Boost",

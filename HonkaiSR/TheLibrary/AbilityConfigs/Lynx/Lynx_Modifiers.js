@@ -12,9 +12,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-96135638\">Lynx_Eidolon4_AddAttackRatio</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "ATK Boost",
@@ -71,9 +68,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1819426834\">Lynx_Tree02_Resistance</a>",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -101,9 +95,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1804592669\">Lynx_Tree01_OnBeforeBeingAttacked</a>",
-      "stackData": [
-        "MDF_Lynx_PointB1_AddSpValue"
-      ],
       "execute": [
         {
           "eventTrigger": "Being Attacked End [Owner]",
@@ -173,12 +164,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_HOT_HOTPercentage",
-        "MDF_HOT_HealValue",
-        "MDF_HOT_AggroUp_HOTPercentage",
-        "MDF_HOT_AggroUp_HealValue"
-      ],
       "description": "Restores a certain amount of HP at the start of each turn.",
       "type": "Buff",
       "effectName": "Healing Over Time",
@@ -273,13 +258,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__683860338\">Lynx_HPAddedRatio02</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_HPAddValueConvert",
-        "MDF_HPDelta",
-        "MDF_AggroUp",
-        "MDF_AddStatusResistance"
-      ],
       "description": "Increases Max HP by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and Effect RES by <span class=\"descriptionNumberColor\">MDF_AddStatusResistance</span>.",
       "type": "Buff",
       "effectName": "Max HP Boost",
@@ -388,12 +366,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__667082719\">Lynx_HPAddedRatio01</a>[<span class=\"descriptionNumberColor\">Survival Response</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_HPAddValueConvert",
-        "MDF_HPDelta",
-        "MDF_AggroUp"
-      ],
       "description": "Increases Max HP by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "Max HP Boost",

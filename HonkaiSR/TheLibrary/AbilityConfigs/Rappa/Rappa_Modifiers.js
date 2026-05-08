@@ -780,9 +780,6 @@ const configAbility = {
       "modifierFlags": [
         "ForceStanceDamage"
       ],
-      "latentQueue": [
-        "_AMMO_RELOADED"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -839,9 +836,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__685299865\">Rappa_UltraMode_BanSKL02_ForCaster</a>",
-      "latentQueue": [
-        "_AMMO_RELOADED"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -864,13 +858,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1748394699\">Rappa_UltraMode</a>[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_PropertyValue2"
-      ],
-      "latentQueue": [
-        "_AMMO_RELOADED"
-      ],
       "description": "Increases Weakness Break Efficiency by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and Break Effect by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
       "type": "Buff",
       "statusName": "Nindō Supreme: Aishiteru",

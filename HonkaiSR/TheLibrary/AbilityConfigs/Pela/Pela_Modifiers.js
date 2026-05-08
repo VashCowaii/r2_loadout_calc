@@ -12,9 +12,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1480389752\">Pela_StatusProbability</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -46,9 +43,6 @@ const configAbility = {
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
         "STAT_DefenceDown"
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
       ],
       "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -85,9 +79,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__278160139\">Pela_AbilityEidolon4_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Ice RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
       "effectName": "Ice RES Reduction",
@@ -158,9 +149,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
-      "stackData": [
-        "MDF_Pela_SkillRank02_P1_AddSpeedRatio"
-      ],
       "description": "SPD +<span class=\"descriptionNumberColor\">MDF_Pela_SkillRank02_P1_AddSpeedRatio</span>.",
       "type": "Buff",
       "effectName": "SPD Boost",
@@ -193,9 +181,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1505163766\">Pela_Trace03_DamageAddedRatio</a>[<span class=\"descriptionNumberColor\">Wipe Out</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_Pela_SkillTree03_DamageAddedRatio"
-      ],
       "description": "Increases the next attack's DMG by <span class=\"descriptionNumberColor\">MDF_Pela_SkillTree03_DamageAddedRatio</span>.",
       "type": "Buff",
       "effectName": "DMG Boost",

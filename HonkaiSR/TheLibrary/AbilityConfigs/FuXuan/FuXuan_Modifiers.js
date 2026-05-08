@@ -598,9 +598,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1150141703\">FuXuan_ListenLifeTime</a>[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "Skill02_P2_DamageResistance"
-      ],
       "description": "Receive DMG distributed by other teammates.",
       "type": "Buff",
       "statusName": "Matrix of Prescience",
@@ -1633,12 +1630,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1537044450\">FuXuan_DamageReduce</a>[<span class=\"descriptionNumberColor\">Misfortune Avoidance</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_DamageResistanceRatio"
-      ],
-      "latentQueue": [
-        "HitFlag"
-      ],
       "description": "Reduces DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageResistanceRatio</span>.",
       "type": "Buff",
       "statusName": "Misfortune Avoidance",

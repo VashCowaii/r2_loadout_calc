@@ -265,9 +265,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "PointB3_Active"
-      ],
       "description": "Increases the received Break DMG by <span class=\"descriptionNumberColor\">MDF_BreakDamagTaken</span>. And every time this unit gets attacked by characters, the attacker will restore <span class=\"descriptionNumberColor\">#SkillP01_P2_HealAmount</span> HP.",
       "type": "Debuff",
       "effectName": "Besotted",
@@ -414,9 +411,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1872837497\">MWGallagher_Ability02_StatusResModifier</a>[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Increases Effect RES by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "Effect RES Boost",

@@ -49,9 +49,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__3098173\">Memosprite_HyacineServant_Eidolon6_PenetrateRatio_Halo</a>",
-      "stackData": [
-        "MDF_PenetrateRatio"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",

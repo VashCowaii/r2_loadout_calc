@@ -33,10 +33,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "KeepOnDeathrattle"
-      ],
-      "latentQueue": [
-        "MazeSkill_Triggered",
-        "_can_continue"
       ]
     },
     {
@@ -119,13 +115,6 @@ const configAbility = {
         "FixedPerformTime",
         "RetainCountZero",
         "KeepOnDeathrattle"
-      ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_ResistanceDown",
-        "MDF_Count",
-        "SecondLayer",
-        "ThirdLayer"
       ],
       "description": "The DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> during this unit's turn. While in Arcana state, this unit is also considered to be simultaneously inflicted with Wind Shear, Bleed, Burn, and Shock. Additionally, after Arcana causes DMG at the start of each turn, its stacks do not reset. This effect can trigger <span class=\"descriptionNumberColor\">MDF_Count</span> more time(s).",
       "type": "Debuff",
@@ -375,15 +364,6 @@ const configAbility = {
         "DynamicInjectLoop"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "Basic_DamagePercentage",
-        "ExtraLayer_DamagePercentage",
-        "SecondLayer",
-        "Spread_DamagePercentage",
-        "ThirdLayer",
-        "DefenceIgnore",
-        "Cast_By_Level"
-      ],
       "description": "Takes Wind DMG at the start of each turn. Being afflicted with Arcana will also be considered as suffering from Wind Shear. This state stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> times.",
       "type": "Debuff",
       "effectName": "Arcana",

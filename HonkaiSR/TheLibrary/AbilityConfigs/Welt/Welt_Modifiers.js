@@ -268,13 +268,6 @@ const configAbility = {
         "STAT_SpeedDown",
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_WeightlessTriggerCount",
-        "MDF_ActionDelayRatio",
-        "MDF_PropertyValue",
-        "MDF_AllResDownValue",
-        "MDF_SpeedDownRatio"
-      ],
       "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, SPD decreases by <span class=\"descriptionNumberColor\">MDF_SpeedDownRatio</span>. When receiving an attack, action is delayed by <span class=\"descriptionNumberColor\">MDF_ActionDelayRatio</span>. This effect can be triggered <span class=\"descriptionNumberColor\">MDF_WeightlessTriggerCount</span> more time(s).",
       "type": "Debuff",
       "effectName": "Weightless",
@@ -682,9 +675,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedDown"
-      ],
-      "stackData": [
-        "MDF_PropertyRatio"
       ],
       "description": "SPD decreases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
       "type": "Debuff",

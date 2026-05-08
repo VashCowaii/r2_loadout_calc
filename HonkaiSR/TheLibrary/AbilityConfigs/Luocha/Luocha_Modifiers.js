@@ -12,9 +12,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-470154310\">Luocha_Eidolon6_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Reunion With the Dust</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
       "description": "All-Type DMG RES -<span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
       "type": "Debuff",
       "effectName": "All-Type RES Reduction",
@@ -49,12 +46,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1394916865\">Luocha_Eidolon1_ATKUp</a>[<span class=\"descriptionNumberColor\">Ablution of the Quick</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
-      "latentQueue": [
-        "_insertCheck_"
-      ],
       "description": "ATK +<span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
       "type": "Buff",
       "effectName": "ATK Boost",
@@ -186,9 +177,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-390780291\">Luocha_Passive01Modifier</a>[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PassiveLayer"
-      ],
       "description": "When the Abyss Flower is fully stacked, Luocha can consume all the stacks to deploy a Zone against the enemy.",
       "type": "Other",
       "statusName": "Abyss Flower",
@@ -252,9 +240,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1468187936\">Luocha_Passive01_HealHPCD</a>[<span class=\"descriptionNumberColor\">Prayer of Abyss Flower</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "latentQueue": [
-        "IsInserAbilityTrigger"
-      ],
       "description": "Skill effect auto-trigger is on cooldown.",
       "type": "Other",
       "statusName": "Prayer of Abyss Flower",
@@ -266,10 +251,6 @@ const configAbility = {
       "stackType": "Replace",
       "modifierFlags": [
         "Shield"
-      ],
-      "stackData": [
-        "MDF_ShieldPercentage",
-        "MDF_ShieldValue"
       ],
       "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
       "type": "Buff",
@@ -335,9 +316,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__774057346\">Luocha_Ability02_AddHealRatio</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_AddHealRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "Heal Target Start [Owner]",
@@ -363,9 +341,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1784149745\">Luocha_Passive01_DisableActionInsertMark</a>",
-      "latentQueue": [
-        "IsInserAbilityTrigger"
-      ],
       "execute": [
         {
           "eventTrigger": "When Losing Modifier [Anyone]",

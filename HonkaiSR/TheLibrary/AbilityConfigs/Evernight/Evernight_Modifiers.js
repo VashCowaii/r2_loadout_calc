@@ -36,10 +36,6 @@ const configAbility = {
         "EnduranceLogicOnly",
         500
       ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_PropertyValue_2"
-      ],
       "description": "This unit and their memosprite are immune to Crowd Control debuffs, and the DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "Darkest Riddle",
@@ -570,13 +566,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1894879081\">Evernight_Ability02_Bonus</a>[<span class=\"descriptionNumberColor\">Day Gently Slips</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "MDF_Conv",
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "_S02_Char_Count"
-      ],
       "description": "While this effect persists, CRIT DMG increases for all ally memosprites.",
       "type": "Other",
       "statusName": "Day Gently Slips",
@@ -842,9 +831,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "statusName": "Listen Up, the Slumber Speaks Soft",
@@ -976,13 +962,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_PropertyValue_1",
-        "MDF_PropertyValue_2"
-      ],
-      "latentQueue": [
-        "_Evernight_PL_Layer"
-      ],
       "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "statusName": "Wake Up, the Tomorrow is Yours",
@@ -1060,12 +1039,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "_Evernight_PL_Layer"
-      ],
       "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "statusName": "Like This, Always",
@@ -1098,12 +1071,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__2043260870\">Evernight_HPChange</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "_Evernight_PL_Layer"
       ],
       "execute": [
         {
@@ -1437,9 +1404,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "CRIT Rate increases <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "statusName": "Dark the Night, Still the Moon",
@@ -1617,11 +1581,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__557640561\">Evernight_PointB1_Aura</a>",
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_Cost",
-        "MDF_LifeTime"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",

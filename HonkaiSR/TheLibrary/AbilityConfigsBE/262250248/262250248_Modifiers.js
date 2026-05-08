@@ -1683,9 +1683,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-61828831\">BoxingGym_DefDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
-      "stackData": [
-        "DefDownValue"
-      ],
       "description": "DEF -<span class=\"descriptionNumberColor\">DefDownValue</span>.",
       "type": "Debuff",
       "effectName": "DEF Reduction",
@@ -2033,14 +2030,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1482528557\">BoxingGym_AllStanceBreakDamage</a>",
-      "stackData": [
-        "CasterLevel",
-        "ElementDamageValue",
-        "TargetStance",
-        "StanceUnit",
-        "CasterBreakBaseDamage",
-        "DamageRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "Caused Weakness Break [Owner]",

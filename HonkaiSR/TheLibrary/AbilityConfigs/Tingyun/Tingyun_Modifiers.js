@@ -20,9 +20,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
-      "stackData": [
-        "Tingyun_SpeedUP_Ratio"
-      ],
       "description": "SPD +<span class=\"descriptionNumberColor\">Tingyun_SpeedUP_Ratio</span>.",
       "type": "Buff",
       "effectName": "SPD Boost",
@@ -436,14 +433,6 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
-      "stackData": [
-        "MDF_Passive_DamagePercentage",
-        "MDF_Passive_DamagePercentageSelf",
-        "MDF_Rank01_SpeedUp",
-        "MDF_Rank02_SPAdd",
-        "MDF_Rank04_DamagePercentage",
-        "MDF_AttackDelta"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -705,13 +694,6 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
-      "stackData": [
-        "MDF_Passive_DamagePercentage",
-        "MDF_Passive_DamagePercentageSelf",
-        "MDF_Rank01_SpeedUp",
-        "MDF_Rank02_SPAdd",
-        "MDF_AttackDelta"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -972,12 +954,6 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
-      "stackData": [
-        "MDF_Passive_DamagePercentage",
-        "MDF_Passive_DamagePercentageSelf",
-        "MDF_Rank01_SpeedUp",
-        "MDF_AttackDelta"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1183,11 +1159,6 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
-      "stackData": [
-        "MDF_Passive_DamagePercentage",
-        "MDF_Passive_DamagePercentageSelf",
-        "MDF_AttackDelta"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1387,11 +1358,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-525409503\">MWTingYun_BPAbility_AttackDelta</a>[<span class=\"descriptionNumberColor\">Benediction</span>]",
-      "stackData": [
-        "MDF_AttackDelta",
-        "MDF_Rank01_SpeedUp",
-        "MDF_Rank01_Count"
-      ],
       "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackDelta</span>.",
       "type": "Buff",
       "effectName": "ATK Boost",

@@ -71,9 +71,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-962483629\">Lingsha_Eidolon2_BreakDamageAttackRatio</a>[<span class=\"descriptionNumberColor\">Leisure in Carmine Smokeveil</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Break Effect increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "Break Effect Boost",
@@ -167,9 +164,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "Rank01_MDF_PropertyValue"
-      ],
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: Start [Owner]",
@@ -217,9 +211,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1721297245\">Lingsha_Eidolon1_Listen</a>",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -248,9 +239,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__551246003\">Lingsha_PointB3_CD</a>[<span class=\"descriptionNumberColor\">Ember's Echo</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "latentQueue": [
-        "BattleEvent_Lingsha_00_PointB3"
-      ],
       "description": "The Trace \"Ember's Echo\" effect's auto-trigger is still on cooldown.",
       "type": "Other",
       "statusName": "Ember's Echo",
@@ -261,10 +249,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__210278197\">Lingsha_PointB3_OnListen</a>",
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
-      ],
-      "stackData": [
-        "MDF_HPRatio",
-        "MDF_LifeTime"
       ],
       "execute": [
         {
@@ -601,9 +585,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
       "stackType": "Replace",
-      "stackData": [
-        "_AttackTime"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -746,9 +727,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-637709984\">Lingsha_BreakDamageUp</a>[<span class=\"descriptionNumberColor\">Befog</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Break DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
       "effectName": "Befog",

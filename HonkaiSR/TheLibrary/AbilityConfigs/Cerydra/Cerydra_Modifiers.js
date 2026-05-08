@@ -658,12 +658,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "DV_PointAdded_Get"
-      ],
-      "latentQueue": [
-        "DV_DelayReachPromotionRank01_Flag"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -1081,7 +1075,6 @@ const configAbility = {
         "MDF_PropertyValue"
       ],
       "latentQueue": [
-        "DV_DelayReachPromotionRank01_Flag",
         "DV_Rank02_Effcet"
       ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
@@ -1119,7 +1112,6 @@ const configAbility = {
         "MDF_PropertyValue"
       ],
       "latentQueue": [
-        "DV_DelayReachPromotionRank01_Flag",
         "DV_Rank02_Effcet"
       ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
@@ -1159,7 +1151,6 @@ const configAbility = {
         "MDF_PropertyValue2"
       ],
       "latentQueue": [
-        "DV_DelayReachPromotionRank01_Flag",
         "DV_Rank02_Effcet"
       ],
       "description": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of the enemy target's DEF.",
@@ -1245,7 +1236,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1564398907\">Cerydra_Eidolon6_AllDamageTypePenetrate</a>[<span class=\"descriptionNumberColor\">A Journey Set Starward</span>]",
       "stackType": "ReplaceByCaster",
       "latentQueue": [
-        "DV_DelayReachPromotionRank01_Flag",
         "DV_Rank02_Effcet"
       ],
       "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
@@ -1292,7 +1282,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__2146072212\">Cerydra_Ability02_AllDamageTypePenetrate</a>[<span class=\"descriptionNumberColor\">A Journey Set Starward</span>]",
       "stackType": "ReplaceByCaster",
       "latentQueue": [
-        "DV_DelayReachPromotionRank01_Flag",
         "DV_Rank02_Effcet"
       ],
       "description": "Increases All-Type RES PEN by <span class=\"descriptionNumberColor\">#SkillRank_Rank06_P1_AllDamageTypePenetrate</span>.",
@@ -1340,7 +1329,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1787273880\">Cerydra_Pursued</a>",
       "stackType": "ReplaceByCaster",
       "latentQueue": [
-        "DV_DelayReachPromotionRank01_Flag",
         "DV_Rank02_Effcet"
       ],
       "execute": [
@@ -1489,7 +1477,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1552806020\">Cerydra_PointB3_RecoverEnergy</a>",
       "stackType": "ReplaceByCaster",
       "latentQueue": [
-        "DV_DelayReachPromotionRank01_Flag",
         "DV_Rank02_Effcet"
       ],
       "execute": [
@@ -1564,9 +1551,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "SPD increases by <span class=\"descriptionNumberColor\">#SkillTree_PointB3_P2_Value</span>.",
       "type": "Buff",
       "effectName": "SPD Boost",
@@ -1598,9 +1582,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__35466247\">Cerydra_PointB2_Self</a>",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1632,7 +1613,6 @@ const configAbility = {
         "MDF_PropertyValue"
       ],
       "latentQueue": [
-        "DV_DelayReachPromotionRank01_Flag",
         "DV_Rank02_Effcet"
       ],
       "description": "Using Ultimate grants Cerydra <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> Charge.",

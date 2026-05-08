@@ -92,11 +92,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1192521276\">Kafka_Eidolon4</a>",
-      "latentQueue": [
-        "Kafka_Listen_Rank1",
-        "Kafka_Listen_Rank2",
-        "Kafka_Listen_Rank6"
-      ],
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -131,9 +126,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1021385452\">Kafka_Eidolon2_Sub</a>[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
       ],
       "description": "Increases DoT dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",

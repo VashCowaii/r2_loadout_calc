@@ -12,9 +12,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2015057793\">Bronya_Tree02_DefenceUp</a>[<span class=\"descriptionNumberColor\">Battlefield</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_DefenceAddedRatio"
-      ],
       "description": "DEF increases by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>",
       "type": "Buff",
       "statusName": "Battlefield",
@@ -46,9 +43,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-196204909\">Bronya_Tree03_DamageUp</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_AllDamageTypeAddedRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -112,9 +106,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__133730263\">Bronya_BPAbility_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_DamageAddedRatio"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
       "type": "Buff",
       "effectName": "DMG Boost",
@@ -147,10 +138,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-379855100\">Bronya_Ultimate_PowerUp</a>[<span class=\"descriptionNumberColor\">The Belobog March</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_AttackAddedRatio",
-        "Bronya_CriticalDamage"
-      ],
       "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span> and CRIT DMG +<span class=\"descriptionNumberColor\">Bronya_CriticalDamage</span>.",
       "type": "Buff",
       "effectName": "ATK and CRIT DMG Boost",
@@ -207,9 +194,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-308500305\">Bronya_BPAbility_Eidolon2_Listen</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "Bronya_SpeedUP_Ratio_01"
-      ],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",

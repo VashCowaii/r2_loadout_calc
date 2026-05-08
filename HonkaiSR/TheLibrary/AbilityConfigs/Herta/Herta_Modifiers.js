@@ -15,11 +15,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-256958111\">Herta_Passive_ATK</a>",
-      "latentQueue": [
-        "Herta_Count_Insert",
-        "Herta_Count_ATK",
-        "MAvatar_Herta_Passive_CoolDown"
-      ],
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Anyone]",

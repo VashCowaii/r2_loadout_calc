@@ -97,13 +97,6 @@ const configAbility = {
       "counter": 5,
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "MDF_AttackAddedRatio",
-        "MDF_DefenceAddedRatio",
-        "MDF_BuffLayer",
-        "MDF_SPRatio",
-        "MDF_CostLayer"
-      ],
       "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>, up to 5 stacks.",
       "type": "Buff",
       "effectName": "ATK Boost",
@@ -408,9 +401,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-653161821\">Asta_FireAddedRatio</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

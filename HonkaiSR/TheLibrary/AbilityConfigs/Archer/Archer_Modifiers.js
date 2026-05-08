@@ -11,9 +11,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1612899858\">Archer_BonusTrigger</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
-      "latentQueue": [
-        "MDF_AlreadyInBonusAction"
-      ],
       "description": "After using Skill, if there are sufficient Skill Points to use it again, the turn will not end.",
       "type": "Other",
       "effectName": "Circuit Connection",
@@ -262,9 +259,9 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-130031811\">Archer_BonusAbility02Ready</a>",
       "latentQueue": [
-        "MDF_AlreadyInBonusAction",
         "MDF_InBonus",
         "MDF_Flag_HaveOtherAction",
+        "MDF_AlreadyInBonusAction",
         "MDF_IsWindfurySkill"
       ],
       "execute": [
@@ -317,13 +314,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__308886295\">Archer_BPAbility_AddDamagePercentage</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "MDF_AlreadyInBonusAction",
-        "MDF_IsWindfurySkill"
-      ],
       "description": "Each stack increases DMG dealt by Skill by <span class=\"descriptionNumberColor\">#Skill02_P2_ExtraDamage</span>.",
       "type": "Buff",
       "effectName": "Enhanced Skill",
@@ -385,9 +375,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AttachWeakness"
       ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Additionally implanted Quantum Weakness. Quantum RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
       "effectName": "Implanted Quantum Weakness",
@@ -418,12 +405,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__496562314\">Archer_Insert_Target</a>",
-      "latentQueue": [
-        "MDF_InsertUsed",
-        "MDF_HasMainTarget",
-        "OnInsertAbort_Flg"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__496562314\">Archer_Insert_Target</a>"
     }
   ],
   "references": []

@@ -415,14 +415,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1566484434\">MWJingliu_Attack_Transfer</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "SkillP01_P1_HpConsumption",
-        "SkillP01_P3_ATKRatioUp",
-        "SkillP01_P2_HpConsumption",
-        "SkillP01_P4_JingliuAttackBase",
-        "SkillRank_Rank04_P1_DamageUpRatio",
-        "SkillRank_Rank04_P2_DamageUpLimit"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -833,13 +825,13 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_AttackDelta",
                   "value": {
-                    "operator": "Variables[0] (SkillP01_P3_ATKRatioUp) || Variables[1] (HpConsumption) || MUL || Variables[2] (SkillRank_Rank04_P1_DamageUpRatio) || Variables[1] (HpConsumption) || MUL || ADD || RETURN",
-                    "displayLines": "((SkillP01_P3_ATKRatioUp * HpConsumption) + (SkillRank_Rank04_P1_DamageUpRatio * HpConsumption))",
+                    "operator": "Variables[0] (SkillP01_P3_ATKRatioUp) || Variables[1] (HpConsumption) || MUL || Variables[2] ([object Object]) || Variables[1] (HpConsumption) || MUL || ADD || RETURN",
+                    "displayLines": "((SkillP01_P3_ATKRatioUp * HpConsumption) + ([object Object] * HpConsumption))",
                     "constants": [],
                     "variables": [
                       "SkillP01_P3_ATKRatioUp",
                       "HpConsumption",
-                      "SkillRank_Rank04_P1_DamageUpRatio"
+                      {}
                     ]
                   }
                 },
@@ -850,13 +842,13 @@ const configAbility = {
                     "value1": "MDF_AttackDelta",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (SkillP01_P4_JingliuAttackBase) || Variables[1] (MDF_BaseAttack) || MUL || Variables[2] (SkillRank_Rank04_P2_DamageUpLimit) || Variables[1] (MDF_BaseAttack) || MUL || ADD || RETURN",
-                      "displayLines": "((SkillP01_P4_JingliuAttackBase * MDF_BaseAttack) + (SkillRank_Rank04_P2_DamageUpLimit * MDF_BaseAttack))",
+                      "operator": "Variables[0] (SkillP01_P4_JingliuAttackBase) || Variables[1] (MDF_BaseAttack) || MUL || Variables[2] ([object Object]) || Variables[1] (MDF_BaseAttack) || MUL || ADD || RETURN",
+                      "displayLines": "((SkillP01_P4_JingliuAttackBase * MDF_BaseAttack) + ([object Object] * MDF_BaseAttack))",
                       "constants": [],
                       "variables": [
                         "SkillP01_P4_JingliuAttackBase",
                         "MDF_BaseAttack",
-                        "SkillRank_Rank04_P2_DamageUpLimit"
+                        {}
                       ]
                     }
                   },
@@ -865,13 +857,13 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_AttackDelta",
                       "value": {
-                        "operator": "Variables[0] (SkillP01_P4_JingliuAttackBase) || Variables[1] (MDF_BaseAttack) || MUL || Variables[2] (SkillRank_Rank04_P2_DamageUpLimit) || Variables[1] (MDF_BaseAttack) || MUL || ADD || RETURN",
-                        "displayLines": "((SkillP01_P4_JingliuAttackBase * MDF_BaseAttack) + (SkillRank_Rank04_P2_DamageUpLimit * MDF_BaseAttack))",
+                        "operator": "Variables[0] (SkillP01_P4_JingliuAttackBase) || Variables[1] (MDF_BaseAttack) || MUL || Variables[2] ([object Object]) || Variables[1] (MDF_BaseAttack) || MUL || ADD || RETURN",
+                        "displayLines": "((SkillP01_P4_JingliuAttackBase * MDF_BaseAttack) + ([object Object] * MDF_BaseAttack))",
                         "constants": [],
                         "variables": [
                           "SkillP01_P4_JingliuAttackBase",
                           "MDF_BaseAttack",
-                          "SkillRank_Rank04_P2_DamageUpLimit"
+                          {}
                         ]
                       }
                     }
@@ -1046,10 +1038,6 @@ const configAbility = {
       "stackData": [
         "MDF_CriticalDamage"
       ],
-      "latentQueue": [
-        "SkillRank_Rank04_P2_DamageUpLimit",
-        "SkillRank_Rank04_P1_DamageUpRatio"
-      ],
       "description": "CRIT DMG +<span class=\"descriptionNumberColor\">MDF_CriticalDamage</span>.",
       "type": "Buff",
       "effectName": "CRIT DMG Boost",
@@ -1081,9 +1069,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1760867163\">Jingliu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Increases DMG dealt by the next Enhanced Skill by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "statusName": "Crescent Shadows Qixing Dipper",
@@ -1133,9 +1118,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1949094753\">Jingliu_Eidolon1_CriticalDamage</a>[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "CRIT DMG +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "CRIT DMG Boost",
@@ -2036,10 +2018,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-582112064\">Jingliu_AbilityPreShow</a>",
-      "latentQueue": [
-        "SkillRank_Rank04_P2_DamageUpLimit",
-        "SkillRank_Rank04_P1_DamageUpRatio"
-      ],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",

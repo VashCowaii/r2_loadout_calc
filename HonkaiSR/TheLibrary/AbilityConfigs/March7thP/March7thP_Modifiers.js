@@ -16,13 +16,6 @@ const configAbility = {
         "Shield"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_HealPercentage",
-        "MDF_HealValue",
-        "MDF_ShieldPercentage",
-        "MDF_ShieldValue",
-        "MDF_AggroUp"
-      ],
       "description": "Gains a Shield that absorbs DMG. While the Shield persists, enemy attacks will not reduce Shielded characters' HP.",
       "type": "Buff",
       "effectName": "Shield",

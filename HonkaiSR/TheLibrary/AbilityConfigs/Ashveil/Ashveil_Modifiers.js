@@ -15,9 +15,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "latentQueue": [
-        "Ability_IsParasitee"
-      ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_TotalRatio</span>.",
       "type": "Buff",
       "effectName": "DMG Boost",
@@ -101,9 +98,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_AttackUp"
       ],
       "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackUp</span>.",
       "type": "Buff",
@@ -440,10 +434,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__2049711974\">Ashveil_PointB3_CriticalDamageAddPre</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_CriticalDamageTemp",
-        "MDF_InsertCriticalDamageAddTemp"
       ],
       "subModList": [
         {
@@ -941,9 +931,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "latentQueue": [
-        "Ability_SPAddAlready"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1043,9 +1030,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1569458515\">Ashveil_InsertAbility_LastTarget</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "latentQueue": [
-        "Ability_SPAddAlready"
       ]
     },
     {
@@ -2107,9 +2091,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__441988386\">Ashveil_SpecialMarkAdder</a>",
-      "latentQueue": [
-        "Ability_IsParasitee"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",

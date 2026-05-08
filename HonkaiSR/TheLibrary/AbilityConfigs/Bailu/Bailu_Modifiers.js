@@ -206,9 +206,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1195469105\">Bailu_Eidolon2</a>[<span class=\"descriptionNumberColor\">Sylphic Slumber</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Increases Outgoing Healing by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "Outgoing Healing Boost",
@@ -240,9 +237,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__249464740\">Bailu_PointB3</a>[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
-      "stackData": [
-        "MDF_DamageResistance"
-      ],
       "description": "Reduces DMG taken by <span class=\"descriptionNumberColor\">MDF_DamageResistance</span>.",
       "type": "Buff",
       "effectName": "DMG Mitigation",
@@ -458,13 +452,6 @@ const configAbility = {
       "counter": 1,
       "stackType": "ReplaceByCaster",
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF__HealPercentage2",
-        "MDF__HealValue2",
-        "MDF_AddSP",
-        "MDF_HealCount",
-        "MDF_HealCountExtra"
-      ],
       "description": "Restores HP when attacked.",
       "type": "Buff",
       "effectName": "Invigoration",

@@ -18,10 +18,6 @@ const configAbility = {
         "STAT_DOT_Bleed"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "Modifier_Tear_DamageRatio",
-        "Modifier_Tear_MaxPercentage"
-      ],
       "description": "Takes Physical DMG at the start of each turn for a certain number of turns.",
       "type": "Debuff",
       "effectName": "Bleed",
@@ -442,9 +438,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-632542414\">Luka_Eidolon1_Sub</a>[<span class=\"descriptionNumberColor\">Fighting Endlessly</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "DMG Boost",
@@ -666,9 +659,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1778825870\">Luka_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Increases DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
       "effectName": "Vulnerability",

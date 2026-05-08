@@ -16,9 +16,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
       "effectName": "DEF Reduction",
@@ -53,9 +50,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1573930598\">Silwolf_Eidolon2_StatusResistanceDown</a>[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Effect RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
       "effectName": "Effect RES Reduction",
@@ -91,9 +85,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__50824187\">Silwolf_BPAbility_AllDamageTypeResistanceDown</a>[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "All-Type DMG RES -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
       "effectName": "All-Type RES Reduction",
@@ -130,9 +121,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedDown"
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
       ],
       "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -171,9 +159,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
       "effectName": "DEF Reduction",
@@ -210,9 +195,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_AttackDown"
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
       ],
       "description": "ATK -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -349,12 +331,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AttachWeakness"
       ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "_BPFlag"
-      ],
       "description": "Extra Weakness implanted. Corresponding RES is lowered by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
       "effectName": "Implant a Weakness",
@@ -394,11 +370,11 @@ const configAbility = {
               "functionName": "<a class=\"gTempYellow\" id=\"958478851\">Silwolf_Ability02_OverrideNameForStatus</a>",
               "variables": {
                 "DF_WeakType": {
-                  "operator": "Variables[0] (_BPFlag) || RETURN",
-                  "displayLines": "_BPFlag",
+                  "operator": "Variables[0] (FREEVAR) || RETURN",
+                  "displayLines": "FREEVAR",
                   "constants": [],
                   "variables": [
-                    "_BPFlag"
+                    "FREEVAR"
                   ]
                 }
               }

@@ -439,13 +439,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1304078651\">Jiaoqiu_Aura</a>",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "Skill03_P1_DamagePercentage",
-        "Skill03_P2_Ratio",
-        "Skill03_P3_Value",
-        "Skill03_P3_Ratio",
-        "Skill03_P4_Duration"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -773,13 +766,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1053970623\">Jiaoqiu_Ultimate_FriendForShow</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "Skill03_P4_Duration",
-        "Skill03_P3_Ratio",
-        "Skill03_P3_Value",
-        "Skill03_P2_Ratio",
-        "Skill03_P1_DamagePercentage"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -792,22 +778,12 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "latentQueue": [
-        "SkillRank_Rank04_Flag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__8266626\">Jiaoqiu_Aura_DebuffForShow</a>",
-      "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "Skill03_P4_Duration",
-        "Skill03_P3_Ratio",
-        "Skill03_P3_Value",
-        "Skill03_P2_Ratio",
-        "Skill03_P1_DamagePercentage"
-      ]
+      "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
@@ -828,11 +804,6 @@ const configAbility = {
         "MDF_PropertyValue_2"
       ],
       "latentQueue": [
-        "Skill03_P4_Duration",
-        "Skill03_P3_Ratio",
-        "Skill03_P3_Value",
-        "Skill03_P2_Ratio",
-        "Skill03_P1_DamagePercentage",
         "SkillRank_Rank04_Flag"
       ],
       "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This unit can be considered as Burned. While Ashen Roast is active, takes Fire DMG at the start of each turn.",
@@ -1111,13 +1082,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "stackData": [
         "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "Skill03_P4_Duration",
-        "Skill03_P3_Ratio",
-        "Skill03_P3_Value",
-        "Skill03_P2_Ratio",
-        "Skill03_P1_DamagePercentage"
       ],
       "description": "Enemy targets in the Zone take <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> increased Ultimate DMG, with a <span class=\"descriptionNumberColor\">#Skill03_P2_Chance</span> base chance of being inflicted with 1 stack of Ashen Roast when taking action. While the Zone exists, this effect can trigger up to <span class=\"descriptionNumberColor\">#Skill03_P5_Value</span> time(s). And it can only trigger once per enemy turn. This effect can still trigger for <span class=\"descriptionNumberColor\">_Max_Count_Left</span> more time(s).",
       "type": "Debuff",

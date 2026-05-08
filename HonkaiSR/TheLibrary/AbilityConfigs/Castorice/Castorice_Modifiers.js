@@ -11,12 +11,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-459849199\">Castorice_Eidolon6_QuantumPenetrate</a>[<span class=\"descriptionNumberColor\">Await for Years to Loom</span>]",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "OverHeal"
-      ],
       "description": "When dealing DMG, increases Quantum RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "statusName": "Await for Years to Loom",
@@ -41,12 +35,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1861384440\">Castorice_Eidolon4_HealTakenRatio</a>[<span class=\"descriptionNumberColor\">Rest in Songs of Gloom</span>]",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "OverHeal"
-      ],
       "description": "The HP restored when receiving healing increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "HP Restoration Boost",
@@ -104,9 +92,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2083586529\">Castorice_Eidolon2_OnListenValueChange</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "OverHeal"
-      ],
       "variableValueChange": [
         {
           "name": "Variable Value Changes",
@@ -455,9 +440,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__950021136\">Castorice_PointB1_HealTaxes</a>",
-      "latentQueue": [
-        "OverHeal"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -527,13 +509,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__115720497\">Memosprite_Castorice_PointB2_OnListen</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "Castorice_PointB2_HPRatio",
-        "Castorice_PointB2_SpeedRatio"
-      ],
-      "latentQueue": [
-        "OverHeal"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -677,13 +652,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__635972074\">Castorice_Passive_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_MaxLayer"
-      ],
-      "latentQueue": [
-        "MDF_Castorice_AttackFlag"
-      ],
       "description": "Each stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
       "type": "Buff",
       "effectName": "DMG Boost",
@@ -887,12 +855,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__445281600\">Castorice_LoseHPPreShow</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_PreShowMaxHP",
-        "MDF_PreShowCurrentHP",
-        "MDF_LoseHPRatio01",
-        "MDF_LoseHPRatio02"
       ],
       "execute": [
         {

@@ -11,9 +11,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Lightning RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "statusName": "Fluctuate in the Tapestry of Fates",
@@ -888,9 +885,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__755493734\">Aglaea_Ability02_ChangeSkill</a>",
-      "latentQueue": [
-        "_CasterEnergy"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1172,12 +1166,6 @@ const configAbility = {
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "BombDamagePercentage",
-        "_SpRecover",
-        "MDF_PropertyValue",
-        "MDF_PropertyValue2"
       ],
       "description": "After receiving Aglaea's attack, further takes Lightning Additional DMG equal to <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of Aglaea's ATK. Garmentmaker will prioritize this target to attack.",
       "type": "Debuff",
@@ -1753,9 +1741,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1390492215\">Aglaea_Ability02Preshow</a>",
-      "latentQueue": [
-        "_CasterEnergy"
-      ],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",

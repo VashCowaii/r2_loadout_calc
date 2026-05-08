@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": "Trailblazer - Harmony",
   "trimCharacterName": "TrailblazerHarmony",
   "abilityList": [
+    "TrailblazerHarmony_Modifiers",
     "TrailblazerHarmony_PlayerBoy_20_TechniqueInLevel",
     "TrailblazerHarmony_PlayerBoy_20_PassiveAbility_01",
     "TrailblazerHarmony_PlayerBoy_20_Ability03_Part02",
@@ -11,674 +12,9 @@ const compositeAbilityObject = {
     "TrailblazerHarmony_PlayerBoy_20_Ability02_Part02",
     "TrailblazerHarmony_PlayerBoy_20_Ability02_Part01",
     "TrailblazerHarmony_PlayerBoy_20_Ability01_Part02",
-    "TrailblazerHarmony_PlayerBoy_20_Ability01_Part01",
-    "TrailblazerHarmony_Modifiers"
+    "TrailblazerHarmony_PlayerBoy_20_Ability01_Part01"
   ],
   "abilityObject": {
-    "TrailblazerHarmony_PlayerBoy_20_TechniqueInLevel": {
-      "fileName": "TrailblazerHarmony_PlayerBoy_20_TechniqueInLevel",
-      "childAbilityList": [
-        "TrailblazerHarmony_PlayerBoy_20_TechniqueInLevel"
-      ],
-      "skillTrigger": "SkillMaze",
-      "abilityType": "Technique",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-632230246\">StageAbility_Maze_PlayerBoy_20_Modifier</a>"
-        }
-      ],
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-632230246\">StageAbility_Maze_PlayerBoy_20_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Wave Count",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1971132539\">PlayerBoy_20_TechniqueUsage_Bonus</a>[<span class=\"descriptionNumberColor\">Now! I'm the Band!</span>]",
-                      "duration": {
-                        "operator": "Variables[0] (2) || RETURN",
-                        "displayLines": "2",
-                        "constants": [],
-                        "variables": [
-                          2
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_BreakDamageAddedRatio": {
-                          "operator": "Variables[0] (0.3) || RETURN",
-                          "displayLines": "0.3",
-                          "constants": [],
-                          "variables": [
-                            0.3
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ],
-              "priorityLevel": -80
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TrailblazerHarmony_PlayerBoy_20_PassiveAbility_01": {
-      "fileName": "TrailblazerHarmony_PlayerBoy_20_PassiveAbility_01",
-      "childAbilityList": [
-        "TrailblazerHarmony_PlayerBoy_20_PassiveAbility_01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 4
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1584216137\">PlayerBoy_20_Eidolon4_Bonus</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Trace Activated",
-            "conditionList": "Shuffle Along"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1126601177\">PlayerBoy_20_PointB2_Bonus</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Trace Activated",
-            "conditionList": "Hat of the Theater"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1588077472\">PlayerBoy_20_PointB3_Bonus</a>",
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.3) || RETURN",
-                  "displayLines": "0.3",
-                  "constants": [],
-                  "variables": [
-                    0.3
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1193433566\">PlayerBoy_20_Eidolon1</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 2
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1210211185\">PlayerBoy_20_Eidolon2</a>[<span class=\"descriptionNumberColor\">Jailbreaking Rainbowwalk</span>]",
-              "duration": {
-                "operator": "Variables[0] (3) || RETURN",
-                "displayLines": "3",
-                "constants": [],
-                "variables": [
-                  3
-                ]
-              },
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] (0.25) || RETURN",
-                  "displayLines": "0.25",
-                  "constants": [],
-                  "variables": [
-                    0.25
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": 0,
-          "maximum": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
-          },
-          "assignState": "True",
-          "priorState": "Normal",
-          "bar#": 3
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1679523029\">PlayerBoy_20_Passive_BonusArea</a>"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TrailblazerHarmony_PlayerBoy_20_Ability03_Part02": {
-      "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"610400910\">PlayerBoy_20_AbilityP01_ListenRedShieldModifier</a>",
-          "duration": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
-          },
-          "valuePerStack": {
-            "MDF_LifeTime": {
-              "operator": "Variables[0] (3) || RETURN",
-              "displayLines": "3",
-              "constants": [],
-              "variables": [
-                3
-              ]
-            }
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "MDF_HarmonyEnergy",
-          "value": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
-          }
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": {
-            "operator": "Variables[0] (MDF_HarmonyEnergy) || RETURN",
-            "displayLines": "MDF_HarmonyEnergy",
-            "constants": [],
-            "variables": [
-              "MDF_HarmonyEnergy"
-            ]
-          },
-          "maximum": {
-            "operator": "Variables[0] (3) || RETURN",
-            "displayLines": "3",
-            "constants": [],
-            "variables": [
-              3
-            ]
-          },
-          "assignState": "True",
-          "priorState": "Active",
-          "bar#": 3
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "valuePercent": 1,
-          "ofAbilitySplit": true,
-          "isFixed": "* ERR"
-        },
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{All Team Members}}"
-      }
-    },
-    "TrailblazerHarmony_PlayerBoy_20_Ability03_Part01": {
-      "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability03_Part01",
-      "childAbilityList": [
-        "TrailblazerHarmony_PlayerBoy_20_Ability03_Camera",
-        "TrailblazerHarmony_PlayerBoy_20_Ability03_EnterReady",
-        "TrailblazerHarmony_PlayerBoy_20_Ability03_Part01",
-        "TrailblazerHarmony_PlayerBoy_20_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Ultimate",
-      "energy": 5,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "PlayerBoy_20_Ability03_Part02"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{All Team Members}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{All Team Members}}"
-      }
-    },
-    "TrailblazerHarmony_PlayerBoy_20_Ability03_EnterReady": {
-      "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability03_EnterReady",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      }
-    },
-    "TrailblazerHarmony_PlayerBoy_20_Ability02_Part02": {
-      "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Trace Activated",
-            "conditionList": "Shuffle Along"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "canPhase": true,
-              "AttackScaling": {
-                "DamageType": "Imaginary",
-                "Damage": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
-                },
-                "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || Constants[0] (1) || Variables[1] (1) || ADD || MUL || RETURN",
-                  "displayLines": "(ST Toughness Value * (1 + 1))",
-                  "constants": [
-                    1
-                  ],
-                  "variables": [
-                    "ST Toughness Value",
-                    1
-                  ]
-                },
-                "Tags": null,
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "canPhase": true,
-              "AttackScaling": {
-                "DamageType": "Imaginary",
-                "Damage": {
-                  "operator": "Variables[0] (0.5) || RETURN",
-                  "displayLines": "0.5",
-                  "constants": [],
-                  "variables": [
-                    0.5
-                  ]
-                },
-                "Toughness": {
-                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
-                  "displayLines": "ST Toughness Value",
-                  "constants": [],
-                  "variables": [
-                    "ST Toughness Value"
-                  ]
-                },
-                "Tags": null,
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Eidolon Activated",
-            "eidolon": 6
-          },
-          "passed": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "ContextCaster",
-              "variableName": "Bounce_Count",
-              "value": {
-                "operator": "Constants[0] (4) || Variables[0] (2) || ADD || RETURN",
-                "displayLines": "(4 + 2)",
-                "constants": [
-                  4
-                ],
-                "variables": [
-                  2
-                ]
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "scope": "ContextCaster",
-              "variableName": "Bounce_Count",
-              "value": 4
-            }
-          ]
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": {
-            "operator": "Variables[0] (Bounce_Count) || RETURN",
-            "displayLines": "Bounce_Count",
-            "constants": [],
-            "variables": [
-              "Bounce_Count"
-            ]
-          },
-          "Event": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "paramSequence": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "canPhase": true,
-                  "AttackScaling": {
-                    "DamageType": "Imaginary",
-                    "Damage": {
-                      "operator": "Variables[0] (0.5) || RETURN",
-                      "displayLines": "0.5",
-                      "constants": [],
-                      "variables": [
-                        0.5
-                      ]
-                    },
-                    "Toughness": {
-                      "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
-                      "displayLines": "(ST Toughness Value * 0.5)",
-                      "constants": [
-                        0.5
-                      ],
-                      "variables": [
-                        "ST Toughness Value"
-                      ]
-                    },
-                    "Tags": null,
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "TrailblazerHarmony_PlayerBoy_20_Ability02_Part01": {
-      "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability02_Part01",
-      "childAbilityList": [
-        "TrailblazerHarmony_PlayerBoy_20_Ability02_Camera",
-        "TrailblazerHarmony_PlayerBoy_20_Ability02_Part01",
-        "TrailblazerHarmony_PlayerBoy_20_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": 6,
-      "toughnessList": [
-        10,
-        0,
-        10
-      ],
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "PlayerBoy_20_Ability02_Part02",
-          "isTrigger": true
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "subTarget": "All Other Team Members"
-      }
-    },
-    "TrailblazerHarmony_PlayerBoy_20_Ability01_Part02": {
-      "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] (1) || RETURN",
-              "displayLines": "1",
-              "constants": [],
-              "variables": [
-                1
-              ]
-            },
-            "Toughness": {
-              "operator": "Variables[0] (ST Toughness Value) || RETURN",
-              "displayLines": "ST Toughness Value",
-              "constants": [],
-              "variables": [
-                "ST Toughness Value"
-              ]
-            },
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      }
-    },
-    "TrailblazerHarmony_PlayerBoy_20_Ability01_Part01": {
-      "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability01_Part01",
-      "childAbilityList": [
-        "TrailblazerHarmony_PlayerBoy_20_Ability01_Camera",
-        "TrailblazerHarmony_PlayerBoy_20_Ability01_Part01",
-        "TrailblazerHarmony_PlayerBoy_20_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": 20,
-      "toughnessList": [
-        10,
-        0,
-        0
-      ],
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "PlayerBoy_20_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      }
-    },
     "TrailblazerHarmony_Modifiers": {
       "fileName": "TrailblazerHarmony_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -692,9 +28,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1210211185\">PlayerBoy_20_Eidolon2</a>[<span class=\"descriptionNumberColor\">Jailbreaking Rainbowwalk</span>]",
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
           "description": "Increases Energy Regeneration Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Buff",
           "statusName": "Jailbreaking Rainbowwalk",
@@ -758,9 +91,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1588077472\">PlayerBoy_20_PointB3_Bonus</a>",
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1697,9 +1027,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead"
           ],
-          "stackData": [
-            "MDF_LifeTime"
-          ],
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
@@ -2122,9 +1449,6 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1971132539\">PlayerBoy_20_TechniqueUsage_Bonus</a>[<span class=\"descriptionNumberColor\">Now! I'm the Band!</span>]",
           "stackType": "ReplaceByCaster",
           "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_BreakDamageAddedRatio"
-          ],
           "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_BreakDamageAddedRatio</span>.",
           "type": "Buff",
           "effectName": "Break Effect Boost",
@@ -2155,6 +1479,670 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "TrailblazerHarmony_PlayerBoy_20_TechniqueInLevel": {
+      "fileName": "TrailblazerHarmony_PlayerBoy_20_TechniqueInLevel",
+      "childAbilityList": [
+        "TrailblazerHarmony_PlayerBoy_20_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
+      "abilityType": "Technique",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-632230246\">StageAbility_Maze_PlayerBoy_20_Modifier</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-632230246\">StageAbility_Maze_PlayerBoy_20_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Wave Count",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1971132539\">PlayerBoy_20_TechniqueUsage_Bonus</a>[<span class=\"descriptionNumberColor\">Now! I'm the Band!</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (2) || RETURN",
+                        "displayLines": "2",
+                        "constants": [],
+                        "variables": [
+                          2
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_BreakDamageAddedRatio": {
+                          "operator": "Variables[0] (0.3) || RETURN",
+                          "displayLines": "0.3",
+                          "constants": [],
+                          "variables": [
+                            0.3
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerHarmony_PlayerBoy_20_PassiveAbility_01": {
+      "fileName": "TrailblazerHarmony_PlayerBoy_20_PassiveAbility_01",
+      "childAbilityList": [
+        "TrailblazerHarmony_PlayerBoy_20_PassiveAbility_01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 4
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1584216137\">PlayerBoy_20_Eidolon4_Bonus</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Shuffle Along"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1126601177\">PlayerBoy_20_PointB2_Bonus</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Hat of the Theater"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1588077472\">PlayerBoy_20_PointB3_Bonus</a>",
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.3) || RETURN",
+                  "displayLines": "0.3",
+                  "constants": [],
+                  "variables": [
+                    0.3
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1193433566\">PlayerBoy_20_Eidolon1</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 2
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1210211185\">PlayerBoy_20_Eidolon2</a>[<span class=\"descriptionNumberColor\">Jailbreaking Rainbowwalk</span>]",
+              "duration": {
+                "operator": "Variables[0] (3) || RETURN",
+                "displayLines": "3",
+                "constants": [],
+                "variables": [
+                  3
+                ]
+              },
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.25) || RETURN",
+                  "displayLines": "0.25",
+                  "constants": [],
+                  "variables": [
+                    0.25
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": 0,
+          "maximum": {
+            "operator": "Variables[0] (3) || RETURN",
+            "displayLines": "3",
+            "constants": [],
+            "variables": [
+              3
+            ]
+          },
+          "assignState": "True",
+          "priorState": "Normal",
+          "bar#": 3
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1679523029\">PlayerBoy_20_Passive_BonusArea</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerHarmony_PlayerBoy_20_Ability03_Part02": {
+      "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"610400910\">PlayerBoy_20_AbilityP01_ListenRedShieldModifier</a>",
+          "duration": {
+            "operator": "Variables[0] (3) || RETURN",
+            "displayLines": "3",
+            "constants": [],
+            "variables": [
+              3
+            ]
+          },
+          "valuePerStack": {
+            "MDF_LifeTime": {
+              "operator": "Variables[0] (3) || RETURN",
+              "displayLines": "3",
+              "constants": [],
+              "variables": [
+                3
+              ]
+            }
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "MDF_HarmonyEnergy",
+          "value": {
+            "operator": "Variables[0] (3) || RETURN",
+            "displayLines": "3",
+            "constants": [],
+            "variables": [
+              3
+            ]
+          }
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": {
+            "operator": "Variables[0] (MDF_HarmonyEnergy) || RETURN",
+            "displayLines": "MDF_HarmonyEnergy",
+            "constants": [],
+            "variables": [
+              "MDF_HarmonyEnergy"
+            ]
+          },
+          "maximum": {
+            "operator": "Variables[0] (3) || RETURN",
+            "displayLines": "3",
+            "constants": [],
+            "variables": [
+              3
+            ]
+          },
+          "assignState": "True",
+          "priorState": "Active",
+          "bar#": 3
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "valuePercent": 1,
+          "ofAbilitySplit": true,
+          "isFixed": "* ERR"
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
+    },
+    "TrailblazerHarmony_PlayerBoy_20_Ability03_Part01": {
+      "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability03_Part01",
+      "childAbilityList": [
+        "TrailblazerHarmony_PlayerBoy_20_Ability03_Camera",
+        "TrailblazerHarmony_PlayerBoy_20_Ability03_EnterReady",
+        "TrailblazerHarmony_PlayerBoy_20_Ability03_Part01",
+        "TrailblazerHarmony_PlayerBoy_20_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Ultimate",
+      "energy": 5,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "PlayerBoy_20_Ability03_Part02"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      }
+    },
+    "TrailblazerHarmony_PlayerBoy_20_Ability03_EnterReady": {
+      "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "TrailblazerHarmony_PlayerBoy_20_Ability02_Part02": {
+      "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Shuffle Along"
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Imaginary",
+                "Damage": {
+                  "operator": "Variables[0] (0.5) || RETURN",
+                  "displayLines": "0.5",
+                  "constants": [],
+                  "variables": [
+                    0.5
+                  ]
+                },
+                "Toughness": {
+                  "operator": "Variables[0] (ST Toughness Value) || Constants[0] (1) || Variables[1] (1) || ADD || MUL || RETURN",
+                  "displayLines": "(ST Toughness Value * (1 + 1))",
+                  "constants": [
+                    1
+                  ],
+                  "variables": [
+                    "ST Toughness Value",
+                    1
+                  ]
+                },
+                "Tags": null,
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Imaginary",
+                "Damage": {
+                  "operator": "Variables[0] (0.5) || RETURN",
+                  "displayLines": "0.5",
+                  "constants": [],
+                  "variables": [
+                    0.5
+                  ]
+                },
+                "Toughness": {
+                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
+                  "displayLines": "ST Toughness Value",
+                  "constants": [],
+                  "variables": [
+                    "ST Toughness Value"
+                  ]
+                },
+                "Tags": null,
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          },
+          "passed": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "scope": "ContextCaster",
+              "variableName": "Bounce_Count",
+              "value": {
+                "operator": "Constants[0] (4) || Variables[0] (2) || ADD || RETURN",
+                "displayLines": "(4 + 2)",
+                "constants": [
+                  4
+                ],
+                "variables": [
+                  2
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "scope": "ContextCaster",
+              "variableName": "Bounce_Count",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": {
+            "operator": "Variables[0] (Bounce_Count) || RETURN",
+            "displayLines": "Bounce_Count",
+            "constants": [],
+            "variables": [
+              "Bounce_Count"
+            ]
+          },
+          "Event": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "paramSequence": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "canPhase": true,
+                  "AttackScaling": {
+                    "DamageType": "Imaginary",
+                    "Damage": {
+                      "operator": "Variables[0] (0.5) || RETURN",
+                      "displayLines": "0.5",
+                      "constants": [],
+                      "variables": [
+                        0.5
+                      ]
+                    },
+                    "Toughness": {
+                      "operator": "Variables[0] (ST Toughness Value) || Constants[0] (0.5) || MUL || RETURN",
+                      "displayLines": "(ST Toughness Value * 0.5)",
+                      "constants": [
+                        0.5
+                      ],
+                      "variables": [
+                        "ST Toughness Value"
+                      ]
+                    },
+                    "Tags": null,
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "TrailblazerHarmony_PlayerBoy_20_Ability02_Part01": {
+      "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability02_Part01",
+      "childAbilityList": [
+        "TrailblazerHarmony_PlayerBoy_20_Ability02_Camera",
+        "TrailblazerHarmony_PlayerBoy_20_Ability02_Part01",
+        "TrailblazerHarmony_PlayerBoy_20_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": 6,
+      "toughnessList": [
+        10,
+        0,
+        10
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "PlayerBoy_20_Ability02_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "All Other Team Members"
+      }
+    },
+    "TrailblazerHarmony_PlayerBoy_20_Ability01_Part02": {
+      "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] (1) || RETURN",
+              "displayLines": "1",
+              "constants": [],
+              "variables": [
+                1
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      }
+    },
+    "TrailblazerHarmony_PlayerBoy_20_Ability01_Part01": {
+      "fileName": "TrailblazerHarmony_PlayerBoy_20_Ability01_Part01",
+      "childAbilityList": [
+        "TrailblazerHarmony_PlayerBoy_20_Ability01_Camera",
+        "TrailblazerHarmony_PlayerBoy_20_Ability01_Part01",
+        "TrailblazerHarmony_PlayerBoy_20_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": 20,
+      "toughnessList": [
+        10,
+        0,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "PlayerBoy_20_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     }
   }
 }

@@ -193,13 +193,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2019393203\">MWRen_Eidolon4_Add</a>",
-      "latentQueue": [
-        "MwRen_isHeal",
-        "MwRen_isCharmAttack",
-        "MwRen_isAttack",
-        "MwRen_AttackStart",
-        "MwRen_isOverHalf"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -234,13 +227,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1963215461\">MWRen_Eidolon4</a>[<span class=\"descriptionNumberColor\">Heal All Bones</span>]",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "MwRen_isOverHalf",
-        "MwRen_AttackStart",
-        "MwRen_isAttack",
-        "MwRen_isCharmAttack",
-        "MwRen_isHeal"
-      ],
       "description": "Max HP +<span class=\"descriptionNumberColor\">MDF_HPIncrease</span>.",
       "type": "Buff",
       "effectName": "Max HP Boost",
@@ -298,9 +284,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-476823607\">MWRen_Trace03</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "MwRen_isAttack"
-      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -404,16 +387,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-510378845\">MWRen_Trace01</a>[<span class=\"descriptionNumberColor\">Vita Infinita</span>]",
-      "stackData": [
-        "MDF_HealEnhanceRatio"
-      ],
-      "latentQueue": [
-        "MwRen_isHeal",
-        "MwRen_isCharmAttack",
-        "MwRen_isAttack",
-        "MwRen_AttackStart",
-        "MwRen_isOverHalf"
-      ],
       "description": "Incoming Healing +<span class=\"descriptionNumberColor\">MDF_HealEnhanceRatio</span>.",
       "type": "Buff",
       "effectName": "Outgoing Healing Boost",
@@ -447,16 +420,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-870658235\">MWRen_Ability03_Listen</a>[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "MwRen_isHeal",
-        "MwRen_isCharmAttack",
-        "MwRen_isAttack",
-        "MwRen_AttackStart",
-        "MwRen_isOverHalf"
-      ],
       "description": "HP Lost: <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>",
       "type": "Other",
       "statusName": "Death Sentence",
@@ -471,12 +434,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1924146149\">MWRen_Qi</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "MwRen_isHeal",
-        "MwRen_isCharmAttack",
-        "MwRen_isAttack",
-        "MwRen_AttackStart"
-      ],
       "description": "At maximum Charge stacks, expends all stacks and immediately deals 1 instance of Follow-Up ATK to all enemies.",
       "type": "Other",
       "statusName": "Charge",
@@ -667,9 +624,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1915467315\">MWRen_Attack</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "DMG Boost",

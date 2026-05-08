@@ -12,12 +12,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__900132102\">Xueyi_AbilityEidolon1_InserteDamageRatio</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "Is_Insert"
-      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Hit",
@@ -330,12 +324,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__444597683\">Xueyi_BP_Passive01</a>[<span class=\"descriptionNumberColor\">Karma</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PassiveLayer"
-      ],
-      "latentQueue": [
-        "Is_Insert"
-      ],
       "description": "When \"Karma\" is fully stacked, consume all \"Karma\" stacks and immediately use 1 Follow-Up ATK against enemies.",
       "type": "Other",
       "statusName": "Karma",
@@ -924,12 +912,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__674322254\">Xueyi_AbilityEidolon4</a>[<span class=\"descriptionNumberColor\">Break Effect Boost</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_SkillRank04_BreakDamageAttackRatio"
-      ],
-      "latentQueue": [
-        "Is_Ultra"
-      ],
       "description": "Increases Break Effect by <span class=\"descriptionNumberColor\">MDF_SkillRank04_BreakDamageAttackRatio</span>.",
       "type": "Buff",
       "effectName": "Break Effect Boost",
@@ -961,12 +943,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__462393770\">Xueyi_Trace02</a>",
-      "stackData": [
-        "MDF_SkillTree02_AllDamageTypeAddedRatio"
-      ],
-      "latentQueue": [
-        "Is_Ultra"
-      ],
       "execute": [
         {
           "eventTrigger": "Deal Damage Start [Owner]: Any",
@@ -991,9 +967,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ForceStanceDamage"
-      ],
-      "latentQueue": [
-        "Is_Ultra"
       ],
       "execute": [
         {
@@ -1174,9 +1147,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1316595895\">Xueyi_Passive_OnListenStance</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "latentQueue": [
-        "_Xueyi_Attack"
       ],
       "execute": [
         {

@@ -15,9 +15,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, up to 2 stacks.",
       "type": "Buff",
       "effectName": "SPD Boost",
@@ -66,9 +63,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "SPD +<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "SPD Boost",
@@ -101,10 +95,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1401924350\">Seele_Passive_DamageUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "seele_dmg_percent",
-        "MDF_Penetrate"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">seele_dmg_percent</span>.",
       "type": "Buff",
       "effectName": "DMG Boost",

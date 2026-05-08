@@ -13,15 +13,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-745710374\">Memosprite_PlayerBoyServant_30_UltraBonus</a>[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
       "stackType": "ReplaceByCaster",
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_PropertyRatio",
-        "MDF_BasicDamagePercentage",
-        "MDF_PointB3_P1_Basic",
-        "MDF_PointB3_P2_Delta",
-        "MDF_PointB3_P3_Ratio",
-        "MDF_PointB3_P4_Max",
-        "MDF_Rank04_P2_ExtraDamagePercentage"
-      ],
       "description": "For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_DamagePercentage</span> of the original DMG.",
       "type": "Buff",
       "effectName": "Mem's Support",
@@ -513,10 +504,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1895406948\">Memosprite_PlayerBoyServant_30_CritDmgUp</a>[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyConvert",
-        "MDF_PropertyBase"
-      ],
       "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
       "type": "Buff",
       "statusName": "Friends! Together!",
@@ -687,9 +674,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1274980234\">PlayerBoy_30_TeamSP</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
       "modifierFlags": [
         "RetainCountZero"
-      ],
-      "stackData": [
-        "MDF_Max"
       ],
       "description": "When Charge reaches <span class=\"descriptionNumberColor\">MDF_Max</span>, Mem immediately takes action and can use \"Lemme! Help You!\".",
       "type": "Other",

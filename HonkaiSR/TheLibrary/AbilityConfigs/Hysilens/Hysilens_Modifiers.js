@@ -73,9 +73,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1305457610\">Harscyline_DOTDamageUpPre</a>",
-      "stackData": [
-        "MDF_DamageUpRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -2189,9 +2186,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
       "type": "Buff",
       "statusName": "The Fiddle of Pearls",
@@ -2313,9 +2307,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__511580758\">Harscyline_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Overtone Hum: Chorus After Dark Tides</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
       "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
       "type": "Debuff",
       "effectName": "Vulnerability",
@@ -2365,13 +2356,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "ListenBattleEventSkill"
-      ],
-      "stackData": [
-        "MDF_DOTDamagePercentageTemp",
-        "MDF_TriggerDOTMaxCountTemp",
-        "MDF_DefenceDownRatioTemp",
-        "MDF_ResistanceDownRatioTemp",
-        "MDF_AttackDownRatioTemp"
       ],
       "subModList": [
         {

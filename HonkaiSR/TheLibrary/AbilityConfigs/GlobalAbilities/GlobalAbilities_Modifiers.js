@@ -926,9 +926,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-205377483\">Local_SPAdd</a>",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_AddValue"
-      ],
       "execute": [
         {
           "eventTrigger": "Got a Kill [Owner]",

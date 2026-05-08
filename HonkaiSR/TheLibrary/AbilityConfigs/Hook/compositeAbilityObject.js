@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": "Hook",
   "trimCharacterName": "Hook",
   "abilityList": [
+    "Hook_Modifiers",
     "Hook_Hook_Trace02",
     "Hook_Hook_Trace01",
     "Hook_Hook_Eidolon6",
@@ -17,10 +18,81 @@ const compositeAbilityObject = {
     "Hook_Hook_Ability02_Part02",
     "Hook_Hook_Ability02_Part01",
     "Hook_Hook_Ability01_Part02",
-    "Hook_Hook_Ability01_Part01",
-    "Hook_Modifiers"
+    "Hook_Hook_Ability01_Part01"
   ],
   "abilityObject": {
+    "Hook_Modifiers": {
+      "fileName": "Hook_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1319656232\">Hook_BPAbilityAlter_Enable</a>[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]",
+          "counter": 1,
+          "description": "Enhances the next Skill and changes it to a Blast attack.",
+          "type": "Other",
+          "effectName": "Enhanced Skill",
+          "statusName": "Enhanced Skill",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityName": "Skill02",
+                  "skillSlot": "Skill",
+                  "enableSecondaryType": "ControlSkill02"
+                },
+                {
+                  "name": "Update Ability Enhance Button",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "display": "Hide",
+                  "abilityName": "Skill"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Update Ability Binding",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityName": "Skill21",
+                  "skillSlot": "Skill",
+                  "enableSecondaryType": "ControlSkill02"
+                },
+                {
+                  "name": "Update Ability Enhance Button",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "display": "Show",
+                  "abilityName": "Skill"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "Hook_Hook_Trace02": {
       "fileName": "Hook_Hook_Trace02",
       "abilityType": null,
@@ -1365,78 +1437,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       }
-    },
-    "Hook_Modifiers": {
-      "fileName": "Hook_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1319656232\">Hook_BPAbilityAlter_Enable</a>[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]",
-          "counter": 1,
-          "description": "Enhances the next Skill and changes it to a Blast attack.",
-          "type": "Other",
-          "effectName": "Enhanced Skill",
-          "statusName": "Enhanced Skill",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityName": "Skill02",
-                  "skillSlot": "Skill",
-                  "enableSecondaryType": "ControlSkill02"
-                },
-                {
-                  "name": "Update Ability Enhance Button",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "display": "Hide",
-                  "abilityName": "Skill"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Update Ability Binding",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityName": "Skill21",
-                  "skillSlot": "Skill",
-                  "enableSecondaryType": "ControlSkill02"
-                },
-                {
-                  "name": "Update Ability Enhance Button",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "display": "Show",
-                  "abilityName": "Skill"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": []
     }
   }
 }

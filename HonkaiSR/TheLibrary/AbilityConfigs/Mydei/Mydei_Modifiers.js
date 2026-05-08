@@ -536,9 +536,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__917948831\">Mydeimos_Trace03</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "_ForceEnergyBarChange"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -689,9 +686,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "Crazy"
-      ],
-      "latentQueue": [
-        "DV_CanTransfer"
       ],
       "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_HPAddValue</span>. DEF remains at 0.",
       "type": "Other",

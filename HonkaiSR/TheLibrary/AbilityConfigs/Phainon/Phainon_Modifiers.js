@@ -14,9 +14,6 @@ const configAbility = {
       "modifierFlags": [
         "CustomEvent_InfiniteRefresh"
       ],
-      "latentQueue": [
-        "_haveNotGainCountFromEnemyAction"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -189,9 +186,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-982733816\">Phainon_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
       "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. This effect stacks up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
       "type": "Buff",
       "statusName": "Shine with Valor",
@@ -279,9 +273,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__151398776\">Phainon_SPOverflow</a>[<span class=\"descriptionNumberColor\">Coreflame</span>]",
       "stackType": "Multiple",
-      "stackData": [
-        "MDF_Count"
-      ],
       "description": "The current number of overflow \"Coreflame\" points is <span class=\"descriptionNumberColor\">MDF_Count</span>. Gains an equal amount of \"Coreflame\" when the transformation ends.",
       "type": "Other",
       "statusName": "Coreflame",
@@ -1343,10 +1334,6 @@ const configAbility = {
         "FormationAssetCenterWhenSingle",
         "SpecialActionState",
         "SpecialBattleArea"
-      ],
-      "stackData": [
-        "MDF_PropertyRatio",
-        "MDF_PropertyRatio2"
       ],
       "description": "Immune to Crowd Control debuffs. ATK increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>, and Max HP increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio2</span>.",
       "type": "Other",

@@ -158,12 +158,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1902777328\">Memosprite_HyacineServant_MaxHpHalo</a>[<span class=\"descriptionNumberColor\">After Rain</span>]",
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "MDF_HaloCurrentHP",
-        "MDF_HaloMaxHPRatio",
-        "MDF_HaloMaxHPValue",
-        "MDF_ExtraMaxHPRatio"
-      ],
       "description": "Max HP increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> plus <span class=\"descriptionNumberColor\">MDF_HaloMaxHPValue</span>.",
       "type": "Buff",
       "effectName": "After Rain",
@@ -492,9 +486,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1132518124\">Hyacine_Passive_Effect</a>[<span class=\"descriptionNumberColor\">First Light Heals the World</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_DamageAddRatio"
-      ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageAddRatioTotal</span>.",
       "type": "Buff",
       "effectName": "DMG Boost",
@@ -545,9 +536,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__931141896\">Hyacine_PointB2</a>",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -830,9 +818,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1888501948\">Hyacine_PointB3</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "_SummonerHealCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

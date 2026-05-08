@@ -129,15 +129,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_DamageIncrease",
-        "MDF_DanHengPT_ExtraDamageCount",
-        "MDF_DamageRatio"
-      ],
-      "latentQueue": [
-        "IsInRank01Action",
-        "IsInPlayerAction"
-      ],
       "description": "DMG dealt by \"Bondmate\" increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
       "type": "Buff",
       "effectName": "Ode to Earth",
@@ -302,10 +293,6 @@ const configAbility = {
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_EverNightRatio",
-        "MDF_ExtraPoint"
       ],
       "description": "When Evey uses the Memosprite Skill \"Dream, Dissolving, as Dew,\" DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_EverNightRatio</span>. After Evernight uses Skill/Ultimate, gains <span class=\"descriptionNumberColor\">MDF_ExtraPoint</span> additional \"Memoria.\"",
       "type": "Buff",
@@ -613,17 +600,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-484368069\">Memosprite_CyreneServant_AmazingBonus_Phainon</a>[<span class=\"descriptionNumberColor\">Ode to Worldbearing</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_DamageIncrease",
-        "MDF_LoseHP",
-        "MDF_Loop",
-        "MDF_DamagePercentage",
-        "MDF_EnergyNeed",
-        "MDF_PropertyRatio",
-        "MDF_PropertyRatioMax",
-        "MDF_Kindling",
-        "MDF_ChargeEnergy"
-      ],
       "description": "Gains \"Eternal Ignition\" when transforming. While holding \"Eternal Ignition,\" increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>, and consumes HP equal to <span class=\"descriptionNumberColor\">MDF_LoseHP</span> of the current HP at the start of the extra turn. After using an attack, deals extra Fire Additional DMG to one random enemy.",
       "type": "Buff",
       "effectName": "Ode to Worldbearing",
@@ -1121,11 +1097,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_DamageIncrease",
-        "MDF_DefDown",
-        "MDF_DefDown2"
-      ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
       "type": "Buff",
       "effectName": "Ode to Trickery",
@@ -1340,11 +1311,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1645914465\">Memosprite_CyreneServant_AmazingBonus_Anaxa_HaloMain</a>",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_AnaxaCount",
-        "MDF_DamageIncrease",
-        "MDF_AttackAddRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -1423,11 +1389,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__84592407\">Memosprite_CyreneServant_AmazingBonus_Anaxa</a>[<span class=\"descriptionNumberColor\">Ode to Reason</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_AnaxaCount",
-        "MDF_DamageIncrease",
-        "MDF_AttackAddRatio"
-      ],
       "description": "The number of DMG instances dealt by the Skill increases by <span class=\"descriptionNumberColor\">MDF_AnaxaCount</span>.",
       "type": "Buff",
       "effectName": "Ode to Reason",
@@ -1561,10 +1522,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__609996020\">Memosprite_CyreneServant_AmazingBonus_Cerydra</a>[<span class=\"descriptionNumberColor\">Ode to Law</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_DamageIncrease",
-        "MDF_ExtraPoint"
       ],
       "description": "The character with \"Military Merit\" has <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span> increased CRIT DMG. After Coup de Main ends, Cerydra gains <span class=\"descriptionNumberColor\">MDF_ExtraPoint</span> Charge.",
       "type": "Buff",
@@ -1708,9 +1665,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_SPAdd"
-      ],
       "description": "After attacking, regenerates <span class=\"descriptionNumberColor\">MDF_SPAdd</span> Energy.",
       "type": "Buff",
       "statusName": "Flowing Warmth",
@@ -1744,11 +1698,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-716696180\">Memosprite_CyreneServant_AmazingBonus_Harscyline</a>[<span class=\"descriptionNumberColor\">Ode to Ocean</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_HarscylineRatio",
-        "MDF_DotRatio1",
-        "MDF_DotRatio2"
       ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_HarscylineRatio</span>. After using Basic ATK/Skill to attack enemy targets, DoT debuffs additionally produces 1 instance of DMG.",
       "type": "Buff",
@@ -1860,9 +1809,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-313440704\">Memosprite_CyreneServant_AmazingBonus_Aglaea_Sub2</a>[<span class=\"descriptionNumberColor\">Romantic</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_SPAdd"
       ],
       "description": "Regenerates <span class=\"descriptionNumberColor\">MDF_SPAdd</span> Energy after Aglaea or Garmentmaker attacks.",
       "type": "Buff",
@@ -1981,10 +1927,6 @@ const configAbility = {
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_DamageIncrease",
-        "MDF_IgnoreDef"
       ],
       "description": "DMG dealt by Aglaea and Garmentmaker increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span> and ignores <span class=\"descriptionNumberColor\">MDF_IgnoreDef</span> of targets' DEF.",
       "type": "Buff",
@@ -2614,10 +2556,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_CritDamage",
-        "MDF_ActionDelay"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -2807,11 +2745,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1569324375\">Memosprite_CyreneServant_AmazingBonus_Tribbie</a>[<span class=\"descriptionNumberColor\">Ode to Passage</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_TribbieLoopCount",
-        "MDF_IgnoreDef",
-        "MDF_TargetCount"
       ],
       "description": "DMG dealt ignores <span class=\"descriptionNumberColor\">MDF_IgnoreDef</span> of the enemy's DEF. When Tribbie launches Follow-Up ATK and triggers the Additional DMG from Tribbie's Zone, it will further deal <span class=\"descriptionNumberColor\">MDF_TribbieLoopCount</span> instance(s) of Additional DMG.",
       "type": "Buff",
@@ -3505,10 +3438,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_HPTransferRatio",
-        "MDF_CritTranferRatio"
-      ],
       "description": "ATK increases by <span class=\"descriptionNumberColor\">MDF_AttackAddRatio</span>, CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_CritAddRatio</span>. After using Enhanced Basic ATK, Demiurge immediately gains 1 extra turn and automatically uses \"Minuet of Blooms and Plumes.\"",
       "type": "Buff",
       "effectName": "Ode to Genesis",
@@ -4019,13 +3948,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_SuicideRatioBase",
-        "MDF_SuicideRatioBase2",
-        "MDF_MaxEnergy",
-        "MDF_EnergyRatio",
-        "MDF_TargetCount"
-      ],
       "description": "Castorice's Newbud can overflow up to <span class=\"descriptionNumberColor\">MDF_MaxEnergy</span>. When summoning Netherwing, consume all overflowing \"Newbud.\" Based on the amount of overflow consumed, increases the multiplier for the DMG dealt when this summoned Netherwing triggers the ability effect of its Talent \"Wings Sweep the Ruins.\"",
       "type": "Buff",
       "effectName": "Ode to Life and Death",
@@ -4227,13 +4149,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_HyacineRatio"
-      ],
-      "latentQueue": [
-        "IsInRank01Action",
-        "IsInPlayerAction"
-      ],
       "description": "The amount of Hyacine's healing included in the healing tally of Little Ica's Memosprite Skill is additionally increased by an amount equal to <span class=\"descriptionNumberColor\">MDF_HyacineRatio</span> of the current healing amount. After Hyacine uses Skill/Ultimate, consumes 1 stack of \"Ode to Sky.\"",
       "type": "Buff",
       "effectName": "Ode to Sky",
@@ -4373,9 +4288,6 @@ const configAbility = {
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_IncreaseRatio"
       ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_IncreaseRatio</span>.",
       "type": "Buff",
@@ -4803,13 +4715,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-156616153\">Memosprite_CyreneServant_Eidolon4_Count</a>[<span class=\"descriptionNumberColor\">Please Write On, With a Smile</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_Count",
-        "MDF_Damage"
-      ],
-      "latentQueue": [
-        "TutorialSwitch"
-      ],
       "description": "The multiplier for the bounce DMG of the Memosprite Skill \"Ode to Ego\" increases by <span class=\"descriptionNumberColor\">MDF_Damage</span>.",
       "type": "Buff",
       "statusName": "Please Write On, With a Smile"

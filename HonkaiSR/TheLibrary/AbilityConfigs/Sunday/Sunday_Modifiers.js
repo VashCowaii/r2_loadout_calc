@@ -187,9 +187,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2103228822\">Sunday_10_CritUp</a>[<span class=\"descriptionNumberColor\">The Sorrowing Body</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_CritValue"
-      ],
       "description": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "CRIT Rate Boost",
@@ -477,9 +474,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1698887691\">Sunday_10_Eidolon1_SuperBonusForServant</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyRatio"
-      ],
       "description": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF.",
       "type": "Buff",
       "effectName": "Millennium's Quietus",
@@ -506,10 +500,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-817980433\">Sunday_10_Eidolon1_SuperBonus</a>[<span class=\"descriptionNumberColor\">Millennium's Quietus</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyRatio",
-        "MDF_PropertyRatio02"
-      ],
       "description": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF.",
       "type": "Buff",
       "effectName": "Millennium's Quietus",
@@ -795,9 +785,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2041266105\">Sunday_10_MazeBonus</a>[<span class=\"descriptionNumberColor\">The Glorious Mysteries</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "DMG Boost",
@@ -830,10 +817,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1284738050\">Sunday_10_Ability03_Link</a>[<span class=\"descriptionNumberColor\">The Beatified</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyRatio",
-        "MDF_PropertyBase"
-      ],
       "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyFinal</span>.",
       "type": "Buff",
       "effectName": "The Beatified",

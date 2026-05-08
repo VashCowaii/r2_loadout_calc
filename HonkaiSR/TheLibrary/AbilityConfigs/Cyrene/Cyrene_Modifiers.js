@@ -261,9 +261,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__619883840\">Cyrene_Passive_Sub</a>[<span class=\"descriptionNumberColor\">Hearts Gather as One</span>]",
-      "stackData": [
-        "MDF_DamageIncrease"
-      ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_DamageIncrease</span>.",
       "type": "Buff",
       "statusName": "Hearts Gather as One",
@@ -909,12 +906,6 @@ const configAbility = {
       "stackType": "Replace",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_SPAdd"
-      ],
-      "latentQueue": [
-        "MDF_FirstTimeMax"
       ],
       "description": "When taking action, grants Cyrene \"Recollection.\"",
       "type": "Other",

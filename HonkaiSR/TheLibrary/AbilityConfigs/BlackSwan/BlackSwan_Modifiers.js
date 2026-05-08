@@ -1603,10 +1603,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "stackData": [
-        "MDF_PropertyValue",
-        "MDF_Chance"
-      ],
       "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. When enemy targets are inflicted with \"Arcana,\" there is a <span class=\"descriptionNumberColor\">MDF_Chance</span> fixed chance to additionally increase the number of \"Arcana\" stacked this time by 1. And the number of \"Arcana\" stacks will not be halved after dealing DMG at the start of the turn.",
       "type": "Debuff",
       "effectName": "Epiphany",
@@ -1712,17 +1708,6 @@ const configAbility = {
         "DynamicInjectLoop"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "Basic_DamagePercentage",
-        "ExtraLayer_DamagePercentage",
-        "Spread_DamagePercentage",
-        "ThresholdLayer",
-        "DefenceIgnore"
-      ],
-      "latentQueue": [
-        "MazeSkill_Triggered",
-        "_can_continue"
-      ],
       "description": "Takes Wind DMG at the start of each turn. While in the \"Arcana\" state, will also be considered as suffering from Wind Shear, Bleed, Burn, and Shock.",
       "type": "Debuff",
       "effectName": "Arcana",
