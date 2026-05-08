@@ -10,6 +10,54 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-273265318\">ADV_StageAbility_Maze_Dr_Ratio</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "Taunt"
+      ],
+      "onCreation": [
+        {
+          "name": "Set Target Parameter",
+          "readTarget": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "summonID": 13051
+          },
+          "paramTarget": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "variableName": "_Dr_Ratio_Taunt_Count"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target Count",
+            "target": {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Add Target by Summoned Units",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "summonID": 13051
+                }
+              ]
+            },
+            "compareType": ">=",
+            "value2": 6
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1051620439\">Dr_Ratio_InsertAbility</a>",
       "execute": [
         {
