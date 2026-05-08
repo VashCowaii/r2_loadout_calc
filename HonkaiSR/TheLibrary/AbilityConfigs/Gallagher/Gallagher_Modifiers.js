@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__306900183\">ADV_StageAbility_Maze_Gallagher</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1129970541\">Gallagher_HealRatioAddedRatio</a>",
       "stackType": "ReplaceByCaster",
       "execute": [
