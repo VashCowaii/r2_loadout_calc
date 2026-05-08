@@ -10,6 +10,57 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1998221839\">ADV_Modifier_MazeEffect_Moze</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "modifierFlags": [
+        "Stealth"
+      ],
+      "duration": 20,
+      "onCreation": [
+        {
+          "name": "Overworld Filter Enemies",
+          "execute": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Task Action Target}}"
+              },
+              "modifier": null,
+              "ID": "1000118(null)"
+            }
+          ]
+        }
+      ],
+      "onStageExit": [
+        "Modifier Deletes Itself"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1731516452\">ADV_Modifier_Maze_Moze</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "duration": 20,
+      "onStageExit": [
+        "Modifier Deletes Itself"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1159155887\">ADV_StageAbility_Maze_MozeOnHitTag</a>",
+      "counter": 1,
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1747433687\">ADV_StageAbility_Maze_Moze</a>",
+      "counter": 1,
+      "stackType": "Refresh"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1726925121\">Moze_Ability02_InShadowModifier</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
