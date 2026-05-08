@@ -10,6 +10,38 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-685638153\">ADV_StageAbility_Maze_Sparkle_Hide</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__212298658\">ADV_StageAbility_Maze_Sparkle</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "modifierFlags": [
+        "Stealth"
+      ],
+      "duration": 20,
+      "onCreation": [
+        {
+          "name": "Overworld Filter Enemies",
+          "execute": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Task Action Target}}"
+              },
+              "modifier": null,
+              "ID": "1000118(null)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1336404304\">Sparkle_Tree03</a>[<span class=\"descriptionNumberColor\">Nocturne</span>]",
       "stackType": "Replace",
       "modifierFlags": [
