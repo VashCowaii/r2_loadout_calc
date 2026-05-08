@@ -4,6 +4,12 @@ const compositeAbilityObject = {
   "trimCharacterName": "Acheron",
   "abilityList": [
     "Acheron_Modifiers",
+    "Acheron_LocalPlayer_Acheron_TechniqueUsage_02",
+    "Acheron_LocalPlayer_Acheron_TechniqueUsage_01",
+    "Acheron_LocalPlayer_Acheron_SummonUnit",
+    "Acheron_LocalPlayer_StandardAbility_AttackBreak",
+    "Acheron_LocalPlayer_Acheron_TechniqueUsage",
+    "Acheron_LocalPlayer_Acheron_NormalAtk01",
     "Acheron_Acheron_TechniqueInLevel",
     "Acheron_Acheron_PassiveAbility_1",
     "Acheron_Acheron_Ability34_Part02",
@@ -34,6 +40,93 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2089685007\">ADV_StageAbility_Maze_Acheron_TiggerkillFlag</a>",
+          "stackType": "Refresh",
+          "onCreation": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Team Leader",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
+              },
+              "passed": [
+                {
+                  "name": "Create Overworld Entity",
+                  "summonID": 13081
+                }
+              ]
+            }
+          ],
+          "onRemoval": [
+            {
+              "name": "Remove Overworld Entity",
+              "summon": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "summonID": 13081
+              }
+            }
+          ],
+          "onStageExit": [
+            {
+              "name": "Remove Overworld Entity",
+              "summon": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Adventure Player}}"
+                },
+                "summonID": 13081
+              }
+            }
+          ],
+          "onStageEntry": [
+            {
+              "name": "Create Overworld Entity",
+              "summonID": 13081
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__592974289\">ADV_StageAbility_Maze_Acheron_killFlag</a>",
+          "counter": 1,
+          "stackType": "Merge",
+          "modifierFlags": [
+            "NoAlert"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1649502562\">ADV_StageAbility_Maze_Acheron_Realm</a>",
+          "counter": 1,
+          "stackType": "Merge",
+          "modifierFlags": [
+            "HolyShield"
+          ],
+          "onStageExit": [
+            "Modifier Deletes Itself"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1034252814\">ADV_StageAbility_Maze_Acheron_OnKill</a>",
+          "stackType": "Merge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-401735497\">ADV_StageAbility_Maze_Acheron_Attack</a>",
+          "counter": 1,
+          "stackType": "Merge"
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__62451815\">Acheron_UltraAbilitySpareCount_PointB1</a>[<span class=\"descriptionNumberColor\">Quadrivalent Ascendance</span>]",
@@ -1431,6 +1524,1035 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "Acheron_LocalPlayer_Acheron_TechniqueUsage_02": {
+      "fileName": "Acheron_LocalPlayer_Acheron_TechniqueUsage_02",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "130801()",
+          "duration": 1.1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"933509647\">ADV_StageAbility_Maze_IgnoreWeakness_TechniqueUsageMark</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance",
+              "onAttack": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Can Die Instantly",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    "Overworld Mark Target for Death(which we don't care about)"
+                  ]
+                }
+              ],
+              "onBattle": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": null,
+                  "ID": "130803(SkillMaze)",
+                  "duration": 1
+                }
+              ],
+              "onKill": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Acheron_Count",
+                  "value": 1
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Scoring_KillCount_4083009",
+                  "value": {
+                    "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(Scoring_KillCount_4083009 + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "Scoring_KillCount_4083009"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Scoring_KillCount_4083009",
+                    "compareType": ">=",
+                    "value2": 5
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "Scoring_KillCount_4083009",
+                      "value": 0
+                    }
+                  ]
+                }
+              ],
+              "entryTargetType": "FirstHitTarget"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Acheron_Count",
+                "compareType": ">",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Acheron_Count",
+                  "value": 0
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit"
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit"
+                  ],
+                  "failed": [
+                    "Deleted bullshit"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Overworld Attack Instance",
+              "onAttack": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Can Die Instantly",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    "Overworld Mark Target for Death(which we don't care about)"
+                  ]
+                }
+              ],
+              "onBattle": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": null,
+                  "ID": "130803(SkillMaze)",
+                  "duration": 1
+                }
+              ],
+              "onKill": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Acheron_Count",
+                  "value": 1
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Scoring_KillCount_4083009",
+                  "value": {
+                    "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(Scoring_KillCount_4083009 + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "Scoring_KillCount_4083009"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Scoring_KillCount_4083009",
+                    "compareType": ">=",
+                    "value2": 5
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "Scoring_KillCount_4083009",
+                      "value": 0
+                    }
+                  ]
+                }
+              ],
+              "entryTargetType": "FirstHitTarget"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Acheron_Count",
+                "compareType": ">",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Acheron_Count",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"933509647\">ADV_StageAbility_Maze_IgnoreWeakness_TechniqueUsageMark</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Acheron_LocalPlayer_Acheron_TechniqueUsage_01": {
+      "fileName": "Acheron_LocalPlayer_Acheron_TechniqueUsage_01",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "130801()",
+          "duration": 1.1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"933509647\">ADV_StageAbility_Maze_IgnoreWeakness_TechniqueUsageMark</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance",
+              "onAttack": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Can Die Instantly",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    "Overworld Mark Target for Death(which we don't care about)"
+                  ]
+                }
+              ],
+              "onBattle": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": null,
+                  "ID": "130803(SkillMaze)",
+                  "duration": 1
+                }
+              ],
+              "onKill": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Acheron_Count",
+                  "value": 1
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Scoring_KillCount_4083009",
+                  "value": {
+                    "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(Scoring_KillCount_4083009 + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "Scoring_KillCount_4083009"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Scoring_KillCount_4083009",
+                    "compareType": ">=",
+                    "value2": 5
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "Scoring_KillCount_4083009",
+                      "value": 0
+                    }
+                  ]
+                }
+              ],
+              "entryTargetType": "FirstHitTarget"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Acheron_Count",
+                "compareType": ">",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Acheron_Count",
+                  "value": 0
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit"
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit"
+                  ],
+                  "failed": [
+                    "Deleted bullshit"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Overworld Attack Instance",
+              "onAttack": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Can Die Instantly",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    "Overworld Mark Target for Death(which we don't care about)"
+                  ]
+                }
+              ],
+              "onBattle": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": null,
+                  "ID": "130803(SkillMaze)",
+                  "duration": 1
+                }
+              ],
+              "onKill": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Acheron_Count",
+                  "value": 1
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Scoring_KillCount_4083009",
+                  "value": {
+                    "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(Scoring_KillCount_4083009 + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "Scoring_KillCount_4083009"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Scoring_KillCount_4083009",
+                    "compareType": ">=",
+                    "value2": 5
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "Scoring_KillCount_4083009",
+                      "value": 0
+                    }
+                  ]
+                }
+              ],
+              "entryTargetType": "FirstHitTarget"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Acheron_Count",
+                "compareType": ">",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Acheron_Count",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"933509647\">ADV_StageAbility_Maze_IgnoreWeakness_TechniqueUsageMark</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Acheron_LocalPlayer_Acheron_SummonUnit": {
+      "fileName": "Acheron_LocalPlayer_Acheron_SummonUnit",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2089685007\">ADV_StageAbility_Maze_Acheron_TiggerkillFlag</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Acheron_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Acheron_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Acheron_LocalPlayer_Acheron_TechniqueUsage": {
+      "fileName": "Acheron_LocalPlayer_Acheron_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "130801()",
+          "duration": 1.1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"933509647\">ADV_StageAbility_Maze_IgnoreWeakness_TechniqueUsageMark</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance",
+              "onAttack": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Can Die Instantly",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    "Overworld Mark Target for Death(which we don't care about)"
+                  ]
+                }
+              ],
+              "onBattle": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": null,
+                  "ID": "130803(SkillMaze)",
+                  "duration": 1
+                }
+              ],
+              "onKill": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Acheron_Count",
+                  "value": 1
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Scoring_KillCount_4083009",
+                  "value": {
+                    "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(Scoring_KillCount_4083009 + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "Scoring_KillCount_4083009"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Scoring_KillCount_4083009",
+                    "compareType": ">=",
+                    "value2": 5
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "Scoring_KillCount_4083009",
+                      "value": 0
+                    }
+                  ]
+                }
+              ],
+              "entryTargetType": "FirstHitTarget"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Acheron_Count",
+                "compareType": ">",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Acheron_Count",
+                  "value": 0
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit"
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit"
+                  ],
+                  "failed": [
+                    "Deleted bullshit"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Overworld Attack Instance",
+              "onAttack": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Can Die Instantly",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    "Overworld Mark Target for Death(which we don't care about)"
+                  ]
+                }
+              ],
+              "onBattle": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": null,
+                  "ID": "130803(SkillMaze)",
+                  "duration": 1
+                }
+              ],
+              "onKill": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Acheron_Count",
+                  "value": 1
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Scoring_KillCount_4083009",
+                  "value": {
+                    "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(Scoring_KillCount_4083009 + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "Scoring_KillCount_4083009"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Scoring_KillCount_4083009",
+                    "compareType": ">=",
+                    "value2": 5
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "Scoring_KillCount_4083009",
+                      "value": 0
+                    }
+                  ]
+                }
+              ],
+              "entryTargetType": "FirstHitTarget"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Acheron_Count",
+                "compareType": ">",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Acheron_Count",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"933509647\">ADV_StageAbility_Maze_IgnoreWeakness_TechniqueUsageMark</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
+    },
+    "Acheron_LocalPlayer_Acheron_NormalAtk01": {
+      "fileName": "Acheron_LocalPlayer_Acheron_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"933509647\">ADV_StageAbility_Maze_IgnoreWeakness_TechniqueUsageMark</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "In Motion (Overworld)",
+                "flag": "FastRun"
+              },
+              "passed": [
+                "Deleted bullshit"
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "In Motion (Overworld)",
+                    "flag": "Run"
+                  },
+                  "passed": [
+                    "Deleted bullshit"
+                  ],
+                  "failed": [
+                    "Deleted bullshit"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Overworld Attack Instance"
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Acheron_Acheron_TechniqueInLevel": {
       "fileName": "Acheron_Acheron_TechniqueInLevel",
