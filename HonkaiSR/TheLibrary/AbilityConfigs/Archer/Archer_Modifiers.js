@@ -10,6 +10,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-300810177\">ADV_StageAbility_Maze_Archer</a>",
+      "counter": 1,
+      "stackType": "Merge"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1612899858\">Archer_BonusTrigger</a>[<span class=\"descriptionNumberColor\">Circuit Connection</span>]",
       "description": "After using Skill, if there are sufficient Skill Points to use it again, the turn will not end.",
       "type": "Other",
