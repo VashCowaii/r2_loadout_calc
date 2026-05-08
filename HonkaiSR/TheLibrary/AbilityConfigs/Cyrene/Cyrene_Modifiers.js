@@ -10,6 +10,347 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__790390625\">ADV_StageAbility_Maze_Cyrene_Female</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1576003496\">ADV_StageAbility_Maze_Cyrene_Male</a>"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__63083859\">ADV_StageAbility_Maze_Cyrene_Enemy</a>",
+      "counter": 1,
+      "stackType": "Refresh",
+      "modifierFlags": [
+        "TimeLock"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1940492361\">Cyrene_Passive</a>",
+      "onStageEntry": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+        }
+      ],
+      "onForeGround": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+        }
+      ],
+      "onShiftFromFakeModel": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+        }
+      ],
+      "onBuffUpdateComplete": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__501195686\">Cyrene_StateRefreshImmediately</a>",
+      "stackType": "RetainGlobalLatest",
+      "onStack": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "#CL_SkipNextMazeBuffRefreshState",
+            "compareType": "=",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "_SpecifiedState",
+                "compareType": ">",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_TargetState",
+                  "value": {
+                    "operator": "Variables[0] (_SpecifiedState) || RETURN",
+                    "displayLines": "_SpecifiedState",
+                    "constants": [],
+                    "variables": [
+                      "_SpecifiedState"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_SpecifiedState",
+                  "value": 0
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier (OVERWORLD)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"434616416\">ADV_StageAbility_Maze_Cyrene</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_TargetState",
+                      "value": 2
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_TargetState",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "#CL_SkipNextMazeBuffRefreshState",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "SWITCH",
+          "switchValue": {
+            "operator": "Variables[0] (_TargetState) || RETURN",
+            "displayLines": "_TargetState",
+            "constants": [],
+            "variables": [
+              "_TargetState"
+            ]
+          },
+          "caseEvents": [
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 1,
+              "execute": [
+                {
+                  "name": "Set Mapping Point",
+                  "point": "CameraRoot",
+                  "reset": true
+                },
+                {
+                  "name": "Set Mapping Point",
+                  "point": "CameraRootSpine",
+                  "reset": true
+                }
+              ]
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 2,
+              "execute": [
+                {
+                  "name": "Set Mapping Point",
+                  "point": "CameraRoot",
+                  "mapTo": "CameraRoot1"
+                },
+                {
+                  "name": "Set Mapping Point",
+                  "point": "CameraRootSpine",
+                  "mapTo": "CameraRootSpine1"
+                }
+              ]
+            }
+          ],
+          "defaultEvents": []
+        },
+        "Modifier Deletes Itself"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__434616416\">ADV_StageAbility_Maze_Cyrene</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierTasks": [
+        {
+          "name": "Looped Event",
+          "maxLoops": 999,
+          "Event": []
+        }
+      ],
+      "onCreation": [
+        {
+          "name": "Create Overworld Entity",
+          "summonID": 14151
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+        }
+      ],
+      "onRemoval": [
+        {
+          "name": "Remove Overworld Entity",
+          "summon": {
+            "name": "Add Target by Summoned Units",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "summonID": 14151
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Variable",
+                "value1": "#CL_IsInLookAtPhone",
+                "compareType": "=",
+                "value2": 0
+              },
+              {
+                "name": "Compare: Target",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Adventure Player(Latest)}}"
+                }
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  "Check In Story Mode",
+                  "Check TimeScale(VFX)"
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"887707071\">ADV_StageAbility_MazeSpeed_Cyrene</a>"
+        }
+      ],
+      "onStack": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"887707071\">ADV_StageAbility_MazeSpeed_Cyrene</a>",
+          "valuePerStack": {
+            "MDF_MoveSpeedRatio": {
+              "operator": "Variables[0] (0.5) || RETURN",
+              "displayLines": "0.5",
+              "constants": [],
+              "variables": [
+                0.5
+              ]
+            }
+          }
+        }
+      ],
+      "onChangeTeamLead": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Adventure Player}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"887707071\">ADV_StageAbility_MazeSpeed_Cyrene</a>",
+          "valuePerStack": {
+            "MDF_MoveSpeedRatio": {
+              "operator": "Variables[0] (0.5) || RETURN",
+              "displayLines": "0.5",
+              "constants": [],
+              "variables": [
+                0.5
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__887707071\">ADV_StageAbility_MazeSpeed_Cyrene</a>",
+      "stackType": "Replace",
+      "stackData": [
+        "MDF_MoveSpeedRatio"
+      ],
+      "latentQueue": [
+        "#CL_IsInLookAtPhone"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1161189096\">Cyrene_Eidolon2_1</a>",
       "stackType": "Replace",
       "execute": [

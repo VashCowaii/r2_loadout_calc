@@ -6,6 +6,12 @@ const compositeAbilityObject = {
   "trimSummonName": "Demiurge",
   "abilityList": [
     "Cyrene_Modifiers",
+    "Cyrene_LocalPlayer_StandardAbility_AttackBreak",
+    "Cyrene_LocalPlayer_Cyrene_Revert",
+    "Cyrene_LocalPlayer_Cyrene_Passive",
+    "Cyrene_LocalPlayer_Cyrene_TechniqueUsage",
+    "Cyrene_LocalPlayer_Cyrene_NormalAtk02",
+    "Cyrene_LocalPlayer_Cyrene_NormalAtk01",
     "Cyrene_Cyrene_TechniqueInLevel",
     "Cyrene_Cyrene_PassiveAbility_1",
     "Cyrene_Cyrene_Ability11_Part02",
@@ -61,6 +67,347 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__790390625\">ADV_StageAbility_Maze_Cyrene_Female</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1576003496\">ADV_StageAbility_Maze_Cyrene_Male</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__63083859\">ADV_StageAbility_Maze_Cyrene_Enemy</a>",
+          "counter": 1,
+          "stackType": "Refresh",
+          "modifierFlags": [
+            "TimeLock"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1940492361\">Cyrene_Passive</a>",
+          "onStageEntry": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+            }
+          ],
+          "onForeGround": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+            }
+          ],
+          "onShiftFromFakeModel": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+            }
+          ],
+          "onBuffUpdateComplete": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__501195686\">Cyrene_StateRefreshImmediately</a>",
+          "stackType": "RetainGlobalLatest",
+          "onStack": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "#CL_SkipNextMazeBuffRefreshState",
+                "compareType": "=",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_SpecifiedState",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_TargetState",
+                      "value": {
+                        "operator": "Variables[0] (_SpecifiedState) || RETURN",
+                        "displayLines": "_SpecifiedState",
+                        "constants": [],
+                        "variables": [
+                          "_SpecifiedState"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_SpecifiedState",
+                      "value": 0
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier (OVERWORLD)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"434616416\">ADV_StageAbility_Maze_Cyrene</a>"
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "_TargetState",
+                          "value": 2
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "_TargetState",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "#CL_SkipNextMazeBuffRefreshState",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "name": "SWITCH",
+              "switchValue": {
+                "operator": "Variables[0] (_TargetState) || RETURN",
+                "displayLines": "_TargetState",
+                "constants": [],
+                "variables": [
+                  "_TargetState"
+                ]
+              },
+              "caseEvents": [
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 1,
+                  "execute": [
+                    {
+                      "name": "Set Mapping Point",
+                      "point": "CameraRoot",
+                      "reset": true
+                    },
+                    {
+                      "name": "Set Mapping Point",
+                      "point": "CameraRootSpine",
+                      "reset": true
+                    }
+                  ]
+                },
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 2,
+                  "execute": [
+                    {
+                      "name": "Set Mapping Point",
+                      "point": "CameraRoot",
+                      "mapTo": "CameraRoot1"
+                    },
+                    {
+                      "name": "Set Mapping Point",
+                      "point": "CameraRootSpine",
+                      "mapTo": "CameraRootSpine1"
+                    }
+                  ]
+                }
+              ],
+              "defaultEvents": []
+            },
+            "Modifier Deletes Itself"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__434616416\">ADV_StageAbility_Maze_Cyrene</a>",
+          "counter": 1,
+          "stackType": "Merge",
+          "modifierTasks": [
+            {
+              "name": "Looped Event",
+              "maxLoops": 999,
+              "Event": []
+            }
+          ],
+          "onCreation": [
+            {
+              "name": "Create Overworld Entity",
+              "summonID": 14151
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+            }
+          ],
+          "onRemoval": [
+            {
+              "name": "Remove Overworld Entity",
+              "summon": {
+                "name": "Add Target by Summoned Units",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "summonID": 14151
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "#CL_IsInLookAtPhone",
+                    "compareType": "=",
+                    "value2": 0
+                  },
+                  {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Adventure Player(Latest)}}"
+                    }
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      "Check In Story Mode",
+                      "Check TimeScale(VFX)"
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"887707071\">ADV_StageAbility_MazeSpeed_Cyrene</a>"
+            }
+          ],
+          "onStack": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 6
+              }
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"887707071\">ADV_StageAbility_MazeSpeed_Cyrene</a>",
+              "valuePerStack": {
+                "MDF_MoveSpeedRatio": {
+                  "operator": "Variables[0] (0.5) || RETURN",
+                  "displayLines": "0.5",
+                  "constants": [],
+                  "variables": [
+                    0.5
+                  ]
+                }
+              }
+            }
+          ],
+          "onChangeTeamLead": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Adventure Player}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"887707071\">ADV_StageAbility_MazeSpeed_Cyrene</a>",
+              "valuePerStack": {
+                "MDF_MoveSpeedRatio": {
+                  "operator": "Variables[0] (0.5) || RETURN",
+                  "displayLines": "0.5",
+                  "constants": [],
+                  "variables": [
+                    0.5
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__887707071\">ADV_StageAbility_MazeSpeed_Cyrene</a>",
+          "stackType": "Replace",
+          "stackData": [
+            "MDF_MoveSpeedRatio"
+          ],
+          "latentQueue": [
+            "#CL_IsInLookAtPhone"
+          ]
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1161189096\">Cyrene_Eidolon2_1</a>",
@@ -1076,6 +1423,434 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "Cyrene_LocalPlayer_StandardAbility_AttackBreak": {
+      "fileName": "Cyrene_LocalPlayer_StandardAbility_AttackBreak",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951318209\">ADV_StageAbility_MazeStandard_OnStageEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247093964\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Standard</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Physical"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"761715744\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Physical</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Fire"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-380086631\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Fire</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Ice"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-97518784\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Ice</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Thunder"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1597144751\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Thunder</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Wind"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1816746695\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Wind</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Quantum"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-418599870\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Quantum</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Element",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "DamageType": {
+              "name": "Damage Type Source",
+              "sourceType": "Imaginary"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1882459002\">ADV_StageAbility_MazeStandard_ListenEnterBattle_Imaginary</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1927069485\">ADV_StageAbility_MazeStandard_ListenEnterBattle_TeamLeader</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Cyrene_LocalPlayer_Cyrene_Revert": {
+      "fileName": "Cyrene_LocalPlayer_Cyrene_Revert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Set LoadState with Animation",
+          "failed": [
+            "Deleted bullshit",
+            "Deleted bullshit"
+          ]
+        },
+        {
+          "name": "Set Mapping Point",
+          "point": "CameraRoot",
+          "reset": true
+        },
+        {
+          "name": "Set Mapping Point",
+          "point": "CameraRootSpine",
+          "reset": true
+        }
+      ],
+      "onAbortReg": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>",
+          "valuePerStack": {
+            "_SpecifiedState": 1
+          }
+        }
+      ],
+      "references": [],
+      "triggerType": "Free",
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Cyrene_LocalPlayer_Cyrene_Passive": {
+      "fileName": "Cyrene_LocalPlayer_Cyrene_Passive",
+      "skillTrigger": "MazeCommonPassve01",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1940492361\">Cyrene_Passive</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Cyrene_LocalPlayer_Cyrene_TechniqueUsage": {
+      "fileName": "Cyrene_LocalPlayer_Cyrene_TechniqueUsage",
+      "skillTrigger": "MazeSkill",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>",
+          "valuePerStack": {
+            "_SpecifiedState": 2
+          }
+        },
+        "Deleted bullshit",
+        {
+          "name": "Define Custom Variable",
+          "variableName": "#CL_SkipNextMazeBuffRefreshState",
+          "value": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": null,
+          "ID": "141501(SkillMaze)",
+          "duration": 30
+        },
+        "Submit Technique Use"
+      ],
+      "onAbortReg": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"501195686\">Cyrene_StateRefreshImmediately</a>"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "Cyrene_LocalPlayer_Cyrene_NormalAtk02": {
+      "fileName": "Cyrene_LocalPlayer_Cyrene_NormalAtk02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Shot Fired",
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "triggerType": "Free",
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      }
+    },
+    "Cyrene_LocalPlayer_Cyrene_NormalAtk01": {
+      "fileName": "Cyrene_LocalPlayer_Cyrene_NormalAtk01",
+      "skillTrigger": "NormalAtk",
+      "abilityType": "Basic ATK",
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "Ability Has a Target",
+          "passed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ],
+          "failed": [
+            "Deleted bullshit",
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ],
+              "projectileFinished": [
+                {
+                  "name": "Overworld Attack Instance"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "onAbortReg": [],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "Skill Point User(Or NONE)"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      }
     },
     "Cyrene_Cyrene_TechniqueInLevel": {
       "fileName": "Cyrene_Cyrene_TechniqueInLevel",
