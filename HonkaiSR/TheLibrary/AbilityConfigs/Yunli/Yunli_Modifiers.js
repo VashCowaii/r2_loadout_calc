@@ -10,6 +10,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1428569003\">ADV_StageAbility_Maze_Yunli</a>",
+      "counter": 1,
+      "stackType": "Merge",
+      "modifierFlags": [
+        "EnterBattleBlockPosture"
+      ],
+      "onBeingAttacked": [
+        "Deleted bullshit"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-77031042\">Yunli_Trace02_ControlResist</a>[<span class=\"descriptionNumberColor\">Demon Quell</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
