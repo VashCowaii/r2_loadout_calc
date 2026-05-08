@@ -3679,7 +3679,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "AetherDivide_W2_Beast01_01_Electric",
+    "name": "<a class=\"gModGreen\" id=\"-1501720216\">AetherDivide_W2_Beast01_01_Electric</a>",
     "realName": "Shock",
     "aim": "Debuff",
     "desc": "For a set number of turns, takes DoT at the start of each turn",
@@ -3843,7 +3843,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "AetherDivide_W2_Mecha03_UltraMode",
+    "name": "<a class=\"gModGreen\" id=\"415943659\">AetherDivide_W2_Mecha03_UltraMode</a>",
     "realName": "Sanction Mode",
     "aim": "Other",
     "desc": "Massively buffs Basic ATK and reduces the DMG taken by #2[i]%.",
