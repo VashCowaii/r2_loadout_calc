@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- <link rel="stylesheet" href="/css/Honkai/honkaiHome.css"> -->
+    <!-- <link rel="stylesheet" href="/css/Honkai/honkaiCalc.css"> -->
+    
+    <link rel="stylesheet" href="/css/Honkai/honkaiCalc.css">
+    <link rel="stylesheet" href="/css/Honkai/honkaiCalcMobile.css">
+    <link rel="stylesheet" href="/css/Honkai/honkaiStatsPage.css">
+
+    <!-- <link rel="stylesheet" href="/css/Honkai/honkaiLibrary.css">
+    <link rel="stylesheet" href="/css/Honkai/honkaiLibraryHome.css">
+    <link rel="stylesheet" href="/css/Honkai/honkaiLibraryRework.css"> -->
+    <!-- <link rel="stylesheet" href="/css/Honkai/honkaiCalcMobile.css"> -->
+    <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
+    <!-- <link rel="stylesheet" href="/css/Remnant2/calculator.css"> -->
+    <link rel="stylesheet" href="/css/Remnant2/substat.css">
+    <!-- <link rel="stylesheet" href="/TFD/tfdCalc.css"> -->
+    <link rel="Icon" href="/images/Cowaii.png">
+    <!-- <script src="code.js"></script> -->
+    <title>HSR Stat Info</title> <!-- Browser Tab title -->
+
+    <meta property="og:title" content="HSR Stat Info">
+    <meta
+      property="og:description"
+      content="Key information on given statistics for HSR."
+    />
+    <meta
+      property="description"
+      content="Key information on given statistics for HSR."
+    />
+    <meta
+      property="og:image"
+      content="https://cowaii.io/HonkaiSR/property/IconCriticalChance.png"
+    />
+    <meta
+      property="og:url"
+      content="https://cowaii.io/"
+    />
+    <meta property="og:site_name" content="HSR Stat Info" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="HSR Stat Info" />
+    <meta
+      name="twitter:description"
+      content="Key information on given statistics for HSR."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cowaii.io/HonkaiSR/property/IconCriticalChance.png"
+    />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+
+<body>
+    <div id="tooltip" class="tooltip tooltipHSR"></div>
+    <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
+
+    <div class="blockoutBackgroundShutter" id="blockoutBackgroundShutter" onclick="customMenu.closeMenu()"></div>
+    <div class="customMenuMainHolderBox" id="customMenuMainHolderBox">
+        <div class="customMenuMainHolderBoxInner">
+            <div class="customMenuTitleRow">
+                <div class="customMenuSearchTitleHolder">
+                    <div class="weirdSideSemiCircleThingerAllySnapshotBox"></div>
+                    <div class="customMenuSearchTitle" id="customMenuSearchTitle"></div>
+                </div>
+                
+            </div>
+            <div class="customMenuCloseButton clickable" id="customMenuCloseButton" onclick="customMenu.closeMenu()">x</div>
+            
+            <div class="customMenuSearchNote" id="customMenuSearchNote"></div>
+            <div class="customMenuSearchBody" id="customMenuSearchBodyGlobalButtons"></div>
+            <div class="customMenuSearchBarBox" id="customMenuSearchBarBox">
+                Search: <input class="customMenuSearchBarInput" id="customMenuSearchBarInput" maxlength="100" oninput="customMenu.updateSearchResults();">
+            </div>
+            <div class="customMenuSearchBody" id="customMenuSearchBody"></div>
+            <div class="customMenuSearchBody" id="customMenuSearchBodyStats" style="display: none;"></div>
+            <div class="customMenuSearchBody" id="customMenuSearchBodyStatsAttackData" style="display: none;"></div>
+        </div>
+    </div>
+
+
+<div class="main">
+    <div class="theGreatBox">
+
+        <div class="updateBannerMegaBox">
+            <div style="color: white;">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div>
+        </div>
+        <div id="r2Navbar" class="helpBarMegaBox"></div> <!-- R2 specific Header nav -->
+
+
+
+        <div class="mainGridRow" style="display: flex;width: 100%;">
+
+          <!-- <div class="actionBarHolderbox"> -->
+            <div class="expandedDataHolderHolderBoxBattleView">
+              <div class="actionBarHolderbox">
+                <div class="actionBarHeaderTest">STAT SEARCH
+                    <!-- <div class="exportIconBoxHolder clickable" onclick="customMenu.createActionOrderFilterScreen()">
+                        <img src="/HonkaiSR/misc/filter.png" class="exportButtonIcon">
+                    </div> -->
+                </div>
+                <!-- <div class="presetsSelectorBox"> -->
+                  <input class="selectSelector hasHoverTooltip" id="statFilterBoxInput" style="width: 100%;" oninput="megaParsingFuckery.updateStatSearch()">
+                <!-- </div> -->
+                <div class="actionLogScrollerVertical" id="actionLogScrollerVertical"></div>
+
+              </div>
+              <div class="mainGraphOverviewHolderBox" id="statsPageMainBox"></div>
+              
+            </div>
+
+
+              
+
+              
+        <!-- </div> -->
+
+
+        </div>
+
+        
+    
+
+    </div>
+    <footer class="generalFooter" id="footerPlaceholder"></footer>
+</div>
+
+
+<script src="/htmlTemplates/injectMainHTML.js"></script> <!-- sidenav and footer -->
+<script src="/htmlTemplates/injectHSRHTML.js"></script> <!-- TFD Header -->
+<script src="/htmlTemplates/adjustMobileNav.js"></script>
+
+
+<!-- <script src="/HonkaiSR/Calculator/customHTML.js"></script> -->
+
+<script src="/HonkaiSR/Calculator/tooltipStorage.js"></script>
+<script src="/HonkaiSR/Calculator/tooltipMath.js"></script>
+<!-- <script src="/TFD/Calculator/UIHandling.js"></script> -->
+<script src="/MainJS/Tooltips/tooltips.js"></script> <!-- generalized tooltip handling -->
+
+
+
+<script src="tester.js"></script>
+<script src="newTester.js"></script>
+<script src="/MainJS/buildTime.js"></script>
+
+
+<!-- <script src="/HonkaiSR/characters.js"></script>
+<script src="/HonkaiSR/testing.js"></script> -->
+
+</body>
+</html> 

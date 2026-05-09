@@ -62,9 +62,6 @@ div {
     height: auto;
 }
 
-.clickable {
-    cursor: pointer;
-}
 .blockoutBackgroundShutter {
     position: fixed;
     width: 100%;

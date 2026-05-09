@@ -322,3 +322,7 @@ html,body {
     background-color: #c0c0c0;
     cursor: not-allowed;
 }
+
+.clickable {
+    cursor: pointer;
+}
