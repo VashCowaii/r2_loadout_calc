@@ -1511,6 +1511,789 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Firefly_v0": {//ATKOBJECTS DONE
+        logic(thisTurn,battleData) {
+            let statCalls = thisTurn.battleValues;
+
+            let currentSP = battleData.skillPointCurrent;
+            const minimum = currentSP>0;
+            const isCombustion = statCalls.combustionActive;
+            const rank = thisTurn.rank;
+
+            const skillCheck1 = minimum;
+            const skillCheck2 = isCombustion && rank >= 1;
+            const canUseSkill = (skillCheck1 || skillCheck2) && checkSkill(battleData,thisTurn);
+
+            if (canUseSkill) {
+                if (isCombustion) {
+                    return rank>=1 ? this.returnSkillCallEnhE1 : this.returnSkillCallEnh;
+                }
+                else {return this.returnSkillCall;}
+            }
+
+            const actionChosen = isCombustion ? this.returnBasicEnhCall : this.returnBasicCall;
+            return actionChosen;
+            //default to basic atk when all else fails
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCallEnhE1 ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: 0, 
+                actionCall: this.skillFunctions.fireflySkillEnhanced, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnSkillCallEnh ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.fireflySkillEnhanced, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.fireflySkillReg, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicEnhCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.fireflyBasicEnhanced, 
+                target: "enemy", 
+                endTurn: true
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.fireflyBasicReg, 
+                target: "enemy", 
+                endTurn: true
+            }
+        },
+        "skillFunctions": {
+            fireflyBasicReg(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.fireflyBasicRegREF ??= ATKObjects["Basic ATK"]["Order: Flare Propulsion"].variant1;
+
+                if (!ATKObjects.fireflyBasicRegATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.fireflyBasicRegREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    
+                    ATKObjects.fireflyBasicRegATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.fireflyBasicRegATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            fireflySkillReg(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.fireflySkillRegREF ??= ATKObjects["Skill"]["Order: Aerial Bombardment"].variant1;
+                let values = ATKObjects.fireflySkillRegREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!ATKObjects.fireflySkillRegATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Skill","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["Skill","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.fireflySkillRegATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.fireflySkillRegATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+
+                const energyBump = sourceTurn.maxEnergy * 0.60;
+                battleActions.updateEnergy(battleData,energyBump,sourceTurn,true);
+                // battleActions.consumeHP(battleData,isAllAllies,percent,targetTurn,sourceTurn)
+                battleActions.consumeHP(battleData,false,values[1],sourceTurn,sourceTurn,skillRef.slot);
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                // battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//Firefly skill doesn't actually have energy regen associated with it, just the fixed% regen it causes
+                poke("SkillEnd",battleData,{sourceTurn});
+                battleActions.actionAdvance(0.25,sourceTurn,battleData,"Firefly Skill [Regular]");
+            },
+            fireflyUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.fireflyUltimateREF ??= ATKObjects.Ultimate["Fyrefly Type-IV: Complete Combustion"].variant1;
+                let skillRef2 = ATKObjects.fireflyTalentREF ??= ATKObjects.Talent["Chrysalid Pyronexus"].variant1;
+
+                if (!ATKObjects.fireflyUltimateCOMBUSTIONSHEET) {
+                    let values = ATKObjects.fireflyUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    let values2 = ATKObjects.fireflyTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
+                    const buffName = logicRef.buffNames.combustion;
+                    const rank = sourceTurn.rank;
+                    ATKObjects.fireflyUltimateCOMBUSTIONSHEET = {
+                        "stats": [SPDFlat,DamageBreakEfficiency,EffectRES,DEFShredSkill,ResistanceFirePEN],
+                        [SPDFlat]: values[2],
+                        [DamageBreakEfficiency]: values[1] + (rank >= 6 ? 0.50 : 0),
+                        [EffectRES]: values2[3] + (rank >= 4 ? 0.50 : 0),
+                        [DEFShredSkill]: rank >= 1 ? 0.15 : 0,
+                        [ResistanceFirePEN]: rank >= 6 ? 0.20 : 0,
+                        "statsOnHit": [VulnBreak],
+                        [VulnBreak]: values[0],
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    // "VulnBreak": rankParams[1] //WHY IS THIS A FUCKING VULN GOD DAMNIT
+                    //might wanna look into a statsOnHit{} that I bundle into the buff sheet for times like this, bc that is some jank shit
+
+                    //E1 gives skill def shred but only to the enhanced skill
+                    //so... is there a reason to bundle it anywhere else but the cumbustion buff?
+                    //E4 gives more effect res in the same conditions
+                    //E6 gives fire res pen to the state itself, and then more weakness break efficiency to both enhanced options
+                    //this is probably the easiest fuckin set of eidolons I've ever done, holy shit lmao, e2 is the only remotely tricky one
+                }
+                let buffSheet = ATKObjects.fireflyUltimateCOMBUSTIONSHEET;
+
+                const energy = battleActions.updateEnergy;
+                energy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+
+                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                logicRef.characterValuesBattle.combustionActive = true;
+
+                energy(battleData,skillRef.energyRegen,sourceTurn);
+
+                // let newCharge = Math.min(4,chargeRef.charge + 2)
+                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ultimate", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
+
+                battleActions.actionAdvance(1,sourceTurn,battleData,"Firefly Ult Advance");
+
+                const ActionEntry = sourceTurn.fireflyUltimateCOMBUSTTURNEVENT ??= {
+                    // name:characterEntry,
+                    AV:10000/70,
+                    AVBase:10000/70,
+                    SPD:70,
+                    actionCounter: 0,
+                    turnState: 0,
+                    properName: "Firefly Combustion Timer",
+                    // buffsObject: {},
+                    // buffsStartTurn: [],
+                    // buffsEndTurn: [],
+                    // additionalDMGObject: {},
+                    cantBeTargeted: true,
+                    isUniqueEvent: true,
+                    eventOwner: sourceTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
+                    uniqueEventFunction: logicRef.skillFunctions.combustionExpired,
+                    eventImage: "icon/skill/1310_ultimate1.png",
+                };
+                battleData.nextTurnAV.push(ActionEntry);
+                sourceTurn.ultyQueued = false;
+            },
+            combustionExpired(battleData,eventTurn) {
+                const fireflyTurn = battleData.nameBasedTurns[eventTurn.eventOwner];
+                const logicRef = turnLogic[fireflyTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                logicRef.characterValuesBattle.combustionActive = false;
+                let buffSheet = ATKObjects.fireflyUltimateCOMBUSTIONSHEET;
+                removeBuff(battleData,fireflyTurn,buffSheet);
+
+                const eventName = eventTurn.properName;
+                const nextAV = battleData.nextTurnAV;
+                for (let i=0;i<nextAV.length;i++) {
+                    let currentTurn = nextAV[i];
+                    if (currentTurn.properName === eventName) {
+                        nextAV.splice(i, 1);
+                        break;//we found the event to remove, so we need to obv remove it now
+                    }
+                }
+            },
+            antilagToughnessAdjustment(toughnessAmount,sourceTurn,targetTurn) {
+                const fireWeakness = targetTurn.statTable[WeaknessFire];
+                return toughnessAmount * (fireWeakness ? 1 : 0.55)
+            },
+            fireflyBasicEnhanced(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.fireflyBasicEnhancedREF ??= ATKObjects["Basic ATK"]["Fyrefly Type-IV: Pyrogenic Decimation"].variant1;
+                let values = ATKObjects.fireflyBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!ATKObjects.fireflyBasicEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.fireflyBasicEnhancedATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: true,//Module α: Antilag Outburst, see hit start listener
+                        toughnessCondition: logicRef.skillFunctions.antilagToughnessAdjustment,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+                    ATKObjects.fireflyBasicEnhancedHEALOBJECT = {
+                        multipliers: {
+                            primary: values[1],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: null,
+                        DMGTags: [],
+                        slot: skillRef.slot
+                    }
+                }
+                let ATKObject = ATKObjects.fireflyBasicEnhancedATKOBJECT;
+                let healObject = ATKObjects.fireflyBasicEnhancedHEALOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, isEnhanced: true, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+
+
+                
+                // let healed = battleActions.healAlly(battleData,healObject,targetTurn,sourceTurn,skillSlot,timesToApply)
+                battleActions.healAlly(battleData,healObject,sourceTurn,sourceTurn,skillRef.slot,1)
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                // battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//NO ENERGY ASSOCIATED WITH THIS ATTACK
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            fireflySkillEnhanced(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.fireflySkillEnhancedREF ??= ATKObjects["Skill"]["Fyrefly Type-IV: Deathstar Overload"].variant1;
+                let values = ATKObjects.fireflySkillEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!ATKObjects.fireflySkillEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].es;
+                    // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Skill","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["Skill","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const characterName = sourceTurn.properName;
+                    const logicRef = turnLogic[characterName];
+                    ATKObjects.fireflySkillEnhancedATKOBJECT = {
+                        multipliers: {
+                            primary: 0,
+                            blast: 0,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: true,//Module α: Antilag Outburst, see hit start listener
+                        toughnessCondition: logicRef.skillFunctions.antilagToughnessAdjustment,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        valuesRef: values,
+                        customMulti: logicRef.skillFunctions.pullMultiCUSTOMFIREFLY
+                        // ATKObject.customMulti(playerStats,playerStatsONHIT,hitType,ATKObject)
+                    }
+                    ATKObjects.fireflySkillEnhancedHEALOBJECT = {
+                        multipliers: {
+                            primary: values[2],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: null,
+                        DMGTags: [],
+                        slot: skillRef.slot
+                    }
+
+                    let buffName = logicRef.buffNames.implant;
+                    ATKObjects.fireflySkillEnhancedIMPLANTSHEET = {
+                        "stats": [WeaknessFire],
+                        [WeaknessFire]: 1,
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "durationInTurn": 3,
+                        "duration": 2,//her skill will never be applied outside her own turn, so we don't need to worry about the primary target's turn state duration increase
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn"
+                    }
+                }
+                let ATKObject = ATKObjects.fireflySkillEnhancedATKOBJECT;
+                let healObject = ATKObjects.fireflySkillEnhancedHEALOBJECT;
+
+                
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, isEnhanced: true, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+
+                battleActions.healAlly(battleData,healObject,sourceTurn,sourceTurn,skillRef.slot,1);
+
+                const buffSheet = ATKObjects.fireflySkillEnhancedIMPLANTSHEET;
+                battleActions.updateBuff(battleData,battleData.primaryTarget,buffSheet);
+
+
+                // Restores HP by an amount equal to 25.00% of this unit's Max HP. Applies Fire Weakness to a single target enemy, lasting for 2 turn(s). Deals Fire DMG equal to (0.2 × Break Effect + 200.00%) of SAM's
+                // ATK to this target. At the same time, deals Fire DMG equal to (0.1 × Break Effect + 100.00%) of SAM's ATK to adjacent targets. The Break Effect taken into the calculation is capped at 360.00%.
+                const breakEffect = Math.min(3.6,sourceTurn.statTable[DamageBreak]);
+                const primaryConversion = 0.2 * breakEffect + values[0];
+                const blastConversion = 0.1 * breakEffect + values[1];
+
+                const multiRef = ATKObject.multipliers;
+                multiRef.primary = primaryConversion;
+                multiRef.blast = blastConversion;
+                // console.log(multiRef,values[1])
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                // battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//Firefly skill doesn't actually have energy regen associated with it
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            pullMultiCUSTOMFIREFLY(sourceTurn,targetTurn,dmgNeedsElationComposite,table,tableONHIT,hitType,ATKObject) {
+                // console.log("multi reached")
+                const totalBreak = Math.min(3.6,table[DamageBreak] + tableONHIT[DamageBreak]);
+                //TODO: if we ever update FF so we can add her to the live site any time soon, this is some remarkably old fucking code, will need to redo this custom multi for her
+
+                const values = ATKObject.valuesRef;
+                const conversion = hitType === "blast" ? 0.1 * totalBreak + values[1] : 0.2 * totalBreak + values[0];
+                return conversion;
+            },
+            fireflyTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.fireflyTechREF ??= ATKObjects.Technique["Δ Order: Meteoric Incineration"].variant1;
+
+                if (!ATKObjects.fireflyTechATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                    let values = ATKObjects.fireflyTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Technique","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["Technique","Attack"];
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.fireflyTechATKObject = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags
+                    }
+
+                    let buffName = turnLogic[characterName].buffNames.techImplant
+                    ATKObjects.fireflyTechImplantSHEET = {
+                        "stats": [WeaknessFire],
+                        [WeaknessFire]: 1,
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "durationInTurn": 2,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn"
+                    }
+                }
+                const ATKObject = ATKObjects.fireflyTechATKObject;
+                const buffSheet = ATKObjects.fireflyTechImplantSHEET;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+                const updateBuff = battleActions.updateBuff;
+                for (let enemy of battleData.enemyPositions) {
+                    updateBuff(battleData,enemy,buffSheet);
+                }
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                poke("TechniqueEnd",battleData,{sourceTurn});
+                // poke("SkillEnd",battleData,{source:"Archer"});
+            },
+            statCheck(battleData,currentTurn) {
+                const logicRef = turnLogic[currentTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.fireflyCoreOverloadATKSHEET) {
+                    const characterName = currentTurn.properName;
+                    const buffName = turnLogic[characterName].buffNames.coreOverload;
+                    // let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+                    // let values = relicPathing[2];
+                    ATKObjects.fireflyCoreOverloadATKSHEET = {
+                        "stats": [DamageBreak,DamageBreakNULL],
+                        [DamageBreak]: 0,
+                        [DamageBreakNULL]: 0,
+                        "source": characterName,
+                        "sourceOwner": currentTurn.properName,
+                        "buffName": buffName,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                }
+                let buffSheet = ATKObjects.fireflyCoreOverloadATKSHEET;
+                const buffName = buffSheet.buffName;
+                const buffCheck = currentTurn.buffsObject[buffName];
+
+
+                const currentStats = currentTurn.statTable;
+                const atkBeyondThis = 1800;
+                const atkFinal = Math.max(0,calcs.getATKFinal(currentStats).ATKFinal - currentStats[ATKFlatNULL] - atkBeyondThis);//can't benefit from converted bonuses
+                const conversion = (Math.floor(atkFinal/10) * 0.80)/100;
+
+                if (buffCheck) {
+                    const statCheck = buffCheck[DamageBreak];
+                    if (statCheck === conversion) {return;}//if buff exists and the amount hasn't changed, then end it here
+                    else {
+                        //so if gallagher already has the buff, but the new conversion amount does NOT match the existing amount
+                        //then silently remove the old buff
+                        removeBuff(battleData,currentTurn,buffCheck,true);
+                    }
+                }
+
+                if (!conversion) {return;}
+                buffSheet[DamageBreak] = conversion;
+                buffSheet[DamageBreakNULL] = -conversion;
+                battleActions.updateBuff(battleData,currentTurn,buffSheet);
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "hitWrapSuperBreakCall",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.name != ownerTurn.name) {return;}
+
+                    const battleValues = ownerTurn.battleValues;
+                    if (!battleValues.combustionActive) {return;}//only applies inside combustion state
+
+                    const breakValue = ownerTurn.statTable[DamageBreak];
+                    if (breakValue < 2) {return}
+
+                    if (breakValue > 3.6) {
+                        return this.break1 ??= [0.5,this.listenerName];
+                    }
+                    else {//at this point it's guaranteed to be the 200% break, no IF needed on that given the return check above
+                        return this.break2 ??= [0.35,this.listenerName];
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Module β: Autoreactive Armor",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    // let characterName = ownerTurn.properName;
+
+                    const fiftyPercent = ownerTurn.maxEnergy * 0.5;
+                    const currentEnergy = ownerTurn.currentEnergy;
+                    const energyToRegen = currentEnergy < fiftyPercent ? fiftyPercent-currentEnergy : 0;
+
+                    if (energyToRegen) {battleActions.updateEnergy(battleData,energyToRegen,ownerTurn,true,"Talent: Chrysalid Pyronexus");}
+                },
+                "target": "self",
+                "listenerName": "Firefly talent: energy regen on battleStart",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UpdateStatATK",//ATK stat family
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.name != ownerTurn.name) {return;}
+
+                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                    statCheck(battleData,sourceTurn);
+                },
+                "target": "self",
+                "listenerName": "Firefly Module γ: Core Overload ATK check",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                    statCheck(battleData,ownerTurn);
+                },
+                "target": "self",
+                "listenerName": "Firefly Module γ: Core Overload battle start stat check trigger",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    const notOnFire = !ownerTurn.battleValues.combustionActive;
+                    let otherObscureCondition = energyCheck && notOnFire && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.fireflyUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            isAttackUlt: true,
+                            priority: priorityList.turn.Default,
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Firefly - Ultimate queued",
+                "announce": false,
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartBattle",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
+                        const fireflyTechnique = this.fireflyTechnique ??= logicRef.skillFunctions.fireflyTechnique;
+                        
+                        fireflyTechnique(battleData,"enemy",ownerTurn);
+                        battleData.attackTechniqueUsed = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Firefly Technique",
+                "announce": false,
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [],
+            2: [
+                {
+                    "trigger": "FireflyE2QueueExtraTurn",
+                    condition(battleData,generalInfo) {
+                        // poke("FireflyE2QueueExtraTurn",battleData,exoTurnRef);
+                        let ownerTurn = this.ownerTurn;
+                        
+                        const queueObject = this.queueObject ??= {
+                            attack: sim.turnWrapper,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            isExtraTurn: true,
+                            allowUlts: false,
+                            priority: priorityList.turn.Default,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: true,
+            
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueInstantUltimateUse(battleData,queueObject);
+                    },
+                    "target": "self",
+                    "listenerName": "Firefly E2 - Queued Extra Turn",
+                    "ownerTurn": {},
+                },
+                {
+                    "trigger": "EnemyDied",
+                    condition(battleData,generalInfo) {
+                        // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                        let ownerTurn = this.ownerTurn;
+                        let sourceTurn = generalInfo.sourceTurn;
+                        if (sourceTurn.name != ownerTurn.name) {return;}
+    
+                        const logicRefValues = (this.logicRefValues ??= turnLogic[ownerTurn.properName]).characterValuesBattle;
+                        if (!logicRefValues.combustionActive) {return;}//only applies inside combustion state
+    
+                        if (logicRefValues.e2AdvanceCooldown >=2) {
+                            logicRefValues.e2AdvanceCooldown = 0;
+                            poke("FireflyE2QueueExtraTurn",battleData,{sourceTurn});
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "From Shattered Sky, I Free Fall kill check",
+                    "ownerTurn": {},
+                },
+                {
+                    "trigger": "BrokeEnemyWeakness",
+                    condition(battleData,generalInfo) {
+                        // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
+                        let ownerTurn = this.ownerTurn;
+                        let sourceTurn = generalInfo.sourceTurn;
+                        if (sourceTurn.name != ownerTurn.name) {return;}
+    
+                        const logicRefValues = (this.logicRefValues ??= turnLogic[ownerTurn.properName]).characterValuesBattle;
+                        
+                        if (!logicRefValues.combustionActive) {return;}//only applies inside combustion state
+    
+                        if (logicRefValues.e2AdvanceCooldown >=2) {
+                            logicRefValues.e2AdvanceCooldown = 0;
+                            poke("FireflyE2QueueExtraTurn",battleData,{sourceTurn});
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "From Shattered Sky, I Free Fall Weakness Break check",
+                    "ownerTurn": {},
+                },
+                {
+                    "trigger": "StartTurn",
+                    condition(battleData,generalInfo) {
+                        // poke("BrokeEnemyWeakness",battleData,turnMerge);
+                        let ownerTurn = this.ownerTurn;
+                        let sourceTurn = generalInfo.sourceTurn;
+                        if (sourceTurn.name != ownerTurn.name) {return;}
+    
+                        const logicRefValues = this.logicRefValues ??= turnLogic[ownerTurn.properName].characterValuesBattle;
+
+                        logicRefValues.e2AdvanceCooldown += 1;
+                    },
+                    "target": "self",
+                    "listenerName": "From Shattered Sky, I Free Fall cooldown increment",
+                    "ownerTurn": {},
+                },
+            ],
+            3: [],
+            4: [],
+            5: [],
+            6: [],
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "combustionActive": false,
+            "e2AdvanceCooldown": 2,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "coreOverload": "Module γ: Core Overload",
+            "combustion": "Complete Combustion",
+            "implant": "Fyrefly Type-IV: Deathstar Overload",
+            "techImplant": "Δ Order: Meteoric Incineration"
+        },
+        "characterValuesBattle": {},
+    }
 }
 
 // updateBuff(battleData,sourceTurn,buffSheet,applyOrRemove,silent,shieldSource,ignoreDebuffPokes,ignoreFamilyPokes) {
