@@ -1,0 +1,151 @@
+const configAbility = {
+  "fileName": "Firefly_Advanced_Sam_TechniqueInLevel",
+  "childAbilityList": [
+    "Firefly_Advanced_Sam_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
+  "abilityType": "Technique",
+  "energy": null,
+  "toughnessList": [
+    20,
+    0,
+    0
+  ],
+  "parse": [
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"-1807590194\">Advanced_Sam_Maze_AddWeakness</a>"
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"1368931789\">Advanced_Sam_Maze</a>"
+    }
+  ],
+  "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__1368931789\">Advanced_Sam_Maze</a>",
+      "execute": [
+        {
+          "eventTrigger": "Enter Battle",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "Wave Count",
+                    "compareType": "=",
+                    "value2": 1
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
+                  "canPhase": true,
+                  "AttackScaling": {
+                    "DamageType": "Fire",
+                    "Damage": {
+                      "operator": "Variables[0] (2) || RETURN",
+                      "displayLines": "2",
+                      "constants": [],
+                      "variables": [
+                        2
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Technique"
+                  }
+                },
+                "Trigger: Attack End"
+              ],
+              "failed": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
+                  "canPhase": true,
+                  "AttackScaling": {
+                    "DamageType": "Fire",
+                    "Damage": {
+                      "operator": "Variables[0] (2) || RETURN",
+                      "displayLines": "2",
+                      "constants": [],
+                      "variables": [
+                        2
+                      ]
+                    },
+                    "Toughness": {
+                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
+                      "displayLines": "ST Toughness Value",
+                      "constants": [],
+                      "variables": [
+                        "ST Toughness Value"
+                      ]
+                    },
+                    "Tags": null,
+                    "attackType": "Technique"
+                  }
+                },
+                "Trigger: Attack End"
+              ]
+            }
+          ],
+          "priorityLevel": -60
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1807590194\">Advanced_Sam_Maze_AddWeakness</a>",
+      "execute": [
+        {
+          "eventTrigger": "Enter Battle",
+          "execute": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1165299909\">Advanced_Sam_Ability21_FireWeakType</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
+              "duration": {
+                "operator": "Variables[0] (2) || RETURN",
+                "displayLines": "2",
+                "constants": [],
+                "variables": [
+                  2
+                ]
+              }
+            }
+          ],
+          "priorityLevel": -80
+        }
+      ]
+    }
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  }
+}

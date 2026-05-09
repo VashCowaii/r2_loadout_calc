@@ -212,8 +212,8 @@ let allowedCharacterList = [
     "trimName": "Robin"
   },
   {
-    "fullName": "Firefly_v0",
-    "trimName": "Fireflyv0"
+    "fullName": "Firefly",
+    "trimName": "Firefly"
   },
   {
     "fullName": "Misha",
@@ -398,6 +398,10 @@ let allowedCharacterList = [
   {
     "fullName": "Black Swan_v0",
     "trimName": "BlackSwanv0"
+  },
+  {
+    "fullName": "Firefly_v0",
+    "trimName": "Fireflyv0"
   },
   {
     "fullName": "GlobalAbilities",

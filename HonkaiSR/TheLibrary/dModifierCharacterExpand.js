@@ -7240,7 +7240,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Sam_Trace03_BreakDamageAddedRatio_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1608282825\">Advanced_Sam_Trace03_BreakDamageAddedRatio_Sub</a>",
     "realName": "Module γ: Core Overload",
     "aim": "Buff",
     "desc": "Increases Break Effect by #1[f1]%.",
