@@ -135,6 +135,15 @@
     white-space: normal;
 }
 
+.r2HomeYTEmbed {
+    width: 100%;
+    max-width: 500px;
+    height: 260px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    /* object-fit: contain; */
+}
+
 
 
 @media (max-width: 768px) {

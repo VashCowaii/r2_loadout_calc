@@ -363,6 +363,8 @@ const megaParsingFuckery = {
         "Vulnerability": "createVULNPage",
         "Defense": "createDEFPage",
         "Effect Hit Rate (EHR)": "createEHRPage",
+        "Punchline": "createPunchlinePage",
+        "Certified Banger": "createPunchlinePage",
     },
     updateStatSearch() {
         let currentUserInput = readSelection("statFilterBoxInput").value;
@@ -414,7 +416,8 @@ const megaParsingFuckery = {
             megaParsingFuckery[megaParsingFuckery.fullStatList[urlStat]]();
         }
         else {
-            megaParsingFuckery[megaParsingFuckery.fullStatList["Effect Hit Rate (EHR)"]]();
+            // megaParsingFuckery[megaParsingFuckery.fullStatList["Effect Hit Rate (EHR)"]]();
+            megaParsingFuckery[megaParsingFuckery.fullStatList["Punchline"]]();
         }
     },
     pageLoad(loadFile) {
@@ -436,6 +439,164 @@ const megaParsingFuckery = {
         // megaParsingFuckery[megaParsingFuckery.fullStatList["Effect Hit Rate (EHR)"]]();
 
         megaParsingFuckery.loadCurrentPage()
+
+    },
+    createPunchlinePage() {
+        // <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/element/Physical.png" class="imageRowStatisticImage"></div>
+
+        // <div class="imageRowStatisticBox1">
+                
+                
+        //         <div class="statisticSettingsRow">
+        //             <div class="statsRowName">Enemy RES %:&nbsp;<span id="enemyRESSliderValue">20%</span></div>
+        //             <div class="statsRowToggle">
+        //                 <input type="range" id="enemyRESSlider" name="slider" min="0" max="90" value="20" step="10" list="tickmarks" onchange="megaParsingFuckery.updateRESPage()">
+        //             </div>
+        //         </div>
+
+        //         <div class="statisticSettingsRow">
+        //             <div class="statsRowName">SUM PEN %:&nbsp;<span id="allyPENSliderValue">20%</span></div>
+        //             <div class="statsRowToggle">
+        //                 <input type="range" id="allyPENSlider" name="slider" min="0" max="190" value="20" step="10" list="tickmarks" onchange="megaParsingFuckery.updateRESPage()">
+        //             </div>
+        //         </div>
+
+        //     </div>
+
+
+
+
+
+        // <div class="characterDisplayElementWeaknessIconHolderBox">
+        //     <img src="/HonkaiSR/icon/element/Fire.png" class="characterDisplayElementWeaknessIcon">
+        //     <img src="/HonkaiSR/icon/element/Thunder.png" class="characterDisplayElementWeaknessIcon">
+        //     <img src="/HonkaiSR/icon/element/Wind.png" class="characterDisplayElementWeaknessIcon">
+        //     <div class="characterDisplayEnemyLineupBarHeader">Position</div>
+        //     <div class="characterDisplayEnemyLineupBar">
+        //         <div class="characterDisplayEnemyLineupCircleEmpty"></div>
+        //         <div class="characterDisplayEnemyLineupCircleFill"></div>
+        //         <div class="characterDisplayEnemyLineupCircleEmpty"></div>
+        //     </div>
+        // </div>
+        // <div class="characterSearchButtonDMGDetailsTurnInspect clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(9)">Inspect</div>
+
+        // <img src="/HonkaiSR/icon/property/IconStatusResistance.png" class="imageRowStatisticImage"></img>
+        let resStringerMain = `
+            <div class="actionDetailHeaderRow"><span class="detailHeaderName">PUNCHLINE & BANGER</span></div>
+
+
+
+            <div class="actionDetailHeaderRowCharacterImageBox">
+                <div class="actionDetailHeaderRowCharacterImageAndEnergyBox">
+                    <img src="/HonkaiSR/misc/Glorpard.png" class="actionDetailHeaderRowEnemyImage">
+
+                    
+                    
+                </div>
+                <div class="actionDetailHeaderRowCharacterCustomValues">
+                <div class="cyclesSettingsHeader">Stat Comparison</div>
+
+
+
+                        <div class="imageRowStatisticBox1">
+                            <div class="imageRowStatisticImageBox"></div>
+                            <div class="imageRowStatisticNameBox">Stack Count</div>
+                            <div class="imageRowStatisticStatBox">
+                                <div class="presetsSelectorBox">
+                                    <input type="number" class="tagInput" id="punchline1Value" value="20" onchange="megaParsingFuckery.updatePunchlinePage()">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="imageRowStatisticBox2">
+                            <div class="imageRowStatisticImageBox"></div>
+                            <div class="imageRowStatisticNameBox">COMPARE Count</div>
+                            <div class="imageRowStatisticStatBox">
+                                <div class="presetsSelectorBox">
+                                    <input type="number" class="tagInput" id="punchline2Value" value="40" onchange="megaParsingFuckery.updatePunchlinePage()">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="totalHealingBoxBreakdownRows" style="background-color: #ffffff1A">
+                            <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                                <div class="totalHealingHeader">Final Multi #1</div>
+                                <div class="totalHealingValueBoss" id="finalMulti">x1</div>
+                            </div>
+                            <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                                <div class="totalHealingHeader">Final Multi #2</div>
+                                <div class="totalHealingValueBoss" id="finalMulti2">x1</div>
+                            </div>
+                            <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                                <div class="totalHealingHeader">COMPARE Gain</div>
+                                <div class="totalHealingValueBoss" id="gainValue2">689.841</div>
+                            </div>
+                        </div>
+                        
+                        <div class="statsBoxResultingText" id="resultingText"></div>
+                </div>
+            </div>
+
+            <div class="statsPageParaHeader">LIMITS & FORMULA</div>
+            <p class="formulaP">scalar = Elation Skill uses Punchline, any Certified Banger effects use Banger</p>
+            <p class="formulaP">DMGMulti = 1 + ((scalar * 5) / (scalar + 240))</p>
+            
+            <div class="totalHealingBoxBreakdownRows" style="background-color: #ffffff1A">
+                <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                    <div class="totalHealingHeader">Lower Limit</div>
+                    <div class="totalHealingValueBoss">0(but functionally, 1)</div>
+                </div>
+                <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                    <div class="totalHealingHeader">Upper Limit</div>
+                    <div class="totalHealingValueBoss" id="finalMulti2">Very, very big.</div>
+                </div>
+            </div>
+            <div class="statsPageParaBody">
+                Please note that due to how Punchline and Banger are separated, they will NEVER stack or add together. To learn more, please watch the video linked below.
+            </div>
+
+            <div class="statsPageParaHeader">UNDERSTANDING ELATION</div>
+            <div class="statsPageParaBody">
+                If you don't understand the difference between Punchline and Certified Banger, when they are used, how they can apply and where you get them, or if you don't understand the Elation mechanic as a whole, please watch this video.
+                <br>
+                <iframe class="r2HomeYTEmbed" src="https://www.youtube.com/embed/aXxED8AxwZY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        `;
+
+        readSelection("statsPageMainBox").innerHTML = resStringerMain;
+
+        megaParsingFuckery.updatePunchlinePage();
+    },
+    updatePunchlinePage() {
+        currentPage = "Punchline";
+        megaParsingFuckery.updateCurrentPage()
+        const punchline1ValuePre = +readSelection("punchline1Value").value;
+        readSelection("punchline1Value").value = Math.floor(Math.max(1,punchline1ValuePre));
+        const punchline1Value = +readSelection("punchline1Value").value;
+
+        const punchline2ValuePre = +readSelection("punchline2Value").value;
+        readSelection("punchline2Value").value = Math.floor(Math.max(1,punchline2ValuePre));
+        const punchline2Value = +readSelection("punchline2Value").value;
+
+        // const punchlineMulti = 1 + ((elationValueToUse*5)/(elationValueToUse+240));
+
+        const finalMulti = 1 + ((punchline1Value*5)/(punchline1Value+240));
+        const finalMulti2 = 1 + ((punchline2Value*5)/(punchline2Value+240));
+
+        const gainValueCompare = (finalMulti2/finalMulti) - 1;
+
+        readSelection("finalMulti").innerHTML = "x" + (finalMulti).toLocaleString();
+        // readSelection("gainValue").innerHTML = (gainValue * 100).toLocaleString() + "%";
+
+
+        
+        readSelection("finalMulti2").innerHTML = "x" + (finalMulti2).toLocaleString();
+        readSelection("gainValue2").innerHTML = (gainValueCompare * 100).toLocaleString() + "%";
+
+        // readSelection("allyPENSlider2").disabled = !isCompare;
+
+        const isGain = gainValueCompare >= 0;
+        readSelection("resultingText").innerHTML = `Going from <span>${punchline1Value.toLocaleString()}</span> to <span>${punchline2Value.toLocaleString()}</span> Punchline/Banger stacks, will result in a ${isGain ? `<span class="relativeGain">` : `<span class="relativeLoss">`}${(gainValueCompare * 100).toLocaleString()}% DMG ${isGain ? `GAIN` : `LOSS`}</span>`
 
     },
     createEHRPage() {
@@ -488,7 +649,7 @@ const megaParsingFuckery = {
                 <div class="actionDetailHeaderRowCharacterCustomValues">
                 <div class="cyclesSettingsHeader">Stat Comparison</div>
 
-                        <div class="imageRowStatisticBox2">
+                        <div class="imageRowStatisticBox1">
                             <div class="imageRowStatisticImageBox"></div>
                             <div class="imageRowStatisticNameBox">Base Chance</div>
                             <div class="imageRowStatisticStatBox">
@@ -506,7 +667,7 @@ const megaParsingFuckery = {
                                 </div>
                             </div>
                         </div>
-                        <div class="imageRowStatisticBox2">
+                        <div class="imageRowStatisticBox1">
                             <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconStatusProbability.png" class="imageRowStatisticImage"></div>
                             <div class="imageRowStatisticNameBox">Effect Hit Rate</div>
                             <div class="imageRowStatisticStatBox">
@@ -711,6 +872,7 @@ const megaParsingFuckery = {
                                 </div>
                             </div>
                         </div>
+                        <div class="statsBoxResultingText" id="plightDEF" style="color: lightcoral;">NOTE: If you're trying compare PLIGHT enemies, use LVL 100, even if they're 120.</div>
 
                         <div class="statisticSettingsRow">
                             <div class="statsRowName">SUM SHRED %:&nbsp;<span id="allyPENSliderValue">60%</span></div>
@@ -772,8 +934,9 @@ const megaParsingFuckery = {
                 Due to the formula structure, SHRED scales more efficiently the more you have of it which runs contrary to how most other benefits work.
                 <br><span>Example</span>: on a LVL 95 enemy, the relative gain from 0% to 10% SHRED is ~5.6%, but the relative gain from 90% to 100% SHRED is 11.5%.
                 <br><br>In addition, since enemies gain more DEF with higher levels, SHRED applied to higher LVL enemies will ALWAYS provide a higher relative gain vs lower LVL enemies.
-                <br><span>Example</span>: on a LVL 95 enemy, the relative gain from 0% to 100% SHRED is 115%, but on a LVL 120 enemy that same jump gives a 140% relative gain.
+                <br><span>Example</span>: on a LVL 80 enemy, the relative gain from 0% to 100% SHRED is 100%, but on a LVL 100 enemy that same jump gives a 120% relative gain.
                 <br>This is because shred at 100% will always bring the final multi to x1, but at 0% shred, when enemies have higher DEF at higher LVLs, the starting multiplier will be lower than lower LVL enemies. So at higher LVLs, there is a wider gap to close, making SHRED more valuable than before.
+                <br><span style="color: lightcoral;">EXCEPTIONS</span>: Plight difficulty enemies on Anomaly Arbitration, despite being LVL 120, will use the DEF value of a LVL 100 enemy. Trotters also use a different DEF value but nobody cares about trotters.
             </div>
         `;
 
@@ -791,6 +954,8 @@ const megaParsingFuckery = {
 
         const PENValue = +readSelection("allyPENSlider").value;
         const PENValue2 = +readSelection("allyPENSlider2").value;
+
+        readSelection("plightDEF").style.display = RESValue === 120 ? "block" : "none";
 
         // const isCompare = readSelection("use2ndValueCompare").checked;
 
