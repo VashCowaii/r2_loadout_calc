@@ -39237,9 +39237,9 @@ let characters = {
     ],
     "isBuffed": false
   },
-  "Firefly_v0": {
+  "Firefly": {
     "internalID": 1310,
-    "name": "Firefly_v0",
+    "name": "Firefly",
     "path": "Destruction",
     "element": "Fire",
     "rarity": 5,
@@ -39255,26 +39255,22 @@ let characters = {
     },
     "eidolons": [
       {
-        "id": "131001",
+        "id": "1131001",
         "name": "In Reddened Chrysalis, I Once Rest",
         "rank": 1,
         "desc": "When using the Enhanced Skill, ignores 15% of the target's DEF. The Enhanced Skill does not consume Skill Points.",
-        "icon": "icon/skill/1310_rank1.png",
+        "icon": "icon/skill/1131_rank1.png",
         "paramsEido": [
           0.15
         ],
-        "eidoAbility": "Fireflyv0_Sam_Eidolon1"
+        "eidoAbility": "Firefly_Advanced_Sam_Eidolon1"
       },
       {
-        "id": "131002",
+        "id": "1131002",
         "name": "From Shattered Sky, I Free Fall",
         "rank": 2,
-        "desc": "While in Complete Combustion, using the Enhanced Basic ATK or the Enhanced Skill to defeat an enemy target or to Break their Weakness allows SAM to immediately gain 1 extra turn. This effect can trigger again after 1 turn(s).",
-        "icon": "icon/skill/1310_rank2.png",
-        "paramsEido": [
-          1,
-          1
-        ],
+        "desc": "While in Complete Combustion, using the Enhanced Basic ATK or the Enhanced Skill to defeat an enemy target or to Break their Weakness allows SAM to immediately gain 1 extra turn. This effect can only trigger 1 time per turn, and the trigger count resets at the start of SAM's turn.",
+        "icon": "icon/skill/1131_rank2.png",
         "extraEffects": {
           "Weakness Break State": {
             "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
@@ -39283,39 +39279,38 @@ let characters = {
             "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
           }
         },
-        "eidoAbility": "Fireflyv0_Sam_Eidolon2"
+        "eidoAbility": "Firefly_Advanced_Sam_Eidolon2"
       },
       {
-        "id": "131003",
+        "id": "1131003",
         "name": "Amidst Silenced Stars, I Deep Sleep",
         "rank": 3,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1310_skill.png"
+        "icon": "icon/skill/1131_skill.png"
       },
       {
-        "id": "131004",
+        "id": "1131004",
         "name": "Upon Lighted Fyrefly, I Soon Gaze",
         "rank": 4,
         "desc": "While in Complete Combustion, increases SAM's Effect RES by 50%.",
-        "icon": "icon/skill/1310_rank4.png",
+        "icon": "icon/skill/1131_rank4.png",
         "paramsEido": [
           0.5
-        ],
-        "eidoAbility": "Fireflyv0_Sam_Eidolon4"
+        ]
       },
       {
-        "id": "131005",
+        "id": "1131005",
         "name": "From Undreamt Night, I Thence Shine",
         "rank": 5,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1310_ultimate.png"
+        "icon": "icon/skill/1131_ultimate.png"
       },
       {
-        "id": "131006",
+        "id": "1131006",
         "name": "In Finalized Morrow, I Full Bloom",
         "rank": 6,
         "desc": "While in Complete Combustion, increases SAM's Fire RES PEN by 20%. When using the Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by 50%.",
-        "icon": "icon/skill/1310_rank6.png",
+        "icon": "icon/skill/1131_rank6.png",
         "paramsEido": [
           0.2,
           0.5
@@ -39325,7 +39320,7 @@ let characters = {
             "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
           }
         },
-        "eidoAbility": "Fireflyv0_Sam_Eidolon6"
+        "eidoAbility": "Firefly_Advanced_Sam_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -39342,7 +39337,7 @@ let characters = {
       "Basic ATK": {
         "Order: Flare Propulsion": {
           "variant1": {
-            "skillID": 131001,
+            "skillID": 1131001,
             "trigger": "Skill01",
             "name": "Order: Flare Propulsion",
             "type": "Single Target",
@@ -39392,8 +39387,8 @@ let characters = {
             "maxLevel": 10,
             "configAbilityList": [
               "Avatar_Sam_00_Skill01_Camera",
-              "Avatar_Sam_00_Skill01_Phase01",
-              "Avatar_Sam_00_Skill01_Phase02"
+              "Avatar_Advanced_Sam_00_Skill01_Phase01",
+              "Avatar_Advanced_Sam_00_Skill01_Phase02"
             ],
             "toughnessList": [
               30,
@@ -39405,7 +39400,7 @@ let characters = {
         },
         "Fyrefly Type-IV: Pyrogenic Decimation": {
           "variant1": {
-            "skillID": 131008,
+            "skillID": 1131008,
             "trigger": "Skill11",
             "name": "Fyrefly Type-IV: Pyrogenic Decimation",
             "type": "Single Target",
@@ -39465,8 +39460,8 @@ let characters = {
             "maxLevel": 10,
             "configAbilityList": [
               "Avatar_Sam_00_Skill11_Camera",
-              "Avatar_Sam_00_Skill11_Phase01",
-              "Avatar_Sam_00_Skill11_Phase02"
+              "Avatar_Advanced_Sam_00_Skill11_Phase01",
+              "Avatar_Advanced_Sam_00_Skill11_Phase02"
             ],
             "toughnessList": [
               45,
@@ -39480,7 +39475,7 @@ let characters = {
       "Skill": {
         "Order: Aerial Bombardment": {
           "variant1": {
-            "skillID": 131002,
+            "skillID": 1131002,
             "trigger": "Skill02",
             "name": "Order: Aerial Bombardment",
             "type": "Single Target",
@@ -39590,8 +39585,8 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": [
               "Avatar_Sam_00_Skill02_Camera",
-              "Avatar_Sam_00_Skill02_Phase01",
-              "Avatar_Sam_00_Skill02_Phase02"
+              "Avatar_Advanced_Sam_00_Skill02_Phase01",
+              "Avatar_Advanced_Sam_00_Skill02_Phase02"
             ],
             "toughnessList": [
               60,
@@ -39608,12 +39603,12 @@ let characters = {
         },
         "Fyrefly Type-IV: Deathstar Overload": {
           "variant1": {
-            "skillID": 131009,
+            "skillID": 1131009,
             "trigger": "Skill21",
             "name": "Fyrefly Type-IV: Deathstar Overload",
             "type": "Blast",
             "slot": "Skill",
-            "desc": "Restores HP by an amount equal to #3[i]% of this unit's Max HP. Applies Fire Weakness to one designated enemy, lasting for #4[i] turn(s). Deals Fire DMG equal to (#5[f1] × Break Effect + #1[f1]%) of SAM's ATK to this target. At the same time, deals Fire DMG equal to (#6[f1] × Break Effect + #2[f1]%) of SAM's ATK to adjacent targets. The Break Effect taken into the calculation is capped at #7[i]%.",
+            "desc": "Restores HP by an amount equal to 25% of this unit's Max HP. Adds Fire Weakness to one designated enemy and its adjacent targets, lasting for 2 turns. Deals Fire DMG equal to (#5[f1] × Break Effect + #1[f1]%) of SAM's ATK to this target. At the same time, deals Fire DMG equal to (#6[f1] × Break Effect + #2[f1]%) of SAM's ATK to adjacent targets. The Break Effect taken into the calculation is capped at #7[i]%.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -39624,137 +39619,152 @@ let characters = {
               "1": [
                 1,
                 0.5,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "2": [
                 1.1,
                 0.55,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "3": [
                 1.2,
                 0.6,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "4": [
                 1.3,
                 0.65,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "5": [
                 1.4,
                 0.7,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "6": [
                 1.5,
                 0.75,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "7": [
                 1.625,
                 0.8125,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "8": [
                 1.75,
                 0.875,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "9": [
                 1.875,
                 0.9375,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "10": [
                 2,
                 1,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "11": [
                 2.1,
                 1.05,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "12": [
                 2.2,
                 1.1,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "13": [
                 2.3,
                 1.15,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "14": [
                 2.4,
                 1.2,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "15": [
                 2.5,
                 1.25,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ]
             },
             "element": "Fire",
@@ -39763,8 +39773,8 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": [
               "Avatar_Sam_00_Skill21_Camera",
-              "Avatar_Sam_00_Skill21_Phase01",
-              "Avatar_Sam_00_Skill21_Phase02"
+              "Avatar_Advanced_Sam_00_Skill21_Phase01",
+              "Avatar_Advanced_Sam_00_Skill21_Phase02"
             ],
             "toughnessList": [
               90,
@@ -39778,7 +39788,7 @@ let characters = {
       "Ultimate": {
         "Fyrefly Type-IV: Complete Combustion": {
           "variant1": {
-            "skillID": 131003,
+            "skillID": 1131003,
             "trigger": "Skill03",
             "name": "Fyrefly Type-IV: Complete Combustion",
             "type": "Enhance",
@@ -39887,9 +39897,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": [
               "Avatar_Sam_00_Skill03_Camera",
-              "Avatar_Sam_00_Skill03_EnterReady",
-              "Avatar_Sam_00_Skill03_Phase01",
-              "Avatar_Sam_00_Skill03_Phase02"
+              "Avatar_Advanced_Sam_00_Skill03_EnterReady",
+              "Avatar_Advanced_Sam_00_Skill03_Phase01",
+              "Avatar_Advanced_Sam_00_Skill03_Phase02"
             ],
             "toughnessList": [
               0,
@@ -39903,7 +39913,7 @@ let characters = {
       "Talent": {
         "Chrysalid Pyronexus": {
           "variant1": {
-            "skillID": 131004,
+            "skillID": 1131004,
             "trigger": "SkillP01",
             "name": "Chrysalid Pyronexus",
             "type": "Defense",
@@ -40011,9 +40021,8 @@ let characters = {
             "skillEffect": "Defence",
             "maxLevel": 15,
             "configAbilityList": [
-              "Avatar_Sam_00_PassiveSkill01",
-              "Avatar_Sam_00_Rank02_Bonus",
-              "Avatar_Sam_00_PassiveSkill01_BattleEvent_Insert"
+              "Avatar_Advanced_Sam_00_PassiveSkill01",
+              "Avatar_Advanced_Sam_00_PassiveSkill01_BattleEvent_Insert"
             ],
             "toughnessList": [
               0,
@@ -40032,7 +40041,7 @@ let characters = {
       "Technique": {
         "Δ Order: Meteoric Incineration": {
           "variant1": {
-            "skillID": 131007,
+            "skillID": 1131007,
             "trigger": "SkillMaze",
             "name": "Δ Order: Meteoric Incineration",
             "slot": "Technique",
@@ -40055,7 +40064,7 @@ let characters = {
             "skillEffect": "MazeAttack",
             "maxLevel": 1,
             "configAbilityList": [
-              "Avatar_Sam_00_SkillMazeInLevel"
+              "Avatar_Advanced_Sam_00_SkillMazeInLevel"
             ],
             "toughnessList": [
               60,
@@ -40106,23 +40115,31 @@ let characters = {
       "Point06": {
         "name": "Module α: Antilag Outburst",
         "icon": "icon/skill/1310_skilltree1.png",
-        "desc": "During the Complete Combustion, attacking enemies that have no Fire Weakness can also reduce their Toughness, with the effect being equivalent to #1[i]% of the original Toughness Reduction from abilities.",
+        "desc": "While in the Complete Combustion state, SAM's Break Effect increases by #1[i]%. When using Enhanced Basic ATK or Enhanced Skill to inflict Weakness Break on a target, the Complete Combustion countdown is delayed by #2[i]%. This effect can trigger a maximum of #3[i] time(s) during each Complete Combustion state.",
         "params": [
-          0.55
+          0.25,
+          0.1,
+          3
         ],
-        "traceAbility": "Fireflyv0_Sam_Trace01"
+        "extraEffects": {
+          "Weakness Break State": {
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+          },
+          "Action Delayed": {
+            "desc": "Increases the target's waiting interval before the next action."
+          }
+        }
       },
       "Point07": {
         "name": "Module β: Autoreactive Armor",
         "icon": "icon/skill/1310_skilltree2.png",
         "desc": "When SAM is in Complete Combustion with a Break Effect that is equal to or greater than #1[i]%/#2[i]%, attacking a Weakness-Broken enemy target will convert the Toughness Reduction of this attack into 1 instance of #3[i]%/#4[i]% Super Break DMG.",
         "params": [
-          2,
-          3.6,
-          0.35,
-          0.5
+          1.5,
+          3,
+          1,
+          1.5
         ],
-        "traceAbility": "Fireflyv0_Sam_Trace02",
         "extraEffects": {
           "Weakness Break State": {
             "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
@@ -40141,7 +40158,7 @@ let characters = {
           10,
           0.007999999
         ],
-        "traceAbility": "Fireflyv0_Sam_Trace03"
+        "traceAbility": "Firefly_Advanced_Sam_Trace03"
       },
       "Point09": {
         "name": "Break Boost",
@@ -77851,6 +77868,1000 @@ let characters = {
       -4,
       -55,
       0.69
+    ],
+    "isBuffed": true
+  },
+  "Firefly_v0": {
+    "internalID": 1310,
+    "name": "Firefly_v0",
+    "path": "Destruction",
+    "element": "Fire",
+    "rarity": 5,
+    "energyMax": 240,
+    "baseStats": {
+      "ATKBase": 523.908,
+      "DEFBase": 776.1600000000001,
+      "HPBase": 814.968,
+      "SPDBase": 104,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "131001",
+        "name": "In Reddened Chrysalis, I Once Rest",
+        "rank": 1,
+        "desc": "When using the Enhanced Skill, ignores 15% of the target's DEF. The Enhanced Skill does not consume Skill Points.",
+        "icon": "icon/skill/1310_rank1.png",
+        "paramsEido": [
+          0.15
+        ],
+        "eidoAbility": "Fireflyv0_Sam_Eidolon1"
+      },
+      {
+        "id": "131002",
+        "name": "From Shattered Sky, I Free Fall",
+        "rank": 2,
+        "desc": "While in Complete Combustion, using the Enhanced Basic ATK or the Enhanced Skill to defeat an enemy target or to Break their Weakness allows SAM to immediately gain 1 extra turn. This effect can trigger again after 1 turn(s).",
+        "icon": "icon/skill/1310_rank2.png",
+        "paramsEido": [
+          1,
+          1
+        ],
+        "extraEffects": {
+          "Weakness Break State": {
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+          },
+          "Extra Turn": {
+            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+          }
+        },
+        "eidoAbility": "Fireflyv0_Sam_Eidolon2"
+      },
+      {
+        "id": "131003",
+        "name": "Amidst Silenced Stars, I Deep Sleep",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1310_skill.png"
+      },
+      {
+        "id": "131004",
+        "name": "Upon Lighted Fyrefly, I Soon Gaze",
+        "rank": 4,
+        "desc": "While in Complete Combustion, increases SAM's Effect RES by 50%.",
+        "icon": "icon/skill/1310_rank4.png",
+        "paramsEido": [
+          0.5
+        ],
+        "eidoAbility": "Fireflyv0_Sam_Eidolon4"
+      },
+      {
+        "id": "131005",
+        "name": "From Undreamt Night, I Thence Shine",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1310_ultimate.png"
+      },
+      {
+        "id": "131006",
+        "name": "In Finalized Morrow, I Full Bloom",
+        "rank": 6,
+        "desc": "While in Complete Combustion, increases SAM's Fire RES PEN by 20%. When using the Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by 50%.",
+        "icon": "icon/skill/1310_rank6.png",
+        "paramsEido": [
+          0.2,
+          0.5
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        },
+        "eidoAbility": "Fireflyv0_Sam_Eidolon6"
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Order: Flare Propulsion": {
+          "variant1": {
+            "skillID": 131001,
+            "trigger": "Skill01",
+            "name": "Order: Flare Propulsion",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Sam_00_Skill01_Camera",
+              "Avatar_Sam_00_Skill01_Phase01",
+              "Avatar_Sam_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Fyrefly Type-IV: Pyrogenic Decimation": {
+          "variant1": {
+            "skillID": 131008,
+            "trigger": "Skill11",
+            "name": "Fyrefly Type-IV: Pyrogenic Decimation",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Restores HP by an amount equal to #2[i]% of this unit's Max HP. Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 15,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                1,
+                0.2
+              ],
+              "2": [
+                1.2,
+                0.2
+              ],
+              "3": [
+                1.4,
+                0.2
+              ],
+              "4": [
+                1.6,
+                0.2
+              ],
+              "5": [
+                1.8,
+                0.2
+              ],
+              "6": [
+                2,
+                0.2
+              ],
+              "7": [
+                2.2,
+                0.2
+              ],
+              "8": [
+                2.4,
+                0.2
+              ],
+              "9": [
+                2.6,
+                0.2
+              ],
+              "10": [
+                2.8,
+                0.2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Sam_00_Skill11_Camera",
+              "Avatar_Sam_00_Skill11_Phase01",
+              "Avatar_Sam_00_Skill11_Phase02"
+            ],
+            "toughnessList": [
+              45,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Order: Aerial Bombardment": {
+          "variant1": {
+            "skillID": 131002,
+            "trigger": "Skill02",
+            "name": "Order: Aerial Bombardment",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Consumes HP equal to #2[i]% of this unit's Max HP and regenerates a fixed amount of Energy equal to #3[i]% of this unit's Max Energy. Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy. If the current HP is not sufficient, reduces SAM's HP to 1 when using this Skill. Advances this unit's next Action by #4[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.4,
+                0.5,
+                0.25
+              ],
+              "2": [
+                1.1,
+                0.4,
+                0.51,
+                0.25
+              ],
+              "3": [
+                1.2,
+                0.4,
+                0.52,
+                0.25
+              ],
+              "4": [
+                1.3,
+                0.4,
+                0.53,
+                0.25
+              ],
+              "5": [
+                1.4,
+                0.4,
+                0.54,
+                0.25
+              ],
+              "6": [
+                1.5,
+                0.4,
+                0.55,
+                0.25
+              ],
+              "7": [
+                1.625,
+                0.4,
+                0.5625,
+                0.25
+              ],
+              "8": [
+                1.75,
+                0.4,
+                0.575,
+                0.25
+              ],
+              "9": [
+                1.875,
+                0.4,
+                0.5875,
+                0.25
+              ],
+              "10": [
+                2,
+                0.4,
+                0.6,
+                0.25
+              ],
+              "11": [
+                2.1,
+                0.4,
+                0.61,
+                0.25
+              ],
+              "12": [
+                2.2,
+                0.4,
+                0.62,
+                0.25
+              ],
+              "13": [
+                2.3,
+                0.4,
+                0.63,
+                0.25
+              ],
+              "14": [
+                2.4,
+                0.4,
+                0.64,
+                0.25
+              ],
+              "15": [
+                2.5,
+                0.4,
+                0.65,
+                0.25
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sam_00_Skill02_Camera",
+              "Avatar_Sam_00_Skill02_Phase01",
+              "Avatar_Sam_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Advance": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              }
+            }
+          }
+        },
+        "Fyrefly Type-IV: Deathstar Overload": {
+          "variant1": {
+            "skillID": 131009,
+            "trigger": "Skill21",
+            "name": "Fyrefly Type-IV: Deathstar Overload",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Restores HP by an amount equal to #3[i]% of this unit's Max HP. Applies Fire Weakness to one designated enemy, lasting for #4[i] turn(s). Deals Fire DMG equal to (#5[f1] × Break Effect + #1[f1]%) of SAM's ATK to this target. At the same time, deals Fire DMG equal to (#6[f1] × Break Effect + #2[f1]%) of SAM's ATK to adjacent targets. The Break Effect taken into the calculation is capped at #7[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.5,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "2": [
+                1.1,
+                0.55,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "3": [
+                1.2,
+                0.6,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "4": [
+                1.3,
+                0.65,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "5": [
+                1.4,
+                0.7,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "6": [
+                1.5,
+                0.75,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "7": [
+                1.625,
+                0.8125,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "8": [
+                1.75,
+                0.875,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "9": [
+                1.875,
+                0.9375,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "10": [
+                2,
+                1,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "11": [
+                2.1,
+                1.05,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "12": [
+                2.2,
+                1.1,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "13": [
+                2.3,
+                1.15,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "14": [
+                2.4,
+                1.2,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "15": [
+                2.5,
+                1.25,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sam_00_Skill21_Camera",
+              "Avatar_Sam_00_Skill21_Phase01",
+              "Avatar_Sam_00_Skill21_Phase02"
+            ],
+            "toughnessList": [
+              90,
+              0,
+              45
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Fyrefly Type-IV: Complete Combustion": {
+          "variant1": {
+            "skillID": 131003,
+            "trigger": "Skill03",
+            "name": "Fyrefly Type-IV: Complete Combustion",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "Enters the Complete Combustion state, advances this unit's Action by 100%, and gains Enhanced Basic ATK and Enhanced Skill. While in Complete Combustion, increases SPD by #3[i], and when using the Enhanced Basic ATK or Enhanced Skill, increases this unit's Weakness Break Efficiency by #2[i]% and increases the Break DMG dealt by SAM to the enemy targets by #1[f1]%, lasting until this current attack ends.\\nA countdown timer for the Complete Combustion state appears in the Action Order. When the countdown timer's turn starts, SAM exits the Complete Combustion state. The countdown timer has a fixed SPD of #4[i].\\nSAM cannot use Ultimate while in Complete Combustion.",
+            "energyCost": 240,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1,
+                0.5,
+                30,
+                70
+              ],
+              "2": [
+                0.11,
+                0.5,
+                33,
+                70
+              ],
+              "3": [
+                0.12,
+                0.5,
+                36,
+                70
+              ],
+              "4": [
+                0.13,
+                0.5,
+                39,
+                70
+              ],
+              "5": [
+                0.14,
+                0.5,
+                42,
+                70
+              ],
+              "6": [
+                0.15,
+                0.5,
+                45,
+                70
+              ],
+              "7": [
+                0.1625,
+                0.5,
+                48.75,
+                70
+              ],
+              "8": [
+                0.175,
+                0.5,
+                52.5,
+                70
+              ],
+              "9": [
+                0.1875,
+                0.5,
+                56.25,
+                70
+              ],
+              "10": [
+                0.2,
+                0.5,
+                60,
+                70
+              ],
+              "11": [
+                0.21,
+                0.5,
+                63,
+                70
+              ],
+              "12": [
+                0.22,
+                0.5,
+                66,
+                70
+              ],
+              "13": [
+                0.23,
+                0.5,
+                69,
+                70
+              ],
+              "14": [
+                0.24,
+                0.5,
+                72,
+                70
+              ],
+              "15": [
+                0.25,
+                0.5,
+                75,
+                70
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sam_00_Skill03_Camera",
+              "Avatar_Sam_00_Skill03_EnterReady",
+              "Avatar_Sam_00_Skill03_Phase01",
+              "Avatar_Sam_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Chrysalid Pyronexus": {
+          "variant1": {
+            "skillID": 131004,
+            "trigger": "SkillP01",
+            "name": "Chrysalid Pyronexus",
+            "type": "Defense",
+            "slot": "Talent",
+            "desc": "The lower the HP, the less DMG received. When HP is #3[i]% or lower, the DMG Reduction reaches its maximum effect, reducing up to #1[i]%. During the Complete Combustion, the DMG Reduction remains at its maximum effect, and the Effect RES increases by #4[i]%.\\nIf Energy is lower than #2[i]% when the battle starts, regenerates Energy to #2[i]%. Once Energy is regenerated to its maximum, dispels all debuffs on this unit.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.2,
+                0.5,
+                0.2,
+                0.1
+              ],
+              "2": [
+                0.22,
+                0.5,
+                0.2,
+                0.12
+              ],
+              "3": [
+                0.24,
+                0.5,
+                0.2,
+                0.14
+              ],
+              "4": [
+                0.26,
+                0.5,
+                0.2,
+                0.16
+              ],
+              "5": [
+                0.28,
+                0.5,
+                0.2,
+                0.18
+              ],
+              "6": [
+                0.3,
+                0.5,
+                0.2,
+                0.2
+              ],
+              "7": [
+                0.325,
+                0.5,
+                0.2,
+                0.225
+              ],
+              "8": [
+                0.35,
+                0.5,
+                0.2,
+                0.25
+              ],
+              "9": [
+                0.375,
+                0.5,
+                0.2,
+                0.275
+              ],
+              "10": [
+                0.4,
+                0.5,
+                0.2,
+                0.3
+              ],
+              "11": [
+                0.42,
+                0.5,
+                0.2,
+                0.32
+              ],
+              "12": [
+                0.44,
+                0.5,
+                0.2,
+                0.34
+              ],
+              "13": [
+                0.46,
+                0.5,
+                0.2,
+                0.36
+              ],
+              "14": [
+                0.48,
+                0.5,
+                0.2,
+                0.38
+              ],
+              "15": [
+                0.5,
+                0.5,
+                0.2,
+                0.4
+              ]
+            },
+            "element": "Fire",
+            "skillEffect": "Defence",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sam_00_PassiveSkill01",
+              "Avatar_Sam_00_Rank02_Bonus",
+              "Avatar_Sam_00_PassiveSkill01_BattleEvent_Insert"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Δ Order: Meteoric Incineration": {
+          "variant1": {
+            "skillID": 131007,
+            "trigger": "SkillMaze",
+            "name": "Δ Order: Meteoric Incineration",
+            "slot": "Technique",
+            "desc": "Leaps into the air and moves about freely for #1[i] seconds, which can be ended early by launching a plunging attack. When the duration ends, plunges and immediately attacks all enemies within a set area. At the start of each wave, applies a Fire Weakness to all enemies, lasting for #3[i] turn(s). Then, deals Fire DMG equal to #2[i]% of SAM's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                5,
+                2,
+                2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Sam_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1310_basic_atk.png",
+        "skillRef": {
+          "skillName": "Order: Flare Propulsion",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1310_skill.png",
+        "skillRef": {
+          "skillName": "Order: Aerial Bombardment",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1310_ultimate.png",
+        "skillRef": {
+          "skillName": "Fyrefly Type-IV: Complete Combustion",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1310_talent.png",
+        "skillRef": {
+          "skillName": "Chrysalid Pyronexus",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1310_technique.png",
+        "skillRef": {
+          "skillName": "Δ Order: Meteoric Incineration",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Module α: Antilag Outburst",
+        "icon": "icon/skill/1310_skilltree1.png",
+        "desc": "During the Complete Combustion, attacking enemies that have no Fire Weakness can also reduce their Toughness, with the effect being equivalent to #1[i]% of the original Toughness Reduction from abilities.",
+        "params": [
+          0.55
+        ],
+        "traceAbility": "Fireflyv0_Sam_Trace01"
+      },
+      "Point07": {
+        "name": "Module β: Autoreactive Armor",
+        "icon": "icon/skill/1310_skilltree2.png",
+        "desc": "When SAM is in Complete Combustion with a Break Effect that is equal to or greater than #1[i]%/#2[i]%, attacking a Weakness-Broken enemy target will convert the Toughness Reduction of this attack into 1 instance of #3[i]%/#4[i]% Super Break DMG.",
+        "params": [
+          2,
+          3.6,
+          0.35,
+          0.5
+        ],
+        "traceAbility": "Fireflyv0_Sam_Trace02",
+        "extraEffects": {
+          "Weakness Break State": {
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+          },
+          "Super Break DMG": {
+            "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Module γ: Core Overload",
+        "icon": "icon/skill/1310_skilltree3.png",
+        "desc": "For every #2[i] point(s) of SAM's ATK that exceeds #1[i], increases this unit's Break Effect by #3[f1]%.",
+        "params": [
+          1800,
+          10,
+          0.007999999
+        ],
+        "traceAbility": "Fireflyv0_Sam_Trace03"
+      },
+      "Point09": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point10": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point11": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point12": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point13": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point14": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point15": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point16": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point17": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.08
+        }
+      },
+      "Point18": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1310.png",
+    "preview": "image/character_preview/1310.png",
+    "portrait": "image/character_portrait/1310.png",
+    "bannerOffsets": [
+      54,
+      45,
+      0.63,
+      54,
+      45,
+      0.63,
+      54,
+      45,
+      0.63
     ],
     "isBuffed": true
   }

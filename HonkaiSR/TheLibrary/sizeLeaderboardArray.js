@@ -882,6 +882,14 @@ let sizeLeaderboardArray = [
     "sizeCount": 177052
   },
   {
+    "entryType": "char",
+    "entryName": "Firefly",
+    "trimCharacterName": "Firefly",
+    "entryIcon": "icon/character/1310.png",
+    "lineCount": 4910,
+    "sizeCount": 176910
+  },
+  {
     "entryType": "enemy",
     "enemyID": 3002042,
     "lineCount": 4545,
