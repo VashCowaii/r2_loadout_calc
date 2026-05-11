@@ -63,7 +63,6 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value1": null,
                         "compareType": ">=",
                         "value2": 20,
                         "valueType": "Layer"
@@ -110,7 +109,6 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value1": null,
                         "compareType": ">=",
                         "value2": 30,
                         "valueType": "Layer"
@@ -974,7 +972,6 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value1": null,
                     "compareType": ">=",
                     "value2": 4
                   },

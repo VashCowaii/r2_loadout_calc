@@ -1389,7 +1389,6 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value1": null,
                             "compareType": ">=",
                             "value2": {
                               "operator": "Variables[0] (ThirdLayer) || RETURN",
@@ -1410,7 +1409,6 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value1": null,
                                 "compareType": ">=",
                                 "value2": {
                                   "operator": "Variables[0] (SecondLayer) || RETURN",
@@ -1435,7 +1433,6 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value1": null,
                             "compareType": ">=",
                             "value2": {
                               "operator": "Variables[0] (ThirdLayer) || RETURN",
@@ -1456,7 +1453,6 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value1": null,
                                 "compareType": ">=",
                                 "value2": {
                                   "operator": "Variables[0] (SecondLayer) || RETURN",

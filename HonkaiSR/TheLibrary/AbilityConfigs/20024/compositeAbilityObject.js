@@ -62,13 +62,13 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12282) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_12282 - 1)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12320) || Constants[0] (1) || SUB || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_12320 - 1)",
                     "constants": [
                       1
                     ],
                     "variables": [
-                      "UnusedUnderThisBase_12282"
+                      "UnusedUnderThisBase_12320"
                     ]
                   }
                 }
@@ -885,11 +885,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"688363638\">Monster_W4_Theoroi_Destruction</a>[<span class=\"descriptionNumberColor\">Retribution of \"Law\"</span>]",
                       "valuePerStack": {
                         "MDF_LoseHPRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12285) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12285",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12323) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12323",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12285"
+                            "UnusedUnderThisBase_12323"
                           ]
                         }
                       }
@@ -1518,22 +1518,22 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "consumePercent": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12291) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_12291",
+                        "operator": "Variables[0] (UnusedUnderThisBase_12329) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_12329",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_12291"
+                          "UnusedUnderThisBase_12329"
                         ]
                       }
                     },
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12284) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_12284",
+                        "operator": "Variables[0] (UnusedUnderThisBase_12322) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_12322",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_12284"
+                          "UnusedUnderThisBase_12322"
                         ]
                       },
                       "forceReduction": true,
@@ -1575,11 +1575,11 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_CurrentCountRemain",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12304) || Variables[1] (MDF_CurrentCount) || SUB || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_12304 - MDF_CurrentCount)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12342) || Variables[1] (MDF_CurrentCount) || SUB || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_12342 - MDF_CurrentCount)",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12304",
+                      "UnusedUnderThisBase_12342",
                       "MDF_CurrentCount"
                     ]
                   }
@@ -1600,11 +1600,11 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12304) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12304",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12342) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12342",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12304"
+                      "UnusedUnderThisBase_12342"
                     ]
                   },
                   "assignState": "True",
@@ -1759,11 +1759,11 @@ const compositeAbilityObject = {
                         "value1": "MDF_CurrentCount",
                         "compareType": ">",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12304) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12304",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12342) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12342",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12304"
+                            "UnusedUnderThisBase_12342"
                           ]
                         }
                       },
@@ -1772,11 +1772,11 @@ const compositeAbilityObject = {
                           "name": "Define Custom Variable",
                           "variableName": "MDF_CurrentCount",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_12304) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_12304",
+                            "operator": "Variables[0] (UnusedUnderThisBase_12342) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_12342",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_12304"
+                              "UnusedUnderThisBase_12342"
                             ]
                           }
                         }
@@ -1786,11 +1786,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_CurrentCountRemain",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12304) || Variables[1] (MDF_CurrentCount) || SUB || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_12304 - MDF_CurrentCount)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_12342) || Variables[1] (MDF_CurrentCount) || SUB || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_12342 - MDF_CurrentCount)",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_12304",
+                          "UnusedUnderThisBase_12342",
                           "MDF_CurrentCount"
                         ]
                       }
@@ -1811,11 +1811,11 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12304) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_12304",
+                        "operator": "Variables[0] (UnusedUnderThisBase_12342) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_12342",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_12304"
+                          "UnusedUnderThisBase_12342"
                         ]
                       },
                       "assignState": "True",
@@ -1842,11 +1842,11 @@ const compositeAbilityObject = {
                             "value1": "MDF_CurrentCount",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_12304) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_12304",
+                              "operator": "Variables[0] (UnusedUnderThisBase_12342) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_12342",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_12304"
+                                "UnusedUnderThisBase_12342"
                               ]
                             }
                           },

@@ -718,7 +718,6 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value1": null,
                 "compareType": "=",
                 "value2": 2,
                 "valueType": "LifeTime"

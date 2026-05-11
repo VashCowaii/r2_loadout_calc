@@ -521,7 +521,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "value1": null,
                     "compareType": ">",
                     "value2": 1,
                     "valueType": "LifeTime"
@@ -616,7 +615,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "value1": null,
                     "compareType": ">",
                     "value2": 1,
                     "valueType": "LifeTime"
