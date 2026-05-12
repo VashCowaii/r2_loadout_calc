@@ -3020,7 +3020,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value1": null,
                       "compareType": ">=",
                       "value2": 2,
                       "valueType": "Layer"

@@ -629,7 +629,6 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value1": null,
                         "compareType": "<",
                         "value2": {
                           "operator": "Variables[0] (MDF_MaxLayer) || RETURN",

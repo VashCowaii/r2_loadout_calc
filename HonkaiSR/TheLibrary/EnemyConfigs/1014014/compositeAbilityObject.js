@@ -3548,7 +3548,6 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value1": null,
                     "compareType": "=",
                     "value2": 1,
                     "valueType": "LifeTime"
