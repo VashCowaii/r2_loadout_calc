@@ -7262,7 +7262,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Seele_Trace01_KillDamageRatio",
+    "name": "<a class=\"gModGreen\" id=\"1550591182\">Advanced_Seele_Trace01_KillDamageRatio</a>",
     "realName": "Nightshade",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -7273,7 +7273,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Seele_BPAbility_SpeedUp",
+    "name": "<a class=\"gModGreen\" id=\"-1301190315\">Advanced_Seele_BPAbility_SpeedUp</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",
@@ -7284,7 +7284,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Seele_Passive_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"-472499117\">Advanced_Seele_Passive_DamageUp</a>",
     "realName": "Amplification",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -7296,7 +7296,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Seele_BPAbility_SpeedUpEidolon2",
+    "name": "<a class=\"gModGreen\" id=\"1818761365\">Advanced_Seele_BPAbility_SpeedUpEidolon2</a>",
     "realName": "SPD Boost",
     "aim": "Buff",
     "desc": "Each stack increases SPD by #1[i]%, up to 2 stacks.",
@@ -7307,7 +7307,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Advanced_Seele_Eidolon6_Flag",
+    "name": "<a class=\"gModGreen\" id=\"1484506463\">Advanced_Seele_Eidolon6_Flag</a>",
     "realName": "Butterfly Flurry",
     "aim": "Debuff",
     "desc": "After being attacked, additionally receives 1 instance of True DMG from Seele. Triggers Seele's Talent effect when defeated by any unit.",
@@ -7315,7 +7315,7 @@ let modifiersCharacter = [
     "perma": true
   },
   {
-    "name": "Advanced_Seele_Ability02InsertCD_ShowBonus",
+    "name": "<a class=\"gModGreen\" id=\"1788349187\">Advanced_Seele_Ability02InsertCD_ShowBonus</a>",
     "realName": "Sheathed Blade",
     "aim": "Other",
     "desc": "The auto-use effect of Skill \"Sheathed Blade\" cannot be triggered yet.",
@@ -7323,7 +7323,7 @@ let modifiersCharacter = [
     "perma": false
   },
   {
-    "name": "Advanced_Seele_Ability02InsertReady_ShowBonus",
+    "name": "<a class=\"gModGreen\" id=\"-1622519523\">Advanced_Seele_Ability02InsertReady_ShowBonus</a>",
     "realName": "Sheathed Blade",
     "aim": "Other",
     "desc": "Can trigger the auto-use effect of the Skill \"Sheathed Blade.\"",
@@ -7553,7 +7553,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "GlobalAbility_SilverWolf999_ImmuneCTRL",
+    "name": "<a class=\"gModGreen\" id=\"221078581\">GlobalAbility_SilverWolf999_ImmuneCTRL</a>",
     "realName": "Firewall",
     "aim": "Buff",
     "desc": "Immune to Crowd Control debuffs inflicted by enemy targets.",
