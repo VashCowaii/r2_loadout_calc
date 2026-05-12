@@ -903,6 +903,64 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.ability,"Ability")}
         </div>`;
     },
+    "SW999 Score Data"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "value",
+            "value2",
+            "rating",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"SW999 Score Data");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">SW999 Score Data:</div>&nbsp;
+            
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.rating,"Rating")}
+            ${getStandardNameDisplay(initialCounter,parseRef.value,"Value1")}
+            ${getStandardNameDisplay(initialCounter,parseRef.value2,"Value2")}
+            
+        </div>`;
+    },
+    "SW999 Test Data"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "value",
+            "value2",
+            "value3",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"SW999 Test Data");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">SW999 Test Data:</div>&nbsp;
+            
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.value,"Value1")}
+            ${getStandardNameDisplay(initialCounter,parseRef.value2,"Value2")}
+            ${getStandardNameDisplay(initialCounter,parseRef.value3,"Value3")}
+        </div>`;
+    },
+    "SW999 Test Data 2"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "value",
+            "value2",
+            "value3",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"SW999 Test Data 2");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">SW999 Test Data 2:</div>&nbsp;
+            
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.value,"Value1")}
+            ${getStandardNameDisplay(initialCounter,parseRef.value2,"Value2")}
+            ${getStandardNameDisplay(initialCounter,parseRef.value3,"Toggle")}
+        </div>`;
+    },
     "Sparxie Test Data"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -1193,6 +1251,7 @@ const megaParsingFuckeryPain = {
         const knownKeySet = new Set ([
             "name",
             "variableName",
+            "scope",
             // "target",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Skill Points");
@@ -1200,6 +1259,9 @@ const megaParsingFuckeryPain = {
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Define with Skill Points:</div>&nbsp;
             ${parseRef.variableName}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.scope,"Context")}
         </div>`;
     },
     "Define Custom Variable with Attack Targets"(parseRef,initialCounter) {
@@ -1215,17 +1277,39 @@ const megaParsingFuckeryPain = {
             ${parseRef.variableName} = ATTACK TARGETS from attack by ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
         </div>`;
     },
+    "Add Ability Tag"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "tag",
+            "skillName",
+            "target",
+            "isRemove",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Add Ability Tag");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.isRemove ? "REMOVE" : "ADD"} Ability Tag:</div>&nbsp;
+            ${parseRef.tag}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.skillName,"To Ability")}
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+        </div>`;
+    },
     "Define Custom Variable with Skill Point Max"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
             "variableName",
-            // "target",
+            "context",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Skill Point Max");
         // initialCounter++;
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Define with Skill Point Maximum:</div>&nbsp;
             ${parseRef.variableName}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.context,"Context")}
         </div>`;
     },
     "Define Custom Variable with Healing"(parseRef,initialCounter) {
@@ -4774,7 +4858,7 @@ const megaParsingFuckeryPain = {
         if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
 
         if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
-
+        
 
 
         const conditionObject2 = parseRef.conditionActive;
@@ -9833,6 +9917,7 @@ const megaParsingFuckeryPain = {
             "forcedPunchline",
             "priorityTagPending",
             "sourceOverride",
+            "condition",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Inject Extra-Turn");
 
@@ -9860,6 +9945,16 @@ const megaParsingFuckeryPain = {
 
         if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
 
+
+        const conditionObject2 = parseRef.condition;
+        const conditionName2 = conditionObject2?.name;
+
+        let returnString2 = "" + (typeof conditionObject2 === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject2}</div>` : "");
+        const functionExists2 = megaParsingFuckery[conditionName2];
+        if (functionExists2) {returnString2 += `<div class="rotationsConditionsBodyBox">` + functionExists2(conditionObject2,initialCounter) + `</div>`;}
+
+        if (conditionObject2 && !returnString2) {throw new Error(`Missing condition display-only definition in IF: ${conditionName2}`)}
+
         return `
         <details class="rotationsPermaConditionsExpand" open="">
             <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
@@ -9867,7 +9962,15 @@ const megaParsingFuckeryPain = {
                 ${parseRef.actionTag ? `${parseRef.actionTag} tag` : ""}
             </summary>
 
-            ${returnString}
+            ${returnString != "" ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Pre-Check</div>
+            </div>
+            ${returnString}` : ""}
+
+            ${returnString2 != "" ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Active-Check</div>
+            </div>
+            ${returnString2}` : ""}
             <div class="modifierDetailsBox">
                 ${parseRef.skillType ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Use Ability:</div>&nbsp;
@@ -10355,6 +10458,14 @@ const megaParsingFuckeryPain = {
             ["onBeingKilled","On Being Killed"],
             ["onShiftFromFakeModel","On Fake Model Shift"],
             ["onBuffUpdateComplete","On Buff Update Full"],
+            ["onAbilityReset","On Ability Reset"],
+            ["onMPChange","On MP Change"],
+            // ["onTick","On Tick"],
+            // ["onTick","On Tick"],
+            // ["onTick","On Tick"],
+            // ["onTick","On Tick"],
+            // ["onTick","On Tick"],
+            // ["onTick","On Tick"],
             // ["onTick","On Tick"],
             // ["onTick","On Tick"],
             // ["onTick","On Tick"],

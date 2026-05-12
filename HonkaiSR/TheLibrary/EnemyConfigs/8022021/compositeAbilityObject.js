@@ -822,11 +822,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-103304753\">Enemy_SW_Boss_01_IF_MinionsEnhancement</a>[<span class=\"descriptionNumberColor\">Growth Hormones</span>]",
                           "valuePerStack": {
                             "MDF_AttackAddedRatio": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_12685) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_12685",
+                              "operator": "Variables[0] (UnusedUnderThisBase_12723) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_12723",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_12685"
+                                "UnusedUnderThisBase_12723"
                               ]
                             }
                           }
@@ -1913,7 +1913,6 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value1": null,
                         "compareType": "=",
                         "value2": 0
                       },
@@ -2711,7 +2710,6 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value1": null,
                     "compareType": "<=",
                     "value2": 1,
                     "valueType": "LifeTime"

@@ -2388,7 +2388,6 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value1": null,
                 "compareType": ">",
                 "value2": {
                   "operator": "Variables[0] (MDF_Count) || Constants[0] (1) || ADD || RETURN",
@@ -2478,7 +2477,6 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value1": null,
                     "compareType": "=",
                     "value2": {
                       "operator": "Variables[0] (MDF_Count) || Constants[0] (1) || ADD || RETURN",
@@ -2890,7 +2888,6 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value1": null,
                     "compareType": "<",
                     "value2": {
                       "operator": "Variables[0] (MDF_NewMaxLayer) || RETURN",

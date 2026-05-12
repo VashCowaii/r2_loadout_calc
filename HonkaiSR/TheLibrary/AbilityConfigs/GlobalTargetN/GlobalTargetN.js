@@ -80,6 +80,39 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "SW999: Shooter 0",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Name",
+          "target": "{{SW999: Shooter 1}} + {{SW999: Shooter 2}}"
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "SW999: Shooter 2",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Add Target by Pseudo-Character Partner",
+          "identifier": "SilverWolf999_Shooter_02"
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "SW999: Shooter 1",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Add Target by Pseudo-Character Partner",
+          "identifier": "SilverWolf999_Shooter_01"
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "Evanescia: Battle Event",
       "isTargetOperator": false,
       "execute": [

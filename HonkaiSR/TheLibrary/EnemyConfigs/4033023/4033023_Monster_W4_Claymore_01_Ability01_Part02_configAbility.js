@@ -13,35 +13,35 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
       "valuePerStack": {
         "MDF_RallyTransferRatio": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12234) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12234",
+          "operator": "Variables[0] (UnusedUnderThisBase_12272) || RETURN",
+          "displayLines": "UnusedUnderThisBase_12272",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12234"
+            "UnusedUnderThisBase_12272"
           ]
         },
         "MDF_Rally_HealPercentage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12232) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12232",
+          "operator": "Variables[0] (UnusedUnderThisBase_12270) || RETURN",
+          "displayLines": "UnusedUnderThisBase_12270",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12232"
+            "UnusedUnderThisBase_12270"
           ]
         },
         "MDF_Rally_HealUpRatio": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12235) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12235",
+          "operator": "Variables[0] (UnusedUnderThisBase_12273) || RETURN",
+          "displayLines": "UnusedUnderThisBase_12273",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12235"
+            "UnusedUnderThisBase_12273"
           ]
         },
         "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12236) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12236",
+          "operator": "Variables[0] (UnusedUnderThisBase_12274) || RETURN",
+          "displayLines": "UnusedUnderThisBase_12274",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12236"
+            "UnusedUnderThisBase_12274"
           ]
         }
       }
@@ -56,11 +56,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13212) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13212",
+          "operator": "Variables[0] (UnusedUnderThisBase_13250) || RETURN",
+          "displayLines": "UnusedUnderThisBase_13250",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_13212"
+            "UnusedUnderThisBase_13250"
           ]
         },
         "Toughness": null,

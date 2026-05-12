@@ -1466,11 +1466,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13212) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13212",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13250) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13250",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13212"
+                    "UnusedUnderThisBase_13250"
                   ]
                 },
                 "notAHit": true,

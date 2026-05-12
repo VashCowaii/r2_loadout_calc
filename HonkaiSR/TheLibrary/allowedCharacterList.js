@@ -40,8 +40,8 @@ let allowedCharacterList = [
     "trimName": "Bronya"
   },
   {
-    "fullName": "Seele_v0",
-    "trimName": "Seelev0"
+    "fullName": "Seele",
+    "trimName": "Seele"
   },
   {
     "fullName": "Serval",
@@ -378,6 +378,10 @@ let allowedCharacterList = [
   {
     "fullName": "Silver Wolf_v0",
     "trimName": "SilverWolfv0"
+  },
+  {
+    "fullName": "Seele_v0",
+    "trimName": "Seelev0"
   },
   {
     "fullName": "Blade_v0",

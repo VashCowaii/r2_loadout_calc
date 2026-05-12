@@ -1141,11 +1141,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_13038) || RETURN",
-                "displayLines": "UnusedUnderThisBase_13038",
+                "operator": "Variables[0] (UnusedUnderThisBase_13076) || RETURN",
+                "displayLines": "UnusedUnderThisBase_13076",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_13038"
+                  "UnusedUnderThisBase_13076"
                 ]
               },
               "valuePerStack": {

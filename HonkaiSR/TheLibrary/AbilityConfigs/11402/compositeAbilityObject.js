@@ -1491,12 +1491,12 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "SpeedAddTotal",
                   "value": {
-                    "operator": "Variables[0] (_Layer) || Variables[1] (UnusedUnderThisBase_12182) || MUL || RETURN",
-                    "displayLines": "(_Layer * UnusedUnderThisBase_12182)",
+                    "operator": "Variables[0] (_Layer) || Variables[1] (UnusedUnderThisBase_12220) || MUL || RETURN",
+                    "displayLines": "(_Layer * UnusedUnderThisBase_12220)",
                     "constants": [],
                     "variables": [
                       "_Layer",
-                      "UnusedUnderThisBase_12182"
+                      "UnusedUnderThisBase_12220"
                     ]
                   }
                 },
@@ -1611,14 +1611,14 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "_AttackConvert",
                   "value": {
-                    "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (UnusedUnderThisBase_12982) || MUL || Variables[2] (_ServantCurrentSpeed) || Variables[3] (UnusedUnderThisBase_12983) || MUL || ADD || RETURN",
-                    "displayLines": "((_CurrentSpeed * UnusedUnderThisBase_12982) + (_ServantCurrentSpeed * UnusedUnderThisBase_12983))",
+                    "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (UnusedUnderThisBase_13020) || MUL || Variables[2] (_ServantCurrentSpeed) || Variables[3] (UnusedUnderThisBase_13021) || MUL || ADD || RETURN",
+                    "displayLines": "((_CurrentSpeed * UnusedUnderThisBase_13020) + (_ServantCurrentSpeed * UnusedUnderThisBase_13021))",
                     "constants": [],
                     "variables": [
                       "_CurrentSpeed",
-                      "UnusedUnderThisBase_12982",
+                      "UnusedUnderThisBase_13020",
                       "_ServantCurrentSpeed",
-                      "UnusedUnderThisBase_12983"
+                      "UnusedUnderThisBase_13021"
                     ]
                   }
                 },
@@ -1969,11 +1969,11 @@ const compositeAbilityObject = {
                   "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                   "variableName": "MDF_PropertyValue2",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12972) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12972",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13010) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13010",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12972"
+                      "UnusedUnderThisBase_13010"
                     ]
                   }
                 }
@@ -1997,11 +1997,11 @@ const compositeAbilityObject = {
                       "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                       "variableName": "MDF_PropertyValue2",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12986) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_12986",
+                        "operator": "Variables[0] (UnusedUnderThisBase_13024) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_13024",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_12986"
+                          "UnusedUnderThisBase_13024"
                         ]
                       }
                     }
@@ -2025,11 +2025,11 @@ const compositeAbilityObject = {
                           "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                           "variableName": "MDF_PropertyValue2",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_12970) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_12970",
+                            "operator": "Variables[0] (UnusedUnderThisBase_13008) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_13008",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_12970"
+                              "UnusedUnderThisBase_13008"
                             ]
                           }
                         }

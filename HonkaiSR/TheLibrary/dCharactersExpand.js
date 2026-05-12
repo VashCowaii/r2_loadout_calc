@@ -6982,9 +6982,9 @@ let characters = {
     ],
     "isBuffed": false
   },
-  "Seele_v0": {
+  "Seele": {
     "internalID": 1102,
-    "name": "Seele_v0",
+    "name": "Seele",
     "path": "The Hunt",
     "element": "Quantum",
     "rarity": 5,
@@ -7000,71 +7000,72 @@ let characters = {
     },
     "eidolons": [
       {
-        "id": "110201",
+        "id": "1110201",
         "name": "Extirpating Slash",
         "rank": 1,
-        "desc": "When dealing DMG to an enemy whose HP percentage is 80% or lower, increases CRIT Rate by 15%.",
-        "icon": "icon/skill/1102_rank1.png",
+        "desc": "When dealing DMG to an enemy whose HP percentage is 80% or lower, increases CRIT Rate by 15%, and ignores 20% of target's DEF.",
+        "icon": "icon/skill/1110_rank1.png",
         "paramsEido": [
           0.8,
-          0.15
+          0.15,
+          0.2
         ],
-        "eidoAbility": "Seelev0_Seele_Eidolon1"
+        "eidoAbility": "Seele_Advanced_Seele_Eidolon1"
       },
       {
-        "id": "110202",
+        "id": "1110202",
         "name": "Dancing Butterfly",
         "rank": 2,
         "desc": "The SPD Boost effect of Seele's Skill can stack up to 2 time(s).",
-        "icon": "icon/skill/1102_rank2.png",
+        "icon": "icon/skill/1110_rank2.png",
         "paramsEido": [
           2
         ]
       },
       {
-        "id": "110203",
+        "id": "1110203",
         "name": "Dazzling Tumult",
         "rank": 3,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1102_skill.png"
+        "icon": "icon/skill/1110_skill.png"
       },
       {
-        "id": "110204",
+        "id": "1110204",
         "name": "Flitting Phantasm",
         "rank": 4,
         "desc": "Seele regenerates 15 Energy when she defeats an enemy.",
-        "icon": "icon/skill/1102_rank4.png",
+        "icon": "icon/skill/1110_rank4.png",
         "paramsEido": [
           15
         ],
-        "eidoAbility": "Seelev0_Seele_Eidolon4"
+        "eidoAbility": "Seele_Advanced_Seele_Eidolon4"
       },
       {
-        "id": "110205",
+        "id": "1110205",
         "name": "Piercing Shards",
         "rank": 5,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1102_ultimate.png"
+        "icon": "icon/skill/1110_ultimate.png"
       },
       {
-        "id": "110206",
+        "id": "1110206",
         "name": "Shattering Shambles",
         "rank": 6,
-        "desc": "After attacking with Ultimate, Seele inflicts \"Butterfly Flurry\" on the attacked enemy target for 1 turn(s). Enemies in \"Butterfly Flurry\" will additionally take 1 instance of Quantum Additional DMG equal to 15% of Seele's Ultimate DMG every time they are attacked. If the target is defeated by the \"Butterfly Flurry\" state's Additional DMG triggered by other allies' attacks, Seele's Talent will not be triggered.\nWhen Seele is knocked down, the \"Butterfly Flurry\" inflicted on the enemies will be removed.",
-        "icon": "icon/skill/1102_rank6.png",
+        "desc": "After attacking with Ultimate, Seele inflicts \"Butterfly Flurry\" on the target for 3 turn(s). Enemy targets in \"Butterfly Flurry\" will additionally take 1 instance of True DMG equal to 30% of Seele's Ultimate DMG after receiving an attack. When the target under the \"Butterfly Flurry\" state is defeated by any unit, Seele's Talent will also be triggered.\nWhen Seele is knocked down, the \"Butterfly Flurry\" inflicted on the enemies will be removed.",
+        "icon": "icon/skill/1110_rank6.png",
         "paramsEido": [
-          0.15,
-          1
+          0.3,
+          3
         ],
         "extraEffects": {
-          "Additional DMG": {
-            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          "True DMG": {
+            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
           },
           "Downed State": {
             "desc": "An ally will be incapacitated once their HP is reduced to 0."
           }
         },
-        "eidoAbility": "Seelev0_Seele_Eidolon6"
+        "eidoAbility": "Seele_Advanced_Seele_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -7081,7 +7082,7 @@ let characters = {
       "Basic ATK": {
         "Thwack": {
           "variant1": {
-            "skillID": 110201,
+            "skillID": 1110201,
             "trigger": "Skill01",
             "name": "Thwack",
             "type": "Single Target",
@@ -7130,9 +7131,9 @@ let characters = {
             "skillEffect": "SingleAttack",
             "maxLevel": 10,
             "configAbilityList": [
-              "Avatar_Seele_00_Skill01_Camera",
-              "Avatar_Seele_00_Skill01_Phase01",
-              "Avatar_Seele_00_Skill01_Phase02"
+              "Avatar_Advanced_Seele_00_Skill01_Camera",
+              "Avatar_Advanced_Seele_00_Skill01_Phase01",
+              "Avatar_Advanced_Seele_00_Skill01_Phase02"
             ],
             "toughnessList": [
               30,
@@ -7146,12 +7147,12 @@ let characters = {
       "Skill": {
         "Sheathed Blade": {
           "variant1": {
-            "skillID": 110202,
+            "skillID": 1110202,
             "trigger": "Skill02",
             "name": "Sheathed Blade",
             "type": "Single Target",
             "slot": "Skill",
-            "desc": "Increases Seele's SPD by #2[i]% for #3[i] turn(s) and deals Quantum DMG equal to #1[i]% of Seele's ATK to one designated enemy.",
+            "desc": "Increases Seele's SPD by #2[i]% for #3[i] turn(s) and deals Quantum DMG equal to #1[i]% of Seele's ATK to one designated enemy.\\nAfter an ally target attacks, if the attack target's current HP percentage is #4[i]% or below, Seele will automatically use her Skill at that target 1 time. This Skill does not consume Skill Points or regenerate Energy. This effect can only be triggered 1 time per turn and resets at the start of Seele's turn. If there are no valid targets to attack, she attacks the enemy target with the lowest HP percentage instead.",
             "energyCost": null,
             "energyRegen": 30,
             "energyRate": 0.5,
@@ -7160,79 +7161,94 @@ let characters = {
             "skillPointGain": 0,
             "params": {
               "1": [
-                1.1,
+                1.8,
                 0.25,
-                2
+                3,
+                0.5
               ],
               "2": [
-                1.21,
+                1.98,
                 0.25,
-                2
+                3,
+                0.5
               ],
               "3": [
-                1.32,
+                2.16,
                 0.25,
-                2
+                3,
+                0.5
               ],
               "4": [
-                1.43,
+                2.34,
                 0.25,
-                2
+                3,
+                0.5
               ],
               "5": [
-                1.54,
+                2.52,
                 0.25,
-                2
+                3,
+                0.5
               ],
               "6": [
-                1.65,
+                2.7,
                 0.25,
-                2
+                3,
+                0.5
               ],
               "7": [
-                1.7875,
+                2.925,
                 0.25,
-                2
+                3,
+                0.5
               ],
               "8": [
-                1.925,
+                3.15,
                 0.25,
-                2
+                3,
+                0.5
               ],
               "9": [
-                2.0625,
+                3.375,
                 0.25,
-                2
+                3,
+                0.5
               ],
               "10": [
-                2.2,
+                3.6,
                 0.25,
-                2
+                3,
+                0.5
               ],
               "11": [
-                2.31,
+                3.78,
                 0.25,
-                2
+                3,
+                0.5
               ],
               "12": [
-                2.42,
+                3.96,
                 0.25,
-                2
+                3,
+                0.5
               ],
               "13": [
-                2.53,
+                4.14,
                 0.25,
-                2
+                3,
+                0.5
               ],
               "14": [
-                2.64,
+                4.32,
                 0.25,
-                2
+                3,
+                0.5
               ],
               "15": [
-                2.75,
+                4.5,
                 0.25,
-                2
+                3,
+                0.5
               ]
             },
             "element": "Quantum",
@@ -7240,9 +7256,9 @@ let characters = {
             "skillEffect": "SingleAttack",
             "maxLevel": 15,
             "configAbilityList": [
-              "Avatar_Seele_00_Skill02_Camera",
-              "Avatar_Seele_00_Skill02_Phase01",
-              "Avatar_Seele_00_Skill02_Phase02"
+              "Avatar_Advanced_Seele_00_Skill02_Camera",
+              "Avatar_Advanced_Seele_00_Skill02_Phase01",
+              "Avatar_Advanced_Seele_00_Skill02_Phase02"
             ],
             "toughnessList": [
               60,
@@ -7256,7 +7272,7 @@ let characters = {
       "Ultimate": {
         "Butterfly Flurry": {
           "variant1": {
-            "skillID": 110203,
+            "skillID": 1110203,
             "trigger": "Skill03",
             "name": "Butterfly Flurry",
             "type": "Single Target",
@@ -7270,49 +7286,49 @@ let characters = {
             "skillPointGain": 0,
             "params": {
               "1": [
-                2.55
+                3.6
               ],
               "2": [
-                2.72
+                3.96
               ],
               "3": [
-                2.89
+                4.32
               ],
               "4": [
-                3.06
+                4.68
               ],
               "5": [
-                3.23
+                5.04
               ],
               "6": [
-                3.4
+                5.4
               ],
               "7": [
-                3.6125
+                5.85
               ],
               "8": [
-                3.825
+                6.3
               ],
               "9": [
-                4.0375
+                6.75
               ],
               "10": [
-                4.25
+                7.2
               ],
               "11": [
-                4.42
+                7.56
               ],
               "12": [
-                4.59
+                7.92
               ],
               "13": [
-                4.76
+                8.28
               ],
               "14": [
-                4.93
+                8.64
               ],
               "15": [
-                5.1
+                9
               ]
             },
             "element": "Quantum",
@@ -7320,10 +7336,10 @@ let characters = {
             "skillEffect": "SingleAttack",
             "maxLevel": 15,
             "configAbilityList": [
-              "Avatar_Seele_00_Skill03_Camera",
-              "Avatar_Seele_00_Skill03_EnterReady",
-              "Avatar_Seele_00_Skill03_Phase01",
-              "Avatar_Seele_00_Skill03_Phase02"
+              "Avatar_Advanced_Seele_00_Skill03_Camera",
+              "Avatar_Advanced_Seele_00_Skill03_EnterReady",
+              "Avatar_Advanced_Seele_00_Skill03_Phase01",
+              "Avatar_Advanced_Seele_00_Skill03_Phase02"
             ],
             "toughnessList": [
               90,
@@ -7337,12 +7353,12 @@ let characters = {
       "Talent": {
         "Resurgence": {
           "variant1": {
-            "skillID": 110204,
+            "skillID": 1110204,
             "trigger": "SkillP01",
             "name": "Resurgence",
             "type": "Enhance",
             "slot": "Talent",
-            "desc": "Enters the Amplification state upon defeating an enemy with Basic ATK, Skill, or Ultimate, and receives an extra turn. While in the Amplification state, increases the DMG of Seele's attacks by #1[i]% for #2[i] turn(s).\\nEnemies defeated in the extra turn provided by \"Resurgence\" will not trigger another \"Resurgence.\"",
+            "desc": "Enters the Amplification state upon defeating an enemy with Basic ATK, Skill, or Ultimate, and receives an extra turn. While in the Amplification state, increases the DMG dealt by Seele increases by #1[i]% for #2[i] turn(s).\\nEnemies defeated in the extra turn provided by \"Resurgence\" will not trigger another \"Resurgence.\"",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -7352,71 +7368,71 @@ let characters = {
             "params": {
               "1": [
                 0.4,
-                1
+                3
               ],
               "2": [
                 0.44,
-                1
+                3
               ],
               "3": [
                 0.48,
-                1
+                3
               ],
               "4": [
                 0.52,
-                1
+                3
               ],
               "5": [
                 0.56,
-                1
+                3
               ],
               "6": [
                 0.6,
-                1
+                3
               ],
               "7": [
                 0.65,
-                1
+                3
               ],
               "8": [
                 0.7,
-                1
+                3
               ],
               "9": [
                 0.75,
-                1
+                3
               ],
               "10": [
                 0.8,
-                1
+                3
               ],
               "11": [
                 0.84,
-                1
+                3
               ],
               "12": [
                 0.88,
-                1
+                3
               ],
               "13": [
                 0.92,
-                1
+                3
               ],
               "14": [
                 0.96,
-                1
+                3
               ],
               "15": [
                 1,
-                1
+                3
               ]
             },
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
-              "Avatar_Seele_00_Bonus_Camera",
-              "Avatar_Seele_00_PassiveSkill_1",
-              "Avatar_Seele_00_Bonus"
+              "Avatar_Advanced_Seele_00_Bonus_Camera",
+              "Avatar_Advanced_Seele_00_PassiveSkill_1",
+              "Avatar_Advanced_Seele_00_Bonus"
             ],
             "toughnessList": [
               0,
@@ -7435,12 +7451,12 @@ let characters = {
       "Technique": {
         "Phantom Illusion": {
           "variant1": {
-            "skillID": 110207,
+            "skillID": 1110207,
             "trigger": "SkillMaze",
             "name": "Phantom Illusion",
             "type": "Enhance",
             "slot": "Technique",
-            "desc": "After using her Technique, Seele gains Stealth for #1[i] second(s). While Stealth is active, Seele cannot be detected by enemies. And when entering battle by attacking enemies, Seele will immediately enter the Amplification state.",
+            "desc": "After using her Technique, Seele gains Stealth for #1[i] second(s). While Stealth is active, Seele cannot be detected by enemies. And when entering combat by attacking enemies, Seele will immediately enter the Amplification state and deals Quantum DMG equal to Seele's Skill DMG multiplier to random enemy target 1 time. This DMG is a guaranteed CRIT Hit.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -7456,7 +7472,7 @@ let characters = {
             "skillEffect": "Enhance",
             "maxLevel": 1,
             "configAbilityList": [
-              "Avatar_Seele_00_SkillMazeInLevel"
+              "Avatar_Advanced_Seele_00_SkillMazeInLevel"
             ],
             "toughnessList": [
               0,
@@ -7507,19 +7523,20 @@ let characters = {
       "Point06": {
         "name": "Nightshade",
         "icon": "icon/skill/1102_skilltree1.png",
-        "desc": "When current HP percentage is #1[i]% or lower, reduces the chance of being attacked by enemies.",
+        "desc": "When defeating an enemy target, increases the wearer's DMG dealt by #1[i]%. This effect can stack up to #2[i] time(s) and lasts for #3[i] turn(s).",
         "params": [
           0.5,
-          0.5
+          3,
+          3
         ],
-        "traceAbility": "Seelev0_Seele_Trace01"
+        "traceAbility": "Seele_Advanced_Seele_Trace01"
       },
       "Point07": {
         "name": "Lacerate",
         "icon": "icon/skill/1102_skilltree2.png",
         "desc": "While Seele is in the Amplification state, her Quantum RES PEN increases by #1[i]%.",
         "params": [
-          0.2
+          0.25
         ],
         "extraEffects": {
           "RES PEN": {
@@ -73767,6 +73784,652 @@ let characters = {
       -33,
       33,
       0.5
+    ],
+    "isBuffed": true
+  },
+  "Seele_v0": {
+    "internalID": 1102,
+    "name": "Seele_v0",
+    "path": "The Hunt",
+    "element": "Quantum",
+    "rarity": 5,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 640.332,
+      "DEFBase": 363.82500000000005,
+      "HPBase": 931.392,
+      "SPDBase": 115,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "110201",
+        "name": "Extirpating Slash",
+        "rank": 1,
+        "desc": "When dealing DMG to an enemy whose HP percentage is 80% or lower, increases CRIT Rate by 15%.",
+        "icon": "icon/skill/1102_rank1.png",
+        "paramsEido": [
+          0.8,
+          0.15
+        ],
+        "eidoAbility": "Seelev0_Seele_Eidolon1"
+      },
+      {
+        "id": "110202",
+        "name": "Dancing Butterfly",
+        "rank": 2,
+        "desc": "The SPD Boost effect of Seele's Skill can stack up to 2 time(s).",
+        "icon": "icon/skill/1102_rank2.png",
+        "paramsEido": [
+          2
+        ]
+      },
+      {
+        "id": "110203",
+        "name": "Dazzling Tumult",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1102_skill.png"
+      },
+      {
+        "id": "110204",
+        "name": "Flitting Phantasm",
+        "rank": 4,
+        "desc": "Seele regenerates 15 Energy when she defeats an enemy.",
+        "icon": "icon/skill/1102_rank4.png",
+        "paramsEido": [
+          15
+        ],
+        "eidoAbility": "Seelev0_Seele_Eidolon4"
+      },
+      {
+        "id": "110205",
+        "name": "Piercing Shards",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1102_ultimate.png"
+      },
+      {
+        "id": "110206",
+        "name": "Shattering Shambles",
+        "rank": 6,
+        "desc": "After attacking with Ultimate, Seele inflicts \"Butterfly Flurry\" on the attacked enemy target for 1 turn(s). Enemies in \"Butterfly Flurry\" will additionally take 1 instance of Quantum Additional DMG equal to 15% of Seele's Ultimate DMG every time they are attacked. If the target is defeated by the \"Butterfly Flurry\" state's Additional DMG triggered by other allies' attacks, Seele's Talent will not be triggered.\nWhen Seele is knocked down, the \"Butterfly Flurry\" inflicted on the enemies will be removed.",
+        "icon": "icon/skill/1102_rank6.png",
+        "paramsEido": [
+          0.15,
+          1
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          },
+          "Downed State": {
+            "desc": "An ally will be incapacitated once their HP is reduced to 0."
+          }
+        },
+        "eidoAbility": "Seelev0_Seele_Eidolon6"
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Thwack": {
+          "variant1": {
+            "skillID": 110201,
+            "trigger": "Skill01",
+            "name": "Thwack",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Seele's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Seele_00_Skill01_Camera",
+              "Avatar_Seele_00_Skill01_Phase01",
+              "Avatar_Seele_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Sheathed Blade": {
+          "variant1": {
+            "skillID": 110202,
+            "trigger": "Skill02",
+            "name": "Sheathed Blade",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Increases Seele's SPD by #2[i]% for #3[i] turn(s) and deals Quantum DMG equal to #1[i]% of Seele's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.1,
+                0.25,
+                2
+              ],
+              "2": [
+                1.21,
+                0.25,
+                2
+              ],
+              "3": [
+                1.32,
+                0.25,
+                2
+              ],
+              "4": [
+                1.43,
+                0.25,
+                2
+              ],
+              "5": [
+                1.54,
+                0.25,
+                2
+              ],
+              "6": [
+                1.65,
+                0.25,
+                2
+              ],
+              "7": [
+                1.7875,
+                0.25,
+                2
+              ],
+              "8": [
+                1.925,
+                0.25,
+                2
+              ],
+              "9": [
+                2.0625,
+                0.25,
+                2
+              ],
+              "10": [
+                2.2,
+                0.25,
+                2
+              ],
+              "11": [
+                2.31,
+                0.25,
+                2
+              ],
+              "12": [
+                2.42,
+                0.25,
+                2
+              ],
+              "13": [
+                2.53,
+                0.25,
+                2
+              ],
+              "14": [
+                2.64,
+                0.25,
+                2
+              ],
+              "15": [
+                2.75,
+                0.25,
+                2
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Seele_00_Skill02_Camera",
+              "Avatar_Seele_00_Skill02_Phase01",
+              "Avatar_Seele_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Butterfly Flurry": {
+          "variant1": {
+            "skillID": 110203,
+            "trigger": "Skill03",
+            "name": "Butterfly Flurry",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Seele enters the Amplification state and deals Quantum DMG equal to #1[i]% of her ATK to one designated enemy.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2.55
+              ],
+              "2": [
+                2.72
+              ],
+              "3": [
+                2.89
+              ],
+              "4": [
+                3.06
+              ],
+              "5": [
+                3.23
+              ],
+              "6": [
+                3.4
+              ],
+              "7": [
+                3.6125
+              ],
+              "8": [
+                3.825
+              ],
+              "9": [
+                4.0375
+              ],
+              "10": [
+                4.25
+              ],
+              "11": [
+                4.42
+              ],
+              "12": [
+                4.59
+              ],
+              "13": [
+                4.76
+              ],
+              "14": [
+                4.93
+              ],
+              "15": [
+                5.1
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Seele_00_Skill03_Camera",
+              "Avatar_Seele_00_Skill03_EnterReady",
+              "Avatar_Seele_00_Skill03_Phase01",
+              "Avatar_Seele_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              90,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Resurgence": {
+          "variant1": {
+            "skillID": 110204,
+            "trigger": "SkillP01",
+            "name": "Resurgence",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Enters the Amplification state upon defeating an enemy with Basic ATK, Skill, or Ultimate, and receives an extra turn. While in the Amplification state, increases the DMG of Seele's attacks by #1[i]% for #2[i] turn(s).\\nEnemies defeated in the extra turn provided by \"Resurgence\" will not trigger another \"Resurgence.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                1
+              ],
+              "2": [
+                0.44,
+                1
+              ],
+              "3": [
+                0.48,
+                1
+              ],
+              "4": [
+                0.52,
+                1
+              ],
+              "5": [
+                0.56,
+                1
+              ],
+              "6": [
+                0.6,
+                1
+              ],
+              "7": [
+                0.65,
+                1
+              ],
+              "8": [
+                0.7,
+                1
+              ],
+              "9": [
+                0.75,
+                1
+              ],
+              "10": [
+                0.8,
+                1
+              ],
+              "11": [
+                0.84,
+                1
+              ],
+              "12": [
+                0.88,
+                1
+              ],
+              "13": [
+                0.92,
+                1
+              ],
+              "14": [
+                0.96,
+                1
+              ],
+              "15": [
+                1,
+                1
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Seele_00_Bonus_Camera",
+              "Avatar_Seele_00_PassiveSkill_1",
+              "Avatar_Seele_00_Bonus"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Phantom Illusion": {
+          "variant1": {
+            "skillID": 110207,
+            "trigger": "SkillMaze",
+            "name": "Phantom Illusion",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using her Technique, Seele gains Stealth for #1[i] second(s). While Stealth is active, Seele cannot be detected by enemies. And when entering battle by attacking enemies, Seele will immediately enter the Amplification state.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Seele_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1102_basic_atk.png",
+        "skillRef": {
+          "skillName": "Thwack",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1102_skill.png",
+        "skillRef": {
+          "skillName": "Sheathed Blade",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1102_ultimate.png",
+        "skillRef": {
+          "skillName": "Butterfly Flurry",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1102_talent.png",
+        "skillRef": {
+          "skillName": "Resurgence",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1102_technique.png",
+        "skillRef": {
+          "skillName": "Phantom Illusion",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Nightshade",
+        "icon": "icon/skill/1102_skilltree1.png",
+        "desc": "When current HP percentage is #1[i]% or lower, reduces the chance of being attacked by enemies.",
+        "params": [
+          0.5,
+          0.5
+        ],
+        "traceAbility": "Seelev0_Seele_Trace01"
+      },
+      "Point07": {
+        "name": "Lacerate",
+        "icon": "icon/skill/1102_skilltree2.png",
+        "desc": "While Seele is in the Amplification state, her Quantum RES PEN increases by #1[i]%.",
+        "params": [
+          0.2
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Rippling Waves",
+        "icon": "icon/skill/1102_skilltree3.png",
+        "desc": "After using a Basic ATK, advances Seele's next action  by #1[i]%.",
+        "params": [
+          0.2
+        ],
+        "extraEffects": {
+          "Action Advance": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1102.png",
+    "preview": "image/character_preview/1102.png",
+    "portrait": "image/character_portrait/1102.png",
+    "bannerOffsets": [
+      145.5,
+      198.4,
+      0.81,
+      145.5,
+      198.4,
+      0.81,
+      145.5,
+      198.4,
+      0.81
     ],
     "isBuffed": true
   },

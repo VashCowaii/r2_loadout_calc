@@ -1363,7 +1363,6 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value1": null,
                         "compareType": ">=",
                         "value2": {
                           "operator": "Variables[0] (ThirdLayer) || RETURN",
@@ -1384,7 +1383,6 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value1": null,
                             "compareType": ">=",
                             "value2": {
                               "operator": "Variables[0] (SecondLayer) || RETURN",
@@ -1409,7 +1407,6 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value1": null,
                         "compareType": ">=",
                         "value2": {
                           "operator": "Variables[0] (ThirdLayer) || RETURN",
@@ -1430,7 +1427,6 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value1": null,
                             "compareType": ">=",
                             "value2": {
                               "operator": "Variables[0] (SecondLayer) || RETURN",

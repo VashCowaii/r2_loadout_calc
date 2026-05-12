@@ -6364,11 +6364,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1077360781\">XP_Elite_Fire_Ability07_AttackUp_Modifier</a>[<span class=\"descriptionNumberColor\">Molten</span>]",
                   "valuePerStack": {
                     "Modifier_AttackAddedRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12685) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12685",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12723) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12723",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12685"
+                        "UnusedUnderThisBase_12723"
                       ]
                     }
                   }

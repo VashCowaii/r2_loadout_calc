@@ -10553,11 +10553,11 @@ const compositeAbilityObject = {
                   ]
                 },
                 "MDF_EnergyRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13020) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13020",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13058) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13058",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13020"
+                    "UnusedUnderThisBase_13058"
                   ]
                 },
                 "MDF_TargetCount": {
@@ -11843,7 +11843,6 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value1": null,
                     "compareType": ">=",
                     "value2": {
                       "operator": "Variables[0] (3) || RETURN",

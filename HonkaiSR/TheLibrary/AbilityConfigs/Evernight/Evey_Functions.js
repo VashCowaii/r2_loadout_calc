@@ -140,11 +140,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1710373270\">Evernight_PointB1_Crit</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13136) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13136",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13174) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13174",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13136"
+                            "UnusedUnderThisBase_13174"
                           ]
                         }
                       }
@@ -171,11 +171,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13144) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13144",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13182) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13182",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13144"
+                            "UnusedUnderThisBase_13182"
                           ]
                         }
                       }

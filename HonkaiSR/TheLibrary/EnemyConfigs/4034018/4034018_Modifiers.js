@@ -3552,7 +3552,6 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value1": null,
                 "compareType": "=",
                 "value2": {
                   "operator": "Variables[0] (MDF_Layer) || RETURN",
@@ -3573,7 +3572,6 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value1": null,
                     "compareType": "=",
                     "value2": 0,
                     "valueType": "Layer"
@@ -3781,7 +3779,6 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value1": null,
                 "compareType": "=",
                 "value2": 0,
                 "valueType": "Layer"

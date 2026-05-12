@@ -1006,7 +1006,6 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value1": null,
                     "compareType": "<=",
                     "value2": 0
                   },
@@ -1110,11 +1109,11 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12969) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12969",
+                "operator": "Variables[0] (UnusedUnderThisBase_13007) || RETURN",
+                "displayLines": "UnusedUnderThisBase_13007",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_12969"
+                  "UnusedUnderThisBase_13007"
                 ]
               },
               "entityClass": "Enemy",

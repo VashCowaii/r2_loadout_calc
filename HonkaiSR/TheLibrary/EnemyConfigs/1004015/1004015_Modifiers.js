@@ -350,7 +350,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "value1": null,
                 "compareType": "=",
                 "value2": {
                   "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED_3) || RETURN",

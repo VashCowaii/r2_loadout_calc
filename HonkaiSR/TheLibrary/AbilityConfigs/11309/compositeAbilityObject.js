@@ -46,11 +46,11 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13065) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13065",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13103) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13103",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13065"
+                      "UnusedUnderThisBase_13103"
                     ]
                   }
                 }
@@ -942,11 +942,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "_Rank06_BigDmgCount",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_13236) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_13236",
+                        "operator": "Variables[0] (UnusedUnderThisBase_13274) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_13274",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_13236"
+                          "UnusedUnderThisBase_13274"
                         ]
                       }
                     }
@@ -1141,12 +1141,12 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_5909) || Variables[1] (UnusedUnderThisBase_13062) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_5909 + UnusedUnderThisBase_13062)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_5909) || Variables[1] (UnusedUnderThisBase_13100) || ADD || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_5909 + UnusedUnderThisBase_13100)",
                         "constants": [],
                         "variables": [
                           "UnusedUnderThisBase_5909",
-                          "UnusedUnderThisBase_13062"
+                          "UnusedUnderThisBase_13100"
                         ]
                       },
                       "isFixed": "* ERR"
