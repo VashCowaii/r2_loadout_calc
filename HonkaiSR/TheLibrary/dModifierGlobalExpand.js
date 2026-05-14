@@ -24081,7 +24081,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23058_Energy",
+    "name": "<a class=\"gModGreen\" id=\"2114659004\">LC_23058_Energy</a>",
     "realName": "Energy Regeneration Rate Boost",
     "aim": "Buff",
     "desc": "Increases Energy Regeneration Rate by #1[f1]%.",
@@ -24092,7 +24092,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23058_AllDamageTypeTakenRatio",
+    "name": "<a class=\"gModGreen\" id=\"1098160172\">LC_23058_AllDamageTypeTakenRatio</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",

@@ -961,6 +961,20 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.value3,"Toggle")}
         </div>`;
     },
+    "Modify Param Value for Param Target"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "value",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Modify Param Value for Param Target");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Modify Param Value for Param Target:</div>&nbsp;
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.value,"By Added Value")}
+        </div>`;
+    },
     "Sparxie Test Data"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -2537,6 +2551,29 @@ const megaParsingFuckeryPain = {
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.scope,"Context")}
+        </div>`;
+    },
+    "Adjust Modifier Value"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "variableName",
+            "modifierName",
+            "changeDuration",
+
+            "target",
+            "valueType",
+            "multiplier",
+            
+            "scope",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Adjust Modifier Value");
+        // initialCounter++;
+        return `<div class="actionDetailBody2Preview"> 
+            <div class="rotationConditionOperatorHeaderInline">Define with Modifier Attribute:</div>&nbsp;
+            ${parseRef.variableName} ${parseRef.modifierName ? `on (${parseRef.modifierName})` : ""}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.changeDuration,"Duration Change")}
         </div>`;
     },
     "Define Custom Variable with Modifier Values"(parseRef,initialCounter) {
@@ -7055,7 +7092,8 @@ const megaParsingFuckeryPain = {
             "onBattle",
             "onHit",
             "onKill",
-            "entryTargetType"
+            "entryTargetType",
+            "target",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Overworld Attack Instance");
 
@@ -7080,6 +7118,7 @@ const megaParsingFuckeryPain = {
             </summary>
 
             <div class="modifierDetailsBox">
+                ${getStandardNameDisplay(initialCounter,parseRef.target,"Target")}
                 ${getStandardNameDisplay(initialCounter,parseRef.entryTargetType,"Target on Entry")}
             </div>
 

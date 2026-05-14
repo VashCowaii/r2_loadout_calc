@@ -11,7 +11,9 @@ const dataListerObject = {
         "For Tomorrow's Journey",
         "Ninja Record: Sound Hunt",
         "The Great Cosmic Enterprise",
-        "Before the Tutorial Mission Starts"
+        "Before the Tutorial Mission Starts",
+
+        "Elation Brimming With Blessings",
     ]),
     MoCShopLCList: new Set ([
         "Quid Pro Quo",
@@ -28,7 +30,8 @@ const dataListerObject = {
         "Destiny's Threads Forewoven",
         "The Day The Cosmos Fell",
         "It's Showtime",
-        "Victory In a Blink"
+        "Victory In a Blink",
+        "Mushy Shroomy's Adventures",
     ]),
     battlePassLCList: new Set ([
         "Today Is Another Peaceful Day",
@@ -46,7 +49,8 @@ const dataListerObject = {
         "Journey, Forever Peaceful",
         "Holiday Thermae Escapade",
         "Unto Tomorrow's Morrow",
-        "The Flower Remembers"
+        "The Flower Remembers",
+        "Today's Good Luck",
     ]),
     sigLCList: {
         //DESTRUCTION
@@ -104,6 +108,7 @@ const dataListerObject = {
         "Sailing Towards a Second Life": "Boothill",
         "I Venture Forth to Hunt": "Feixiao",
         "The Hell Where Ideals Burn": "Archer",
+        "The Finale of a Lie": "Ashveil",
 
         //ABUNDANCE
         "Echoes of the Coffin": "Luocha",
@@ -121,6 +126,9 @@ const dataListerObject = {
         //ELATION
         "Dazzled by a Flowery World": "Sparxie",
         "When She Decided to See": "Yao Guang",
+        "Until the Flowers Bloom Again": "Evanescia",
+        "Welcome to the Cosmic City": "Silver Wolf LV.999",
+        
     },
     starlightLCList: new Set ([
         "Night on the Milky Way",
@@ -138,14 +146,17 @@ const dataListerObject = {
         "The Unreachable Side",
         "Echoes of the Coffin",
         "In the Night",
-
         "Night on the Milky Way",
         "Something Irreplaceable",
         "But the Battle Isn't Over",
         "In the Name of the World",
         "Moment of Victory",
         "Sleep Like the Dead",
-
         "Time Waits for No One",
+        "Dance at Sunset",
+        "An Instant Before A Gaze",
+        "Night of Fright",
+        "Incessant Rain",
+        "Flowing Nightglow",
     ]),
 }

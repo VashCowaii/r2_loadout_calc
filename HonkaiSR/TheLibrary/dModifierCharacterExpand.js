@@ -6128,7 +6128,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Evanescia_BeDamageAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"-568282578\">Evanescia_BeDamageAddedRatio</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -6139,7 +6139,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Evanescia_Eidolon1",
+    "name": "<a class=\"gModGreen\" id=\"-800917122\">Evanescia_Eidolon1</a>",
     "realName": "Home: A Prayer in Dance",
     "aim": "Buff",
     "desc": "All-Type RES PEN increases by #1[f1]%.",
@@ -6150,7 +6150,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Evanescia_Eidolon2",
+    "name": "<a class=\"gModGreen\" id=\"-817694741\">Evanescia_Eidolon2</a>",
     "realName": "Voyage: A Wish for Everbloom",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[f1]%.",
@@ -7584,7 +7584,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Evanescia_Passive_CritToElation",
+    "name": "<a class=\"gModGreen\" id=\"1630345914\">Evanescia_Passive_CritToElation</a>",
     "realName": "Youth: Halcyon Evermore",
     "aim": "Buff",
     "desc": "Elation increases by #1[f1]%.",
@@ -7606,7 +7606,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Evanescia_Eidolon6_ElationDamageExtra",
+    "name": "<a class=\"gModGreen\" id=\"611817179\">Evanescia_Eidolon6_ElationDamageExtra</a>",
     "realName": "Maiden: A Step into Dreams",
     "aim": "Buff",
     "desc": "Elation DMG merrymakes by #1[i]%.",

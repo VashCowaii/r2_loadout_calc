@@ -669,6 +669,9 @@ let megaGlobalFunctionMap = {
   "-4095277": "2007735874.YaoGuang",
   "-469638766": "2007735874.Ashveil",
   "-178840964": "2007735874.Ashveil",
+  "-1246198566": "2007735874.Evanescia",
+  "-224630805": "2007735874.Evanescia",
+  "-1152920824": "2007735874.Evanescia",
   "-517215747": "2007735874.TrailblazerHarmony",
   "-763533094": "2007735874.TrailblazerRemembrance",
   "-1380527904": "2007735874.TrailblazerElation",
@@ -676,5 +679,6 @@ let megaGlobalFunctionMap = {
   "-2003815504": "2007735874.Saber",
   "-400495620": "2007735874.SilverWolfv0",
   "-530077656": "2007735874.SilverWolfv0",
-  "-311979758": "2007735874.OnlySilenceRemains"
+  "-311979758": "2007735874.OnlySilenceRemains",
+  "-259192704": "2007735874.UntiltheFlowersBloomAgain"
 }
