@@ -1297,6 +1297,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "char",
+    "entryName": "Evanescia",
+    "trimCharacterName": "Evanescia",
+    "entryIcon": "icon/character/1505.png",
+    "lineCount": 4293,
+    "sizeCount": 151502
+  },
+  {
+    "entryType": "char",
     "entryName": "Blade",
     "trimCharacterName": "Blade",
     "entryIcon": "icon/character/1205.png",
@@ -3963,6 +3971,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "lc",
+    "entryName": "Until the Flowers Bloom Again",
+    "trimCharacterName": "UntiltheFlowersBloomAgain",
+    "entryIcon": "icon/light_cone/23058.png",
+    "lineCount": 322,
+    "sizeCount": 11420
+  },
+  {
+    "entryType": "lc",
     "entryName": "Dreamville Adventure",
     "trimCharacterName": "DreamvilleAdventure",
     "entryIcon": "icon/light_cone/21036.png",
@@ -5894,14 +5910,6 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1506.png",
     "lineCount": 7,
     "sizeCount": 149
-  },
-  {
-    "entryType": "char",
-    "entryName": "Evanescia",
-    "trimCharacterName": "Evanescia",
-    "entryIcon": "icon/character/1505.png",
-    "lineCount": 7,
-    "sizeCount": 138
   },
   {
     "entryType": "enemy",
