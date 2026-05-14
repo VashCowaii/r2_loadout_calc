@@ -7,15 +7,18 @@
 </div> -->
 
 <!-- <div>
-    <h1>May 10th, 2026 - THE QUEUE PRIORITY UPDATE</h1>
+    <h1>May 13th, 2026 - THE QUEUE PRIORITY UPDATE</h1>
     <ul>
         <h3>Calculator</h3>
         <h4>Additions</h4>
         <li>Added the following new characters:
             <ul>
+                <li>Evanescia</li>
+                <li>Silver Wolf LV.999</li>
                 <li>Trailblazer - Elation</li>
                 <li>Welt (Novaflare)</li>
                 <li>Firefly (Novaflare)</li>
+                <li>Seele (Novaflare)</li>
             </ul>
         </li>
         <li>Added the following new relics:
@@ -25,6 +28,8 @@
         </li>
         <li>Added the following new lightcones:
             <ul>
+                <li>Until the Flowers Bloom Again</li>
+                <li>Welcome to the Cosmic City</li>
                 <li>Elation Brimming With Blessings</li>
             </ul>
         </li>
@@ -49,8 +54,10 @@
                 </li>
             </ul>
         </li>
+        <li>Updated Hyacine's Ica injection priority tag.</li>
 
         <h4>Fixes</h4>
+        <li>Fixed an issue where user defined conditions utilizing the "Character: State" condition if targeting a character other than the character using it, could fail to recognize some state values properly.</li>
         <li>Fixed an issue where Phainon's signature lightcone was reading the start of an ultimate to give bonuses, rather than the end like it should have been.</li>
         <li>Fixed an issue where in some cases for source-specific bonuses like Firefly sig LC's break vuln, only for the very first application could it sometimes NOT apply if the target's source-specific stat table had not yet been constructed.</li>
         <li>Fixed an issue where Silver Wolf's "Sidenote" EHR to ATK conversion trace, would improperly apply more stacks than it should in some scenarios.</li>
@@ -64,10 +71,47 @@
                 <li>So if you have a condition for Yao to only ult if Archer's skill count was >= 2, it would break and treat the value as undefined without properly retrieving the current skill count.</li>
             </ul>
         </li>
+        <li>Fixed an issue where when applying buffs/debuffs to batches of targets, in a crazy specific scenario it could fail to renew a buff when it already existed on the target.</li>
         
+
+        <h4>Optimization</h4>
+        Pretty much everything mentioned here is in the context of the optimizer, as I try to make it run faster.
+        <li>Unified handling for the following statistics and/or multipliers, while adding them to the cache-tagging system:
+            <ul>
+                <li>DEF multiplier</li>
+                <li>Crit Rate SUM</li>
+                <li>Crit DMG SUM</li>
+                <li>RES multiplier</li>
+                <li>Healing Bonuses</li>
+                <li>Shield Bonuses</li>
+                <li>Break Effect</li>
+            </ul>
+        </li>
+        <li>Deprecated statsOnTurn as a method/checks, since literally only the old version of Black Swan used it and nobody is ever going to be using the blazing dumpster fire that is the old version.</li>
     </ul>
 </div> -->
+<div>
+    <h1>May 14th, 2026</h1>
+    A very big calc update should be coming out in the next couple days, I know it's been a minute since I updated but it's because I've been workin on some much bigger changes.
+    <ul>
 
+        <h3>Library</h3>
+        <li>Added eventreaders for the following new characters:
+            <ul>
+                <li>Evanescia</li>
+            </ul>
+        </li>
+        <li>Added eventreaders for the following new lightcones:
+            <ul>
+                <li>Until the Flowers Bloom Again</li>
+            </ul>
+        </li>
+
+        <!-- <h4>Fixes</h4>
+        <li>asdf</li> -->
+        
+    </ul>
+</div>
 <div>
     <h1>May 12th, 2026</h1>
     <ul>
